@@ -1,0 +1,91 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#fff', 'primaryTextColor': '#333', 'lineColor': '#444', 'secondaryColor': '#000', 'tertiaryColor': '#fff'}}}%%
+
+graph TD
+    %% Main Title
+    Title[NW Natural: IRP Model Map]
+
+    %% Input Data Section
+    subgraph InputData [1. Input Data & Forecasting]
+    direction LR
+        Weather(Weather Data)
+        CIS(CIS Billing Data)
+        CustomerCount(Customer Count <br/> Forecast)
+        IndCom(Industrial & Large <br/> Commercial Forecast)
+        Peak(Peak Day Forecast)
+        EnergyEff(Energy Efficiency <br/> Forecast)
+    end
+
+    %% Key Process Models
+    subgraph Models [2. Process & Integration Models]
+    direction LR
+        UPC[UPC Model]
+        LoadF[Load Forecast]
+        EndUse{End Use <br/> Model}
+    end
+
+    %% Main Simulation Core
+    subgraph PLEXOS [3. PLEXOS Simulation Core]
+    direction TB
+        MainPLEXOS[PLEXOS System]
+        SysM(System <br/> Model)
+        CompM(Compliance <br/> Model)
+        MainPLEXOS -.- SysM
+        MainPLEXOS -.- CompM
+    end
+
+    %% External Forecasts for PLEXOS
+    subgraph ExternalForecasts [Exogenous Factors]
+        GasP(Gas Price <br/> Forecast)
+        AltF(Alternative Fuels <br/> Forecast)
+    end
+
+    %% Output and Reporting Section
+    subgraph Outputs [4. Results & Reporting]
+    direction LR
+        Results[Results]
+        Avoided[Avoided <br/> Costs]
+        DistSys(Distribution <br/> System Plan)
+        FiledIRP{{Filed IRP}}
+    end
+
+    %% ----- Define Flows and Connections -----
+
+    %% 1. Input Flow to UPC & Load Forecast
+    Weather --> UPC
+    CIS --> UPC
+    CustomerCount --> UPC
+    IndCom --> LoadF
+    Peak --> LoadF
+    UPC --> LoadF
+
+    %% 2. The Uncertain Connections (dotted lines with ?)
+    UPC -. "?".-> EndUse
+    EndUse -. "?".-> LoadF
+
+    %% 3. Flow into PLEXOS
+    GasP --> PLEXOS
+    AltF --> PLEXOS
+    LoadF --> PLEXOS
+
+    %% 4. PLEXOS Outputs
+    PLEXOS --> Results
+
+    %% 5. Feedback Loop for EE & Avoided Costs
+    Avoided --> EnergyEff
+    Results --> Avoided
+    EnergyEff --> LoadF
+
+    %% 6. Final Reporting Flow
+    Results --> FiledIRP
+    DistSys --> FiledIRP
+
+    %% Title Link
+    Title --- InputData
+
+    %% ----- Styling for Color Groups -----
+    %% TealProcess Group (Inputs into Load Forecast)
+    style IndCom fill:#b8e0ed,stroke:#b8e0ed,stroke-width:0px
+    style Peak fill:#b8e0ed,stroke:#b8e0ed,stroke-width:0px
+    style UPC fill:#b8e0ed,stroke:#b8e0ed,stroke-width:0px
+
+    %% Green Ex

@@ -1,0 +1,29 @@
+graph TD
+    A["NW Natural IRP Planning Process"] --> B["Current Approach:<br/>Top-Down Econometric Model"]
+    A --> C["Proposed Enhancement:<br/>Bottom-Up End-Use Model"]
+    
+    B --> B1["Aggregate UPC Forecast<br/>Limited End-Use Visibility"]
+    B1 --> B2["Challenges:<br/>- Limited scenario flexibility<br/>- Difficult to model technology shifts<br/>- Hard to evaluate electrification impact"]
+    
+    C --> C1["Housing Stock Model"]
+    C1 --> C2["Equipment Inventory"]
+    C2 --> C3["End-Use Simulation<br/>Space Heating | Water Heating<br/>Cooking | Drying | Fireplace | Other"]
+    C3 --> C4["Aggregation & Scenarios"]
+    C4 --> C5["Outputs:<br/>- Demand by end-use<br/>- Demand by segment<br/>- Demand by district<br/>- UPC projections"]
+    
+    C5 --> D["Enhanced IRP Analysis"]
+    D --> D1["Policy Scenarios<br/>Electrification pathways"]
+    D --> D2["Technology Scenarios<br/>Efficiency improvements"]
+    D --> D3["Market Scenarios<br/>Housing growth & composition"]
+    
+    B2 --> E["Integration Point:<br/>Complement existing forecasts"]
+    D1 --> E
+    D2 --> E
+    D3 --> E
+    
+    E --> F["Improved Long-Term<br/>Planning Insight"]
+    
+    style A fill:#e1f5ff
+    style B fill:#fff3e0
+    style C fill:#e8f5e9
+    style F fill:#f3e5f5

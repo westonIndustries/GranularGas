@@ -1,0 +1,68 @@
+graph TB
+    subgraph "NW Natural IRP Model Architecture"
+        subgraph "Demand Forecasting"
+            A["Residential Demand<br/>Forecasting"]
+            B["Commercial Demand<br/>Forecasting"]
+            C["Industrial Demand<br/>Forecasting"]
+        end
+        
+        subgraph "Demand Components"
+            A1["Top-Down<br/>Econometric Model<br/>(Current)"]
+            A2["Bottom-Up<br/>End-Use Model<br/>(Proposed)"]
+            A --> A1
+            A --> A2
+        end
+        
+        subgraph "Scenario Analysis"
+            D["Policy Scenarios"]
+            E["Technology Scenarios"]
+            F["Market Scenarios"]
+        end
+        
+        subgraph "Resource Planning"
+            G["Supply-Side<br/>Analysis"]
+            H["Infrastructure<br/>Planning"]
+            I["Regulatory<br/>Compliance"]
+        end
+        
+        subgraph "Outputs"
+            J["Load Forecasts<br/>by Segment"]
+            K["End-Use Demand<br/>Projections"]
+            L["Resource<br/>Requirements"]
+        end
+    end
+    
+    A1 --> D
+    A2 --> D
+    A1 --> E
+    A2 --> E
+    A1 --> F
+    A2 --> F
+    
+    D --> G
+    E --> G
+    F --> G
+    
+    G --> H
+    G --> I
+    
+    A1 --> J
+    A2 --> K
+    
+    J --> L
+    K --> L
+    H --> L
+    I --> L
+    
+    style A fill:#e3f2fd
+    style A1 fill:#fff3e0
+    style A2 fill:#e8f5e9
+    style D fill:#f3e5f5
+    style E fill:#f3e5f5
+    style F fill:#f3e5f5
+    style G fill:#fce4ec
+    style H fill:#fce4ec
+    style I fill:#fce4ec
+    style J fill:#c8e6c9
+    style K fill:#c8e6c9
+    style L fill:#bbdefb
