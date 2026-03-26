@@ -764,6 +764,483 @@ def compare_to_irp_forecast(model_upc, irp_forecast) -> pd.DataFrame:
 def export_results(results, output_path, format='csv') -> None: ...
 ```
 
+### 7.1 visualization.py -- Mapbox Interactive Visualization
+
+**Purpose**: Provide an interactive web-based visualization of forecast results with hierarchical geographic drill-down (county → district → microclimate/microresidential area) and time-series animation showing demand evolution across the forecast horizon.
+
+**Technology Stack**:
+- **Frontend**: Mapbox GL JS (WebGL-based interactive mapping)
+- **Backend**: Python Flask or FastAPI (lightweight REST API)
+- **Data Format**: GeoJSON for geographic features, JSON for time-series data
+- **Deployment**: Static HTML + JavaScript (client-side rendering) or containerized Flask app
+
+**Geographic Hierarchy**:
+
+The visualization supports a three-level geographic drill-down:
+
+1. **County Level** (top):
+   - 16 counties in NW Natural service territory (13 Oregon, 3 Washington)
+   - County boundaries from Census TIGER/Line or Mapbox
+   - Aggregated demand across all premises in county
+
+2. **District Level** (middle):
+   - IRP districts within each county (e.g., PORC, EUGN, SALEM, etc.)
+   - Derived from `district_code_IRP` in premise data
+   - Aggregated demand across all premises in district
+
+3. **Microclimate/Microresidential Area Level** (detailed):
+   - **Microclimate Areas**: Geographic zones with similar weather patterns
+     - Defined by weather station service areas (11 stations across NW Natural territory)
+     - Each premise assigned to nearest weather station (KPDX, KEUG, KSLE, KAST, etc.)
+     - Captures regional climate variation (coastal, valley, mountain, Gorge)
+   - **Microresidential Areas**: Demographic/housing type clusters
+     - Defined by combination of: segment (RESSF, RESMF, MOBILE), subsegment (FRAME, MFG, etc.), vintage cohort (pre-1980, 1980-2000, 2000-2010, 2010+)
+     - Each premise belongs to one microresidential cluster
+     - Captures housing stock heterogeneity (single-family vs. multi-family, age, construction type)
+   - **Hybrid Microarea**: Intersection of microclimate + microresidential
+     - Enables analysis like "single-family homes built 2000-2010 in the Gorge region"
+     - Most granular level of analysis
+
+**Key Features**:
+
+1. **Interactive County/District Map**:
+   - Base map showing NW Natural service territory (16 Oregon/Washington counties)
+   - County boundaries as GeoJSON features
+   - Color-coded choropleth layer showing demand intensity (therms/customer or total therms)
+   - Hover tooltips displaying county name, current year demand, and key metrics
+   - Click-to-select county for district-level drill-down
+
+2. **District-Level Drill-Down**:
+   - When county is selected, map zooms to county bounds
+   - Display district boundaries (if available as GeoJSON) or district centroids
+   - Color-coded by demand intensity within county
+   - Click-to-select district for microarea drill-down
+   - Breadcrumb navigation: "County > District > Microarea"
+
+3. **Microclimate Area Visualization**:
+   - When district is selected, overlay weather station service areas (Voronoi polygons or buffered circles)
+   - Each microclimate area color-coded by demand intensity
+   - Hover to see weather station name, annual HDD, and demand metrics
+   - Click to select microclimate for time-series detail view
+   - Show weather station location and coverage area
+
+4. **Microresidential Area Visualization**:
+   - Alternative view: toggle between microclimate and microresidential breakdown
+   - Microresidential areas shown as hexagonal bins or custom polygons
+   - Color-coded by housing type (SF vs. MF) and vintage
+   - Hover to see segment, subsegment, vintage, and demand metrics
+   - Click to select microresidential cluster for time-series detail view
+
+5. **Microadoption Area Visualization**:
+   - Third alternative view: toggle to microadoption breakdown
+   - Microadoption areas defined by technology adoption patterns and demographics
+   - Color-coded by adoption rate (heat pump penetration %, electrification %, efficiency improvements)
+   - Hover to see adoption metrics: % with heat pumps, % electrified, avg efficiency rating, adoption trajectory
+   - Click to select adoption cluster for time-series detail view
+   - Show adoption trajectory (adoption rate over time)
+   - Identify early adopter vs. laggard regions
+   - Enables policy targeting and incentive program design
+   - Adoption areas combine: microclimate + microresidential + technology adoption rate
+   - Example: "Single-family homes in Portland (KPDX) with 45% heat pump adoption by 2030"
+
+6. **Composite Microregion Cell Visualization**:
+   - Fourth alternative view: toggle to composite cell breakdown
+   - Composite cells are hexagonal or custom polygons that combine all microregion dimensions
+   - Each cell represents a unique intersection of: microclimate + microresidential + adoption cohort + demand intensity
+   - Color-coded by composite score (multi-dimensional metric combining demand, adoption, efficiency, and climate)
+   - Cell size proportional to customer count or total demand
+   - Hover to see detailed cell profile:
+     - Microclimate (weather station, HDD, region)
+     - Microresidential (segment, subsegment, vintage, building count)
+     - Adoption metrics (heat pump %, electrification %, avg efficiency)
+     - Demand metrics (total therms, UPC, end-use breakdown)
+     - Composite score and ranking
+   - Click to select cell for detailed time-series analysis
+   - Enable filtering by cell attributes (e.g., "show only SF homes in Gorge with <30% adoption")
+   - Show cell evolution over time (animation shows how cells change as adoption increases)
+   - Identify "opportunity cells" (high demand + low adoption = high potential for electrification)
+   - Identify "success cells" (high adoption + low demand = successful transition)
+   - Enable comparative analysis across similar cells in different regions
+
+7. **Time-Series Animation**:
+   - Slider control to step through forecast years (base_year to base_year + forecast_horizon)
+   - Play/pause button for automatic animation
+   - Speed control for animation playback
+   - Choropleth colors update dynamically as year changes
+   - Legend showing color scale (e.g., 500-700 therms/customer)
+   - Display current year prominently
+
+6. **Scenario Comparison**:
+   - Dropdown selector to switch between scenarios (e.g., "Business as Usual", "Aggressive Electrification")
+   - Map updates to show scenario-specific demand projections
+   - Side-by-side comparison view (optional): two maps showing different scenarios simultaneously
+   - Difference view: show % change between scenarios
+
+7. **End-Use Breakdown**:
+   - Stacked bar chart showing demand composition by end-use (space heating, water heating, cooking, drying, fireplace, other)
+   - Updates based on selected geographic area (county/district/microarea) and year
+   - Allows user to understand which end-uses drive demand in each region
+   - Stacked area chart showing end-use evolution over time
+
+8. **Detailed Area View**:
+   - When county/district/microarea is selected, display:
+     - Total demand (therms) and UPC (therms/customer)
+     - Customer count
+     - Year-over-year change (%)
+     - Comparison to IRP forecast (if available)
+     - End-use breakdown chart (stacked bar)
+     - Historical trend (line chart showing demand 2025-2035)
+     - Microclimate info (if microclimate area): weather station, annual HDD, water temp
+     - Microresidential info (if microresidential area): segment, subsegment, vintage, building count
+     - Electrification rate (% of premises with heat pumps, by scenario)
+
+**Data Pipeline**:
+
+```
+Simulation Results (CSV)
+    ↓
+Aggregate by County, District, Microclimate, Microresidential
+    ↓
+Compute time-series (year-by-year) for each area
+    ↓
+Convert to GeoJSON (with properties) + Time-Series JSON
+    ↓
+Serve via REST API or Static Files
+    ↓
+Mapbox GL JS Frontend
+    ↓
+Interactive Visualization with Drill-Down
+```
+
+**API Endpoints** (if using Flask/FastAPI):
+
+```
+GET /api/counties
+  Returns: GeoJSON FeatureCollection with county boundaries and base properties
+
+GET /api/districts?county_fips={fips}
+  Returns: GeoJSON FeatureCollection with district boundaries/centroids for specified county
+
+GET /api/microclimates?district={district_code}
+  Returns: GeoJSON FeatureCollection with microclimate areas (weather station service areas)
+  Properties: weather_station, annual_hdd, annual_cdd, coverage_area_sqmi
+
+GET /api/microresidential?district={district_code}
+  Returns: GeoJSON FeatureCollection with microresidential clusters (hexbins or custom polygons)
+  Properties: segment, subsegment, vintage_cohort, building_count, avg_sqft
+
+GET /api/microadoption?district={district_code}&scenario={scenario}
+  Returns: GeoJSON FeatureCollection with microadoption areas (technology adoption clusters)
+  Properties: microclimate, microresidential, adoption_rate, heat_pump_penetration, electrification_rate, avg_efficiency
+
+GET /api/composite-cells?district={district_code}&scenario={scenario}
+  Returns: GeoJSON FeatureCollection with composite microregion cells (hexbins or custom polygons)
+  Properties: cell_id, microclimate, microresidential, adoption_cohort, composite_score, 
+              total_therms, upc, customer_count, heat_pump_penetration, electrification_rate, 
+              avg_efficiency, demand_intensity, opportunity_score, success_score
+
+GET /api/demand?year={year}&scenario={scenario}&level={county|district|microclimate|microresidential|microadoption|composite-cell}&id={id}
+  Returns: JSON with demand data for specified geographic area
+
+GET /api/timeseries?level={county|district|microclimate|microresidential|microadoption|composite-cell}&id={id}&scenario={scenario}
+  Returns: JSON with year-by-year demand for specified area/scenario
+  Format: { 
+    "area_id": "41051", 
+    "area_name": "Multnomah County",
+    "level": "county",
+    "years": [2025, 2026, ..., 2035], 
+    "total_therms": [...], 
+    "upc": [...], 
+    "customer_count": [...],
+    "end_uses": {
+      "space_heating": [...],
+      "water_heating": [...],
+      ...
+    },
+    "electrification_rate": [...],
+    "heat_pump_penetration": [...],
+    "avg_efficiency": [...],
+    "composite_score": [...]
+  }
+
+GET /api/compare?level={county|district|microclimate|microresidential|microadoption|composite-cell}&ids={id1,id2,id3}&scenario={scenario}
+  Returns: JSON with time-series for multiple areas (for comparison chart)
+
+GET /api/scenarios
+  Returns: List of available scenarios with metadata
+
+GET /api/weather-stations
+  Returns: GeoJSON FeatureCollection with weather station locations and service areas
+```
+
+**Microclimate Area Definition**:
+
+Microclimate areas are defined by weather station service territories. Each premise is assigned to its nearest weather station. The 11 weather stations in NW Natural territory:
+
+| Station | ICAO | Location | Region | Typical HDD | Coverage |
+|---------|------|----------|--------|------------|----------|
+| Portland | KPDX | Portland, OR | Willamette Valley | 4,850 | Multnomah, Washington, Yamhill, Clackamas (north) |
+| Eugene | KEUG | Eugene, OR | Willamette Valley | 4,650 | Lane, Benton (south) |
+| Salem | KSLE | Salem, OR | Willamette Valley | 4,900 | Marion, Polk, Linn (south) |
+| Astoria | KAST | Astoria, OR | Coast | 5,200 | Clatsop, Columbia |
+| The Dalles | KDLS | The Dalles, OR | Gorge | 5,800 | Wasco (Gorge region, coldest) |
+| Coos Bay | KOTH | North Bend, OR | Coast | 4,400 | Coos, Lincoln (coast, mildest) |
+| Newport | KONP | Newport, OR | Coast | 4,600 | Lincoln (coast) |
+| Corvallis | KCVO | Corvallis, OR | Willamette Valley | 4,750 | Benton (north) |
+| Hillsboro | KHIO | Hillsboro, OR | Willamette Valley | 4,900 | Washington (west) |
+| Troutdale | KTTD | Troutdale, OR | Gorge | 5,100 | Multnomah (east), Hood River area |
+| Vancouver | KVUO | Vancouver, WA | Willamette Valley | 4,950 | Clark, Skamania, Klickitat |
+
+**Microresidential Area Definition**:
+
+Microresidential areas are defined by housing characteristics clusters:
+
+```
+Segment (from NW Natural data):
+  - RESSF: Single-family residential
+  - RESMF: Multi-family residential
+  - MOBILE: Mobile home
+
+Subsegment (from NW Natural data):
+  - FRAME: Framed construction
+  - MFG: Manufactured (mobile home)
+  - MASONRY: Masonry construction
+
+Vintage Cohort (derived from set_year):
+  - Pre-1980: Older homes, lower efficiency
+  - 1980-2000: Mid-age homes, moderate efficiency
+  - 2000-2010: Newer homes, higher efficiency
+  - 2010+: Very new homes, high efficiency / heat pump ready
+
+Microresidential Cluster ID: {segment}_{subsegment}_{vintage_cohort}
+Example: RESSF_FRAME_1980-2000 = Single-family framed homes built 1980-2000
+```
+
+**Microadoption Area Definition**:
+
+Microadoption areas are defined by the intersection of microclimate, microresidential, and technology adoption patterns:
+
+```
+Microadoption Cluster = Microclimate + Microresidential + Adoption Cohort
+
+Adoption Cohort (derived from scenario and equipment replacement model):
+  - Early Adopters (0-20% heat pump penetration): First-mover regions, policy-driven areas
+  - Growth Phase (20-50% heat pump penetration): Mainstream adoption, cost-competitive
+  - Mature Phase (50-80% heat pump penetration): Market saturation, replacement-driven
+  - Saturation (80%+ heat pump penetration): Near-complete electrification
+
+Microadoption Cluster ID: {microclimate}_{microresidential}_{adoption_cohort}
+Example: KPDX_RESSF_FRAME_1980-2000_Growth = Single-family framed homes built 1980-2000 
+         in Portland microclimate with 20-50% heat pump adoption
+
+Adoption Metrics (tracked per microadoption area):
+  - heat_pump_penetration: % of space heating equipment that are heat pumps
+  - electrification_rate: % of premises with any electric heating (heat pumps + electric resistance)
+  - avg_efficiency: Average equipment efficiency rating (AFUE for gas, COP for heat pumps)
+  - adoption_trajectory: Year-by-year adoption rate (% change per year)
+  - demand_reduction: % reduction in gas demand due to electrification vs. baseline
+```
+
+**Use Cases for Microadoption Areas**:
+
+1. **Policy Targeting**: Identify which microadoption areas are lagging in adoption and design targeted incentive programs
+2. **Market Analysis**: Understand adoption patterns by climate and housing type to inform business strategy
+3. **Infrastructure Planning**: Identify regions with high electrification rates to plan for reduced gas infrastructure needs
+4. **Equity Analysis**: Identify underserved populations (e.g., multi-family, older homes) with low adoption rates
+5. **Scenario Sensitivity**: Compare adoption trajectories across different policy scenarios
+6. **Early Adopter Learning**: Study early adopter regions to understand barriers and enablers for mainstream adoption
+
+**Composite Microregion Cell Definition**:
+
+Composite cells are multi-dimensional analytical units that combine all microregion layers into a single geographic cell:
+
+```
+Composite Cell = Hexagonal or Custom Polygon containing:
+  - Microclimate: Weather station service area (11 stations)
+  - Microresidential: Housing characteristics cluster (segment + subsegment + vintage)
+  - Adoption Cohort: Technology adoption phase (Early Adopters, Growth, Mature, Saturation)
+  - Demand Intensity: Demand level (Low <500, Medium 500-650, High 650-800, Very High >800 therms/cust)
+
+Composite Cell ID: {cell_hex_id}_{microclimate}_{microresidential}_{adoption_cohort}_{demand_intensity}
+Example: HEX_001_KPDX_RESSF_FRAME_1980-2000_Growth_High
+
+Composite Score (0-100): Multi-dimensional metric combining:
+  - Demand Intensity (40% weight): Higher demand = higher score (opportunity for savings)
+  - Adoption Rate (30% weight): Lower adoption = higher score (opportunity for growth)
+  - Efficiency Gap (20% weight): Difference between current and potential efficiency
+  - Climate Severity (10% weight): HDD-based climate factor (colder = higher score)
+
+Composite Score = (demand_intensity_score × 0.4) + ((100 - adoption_rate) × 0.3) + 
+                  (efficiency_gap_score × 0.2) + (climate_severity_score × 0.1)
+
+Cell Metrics (tracked per composite cell):
+  - total_therms: Total annual demand in therms
+  - upc: Use per customer (therms/customer)
+  - customer_count: Number of premises in cell
+  - heat_pump_penetration: % with heat pumps
+  - electrification_rate: % electrified
+  - avg_efficiency: Average equipment efficiency
+  - demand_intensity: Categorical (Low/Medium/High/Very High)
+  - opportunity_score: Potential for electrification (high demand + low adoption)
+  - success_score: Successful transition indicator (high adoption + low demand)
+  - composite_score: Overall multi-dimensional score
+
+Opportunity Score = (demand_intensity × 0.6) + ((100 - adoption_rate) × 0.4)
+  - High opportunity: High demand + Low adoption (target for incentives)
+  - Example: SF homes in Gorge with 15% adoption = high opportunity
+
+Success Score = (adoption_rate × 0.6) + ((100 - demand_intensity) × 0.4)
+  - High success: High adoption + Low demand (successful transition)
+  - Example: SF homes in Portland with 70% adoption = high success
+```
+
+**Cell Visualization Features**:
+
+1. **Cell Geometry**:
+   - Hexagonal grid (H3 library or custom implementation) for uniform cell size
+   - Alternative: Voronoi polygons based on premise density
+   - Cell size: ~5-10 km² (adjustable for zoom level)
+   - Cells aggregate all premises within geographic bounds
+
+2. **Cell Coloring**:
+   - Primary color: Composite score (gradient from blue=low to red=high)
+   - Alternative color schemes:
+     - Adoption rate (blue=low adoption, green=high adoption)
+     - Opportunity score (red=high opportunity, gray=low opportunity)
+     - Success score (green=high success, gray=low success)
+   - Cell opacity: Proportional to customer count (more premises = more opaque)
+
+3. **Cell Sizing**:
+   - Cell size proportional to total demand or customer count
+   - Larger cells = more demand or more customers
+   - Enables visual identification of high-impact areas
+
+4. **Cell Filtering**:
+   - Filter by microclimate (weather station)
+   - Filter by microresidential (segment, subsegment, vintage)
+   - Filter by adoption cohort (Early Adopters, Growth, Mature, Saturation)
+   - Filter by demand intensity (Low, Medium, High, Very High)
+   - Filter by opportunity score (show only high-opportunity cells)
+   - Filter by success score (show only successful transition cells)
+   - Combine filters for targeted analysis
+
+5. **Cell Interaction**:
+   - Hover: Show cell ID, composite score, key metrics
+   - Click: Open detailed cell profile with:
+     - All microregion dimensions
+     - Time-series charts (demand, adoption, efficiency)
+     - End-use breakdown
+     - Comparison to similar cells
+     - Policy recommendations based on cell type
+   - Drag to select multiple cells for comparison
+
+6. **Cell Evolution Animation**:
+   - Animate cells over time (2025-2035)
+   - Show how cells change as adoption increases
+   - Color transitions show adoption progression
+   - Size changes show demand reduction
+   - Identify cells that transition from "opportunity" to "success"
+```
+
+**Use Cases for Composite Cells**:
+
+1. **Opportunity Identification**: Find high-demand, low-adoption cells for targeted incentive programs
+2. **Success Analysis**: Study high-adoption, low-demand cells to understand what drives success
+3. **Equity Targeting**: Identify underserved cells (e.g., multi-family, older homes) with low adoption
+4. **Infrastructure Planning**: Plan gas infrastructure retirement based on cell-level electrification rates
+5. **Market Segmentation**: Segment market into distinct cell types for targeted business strategies
+6. **Policy Effectiveness**: Measure policy impact by tracking cell-level adoption and demand changes
+7. **Comparative Analysis**: Compare similar cells across regions to identify best practices
+8. **Scenario Planning**: Show how cells evolve under different policy scenarios
+
+**Integration with Existing Pipeline**:
+
+```python
+# In aggregation.py or new visualization.py module:
+
+def aggregate_by_microclimate(simulation_results: pd.DataFrame, premises: pd.DataFrame, 
+                              weather_stations: dict) -> pd.DataFrame:
+    """Aggregate demand by microclimate area (weather station service area).
+    Each premise assigned to nearest weather station."""
+    ...
+
+def aggregate_by_microresidential(simulation_results: pd.DataFrame, premises: pd.DataFrame) -> pd.DataFrame:
+    """Aggregate demand by microresidential cluster (segment + subsegment + vintage cohort)."""
+    ...
+
+def aggregate_by_microadoption(simulation_results: pd.DataFrame, premises: pd.DataFrame, 
+                               equipment_inventory: pd.DataFrame, scenario: str) -> pd.DataFrame:
+    """Aggregate demand by microadoption area (microclimate + microresidential + adoption cohort).
+    Computes heat pump penetration, electrification rate, and avg efficiency for each cluster.
+    Returns DataFrame with microadoption_cluster_id, microclimate, microresidential, adoption_cohort,
+    total_therms, upc, customer_count, heat_pump_penetration, electrification_rate, avg_efficiency."""
+    ...
+
+def compute_adoption_cohort(heat_pump_penetration: float) -> str:
+    """Classify microadoption area into adoption cohort based on heat pump penetration rate.
+    Returns: 'Early Adopters' (0-20%), 'Growth Phase' (20-50%), 'Mature Phase' (50-80%), 'Saturation' (80%+)"""
+    ...
+
+def aggregate_by_composite_cell(simulation_results: pd.DataFrame, premises: pd.DataFrame, 
+                                equipment_inventory: pd.DataFrame, scenario: str,
+                                cell_geometry: str = 'hexagon', cell_size_km: float = 7.5) -> pd.DataFrame:
+    """Aggregate demand by composite microregion cells (hexagonal or custom polygons).
+    Each cell combines microclimate + microresidential + adoption cohort + demand intensity.
+    Computes composite score, opportunity score, and success score for each cell.
+    Returns DataFrame with cell_id, microclimate, microresidential, adoption_cohort, demand_intensity,
+    total_therms, upc, customer_count, heat_pump_penetration, electrification_rate, avg_efficiency,
+    composite_score, opportunity_score, success_score."""
+    ...
+
+def compute_composite_score(demand_intensity: float, adoption_rate: float, 
+                           efficiency_gap: float, climate_severity: float) -> float:
+    """Compute composite score (0-100) combining demand, adoption, efficiency, and climate.
+    Weights: demand (40%), adoption (30%), efficiency (20%), climate (10%)."""
+    ...
+
+def compute_opportunity_score(demand_intensity: float, adoption_rate: float) -> float:
+    """Compute opportunity score for electrification (high demand + low adoption).
+    Score = (demand_intensity × 0.6) + ((100 - adoption_rate) × 0.4)"""
+    ...
+
+def compute_success_score(adoption_rate: float, demand_intensity: float) -> float:
+    """Compute success score for transition (high adoption + low demand).
+    Score = (adoption_rate × 0.6) + ((100 - demand_intensity) × 0.4)"""
+    ...
+
+def generate_composite_cell_geojson(composite_cell_data: pd.DataFrame, 
+                                    cell_geometry: str = 'hexagon',
+                                    cell_size_km: float = 7.5) -> dict:
+    """Create GeoJSON FeatureCollection with composite microregion cells (hexagons or custom polygons).
+    Color-coded by composite score, opportunity score, or success score.
+    Cell size proportional to customer count or total demand."""
+    ...
+
+def filter_composite_cells(composite_cell_data: pd.DataFrame, 
+                          microclimate: list = None,
+                          microresidential: list = None,
+                          adoption_cohort: list = None,
+                          demand_intensity: list = None,
+                          min_opportunity_score: float = None,
+                          min_success_score: float = None) -> pd.DataFrame:
+    """Filter composite cells by multiple attributes for targeted analysis."""
+    ...
+
+def export_visualization_data(results: dict[str, pd.DataFrame], output_dir: str) -> None:
+    """Export aggregated results as JSON files for Mapbox visualization at all geographic levels."""
+    ...
+```
+
+**Dependencies**:
+- `mapbox-gl` (JavaScript library, CDN or npm)
+- `geojson` (Python library for validation)
+- `shapely` (Python library for geographic operations, Voronoi generation)
+- `folium` or `geopandas` (optional, for GeoJSON generation)
+- `flask` or `fastapi` (optional, for API server)
+- `chart.js` or `plotly.js` (for time-series and comparison charts)
+
+---
+
 ### 8. scenarios.py -- Scenario Management
 
 ```python
@@ -782,6 +1259,570 @@ def validate_scenario(config: ScenarioConfig) -> list[str]: ...
 def run_scenario(config: ScenarioConfig, base_data: dict) -> pd.DataFrame: ...
 def compare_scenarios(results: dict[str, pd.DataFrame]) -> pd.DataFrame: ...
 ```
+
+### 9. api.py -- REST API for Scenario Management and Results Retrieval
+
+**Purpose**: Provide a REST API for users to configure scenario inputs, submit simulation runs, and retrieve results without direct Python access.
+
+**Technology Stack**:
+- **Framework**: Flask or FastAPI (FastAPI recommended for async support and automatic OpenAPI documentation)
+- **Task Queue**: Celery or APScheduler (for background job execution)
+- **Database**: SQLite (local), PostgreSQL (production)
+- **Authentication**: Optional JWT tokens for multi-user environments
+
+**Core API Endpoints**:
+
+#### Scenario Management
+
+```
+POST /api/v1/scenarios
+  Create a new scenario configuration
+  Request body: {
+    "name": "Aggressive Electrification 2030",
+    "description": "High heat pump adoption with policy incentives",
+    "base_year": 2025,
+    "forecast_horizon": 10,
+    "housing_growth_rate": 0.015,
+    "electrification_rates": {
+      "space_heating": 0.08,
+      "water_heating": 0.12,
+      "cooking": 0.02
+    },
+    "efficiency_improvements": {
+      "space_heating": 0.02,
+      "water_heating": 0.015,
+      "cooking": 0.01
+    },
+    "weather_assumption": "normal",
+    "heat_pump_cop": {
+      "ashp_baseline": 3.0,
+      "gshp_baseline": 4.0,
+      "gorge_penalty": 0.85
+    }
+  }
+  Response: {
+    "scenario_id": "uuid-1234",
+    "name": "Aggressive Electrification 2030",
+    "created_at": "2025-03-25T10:30:00Z",
+    "status": "created",
+    "validation_errors": []
+  }
+
+GET /api/v1/scenarios
+  List all scenarios
+  Query params: ?limit=10&offset=0&status=created|running|completed|failed
+  Response: {
+    "scenarios": [
+      {
+        "scenario_id": "uuid-1234",
+        "name": "Aggressive Electrification 2030",
+        "status": "completed",
+        "created_at": "2025-03-25T10:30:00Z",
+        "completed_at": "2025-03-25T10:35:00Z",
+        "execution_time_seconds": 300
+      },
+      ...
+    ],
+    "total": 42,
+    "limit": 10,
+    "offset": 0
+  }
+
+GET /api/v1/scenarios/{scenario_id}
+  Get scenario details
+  Response: {
+    "scenario_id": "uuid-1234",
+    "name": "Aggressive Electrification 2030",
+    "description": "...",
+    "base_year": 2025,
+    "forecast_horizon": 10,
+    "housing_growth_rate": 0.015,
+    "electrification_rates": {...},
+    "efficiency_improvements": {...},
+    "weather_assumption": "normal",
+    "status": "completed",
+    "created_at": "2025-03-25T10:30:00Z",
+    "completed_at": "2025-03-25T10:35:00Z",
+    "execution_time_seconds": 300,
+    "validation_errors": [],
+    "validation_warnings": []
+  }
+
+PUT /api/v1/scenarios/{scenario_id}
+  Update scenario configuration (only if not running/completed)
+  Request body: { "name": "...", "electrification_rates": {...}, ... }
+  Response: { "scenario_id": "uuid-1234", "status": "updated", ... }
+
+DELETE /api/v1/scenarios/{scenario_id}
+  Delete scenario and associated results
+  Response: { "scenario_id": "uuid-1234", "status": "deleted" }
+
+POST /api/v1/scenarios/{scenario_id}/validate
+  Validate scenario configuration without running
+  Response: {
+    "scenario_id": "uuid-1234",
+    "is_valid": true,
+    "errors": [],
+    "warnings": ["housing_growth_rate is above historical average"]
+  }
+```
+
+#### Scenario Execution
+
+```
+POST /api/v1/scenarios/{scenario_id}/run
+  Submit scenario for execution
+  Query params: ?async=true (default) or ?async=false (wait for completion)
+  Response (async=true): {
+    "scenario_id": "uuid-1234",
+    "run_id": "run-5678",
+    "status": "queued",
+    "queue_position": 3,
+    "estimated_wait_seconds": 120
+  }
+  Response (async=false): {
+    "scenario_id": "uuid-1234",
+    "run_id": "run-5678",
+    "status": "completed",
+    "execution_time_seconds": 300,
+    "results_url": "/api/v1/runs/run-5678/results"
+  }
+
+GET /api/v1/runs/{run_id}
+  Get execution status and progress
+  Response: {
+    "run_id": "run-5678",
+    "scenario_id": "uuid-1234",
+    "status": "running",
+    "progress": {
+      "current_step": "simulation",
+      "step_progress": 0.65,
+      "overall_progress": 0.45,
+      "estimated_time_remaining_seconds": 180
+    },
+    "started_at": "2025-03-25T10:30:00Z",
+    "execution_time_seconds": 120
+  }
+
+POST /api/v1/runs/{run_id}/cancel
+  Cancel a running scenario
+  Response: {
+    "run_id": "run-5678",
+    "status": "cancelled",
+    "cancelled_at": "2025-03-25T10:32:00Z"
+  }
+```
+
+#### Results Retrieval
+
+```
+GET /api/v1/runs/{run_id}/results
+  Get aggregated results for a completed run
+  Query params: ?level=county|district|microclimate|microresidential|microadoption|composite-cell
+               &format=json|csv|parquet
+               &year=2025 (optional, single year)
+  Response (format=json): {
+    "run_id": "run-5678",
+    "scenario_id": "uuid-1234",
+    "level": "county",
+    "format": "json",
+    "data": [
+      {
+        "year": 2025,
+        "area_id": "41051",
+        "area_name": "Multnomah County",
+        "total_therms": 125000000,
+        "upc": 650,
+        "customer_count": 192000,
+        "end_uses": {
+          "space_heating": 75000000,
+          "water_heating": 30000000,
+          "cooking": 5760000,
+          "drying": 3840000,
+          "fireplace": 10560000,
+          "other": 1920000
+        },
+        "electrification_rate": 0.15,
+        "heat_pump_penetration": 0.12,
+        "avg_efficiency": 0.88
+      },
+      ...
+    ]
+  }
+
+GET /api/v1/runs/{run_id}/results/download
+  Download results as file
+  Query params: ?level=county|district|...&format=csv|parquet|excel
+  Response: File download (CSV, Parquet, or Excel)
+
+GET /api/v1/runs/{run_id}/results/timeseries
+  Get time-series data for a specific area
+  Query params: ?level=county|district|...&area_id=41051&format=json|csv
+  Response: {
+    "run_id": "run-5678",
+    "area_id": "41051",
+    "area_name": "Multnomah County",
+    "level": "county",
+    "years": [2025, 2026, ..., 2035],
+    "total_therms": [125000000, 123500000, ...],
+    "upc": [650, 643, ...],
+    "customer_count": [192000, 193000, ...],
+    "end_uses": {
+      "space_heating": [75000000, 73500000, ...],
+      "water_heating": [30000000, 29800000, ...],
+      ...
+    },
+    "electrification_rate": [0.15, 0.18, ...],
+    "heat_pump_penetration": [0.12, 0.15, ...]
+  }
+
+GET /api/v1/runs/{run_id}/results/comparison
+  Compare results across multiple areas
+  Query params: ?level=county&area_ids=41051,41039,41047&metric=upc|total_therms|electrification_rate
+  Response: {
+    "run_id": "run-5678",
+    "level": "county",
+    "metric": "upc",
+    "areas": [
+      {
+        "area_id": "41051",
+        "area_name": "Multnomah County",
+        "years": [2025, 2026, ...],
+        "values": [650, 643, ...]
+      },
+      ...
+    ]
+  }
+
+GET /api/v1/runs/{run_id}/results/geojson
+  Get results as GeoJSON for map visualization
+  Query params: ?level=county|district|microclimate|microresidential|microadoption|composite-cell
+               &year=2025&metric=upc|total_therms|electrification_rate
+  Response: GeoJSON FeatureCollection with properties for each geographic feature
+
+GET /api/v1/runs/{run_id}/metadata
+  Get execution metadata and summary statistics
+  Response: {
+    "run_id": "run-5678",
+    "scenario_id": "uuid-1234",
+    "scenario_name": "Aggressive Electrification 2030",
+    "status": "completed",
+    "created_at": "2025-03-25T10:30:00Z",
+    "completed_at": "2025-03-25T10:35:00Z",
+    "execution_time_seconds": 300,
+    "data_version": "2025-03-25",
+    "model_version": "1.0.0",
+    "summary_statistics": {
+      "total_premises": 650000,
+      "total_demand_2025": 425000000,
+      "total_demand_2035": 380000000,
+      "demand_reduction_percent": -10.6,
+      "avg_electrification_rate_2035": 0.35,
+      "avg_heat_pump_penetration_2035": 0.28
+    }
+  }
+```
+
+#### Scenario Comparison
+
+```
+POST /api/v1/comparisons
+  Create a comparison of multiple scenarios
+  Request body: {
+    "name": "Policy Scenarios Comparison",
+    "description": "Compare BAU vs. Aggressive Electrification",
+    "scenario_ids": ["uuid-1234", "uuid-5678"],
+    "metrics": ["upc", "electrification_rate", "heat_pump_penetration"]
+  }
+  Response: {
+    "comparison_id": "comp-9999",
+    "name": "Policy Scenarios Comparison",
+    "scenario_ids": ["uuid-1234", "uuid-5678"],
+    "status": "created"
+  }
+
+GET /api/v1/comparisons/{comparison_id}
+  Get comparison results
+  Query params: ?level=county|district|...&format=json|csv
+  Response: {
+    "comparison_id": "comp-9999",
+    "scenarios": [
+      {
+        "scenario_id": "uuid-1234",
+        "scenario_name": "Business as Usual",
+        "data": [...]
+      },
+      {
+        "scenario_id": "uuid-5678",
+        "scenario_name": "Aggressive Electrification",
+        "data": [...]
+      }
+    ],
+    "differences": {
+      "2035_upc_difference": -45,
+      "2035_electrification_rate_difference": 0.25,
+      "cumulative_demand_reduction": 15000000
+    }
+  }
+
+GET /api/v1/comparisons/{comparison_id}/download
+  Download comparison as file
+  Query params: ?format=csv|excel|json
+  Response: File download
+```
+
+#### Data and Configuration
+
+```
+GET /api/v1/config/defaults
+  Get default scenario parameters
+  Response: {
+    "base_year": 2025,
+    "forecast_horizon": 10,
+    "housing_growth_rate": 0.012,
+    "electrification_rates": {
+      "space_heating": 0.02,
+      "water_heating": 0.05,
+      "cooking": 0.01
+    },
+    "efficiency_improvements": {
+      "space_heating": 0.015,
+      "water_heating": 0.01,
+      "cooking": 0.005
+    },
+    "weather_assumption": "normal",
+    "heat_pump_cop": {...}
+  }
+
+GET /api/v1/config/parameters
+  Get all available parameters and their valid ranges
+  Response: {
+    "base_year": {
+      "type": "integer",
+      "min": 2020,
+      "max": 2030,
+      "default": 2025,
+      "description": "Base year for simulation"
+    },
+    "forecast_horizon": {
+      "type": "integer",
+      "min": 5,
+      "max": 50,
+      "default": 10,
+      "description": "Number of years to forecast"
+    },
+    ...
+  }
+
+GET /api/v1/data/geographic-areas
+  Get list of available geographic areas
+  Query params: ?level=county|district|microclimate|microresidential|microadoption|composite-cell
+  Response: {
+    "level": "county",
+    "areas": [
+      {
+        "area_id": "41051",
+        "area_name": "Multnomah County",
+        "state": "OR",
+        "customer_count": 192000,
+        "total_demand_2025": 125000000
+      },
+      ...
+    ]
+  }
+
+GET /api/v1/data/weather-stations
+  Get weather station information
+  Response: {
+    "stations": [
+      {
+        "station_id": "KPDX",
+        "station_name": "Portland",
+        "location": {"lat": 45.5891, "lon": -122.5975},
+        "annual_hdd": 4850,
+        "annual_cdd": 150,
+        "coverage_area_sqmi": 2500
+      },
+      ...
+    ]
+  }
+```
+
+#### Health and Status
+
+```
+GET /api/v1/health
+  Health check endpoint
+  Response: {
+    "status": "healthy",
+    "timestamp": "2025-03-25T10:30:00Z",
+    "version": "1.0.0",
+    "database": "connected",
+    "data_loaded": true,
+    "queue_length": 2
+  }
+
+GET /api/v1/status
+  System status and statistics
+  Response: {
+    "status": "operational",
+    "timestamp": "2025-03-25T10:30:00Z",
+    "scenarios_total": 42,
+    "scenarios_completed": 38,
+    "scenarios_running": 1,
+    "scenarios_queued": 3,
+    "avg_execution_time_seconds": 285,
+    "uptime_seconds": 86400,
+    "last_data_update": "2025-03-25T00:00:00Z"
+  }
+```
+
+**API Implementation Details**:
+
+```python
+# In api.py or main.py:
+
+from fastapi import FastAPI, HTTPException, BackgroundTasks, Query
+from pydantic import BaseModel, Field
+from typing import Optional, List
+import uuid
+from datetime import datetime
+
+app = FastAPI(
+    title="NW Natural Demand Forecast API",
+    description="REST API for scenario management and results retrieval",
+    version="1.0.0"
+)
+
+class ScenarioRequest(BaseModel):
+    """Request body for creating/updating scenarios"""
+    name: str = Field(..., min_length=1, max_length=200)
+    description: Optional[str] = None
+    base_year: int = Field(default=2025, ge=2020, le=2030)
+    forecast_horizon: int = Field(default=10, ge=5, le=50)
+    housing_growth_rate: float = Field(default=0.012, ge=0.0, le=0.05)
+    electrification_rates: dict[str, float]
+    efficiency_improvements: dict[str, float]
+    weather_assumption: str = Field(default="normal", regex="^(normal|warm|cold)$")
+    heat_pump_cop: Optional[dict] = None
+
+class ScenarioResponse(BaseModel):
+    """Response body for scenario operations"""
+    scenario_id: str
+    name: str
+    status: str
+    created_at: datetime
+    validation_errors: List[str] = []
+
+@app.post("/api/v1/scenarios", response_model=ScenarioResponse)
+async def create_scenario(scenario: ScenarioRequest) -> ScenarioResponse:
+    """Create a new scenario configuration"""
+    scenario_id = str(uuid.uuid4())
+    # Validate scenario parameters
+    errors = validate_scenario(scenario)
+    if errors:
+        raise HTTPException(status_code=400, detail={"errors": errors})
+    # Store scenario in database
+    db.scenarios.insert({
+        "scenario_id": scenario_id,
+        "name": scenario.name,
+        "config": scenario.dict(),
+        "status": "created",
+        "created_at": datetime.now()
+    })
+    return ScenarioResponse(
+        scenario_id=scenario_id,
+        name=scenario.name,
+        status="created",
+        created_at=datetime.now()
+    )
+
+@app.post("/api/v1/scenarios/{scenario_id}/run")
+async def run_scenario(scenario_id: str, background_tasks: BackgroundTasks, 
+                      async_mode: bool = Query(True)) -> dict:
+    """Submit scenario for execution"""
+    scenario = db.scenarios.find_one({"scenario_id": scenario_id})
+    if not scenario:
+        raise HTTPException(status_code=404, detail="Scenario not found")
+    
+    run_id = str(uuid.uuid4())
+    
+    if async_mode:
+        # Queue for background execution
+        background_tasks.add_task(execute_scenario, scenario_id, run_id)
+        return {
+            "scenario_id": scenario_id,
+            "run_id": run_id,
+            "status": "queued"
+        }
+    else:
+        # Wait for completion
+        results = execute_scenario(scenario_id, run_id)
+        return {
+            "scenario_id": scenario_id,
+            "run_id": run_id,
+            "status": "completed",
+            "results_url": f"/api/v1/runs/{run_id}/results"
+        }
+
+@app.get("/api/v1/runs/{run_id}/results")
+async def get_results(run_id: str, level: str = "county", 
+                     format: str = "json") -> dict:
+    """Get aggregated results for a completed run"""
+    run = db.runs.find_one({"run_id": run_id})
+    if not run:
+        raise HTTPException(status_code=404, detail="Run not found")
+    if run["status"] != "completed":
+        raise HTTPException(status_code=400, detail="Run not completed")
+    
+    # Load results from storage
+    results = load_results(run_id, level)
+    
+    if format == "csv":
+        return export_to_csv(results)
+    elif format == "parquet":
+        return export_to_parquet(results)
+    else:
+        return results
+```
+
+**Error Handling**:
+
+```
+All API endpoints return standard error responses:
+
+{
+  "error": {
+    "code": "INVALID_PARAMETER",
+    "message": "electrification_rate must be between 0 and 1",
+    "details": {
+      "parameter": "electrification_rates.space_heating",
+      "value": 1.5,
+      "constraint": "0 <= value <= 1"
+    }
+  }
+}
+
+Common error codes:
+- INVALID_PARAMETER: Request parameter validation failed
+- SCENARIO_NOT_FOUND: Scenario ID does not exist
+- RUN_NOT_FOUND: Run ID does not exist
+- RUN_NOT_COMPLETED: Results not available (run still running)
+- INTERNAL_ERROR: Server error during execution
+```
+
+**Authentication** (optional for production):
+
+```
+POST /api/v1/auth/login
+  Request: { "username": "user@example.com", "password": "..." }
+  Response: { "access_token": "jwt-token", "expires_in": 3600 }
+
+All subsequent requests include:
+  Authorization: Bearer jwt-token
+```
+
+---
 
 ## Data Models
 

@@ -1,0 +1,43 @@
+{
+  "original_file": "Data\\rbsam_y2\\RBSAM_Y2_PART 4 OF 5.TXT",
+  "original_size": 334038522,
+  "chunk_size": 52428800,
+  "num_chunks": 7,
+  "chunks": [
+    {
+      "chunk_number": 0,
+      "chunk_path": "Data\\rbsam_y2\\RBSAM_Y2_PART 4 OF 5.TXT.chunk.000",
+      "chunk_size": 52428800
+    },
+    {
+      "chunk_number": 1,
+      "chunk_path": "Data\\rbsam_y2\\RBSAM_Y2_PART 4 OF 5.TXT.chunk.001",
+      "chunk_size": 52428800
+    },
+    {
+      "chunk_number": 2,
+      "chunk_path": "Data\\rbsam_y2\\RBSAM_Y2_PART 4 OF 5.TXT.chunk.002",
+      "chunk_size": 52428800
+    },
+    {
+      "chunk_number": 3,
+      "chunk_path": "Data\\rbsam_y2\\RBSAM_Y2_PART 4 OF 5.TXT.chunk.003",
+      "chunk_size": 52428800
+    },
+    {
+      "chunk_number": 4,
+      "chunk_path": "Data\\rbsam_y2\\RBSAM_Y2_PART 4 OF 5.TXT.chunk.004",
+      "chunk_size": 52428800
+    },
+    {
+      "chunk_number": 5,
+      "chunk_path": "Data\\rbsam_y2\\RBSAM_Y2_PART 4 OF 5.TXT.chunk.005",
+      "chunk_size": 52428800
+    },
+    {
+      "chunk_number": 6,
+      "chunk_path": "Data\\rbsam_y2\\RBSAM_Y2_PART 4 OF 5.TXT.chunk.006",
+      "chunk_size": 19465722
+    }
+  ]
+}

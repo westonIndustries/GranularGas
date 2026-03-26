@@ -195,6 +195,142 @@ New equipment: RFAU, efficiency=0.92, fuel=gas, age=0
 
 ---
 
+### 4.1 Heat Pump Integration in Equipment Replacement
+
+**Context**: Heat pumps represent a critical decarbonization pathway for residential heating and water heating. The algorithm models heat pump adoption through equipment replacement and electrification scenarios.
+
+**Heat Pump Types Modeled**:
+- **Air-Source Heat Pumps (ASHP)**: Primary space heating replacement for gas furnaces
+- **Ground-Source Heat Pumps (GSHP)**: Alternative for space heating (higher efficiency, higher cost)
+- **Heat Pump Water Heaters (HPWH)**: Replacement for gas water heaters
+
+**Process** (during equipment replacement):
+
+```
+For each space heating or water heating equipment unit marked for replacement:
+    1. Check electrification scenario:
+       - If random() < electrification_rate[end_use]:
+         a. Determine heat pump type based on scenario config:
+            - ASHP: 85-95% of heat pump adoptions (lower cost)
+            - GSHP: 10-15% of heat pump adoptions (higher efficiency)
+            - HPWH: 100% of water heating electrification
+         
+         b. Apply heat pump efficiency:
+            - ASHP COP (Coefficient of Performance):
+              * Baseline COP = 2.5-3.5 (depends on climate zone)
+              * Gorge region: COP reduced by 15% (colder climate)
+              * Vintage adjustment: newer systems +5% COP
+            - GSHP COP:
+              * Baseline COP = 3.5-4.5 (ground-coupled advantage)
+              * No climate penalty (stable ground temperature)
+            - HPWH EF (Energy Factor):
+              * Baseline EF = 2.5-3.0 (vs. 0.60 for gas water heaters)
+         
+         c. Convert efficiency to gas-equivalent for comparison:
+            - gas_equivalent_efficiency = COP / 3.412
+              (3.412 = conversion factor for electric to gas BTU)
+            - Example: ASHP with COP=3.0 → gas_equivalent=0.88
+         
+         d. Update equipment record:
+            - fuel_type = "electric"
+            - efficiency = COP (for ASHP/GSHP) or EF (for HPWH)
+            - equipment_type_code = "HPSH" (heat pump space heating)
+                                  or "HPWH" (heat pump water heating)
+            - install_year = target_year
+            - Recalculate Weibull parameters with new useful_life
+              (heat pumps typically 15-20 year lifespan)
+    
+    2. Else (no electrification):
+       - Keep fuel_type = "gas"
+       - Apply efficiency improvement from scenario
+       - Update install_year = target_year
+```
+
+**Heat Pump Performance Adjustments**:
+
+| Factor | Impact | Modeling |
+|--------|--------|----------|
+| Climate Zone | Gorge region colder | -15% COP for ASHP |
+| Building Vintage | Older homes need more heating | Heating factor adjustment |
+| Backup Heating | Cold climate backup | Modeled as reduced COP below threshold |
+| Ductwork Quality | Poor ducts reduce efficiency | Vintage-based adjustment |
+| Thermostat Control | Smart controls improve efficiency | +5% COP for newer systems |
+
+**Example Heat Pump Replacement** (space heating):
+```
+Original Equipment:
+  Type: RFAU (gas furnace)
+  Efficiency: 0.85 AFUE
+  Fuel: gas
+  Age: 25 years
+
+Replacement Decision:
+  Weibull probability: 0.52 → REPLACE
+  Electrification check: random()=0.08 < 0.15 → ELECTRIFY
+
+New Equipment (Heat Pump):
+  Type: HPSH (air-source heat pump)
+  COP: 3.0 (baseline) × 0.85 (Gorge penalty) = 2.55
+  Gas-equivalent efficiency: 2.55 / 3.412 = 0.75
+  Fuel: electric
+  Age: 0 years
+  Useful life: 18 years (vs. 20 for gas furnace)
+```
+
+**Consumption Calculation with Heat Pumps**:
+
+For space heating with heat pump:
+```
+therms_equivalent = (annual_hdd × heating_factor × qty) / gas_equivalent_efficiency
+
+Where:
+  gas_equivalent_efficiency = COP / 3.412
+  
+This allows direct comparison with gas heating in the same units (therms).
+For actual electricity consumption:
+  kWh = (annual_hdd × heating_factor × qty) / COP
+```
+
+For water heating with heat pump:
+```
+therms_equivalent = BTU / 100,000 / gas_equivalent_efficiency
+
+Where:
+  gas_equivalent_efficiency = EF / 3.412
+  EF = Energy Factor (typically 2.5-3.0 for HPWH)
+```
+
+**Scenario Parameters** (configurable):
+
+```yaml
+electrification_rates:
+  space_heating: 0.02-0.15  # % of replacements that electrify
+  water_heating: 0.05-0.25  # % of replacements that electrify
+  
+heat_pump_types:
+  ashp_fraction: 0.85       # % of heat pumps that are air-source
+  gshp_fraction: 0.15       # % of heat pumps that are ground-source
+  
+heat_pump_efficiency:
+  ashp_cop_baseline: 3.0
+  gshp_cop_baseline: 4.0
+  hpwh_ef_baseline: 2.75
+  gorge_penalty: 0.85       # Multiplier for Gorge region
+  
+heat_pump_lifespan:
+  ashp_years: 18
+  gshp_years: 25
+  hpwh_years: 15
+```
+
+**Validation Checks**:
+- Heat pump COP must be > 1.0 (physical constraint)
+- Gas-equivalent efficiency must be > 0.0
+- Heat pump adoption cannot exceed electrification rate
+- Backup heating modeled implicitly through reduced COP
+
+---
+
 ### 5. Weather Data Processing
 
 **Input**: Daily weather data, water temperature data, NOAA normals

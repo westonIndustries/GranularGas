@@ -6,8 +6,8 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
 
 ## Tasks
 
-- [ ] 1. Set up project structure and configuration module
-  - [ ] 1.1 Create `src/` directory and `src/config.py` with all static configuration
+- [x] 1. Set up project structure and configuration module
+  - [x] 1.1 Create `src/` directory and `src/config.py` with all static configuration
     - Define `END_USE_MAP` dictionary mapping equipment_type_code to end-use categories
     - Define `DEFAULT_EFFICIENCY` dictionary by end-use category
     - Define `USEFUL_LIFE` dictionary by end-use category
@@ -31,12 +31,12 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Define `BASE_YEAR`, `DEFAULT_BASE_TEMP`, `DEFAULT_HOT_WATER_TEMP` constants
     - _Requirements: 1.1, 1.4, 3.2, 4.2_
 
-  - [ ]* 1.2 Write property test for config completeness
+  - [x] 1.2 Write property test for config completeness
     - **Property 1: All equipment_type_codes in END_USE_MAP resolve to a valid end-use category string**
     - **Validates: Requirements 1.1, 1.4**
 
 - [ ] 2. Implement data ingestion module
-  - [ ] 2.1 Create `src/data_ingestion.py` with CSV loading functions
+  - [x] 2.1 Create `src/data_ingestion.py` with CSV loading functions
     - Implement `load_premise_data(path)` — load and filter to active residential premises (custtype='R', status_code='AC')
     - Implement `load_equipment_data(path)` — load equipment inventory CSV
     - Implement `load_segment_data(path)` — load and filter segment data to residential customers
@@ -83,7 +83,7 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Log warnings for missing or malformed rows
     - _Requirements: 2.2, 2.4, 3.1, 3.2, 7.1, 7.2, 7.3, 7.4, 8.3_
 
-  - [ ] 2.2 Implement `build_premise_equipment_table` join function
+  - [x] 2.2 Implement `build_premise_equipment_table` join function
     - Join premise, equipment, segment, and equipment_codes DataFrames on `blinded_id` and `equipment_type_code`
     - Derive `end_use` column using `END_USE_MAP` from config
     - Derive `efficiency` column using `DEFAULT_EFFICIENCY` where not available
@@ -91,31 +91,31 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Document assumptions for missing data as log warnings
     - _Requirements: 1.4, 2.1, 3.1, 7.4, 8.1_
 
-  - [ ]* 2.3 Write property tests for data ingestion
+  - [x] 2.3 Write property tests for data ingestion
     - **Property 2: Filtering preserves only active residential premises — output contains only custtype='R' and status_code='AC'**
     - **Validates: Requirements 1.2, 7.1**
 
-  - [ ]* 2.4 Write property test for join integrity
+  - [x] 2.4 Write property test for join integrity
     - **Property 3: Every row in premise_equipment_table has a non-null end_use category and a valid efficiency > 0**
     - **Validates: Requirements 1.4, 3.1**
 
-- [ ] 3. Checkpoint — Verify data ingestion
+- [x] 3. Checkpoint — Verify data ingestion
   - Ensure all tests pass, ask the user if questions arise.
   - Verify that `build_premise_equipment_table` produces a valid DataFrame from the actual CSV files in `Data/`.
 
 - [ ] 4. Implement housing stock module
-  - [ ] 4.1 Create `src/housing_stock.py` with `HousingStock` dataclass and baseline builder
+  - [x] 4.1 Create `src/housing_stock.py` with `HousingStock` dataclass and baseline builder
     - Define `HousingStock` dataclass with fields: year, premises DataFrame, total_units, units_by_segment, units_by_district
     - Implement `build_baseline_stock(premise_equipment, base_year)` — construct baseline stock from premise-equipment data
     - Compute `total_units`, `units_by_segment`, `units_by_district` from unique blinded_ids
     - _Requirements: 2.1, 2.2, 5.4_
 
-  - [ ] 4.2 Implement `project_stock` for future year projection
+  - [x] 4.2 Implement `project_stock` for future year projection
     - Apply housing growth rate from scenario config to project total units
     - Simulate new construction additions proportional to existing segment distribution
     - _Requirements: 2.3, 6.1_
 
-  - [ ]* 4.3 Write property test for housing stock projection
+  - [ ] 4.3 Write property test for housing stock projection
     - **Property 4: Projected total_units equals baseline total_units × (1 + growth_rate)^(target_year - base_year), within rounding tolerance**
     - **Validates: Requirements 2.3, 6.3**
 
@@ -137,12 +137,12 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Apply efficiency improvements from scenario config
     - _Requirements: 3.3, 3.4, 6.1_
 
-  - [ ]* 5.3 Write property test for equipment replacement logic
+  - [ ] 5.3 Write property test for equipment replacement logic
     - **Property 5: Weibull survival function is monotonically decreasing — S(t) <= S(t-1) for all t > 0, and S(0) = 1.0**
     - **Property 5b: replacement_probability is always in [0, 1] for valid inputs**
     - **Validates: Requirements 3.3**
 
-  - [ ]* 5.4 Write property test for fuel switching conservation
+  - [ ] 5.4 Write property test for fuel switching conservation
     - **Property 6: Total equipment count before and after apply_replacements is equal (replacements don't create or destroy units)**
     - **Validates: Requirements 3.3, 3.4**
 
@@ -317,3 +317,260 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
 - `Data/ofm_april1_housing.xlsx` contains WA Office of Financial Management postcensal housing unit estimates (April 1, 2020-2025). Sheet "Housing Units" has 28 columns: Line, Filter, County, Jurisdiction, then 6 years × 4 metrics (Total, One Unit, Two or More, Mobile Homes). Filter=1 rows are county totals. Covers all WA counties; model uses Clark (line 41), Skamania (line 316), Klickitat (line 200) for the 3 WA NW Natural service territory counties. Fills the gap left by PSU forecasts (Oregon-only) for WA housing growth rates and structure-type validation.
 - `Data/noaa_normals/` contains NOAA 30-year Climate Normals (1991-2020) for all 11 NW Natural weather stations, downloaded via the NOAA CDO API. Each station has daily normals (365 rows: date, avg/max/min temp, HDD, CDD) and monthly normals (12 rows). Stations: KPDX (Portland), KEUG (Eugene), KSLE (Salem), KAST (Astoria), KDLS (Dallesport/The Dalles), KOTH (North Bend/Coos Bay), KONP (Newport), KCVO (Corvallis), KHIO (Hillsboro), KTTD (Troutdale), KVUO (Vancouver WA). Used for weather-normalizing baseline simulations, computing weather adjustment factors (actual HDD / normal HDD), and providing a consistent reference for scenario projections. NOAA sentinel value -7777 means insufficient data (treat as missing/zero).
 - `Data/Residential Energy Consumption Servey/` contains EIA Residential Energy Consumption Survey (RECS) microdata spanning 7 survey cycles (1993-2020). The model uses 2005-2020 CSV files; 1993-2001 are fixed-width reference only. Key survey: 2020 RECS (`recs2020_public_v7.csv`, 799 columns) has state-level geography (`STATE_FIPS`) enabling OR/WA filtering, plus NG end-use BTU columns (`BTUNGSPH`, `BTUNGWTH`, `BTUNGCOK`, `BTUNGCDR`, `BTUNGNEC`, `BTUNGOTH`). 2015 RECS (`recs2015_public_v4.csv`, 759 columns) has division-level geography only. 2009 and 2005 have progressively less end-use granularity. Filter to Pacific division (`DIVISION=9`) and gas-heated homes (`FUELHEAT=1`) for NW Natural comparison. RECS provides independent validation benchmarks for the model's end-use disaggregation ratios and per-customer consumption estimates. Note: folder name has a typo ("Servey" instead of "Survey") — use actual path as-is.
+
+
+- [ ] 15. Implement visualization module with Mapbox integration
+  - [ ] 15.1 Create `src/visualization.py` with geographic aggregation functions
+    - Implement `aggregate_by_microclimate(simulation_results, premises, weather_stations)` — aggregate demand by weather station service area
+    - Implement `aggregate_by_microresidential(simulation_results, premises)` — aggregate demand by segment + subsegment + vintage cohort
+    - Implement `aggregate_by_microadoption(simulation_results, premises, equipment_inventory, scenario)` — aggregate demand by microclimate + microresidential + adoption cohort
+    - Implement `compute_adoption_cohort(heat_pump_penetration)` — classify into Early Adopters (0-20%), Growth Phase (20-50%), Mature Phase (50-80%), Saturation (80%+)
+    - Implement `compute_composite_score(demand_intensity, adoption_rate, efficiency_gap, climate_severity)` — multi-dimensional scoring (40% demand + 30% adoption + 20% efficiency + 10% climate)
+    - Implement `compute_opportunity_score(demand_intensity, adoption_rate)` — high demand + low adoption = high opportunity
+    - Implement `compute_success_score(adoption_rate, demand_intensity)` — high adoption + low demand = successful transition
+    - _Requirements: 13.1, 13.2, 13.3_
+
+  - [ ] 15.2 Implement GeoJSON generation functions
+    - Implement `generate_microclimate_geojson(weather_stations, service_areas)` — create GeoJSON with weather station service areas (Voronoi or buffered circles)
+    - Implement `generate_microresidential_geojson(microresidential_data, premise_locations)` — create GeoJSON with microresidential clusters (hexbins or custom polygons)
+    - Implement `generate_microadoption_geojson(microadoption_data, microclimate_geojson, microresidential_geojson)` — create GeoJSON with microadoption areas
+    - Implement `generate_composite_cell_geojson(composite_cell_data, cell_geometry='hexagon', cell_size_km=7.5)` — create GeoJSON with hexagonal cells combining all dimensions
+    - Implement `generate_county_geojson(counties_data, county_boundaries_path)` — create GeoJSON with county boundaries
+    - _Requirements: 13.1, 13.2, 13.3_
+
+  - [ ] 15.3 Implement filtering and comparison functions
+    - Implement `filter_composite_cells(composite_cell_data, microclimate=None, microresidential=None, adoption_cohort=None, demand_intensity=None, min_opportunity_score=None, min_success_score=None)` — filter cells by multiple attributes
+    - Implement `export_visualization_data(results, output_dir)` — export aggregated results as JSON files for Mapbox visualization at all geographic levels
+    - _Requirements: 13.1, 13.2_
+
+  - [ ]* 15.4 Write property test for composite cell scoring
+    - **Property 15: Composite score is always in [0, 100] for valid inputs**
+    - **Property 15b: Opportunity score + Success score relationship: high opportunity cells have low success scores and vice versa**
+    - **Validates: Requirements 13.1, 13.2**
+
+- [ ] 16. Implement REST API module
+  - [ ] 16.1 Create `src/api.py` with FastAPI application and scenario endpoints
+    - Set up FastAPI app with OpenAPI documentation
+    - Implement `POST /api/v1/scenarios` — create new scenario with validation
+    - Implement `GET /api/v1/scenarios` — list scenarios with filtering and pagination
+    - Implement `GET /api/v1/scenarios/{scenario_id}` — get scenario details
+    - Implement `PUT /api/v1/scenarios/{scenario_id}` — update scenario (if not running)
+    - Implement `DELETE /api/v1/scenarios/{scenario_id}` — delete scenario and results
+    - Implement `POST /api/v1/scenarios/{scenario_id}/validate` — validate without running
+    - Use Pydantic models for request/response validation
+    - _Requirements: 11.1, 11.2, 11.3, 12.1_
+
+  - [ ] 16.2 Implement execution endpoints
+    - Implement `POST /api/v1/scenarios/{scenario_id}/run` — submit for execution (async or sync)
+    - Implement `GET /api/v1/runs/{run_id}` — get execution status and progress
+    - Implement `POST /api/v1/runs/{run_id}/cancel` — cancel running scenario
+    - Support background task execution using Celery or APScheduler
+    - Track execution progress (current step, overall progress, estimated time remaining)
+    - _Requirements: 11.2, 12.1_
+
+  - [ ] 16.3 Implement results retrieval endpoints
+    - Implement `GET /api/v1/runs/{run_id}/results` — get aggregated results (JSON, CSV, Parquet)
+    - Implement `GET /api/v1/runs/{run_id}/results/download` — download results as file
+    - Implement `GET /api/v1/runs/{run_id}/results/timeseries` — get time-series for specific area
+    - Implement `GET /api/v1/runs/{run_id}/results/comparison` — compare multiple areas
+    - Implement `GET /api/v1/runs/{run_id}/results/geojson` — get GeoJSON for map visualization
+    - Implement `GET /api/v1/runs/{run_id}/metadata` — get execution metadata and summary statistics
+    - Support multiple aggregation levels: county, district, microclimate, microresidential, microadoption, composite-cell
+    - _Requirements: 9.1, 9.2, 9.3, 9.4_
+
+  - [ ] 16.4 Implement comparison and configuration endpoints
+    - Implement `POST /api/v1/comparisons` — create comparison of multiple scenarios
+    - Implement `GET /api/v1/comparisons/{comparison_id}` — get comparison results
+    - Implement `GET /api/v1/comparisons/{comparison_id}/download` — download comparison
+    - Implement `GET /api/v1/config/defaults` — get default scenario parameters
+    - Implement `GET /api/v1/config/parameters` — get all parameters and valid ranges
+    - Implement `GET /api/v1/data/geographic-areas` — list available geographic areas
+    - Implement `GET /api/v1/data/weather-stations` — get weather station information
+    - _Requirements: 9.4, 11.3_
+
+  - [ ] 16.5 Implement health and status endpoints
+    - Implement `GET /api/v1/health` — health check endpoint
+    - Implement `GET /api/v1/status` — system status and statistics
+    - Include database connectivity, data loaded status, queue length
+    - _Requirements: 12.1_
+
+  - [ ] 16.6 Implement error handling and authentication
+    - Standardize error responses with error codes and detailed messages
+    - Implement optional JWT token authentication for production
+    - Implement rate limiting (1000 req/hr authenticated, 100 req/hr unauthenticated)
+    - Add request/response logging
+    - _Requirements: 11.1, 12.1_
+
+  - [ ]* 16.7 Write integration test for API endpoints
+    - Test scenario creation, validation, execution, and results retrieval
+    - Verify response formats and error handling
+    - _Requirements: 11.1, 11.2, 12.1_
+
+- [ ] 17. Implement web visualization frontend
+  - [ ] 17.1 Create HTML/JavaScript visualization interface
+    - Create `static/index.html` with Mapbox GL JS integration
+    - Implement interactive county/district map with choropleth coloring
+    - Implement drill-down navigation: county → district → microarea
+    - Implement view toggle: microclimate, microresidential, microadoption, composite-cell
+    - Implement time-series slider with play/pause controls
+    - Implement scenario dropdown selector
+    - Implement detail panel showing area metrics and charts
+    - _Requirements: 13.1, 13.2, 13.3_
+
+  - [ ] 17.2 Implement visualization controls and interactions
+    - Implement year slider (2025-2035) with animation
+    - Implement scenario selector dropdown
+    - Implement view toggle buttons (county, district, microclimate, microresidential, microadoption, composite-cell)
+    - Implement breadcrumb navigation showing current drill-down level
+    - Implement multi-area comparison chart (line chart with multiple series)
+    - Implement end-use breakdown stacked bar chart
+    - Implement demand trend line chart
+    - _Requirements: 13.1, 13.2, 13.3_
+
+  - [ ] 17.3 Implement data loading and caching
+    - Load GeoJSON from `/api/v1/runs/{run_id}/results/geojson` endpoint
+    - Load time-series data from `/api/v1/runs/{run_id}/results/timeseries` endpoint
+    - Implement client-side caching to reduce API calls
+    - Implement error handling for failed API requests
+    - _Requirements: 13.1, 13.2_
+
+  - [ ]* 17.4 Write frontend tests
+    - Test map rendering and interaction
+    - Test data loading and caching
+    - Test chart rendering
+    - _Requirements: 13.1, 13.2_
+
+- [ ] 18. Implement deployment and containerization
+  - [ ] 18.1 Create Docker configuration
+    - Create `Dockerfile` with Python 3.9+ base image
+    - Install all dependencies from `requirements.txt`
+    - Copy source code and data into container
+    - Expose port 8000 for API server
+    - Set entrypoint to start FastAPI server
+    - _Requirements: 12.1, 12.2, 12.3_
+
+  - [ ] 18.2 Create docker-compose configuration
+    - Create `docker-compose.yml` with model service
+    - Add optional PostgreSQL service for production data storage
+    - Add optional Redis service for caching and task queue
+    - Configure environment variables for scenario parameters and API settings
+    - _Requirements: 12.1, 12.2, 12.3_
+
+  - [ ] 18.3 Create requirements.txt and setup.py
+    - List all Python dependencies with pinned versions
+    - Include: pandas, numpy, fastapi, uvicorn, pydantic, sqlalchemy, celery, redis, shapely, geopandas, folium, requests, openpyxl, xlrd, pyarrow
+    - Create `setup.py` for pip installation
+    - _Requirements: 12.1, 12.2_
+
+  - [ ] 18.4 Create deployment documentation
+    - Create `DEPLOYMENT.md` with Docker setup instructions
+    - Document environment variable configuration
+    - Document data mounting for local development
+    - Document cloud deployment options (AWS, Azure, GCP, Heroku)
+    - Document health checks and monitoring
+    - _Requirements: 12.1, 12.2, 12.3, 18.1_
+
+  - [ ]* 18.5 Create cloud deployment templates
+    - Create AWS CloudFormation template for ECS deployment
+    - Create Azure Resource Manager template for App Service deployment
+    - Create Kubernetes manifests for GKE deployment
+    - _Requirements: 12.1, 12.2_
+
+- [ ] 19. Implement monitoring and logging
+  - [ ] 19.1 Add structured logging throughout codebase
+    - Use Python logging module with JSON formatter
+    - Log all significant events: data loading, simulation progress, aggregation, output generation
+    - Include execution time tracking for each major step
+    - _Requirements: 16.1, 16.2_
+
+  - [ ] 19.2 Implement monitoring endpoints and metrics
+    - Add Prometheus metrics for request count, latency, errors
+    - Implement health check endpoint with database and data status
+    - Add execution time metrics for scenario runs
+    - _Requirements: 16.1, 16.2_
+
+  - [ ] 19.3 Create monitoring dashboard
+    - Create Grafana dashboard for system metrics
+    - Display request rates, error rates, execution times
+    - Display queue length and active runs
+    - _Requirements: 16.1, 16.2_
+
+- [ ] 20. Implement testing and quality assurance
+  - [ ] 20.1 Create comprehensive test suite
+    - Unit tests for all modules (data_ingestion, housing_stock, equipment, weather, simulation, aggregation, scenarios, visualization, api)
+    - Integration tests for full pipeline
+    - Property-based tests for correctness properties
+    - Target 80%+ code coverage for critical paths
+    - _Requirements: 17.1, 17.2_
+
+  - [ ] 20.2 Set up CI/CD pipeline
+    - Create GitHub Actions workflow for automated testing
+    - Run tests on every commit
+    - Run linting and type checking (pylint, mypy)
+    - Build Docker image on successful tests
+    - _Requirements: 17.1, 17.2_
+
+  - [ ] 20.3 Create performance benchmarks
+    - Benchmark single scenario execution time on laptop (target: <5 minutes)
+    - Benchmark on server with 16GB RAM and 4 CPU cores (target: <2 minutes)
+    - Benchmark API response times (target: <500ms for most endpoints)
+    - _Requirements: 15.1, 15.2_
+
+- [ ] 21. Create documentation and user guides
+  - [ ] 21.1 Create README with quick-start instructions
+    - Installation steps for local development
+    - Running first scenario
+    - Accessing visualization interface
+    - _Requirements: 18.1, 18.2_
+
+  - [ ] 21.2 Create API documentation
+    - Document all endpoints with request/response examples
+    - Create OpenAPI/Swagger documentation
+    - Create SDK examples (Python, JavaScript)
+    - _Requirements: 11.1, 11.2, 11.3_
+
+  - [ ] 21.3 Create user guide
+    - Explain scenario definition and parameters
+    - Explain result interpretation
+    - Provide common analysis workflows
+    - Document geographic levels and cells (REGIONS_AND_CELLS.md)
+    - _Requirements: 18.1, 18.2_
+
+  - [ ] 21.4 Create operational documentation
+    - Deployment guide (DEPLOYMENT.md)
+    - Configuration guide
+    - Troubleshooting guide
+    - Monitoring and alerting setup
+    - _Requirements: 12.1, 12.2, 12.3_
+
+  - [ ] 21.5 Create example notebooks
+    - Jupyter notebook demonstrating scenario creation and execution
+    - Jupyter notebook demonstrating results analysis and visualization
+    - Jupyter notebook demonstrating API usage
+    - _Requirements: 18.1, 18.2_
+
+- [ ] 22. Final integration and delivery
+  - [ ] 22.1 End-to-end testing on actual data
+    - Run all scenarios on full NW Natural dataset
+    - Verify outputs are reasonable and match expectations
+    - Verify visualization renders correctly
+    - Verify API responds correctly
+    - _Requirements: 10.1, 10.2, 10.3, 10.4_
+
+  - [ ] 22.2 Performance optimization
+    - Profile code to identify bottlenecks
+    - Optimize data loading and aggregation
+    - Implement caching where appropriate
+    - _Requirements: 15.1, 15.2_
+
+  - [ ] 22.3 Final documentation review
+    - Review all documentation for completeness and accuracy
+    - Update REGIONS_AND_CELLS.md and API_DOCUMENTATION.md
+    - Create final project summary
+    - _Requirements: 18.1, 18.2, 18.3_
+
+  - [ ] 22.4 Delivery and handoff
+    - Package all code, documentation, and data
+    - Create deployment guide for production
+    - Provide training materials for stakeholders
+    - _Requirements: 12.1, 12.2, 12.3, 18.1, 18.2_

@@ -10,30 +10,62 @@ This document identifies additional data sources that would strengthen the NW Na
 
 ### 1. Heat Pump Adoption & Sales Data
 
-**Source**: NEEA (Northwest Energy Efficiency Alliance), regional utilities, manufacturer data
+**Source**: 
+- American Community Survey (ACS) Table B25040 "Heating Fuel" — **PRIMARY SOURCE FOR BASELINE**
+- NEEA (Northwest Energy Efficiency Alliance), regional utilities, manufacturer data
+- State energy offices (Oregon, Washington)
 
-**Description**: Track actual heat pump penetration rates in Oregon and Washington residential market
+**Description**: Track actual heat pump penetration rates in Oregon and Washington residential market, with ACS B25040 providing ground truth for current heating fuel distribution
 
 **Data Elements**:
-- Annual heat pump sales by region/county
-- Installed heat pump capacity (kW)
-- Percentage of homes with heat pumps (by vintage, segment)
-- Air-source vs. ground-source distribution
-- Hybrid heat pump adoption (gas backup)
+- **ACS B25040 (Heating Fuel by Household)**:
+  - Percentage of households using electricity for heating (includes heat pumps)
+  - Percentage using natural gas, fuel oil, propane, wood, other
+  - Available by county, state, and metro area
+  - 5-year rolling averages (2009-2024)
+  - Stratified by household characteristics
+  
+- **Additional Sources**:
+  - Annual heat pump sales by region/county
+  - Installed heat pump capacity (kW)
+  - Percentage of homes with heat pumps (by vintage, segment)
+  - Air-source vs. ground-source distribution
+  - Hybrid heat pump adoption (gas backup)
 
 **Expected Impact**: 
+- **Baseline Calibration**: ACS B25040 provides empirical "ground truth" for current electric heating penetration (which includes heat pumps)
 - Validates electrification rate assumptions in scenarios
 - Grounds truth for technology adoption curves
 - Identifies early adopter patterns and regional variation
+- Enables county-level baseline differentiation
 
 **Use in Model**:
-- Calibrate `electrification_rate` scenario parameter
+- **Baseline Initialization**: Use ACS B25040 to set initial heat pump penetration by county
+  - Extract % households with electric heating from B25040
+  - Estimate heat pump fraction of electric heating (typically 60-80% in PNW)
+  - Initialize equipment inventory with realistic heat pump distribution
+- Calibrate `electrification_rate` scenario parameter against observed trends
 - Validate space heating and water heating fuel switching
 - Inform policy scenario assumptions
+- Enable county-level scenario variation
 
-**Availability**: Moderate (NEEA publishes regional data; some proprietary)
+**Data Access**:
+- **ACS B25040**: Free download from Census Bureau (data.census.gov)
+- Available for all NW Natural service territory counties
+- 5-year estimates recommended for stability (annual estimates have higher margins of error)
+- Download format: CSV or API access
 
-**Effort to Integrate**: Medium (requires time-series aggregation by county)
+**Integration Approach**:
+1. Download ACS B25040 for all NW Natural service territory counties (2019-2023 5-year estimates)
+2. Extract "Electricity" heating fuel percentage by county
+3. Cross-reference with NEEA/utility data to estimate heat pump fraction
+4. Create lookup table: `county → baseline_heat_pump_penetration`
+5. Initialize equipment inventory with county-specific heat pump distribution
+6. Use as calibration target for scenario projections
+
+**Availability**: High (ACS B25040 is public and regularly updated)
+
+**Effort to Integrate**: Low-Medium (2-4 hours for data download, processing, and integration)
 
 ---
 
@@ -437,17 +469,25 @@ This document identifies additional data sources that would strengthen the NW Na
 ### Phase 1: Immediate (Capstone Project)
 
 **High-Impact, Low-Effort Sources**:
-1. Building energy codes timeline (DOE, state energy offices) — **1-2 hours**
-2. Appliance efficiency standards (DOE) — **1-2 hours**
-3. New construction data (Census Building Permits) — **2-4 hours**
-4. Demographic data (Census ACS) — **1-2 hours**
+1. ACS B25040 Heating Fuel data (Census Bureau) — **2-4 hours** ⭐ **NEW - HIGHEST PRIORITY**
+2. Building energy codes timeline (DOE, state energy offices) — **1-2 hours**
+3. Appliance efficiency standards (DOE) — **1-2 hours**
+4. New construction data (Census Building Permits) — **2-4 hours**
+5. Demographic data (Census ACS) — **1-2 hours**
 
 **Recommended NW Natural Requests**:
 1. Utility disconnection data (2015-2025) — **High priority**
 2. Historical rate schedules (2010-2025) — **Medium priority**
 3. Commercial/industrial demand context — **Low priority**
 
-**Estimated Effort**: 8-12 hours total
+**Estimated Effort**: 10-16 hours total
+
+**Why ACS B25040 is Priority #1**:
+- Provides empirical baseline for heat pump penetration by county
+- Free and publicly available (no data sharing agreements needed)
+- Directly calibrates model initialization
+- Enables county-level scenario variation
+- Reduces uncertainty in electrification rate assumptions
 
 ---
 
@@ -541,7 +581,7 @@ Before integrating new data:
 
 | Priority | Data Source | Impact | Effort | Availability | Recommendation |
 |----------|-------------|--------|--------|--------------|-----------------|
-| High | Heat pump adoption | High | Medium | Medium | Phase 2 |
+| High | Heat pump adoption (ACS B25040) | High | Low | High | Phase 1 |
 | High | Building energy codes | High | Low | High | Phase 1 |
 | High | Utility disconnections | High | Low | High | Phase 1 (request NWN) |
 | High | Appliance standards | High | Low | High | Phase 1 |
