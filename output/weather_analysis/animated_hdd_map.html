@@ -1,0 +1,3266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_98f5acece840b5aaae28c36f813530c4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+        <div style="position: fixed; 
+                    top: 10px; left: 50px; width: 300px; height: auto; 
+                    background-color: white; border:2px solid grey; z-index:9999; 
+                    font-size:14px; padding: 10px">
+        <p style="margin: 0; font-weight: bold; font-size: 16px;">HDD Progression Map</p>
+        <p style="margin: 5px 0; font-size: 12px;">Select month from layer control (right)</p>
+        <p style="margin: 5px 0; font-size: 12px;">Marker color intensity shows HDD magnitude</p>
+        </div>
+        
+    
+        <div style="position: fixed; 
+                    bottom: 50px; right: 50px; width: 200px; height: 200px; 
+                    background-color: white; border:2px solid grey; z-index:9999; 
+                    font-size:12px; padding: 10px">
+        <p style="margin: 0; font-weight: bold;">HDD Scale</p>
+        <p style="margin: 5px 0;"><i class="fa fa-circle" style="color:green"></i> Low (0-200)</p>
+        <p style="margin: 5px 0;"><i class="fa fa-circle" style="color:yellow"></i> Medium (200-400)</p>
+        <p style="margin: 5px 0;"><i class="fa fa-circle" style="color:orange"></i> High (400-600)</p>
+        <p style="margin: 5px 0;"><i class="fa fa-circle" style="color:red"></i> Very High (600+)</p>
+        <p style="margin: 10px 0; font-size: 11px;">Opacity indicates intensity</p>
+        </div>
+        
+    
+            <div class="folium-map" id="map_98f5acece840b5aaae28c36f813530c4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_98f5acece840b5aaae28c36f813530c4 = L.map(
+                "map_98f5acece840b5aaae28c36f813530c4",
+                {
+                    center: [45.0, -122.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7fc3702540930139a78d89a4b1c04802 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7fc3702540930139a78d89a4b1c04802.addTo(map_98f5acece840b5aaae28c36f813530c4);
+        
+    
+            var feature_group_8c8f66d5b2a10150afe28004539e6ae1 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_f67f2bc0bb5e2d70786cf7c7797a0001 = L.circleMarker(
+                [45.5891, -122.5975],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8c8f66d5b2a10150afe28004539e6ae1);
+        
+    
+        var popup_03d0b47b418c222f0ac6a3fcb3c40f76 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_372d7ae9bd363fc3f726622895c8c9fa = $(`<div id="html_372d7ae9bd363fc3f726622895c8c9fa" style="width: 100.0%; height: 100.0%;">                 <b>Portland International</b><br>                 ICAO: KPDX<br>                 Month: January<br>                 HDD: 600°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_03d0b47b418c222f0ac6a3fcb3c40f76.setContent(html_372d7ae9bd363fc3f726622895c8c9fa);
+            
+        
+
+        circle_marker_f67f2bc0bb5e2d70786cf7c7797a0001.bindPopup(popup_03d0b47b418c222f0ac6a3fcb3c40f76)
+        ;
+
+        
+    
+    
+            var circle_marker_4ac81513a7ac7e82e49e3ba4a8c46b24 = L.circleMarker(
+                [44.1239, -123.2171],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8c8f66d5b2a10150afe28004539e6ae1);
+        
+    
+        var popup_85d8133c5323c60104c3bc7628497ca8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_70985a13602772a09f372e47b894ec19 = $(`<div id="html_70985a13602772a09f372e47b894ec19" style="width: 100.0%; height: 100.0%;">                 <b>Eugene Airport</b><br>                 ICAO: KEUG<br>                 Month: January<br>                 HDD: 700°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_85d8133c5323c60104c3bc7628497ca8.setContent(html_70985a13602772a09f372e47b894ec19);
+            
+        
+
+        circle_marker_4ac81513a7ac7e82e49e3ba4a8c46b24.bindPopup(popup_85d8133c5323c60104c3bc7628497ca8)
+        ;
+
+        
+    
+    
+            var circle_marker_ed789521cb66fa393d1e943b3b97e45e = L.circleMarker(
+                [44.9209, -123.0065],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8c8f66d5b2a10150afe28004539e6ae1);
+        
+    
+        var popup_2252e6c9727e9e0d121cd87406813f53 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5de24eef4049361410f90d28e422d0d0 = $(`<div id="html_5de24eef4049361410f90d28e422d0d0" style="width: 100.0%; height: 100.0%;">                 <b>Salem-Leckrone</b><br>                 ICAO: KSLE<br>                 Month: January<br>                 HDD: 650°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_2252e6c9727e9e0d121cd87406813f53.setContent(html_5de24eef4049361410f90d28e422d0d0);
+            
+        
+
+        circle_marker_ed789521cb66fa393d1e943b3b97e45e.bindPopup(popup_2252e6c9727e9e0d121cd87406813f53)
+        ;
+
+        
+    
+    
+            var circle_marker_2edbf9f7671af928c7a9598a62fd2728 = L.circleMarker(
+                [46.1583, -123.8783],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8c8f66d5b2a10150afe28004539e6ae1);
+        
+    
+        var popup_71c96216ad1ee2266f7e9a0f3ada8f0d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5ae9d9f4bedf1a2158e2ccd97d62b924 = $(`<div id="html_5ae9d9f4bedf1a2158e2ccd97d62b924" style="width: 100.0%; height: 100.0%;">                 <b>Astoria Regional</b><br>                 ICAO: KAST<br>                 Month: January<br>                 HDD: 750°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_71c96216ad1ee2266f7e9a0f3ada8f0d.setContent(html_5ae9d9f4bedf1a2158e2ccd97d62b924);
+            
+        
+
+        circle_marker_2edbf9f7671af928c7a9598a62fd2728.bindPopup(popup_71c96216ad1ee2266f7e9a0f3ada8f0d)
+        ;
+
+        
+    
+    
+            var circle_marker_7efd7e379b7a035495c44ba541a08665 = L.circleMarker(
+                [45.6089, -121.3089],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8c8f66d5b2a10150afe28004539e6ae1);
+        
+    
+        var popup_ad08d09206d383cf5afc6941720f886f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bd5e634abea71807291e4c344d104a01 = $(`<div id="html_bd5e634abea71807291e4c344d104a01" style="width: 100.0%; height: 100.0%;">                 <b>The Dalles Municipal</b><br>                 ICAO: KDLS<br>                 Month: January<br>                 HDD: 800°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_ad08d09206d383cf5afc6941720f886f.setContent(html_bd5e634abea71807291e4c344d104a01);
+            
+        
+
+        circle_marker_7efd7e379b7a035495c44ba541a08665.bindPopup(popup_ad08d09206d383cf5afc6941720f886f)
+        ;
+
+        
+    
+    
+            var circle_marker_9783f8c79243f54dc345a477403ce61b = L.circleMarker(
+                [43.4089, -124.2539],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8c8f66d5b2a10150afe28004539e6ae1);
+        
+    
+        var popup_6d4c9eced551e23b100841ee2931834f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3ca6da6a8725498be3fdec2bae3a43d1 = $(`<div id="html_3ca6da6a8725498be3fdec2bae3a43d1" style="width: 100.0%; height: 100.0%;">                 <b>North Bend/Coos Bay</b><br>                 ICAO: KOTH<br>                 Month: January<br>                 HDD: 550°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_6d4c9eced551e23b100841ee2931834f.setContent(html_3ca6da6a8725498be3fdec2bae3a43d1);
+            
+        
+
+        circle_marker_9783f8c79243f54dc345a477403ce61b.bindPopup(popup_6d4c9eced551e23b100841ee2931834f)
+        ;
+
+        
+    
+    
+            var circle_marker_77d5772d1048402907c2463f111c5cfa = L.circleMarker(
+                [44.5847, -124.0503],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8c8f66d5b2a10150afe28004539e6ae1);
+        
+    
+        var popup_b19dac792e7271a75548f339d215ec58 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e32b6e0c8bfd1b991551d7bd91c49c55 = $(`<div id="html_e32b6e0c8bfd1b991551d7bd91c49c55" style="width: 100.0%; height: 100.0%;">                 <b>Newport Airport</b><br>                 ICAO: KONP<br>                 Month: January<br>                 HDD: 600°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_b19dac792e7271a75548f339d215ec58.setContent(html_e32b6e0c8bfd1b991551d7bd91c49c55);
+            
+        
+
+        circle_marker_77d5772d1048402907c2463f111c5cfa.bindPopup(popup_b19dac792e7271a75548f339d215ec58)
+        ;
+
+        
+    
+    
+            var circle_marker_2ed61780be8c9533dce7b40d27f7422a = L.circleMarker(
+                [44.4915, -123.2803],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8c8f66d5b2a10150afe28004539e6ae1);
+        
+    
+        var popup_a6416f15b9128453cd106ed2c8a1838f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c9f65a2170d3a646b8e0f97213062562 = $(`<div id="html_c9f65a2170d3a646b8e0f97213062562" style="width: 100.0%; height: 100.0%;">                 <b>Corvallis Airport</b><br>                 ICAO: KCVO<br>                 Month: January<br>                 HDD: 650°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_a6416f15b9128453cd106ed2c8a1838f.setContent(html_c9f65a2170d3a646b8e0f97213062562);
+            
+        
+
+        circle_marker_2ed61780be8c9533dce7b40d27f7422a.bindPopup(popup_a6416f15b9128453cd106ed2c8a1838f)
+        ;
+
+        
+    
+    
+            var circle_marker_c50a79397ccbf5c125d669a50c085346 = L.circleMarker(
+                [45.5411, -122.9897],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8c8f66d5b2a10150afe28004539e6ae1);
+        
+    
+        var popup_1bd9c801c1ba1bc61035077f29df6987 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_50e614e99715ea416cc379462e043c74 = $(`<div id="html_50e614e99715ea416cc379462e043c74" style="width: 100.0%; height: 100.0%;">                 <b>Hillsboro Airport</b><br>                 ICAO: KHIO<br>                 Month: January<br>                 HDD: 600°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_1bd9c801c1ba1bc61035077f29df6987.setContent(html_50e614e99715ea416cc379462e043c74);
+            
+        
+
+        circle_marker_c50a79397ccbf5c125d669a50c085346.bindPopup(popup_1bd9c801c1ba1bc61035077f29df6987)
+        ;
+
+        
+    
+    
+            var circle_marker_4647241c5819f515d28a1c886e7bdc59 = L.circleMarker(
+                [45.555, -122.2742],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8c8f66d5b2a10150afe28004539e6ae1);
+        
+    
+        var popup_0a809c29c0f3721f7c0b7904d540ab3d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9108460f66a056091ff88056c4614703 = $(`<div id="html_9108460f66a056091ff88056c4614703" style="width: 100.0%; height: 100.0%;">                 <b>Troutdale Airport</b><br>                 ICAO: KTTD<br>                 Month: January<br>                 HDD: 600°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_0a809c29c0f3721f7c0b7904d540ab3d.setContent(html_9108460f66a056091ff88056c4614703);
+            
+        
+
+        circle_marker_4647241c5819f515d28a1c886e7bdc59.bindPopup(popup_0a809c29c0f3721f7c0b7904d540ab3d)
+        ;
+
+        
+    
+    
+            var circle_marker_5b9226de8fb35af5f5b832329069ccc7 = L.circleMarker(
+                [45.6872, -122.6611],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_8c8f66d5b2a10150afe28004539e6ae1);
+        
+    
+        var popup_d51fc92bb61bc07e5878ef798f070d86 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_65ab7b22e80b1ac6709f93a65eaad467 = $(`<div id="html_65ab7b22e80b1ac6709f93a65eaad467" style="width: 100.0%; height: 100.0%;">                 <b>Vancouver-Pearson</b><br>                 ICAO: KVUO<br>                 Month: January<br>                 HDD: 700°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_d51fc92bb61bc07e5878ef798f070d86.setContent(html_65ab7b22e80b1ac6709f93a65eaad467);
+            
+        
+
+        circle_marker_5b9226de8fb35af5f5b832329069ccc7.bindPopup(popup_d51fc92bb61bc07e5878ef798f070d86)
+        ;
+
+        
+    
+    
+            feature_group_8c8f66d5b2a10150afe28004539e6ae1.addTo(map_98f5acece840b5aaae28c36f813530c4);
+        
+    
+            var feature_group_2b091c3c5553eab5d22cf0c64c0cf75c = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_6e3f7fca41e9eea871c56ca105137460 = L.circleMarker(
+                [45.5891, -122.5975],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_2b091c3c5553eab5d22cf0c64c0cf75c);
+        
+    
+        var popup_926f5df708e8de1b3ca60d4909e3bc61 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9c89cd3997ff20867f76868f69680f16 = $(`<div id="html_9c89cd3997ff20867f76868f69680f16" style="width: 100.0%; height: 100.0%;">                 <b>Portland International</b><br>                 ICAO: KPDX<br>                 Month: February<br>                 HDD: 550°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_926f5df708e8de1b3ca60d4909e3bc61.setContent(html_9c89cd3997ff20867f76868f69680f16);
+            
+        
+
+        circle_marker_6e3f7fca41e9eea871c56ca105137460.bindPopup(popup_926f5df708e8de1b3ca60d4909e3bc61)
+        ;
+
+        
+    
+    
+            var circle_marker_a355eb81e24a810a9dadf380fd5385b4 = L.circleMarker(
+                [44.1239, -123.2171],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_2b091c3c5553eab5d22cf0c64c0cf75c);
+        
+    
+        var popup_ab946a1ff5b82136e29c3f22093bac4f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_694a7e4caddd00a7b5e990bc1fa90763 = $(`<div id="html_694a7e4caddd00a7b5e990bc1fa90763" style="width: 100.0%; height: 100.0%;">                 <b>Eugene Airport</b><br>                 ICAO: KEUG<br>                 Month: February<br>                 HDD: 650°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_ab946a1ff5b82136e29c3f22093bac4f.setContent(html_694a7e4caddd00a7b5e990bc1fa90763);
+            
+        
+
+        circle_marker_a355eb81e24a810a9dadf380fd5385b4.bindPopup(popup_ab946a1ff5b82136e29c3f22093bac4f)
+        ;
+
+        
+    
+    
+            var circle_marker_52bac5fdc081098cec24db4d218a994f = L.circleMarker(
+                [44.9209, -123.0065],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_2b091c3c5553eab5d22cf0c64c0cf75c);
+        
+    
+        var popup_fa305a98cba08d11277b54268d6fcba7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6caa48df21a6c3eee7110ce19c4a3915 = $(`<div id="html_6caa48df21a6c3eee7110ce19c4a3915" style="width: 100.0%; height: 100.0%;">                 <b>Salem-Leckrone</b><br>                 ICAO: KSLE<br>                 Month: February<br>                 HDD: 600°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_fa305a98cba08d11277b54268d6fcba7.setContent(html_6caa48df21a6c3eee7110ce19c4a3915);
+            
+        
+
+        circle_marker_52bac5fdc081098cec24db4d218a994f.bindPopup(popup_fa305a98cba08d11277b54268d6fcba7)
+        ;
+
+        
+    
+    
+            var circle_marker_0dbea2bd8e6110df3bb5efe523ef7b96 = L.circleMarker(
+                [46.1583, -123.8783],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_2b091c3c5553eab5d22cf0c64c0cf75c);
+        
+    
+        var popup_fcc3a9b186bb0dab568acb5de139c4f5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c530b0f5604c3c8c22067144ea840d33 = $(`<div id="html_c530b0f5604c3c8c22067144ea840d33" style="width: 100.0%; height: 100.0%;">                 <b>Astoria Regional</b><br>                 ICAO: KAST<br>                 Month: February<br>                 HDD: 700°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_fcc3a9b186bb0dab568acb5de139c4f5.setContent(html_c530b0f5604c3c8c22067144ea840d33);
+            
+        
+
+        circle_marker_0dbea2bd8e6110df3bb5efe523ef7b96.bindPopup(popup_fcc3a9b186bb0dab568acb5de139c4f5)
+        ;
+
+        
+    
+    
+            var circle_marker_b84386b7df1306bec9fa53fa889dddf2 = L.circleMarker(
+                [45.6089, -121.3089],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_2b091c3c5553eab5d22cf0c64c0cf75c);
+        
+    
+        var popup_65731f2d94178707c44f3808d35f7453 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7ceaa26127005740ab9991ef293dee1b = $(`<div id="html_7ceaa26127005740ab9991ef293dee1b" style="width: 100.0%; height: 100.0%;">                 <b>The Dalles Municipal</b><br>                 ICAO: KDLS<br>                 Month: February<br>                 HDD: 750°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_65731f2d94178707c44f3808d35f7453.setContent(html_7ceaa26127005740ab9991ef293dee1b);
+            
+        
+
+        circle_marker_b84386b7df1306bec9fa53fa889dddf2.bindPopup(popup_65731f2d94178707c44f3808d35f7453)
+        ;
+
+        
+    
+    
+            var circle_marker_2c510033a80c126126cc1d69da7fb42e = L.circleMarker(
+                [43.4089, -124.2539],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_2b091c3c5553eab5d22cf0c64c0cf75c);
+        
+    
+        var popup_e237e465e9f1a90f44aca6e4b2c9bf3a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a519234c50c9a2f04085b9e1babc3648 = $(`<div id="html_a519234c50c9a2f04085b9e1babc3648" style="width: 100.0%; height: 100.0%;">                 <b>North Bend/Coos Bay</b><br>                 ICAO: KOTH<br>                 Month: February<br>                 HDD: 500°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_e237e465e9f1a90f44aca6e4b2c9bf3a.setContent(html_a519234c50c9a2f04085b9e1babc3648);
+            
+        
+
+        circle_marker_2c510033a80c126126cc1d69da7fb42e.bindPopup(popup_e237e465e9f1a90f44aca6e4b2c9bf3a)
+        ;
+
+        
+    
+    
+            var circle_marker_fd7e0d27c712609e63bf2f3b5f57e559 = L.circleMarker(
+                [44.5847, -124.0503],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_2b091c3c5553eab5d22cf0c64c0cf75c);
+        
+    
+        var popup_3e0220f37d72cff998567aac37a13459 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_00e561b7c6b95ac27c82413f166a860b = $(`<div id="html_00e561b7c6b95ac27c82413f166a860b" style="width: 100.0%; height: 100.0%;">                 <b>Newport Airport</b><br>                 ICAO: KONP<br>                 Month: February<br>                 HDD: 550°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_3e0220f37d72cff998567aac37a13459.setContent(html_00e561b7c6b95ac27c82413f166a860b);
+            
+        
+
+        circle_marker_fd7e0d27c712609e63bf2f3b5f57e559.bindPopup(popup_3e0220f37d72cff998567aac37a13459)
+        ;
+
+        
+    
+    
+            var circle_marker_90ed5392febe740e9e92af564adee094 = L.circleMarker(
+                [44.4915, -123.2803],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_2b091c3c5553eab5d22cf0c64c0cf75c);
+        
+    
+        var popup_85be1dc82ee94346653788b3a9dc06a4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f826812980cc9254a47bc21a600b93e7 = $(`<div id="html_f826812980cc9254a47bc21a600b93e7" style="width: 100.0%; height: 100.0%;">                 <b>Corvallis Airport</b><br>                 ICAO: KCVO<br>                 Month: February<br>                 HDD: 600°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_85be1dc82ee94346653788b3a9dc06a4.setContent(html_f826812980cc9254a47bc21a600b93e7);
+            
+        
+
+        circle_marker_90ed5392febe740e9e92af564adee094.bindPopup(popup_85be1dc82ee94346653788b3a9dc06a4)
+        ;
+
+        
+    
+    
+            var circle_marker_448a96ea1d8a05f81d9ce86b4e8bd4d6 = L.circleMarker(
+                [45.5411, -122.9897],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_2b091c3c5553eab5d22cf0c64c0cf75c);
+        
+    
+        var popup_6671eb6eb95b700a7750c463c7d80707 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1aeba0c71aaed4a45077781e464aef4d = $(`<div id="html_1aeba0c71aaed4a45077781e464aef4d" style="width: 100.0%; height: 100.0%;">                 <b>Hillsboro Airport</b><br>                 ICAO: KHIO<br>                 Month: February<br>                 HDD: 550°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_6671eb6eb95b700a7750c463c7d80707.setContent(html_1aeba0c71aaed4a45077781e464aef4d);
+            
+        
+
+        circle_marker_448a96ea1d8a05f81d9ce86b4e8bd4d6.bindPopup(popup_6671eb6eb95b700a7750c463c7d80707)
+        ;
+
+        
+    
+    
+            var circle_marker_4c36f67e3734758d83f1b8268675815f = L.circleMarker(
+                [45.555, -122.2742],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_2b091c3c5553eab5d22cf0c64c0cf75c);
+        
+    
+        var popup_d41983d7eecea600572c370bd2a3a47d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e577b1c07b19e7158897a49d9d7fa812 = $(`<div id="html_e577b1c07b19e7158897a49d9d7fa812" style="width: 100.0%; height: 100.0%;">                 <b>Troutdale Airport</b><br>                 ICAO: KTTD<br>                 Month: February<br>                 HDD: 550°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_d41983d7eecea600572c370bd2a3a47d.setContent(html_e577b1c07b19e7158897a49d9d7fa812);
+            
+        
+
+        circle_marker_4c36f67e3734758d83f1b8268675815f.bindPopup(popup_d41983d7eecea600572c370bd2a3a47d)
+        ;
+
+        
+    
+    
+            var circle_marker_ad3308e19e2bd663ab33f3fb30c9eb3d = L.circleMarker(
+                [45.6872, -122.6611],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_2b091c3c5553eab5d22cf0c64c0cf75c);
+        
+    
+        var popup_8769d512805ce82129aa32985f349bc6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ed93a1e4dac4f5ebf06e142a26b45efd = $(`<div id="html_ed93a1e4dac4f5ebf06e142a26b45efd" style="width: 100.0%; height: 100.0%;">                 <b>Vancouver-Pearson</b><br>                 ICAO: KVUO<br>                 Month: February<br>                 HDD: 650°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_8769d512805ce82129aa32985f349bc6.setContent(html_ed93a1e4dac4f5ebf06e142a26b45efd);
+            
+        
+
+        circle_marker_ad3308e19e2bd663ab33f3fb30c9eb3d.bindPopup(popup_8769d512805ce82129aa32985f349bc6)
+        ;
+
+        
+    
+    
+            var feature_group_27e71a6fd1f5c42cc71d5906f1bcd323 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_4874f4373700c618bdba3ff98fac9f71 = L.circleMarker(
+                [45.5891, -122.5975],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_27e71a6fd1f5c42cc71d5906f1bcd323);
+        
+    
+        var popup_f2d6e073154c5b87f644fda3b352c0cd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8ff3c223ba04178efd46e99ff14697d1 = $(`<div id="html_8ff3c223ba04178efd46e99ff14697d1" style="width: 100.0%; height: 100.0%;">                 <b>Portland International</b><br>                 ICAO: KPDX<br>                 Month: March<br>                 HDD: 450°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_f2d6e073154c5b87f644fda3b352c0cd.setContent(html_8ff3c223ba04178efd46e99ff14697d1);
+            
+        
+
+        circle_marker_4874f4373700c618bdba3ff98fac9f71.bindPopup(popup_f2d6e073154c5b87f644fda3b352c0cd)
+        ;
+
+        
+    
+    
+            var circle_marker_bf8deb3b4f81559d3d96503b7af0450c = L.circleMarker(
+                [44.1239, -123.2171],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_27e71a6fd1f5c42cc71d5906f1bcd323);
+        
+    
+        var popup_3b801cf33f5012a293b9431e0d307257 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d3bb2439af630ba7aa9627cb0da5a94e = $(`<div id="html_d3bb2439af630ba7aa9627cb0da5a94e" style="width: 100.0%; height: 100.0%;">                 <b>Eugene Airport</b><br>                 ICAO: KEUG<br>                 Month: March<br>                 HDD: 550°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_3b801cf33f5012a293b9431e0d307257.setContent(html_d3bb2439af630ba7aa9627cb0da5a94e);
+            
+        
+
+        circle_marker_bf8deb3b4f81559d3d96503b7af0450c.bindPopup(popup_3b801cf33f5012a293b9431e0d307257)
+        ;
+
+        
+    
+    
+            var circle_marker_b793457e2b0e08ffc2332851063f74af = L.circleMarker(
+                [44.9209, -123.0065],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_27e71a6fd1f5c42cc71d5906f1bcd323);
+        
+    
+        var popup_33bb88b7245b33005b9ec27251385535 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bb17d573236f464ce000038d5abbd9be = $(`<div id="html_bb17d573236f464ce000038d5abbd9be" style="width: 100.0%; height: 100.0%;">                 <b>Salem-Leckrone</b><br>                 ICAO: KSLE<br>                 Month: March<br>                 HDD: 500°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_33bb88b7245b33005b9ec27251385535.setContent(html_bb17d573236f464ce000038d5abbd9be);
+            
+        
+
+        circle_marker_b793457e2b0e08ffc2332851063f74af.bindPopup(popup_33bb88b7245b33005b9ec27251385535)
+        ;
+
+        
+    
+    
+            var circle_marker_e493ef732a835bcfec993f61bc580f15 = L.circleMarker(
+                [46.1583, -123.8783],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_27e71a6fd1f5c42cc71d5906f1bcd323);
+        
+    
+        var popup_5fec58a78a50aa878f71230567a87ab9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f2f4b4b32a7d8ddbaace8bfdeced1778 = $(`<div id="html_f2f4b4b32a7d8ddbaace8bfdeced1778" style="width: 100.0%; height: 100.0%;">                 <b>Astoria Regional</b><br>                 ICAO: KAST<br>                 Month: March<br>                 HDD: 600°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_5fec58a78a50aa878f71230567a87ab9.setContent(html_f2f4b4b32a7d8ddbaace8bfdeced1778);
+            
+        
+
+        circle_marker_e493ef732a835bcfec993f61bc580f15.bindPopup(popup_5fec58a78a50aa878f71230567a87ab9)
+        ;
+
+        
+    
+    
+            var circle_marker_0be8ec8a0523a2ae8d370bafb7f557cf = L.circleMarker(
+                [45.6089, -121.3089],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_27e71a6fd1f5c42cc71d5906f1bcd323);
+        
+    
+        var popup_f79280955bf5702adca19bb1954fbaa4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_01f2f82a808e6adbee2b8df90316c4a4 = $(`<div id="html_01f2f82a808e6adbee2b8df90316c4a4" style="width: 100.0%; height: 100.0%;">                 <b>The Dalles Municipal</b><br>                 ICAO: KDLS<br>                 Month: March<br>                 HDD: 650°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_f79280955bf5702adca19bb1954fbaa4.setContent(html_01f2f82a808e6adbee2b8df90316c4a4);
+            
+        
+
+        circle_marker_0be8ec8a0523a2ae8d370bafb7f557cf.bindPopup(popup_f79280955bf5702adca19bb1954fbaa4)
+        ;
+
+        
+    
+    
+            var circle_marker_3296c371d9fa6cda8ae596e3e65e84cb = L.circleMarker(
+                [43.4089, -124.2539],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_27e71a6fd1f5c42cc71d5906f1bcd323);
+        
+    
+        var popup_669f4de38b59754746770ed73e3dc97a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4084e305b2a8f4e8b237b7c97d3075d4 = $(`<div id="html_4084e305b2a8f4e8b237b7c97d3075d4" style="width: 100.0%; height: 100.0%;">                 <b>North Bend/Coos Bay</b><br>                 ICAO: KOTH<br>                 Month: March<br>                 HDD: 400°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_669f4de38b59754746770ed73e3dc97a.setContent(html_4084e305b2a8f4e8b237b7c97d3075d4);
+            
+        
+
+        circle_marker_3296c371d9fa6cda8ae596e3e65e84cb.bindPopup(popup_669f4de38b59754746770ed73e3dc97a)
+        ;
+
+        
+    
+    
+            var circle_marker_13050d8881f0eb98e384a9f347887938 = L.circleMarker(
+                [44.5847, -124.0503],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_27e71a6fd1f5c42cc71d5906f1bcd323);
+        
+    
+        var popup_c61321bdbad95cdd02a9e42d0bcca9f0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_54b3a0959e1aafe8cecd8fea3bffcb21 = $(`<div id="html_54b3a0959e1aafe8cecd8fea3bffcb21" style="width: 100.0%; height: 100.0%;">                 <b>Newport Airport</b><br>                 ICAO: KONP<br>                 Month: March<br>                 HDD: 450°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_c61321bdbad95cdd02a9e42d0bcca9f0.setContent(html_54b3a0959e1aafe8cecd8fea3bffcb21);
+            
+        
+
+        circle_marker_13050d8881f0eb98e384a9f347887938.bindPopup(popup_c61321bdbad95cdd02a9e42d0bcca9f0)
+        ;
+
+        
+    
+    
+            var circle_marker_d784b31c43e8dd51b9c52f881d24813b = L.circleMarker(
+                [44.4915, -123.2803],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_27e71a6fd1f5c42cc71d5906f1bcd323);
+        
+    
+        var popup_234e499d48907439526ff4e9e1b88857 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ea2973623a51e28fbfc79a0b00e00c50 = $(`<div id="html_ea2973623a51e28fbfc79a0b00e00c50" style="width: 100.0%; height: 100.0%;">                 <b>Corvallis Airport</b><br>                 ICAO: KCVO<br>                 Month: March<br>                 HDD: 500°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_234e499d48907439526ff4e9e1b88857.setContent(html_ea2973623a51e28fbfc79a0b00e00c50);
+            
+        
+
+        circle_marker_d784b31c43e8dd51b9c52f881d24813b.bindPopup(popup_234e499d48907439526ff4e9e1b88857)
+        ;
+
+        
+    
+    
+            var circle_marker_03d63d412eba52b15ec3f42d9ba6ac0f = L.circleMarker(
+                [45.5411, -122.9897],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_27e71a6fd1f5c42cc71d5906f1bcd323);
+        
+    
+        var popup_101b214d5eda56612c385e4be2179669 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8e5fd0c3a246463061ec1237af89b0a8 = $(`<div id="html_8e5fd0c3a246463061ec1237af89b0a8" style="width: 100.0%; height: 100.0%;">                 <b>Hillsboro Airport</b><br>                 ICAO: KHIO<br>                 Month: March<br>                 HDD: 450°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_101b214d5eda56612c385e4be2179669.setContent(html_8e5fd0c3a246463061ec1237af89b0a8);
+            
+        
+
+        circle_marker_03d63d412eba52b15ec3f42d9ba6ac0f.bindPopup(popup_101b214d5eda56612c385e4be2179669)
+        ;
+
+        
+    
+    
+            var circle_marker_159f5616d1a8a8642deebc19b916fb0a = L.circleMarker(
+                [45.555, -122.2742],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_27e71a6fd1f5c42cc71d5906f1bcd323);
+        
+    
+        var popup_60948c3a22e1f35f5257dc543948d544 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c4f64d9aaf4ca4a71abc7246b39e593e = $(`<div id="html_c4f64d9aaf4ca4a71abc7246b39e593e" style="width: 100.0%; height: 100.0%;">                 <b>Troutdale Airport</b><br>                 ICAO: KTTD<br>                 Month: March<br>                 HDD: 450°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_60948c3a22e1f35f5257dc543948d544.setContent(html_c4f64d9aaf4ca4a71abc7246b39e593e);
+            
+        
+
+        circle_marker_159f5616d1a8a8642deebc19b916fb0a.bindPopup(popup_60948c3a22e1f35f5257dc543948d544)
+        ;
+
+        
+    
+    
+            var circle_marker_46617631ab812f78e9788d5d71f40426 = L.circleMarker(
+                [45.6872, -122.6611],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_27e71a6fd1f5c42cc71d5906f1bcd323);
+        
+    
+        var popup_3a434995d0c6590b4f043a954a976338 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_900f18d33076e0fe9bf5377166be4511 = $(`<div id="html_900f18d33076e0fe9bf5377166be4511" style="width: 100.0%; height: 100.0%;">                 <b>Vancouver-Pearson</b><br>                 ICAO: KVUO<br>                 Month: March<br>                 HDD: 550°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_3a434995d0c6590b4f043a954a976338.setContent(html_900f18d33076e0fe9bf5377166be4511);
+            
+        
+
+        circle_marker_46617631ab812f78e9788d5d71f40426.bindPopup(popup_3a434995d0c6590b4f043a954a976338)
+        ;
+
+        
+    
+    
+            var feature_group_28e0eefc8dc0dffd6827a1f1cb53383a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_b2f38fb097e7e4f1ca0cda7a485ec0c6 = L.circleMarker(
+                [45.5891, -122.5975],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_28e0eefc8dc0dffd6827a1f1cb53383a);
+        
+    
+        var popup_f158626db9c8ec2d055f38a66d42ac43 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_36b65893a0b33f893f8ed90671fd670f = $(`<div id="html_36b65893a0b33f893f8ed90671fd670f" style="width: 100.0%; height: 100.0%;">                 <b>Portland International</b><br>                 ICAO: KPDX<br>                 Month: April<br>                 HDD: 250°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_f158626db9c8ec2d055f38a66d42ac43.setContent(html_36b65893a0b33f893f8ed90671fd670f);
+            
+        
+
+        circle_marker_b2f38fb097e7e4f1ca0cda7a485ec0c6.bindPopup(popup_f158626db9c8ec2d055f38a66d42ac43)
+        ;
+
+        
+    
+    
+            var circle_marker_d1fd864b942082633dec1f89933cc037 = L.circleMarker(
+                [44.1239, -123.2171],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_28e0eefc8dc0dffd6827a1f1cb53383a);
+        
+    
+        var popup_1d4d88210c6208a7f95dbeb039dcf324 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6482e23ae11b4f9ba4db2854179ad19f = $(`<div id="html_6482e23ae11b4f9ba4db2854179ad19f" style="width: 100.0%; height: 100.0%;">                 <b>Eugene Airport</b><br>                 ICAO: KEUG<br>                 Month: April<br>                 HDD: 300°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_1d4d88210c6208a7f95dbeb039dcf324.setContent(html_6482e23ae11b4f9ba4db2854179ad19f);
+            
+        
+
+        circle_marker_d1fd864b942082633dec1f89933cc037.bindPopup(popup_1d4d88210c6208a7f95dbeb039dcf324)
+        ;
+
+        
+    
+    
+            var circle_marker_bb0d4fd45e680b2862a3e95d7b31ddb2 = L.circleMarker(
+                [44.9209, -123.0065],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_28e0eefc8dc0dffd6827a1f1cb53383a);
+        
+    
+        var popup_a8591f2622e0bb564beff5f76ce10d65 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a2a8649a1f0d15a3be825a436de25110 = $(`<div id="html_a2a8649a1f0d15a3be825a436de25110" style="width: 100.0%; height: 100.0%;">                 <b>Salem-Leckrone</b><br>                 ICAO: KSLE<br>                 Month: April<br>                 HDD: 280°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_a8591f2622e0bb564beff5f76ce10d65.setContent(html_a2a8649a1f0d15a3be825a436de25110);
+            
+        
+
+        circle_marker_bb0d4fd45e680b2862a3e95d7b31ddb2.bindPopup(popup_a8591f2622e0bb564beff5f76ce10d65)
+        ;
+
+        
+    
+    
+            var circle_marker_4cfbb8de7ce451bba8972e51c871e9cf = L.circleMarker(
+                [46.1583, -123.8783],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_28e0eefc8dc0dffd6827a1f1cb53383a);
+        
+    
+        var popup_50b7742d2d5f7cf4f129f76599e7d281 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b70a8dda38cdcaacf754c4aa34e84e34 = $(`<div id="html_b70a8dda38cdcaacf754c4aa34e84e34" style="width: 100.0%; height: 100.0%;">                 <b>Astoria Regional</b><br>                 ICAO: KAST<br>                 Month: April<br>                 HDD: 350°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_50b7742d2d5f7cf4f129f76599e7d281.setContent(html_b70a8dda38cdcaacf754c4aa34e84e34);
+            
+        
+
+        circle_marker_4cfbb8de7ce451bba8972e51c871e9cf.bindPopup(popup_50b7742d2d5f7cf4f129f76599e7d281)
+        ;
+
+        
+    
+    
+            var circle_marker_0e14a68248e1473861a779180c753127 = L.circleMarker(
+                [45.6089, -121.3089],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_28e0eefc8dc0dffd6827a1f1cb53383a);
+        
+    
+        var popup_0838c61afee4fb9e33f69e9115521202 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d68aeb617069add8e195286b4663db87 = $(`<div id="html_d68aeb617069add8e195286b4663db87" style="width: 100.0%; height: 100.0%;">                 <b>The Dalles Municipal</b><br>                 ICAO: KDLS<br>                 Month: April<br>                 HDD: 400°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_0838c61afee4fb9e33f69e9115521202.setContent(html_d68aeb617069add8e195286b4663db87);
+            
+        
+
+        circle_marker_0e14a68248e1473861a779180c753127.bindPopup(popup_0838c61afee4fb9e33f69e9115521202)
+        ;
+
+        
+    
+    
+            var circle_marker_e8085b9f188e3a646b485fa4f76d0528 = L.circleMarker(
+                [43.4089, -124.2539],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_28e0eefc8dc0dffd6827a1f1cb53383a);
+        
+    
+        var popup_6dc4e6fc876309bfc33dadba442dec24 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1676ad74959f404b8d6acc06d4172d43 = $(`<div id="html_1676ad74959f404b8d6acc06d4172d43" style="width: 100.0%; height: 100.0%;">                 <b>North Bend/Coos Bay</b><br>                 ICAO: KOTH<br>                 Month: April<br>                 HDD: 200°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_6dc4e6fc876309bfc33dadba442dec24.setContent(html_1676ad74959f404b8d6acc06d4172d43);
+            
+        
+
+        circle_marker_e8085b9f188e3a646b485fa4f76d0528.bindPopup(popup_6dc4e6fc876309bfc33dadba442dec24)
+        ;
+
+        
+    
+    
+            var circle_marker_4b809929f583f08db111977e2f6a3376 = L.circleMarker(
+                [44.5847, -124.0503],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_28e0eefc8dc0dffd6827a1f1cb53383a);
+        
+    
+        var popup_f4f79dfe1bf128b2f227d971b79c1a94 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_631c5325c577d2fcaf5427936ce5b000 = $(`<div id="html_631c5325c577d2fcaf5427936ce5b000" style="width: 100.0%; height: 100.0%;">                 <b>Newport Airport</b><br>                 ICAO: KONP<br>                 Month: April<br>                 HDD: 250°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_f4f79dfe1bf128b2f227d971b79c1a94.setContent(html_631c5325c577d2fcaf5427936ce5b000);
+            
+        
+
+        circle_marker_4b809929f583f08db111977e2f6a3376.bindPopup(popup_f4f79dfe1bf128b2f227d971b79c1a94)
+        ;
+
+        
+    
+    
+            var circle_marker_4026992a54681f4048eb07809473b27f = L.circleMarker(
+                [44.4915, -123.2803],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_28e0eefc8dc0dffd6827a1f1cb53383a);
+        
+    
+        var popup_5e8c05dfc35639becf0aa420df2ed3e9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_376fc928ddf22b25788e925db41119ab = $(`<div id="html_376fc928ddf22b25788e925db41119ab" style="width: 100.0%; height: 100.0%;">                 <b>Corvallis Airport</b><br>                 ICAO: KCVO<br>                 Month: April<br>                 HDD: 280°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_5e8c05dfc35639becf0aa420df2ed3e9.setContent(html_376fc928ddf22b25788e925db41119ab);
+            
+        
+
+        circle_marker_4026992a54681f4048eb07809473b27f.bindPopup(popup_5e8c05dfc35639becf0aa420df2ed3e9)
+        ;
+
+        
+    
+    
+            var circle_marker_abe0a3018fcc19fd0e2630e0c07c064f = L.circleMarker(
+                [45.5411, -122.9897],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_28e0eefc8dc0dffd6827a1f1cb53383a);
+        
+    
+        var popup_c22a4a9c36efd0d64ed3b8d9df181399 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bb492c0e78d2f46b1b52436d98eb3ee7 = $(`<div id="html_bb492c0e78d2f46b1b52436d98eb3ee7" style="width: 100.0%; height: 100.0%;">                 <b>Hillsboro Airport</b><br>                 ICAO: KHIO<br>                 Month: April<br>                 HDD: 250°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_c22a4a9c36efd0d64ed3b8d9df181399.setContent(html_bb492c0e78d2f46b1b52436d98eb3ee7);
+            
+        
+
+        circle_marker_abe0a3018fcc19fd0e2630e0c07c064f.bindPopup(popup_c22a4a9c36efd0d64ed3b8d9df181399)
+        ;
+
+        
+    
+    
+            var circle_marker_a855f7a2c930861f3a6ec619082139ce = L.circleMarker(
+                [45.555, -122.2742],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_28e0eefc8dc0dffd6827a1f1cb53383a);
+        
+    
+        var popup_0201669561a87180604c017122347f66 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_675761f3148201d32f22f0f4a36fa905 = $(`<div id="html_675761f3148201d32f22f0f4a36fa905" style="width: 100.0%; height: 100.0%;">                 <b>Troutdale Airport</b><br>                 ICAO: KTTD<br>                 Month: April<br>                 HDD: 250°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_0201669561a87180604c017122347f66.setContent(html_675761f3148201d32f22f0f4a36fa905);
+            
+        
+
+        circle_marker_a855f7a2c930861f3a6ec619082139ce.bindPopup(popup_0201669561a87180604c017122347f66)
+        ;
+
+        
+    
+    
+            var circle_marker_0ff83f979259f94631720e7176c279a7 = L.circleMarker(
+                [45.6872, -122.6611],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_28e0eefc8dc0dffd6827a1f1cb53383a);
+        
+    
+        var popup_751d6b054d5b18496ee51863feabbe77 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a55d57aee568f40594abbd37a09230b6 = $(`<div id="html_a55d57aee568f40594abbd37a09230b6" style="width: 100.0%; height: 100.0%;">                 <b>Vancouver-Pearson</b><br>                 ICAO: KVUO<br>                 Month: April<br>                 HDD: 300°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_751d6b054d5b18496ee51863feabbe77.setContent(html_a55d57aee568f40594abbd37a09230b6);
+            
+        
+
+        circle_marker_0ff83f979259f94631720e7176c279a7.bindPopup(popup_751d6b054d5b18496ee51863feabbe77)
+        ;
+
+        
+    
+    
+            var feature_group_b0b72b7e34ecacb600043e440075f14f = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_ceb41a441b794fc1e3a5ab596a235196 = L.circleMarker(
+                [45.5891, -122.5975],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b0b72b7e34ecacb600043e440075f14f);
+        
+    
+        var popup_3a2d015e417bb78a2b3f47b4c18cecff = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a169eef1e339c7246874a8b4aa764d05 = $(`<div id="html_a169eef1e339c7246874a8b4aa764d05" style="width: 100.0%; height: 100.0%;">                 <b>Portland International</b><br>                 ICAO: KPDX<br>                 Month: May<br>                 HDD: 100°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_3a2d015e417bb78a2b3f47b4c18cecff.setContent(html_a169eef1e339c7246874a8b4aa764d05);
+            
+        
+
+        circle_marker_ceb41a441b794fc1e3a5ab596a235196.bindPopup(popup_3a2d015e417bb78a2b3f47b4c18cecff)
+        ;
+
+        
+    
+    
+            var circle_marker_9d55533928ab86de8d5d357a092a1be3 = L.circleMarker(
+                [44.1239, -123.2171],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b0b72b7e34ecacb600043e440075f14f);
+        
+    
+        var popup_d891cf7a76a503eafa6efd36c2de6a0e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_692cf1661bdf56e75ccd7a1483bfbcdc = $(`<div id="html_692cf1661bdf56e75ccd7a1483bfbcdc" style="width: 100.0%; height: 100.0%;">                 <b>Eugene Airport</b><br>                 ICAO: KEUG<br>                 Month: May<br>                 HDD: 120°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_d891cf7a76a503eafa6efd36c2de6a0e.setContent(html_692cf1661bdf56e75ccd7a1483bfbcdc);
+            
+        
+
+        circle_marker_9d55533928ab86de8d5d357a092a1be3.bindPopup(popup_d891cf7a76a503eafa6efd36c2de6a0e)
+        ;
+
+        
+    
+    
+            var circle_marker_9cb1f3de72b9188061e64345ba14cb89 = L.circleMarker(
+                [44.9209, -123.0065],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b0b72b7e34ecacb600043e440075f14f);
+        
+    
+        var popup_8bb2e99936578a996d8402b979faf557 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c1e712ef7eec893afe59078d876be58e = $(`<div id="html_c1e712ef7eec893afe59078d876be58e" style="width: 100.0%; height: 100.0%;">                 <b>Salem-Leckrone</b><br>                 ICAO: KSLE<br>                 Month: May<br>                 HDD: 110°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_8bb2e99936578a996d8402b979faf557.setContent(html_c1e712ef7eec893afe59078d876be58e);
+            
+        
+
+        circle_marker_9cb1f3de72b9188061e64345ba14cb89.bindPopup(popup_8bb2e99936578a996d8402b979faf557)
+        ;
+
+        
+    
+    
+            var circle_marker_0cd7def1a087e39dcb25f0b47a2b52c8 = L.circleMarker(
+                [46.1583, -123.8783],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b0b72b7e34ecacb600043e440075f14f);
+        
+    
+        var popup_71d18ac76623303f737502c5333e276e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_66ca4b8e3203d88dee21501e78e52494 = $(`<div id="html_66ca4b8e3203d88dee21501e78e52494" style="width: 100.0%; height: 100.0%;">                 <b>Astoria Regional</b><br>                 ICAO: KAST<br>                 Month: May<br>                 HDD: 150°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_71d18ac76623303f737502c5333e276e.setContent(html_66ca4b8e3203d88dee21501e78e52494);
+            
+        
+
+        circle_marker_0cd7def1a087e39dcb25f0b47a2b52c8.bindPopup(popup_71d18ac76623303f737502c5333e276e)
+        ;
+
+        
+    
+    
+            var circle_marker_5aaa4b06626b7dcc92a3ccfcb0d3176d = L.circleMarker(
+                [45.6089, -121.3089],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b0b72b7e34ecacb600043e440075f14f);
+        
+    
+        var popup_c771e2cdaa3ae31e2ec88369086cea2b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6b37f298ce50badbd110fe4952b8c48b = $(`<div id="html_6b37f298ce50badbd110fe4952b8c48b" style="width: 100.0%; height: 100.0%;">                 <b>The Dalles Municipal</b><br>                 ICAO: KDLS<br>                 Month: May<br>                 HDD: 180°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_c771e2cdaa3ae31e2ec88369086cea2b.setContent(html_6b37f298ce50badbd110fe4952b8c48b);
+            
+        
+
+        circle_marker_5aaa4b06626b7dcc92a3ccfcb0d3176d.bindPopup(popup_c771e2cdaa3ae31e2ec88369086cea2b)
+        ;
+
+        
+    
+    
+            var circle_marker_a1ff1ff3908cbb8ff5809bef44e47554 = L.circleMarker(
+                [43.4089, -124.2539],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b0b72b7e34ecacb600043e440075f14f);
+        
+    
+        var popup_2e40f6bc0dc658aeeeb1ef06bfd3fb9d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3a68c632fb41761b77020dd8bb7cfa0a = $(`<div id="html_3a68c632fb41761b77020dd8bb7cfa0a" style="width: 100.0%; height: 100.0%;">                 <b>North Bend/Coos Bay</b><br>                 ICAO: KOTH<br>                 Month: May<br>                 HDD: 80°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_2e40f6bc0dc658aeeeb1ef06bfd3fb9d.setContent(html_3a68c632fb41761b77020dd8bb7cfa0a);
+            
+        
+
+        circle_marker_a1ff1ff3908cbb8ff5809bef44e47554.bindPopup(popup_2e40f6bc0dc658aeeeb1ef06bfd3fb9d)
+        ;
+
+        
+    
+    
+            var circle_marker_4901da2392c08716998ed87453f4de6f = L.circleMarker(
+                [44.5847, -124.0503],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b0b72b7e34ecacb600043e440075f14f);
+        
+    
+        var popup_467475da15046befa41d71c3cfb87f8c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1697fb727e852a01405e008b7e7d91ed = $(`<div id="html_1697fb727e852a01405e008b7e7d91ed" style="width: 100.0%; height: 100.0%;">                 <b>Newport Airport</b><br>                 ICAO: KONP<br>                 Month: May<br>                 HDD: 100°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_467475da15046befa41d71c3cfb87f8c.setContent(html_1697fb727e852a01405e008b7e7d91ed);
+            
+        
+
+        circle_marker_4901da2392c08716998ed87453f4de6f.bindPopup(popup_467475da15046befa41d71c3cfb87f8c)
+        ;
+
+        
+    
+    
+            var circle_marker_00fa024c209c95999d09f0821490632a = L.circleMarker(
+                [44.4915, -123.2803],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b0b72b7e34ecacb600043e440075f14f);
+        
+    
+        var popup_04e4ab4876fc442193b19e41b5117c57 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fc071e7456709d74cb4ca2fc2d0830dd = $(`<div id="html_fc071e7456709d74cb4ca2fc2d0830dd" style="width: 100.0%; height: 100.0%;">                 <b>Corvallis Airport</b><br>                 ICAO: KCVO<br>                 Month: May<br>                 HDD: 110°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_04e4ab4876fc442193b19e41b5117c57.setContent(html_fc071e7456709d74cb4ca2fc2d0830dd);
+            
+        
+
+        circle_marker_00fa024c209c95999d09f0821490632a.bindPopup(popup_04e4ab4876fc442193b19e41b5117c57)
+        ;
+
+        
+    
+    
+            var circle_marker_d466b23b1e404435e3e57ef189f9723c = L.circleMarker(
+                [45.5411, -122.9897],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b0b72b7e34ecacb600043e440075f14f);
+        
+    
+        var popup_5d55c72dc6300e7920e8b5732a85f1ec = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ff32e65154e40c2a1e4c3c223b46d1bb = $(`<div id="html_ff32e65154e40c2a1e4c3c223b46d1bb" style="width: 100.0%; height: 100.0%;">                 <b>Hillsboro Airport</b><br>                 ICAO: KHIO<br>                 Month: May<br>                 HDD: 100°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_5d55c72dc6300e7920e8b5732a85f1ec.setContent(html_ff32e65154e40c2a1e4c3c223b46d1bb);
+            
+        
+
+        circle_marker_d466b23b1e404435e3e57ef189f9723c.bindPopup(popup_5d55c72dc6300e7920e8b5732a85f1ec)
+        ;
+
+        
+    
+    
+            var circle_marker_dbc833862738d2691edc857c297d5f9c = L.circleMarker(
+                [45.555, -122.2742],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b0b72b7e34ecacb600043e440075f14f);
+        
+    
+        var popup_903c8cb9d322d3a9daa3962cbbb2b375 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bb437e832b53ca47126b6bbd0db22942 = $(`<div id="html_bb437e832b53ca47126b6bbd0db22942" style="width: 100.0%; height: 100.0%;">                 <b>Troutdale Airport</b><br>                 ICAO: KTTD<br>                 Month: May<br>                 HDD: 100°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_903c8cb9d322d3a9daa3962cbbb2b375.setContent(html_bb437e832b53ca47126b6bbd0db22942);
+            
+        
+
+        circle_marker_dbc833862738d2691edc857c297d5f9c.bindPopup(popup_903c8cb9d322d3a9daa3962cbbb2b375)
+        ;
+
+        
+    
+    
+            var circle_marker_85099b837e398dbf5cc29ca9938e9826 = L.circleMarker(
+                [45.6872, -122.6611],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b0b72b7e34ecacb600043e440075f14f);
+        
+    
+        var popup_564665df3500051689470631aef08ff8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2536e26daf2c7a35937af0310580437e = $(`<div id="html_2536e26daf2c7a35937af0310580437e" style="width: 100.0%; height: 100.0%;">                 <b>Vancouver-Pearson</b><br>                 ICAO: KVUO<br>                 Month: May<br>                 HDD: 120°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_564665df3500051689470631aef08ff8.setContent(html_2536e26daf2c7a35937af0310580437e);
+            
+        
+
+        circle_marker_85099b837e398dbf5cc29ca9938e9826.bindPopup(popup_564665df3500051689470631aef08ff8)
+        ;
+
+        
+    
+    
+            var feature_group_97d1f908fa279af408329863b3288fa6 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_33b01c1784bbf4808ee446a412692b37 = L.circleMarker(
+                [45.5891, -122.5975],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_97d1f908fa279af408329863b3288fa6);
+        
+    
+        var popup_cc84a41434e3a6b2d93bf6ae3a6b7872 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_16bc2591a7825ef5069cea0cf45a10ad = $(`<div id="html_16bc2591a7825ef5069cea0cf45a10ad" style="width: 100.0%; height: 100.0%;">                 <b>Portland International</b><br>                 ICAO: KPDX<br>                 Month: June<br>                 HDD: 20°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_cc84a41434e3a6b2d93bf6ae3a6b7872.setContent(html_16bc2591a7825ef5069cea0cf45a10ad);
+            
+        
+
+        circle_marker_33b01c1784bbf4808ee446a412692b37.bindPopup(popup_cc84a41434e3a6b2d93bf6ae3a6b7872)
+        ;
+
+        
+    
+    
+            var circle_marker_39650bbf2ffbc4e219e8190419ea35f3 = L.circleMarker(
+                [44.1239, -123.2171],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_97d1f908fa279af408329863b3288fa6);
+        
+    
+        var popup_bb51b9ffde327fe4be993f24c84d79a5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b466f9fd6bed85647ff0447e9b45ef9d = $(`<div id="html_b466f9fd6bed85647ff0447e9b45ef9d" style="width: 100.0%; height: 100.0%;">                 <b>Eugene Airport</b><br>                 ICAO: KEUG<br>                 Month: June<br>                 HDD: 30°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_bb51b9ffde327fe4be993f24c84d79a5.setContent(html_b466f9fd6bed85647ff0447e9b45ef9d);
+            
+        
+
+        circle_marker_39650bbf2ffbc4e219e8190419ea35f3.bindPopup(popup_bb51b9ffde327fe4be993f24c84d79a5)
+        ;
+
+        
+    
+    
+            var circle_marker_d0f10ff40979ca09516998a8b9cc89e7 = L.circleMarker(
+                [44.9209, -123.0065],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_97d1f908fa279af408329863b3288fa6);
+        
+    
+        var popup_c9b30486ed58365f8104401e881c1681 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_06b7123771ab07cef0eb4b06e8c25722 = $(`<div id="html_06b7123771ab07cef0eb4b06e8c25722" style="width: 100.0%; height: 100.0%;">                 <b>Salem-Leckrone</b><br>                 ICAO: KSLE<br>                 Month: June<br>                 HDD: 25°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_c9b30486ed58365f8104401e881c1681.setContent(html_06b7123771ab07cef0eb4b06e8c25722);
+            
+        
+
+        circle_marker_d0f10ff40979ca09516998a8b9cc89e7.bindPopup(popup_c9b30486ed58365f8104401e881c1681)
+        ;
+
+        
+    
+    
+            var circle_marker_80ecbb0dd1b8e9d3a741e680c90fcebc = L.circleMarker(
+                [46.1583, -123.8783],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_97d1f908fa279af408329863b3288fa6);
+        
+    
+        var popup_af8fe15a02c44679b08ed5891393eab2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4b3266800171ac5d06a492fe5cd37902 = $(`<div id="html_4b3266800171ac5d06a492fe5cd37902" style="width: 100.0%; height: 100.0%;">                 <b>Astoria Regional</b><br>                 ICAO: KAST<br>                 Month: June<br>                 HDD: 40°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_af8fe15a02c44679b08ed5891393eab2.setContent(html_4b3266800171ac5d06a492fe5cd37902);
+            
+        
+
+        circle_marker_80ecbb0dd1b8e9d3a741e680c90fcebc.bindPopup(popup_af8fe15a02c44679b08ed5891393eab2)
+        ;
+
+        
+    
+    
+            var circle_marker_845c149cd43ff0d94dc296df61259c51 = L.circleMarker(
+                [45.6089, -121.3089],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_97d1f908fa279af408329863b3288fa6);
+        
+    
+        var popup_65738003ba982f086210533ded0fd0a9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d8467317808d9076872397d55cefae1e = $(`<div id="html_d8467317808d9076872397d55cefae1e" style="width: 100.0%; height: 100.0%;">                 <b>The Dalles Municipal</b><br>                 ICAO: KDLS<br>                 Month: June<br>                 HDD: 50°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_65738003ba982f086210533ded0fd0a9.setContent(html_d8467317808d9076872397d55cefae1e);
+            
+        
+
+        circle_marker_845c149cd43ff0d94dc296df61259c51.bindPopup(popup_65738003ba982f086210533ded0fd0a9)
+        ;
+
+        
+    
+    
+            var circle_marker_2d2a80cdff68b3be5cb2cacd0222eb68 = L.circleMarker(
+                [43.4089, -124.2539],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_97d1f908fa279af408329863b3288fa6);
+        
+    
+        var popup_598750eb05f59189e89bd5898650d8b3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_68e0cc6857af27845cd7aa8174ccc4a6 = $(`<div id="html_68e0cc6857af27845cd7aa8174ccc4a6" style="width: 100.0%; height: 100.0%;">                 <b>North Bend/Coos Bay</b><br>                 ICAO: KOTH<br>                 Month: June<br>                 HDD: 15°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_598750eb05f59189e89bd5898650d8b3.setContent(html_68e0cc6857af27845cd7aa8174ccc4a6);
+            
+        
+
+        circle_marker_2d2a80cdff68b3be5cb2cacd0222eb68.bindPopup(popup_598750eb05f59189e89bd5898650d8b3)
+        ;
+
+        
+    
+    
+            var circle_marker_d53452cddd5acbd2c485e1d36e08218a = L.circleMarker(
+                [44.5847, -124.0503],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_97d1f908fa279af408329863b3288fa6);
+        
+    
+        var popup_57cb64981067144ea7d6debc05d1d714 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6cd286576e1cf6a73e9307807e37c69a = $(`<div id="html_6cd286576e1cf6a73e9307807e37c69a" style="width: 100.0%; height: 100.0%;">                 <b>Newport Airport</b><br>                 ICAO: KONP<br>                 Month: June<br>                 HDD: 20°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_57cb64981067144ea7d6debc05d1d714.setContent(html_6cd286576e1cf6a73e9307807e37c69a);
+            
+        
+
+        circle_marker_d53452cddd5acbd2c485e1d36e08218a.bindPopup(popup_57cb64981067144ea7d6debc05d1d714)
+        ;
+
+        
+    
+    
+            var circle_marker_b87be7e6c1bcd0b4749be44319e48bb1 = L.circleMarker(
+                [44.4915, -123.2803],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_97d1f908fa279af408329863b3288fa6);
+        
+    
+        var popup_d97d16b0cb6afa875d76834270fa19ab = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_09752a3f3eca55a4b0b5bce11651c036 = $(`<div id="html_09752a3f3eca55a4b0b5bce11651c036" style="width: 100.0%; height: 100.0%;">                 <b>Corvallis Airport</b><br>                 ICAO: KCVO<br>                 Month: June<br>                 HDD: 25°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_d97d16b0cb6afa875d76834270fa19ab.setContent(html_09752a3f3eca55a4b0b5bce11651c036);
+            
+        
+
+        circle_marker_b87be7e6c1bcd0b4749be44319e48bb1.bindPopup(popup_d97d16b0cb6afa875d76834270fa19ab)
+        ;
+
+        
+    
+    
+            var circle_marker_cade7d7a8c917e45cb363d81594d02a8 = L.circleMarker(
+                [45.5411, -122.9897],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_97d1f908fa279af408329863b3288fa6);
+        
+    
+        var popup_5c1b84ebf4a9d4428ef52c4cc7cdc51b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ddddeb11cdb7fafcc137d0d8fe6c4b14 = $(`<div id="html_ddddeb11cdb7fafcc137d0d8fe6c4b14" style="width: 100.0%; height: 100.0%;">                 <b>Hillsboro Airport</b><br>                 ICAO: KHIO<br>                 Month: June<br>                 HDD: 20°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_5c1b84ebf4a9d4428ef52c4cc7cdc51b.setContent(html_ddddeb11cdb7fafcc137d0d8fe6c4b14);
+            
+        
+
+        circle_marker_cade7d7a8c917e45cb363d81594d02a8.bindPopup(popup_5c1b84ebf4a9d4428ef52c4cc7cdc51b)
+        ;
+
+        
+    
+    
+            var circle_marker_29012c7a004f4aa48d590baca2d6c50c = L.circleMarker(
+                [45.555, -122.2742],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_97d1f908fa279af408329863b3288fa6);
+        
+    
+        var popup_8ae9300ddd803aa9edf5bb090ec98b6c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d6c93c42f49947fd04294307f8adba86 = $(`<div id="html_d6c93c42f49947fd04294307f8adba86" style="width: 100.0%; height: 100.0%;">                 <b>Troutdale Airport</b><br>                 ICAO: KTTD<br>                 Month: June<br>                 HDD: 20°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_8ae9300ddd803aa9edf5bb090ec98b6c.setContent(html_d6c93c42f49947fd04294307f8adba86);
+            
+        
+
+        circle_marker_29012c7a004f4aa48d590baca2d6c50c.bindPopup(popup_8ae9300ddd803aa9edf5bb090ec98b6c)
+        ;
+
+        
+    
+    
+            var circle_marker_0c0796104aecd99dcad5a85638414b09 = L.circleMarker(
+                [45.6872, -122.6611],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_97d1f908fa279af408329863b3288fa6);
+        
+    
+        var popup_fd6acde6c9d4edf5f12d2e3ff7c8a238 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9970a7dc40147e424beb7eb726c93123 = $(`<div id="html_9970a7dc40147e424beb7eb726c93123" style="width: 100.0%; height: 100.0%;">                 <b>Vancouver-Pearson</b><br>                 ICAO: KVUO<br>                 Month: June<br>                 HDD: 30°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_fd6acde6c9d4edf5f12d2e3ff7c8a238.setContent(html_9970a7dc40147e424beb7eb726c93123);
+            
+        
+
+        circle_marker_0c0796104aecd99dcad5a85638414b09.bindPopup(popup_fd6acde6c9d4edf5f12d2e3ff7c8a238)
+        ;
+
+        
+    
+    
+            var feature_group_e032a226615b788bfd1964b5d54e7330 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_195b2de5285bd99a67840ebc4ffd13fd = L.circleMarker(
+                [45.5891, -122.5975],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e032a226615b788bfd1964b5d54e7330);
+        
+    
+        var popup_566434dd57adbda58acf51a385703c67 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bc247c38ce2fd7704796b37707d45dc7 = $(`<div id="html_bc247c38ce2fd7704796b37707d45dc7" style="width: 100.0%; height: 100.0%;">                 <b>Portland International</b><br>                 ICAO: KPDX<br>                 Month: July<br>                 HDD: 10°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_566434dd57adbda58acf51a385703c67.setContent(html_bc247c38ce2fd7704796b37707d45dc7);
+            
+        
+
+        circle_marker_195b2de5285bd99a67840ebc4ffd13fd.bindPopup(popup_566434dd57adbda58acf51a385703c67)
+        ;
+
+        
+    
+    
+            var circle_marker_08235ab03dbeaeb03a72843e30d1c9a1 = L.circleMarker(
+                [44.1239, -123.2171],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e032a226615b788bfd1964b5d54e7330);
+        
+    
+        var popup_0859aecf503f74883313033af68e2ac3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9fe11d24fbb017e759ffd75643fa4a1a = $(`<div id="html_9fe11d24fbb017e759ffd75643fa4a1a" style="width: 100.0%; height: 100.0%;">                 <b>Eugene Airport</b><br>                 ICAO: KEUG<br>                 Month: July<br>                 HDD: 15°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_0859aecf503f74883313033af68e2ac3.setContent(html_9fe11d24fbb017e759ffd75643fa4a1a);
+            
+        
+
+        circle_marker_08235ab03dbeaeb03a72843e30d1c9a1.bindPopup(popup_0859aecf503f74883313033af68e2ac3)
+        ;
+
+        
+    
+    
+            var circle_marker_efc7e1c58edcb00d3b3fbe4632a91186 = L.circleMarker(
+                [44.9209, -123.0065],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e032a226615b788bfd1964b5d54e7330);
+        
+    
+        var popup_56bab608e0a7ffde477ca429bed3dbf2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4941c7a3b73b18d2a85dbccdcb9494b8 = $(`<div id="html_4941c7a3b73b18d2a85dbccdcb9494b8" style="width: 100.0%; height: 100.0%;">                 <b>Salem-Leckrone</b><br>                 ICAO: KSLE<br>                 Month: July<br>                 HDD: 12°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_56bab608e0a7ffde477ca429bed3dbf2.setContent(html_4941c7a3b73b18d2a85dbccdcb9494b8);
+            
+        
+
+        circle_marker_efc7e1c58edcb00d3b3fbe4632a91186.bindPopup(popup_56bab608e0a7ffde477ca429bed3dbf2)
+        ;
+
+        
+    
+    
+            var circle_marker_e7a0271930337792e4b922ce08e337ad = L.circleMarker(
+                [46.1583, -123.8783],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e032a226615b788bfd1964b5d54e7330);
+        
+    
+        var popup_bb3485c50307a91141a882e457336c5a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ada93a353286fcbe36a61d24ba249e24 = $(`<div id="html_ada93a353286fcbe36a61d24ba249e24" style="width: 100.0%; height: 100.0%;">                 <b>Astoria Regional</b><br>                 ICAO: KAST<br>                 Month: July<br>                 HDD: 20°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_bb3485c50307a91141a882e457336c5a.setContent(html_ada93a353286fcbe36a61d24ba249e24);
+            
+        
+
+        circle_marker_e7a0271930337792e4b922ce08e337ad.bindPopup(popup_bb3485c50307a91141a882e457336c5a)
+        ;
+
+        
+    
+    
+            var circle_marker_f9ef6fec50ce10245cc0b9190600d798 = L.circleMarker(
+                [45.6089, -121.3089],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e032a226615b788bfd1964b5d54e7330);
+        
+    
+        var popup_452fef096e8c0fa69130d6a8e571aa7f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_84fae4528d596f62ccad3efcfc7897c8 = $(`<div id="html_84fae4528d596f62ccad3efcfc7897c8" style="width: 100.0%; height: 100.0%;">                 <b>The Dalles Municipal</b><br>                 ICAO: KDLS<br>                 Month: July<br>                 HDD: 30°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_452fef096e8c0fa69130d6a8e571aa7f.setContent(html_84fae4528d596f62ccad3efcfc7897c8);
+            
+        
+
+        circle_marker_f9ef6fec50ce10245cc0b9190600d798.bindPopup(popup_452fef096e8c0fa69130d6a8e571aa7f)
+        ;
+
+        
+    
+    
+            var circle_marker_153f570fbccc47ca770488dabe332fbf = L.circleMarker(
+                [43.4089, -124.2539],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e032a226615b788bfd1964b5d54e7330);
+        
+    
+        var popup_3a934ebfdd35479531ca19d36942b133 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3118d5efbd131cb6460ad4c479bbfc77 = $(`<div id="html_3118d5efbd131cb6460ad4c479bbfc77" style="width: 100.0%; height: 100.0%;">                 <b>North Bend/Coos Bay</b><br>                 ICAO: KOTH<br>                 Month: July<br>                 HDD: 5°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_3a934ebfdd35479531ca19d36942b133.setContent(html_3118d5efbd131cb6460ad4c479bbfc77);
+            
+        
+
+        circle_marker_153f570fbccc47ca770488dabe332fbf.bindPopup(popup_3a934ebfdd35479531ca19d36942b133)
+        ;
+
+        
+    
+    
+            var circle_marker_e5b9afeaff4b95c4e7e4dc1629c2a13d = L.circleMarker(
+                [44.5847, -124.0503],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e032a226615b788bfd1964b5d54e7330);
+        
+    
+        var popup_d12f2f7a55a2895738d108e0b915a02b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9c7f4299b71d49f9099d5050a81541bb = $(`<div id="html_9c7f4299b71d49f9099d5050a81541bb" style="width: 100.0%; height: 100.0%;">                 <b>Newport Airport</b><br>                 ICAO: KONP<br>                 Month: July<br>                 HDD: 10°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_d12f2f7a55a2895738d108e0b915a02b.setContent(html_9c7f4299b71d49f9099d5050a81541bb);
+            
+        
+
+        circle_marker_e5b9afeaff4b95c4e7e4dc1629c2a13d.bindPopup(popup_d12f2f7a55a2895738d108e0b915a02b)
+        ;
+
+        
+    
+    
+            var circle_marker_c6e83088458896b858aea01528aceb45 = L.circleMarker(
+                [44.4915, -123.2803],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e032a226615b788bfd1964b5d54e7330);
+        
+    
+        var popup_c4963db69fd20e4fd82ed2cfacef509f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e26640edf8ae3c0e8ec067b2a28d98b8 = $(`<div id="html_e26640edf8ae3c0e8ec067b2a28d98b8" style="width: 100.0%; height: 100.0%;">                 <b>Corvallis Airport</b><br>                 ICAO: KCVO<br>                 Month: July<br>                 HDD: 12°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_c4963db69fd20e4fd82ed2cfacef509f.setContent(html_e26640edf8ae3c0e8ec067b2a28d98b8);
+            
+        
+
+        circle_marker_c6e83088458896b858aea01528aceb45.bindPopup(popup_c4963db69fd20e4fd82ed2cfacef509f)
+        ;
+
+        
+    
+    
+            var circle_marker_2b3b2ca9e67eeae855851a1922b89af7 = L.circleMarker(
+                [45.5411, -122.9897],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e032a226615b788bfd1964b5d54e7330);
+        
+    
+        var popup_748d05646999de2e2838966c1bfa36b8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_55632451297fd6038ac86c5f4e3eb86f = $(`<div id="html_55632451297fd6038ac86c5f4e3eb86f" style="width: 100.0%; height: 100.0%;">                 <b>Hillsboro Airport</b><br>                 ICAO: KHIO<br>                 Month: July<br>                 HDD: 10°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_748d05646999de2e2838966c1bfa36b8.setContent(html_55632451297fd6038ac86c5f4e3eb86f);
+            
+        
+
+        circle_marker_2b3b2ca9e67eeae855851a1922b89af7.bindPopup(popup_748d05646999de2e2838966c1bfa36b8)
+        ;
+
+        
+    
+    
+            var circle_marker_fe54fa55edd3a7aaaa8c91a4c580439b = L.circleMarker(
+                [45.555, -122.2742],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e032a226615b788bfd1964b5d54e7330);
+        
+    
+        var popup_f72850dd82a86b1179bf5d165f46fc6d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0e9a21360e9ede049ec481f33bfae371 = $(`<div id="html_0e9a21360e9ede049ec481f33bfae371" style="width: 100.0%; height: 100.0%;">                 <b>Troutdale Airport</b><br>                 ICAO: KTTD<br>                 Month: July<br>                 HDD: 10°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_f72850dd82a86b1179bf5d165f46fc6d.setContent(html_0e9a21360e9ede049ec481f33bfae371);
+            
+        
+
+        circle_marker_fe54fa55edd3a7aaaa8c91a4c580439b.bindPopup(popup_f72850dd82a86b1179bf5d165f46fc6d)
+        ;
+
+        
+    
+    
+            var circle_marker_ab0b840cefe78a5a83b5d31f10eb3e45 = L.circleMarker(
+                [45.6872, -122.6611],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e032a226615b788bfd1964b5d54e7330);
+        
+    
+        var popup_08fc7f1aaad83b2db02755bc90ea98a9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fe4c0b1d529394d3b2eda8df42c7cd03 = $(`<div id="html_fe4c0b1d529394d3b2eda8df42c7cd03" style="width: 100.0%; height: 100.0%;">                 <b>Vancouver-Pearson</b><br>                 ICAO: KVUO<br>                 Month: July<br>                 HDD: 15°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_08fc7f1aaad83b2db02755bc90ea98a9.setContent(html_fe4c0b1d529394d3b2eda8df42c7cd03);
+            
+        
+
+        circle_marker_ab0b840cefe78a5a83b5d31f10eb3e45.bindPopup(popup_08fc7f1aaad83b2db02755bc90ea98a9)
+        ;
+
+        
+    
+    
+            var feature_group_76c0efa680bd9b507b875c124959abee = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_7afcbf1d64ba46bef329c301516d7b4a = L.circleMarker(
+                [45.5891, -122.5975],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_76c0efa680bd9b507b875c124959abee);
+        
+    
+        var popup_04c04487be0bcaacce69e83885d6ec1a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a2349438d3db454cdb33574245f4cc07 = $(`<div id="html_a2349438d3db454cdb33574245f4cc07" style="width: 100.0%; height: 100.0%;">                 <b>Portland International</b><br>                 ICAO: KPDX<br>                 Month: August<br>                 HDD: 15°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_04c04487be0bcaacce69e83885d6ec1a.setContent(html_a2349438d3db454cdb33574245f4cc07);
+            
+        
+
+        circle_marker_7afcbf1d64ba46bef329c301516d7b4a.bindPopup(popup_04c04487be0bcaacce69e83885d6ec1a)
+        ;
+
+        
+    
+    
+            var circle_marker_0fe23efd7564a4166630ba13229cd5fe = L.circleMarker(
+                [44.1239, -123.2171],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_76c0efa680bd9b507b875c124959abee);
+        
+    
+        var popup_8db932327f7086824984dbb27cfe3531 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a73fdef2aa865fc309c9b8a64e9c8809 = $(`<div id="html_a73fdef2aa865fc309c9b8a64e9c8809" style="width: 100.0%; height: 100.0%;">                 <b>Eugene Airport</b><br>                 ICAO: KEUG<br>                 Month: August<br>                 HDD: 20°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_8db932327f7086824984dbb27cfe3531.setContent(html_a73fdef2aa865fc309c9b8a64e9c8809);
+            
+        
+
+        circle_marker_0fe23efd7564a4166630ba13229cd5fe.bindPopup(popup_8db932327f7086824984dbb27cfe3531)
+        ;
+
+        
+    
+    
+            var circle_marker_9fb379bc1ce83acd981ad85067f9e4f7 = L.circleMarker(
+                [44.9209, -123.0065],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_76c0efa680bd9b507b875c124959abee);
+        
+    
+        var popup_641c1909efb0b3e2cf1e69974df7c6b4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6434810a6235aa738082746cb9c21c4d = $(`<div id="html_6434810a6235aa738082746cb9c21c4d" style="width: 100.0%; height: 100.0%;">                 <b>Salem-Leckrone</b><br>                 ICAO: KSLE<br>                 Month: August<br>                 HDD: 18°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_641c1909efb0b3e2cf1e69974df7c6b4.setContent(html_6434810a6235aa738082746cb9c21c4d);
+            
+        
+
+        circle_marker_9fb379bc1ce83acd981ad85067f9e4f7.bindPopup(popup_641c1909efb0b3e2cf1e69974df7c6b4)
+        ;
+
+        
+    
+    
+            var circle_marker_f09446c6065a7554da2d71d16e7a44a6 = L.circleMarker(
+                [46.1583, -123.8783],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_76c0efa680bd9b507b875c124959abee);
+        
+    
+        var popup_95cc075542d27cc07eb016854cd89c43 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a3f693b0bf63c874d546a9248508d620 = $(`<div id="html_a3f693b0bf63c874d546a9248508d620" style="width: 100.0%; height: 100.0%;">                 <b>Astoria Regional</b><br>                 ICAO: KAST<br>                 Month: August<br>                 HDD: 25°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_95cc075542d27cc07eb016854cd89c43.setContent(html_a3f693b0bf63c874d546a9248508d620);
+            
+        
+
+        circle_marker_f09446c6065a7554da2d71d16e7a44a6.bindPopup(popup_95cc075542d27cc07eb016854cd89c43)
+        ;
+
+        
+    
+    
+            var circle_marker_c7e05b1500b043adb67fb49c01ef6aa2 = L.circleMarker(
+                [45.6089, -121.3089],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_76c0efa680bd9b507b875c124959abee);
+        
+    
+        var popup_a4973204693ba0107f8d155114f00771 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9884116fbaa05a49b39e8483d591e2b6 = $(`<div id="html_9884116fbaa05a49b39e8483d591e2b6" style="width: 100.0%; height: 100.0%;">                 <b>The Dalles Municipal</b><br>                 ICAO: KDLS<br>                 Month: August<br>                 HDD: 35°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_a4973204693ba0107f8d155114f00771.setContent(html_9884116fbaa05a49b39e8483d591e2b6);
+            
+        
+
+        circle_marker_c7e05b1500b043adb67fb49c01ef6aa2.bindPopup(popup_a4973204693ba0107f8d155114f00771)
+        ;
+
+        
+    
+    
+            var circle_marker_9dd04670b6ef934bb8fa9fbf6f4ad31b = L.circleMarker(
+                [43.4089, -124.2539],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_76c0efa680bd9b507b875c124959abee);
+        
+    
+        var popup_1e6ea0760bcb5a243d8cc1ab3037986d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f5d5b9760dacd97ae3dab6a2bc34bce9 = $(`<div id="html_f5d5b9760dacd97ae3dab6a2bc34bce9" style="width: 100.0%; height: 100.0%;">                 <b>North Bend/Coos Bay</b><br>                 ICAO: KOTH<br>                 Month: August<br>                 HDD: 10°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_1e6ea0760bcb5a243d8cc1ab3037986d.setContent(html_f5d5b9760dacd97ae3dab6a2bc34bce9);
+            
+        
+
+        circle_marker_9dd04670b6ef934bb8fa9fbf6f4ad31b.bindPopup(popup_1e6ea0760bcb5a243d8cc1ab3037986d)
+        ;
+
+        
+    
+    
+            var circle_marker_bad82caf5f1b726dbacea6b965dd2cb2 = L.circleMarker(
+                [44.5847, -124.0503],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_76c0efa680bd9b507b875c124959abee);
+        
+    
+        var popup_294ecfcdcd24baf2bdb0c8eb216457a0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_19405917b00922d5c2f084eb737bff1a = $(`<div id="html_19405917b00922d5c2f084eb737bff1a" style="width: 100.0%; height: 100.0%;">                 <b>Newport Airport</b><br>                 ICAO: KONP<br>                 Month: August<br>                 HDD: 15°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_294ecfcdcd24baf2bdb0c8eb216457a0.setContent(html_19405917b00922d5c2f084eb737bff1a);
+            
+        
+
+        circle_marker_bad82caf5f1b726dbacea6b965dd2cb2.bindPopup(popup_294ecfcdcd24baf2bdb0c8eb216457a0)
+        ;
+
+        
+    
+    
+            var circle_marker_481b9d624c1e45a876f7d8450a426226 = L.circleMarker(
+                [44.4915, -123.2803],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_76c0efa680bd9b507b875c124959abee);
+        
+    
+        var popup_97c06bce8429ec2bf44b400dee0042a6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9481b810077b1bf47e57195da8859234 = $(`<div id="html_9481b810077b1bf47e57195da8859234" style="width: 100.0%; height: 100.0%;">                 <b>Corvallis Airport</b><br>                 ICAO: KCVO<br>                 Month: August<br>                 HDD: 18°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_97c06bce8429ec2bf44b400dee0042a6.setContent(html_9481b810077b1bf47e57195da8859234);
+            
+        
+
+        circle_marker_481b9d624c1e45a876f7d8450a426226.bindPopup(popup_97c06bce8429ec2bf44b400dee0042a6)
+        ;
+
+        
+    
+    
+            var circle_marker_6e8c778214dca385e17b4a95b17d1b45 = L.circleMarker(
+                [45.5411, -122.9897],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_76c0efa680bd9b507b875c124959abee);
+        
+    
+        var popup_f7b29f8c08dabe4b5911e3360ef90c16 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_575a0ed0ad4f237ee31713b0d4468d93 = $(`<div id="html_575a0ed0ad4f237ee31713b0d4468d93" style="width: 100.0%; height: 100.0%;">                 <b>Hillsboro Airport</b><br>                 ICAO: KHIO<br>                 Month: August<br>                 HDD: 15°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_f7b29f8c08dabe4b5911e3360ef90c16.setContent(html_575a0ed0ad4f237ee31713b0d4468d93);
+            
+        
+
+        circle_marker_6e8c778214dca385e17b4a95b17d1b45.bindPopup(popup_f7b29f8c08dabe4b5911e3360ef90c16)
+        ;
+
+        
+    
+    
+            var circle_marker_18068731fd790947bffbfbc69c78a38d = L.circleMarker(
+                [45.555, -122.2742],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_76c0efa680bd9b507b875c124959abee);
+        
+    
+        var popup_1a08cb81902052bd1e7d3f2778eb9244 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_693ac1c806f78a34befb561194281403 = $(`<div id="html_693ac1c806f78a34befb561194281403" style="width: 100.0%; height: 100.0%;">                 <b>Troutdale Airport</b><br>                 ICAO: KTTD<br>                 Month: August<br>                 HDD: 15°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_1a08cb81902052bd1e7d3f2778eb9244.setContent(html_693ac1c806f78a34befb561194281403);
+            
+        
+
+        circle_marker_18068731fd790947bffbfbc69c78a38d.bindPopup(popup_1a08cb81902052bd1e7d3f2778eb9244)
+        ;
+
+        
+    
+    
+            var circle_marker_10cf2ab2b7e1dacb20233750377c3392 = L.circleMarker(
+                [45.6872, -122.6611],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_76c0efa680bd9b507b875c124959abee);
+        
+    
+        var popup_63267e3ea0f27b5f5332484130c93d53 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b605a8ba239fed94980b27060319c5e6 = $(`<div id="html_b605a8ba239fed94980b27060319c5e6" style="width: 100.0%; height: 100.0%;">                 <b>Vancouver-Pearson</b><br>                 ICAO: KVUO<br>                 Month: August<br>                 HDD: 20°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_63267e3ea0f27b5f5332484130c93d53.setContent(html_b605a8ba239fed94980b27060319c5e6);
+            
+        
+
+        circle_marker_10cf2ab2b7e1dacb20233750377c3392.bindPopup(popup_63267e3ea0f27b5f5332484130c93d53)
+        ;
+
+        
+    
+    
+            var feature_group_c507a4da481dd5f90f6acb4e18d47b31 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_999a0ee0791ae9c8de3ded3afaeb5421 = L.circleMarker(
+                [45.5891, -122.5975],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c507a4da481dd5f90f6acb4e18d47b31);
+        
+    
+        var popup_a2a584e004e9589117a2eb57be06a22e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e6e2d6184a49f978250b323769118b53 = $(`<div id="html_e6e2d6184a49f978250b323769118b53" style="width: 100.0%; height: 100.0%;">                 <b>Portland International</b><br>                 ICAO: KPDX<br>                 Month: September<br>                 HDD: 80°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_a2a584e004e9589117a2eb57be06a22e.setContent(html_e6e2d6184a49f978250b323769118b53);
+            
+        
+
+        circle_marker_999a0ee0791ae9c8de3ded3afaeb5421.bindPopup(popup_a2a584e004e9589117a2eb57be06a22e)
+        ;
+
+        
+    
+    
+            var circle_marker_580904fb2d45ee050c31c7e1e7c7373c = L.circleMarker(
+                [44.1239, -123.2171],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c507a4da481dd5f90f6acb4e18d47b31);
+        
+    
+        var popup_e8a7d333a6afbff171d42ee63062af65 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e24b10e4b8e2bd5eea9c46a0bdb0bf5f = $(`<div id="html_e24b10e4b8e2bd5eea9c46a0bdb0bf5f" style="width: 100.0%; height: 100.0%;">                 <b>Eugene Airport</b><br>                 ICAO: KEUG<br>                 Month: September<br>                 HDD: 100°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_e8a7d333a6afbff171d42ee63062af65.setContent(html_e24b10e4b8e2bd5eea9c46a0bdb0bf5f);
+            
+        
+
+        circle_marker_580904fb2d45ee050c31c7e1e7c7373c.bindPopup(popup_e8a7d333a6afbff171d42ee63062af65)
+        ;
+
+        
+    
+    
+            var circle_marker_05d744736c077c95e34ec98c135c9c0c = L.circleMarker(
+                [44.9209, -123.0065],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c507a4da481dd5f90f6acb4e18d47b31);
+        
+    
+        var popup_576cf33a38893913862a835f5b7a7849 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_948a43543f045a48beb55ba63584ed5a = $(`<div id="html_948a43543f045a48beb55ba63584ed5a" style="width: 100.0%; height: 100.0%;">                 <b>Salem-Leckrone</b><br>                 ICAO: KSLE<br>                 Month: September<br>                 HDD: 90°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_576cf33a38893913862a835f5b7a7849.setContent(html_948a43543f045a48beb55ba63584ed5a);
+            
+        
+
+        circle_marker_05d744736c077c95e34ec98c135c9c0c.bindPopup(popup_576cf33a38893913862a835f5b7a7849)
+        ;
+
+        
+    
+    
+            var circle_marker_c2e35ed9012f4d3f5e7ddc7a258e9b3f = L.circleMarker(
+                [46.1583, -123.8783],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c507a4da481dd5f90f6acb4e18d47b31);
+        
+    
+        var popup_d4f503cd05efc3faec080ca3e317db9d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_caec48bc3da92ecbcceb6b288c9c61d8 = $(`<div id="html_caec48bc3da92ecbcceb6b288c9c61d8" style="width: 100.0%; height: 100.0%;">                 <b>Astoria Regional</b><br>                 ICAO: KAST<br>                 Month: September<br>                 HDD: 120°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_d4f503cd05efc3faec080ca3e317db9d.setContent(html_caec48bc3da92ecbcceb6b288c9c61d8);
+            
+        
+
+        circle_marker_c2e35ed9012f4d3f5e7ddc7a258e9b3f.bindPopup(popup_d4f503cd05efc3faec080ca3e317db9d)
+        ;
+
+        
+    
+    
+            var circle_marker_ff6c0609a1a927df3df6d6ad64a3b4f8 = L.circleMarker(
+                [45.6089, -121.3089],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c507a4da481dd5f90f6acb4e18d47b31);
+        
+    
+        var popup_71a8fb71e975e3dc8cfe3f419c47676e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_42fb4de651653eb23b9252f35b373243 = $(`<div id="html_42fb4de651653eb23b9252f35b373243" style="width: 100.0%; height: 100.0%;">                 <b>The Dalles Municipal</b><br>                 ICAO: KDLS<br>                 Month: September<br>                 HDD: 140°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_71a8fb71e975e3dc8cfe3f419c47676e.setContent(html_42fb4de651653eb23b9252f35b373243);
+            
+        
+
+        circle_marker_ff6c0609a1a927df3df6d6ad64a3b4f8.bindPopup(popup_71a8fb71e975e3dc8cfe3f419c47676e)
+        ;
+
+        
+    
+    
+            var circle_marker_5e45b06dd5552ae27497f44b47f327bb = L.circleMarker(
+                [43.4089, -124.2539],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c507a4da481dd5f90f6acb4e18d47b31);
+        
+    
+        var popup_31ab1245aa8494fe39e7be8c6660ef6e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4176a4613524ba828d3f32da91f6a89d = $(`<div id="html_4176a4613524ba828d3f32da91f6a89d" style="width: 100.0%; height: 100.0%;">                 <b>North Bend/Coos Bay</b><br>                 ICAO: KOTH<br>                 Month: September<br>                 HDD: 60°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_31ab1245aa8494fe39e7be8c6660ef6e.setContent(html_4176a4613524ba828d3f32da91f6a89d);
+            
+        
+
+        circle_marker_5e45b06dd5552ae27497f44b47f327bb.bindPopup(popup_31ab1245aa8494fe39e7be8c6660ef6e)
+        ;
+
+        
+    
+    
+            var circle_marker_96dccd877480762ebed50452d502e1c3 = L.circleMarker(
+                [44.5847, -124.0503],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c507a4da481dd5f90f6acb4e18d47b31);
+        
+    
+        var popup_7e371ba445ac454648ed9ee829fe480c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8342bb3ec9850bae25d19a77c7c46f2e = $(`<div id="html_8342bb3ec9850bae25d19a77c7c46f2e" style="width: 100.0%; height: 100.0%;">                 <b>Newport Airport</b><br>                 ICAO: KONP<br>                 Month: September<br>                 HDD: 80°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_7e371ba445ac454648ed9ee829fe480c.setContent(html_8342bb3ec9850bae25d19a77c7c46f2e);
+            
+        
+
+        circle_marker_96dccd877480762ebed50452d502e1c3.bindPopup(popup_7e371ba445ac454648ed9ee829fe480c)
+        ;
+
+        
+    
+    
+            var circle_marker_a843e6fe274a661ee4399fc6d962beb4 = L.circleMarker(
+                [44.4915, -123.2803],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c507a4da481dd5f90f6acb4e18d47b31);
+        
+    
+        var popup_9370fce100d17ea5d595379fab070adb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ddc929e1f4bc05f89441cef39435b6fa = $(`<div id="html_ddc929e1f4bc05f89441cef39435b6fa" style="width: 100.0%; height: 100.0%;">                 <b>Corvallis Airport</b><br>                 ICAO: KCVO<br>                 Month: September<br>                 HDD: 90°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_9370fce100d17ea5d595379fab070adb.setContent(html_ddc929e1f4bc05f89441cef39435b6fa);
+            
+        
+
+        circle_marker_a843e6fe274a661ee4399fc6d962beb4.bindPopup(popup_9370fce100d17ea5d595379fab070adb)
+        ;
+
+        
+    
+    
+            var circle_marker_e6d26ccdff87af9d0e2d60d6d9860ecf = L.circleMarker(
+                [45.5411, -122.9897],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c507a4da481dd5f90f6acb4e18d47b31);
+        
+    
+        var popup_6e57873ff9e9a2c3957815f638c99f09 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_32ad6d455c1902bb0115f6ff7ec9780d = $(`<div id="html_32ad6d455c1902bb0115f6ff7ec9780d" style="width: 100.0%; height: 100.0%;">                 <b>Hillsboro Airport</b><br>                 ICAO: KHIO<br>                 Month: September<br>                 HDD: 80°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_6e57873ff9e9a2c3957815f638c99f09.setContent(html_32ad6d455c1902bb0115f6ff7ec9780d);
+            
+        
+
+        circle_marker_e6d26ccdff87af9d0e2d60d6d9860ecf.bindPopup(popup_6e57873ff9e9a2c3957815f638c99f09)
+        ;
+
+        
+    
+    
+            var circle_marker_1f90455629a2f0614af040d8468cdbf5 = L.circleMarker(
+                [45.555, -122.2742],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c507a4da481dd5f90f6acb4e18d47b31);
+        
+    
+        var popup_8d2ced14982da713bd39298c618d24ee = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4c7f1ec3b1a3f01cd6c8856d2be7c802 = $(`<div id="html_4c7f1ec3b1a3f01cd6c8856d2be7c802" style="width: 100.0%; height: 100.0%;">                 <b>Troutdale Airport</b><br>                 ICAO: KTTD<br>                 Month: September<br>                 HDD: 80°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_8d2ced14982da713bd39298c618d24ee.setContent(html_4c7f1ec3b1a3f01cd6c8856d2be7c802);
+            
+        
+
+        circle_marker_1f90455629a2f0614af040d8468cdbf5.bindPopup(popup_8d2ced14982da713bd39298c618d24ee)
+        ;
+
+        
+    
+    
+            var circle_marker_9fbb042ecb6402dac8bdfb6c3b15a907 = L.circleMarker(
+                [45.6872, -122.6611],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c507a4da481dd5f90f6acb4e18d47b31);
+        
+    
+        var popup_f188503f4753b473b0a07f2802915294 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9d4fbfce395887f5f03960d424c3fb63 = $(`<div id="html_9d4fbfce395887f5f03960d424c3fb63" style="width: 100.0%; height: 100.0%;">                 <b>Vancouver-Pearson</b><br>                 ICAO: KVUO<br>                 Month: September<br>                 HDD: 100°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_f188503f4753b473b0a07f2802915294.setContent(html_9d4fbfce395887f5f03960d424c3fb63);
+            
+        
+
+        circle_marker_9fbb042ecb6402dac8bdfb6c3b15a907.bindPopup(popup_f188503f4753b473b0a07f2802915294)
+        ;
+
+        
+    
+    
+            var feature_group_052a1edd4d3ad2675b85a71b544fe680 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_c9bbfd4fa04ac4cb4b0c27d1d00eaac1 = L.circleMarker(
+                [45.5891, -122.5975],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_052a1edd4d3ad2675b85a71b544fe680);
+        
+    
+        var popup_7c6c724015dbd335828858c5d58e1625 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e11f9135460f552e065a9077d6678d5c = $(`<div id="html_e11f9135460f552e065a9077d6678d5c" style="width: 100.0%; height: 100.0%;">                 <b>Portland International</b><br>                 ICAO: KPDX<br>                 Month: October<br>                 HDD: 200°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_7c6c724015dbd335828858c5d58e1625.setContent(html_e11f9135460f552e065a9077d6678d5c);
+            
+        
+
+        circle_marker_c9bbfd4fa04ac4cb4b0c27d1d00eaac1.bindPopup(popup_7c6c724015dbd335828858c5d58e1625)
+        ;
+
+        
+    
+    
+            var circle_marker_973d6fff573b33697bf664ce011a595f = L.circleMarker(
+                [44.1239, -123.2171],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_052a1edd4d3ad2675b85a71b544fe680);
+        
+    
+        var popup_6a046a1405cf64c9665192f060d880f5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_df714a2e267b8f154601859c6d5da640 = $(`<div id="html_df714a2e267b8f154601859c6d5da640" style="width: 100.0%; height: 100.0%;">                 <b>Eugene Airport</b><br>                 ICAO: KEUG<br>                 Month: October<br>                 HDD: 250°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_6a046a1405cf64c9665192f060d880f5.setContent(html_df714a2e267b8f154601859c6d5da640);
+            
+        
+
+        circle_marker_973d6fff573b33697bf664ce011a595f.bindPopup(popup_6a046a1405cf64c9665192f060d880f5)
+        ;
+
+        
+    
+    
+            var circle_marker_34ce3f855160219021ab1ce051daebbc = L.circleMarker(
+                [44.9209, -123.0065],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_052a1edd4d3ad2675b85a71b544fe680);
+        
+    
+        var popup_6bf30a502a0f5f31412d022d175d1184 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e927597c76fbf64d7cdb803f9b1157a3 = $(`<div id="html_e927597c76fbf64d7cdb803f9b1157a3" style="width: 100.0%; height: 100.0%;">                 <b>Salem-Leckrone</b><br>                 ICAO: KSLE<br>                 Month: October<br>                 HDD: 230°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_6bf30a502a0f5f31412d022d175d1184.setContent(html_e927597c76fbf64d7cdb803f9b1157a3);
+            
+        
+
+        circle_marker_34ce3f855160219021ab1ce051daebbc.bindPopup(popup_6bf30a502a0f5f31412d022d175d1184)
+        ;
+
+        
+    
+    
+            var circle_marker_32264581301613e7757d31978f8af374 = L.circleMarker(
+                [46.1583, -123.8783],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_052a1edd4d3ad2675b85a71b544fe680);
+        
+    
+        var popup_715a8e58ff173bf2c20420ea68f58013 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_58e264e0efd4a9ee5f1122e23da9fd20 = $(`<div id="html_58e264e0efd4a9ee5f1122e23da9fd20" style="width: 100.0%; height: 100.0%;">                 <b>Astoria Regional</b><br>                 ICAO: KAST<br>                 Month: October<br>                 HDD: 280°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_715a8e58ff173bf2c20420ea68f58013.setContent(html_58e264e0efd4a9ee5f1122e23da9fd20);
+            
+        
+
+        circle_marker_32264581301613e7757d31978f8af374.bindPopup(popup_715a8e58ff173bf2c20420ea68f58013)
+        ;
+
+        
+    
+    
+            var circle_marker_e482f8ae12ce028bad8d8ebd6d92483c = L.circleMarker(
+                [45.6089, -121.3089],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_052a1edd4d3ad2675b85a71b544fe680);
+        
+    
+        var popup_939c8da3aa2cec6a7f5df5cdaa6d6cf6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ed4ae8b1c90aa095f5c0170e2d5c98eb = $(`<div id="html_ed4ae8b1c90aa095f5c0170e2d5c98eb" style="width: 100.0%; height: 100.0%;">                 <b>The Dalles Municipal</b><br>                 ICAO: KDLS<br>                 Month: October<br>                 HDD: 320°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_939c8da3aa2cec6a7f5df5cdaa6d6cf6.setContent(html_ed4ae8b1c90aa095f5c0170e2d5c98eb);
+            
+        
+
+        circle_marker_e482f8ae12ce028bad8d8ebd6d92483c.bindPopup(popup_939c8da3aa2cec6a7f5df5cdaa6d6cf6)
+        ;
+
+        
+    
+    
+            var circle_marker_141aaf0b237f2530e2d71ab0974be96b = L.circleMarker(
+                [43.4089, -124.2539],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_052a1edd4d3ad2675b85a71b544fe680);
+        
+    
+        var popup_b0e348fdf15172ca4e4210206cd18110 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0e6f5b1873b089ba03893ed8d747499a = $(`<div id="html_0e6f5b1873b089ba03893ed8d747499a" style="width: 100.0%; height: 100.0%;">                 <b>North Bend/Coos Bay</b><br>                 ICAO: KOTH<br>                 Month: October<br>                 HDD: 180°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_b0e348fdf15172ca4e4210206cd18110.setContent(html_0e6f5b1873b089ba03893ed8d747499a);
+            
+        
+
+        circle_marker_141aaf0b237f2530e2d71ab0974be96b.bindPopup(popup_b0e348fdf15172ca4e4210206cd18110)
+        ;
+
+        
+    
+    
+            var circle_marker_9f751808b5f2b17d934c162ee18a10e6 = L.circleMarker(
+                [44.5847, -124.0503],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_052a1edd4d3ad2675b85a71b544fe680);
+        
+    
+        var popup_fdf03fa4af73efae6e64b22650680968 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6c33d19bab2e2b6c6c79aca903c71dc7 = $(`<div id="html_6c33d19bab2e2b6c6c79aca903c71dc7" style="width: 100.0%; height: 100.0%;">                 <b>Newport Airport</b><br>                 ICAO: KONP<br>                 Month: October<br>                 HDD: 200°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_fdf03fa4af73efae6e64b22650680968.setContent(html_6c33d19bab2e2b6c6c79aca903c71dc7);
+            
+        
+
+        circle_marker_9f751808b5f2b17d934c162ee18a10e6.bindPopup(popup_fdf03fa4af73efae6e64b22650680968)
+        ;
+
+        
+    
+    
+            var circle_marker_b04ecb26c433b6c8f9ef39224d933605 = L.circleMarker(
+                [44.4915, -123.2803],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_052a1edd4d3ad2675b85a71b544fe680);
+        
+    
+        var popup_6047243589cf1bcf575163d22bcd82b9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_563c3139aa949c37533d1e0a95cc1e5d = $(`<div id="html_563c3139aa949c37533d1e0a95cc1e5d" style="width: 100.0%; height: 100.0%;">                 <b>Corvallis Airport</b><br>                 ICAO: KCVO<br>                 Month: October<br>                 HDD: 230°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_6047243589cf1bcf575163d22bcd82b9.setContent(html_563c3139aa949c37533d1e0a95cc1e5d);
+            
+        
+
+        circle_marker_b04ecb26c433b6c8f9ef39224d933605.bindPopup(popup_6047243589cf1bcf575163d22bcd82b9)
+        ;
+
+        
+    
+    
+            var circle_marker_8a8076c77a1fd770a657649306ca136b = L.circleMarker(
+                [45.5411, -122.9897],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_052a1edd4d3ad2675b85a71b544fe680);
+        
+    
+        var popup_486054dbb10855b85b2f7334cdc8699e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_58ad303eb58e5d655d3ed73bc9c38ef4 = $(`<div id="html_58ad303eb58e5d655d3ed73bc9c38ef4" style="width: 100.0%; height: 100.0%;">                 <b>Hillsboro Airport</b><br>                 ICAO: KHIO<br>                 Month: October<br>                 HDD: 200°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_486054dbb10855b85b2f7334cdc8699e.setContent(html_58ad303eb58e5d655d3ed73bc9c38ef4);
+            
+        
+
+        circle_marker_8a8076c77a1fd770a657649306ca136b.bindPopup(popup_486054dbb10855b85b2f7334cdc8699e)
+        ;
+
+        
+    
+    
+            var circle_marker_c9032595d84f996977cef8f8113da0d7 = L.circleMarker(
+                [45.555, -122.2742],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_052a1edd4d3ad2675b85a71b544fe680);
+        
+    
+        var popup_b091931d58ef7fba43dca045afef1499 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e48414332cd0a99845c6e8c1599a98ad = $(`<div id="html_e48414332cd0a99845c6e8c1599a98ad" style="width: 100.0%; height: 100.0%;">                 <b>Troutdale Airport</b><br>                 ICAO: KTTD<br>                 Month: October<br>                 HDD: 200°F-days<br>                 Heating Demand: Low                 </div>`)[0];
+                popup_b091931d58ef7fba43dca045afef1499.setContent(html_e48414332cd0a99845c6e8c1599a98ad);
+            
+        
+
+        circle_marker_c9032595d84f996977cef8f8113da0d7.bindPopup(popup_b091931d58ef7fba43dca045afef1499)
+        ;
+
+        
+    
+    
+            var circle_marker_68ed4adf4d25ff4bcf34f6aaeac6ef5b = L.circleMarker(
+                [45.6872, -122.6611],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_052a1edd4d3ad2675b85a71b544fe680);
+        
+    
+        var popup_f9207166a47322b72923a64b51bc1aa8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_59bc8129bb8b545d4450fbd083a04a37 = $(`<div id="html_59bc8129bb8b545d4450fbd083a04a37" style="width: 100.0%; height: 100.0%;">                 <b>Vancouver-Pearson</b><br>                 ICAO: KVUO<br>                 Month: October<br>                 HDD: 250°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_f9207166a47322b72923a64b51bc1aa8.setContent(html_59bc8129bb8b545d4450fbd083a04a37);
+            
+        
+
+        circle_marker_68ed4adf4d25ff4bcf34f6aaeac6ef5b.bindPopup(popup_f9207166a47322b72923a64b51bc1aa8)
+        ;
+
+        
+    
+    
+            var feature_group_c251e26b0a1f8a2b1c81df297197af89 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_2fefa850d6a7a6c32907dff784e1d2bc = L.circleMarker(
+                [45.5891, -122.5975],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c251e26b0a1f8a2b1c81df297197af89);
+        
+    
+        var popup_b747624ae927febc93bc869755d70ca9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8f307b96d5d7177ff3ee231b50fbcc91 = $(`<div id="html_8f307b96d5d7177ff3ee231b50fbcc91" style="width: 100.0%; height: 100.0%;">                 <b>Portland International</b><br>                 ICAO: KPDX<br>                 Month: November<br>                 HDD: 400°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_b747624ae927febc93bc869755d70ca9.setContent(html_8f307b96d5d7177ff3ee231b50fbcc91);
+            
+        
+
+        circle_marker_2fefa850d6a7a6c32907dff784e1d2bc.bindPopup(popup_b747624ae927febc93bc869755d70ca9)
+        ;
+
+        
+    
+    
+            var circle_marker_6386c15f5785b3d96db8598e596ad8ac = L.circleMarker(
+                [44.1239, -123.2171],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c251e26b0a1f8a2b1c81df297197af89);
+        
+    
+        var popup_224ff90ea08ae796969c5a6ae2f894bd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5519ddfaea5c038ef5bf74907c83339d = $(`<div id="html_5519ddfaea5c038ef5bf74907c83339d" style="width: 100.0%; height: 100.0%;">                 <b>Eugene Airport</b><br>                 ICAO: KEUG<br>                 Month: November<br>                 HDD: 450°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_224ff90ea08ae796969c5a6ae2f894bd.setContent(html_5519ddfaea5c038ef5bf74907c83339d);
+            
+        
+
+        circle_marker_6386c15f5785b3d96db8598e596ad8ac.bindPopup(popup_224ff90ea08ae796969c5a6ae2f894bd)
+        ;
+
+        
+    
+    
+            var circle_marker_2b45816d8d7e1181bbdca270bdc22d4f = L.circleMarker(
+                [44.9209, -123.0065],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c251e26b0a1f8a2b1c81df297197af89);
+        
+    
+        var popup_735045b94f3b05da8530140f55072817 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c21d32aec4860b94a26b6b97ca070409 = $(`<div id="html_c21d32aec4860b94a26b6b97ca070409" style="width: 100.0%; height: 100.0%;">                 <b>Salem-Leckrone</b><br>                 ICAO: KSLE<br>                 Month: November<br>                 HDD: 420°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_735045b94f3b05da8530140f55072817.setContent(html_c21d32aec4860b94a26b6b97ca070409);
+            
+        
+
+        circle_marker_2b45816d8d7e1181bbdca270bdc22d4f.bindPopup(popup_735045b94f3b05da8530140f55072817)
+        ;
+
+        
+    
+    
+            var circle_marker_58c3924dc07cdb2b30afe7229c2095b8 = L.circleMarker(
+                [46.1583, -123.8783],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c251e26b0a1f8a2b1c81df297197af89);
+        
+    
+        var popup_e57516be37d7c9d8c14dda039a269ac1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3ed42bdb65f0de8f4b8c06a7f1699335 = $(`<div id="html_3ed42bdb65f0de8f4b8c06a7f1699335" style="width: 100.0%; height: 100.0%;">                 <b>Astoria Regional</b><br>                 ICAO: KAST<br>                 Month: November<br>                 HDD: 500°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_e57516be37d7c9d8c14dda039a269ac1.setContent(html_3ed42bdb65f0de8f4b8c06a7f1699335);
+            
+        
+
+        circle_marker_58c3924dc07cdb2b30afe7229c2095b8.bindPopup(popup_e57516be37d7c9d8c14dda039a269ac1)
+        ;
+
+        
+    
+    
+            var circle_marker_ca74daa9a14ec4ddc03f03b6e4b9021f = L.circleMarker(
+                [45.6089, -121.3089],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c251e26b0a1f8a2b1c81df297197af89);
+        
+    
+        var popup_6c3ebef2b06644bbb8ab932afa8c286b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0bc6c351fda07e2bf779078f15fcc2b3 = $(`<div id="html_0bc6c351fda07e2bf779078f15fcc2b3" style="width: 100.0%; height: 100.0%;">                 <b>The Dalles Municipal</b><br>                 ICAO: KDLS<br>                 Month: November<br>                 HDD: 550°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_6c3ebef2b06644bbb8ab932afa8c286b.setContent(html_0bc6c351fda07e2bf779078f15fcc2b3);
+            
+        
+
+        circle_marker_ca74daa9a14ec4ddc03f03b6e4b9021f.bindPopup(popup_6c3ebef2b06644bbb8ab932afa8c286b)
+        ;
+
+        
+    
+    
+            var circle_marker_02a16e2e5ff301d6d26827a07a507bb3 = L.circleMarker(
+                [43.4089, -124.2539],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c251e26b0a1f8a2b1c81df297197af89);
+        
+    
+        var popup_0d1b2cf37036423b103ae6351519c7d0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dc210a25358dffda524d23dd32f19aed = $(`<div id="html_dc210a25358dffda524d23dd32f19aed" style="width: 100.0%; height: 100.0%;">                 <b>North Bend/Coos Bay</b><br>                 ICAO: KOTH<br>                 Month: November<br>                 HDD: 350°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_0d1b2cf37036423b103ae6351519c7d0.setContent(html_dc210a25358dffda524d23dd32f19aed);
+            
+        
+
+        circle_marker_02a16e2e5ff301d6d26827a07a507bb3.bindPopup(popup_0d1b2cf37036423b103ae6351519c7d0)
+        ;
+
+        
+    
+    
+            var circle_marker_37454fc0b22e4219c72454020c5ce91a = L.circleMarker(
+                [44.5847, -124.0503],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c251e26b0a1f8a2b1c81df297197af89);
+        
+    
+        var popup_4137a94bd4a8c08b674d34fb36b3f323 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0cecf9316382b399174ce1563d355482 = $(`<div id="html_0cecf9316382b399174ce1563d355482" style="width: 100.0%; height: 100.0%;">                 <b>Newport Airport</b><br>                 ICAO: KONP<br>                 Month: November<br>                 HDD: 400°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_4137a94bd4a8c08b674d34fb36b3f323.setContent(html_0cecf9316382b399174ce1563d355482);
+            
+        
+
+        circle_marker_37454fc0b22e4219c72454020c5ce91a.bindPopup(popup_4137a94bd4a8c08b674d34fb36b3f323)
+        ;
+
+        
+    
+    
+            var circle_marker_1090681dad530c79dc6edc8e80d7d439 = L.circleMarker(
+                [44.4915, -123.2803],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c251e26b0a1f8a2b1c81df297197af89);
+        
+    
+        var popup_1ff0b668ce6fa9a9dee1db14bcfe1429 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a6c9cd48bb58d8b275a8dbc7e94d926b = $(`<div id="html_a6c9cd48bb58d8b275a8dbc7e94d926b" style="width: 100.0%; height: 100.0%;">                 <b>Corvallis Airport</b><br>                 ICAO: KCVO<br>                 Month: November<br>                 HDD: 420°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_1ff0b668ce6fa9a9dee1db14bcfe1429.setContent(html_a6c9cd48bb58d8b275a8dbc7e94d926b);
+            
+        
+
+        circle_marker_1090681dad530c79dc6edc8e80d7d439.bindPopup(popup_1ff0b668ce6fa9a9dee1db14bcfe1429)
+        ;
+
+        
+    
+    
+            var circle_marker_ceddbe4980e072c97e7aebdae8dea912 = L.circleMarker(
+                [45.5411, -122.9897],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c251e26b0a1f8a2b1c81df297197af89);
+        
+    
+        var popup_3574cdbcf801cdb59d8b033cd9ded54e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d5da721ca3bb33c60f99feda6d50803a = $(`<div id="html_d5da721ca3bb33c60f99feda6d50803a" style="width: 100.0%; height: 100.0%;">                 <b>Hillsboro Airport</b><br>                 ICAO: KHIO<br>                 Month: November<br>                 HDD: 400°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_3574cdbcf801cdb59d8b033cd9ded54e.setContent(html_d5da721ca3bb33c60f99feda6d50803a);
+            
+        
+
+        circle_marker_ceddbe4980e072c97e7aebdae8dea912.bindPopup(popup_3574cdbcf801cdb59d8b033cd9ded54e)
+        ;
+
+        
+    
+    
+            var circle_marker_0d30d1603a38a5534de912d6a6cc49b8 = L.circleMarker(
+                [45.555, -122.2742],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c251e26b0a1f8a2b1c81df297197af89);
+        
+    
+        var popup_f25b99532bbba0683daaa9f52c77cb7c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f2da6f983540ad78be31b035ac0a3c04 = $(`<div id="html_f2da6f983540ad78be31b035ac0a3c04" style="width: 100.0%; height: 100.0%;">                 <b>Troutdale Airport</b><br>                 ICAO: KTTD<br>                 Month: November<br>                 HDD: 400°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_f25b99532bbba0683daaa9f52c77cb7c.setContent(html_f2da6f983540ad78be31b035ac0a3c04);
+            
+        
+
+        circle_marker_0d30d1603a38a5534de912d6a6cc49b8.bindPopup(popup_f25b99532bbba0683daaa9f52c77cb7c)
+        ;
+
+        
+    
+    
+            var circle_marker_cc1c5d9725531ac5b4198850a49b6f48 = L.circleMarker(
+                [45.6872, -122.6611],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c251e26b0a1f8a2b1c81df297197af89);
+        
+    
+        var popup_233df162c5d6f8ede387dab282fcc544 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cbc01a177f864905ca44c769a235f505 = $(`<div id="html_cbc01a177f864905ca44c769a235f505" style="width: 100.0%; height: 100.0%;">                 <b>Vancouver-Pearson</b><br>                 ICAO: KVUO<br>                 Month: November<br>                 HDD: 450°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_233df162c5d6f8ede387dab282fcc544.setContent(html_cbc01a177f864905ca44c769a235f505);
+            
+        
+
+        circle_marker_cc1c5d9725531ac5b4198850a49b6f48.bindPopup(popup_233df162c5d6f8ede387dab282fcc544)
+        ;
+
+        
+    
+    
+            var feature_group_84a8aa2a24282d3860feab0f6867c86a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_8fe39c14ddaf2c0e78a9f414645751e7 = L.circleMarker(
+                [45.5891, -122.5975],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_84a8aa2a24282d3860feab0f6867c86a);
+        
+    
+        var popup_69815d306f125b51c9ce52eb3c70032c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3a1efea4cbd9b32ea3aecf6bdc3bd402 = $(`<div id="html_3a1efea4cbd9b32ea3aecf6bdc3bd402" style="width: 100.0%; height: 100.0%;">                 <b>Portland International</b><br>                 ICAO: KPDX<br>                 Month: December<br>                 HDD: 550°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_69815d306f125b51c9ce52eb3c70032c.setContent(html_3a1efea4cbd9b32ea3aecf6bdc3bd402);
+            
+        
+
+        circle_marker_8fe39c14ddaf2c0e78a9f414645751e7.bindPopup(popup_69815d306f125b51c9ce52eb3c70032c)
+        ;
+
+        
+    
+    
+            var circle_marker_23ad00bd2e6e77268e85b586941b9389 = L.circleMarker(
+                [44.1239, -123.2171],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_84a8aa2a24282d3860feab0f6867c86a);
+        
+    
+        var popup_30774a8c419da3a0dfe35b18adc661c7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bafa6e3d48602d6cc3e8e83311ced48e = $(`<div id="html_bafa6e3d48602d6cc3e8e83311ced48e" style="width: 100.0%; height: 100.0%;">                 <b>Eugene Airport</b><br>                 ICAO: KEUG<br>                 Month: December<br>                 HDD: 650°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_30774a8c419da3a0dfe35b18adc661c7.setContent(html_bafa6e3d48602d6cc3e8e83311ced48e);
+            
+        
+
+        circle_marker_23ad00bd2e6e77268e85b586941b9389.bindPopup(popup_30774a8c419da3a0dfe35b18adc661c7)
+        ;
+
+        
+    
+    
+            var circle_marker_639da04b45fb3f52567087e94cfff842 = L.circleMarker(
+                [44.9209, -123.0065],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_84a8aa2a24282d3860feab0f6867c86a);
+        
+    
+        var popup_924a215c758c33fc87a6f12b9d56edfd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c0117a9cfb715be9f3c7d2defcc90664 = $(`<div id="html_c0117a9cfb715be9f3c7d2defcc90664" style="width: 100.0%; height: 100.0%;">                 <b>Salem-Leckrone</b><br>                 ICAO: KSLE<br>                 Month: December<br>                 HDD: 600°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_924a215c758c33fc87a6f12b9d56edfd.setContent(html_c0117a9cfb715be9f3c7d2defcc90664);
+            
+        
+
+        circle_marker_639da04b45fb3f52567087e94cfff842.bindPopup(popup_924a215c758c33fc87a6f12b9d56edfd)
+        ;
+
+        
+    
+    
+            var circle_marker_6f145fed9a1e2da42b9647ff514ef103 = L.circleMarker(
+                [46.1583, -123.8783],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_84a8aa2a24282d3860feab0f6867c86a);
+        
+    
+        var popup_7a4b2737724c6186117fc56dee6a3e61 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6a19c1bff8cb7a6c34eaeffefcad4193 = $(`<div id="html_6a19c1bff8cb7a6c34eaeffefcad4193" style="width: 100.0%; height: 100.0%;">                 <b>Astoria Regional</b><br>                 ICAO: KAST<br>                 Month: December<br>                 HDD: 700°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_7a4b2737724c6186117fc56dee6a3e61.setContent(html_6a19c1bff8cb7a6c34eaeffefcad4193);
+            
+        
+
+        circle_marker_6f145fed9a1e2da42b9647ff514ef103.bindPopup(popup_7a4b2737724c6186117fc56dee6a3e61)
+        ;
+
+        
+    
+    
+            var circle_marker_682cf63902aa7d0fd5da511518b44fd8 = L.circleMarker(
+                [45.6089, -121.3089],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_84a8aa2a24282d3860feab0f6867c86a);
+        
+    
+        var popup_9d805e5c85d3ecacb869cbe391fc9ef3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d1f33fb1255ff2b20c2a99e6d7495637 = $(`<div id="html_d1f33fb1255ff2b20c2a99e6d7495637" style="width: 100.0%; height: 100.0%;">                 <b>The Dalles Municipal</b><br>                 ICAO: KDLS<br>                 Month: December<br>                 HDD: 750°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_9d805e5c85d3ecacb869cbe391fc9ef3.setContent(html_d1f33fb1255ff2b20c2a99e6d7495637);
+            
+        
+
+        circle_marker_682cf63902aa7d0fd5da511518b44fd8.bindPopup(popup_9d805e5c85d3ecacb869cbe391fc9ef3)
+        ;
+
+        
+    
+    
+            var circle_marker_823b432e9bba5eb75398a7d790423b0f = L.circleMarker(
+                [43.4089, -124.2539],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_84a8aa2a24282d3860feab0f6867c86a);
+        
+    
+        var popup_20014aeb2f10261089d214324647d129 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f4372ef4188322414b36836b2bec13d6 = $(`<div id="html_f4372ef4188322414b36836b2bec13d6" style="width: 100.0%; height: 100.0%;">                 <b>North Bend/Coos Bay</b><br>                 ICAO: KOTH<br>                 Month: December<br>                 HDD: 500°F-days<br>                 Heating Demand: Medium                 </div>`)[0];
+                popup_20014aeb2f10261089d214324647d129.setContent(html_f4372ef4188322414b36836b2bec13d6);
+            
+        
+
+        circle_marker_823b432e9bba5eb75398a7d790423b0f.bindPopup(popup_20014aeb2f10261089d214324647d129)
+        ;
+
+        
+    
+    
+            var circle_marker_53f807e2e77e1e1624db4c77ae4182b1 = L.circleMarker(
+                [44.5847, -124.0503],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_84a8aa2a24282d3860feab0f6867c86a);
+        
+    
+        var popup_396892b6c52d83141e12f4d16b2132b9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c532a0dea486cba5163d1c78a5b46974 = $(`<div id="html_c532a0dea486cba5163d1c78a5b46974" style="width: 100.0%; height: 100.0%;">                 <b>Newport Airport</b><br>                 ICAO: KONP<br>                 Month: December<br>                 HDD: 550°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_396892b6c52d83141e12f4d16b2132b9.setContent(html_c532a0dea486cba5163d1c78a5b46974);
+            
+        
+
+        circle_marker_53f807e2e77e1e1624db4c77ae4182b1.bindPopup(popup_396892b6c52d83141e12f4d16b2132b9)
+        ;
+
+        
+    
+    
+            var circle_marker_e5c885f87c01265c77d2c2e25fd5b094 = L.circleMarker(
+                [44.4915, -123.2803],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_84a8aa2a24282d3860feab0f6867c86a);
+        
+    
+        var popup_364cdea854ae5955605c9da480fee168 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c10e15d0fd7fa97375b008249d3e148b = $(`<div id="html_c10e15d0fd7fa97375b008249d3e148b" style="width: 100.0%; height: 100.0%;">                 <b>Corvallis Airport</b><br>                 ICAO: KCVO<br>                 Month: December<br>                 HDD: 600°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_364cdea854ae5955605c9da480fee168.setContent(html_c10e15d0fd7fa97375b008249d3e148b);
+            
+        
+
+        circle_marker_e5c885f87c01265c77d2c2e25fd5b094.bindPopup(popup_364cdea854ae5955605c9da480fee168)
+        ;
+
+        
+    
+    
+            var circle_marker_f20d7a92feccb5ca7fc50247e0e5a39f = L.circleMarker(
+                [45.5411, -122.9897],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_84a8aa2a24282d3860feab0f6867c86a);
+        
+    
+        var popup_f8b85dc174494d3da0d51ccf4c24a43a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_38df7ca463cd2af5c2559baf726db012 = $(`<div id="html_38df7ca463cd2af5c2559baf726db012" style="width: 100.0%; height: 100.0%;">                 <b>Hillsboro Airport</b><br>                 ICAO: KHIO<br>                 Month: December<br>                 HDD: 550°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_f8b85dc174494d3da0d51ccf4c24a43a.setContent(html_38df7ca463cd2af5c2559baf726db012);
+            
+        
+
+        circle_marker_f20d7a92feccb5ca7fc50247e0e5a39f.bindPopup(popup_f8b85dc174494d3da0d51ccf4c24a43a)
+        ;
+
+        
+    
+    
+            var circle_marker_e20ce7ea367cf64fe31f7919114aac56 = L.circleMarker(
+                [45.555, -122.2742],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_84a8aa2a24282d3860feab0f6867c86a);
+        
+    
+        var popup_a8c1343e42bf55c68630ecf961880ddd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_03cad5aa5ffdec77b52c95eb6129bf9d = $(`<div id="html_03cad5aa5ffdec77b52c95eb6129bf9d" style="width: 100.0%; height: 100.0%;">                 <b>Troutdale Airport</b><br>                 ICAO: KTTD<br>                 Month: December<br>                 HDD: 550°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_a8c1343e42bf55c68630ecf961880ddd.setContent(html_03cad5aa5ffdec77b52c95eb6129bf9d);
+            
+        
+
+        circle_marker_e20ce7ea367cf64fe31f7919114aac56.bindPopup(popup_a8c1343e42bf55c68630ecf961880ddd)
+        ;
+
+        
+    
+    
+            var circle_marker_ed359db7922bac5df1968ce319b15802 = L.circleMarker(
+                [45.6872, -122.6611],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_84a8aa2a24282d3860feab0f6867c86a);
+        
+    
+        var popup_26c94018ec5d543492631cebdf063545 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cce59a377d0cd6322e0049fa932e7d72 = $(`<div id="html_cce59a377d0cd6322e0049fa932e7d72" style="width: 100.0%; height: 100.0%;">                 <b>Vancouver-Pearson</b><br>                 ICAO: KVUO<br>                 Month: December<br>                 HDD: 650°F-days<br>                 Heating Demand: High                 </div>`)[0];
+                popup_26c94018ec5d543492631cebdf063545.setContent(html_cce59a377d0cd6322e0049fa932e7d72);
+            
+        
+
+        circle_marker_ed359db7922bac5df1968ce319b15802.bindPopup(popup_26c94018ec5d543492631cebdf063545)
+        ;
+
+        
+    
+    
+            var layer_control_83a2c6287f1c9129b8351e9ea84840ad_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_7fc3702540930139a78d89a4b1c04802,
+                },
+                overlays :  {
+                    "January" : feature_group_8c8f66d5b2a10150afe28004539e6ae1,
+                    "February" : feature_group_2b091c3c5553eab5d22cf0c64c0cf75c,
+                    "March" : feature_group_27e71a6fd1f5c42cc71d5906f1bcd323,
+                    "April" : feature_group_28e0eefc8dc0dffd6827a1f1cb53383a,
+                    "May" : feature_group_b0b72b7e34ecacb600043e440075f14f,
+                    "June" : feature_group_97d1f908fa279af408329863b3288fa6,
+                    "July" : feature_group_e032a226615b788bfd1964b5d54e7330,
+                    "August" : feature_group_76c0efa680bd9b507b875c124959abee,
+                    "September" : feature_group_c507a4da481dd5f90f6acb4e18d47b31,
+                    "October" : feature_group_052a1edd4d3ad2675b85a71b544fe680,
+                    "November" : feature_group_c251e26b0a1f8a2b1c81df297197af89,
+                    "December" : feature_group_84a8aa2a24282d3860feab0f6867c86a,
+                },
+            };
+            let layer_control_83a2c6287f1c9129b8351e9ea84840ad = L.control.layers(
+                layer_control_83a2c6287f1c9129b8351e9ea84840ad_layers.base_layers,
+                layer_control_83a2c6287f1c9129b8351e9ea84840ad_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_98f5acece840b5aaae28c36f813530c4);
+
+        
+</script>
+</html>

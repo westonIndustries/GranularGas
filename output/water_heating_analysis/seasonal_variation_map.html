@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e5a973096d8d07225bbc0c3cc1988fcb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e5a973096d8d07225bbc0c3cc1988fcb" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e5a973096d8d07225bbc0c3cc1988fcb = L.map(
+                "map_e5a973096d8d07225bbc0c3cc1988fcb",
+                {
+                    center: [45.0, -122.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a8d7b68db82137937ab7ba182bee6563 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a8d7b68db82137937ab7ba182bee6563.addTo(map_e5a973096d8d07225bbc0c3cc1988fcb);
+        
+    
+            var circle_marker_b7e689fd42aa5661de7f783d3817e9dd = L.circleMarker(
+                [45.5, -122.7],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_e5a973096d8d07225bbc0c3cc1988fcb);
+        
+    
+        var popup_155aa55666d9e5613ee473645ab55c13 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0af380f882a729b2c2f2e4cd5161fc7e = $(`<div id="html_0af380f882a729b2c2f2e4cd5161fc7e" style="width: 100.0%; height: 100.0%;">             <b>Multnomah County</b><br>             Winter Delta-T: 75°F<br>             Summer Delta-T: 62°F<br>             Seasonal Variation: 13°F<br>             Winter/Summer Ratio: 1.21x             </div>`)[0];
+                popup_155aa55666d9e5613ee473645ab55c13.setContent(html_0af380f882a729b2c2f2e4cd5161fc7e);
+            
+        
+
+        circle_marker_b7e689fd42aa5661de7f783d3817e9dd.bindPopup(popup_155aa55666d9e5613ee473645ab55c13)
+        ;
+
+        
+    
+    
+            var circle_marker_8f1aaf2f68ea7d8cc0207070d897ca5c = L.circleMarker(
+                [45.3, -122.8],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_e5a973096d8d07225bbc0c3cc1988fcb);
+        
+    
+        var popup_0b1abc8ad8665ca21cde251a6f8381e7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_52c14ad79c6feee6ccef9e3567c41537 = $(`<div id="html_52c14ad79c6feee6ccef9e3567c41537" style="width: 100.0%; height: 100.0%;">             <b>Washington County</b><br>             Winter Delta-T: 74°F<br>             Summer Delta-T: 61°F<br>             Seasonal Variation: 13°F<br>             Winter/Summer Ratio: 1.21x             </div>`)[0];
+                popup_0b1abc8ad8665ca21cde251a6f8381e7.setContent(html_52c14ad79c6feee6ccef9e3567c41537);
+            
+        
+
+        circle_marker_8f1aaf2f68ea7d8cc0207070d897ca5c.bindPopup(popup_0b1abc8ad8665ca21cde251a6f8381e7)
+        ;
+
+        
+    
+    
+            var circle_marker_c4fdc99615617b783633129a9e21d0d7 = L.circleMarker(
+                [45.2, -122.5],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_e5a973096d8d07225bbc0c3cc1988fcb);
+        
+    
+        var popup_09c75b29b298c5b3eab939f7835bdcfb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5cba4111b44e2e15dd54e4f1528ccd31 = $(`<div id="html_5cba4111b44e2e15dd54e4f1528ccd31" style="width: 100.0%; height: 100.0%;">             <b>Clackamas County</b><br>             Winter Delta-T: 75°F<br>             Summer Delta-T: 62°F<br>             Seasonal Variation: 13°F<br>             Winter/Summer Ratio: 1.21x             </div>`)[0];
+                popup_09c75b29b298c5b3eab939f7835bdcfb.setContent(html_5cba4111b44e2e15dd54e4f1528ccd31);
+            
+        
+
+        circle_marker_c4fdc99615617b783633129a9e21d0d7.bindPopup(popup_09c75b29b298c5b3eab939f7835bdcfb)
+        ;
+
+        
+    
+    
+            var circle_marker_3c930bd13971eb6d9617d5da8febb0dd = L.circleMarker(
+                [45.1, -123.1],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_e5a973096d8d07225bbc0c3cc1988fcb);
+        
+    
+        var popup_d67921d3d903d986b3618328ba923b05 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e48ccdfa84fce9b9dcaa3a2b901a8e8f = $(`<div id="html_e48ccdfa84fce9b9dcaa3a2b901a8e8f" style="width: 100.0%; height: 100.0%;">             <b>Yamhill County</b><br>             Winter Delta-T: 74°F<br>             Summer Delta-T: 61°F<br>             Seasonal Variation: 13°F<br>             Winter/Summer Ratio: 1.21x             </div>`)[0];
+                popup_d67921d3d903d986b3618328ba923b05.setContent(html_e48ccdfa84fce9b9dcaa3a2b901a8e8f);
+            
+        
+
+        circle_marker_3c930bd13971eb6d9617d5da8febb0dd.bindPopup(popup_d67921d3d903d986b3618328ba923b05)
+        ;
+
+        
+    
+    
+            var circle_marker_5acaaeb8e38223213a7a1132185795cc = L.circleMarker(
+                [44.8, -123.2],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_e5a973096d8d07225bbc0c3cc1988fcb);
+        
+    
+        var popup_c044f0ba595deb5f7f5214d4d742aca8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b8a0137d0eeac8ca50e6db2a4a0c3a40 = $(`<div id="html_b8a0137d0eeac8ca50e6db2a4a0c3a40" style="width: 100.0%; height: 100.0%;">             <b>Polk County</b><br>             Winter Delta-T: 75°F<br>             Summer Delta-T: 62°F<br>             Seasonal Variation: 13°F<br>             Winter/Summer Ratio: 1.21x             </div>`)[0];
+                popup_c044f0ba595deb5f7f5214d4d742aca8.setContent(html_b8a0137d0eeac8ca50e6db2a4a0c3a40);
+            
+        
+
+        circle_marker_5acaaeb8e38223213a7a1132185795cc.bindPopup(popup_c044f0ba595deb5f7f5214d4d742aca8)
+        ;
+
+        
+    
+    
+            var circle_marker_1af9b497e899237b9d4e6acb233a10f7 = L.circleMarker(
+                [44.9, -123.0],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_e5a973096d8d07225bbc0c3cc1988fcb);
+        
+    
+        var popup_828b6eb655dcc3bb874cd83234e7d734 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a6e201ecf025cc08a04e97b525b35c90 = $(`<div id="html_a6e201ecf025cc08a04e97b525b35c90" style="width: 100.0%; height: 100.0%;">             <b>Marion County</b><br>             Winter Delta-T: 75°F<br>             Summer Delta-T: 62°F<br>             Seasonal Variation: 13°F<br>             Winter/Summer Ratio: 1.21x             </div>`)[0];
+                popup_828b6eb655dcc3bb874cd83234e7d734.setContent(html_a6e201ecf025cc08a04e97b525b35c90);
+            
+        
+
+        circle_marker_1af9b497e899237b9d4e6acb233a10f7.bindPopup(popup_828b6eb655dcc3bb874cd83234e7d734)
+        ;
+
+        
+    
+    
+            var circle_marker_50992791ddb6f3abba7d586efba4c03c = L.circleMarker(
+                [44.6, -123.2],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_e5a973096d8d07225bbc0c3cc1988fcb);
+        
+    
+        var popup_5e5ce262e430e72b90f89b8756914ed2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bd25298facaaac338a02f58dc7553c09 = $(`<div id="html_bd25298facaaac338a02f58dc7553c09" style="width: 100.0%; height: 100.0%;">             <b>Linn County</b><br>             Winter Delta-T: 74°F<br>             Summer Delta-T: 61°F<br>             Seasonal Variation: 13°F<br>             Winter/Summer Ratio: 1.21x             </div>`)[0];
+                popup_5e5ce262e430e72b90f89b8756914ed2.setContent(html_bd25298facaaac338a02f58dc7553c09);
+            
+        
+
+        circle_marker_50992791ddb6f3abba7d586efba4c03c.bindPopup(popup_5e5ce262e430e72b90f89b8756914ed2)
+        ;
+
+        
+    
+    
+            var circle_marker_1b9ea8a4998a39d3ee2eb1b5d38be447 = L.circleMarker(
+                [44.1, -123.2],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_e5a973096d8d07225bbc0c3cc1988fcb);
+        
+    
+        var popup_8b7daac19b0060c7f89c48c119c88250 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_182b816dd5e1271b7df88de1db80aeea = $(`<div id="html_182b816dd5e1271b7df88de1db80aeea" style="width: 100.0%; height: 100.0%;">             <b>Lane County</b><br>             Winter Delta-T: 73°F<br>             Summer Delta-T: 60°F<br>             Seasonal Variation: 13°F<br>             Winter/Summer Ratio: 1.22x             </div>`)[0];
+                popup_8b7daac19b0060c7f89c48c119c88250.setContent(html_182b816dd5e1271b7df88de1db80aeea);
+            
+        
+
+        circle_marker_1b9ea8a4998a39d3ee2eb1b5d38be447.bindPopup(popup_8b7daac19b0060c7f89c48c119c88250)
+        ;
+
+        
+    
+    
+            var circle_marker_1304181f84dbf8cad8ac74ffb87dc4bd = L.circleMarker(
+                [43.3, -123.3],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_e5a973096d8d07225bbc0c3cc1988fcb);
+        
+    
+        var popup_97e7e2e9177b47011c9811be99bddd66 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3bd48b6c75d3db4516f5ca70dd3ea7ec = $(`<div id="html_3bd48b6c75d3db4516f5ca70dd3ea7ec" style="width: 100.0%; height: 100.0%;">             <b>Douglas County</b><br>             Winter Delta-T: 72°F<br>             Summer Delta-T: 59°F<br>             Seasonal Variation: 13°F<br>             Winter/Summer Ratio: 1.22x             </div>`)[0];
+                popup_97e7e2e9177b47011c9811be99bddd66.setContent(html_3bd48b6c75d3db4516f5ca70dd3ea7ec);
+            
+        
+
+        circle_marker_1304181f84dbf8cad8ac74ffb87dc4bd.bindPopup(popup_97e7e2e9177b47011c9811be99bddd66)
+        ;
+
+        
+    
+    
+            var circle_marker_0decd0f262c22b71355cd795540be946 = L.circleMarker(
+                [43.4, -124.2],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_e5a973096d8d07225bbc0c3cc1988fcb);
+        
+    
+        var popup_643e6e93bd5445b7056d42a76732800a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d073f6da379686b557bfe0d4ef9df161 = $(`<div id="html_d073f6da379686b557bfe0d4ef9df161" style="width: 100.0%; height: 100.0%;">             <b>Coos County</b><br>             Winter Delta-T: 71°F<br>             Summer Delta-T: 58°F<br>             Seasonal Variation: 13°F<br>             Winter/Summer Ratio: 1.22x             </div>`)[0];
+                popup_643e6e93bd5445b7056d42a76732800a.setContent(html_d073f6da379686b557bfe0d4ef9df161);
+            
+        
+
+        circle_marker_0decd0f262c22b71355cd795540be946.bindPopup(popup_643e6e93bd5445b7056d42a76732800a)
+        ;
+
+        
+    
+    
+            var circle_marker_0fdc4d2fd5325bbe6d6963c02911a251 = L.circleMarker(
+                [44.6, -124.1],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_e5a973096d8d07225bbc0c3cc1988fcb);
+        
+    
+        var popup_4c3abd9ed211d0a7cfc5701de29d9cc3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d620b59b77d03cecc3a2d0e1099152c1 = $(`<div id="html_d620b59b77d03cecc3a2d0e1099152c1" style="width: 100.0%; height: 100.0%;">             <b>Lincoln County</b><br>             Winter Delta-T: 72°F<br>             Summer Delta-T: 59°F<br>             Seasonal Variation: 13°F<br>             Winter/Summer Ratio: 1.22x             </div>`)[0];
+                popup_4c3abd9ed211d0a7cfc5701de29d9cc3.setContent(html_d620b59b77d03cecc3a2d0e1099152c1);
+            
+        
+
+        circle_marker_0fdc4d2fd5325bbe6d6963c02911a251.bindPopup(popup_4c3abd9ed211d0a7cfc5701de29d9cc3)
+        ;
+
+        
+    
+    
+            var circle_marker_90d2694fe9c7816259dab0663a168346 = L.circleMarker(
+                [44.7, -121.3],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_e5a973096d8d07225bbc0c3cc1988fcb);
+        
+    
+        var popup_bbea0395cf8db6c1de5f06fe14baf1f5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_32cd58ce671411fe49b1aea00e374de6 = $(`<div id="html_32cd58ce671411fe49b1aea00e374de6" style="width: 100.0%; height: 100.0%;">             <b>Benton County</b><br>             Winter Delta-T: 73°F<br>             Summer Delta-T: 60°F<br>             Seasonal Variation: 13°F<br>             Winter/Summer Ratio: 1.22x             </div>`)[0];
+                popup_bbea0395cf8db6c1de5f06fe14baf1f5.setContent(html_32cd58ce671411fe49b1aea00e374de6);
+            
+        
+
+        circle_marker_90d2694fe9c7816259dab0663a168346.bindPopup(popup_bbea0395cf8db6c1de5f06fe14baf1f5)
+        ;
+
+        
+    
+    
+            var circle_marker_efd6780ca2d467655589f8b25daae22b = L.circleMarker(
+                [46.2, -123.9],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_e5a973096d8d07225bbc0c3cc1988fcb);
+        
+    
+        var popup_661815898e19b76921baa11fc7d03577 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c8988d9a403fe16254d78b8ca499feab = $(`<div id="html_c8988d9a403fe16254d78b8ca499feab" style="width: 100.0%; height: 100.0%;">             <b>Clatsop County</b><br>             Winter Delta-T: 73°F<br>             Summer Delta-T: 60°F<br>             Seasonal Variation: 13°F<br>             Winter/Summer Ratio: 1.22x             </div>`)[0];
+                popup_661815898e19b76921baa11fc7d03577.setContent(html_c8988d9a403fe16254d78b8ca499feab);
+            
+        
+
+        circle_marker_efd6780ca2d467655589f8b25daae22b.bindPopup(popup_661815898e19b76921baa11fc7d03577)
+        ;
+
+        
+    
+    
+            var circle_marker_c1a14a6e4adfdabee766dd3be1cb462b = L.circleMarker(
+                [46.0, -123.4],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_e5a973096d8d07225bbc0c3cc1988fcb);
+        
+    
+        var popup_28052441f09e0610936ea65e6adf1824 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_49406d903da82e5b5e0800a1ad7e3aef = $(`<div id="html_49406d903da82e5b5e0800a1ad7e3aef" style="width: 100.0%; height: 100.0%;">             <b>Columbia County</b><br>             Winter Delta-T: 74°F<br>             Summer Delta-T: 61°F<br>             Seasonal Variation: 13°F<br>             Winter/Summer Ratio: 1.21x             </div>`)[0];
+                popup_28052441f09e0610936ea65e6adf1824.setContent(html_49406d903da82e5b5e0800a1ad7e3aef);
+            
+        
+
+        circle_marker_c1a14a6e4adfdabee766dd3be1cb462b.bindPopup(popup_28052441f09e0610936ea65e6adf1824)
+        ;
+
+        
+    
+    
+            var circle_marker_ae0006d4510e46f03c271b01d997b4ae = L.circleMarker(
+                [45.7, -122.6],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_e5a973096d8d07225bbc0c3cc1988fcb);
+        
+    
+        var popup_75bd07077efc779a4c6824bd6517ccf2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3f8e02b930fff35ad7544808ed4fb8d6 = $(`<div id="html_3f8e02b930fff35ad7544808ed4fb8d6" style="width: 100.0%; height: 100.0%;">             <b>Clark County</b><br>             Winter Delta-T: 75°F<br>             Summer Delta-T: 62°F<br>             Seasonal Variation: 13°F<br>             Winter/Summer Ratio: 1.21x             </div>`)[0];
+                popup_75bd07077efc779a4c6824bd6517ccf2.setContent(html_3f8e02b930fff35ad7544808ed4fb8d6);
+            
+        
+
+        circle_marker_ae0006d4510e46f03c271b01d997b4ae.bindPopup(popup_75bd07077efc779a4c6824bd6517ccf2)
+        ;
+
+        
+    
+    
+            var circle_marker_8ac90d575c68beac0c78ecddedb645c0 = L.circleMarker(
+                [45.8, -121.8],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_e5a973096d8d07225bbc0c3cc1988fcb);
+        
+    
+        var popup_1a308e508b7acfc66835345cc4af8acf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d45709c2ca553fc924bc2850035f5378 = $(`<div id="html_d45709c2ca553fc924bc2850035f5378" style="width: 100.0%; height: 100.0%;">             <b>Skamania County</b><br>             Winter Delta-T: 72°F<br>             Summer Delta-T: 59°F<br>             Seasonal Variation: 13°F<br>             Winter/Summer Ratio: 1.22x             </div>`)[0];
+                popup_1a308e508b7acfc66835345cc4af8acf.setContent(html_d45709c2ca553fc924bc2850035f5378);
+            
+        
+
+        circle_marker_8ac90d575c68beac0c78ecddedb645c0.bindPopup(popup_1a308e508b7acfc66835345cc4af8acf)
+        ;
+
+        
+    
+</script>
+</html>

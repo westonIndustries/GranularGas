@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3c533ad223155a822ab6d48abb48887d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+        <div style="position: fixed; 
+                    bottom: 50px; right: 50px; width: 200px; height: 160px; 
+                    background-color: white; border:2px solid grey; z-index:9999; 
+                    font-size:14px; padding: 10px">
+        <p style="margin: 0;"><b>Station Delta-T</b></p>
+        <p style="margin: 5px 0;"><i class="fa fa-circle" style="color:red"></i> High (≥68°F)</p>
+        <p style="margin: 5px 0;"><i class="fa fa-circle" style="color:orange"></i> Med-High (67°F)</p>
+        <p style="margin: 5px 0;"><i class="fa fa-circle" style="color:yellow"></i> Medium (66°F)</p>
+        <p style="margin: 5px 0;"><i class="fa fa-circle" style="color:blue"></i> Low (<66°F)</p>
+        </div>
+        
+    
+            <div class="folium-map" id="map_3c533ad223155a822ab6d48abb48887d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3c533ad223155a822ab6d48abb48887d = L.map(
+                "map_3c533ad223155a822ab6d48abb48887d",
+                {
+                    center: [45.0, -122.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5fc18496b2946576c09c5e032067bd1d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5fc18496b2946576c09c5e032067bd1d.addTo(map_3c533ad223155a822ab6d48abb48887d);
+        
+    
+            var circle_marker_85a39bccc92d0b89d9306ff2d21eae98 = L.circleMarker(
+                [45.5891, -122.5975],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_3c533ad223155a822ab6d48abb48887d);
+        
+    
+        var popup_4fb53cedc8aac68550464d4ec94b7fac = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8d3516295cdd8c0e6d3c8ba395371119 = $(`<div id="html_8d3516295cdd8c0e6d3c8ba395371119" style="width: 100.0%; height: 100.0%;">             <b>Portland</b><br>             ICAO: KPDX<br>             Avg Delta-T: 68°F<br>             Est. WH Demand: ~54 therms/customer/year             </div>`)[0];
+                popup_4fb53cedc8aac68550464d4ec94b7fac.setContent(html_8d3516295cdd8c0e6d3c8ba395371119);
+            
+        
+
+        circle_marker_85a39bccc92d0b89d9306ff2d21eae98.bindPopup(popup_4fb53cedc8aac68550464d4ec94b7fac)
+        ;
+
+        
+    
+    
+            var circle_marker_ec497da620ae04f620fefd05bd47d675 = L.circleMarker(
+                [44.1239, -123.2171],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_3c533ad223155a822ab6d48abb48887d);
+        
+    
+        var popup_5ff76c1fa4fcf1224664a699a7a3ee9d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ca6dc9661acf743b266b71fd8ade437a = $(`<div id="html_ca6dc9661acf743b266b71fd8ade437a" style="width: 100.0%; height: 100.0%;">             <b>Eugene</b><br>             ICAO: KEUG<br>             Avg Delta-T: 66°F<br>             Est. WH Demand: ~53 therms/customer/year             </div>`)[0];
+                popup_5ff76c1fa4fcf1224664a699a7a3ee9d.setContent(html_ca6dc9661acf743b266b71fd8ade437a);
+            
+        
+
+        circle_marker_ec497da620ae04f620fefd05bd47d675.bindPopup(popup_5ff76c1fa4fcf1224664a699a7a3ee9d)
+        ;
+
+        
+    
+    
+            var circle_marker_2804c7cf69654b74d21e37486c076ea9 = L.circleMarker(
+                [44.9209, -123.0065],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_3c533ad223155a822ab6d48abb48887d);
+        
+    
+        var popup_0d22f01ec0a3747fedfebc47a9a9d31a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a33910b82d5f46ee1501ad2628510f2f = $(`<div id="html_a33910b82d5f46ee1501ad2628510f2f" style="width: 100.0%; height: 100.0%;">             <b>Salem</b><br>             ICAO: KSLE<br>             Avg Delta-T: 68°F<br>             Est. WH Demand: ~54 therms/customer/year             </div>`)[0];
+                popup_0d22f01ec0a3747fedfebc47a9a9d31a.setContent(html_a33910b82d5f46ee1501ad2628510f2f);
+            
+        
+
+        circle_marker_2804c7cf69654b74d21e37486c076ea9.bindPopup(popup_0d22f01ec0a3747fedfebc47a9a9d31a)
+        ;
+
+        
+    
+    
+            var circle_marker_03baeb8b01a133df0733dccda1f6b647 = L.circleMarker(
+                [46.1583, -123.8783],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_3c533ad223155a822ab6d48abb48887d);
+        
+    
+        var popup_f507b7aeb02a35ec06e27bfdf25b7459 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7244a359dd036297c55d99b78d4f0bf4 = $(`<div id="html_7244a359dd036297c55d99b78d4f0bf4" style="width: 100.0%; height: 100.0%;">             <b>Astoria</b><br>             ICAO: KAST<br>             Avg Delta-T: 66°F<br>             Est. WH Demand: ~53 therms/customer/year             </div>`)[0];
+                popup_f507b7aeb02a35ec06e27bfdf25b7459.setContent(html_7244a359dd036297c55d99b78d4f0bf4);
+            
+        
+
+        circle_marker_03baeb8b01a133df0733dccda1f6b647.bindPopup(popup_f507b7aeb02a35ec06e27bfdf25b7459)
+        ;
+
+        
+    
+    
+            var circle_marker_e8cd0c9f42571390ca0f62742ec06b35 = L.circleMarker(
+                [45.6089, -121.3089],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_3c533ad223155a822ab6d48abb48887d);
+        
+    
+        var popup_585a07da631dbec3f35e7d751a3e3aea = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d3dfdc7932a61fa0efa73de3d3a0dc8d = $(`<div id="html_d3dfdc7932a61fa0efa73de3d3a0dc8d" style="width: 100.0%; height: 100.0%;">             <b>The Dalles</b><br>             ICAO: KDLS<br>             Avg Delta-T: 65°F<br>             Est. WH Demand: ~52 therms/customer/year             </div>`)[0];
+                popup_585a07da631dbec3f35e7d751a3e3aea.setContent(html_d3dfdc7932a61fa0efa73de3d3a0dc8d);
+            
+        
+
+        circle_marker_e8cd0c9f42571390ca0f62742ec06b35.bindPopup(popup_585a07da631dbec3f35e7d751a3e3aea)
+        ;
+
+        
+    
+    
+            var circle_marker_df07bc5318056c846f2dad2e3c9ed59e = L.circleMarker(
+                [43.4089, -124.2539],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_3c533ad223155a822ab6d48abb48887d);
+        
+    
+        var popup_88db029097344190dcded82e37274db0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e32a6b7219434a6316e8463c67e21c06 = $(`<div id="html_e32a6b7219434a6316e8463c67e21c06" style="width: 100.0%; height: 100.0%;">             <b>Coos Bay</b><br>             ICAO: KOTH<br>             Avg Delta-T: 64°F<br>             Est. WH Demand: ~51 therms/customer/year             </div>`)[0];
+                popup_88db029097344190dcded82e37274db0.setContent(html_e32a6b7219434a6316e8463c67e21c06);
+            
+        
+
+        circle_marker_df07bc5318056c846f2dad2e3c9ed59e.bindPopup(popup_88db029097344190dcded82e37274db0)
+        ;
+
+        
+    
+    
+            var circle_marker_dfc2bb5041d6d04c8fdd4eda44c846b4 = L.circleMarker(
+                [44.5847, -124.0503],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_3c533ad223155a822ab6d48abb48887d);
+        
+    
+        var popup_fa7e016edfff8c5f483ede819beab2e2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_41a203461bab30787951c28b745776d5 = $(`<div id="html_41a203461bab30787951c28b745776d5" style="width: 100.0%; height: 100.0%;">             <b>Newport</b><br>             ICAO: KONP<br>             Avg Delta-T: 65°F<br>             Est. WH Demand: ~52 therms/customer/year             </div>`)[0];
+                popup_fa7e016edfff8c5f483ede819beab2e2.setContent(html_41a203461bab30787951c28b745776d5);
+            
+        
+
+        circle_marker_dfc2bb5041d6d04c8fdd4eda44c846b4.bindPopup(popup_fa7e016edfff8c5f483ede819beab2e2)
+        ;
+
+        
+    
+    
+            var circle_marker_6fa17039a82dc083c71b5a6496fc535e = L.circleMarker(
+                [44.4915, -123.2803],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_3c533ad223155a822ab6d48abb48887d);
+        
+    
+        var popup_5cd4705c61be060a9e02ea63bb54dd40 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1f0af7c1fd2d1ec61d565a3bc7b510fb = $(`<div id="html_1f0af7c1fd2d1ec61d565a3bc7b510fb" style="width: 100.0%; height: 100.0%;">             <b>Corvallis</b><br>             ICAO: KCVO<br>             Avg Delta-T: 67°F<br>             Est. WH Demand: ~54 therms/customer/year             </div>`)[0];
+                popup_5cd4705c61be060a9e02ea63bb54dd40.setContent(html_1f0af7c1fd2d1ec61d565a3bc7b510fb);
+            
+        
+
+        circle_marker_6fa17039a82dc083c71b5a6496fc535e.bindPopup(popup_5cd4705c61be060a9e02ea63bb54dd40)
+        ;
+
+        
+    
+    
+            var circle_marker_669c5abbdf67feab0948f8bc8222dcb6 = L.circleMarker(
+                [45.5411, -122.9897],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_3c533ad223155a822ab6d48abb48887d);
+        
+    
+        var popup_27e327e55d286175013a7cf8c7e691d4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_92c7368af64fb6555bd8479e3a2ac1ac = $(`<div id="html_92c7368af64fb6555bd8479e3a2ac1ac" style="width: 100.0%; height: 100.0%;">             <b>Hillsboro</b><br>             ICAO: KHIO<br>             Avg Delta-T: 68°F<br>             Est. WH Demand: ~54 therms/customer/year             </div>`)[0];
+                popup_27e327e55d286175013a7cf8c7e691d4.setContent(html_92c7368af64fb6555bd8479e3a2ac1ac);
+            
+        
+
+        circle_marker_669c5abbdf67feab0948f8bc8222dcb6.bindPopup(popup_27e327e55d286175013a7cf8c7e691d4)
+        ;
+
+        
+    
+    
+            var circle_marker_0790df4fcbf5352dbb1d4bbbf98682d2 = L.circleMarker(
+                [45.555, -122.2742],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_3c533ad223155a822ab6d48abb48887d);
+        
+    
+        var popup_96bfc0f7e5bb484bc7031d6b33c5b2d8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f3940904548970f8e06c81dd8c116faa = $(`<div id="html_f3940904548970f8e06c81dd8c116faa" style="width: 100.0%; height: 100.0%;">             <b>Troutdale</b><br>             ICAO: KTTD<br>             Avg Delta-T: 68°F<br>             Est. WH Demand: ~54 therms/customer/year             </div>`)[0];
+                popup_96bfc0f7e5bb484bc7031d6b33c5b2d8.setContent(html_f3940904548970f8e06c81dd8c116faa);
+            
+        
+
+        circle_marker_0790df4fcbf5352dbb1d4bbbf98682d2.bindPopup(popup_96bfc0f7e5bb484bc7031d6b33c5b2d8)
+        ;
+
+        
+    
+    
+            var circle_marker_b622e4ad77d667d7b75c7aaee9d7dfa1 = L.circleMarker(
+                [45.6872, -122.6611],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_3c533ad223155a822ab6d48abb48887d);
+        
+    
+        var popup_aad69b51bc96bab3900b8ccd3db33eca = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5673dc0ecb06116673af42ce31808aef = $(`<div id="html_5673dc0ecb06116673af42ce31808aef" style="width: 100.0%; height: 100.0%;">             <b>Vancouver</b><br>             ICAO: KVUO<br>             Avg Delta-T: 66°F<br>             Est. WH Demand: ~53 therms/customer/year             </div>`)[0];
+                popup_aad69b51bc96bab3900b8ccd3db33eca.setContent(html_5673dc0ecb06116673af42ce31808aef);
+            
+        
+
+        circle_marker_b622e4ad77d667d7b75c7aaee9d7dfa1.bindPopup(popup_aad69b51bc96bab3900b8ccd3db33eca)
+        ;
+
+        
+    
+</script>
+</html>

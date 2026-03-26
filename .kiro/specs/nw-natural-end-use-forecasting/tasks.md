@@ -115,12 +115,24 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Simulate new construction additions proportional to existing segment distribution
     - _Requirements: 2.3, 6.1_
 
-  - [ ] 4.3 Write property test for housing stock projection
+  - [x] 4.3 Write property test for housing stock projection with visualizations
     - **Property 4: Projected total_units equals baseline total_units × (1 + growth_rate)^(target_year - base_year), within rounding tolerance**
     - **Validates: Requirements 2.3, 6.3**
+    - Generate comparison graphs:
+      - Line graph: Baseline vs projected total units over time
+      - Bar chart: Segment distribution comparison (baseline vs projected)
+      - Bar chart: District distribution comparison (baseline vs projected)
+    - Generate growth rate analysis graph:
+      - Line graph showing projected vs expected growth rates by year
+    - Generate service territory map:
+      - Choropleth map of NW Natural service territory by county
+      - Color-coded by projected housing growth rate (low/medium/high)
+      - Include district boundaries and weather station locations
+    - All visualizations saved to `output/housing_stock_projections/` directory
+    - Test verifies graphs are created, files exist, and contain expected data
 
-- [ ] 5. Implement equipment module
-  - [ ] 5.1 Create `src/equipment.py` with `EquipmentProfile` dataclass and inventory builder
+- [x] 5. Implement equipment module
+  - [x] 5.1 Create `src/equipment.py` with `EquipmentProfile` dataclass and inventory builder
     - Define `EquipmentProfile` dataclass with fields: equipment_type_code, end_use, efficiency, install_year, useful_life, fuel_type
     - Define `WEIBULL_BETA` dictionary with default shape parameters by end-use category (space_heating/water_heating: 3.0, appliances: 2.5)
     - Implement `weibull_survival(t, eta, beta)` — compute S(t) = exp(-(t/eta)^beta)
@@ -129,7 +141,7 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Implement `build_equipment_inventory(premise_equipment)` — derive efficiency, install_year, useful_life, fuel_type from data and config defaults; use ASHRAE service life for eta derivation
     - _Requirements: 3.1, 3.2_
 
-  - [ ] 5.2 Implement `apply_replacements` for equipment transitions
+  - [x] 5.2 Implement `apply_replacements` for equipment transitions
     - For each equipment unit, compute replacement probability using Weibull survival model based on age and end-use-specific eta/beta parameters
     - Use probabilistic replacement (compare replacement_probability against a threshold or random draw) rather than deterministic age cutoff
     - Replace selected units with new equipment based on scenario technology adoption rates
@@ -137,17 +149,43 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Apply efficiency improvements from scenario config
     - _Requirements: 3.3, 3.4, 6.1_
 
-  - [ ] 5.3 Write property test for equipment replacement logic
+  - [x] 5.3 Write property test for equipment replacement logic with visualizations
     - **Property 5: Weibull survival function is monotonically decreasing — S(t) <= S(t-1) for all t > 0, and S(0) = 1.0**
     - **Property 5b: replacement_probability is always in [0, 1] for valid inputs**
     - **Validates: Requirements 3.3**
+    - Generate comparison graphs:
+      - Line graph: Weibull survival curves by end-use category (space_heating, water_heating, appliances)
+      - Line graph: Replacement probability by equipment age for each end-use category
+      - Scatter plot: Equipment age distribution in baseline stock (histogram with overlay of replacement probability curve)
+      - Line graph: Cumulative replacement rate over equipment lifetime by end-use category
+    - Generate equipment transition visualizations:
+      - Stacked bar chart: Equipment fuel type distribution before and after replacements (gas vs electric)
+      - Stacked bar chart: Equipment efficiency distribution before and after replacements (by efficiency tier)
+      - Sankey diagram: Equipment transitions showing gas→electric, old→new efficiency paths
+    - All visualizations saved to `output/equipment_replacement/` directory
+    - Test verifies graphs are created, files exist, and contain expected data
 
-  - [ ] 5.4 Write property test for fuel switching conservation
+  - [x] 5.4 Write property test for fuel switching conservation with visualizations
     - **Property 6: Total equipment count before and after apply_replacements is equal (replacements don't create or destroy units)**
     - **Validates: Requirements 3.3, 3.4**
+    - Generate conservation verification graphs:
+      - Line graph: Total equipment count before and after replacements by year (verify conservation)
+      - Pie chart: Equipment count by fuel type before and after replacements (gas vs electric split)
+      - Stacked area chart: Equipment count by end-use category over time (before and after)
+      - Bar chart: Fuel switching volume by end-use category (gas units converted to electric)
+    - Generate geographic visualizations:
+      - Choropleth map: Electrification rate by district (% of gas equipment converted to electric)
+      - Choropleth map: Equipment replacement rate by district (% of equipment replaced)
+      - Scatter plot: District-level equipment count before vs after replacements (verify 1:1 line)
+    - Generate detailed transition analysis:
+      - Waterfall chart: Equipment count changes by transition type (gas→electric, efficiency upgrade, no change)
+      - Heatmap: Fuel switching rates by end-use category and efficiency tier
+      - Box plot: Equipment age distribution before and after replacements (by end-use)
+    - All visualizations saved to `output/fuel_switching_conservation/` directory
+    - Test verifies graphs are created, files exist, and contain expected data
 
-- [ ] 6. Implement weather processing module
-  - [ ] 6.1 Create `src/weather.py` with HDD/CDD computation and station mapping
+- [x] 6. Implement weather processing module
+  - [x] 6.1 Create `src/weather.py` with HDD/CDD computation and station mapping
     - Implement `compute_hdd(daily_temps, base_temp=65.0)` — HDD = max(0, base_temp - daily_avg)
     - Implement `compute_cdd(daily_temps, base_temp=65.0)` — CDD = max(0, daily_avg - base_temp)
     - Implement `compute_annual_hdd(weather_df, site_id, year)` — sum daily HDD for a station/year
@@ -155,13 +193,66 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Implement `assign_weather_station(district_code)` — lookup from DISTRICT_WEATHER_MAP
     - _Requirements: 4.1, 7.2_
 
-  - [ ]* 6.2 Write property test for HDD computation
+  - [x] 6.2 Write property test for HDD computation with visualizations
     - **Property 7: HDD values are always non-negative, and HDD + CDD + abs(daily_avg - base_temp) relationship holds: for any temperature, exactly one of HDD or CDD is positive (or both zero when temp equals base)**
     - **Validates: Requirements 4.1, 4.2**
+    - Generate weather station visualizations:
+      - OpenStreetMap-based map showing all 11 weather stations classified by source (NW Natural, NOAA, proxy)
+      - Color-coded markers: NW Natural stations (blue), NOAA stations (green), proxy stations (orange)
+      - Include station names, ICAO codes, and GHCND IDs in popup tooltips
+      - Show service territory boundaries and district assignments
+    - Generate HDD/CDD analysis graphs:
+      - Line graph: Daily HDD and CDD by day of year for a representative station (KPDX)
+      - Stacked area chart: Cumulative HDD and CDD over the year
+      - Heatmap: Monthly average HDD by station (rows=stations, columns=months)
+      - Heatmap: Monthly average CDD by station (rows=stations, columns=months)
+      - Box plot: Annual HDD distribution across all 11 stations (2015-2025)
+      - Box plot: Annual CDD distribution across all 11 stations (2015-2025)
+    - Generate water temperature analysis graphs:
+      - Line graph: Daily Bull Run water temperature by day of year (2008-2025 overlay)
+      - Seasonal pattern: Average monthly water temperature with min/max bands
+      - Scatter plot: Water temperature vs. air temperature (KPDX) with regression line
+    - Generate animated moving map display:
+      - Interactive animated map showing HDD/CDD progression throughout the year
+      - Monthly snapshots with color-coded weather stations (intensity = HDD/CDD magnitude)
+      - Play/pause controls to animate through 12 months
+      - Slider to jump to specific month
+      - Legend showing HDD/CDD scale and color mapping
+      - Station markers update color intensity as HDD/CDD changes by month
+      - Popup shows current month's HDD/CDD value for each station
+    - All visualizations saved to `output/weather_analysis/` directory
+    - Test verifies graphs are created, files exist, and contain expected data
 
-  - [ ]* 6.3 Write property test for water heating delta
+  - [x] 6.3 Write property test for water heating delta with visualizations
     - **Property 8: Water heating delta_t is always positive when cold water temp < target_temp, and equals target_temp - avg_cold_water_temp**
     - **Validates: Requirements 4.1, 4.2**
+    - Generate water heating demand analysis graphs:
+      - Line graph: Daily water heating delta-T by day of year (2008-2025 overlay with average)
+      - Seasonal pattern: Average monthly delta-T with min/max confidence bands
+      - Scatter plot: Water temperature vs. air temperature (KPDX) with regression line and R² value
+      - Heatmap: Monthly average delta-T by weather station (rows=stations, columns=months)
+      - Box plot: Annual delta-T distribution across all 11 stations (2015-2025)
+      - Violin plot: Distribution of daily delta-T values by month (seasonal variation)
+    - Generate water heating demand maps with OpenStreetMap background:
+      - Choropleth map: Average annual water heating delta-T by district (color intensity = delta-T magnitude)
+      - Choropleth map: Seasonal variation in delta-T by district (winter vs. summer comparison)
+      - Marker map: Weather stations color-coded by average delta-T (blue=low, red=high)
+      - Heatmap overlay: District-level water heating demand intensity
+      - Animated moving map: Monthly delta-T progression throughout the year
+        * Interactive layer control to select month (January-December)
+        * Color-coded markers showing delta-T intensity by month
+        * Marker colors change from blue (low) to red (high) based on delta-T value
+        * Opacity indicates delta-T magnitude
+        * Popup shows station name, ICAO code, current month, delta-T value, and WH demand estimate
+        * Title and legend display delta-T scale and color mapping
+        * OpenStreetMap background with zoom and pan controls
+    - Generate water heating energy demand graphs:
+      - Line graph: Estimated annual water heating therms per customer by station (assuming 64 gal/day usage)
+      - Bar chart: Comparison of water heating demand across all 11 stations
+      - Stacked bar chart: Water heating demand by district (baseline vs. high-efficiency scenario)
+      - Time series: Monthly water heating demand pattern (showing seasonal peaks)
+    - All visualizations saved to `output/water_heating_analysis/` directory
+    - Test verifies graphs are created, files exist, and contain expected data
 
 - [ ] 7. Checkpoint — Verify core model components
   - Ensure all tests pass, ask the user if questions arise.
@@ -181,13 +272,100 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Maintain separation between end uses to prevent double-counting
     - _Requirements: 1.4, 4.2, 4.3, 4.4, 5.4_
 
-  - [ ]* 8.3 Write property test for simulation non-negativity
+  - [ ] 8.3 Write property test for simulation non-negativity with visualizations
     - **Property 9: All simulated annual_therms values are non-negative**
     - **Validates: Requirements 4.2**
+    - Generate end-use consumption analysis graphs:
+      - Histogram: Distribution of annual therms by end-use category (showing non-negativity)
+      - Box plot: Annual therms by end-use category (median, quartiles, outliers)
+      - Violin plot: Distribution of annual therms by end-use and building type (SF vs MF)
+      - Line graph: Cumulative distribution function (CDF) of annual therms by end-use
+      - Stacked bar chart: Average annual therms by end-use category and vintage era
+      - Scatter plot: Annual therms vs. conditioned area by end-use (with regression line)
+    - Generate premise-level consumption analysis graphs:
+      - Histogram: Distribution of total annual therms per premise (all end-uses combined)
+      - Box plot: Total annual therms by customer segment (RESSF, RESMF, mobile home)
+      - Box plot: Total annual therms by district (showing geographic variation)
+      - Scatter plot: Total annual therms vs. conditioned area (with regression line)
+      - Scatter plot: Total annual therms vs. equipment age (by end-use category)
+    - Generate consumption validation graphs:
+      - Line graph: Average annual therms per customer by end-use (baseline vs. scenario comparison)
+      - Stacked area chart: End-use contribution to total demand over time (showing composition)
+      - Waterfall chart: Breakdown of total demand by end-use category (showing contribution magnitude)
+      - Heatmap: Average annual therms by end-use and vintage era (rows=end-uses, columns=eras)
+    - Generate geographic consumption maps with OpenStreetMap background:
+      - Choropleth map: Average annual therms per customer by district (color intensity = consumption)
+      - Choropleth map: End-use composition by district (stacked color layers for each end-use)
+      - Marker map: Premises color-coded by total annual therms (blue=low, red=high consumption)
+      - Heatmap overlay: District-level consumption intensity with zoom/pan controls
+      - Animated moving map: Monthly consumption progression throughout the year
+        * Interactive layer control to select month (January-December)
+        * Color-coded markers showing consumption intensity by month
+        * Marker colors change from blue (low) to red (high) based on consumption value
+        * Opacity indicates consumption magnitude
+        * Popup shows district name, average therms, end-use breakdown, and consumption tier
+        * Title and legend display consumption scale and color mapping
+        * OpenStreetMap background with zoom and pan controls
+    - Generate end-use comparison maps:
+      - Multi-panel choropleth maps: One map per end-use category showing geographic distribution
+      - Difference map: Comparison of space heating vs. water heating demand by district
+      - Ratio map: Space heating as percentage of total demand by district
+    - All visualizations saved to `output/simulation_non_negativity/` directory
+    - Test verifies:
+      - All annual_therms values are >= 0 (non-negativity property)
+      - No NaN or infinite values in results
+      - Graphs are created and files exist
+      - Data in visualizations matches simulation results
+      - Geographic maps display all districts with valid coordinates
 
-  - [ ]* 8.4 Write property test for efficiency impact
+  - [ ] 8.4 Write property test for efficiency impact with visualizations
     - **Property 10: For identical premises and weather, higher equipment efficiency produces lower or equal therms consumption**
     - **Validates: Requirements 4.2, 3.2**
+    - Generate efficiency impact analysis graphs:
+      - Line graph: Annual therms vs. equipment efficiency (by end-use category, showing monotonic decrease)
+      - Scatter plot: Consumption reduction vs. efficiency improvement (% change in therms per % efficiency gain)
+      - Box plot: Annual therms distribution by efficiency tier (low/medium/high) for each end-use
+      - Stacked bar chart: Average annual therms by end-use and efficiency tier (showing efficiency benefit)
+      - Line graph: Cumulative savings from efficiency improvements (baseline vs. high-efficiency scenario)
+      - Heatmap: Annual therms by end-use and efficiency rating (rows=end-uses, columns=efficiency tiers)
+    - Generate efficiency comparison graphs:
+      - Waterfall chart: Consumption reduction breakdown by end-use (showing which end-uses benefit most)
+      - Violin plot: Distribution of consumption by efficiency tier and building type (SF vs MF)
+      - Scatter plot: Equipment age vs. efficiency rating (showing correlation with vintage)
+      - Line graph: Average therms per customer by vintage era and efficiency tier
+      - Bar chart: Efficiency improvement potential by end-use category (max savings possible)
+    - Generate efficiency scenario comparison graphs:
+      - Line graph: Total annual demand under baseline vs. high-efficiency scenario (by year)
+      - Stacked area chart: Demand composition by efficiency tier over time (showing transition)
+      - Comparison chart: Baseline vs. efficient equipment consumption by end-use (side-by-side bars)
+      - Percentage change chart: Consumption reduction (%) by end-use when upgrading to high-efficiency
+    - Generate geographic efficiency impact maps with OpenStreetMap background:
+      - Choropleth map: Average equipment efficiency rating by district (color intensity = efficiency level)
+      - Choropleth map: Potential therms savings by district (color intensity = savings magnitude)
+      - Difference map: Consumption difference between low-efficiency and high-efficiency scenarios by district
+      - Marker map: Districts color-coded by average efficiency improvement potential (blue=low, red=high)
+      - Heatmap overlay: District-level efficiency distribution with zoom/pan controls
+      - Animated moving map: Efficiency improvement progression by end-use category
+        * Interactive layer control to select end-use (space heating, water heating, cooking, drying, etc.)
+        * Color-coded markers showing efficiency level by district for selected end-use
+        * Marker colors change from blue (low efficiency) to green (high efficiency)
+        * Opacity indicates efficiency rating magnitude
+        * Popup shows district name, current efficiency, potential efficiency, and estimated savings
+        * Title and legend display efficiency scale and color mapping
+        * OpenStreetMap background with zoom and pan controls
+    - Generate efficiency distribution maps:
+      - Multi-panel choropleth maps: One map per end-use category showing efficiency distribution
+      - Efficiency gap map: Comparison of current vs. potential efficiency by district
+      - Savings potential map: Estimated annual therms savings if all equipment upgraded to high-efficiency
+    - All visualizations saved to `output/efficiency_impact/` directory
+    - Test verifies:
+      - Efficiency monotonicity: higher efficiency always produces lower or equal consumption
+      - No negative efficiency values or consumption values
+      - Efficiency improvements are consistent across identical premises
+      - Graphs are created and files exist
+      - Data in visualizations matches simulation results
+      - Geographic maps display all districts with valid coordinates
+      - Savings calculations are accurate and non-negative
 
 - [ ] 9. Implement aggregation and output module
   - [ ] 9.1 Create `src/aggregation.py` with rollup and export functions

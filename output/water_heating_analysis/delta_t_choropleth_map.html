@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8bfc41f2eaf639073e2a4ef046e18126 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+        <div style="position: fixed; 
+                    bottom: 50px; right: 50px; width: 220px; height: 180px; 
+                    background-color: white; border:2px solid grey; z-index:9999; 
+                    font-size:14px; padding: 10px">
+        <p style="margin: 0;"><b>Water Heating Delta-T</b></p>
+        <p style="margin: 5px 0;"><i class="fa fa-circle" style="color:blue"></i> Low (64-66°F)</p>
+        <p style="margin: 5px 0;"><i class="fa fa-circle" style="color:orange"></i> Medium (67°F)</p>
+        <p style="margin: 5px 0;"><i class="fa fa-circle" style="color:red"></i> High (68°F)</p>
+        <p style="margin: 10px 0; font-size:12px;">Higher delta-T = More heating needed</p>
+        </div>
+        
+    
+            <div class="folium-map" id="map_8bfc41f2eaf639073e2a4ef046e18126" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8bfc41f2eaf639073e2a4ef046e18126 = L.map(
+                "map_8bfc41f2eaf639073e2a4ef046e18126",
+                {
+                    center: [45.0, -122.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ca20b61d5423700509f560c8a6cfe3ed = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ca20b61d5423700509f560c8a6cfe3ed.addTo(map_8bfc41f2eaf639073e2a4ef046e18126);
+        
+    
+            var circle_marker_339307f5c3f0237758907dfbcbe07ee8 = L.circleMarker(
+                [45.5, -122.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 2}
+            ).addTo(map_8bfc41f2eaf639073e2a4ef046e18126);
+        
+    
+        var popup_1c76dae2c6be2de3ad68f2e0f2313e7a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e77f6498305191c1a81eff3bc4f1b861 = $(`<div id="html_e77f6498305191c1a81eff3bc4f1b861" style="width: 100.0%; height: 100.0%;">             <b>Multnomah County</b><br>             District: MULT<br>             Avg Delta-T: 68°F<br>             Annual WH Demand: ~54 therms/customer             </div>`)[0];
+                popup_1c76dae2c6be2de3ad68f2e0f2313e7a.setContent(html_e77f6498305191c1a81eff3bc4f1b861);
+            
+        
+
+        circle_marker_339307f5c3f0237758907dfbcbe07ee8.bindPopup(popup_1c76dae2c6be2de3ad68f2e0f2313e7a)
+        ;
+
+        
+    
+    
+            var circle_marker_06307076beb9250ee49dcdca84da7b9c = L.circleMarker(
+                [45.3, -122.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 2}
+            ).addTo(map_8bfc41f2eaf639073e2a4ef046e18126);
+        
+    
+        var popup_83498f514d3569dcd053b21b388afbb6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dca16b9f7aa0ce2d6603797f87a4bdd4 = $(`<div id="html_dca16b9f7aa0ce2d6603797f87a4bdd4" style="width: 100.0%; height: 100.0%;">             <b>Washington County</b><br>             District: WASH<br>             Avg Delta-T: 67°F<br>             Annual WH Demand: ~54 therms/customer             </div>`)[0];
+                popup_83498f514d3569dcd053b21b388afbb6.setContent(html_dca16b9f7aa0ce2d6603797f87a4bdd4);
+            
+        
+
+        circle_marker_06307076beb9250ee49dcdca84da7b9c.bindPopup(popup_83498f514d3569dcd053b21b388afbb6)
+        ;
+
+        
+    
+    
+            var circle_marker_7e7e98a22b7667eab913f68892633211 = L.circleMarker(
+                [45.2, -122.5],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 2}
+            ).addTo(map_8bfc41f2eaf639073e2a4ef046e18126);
+        
+    
+        var popup_f4f42072e519f1be34d9583a7395cda4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7178425c93cd02984553171e30c68a47 = $(`<div id="html_7178425c93cd02984553171e30c68a47" style="width: 100.0%; height: 100.0%;">             <b>Clackamas County</b><br>             District: CLAC<br>             Avg Delta-T: 68°F<br>             Annual WH Demand: ~54 therms/customer             </div>`)[0];
+                popup_f4f42072e519f1be34d9583a7395cda4.setContent(html_7178425c93cd02984553171e30c68a47);
+            
+        
+
+        circle_marker_7e7e98a22b7667eab913f68892633211.bindPopup(popup_f4f42072e519f1be34d9583a7395cda4)
+        ;
+
+        
+    
+    
+            var circle_marker_9d03ffbc141c37bf5a772c1c9adaabfa = L.circleMarker(
+                [45.1, -123.1],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 2}
+            ).addTo(map_8bfc41f2eaf639073e2a4ef046e18126);
+        
+    
+        var popup_063ccd3dd8753cb010c0cc1c1d5ef22e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d6f02595933b89d32342754b7976f644 = $(`<div id="html_d6f02595933b89d32342754b7976f644" style="width: 100.0%; height: 100.0%;">             <b>Yamhill County</b><br>             District: YAMI<br>             Avg Delta-T: 67°F<br>             Annual WH Demand: ~54 therms/customer             </div>`)[0];
+                popup_063ccd3dd8753cb010c0cc1c1d5ef22e.setContent(html_d6f02595933b89d32342754b7976f644);
+            
+        
+
+        circle_marker_9d03ffbc141c37bf5a772c1c9adaabfa.bindPopup(popup_063ccd3dd8753cb010c0cc1c1d5ef22e)
+        ;
+
+        
+    
+    
+            var circle_marker_c72df049b5c70ee38e80bd01aa8b22ee = L.circleMarker(
+                [44.8, -123.2],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 2}
+            ).addTo(map_8bfc41f2eaf639073e2a4ef046e18126);
+        
+    
+        var popup_9f1068d553a78cc835ea514df7631e45 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_095c260af7402e5543a43088f31e19fe = $(`<div id="html_095c260af7402e5543a43088f31e19fe" style="width: 100.0%; height: 100.0%;">             <b>Polk County</b><br>             District: POLK<br>             Avg Delta-T: 68°F<br>             Annual WH Demand: ~54 therms/customer             </div>`)[0];
+                popup_9f1068d553a78cc835ea514df7631e45.setContent(html_095c260af7402e5543a43088f31e19fe);
+            
+        
+
+        circle_marker_c72df049b5c70ee38e80bd01aa8b22ee.bindPopup(popup_9f1068d553a78cc835ea514df7631e45)
+        ;
+
+        
+    
+    
+            var circle_marker_8b82c41e34caed3902c2fb16860efd6e = L.circleMarker(
+                [44.9, -123.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 2}
+            ).addTo(map_8bfc41f2eaf639073e2a4ef046e18126);
+        
+    
+        var popup_b09babf071444d2233e7d2bcbfad7266 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c0ef07fc1f7fbcba11fe428cca841503 = $(`<div id="html_c0ef07fc1f7fbcba11fe428cca841503" style="width: 100.0%; height: 100.0%;">             <b>Marion County</b><br>             District: MARI<br>             Avg Delta-T: 68°F<br>             Annual WH Demand: ~54 therms/customer             </div>`)[0];
+                popup_b09babf071444d2233e7d2bcbfad7266.setContent(html_c0ef07fc1f7fbcba11fe428cca841503);
+            
+        
+
+        circle_marker_8b82c41e34caed3902c2fb16860efd6e.bindPopup(popup_b09babf071444d2233e7d2bcbfad7266)
+        ;
+
+        
+    
+    
+            var circle_marker_7dac759067fa32b0beffe1a2e6eb8340 = L.circleMarker(
+                [44.6, -123.2],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 2}
+            ).addTo(map_8bfc41f2eaf639073e2a4ef046e18126);
+        
+    
+        var popup_80d669343f619a62ec642609d5ddc623 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4c13b86c01aba61eb6ae5560182b73a9 = $(`<div id="html_4c13b86c01aba61eb6ae5560182b73a9" style="width: 100.0%; height: 100.0%;">             <b>Linn County</b><br>             District: LINN<br>             Avg Delta-T: 67°F<br>             Annual WH Demand: ~54 therms/customer             </div>`)[0];
+                popup_80d669343f619a62ec642609d5ddc623.setContent(html_4c13b86c01aba61eb6ae5560182b73a9);
+            
+        
+
+        circle_marker_7dac759067fa32b0beffe1a2e6eb8340.bindPopup(popup_80d669343f619a62ec642609d5ddc623)
+        ;
+
+        
+    
+    
+            var circle_marker_bdf2e1bbf7c4e05abf9f42e68c6b33a8 = L.circleMarker(
+                [44.1, -123.2],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 2}
+            ).addTo(map_8bfc41f2eaf639073e2a4ef046e18126);
+        
+    
+        var popup_561995d7c7a186c95279512692ce6525 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4f3e928b299209206c8e51764a6807a7 = $(`<div id="html_4f3e928b299209206c8e51764a6807a7" style="width: 100.0%; height: 100.0%;">             <b>Lane County</b><br>             District: LANE<br>             Avg Delta-T: 66°F<br>             Annual WH Demand: ~53 therms/customer             </div>`)[0];
+                popup_561995d7c7a186c95279512692ce6525.setContent(html_4f3e928b299209206c8e51764a6807a7);
+            
+        
+
+        circle_marker_bdf2e1bbf7c4e05abf9f42e68c6b33a8.bindPopup(popup_561995d7c7a186c95279512692ce6525)
+        ;
+
+        
+    
+    
+            var circle_marker_a16131b2c873bbc0cbcf1092c806fb55 = L.circleMarker(
+                [43.3, -123.3],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 2}
+            ).addTo(map_8bfc41f2eaf639073e2a4ef046e18126);
+        
+    
+        var popup_4430848a8f9f3489629c6119e837484c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b9694e5e8ab62e615cf9e34b9e8cc2a5 = $(`<div id="html_b9694e5e8ab62e615cf9e34b9e8cc2a5" style="width: 100.0%; height: 100.0%;">             <b>Douglas County</b><br>             District: DOUG<br>             Avg Delta-T: 65°F<br>             Annual WH Demand: ~52 therms/customer             </div>`)[0];
+                popup_4430848a8f9f3489629c6119e837484c.setContent(html_b9694e5e8ab62e615cf9e34b9e8cc2a5);
+            
+        
+
+        circle_marker_a16131b2c873bbc0cbcf1092c806fb55.bindPopup(popup_4430848a8f9f3489629c6119e837484c)
+        ;
+
+        
+    
+    
+            var circle_marker_96b0f7c89bff3974c1d0b9943afb169a = L.circleMarker(
+                [43.4, -124.2],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 2}
+            ).addTo(map_8bfc41f2eaf639073e2a4ef046e18126);
+        
+    
+        var popup_0a0289df219754b0873f5c82645cfe41 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d3872cd9f5d816cb7cacc5246255070b = $(`<div id="html_d3872cd9f5d816cb7cacc5246255070b" style="width: 100.0%; height: 100.0%;">             <b>Coos County</b><br>             District: COOS<br>             Avg Delta-T: 64°F<br>             Annual WH Demand: ~51 therms/customer             </div>`)[0];
+                popup_0a0289df219754b0873f5c82645cfe41.setContent(html_d3872cd9f5d816cb7cacc5246255070b);
+            
+        
+
+        circle_marker_96b0f7c89bff3974c1d0b9943afb169a.bindPopup(popup_0a0289df219754b0873f5c82645cfe41)
+        ;
+
+        
+    
+    
+            var circle_marker_409fcaae3cb0415772a467e143265442 = L.circleMarker(
+                [44.6, -124.1],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 2}
+            ).addTo(map_8bfc41f2eaf639073e2a4ef046e18126);
+        
+    
+        var popup_367950d0b334ca2953b7351e456320c3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1ea664d3b299c22c80e0d18bac1a2542 = $(`<div id="html_1ea664d3b299c22c80e0d18bac1a2542" style="width: 100.0%; height: 100.0%;">             <b>Lincoln County</b><br>             District: LINC<br>             Avg Delta-T: 65°F<br>             Annual WH Demand: ~52 therms/customer             </div>`)[0];
+                popup_367950d0b334ca2953b7351e456320c3.setContent(html_1ea664d3b299c22c80e0d18bac1a2542);
+            
+        
+
+        circle_marker_409fcaae3cb0415772a467e143265442.bindPopup(popup_367950d0b334ca2953b7351e456320c3)
+        ;
+
+        
+    
+    
+            var circle_marker_2df163c800a2136e29fef58353ef90f2 = L.circleMarker(
+                [44.7, -121.3],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 2}
+            ).addTo(map_8bfc41f2eaf639073e2a4ef046e18126);
+        
+    
+        var popup_48d2b464e0a61fb07832dea3d895279d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b8e21c874d7e43bc4d1429bbe4e24e1e = $(`<div id="html_b8e21c874d7e43bc4d1429bbe4e24e1e" style="width: 100.0%; height: 100.0%;">             <b>Benton County</b><br>             District: BENT<br>             Avg Delta-T: 66°F<br>             Annual WH Demand: ~53 therms/customer             </div>`)[0];
+                popup_48d2b464e0a61fb07832dea3d895279d.setContent(html_b8e21c874d7e43bc4d1429bbe4e24e1e);
+            
+        
+
+        circle_marker_2df163c800a2136e29fef58353ef90f2.bindPopup(popup_48d2b464e0a61fb07832dea3d895279d)
+        ;
+
+        
+    
+    
+            var circle_marker_d2eb5b17e957cf2bb16ed5ed2fe2dccb = L.circleMarker(
+                [46.2, -123.9],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 2}
+            ).addTo(map_8bfc41f2eaf639073e2a4ef046e18126);
+        
+    
+        var popup_09819d1e27feb51a87ec4752b8a90352 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6844b585a59e864642141d487d03299c = $(`<div id="html_6844b585a59e864642141d487d03299c" style="width: 100.0%; height: 100.0%;">             <b>Clatsop County</b><br>             District: CLAT<br>             Avg Delta-T: 66°F<br>             Annual WH Demand: ~53 therms/customer             </div>`)[0];
+                popup_09819d1e27feb51a87ec4752b8a90352.setContent(html_6844b585a59e864642141d487d03299c);
+            
+        
+
+        circle_marker_d2eb5b17e957cf2bb16ed5ed2fe2dccb.bindPopup(popup_09819d1e27feb51a87ec4752b8a90352)
+        ;
+
+        
+    
+    
+            var circle_marker_f1c36a9f029ac2d5d7f093fb7cfce1a0 = L.circleMarker(
+                [46.0, -123.4],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 2}
+            ).addTo(map_8bfc41f2eaf639073e2a4ef046e18126);
+        
+    
+        var popup_c5eedd19b78b156417b8961498faccfc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d728597709e12751001ff8aca3829a15 = $(`<div id="html_d728597709e12751001ff8aca3829a15" style="width: 100.0%; height: 100.0%;">             <b>Columbia County</b><br>             District: COLU<br>             Avg Delta-T: 67°F<br>             Annual WH Demand: ~54 therms/customer             </div>`)[0];
+                popup_c5eedd19b78b156417b8961498faccfc.setContent(html_d728597709e12751001ff8aca3829a15);
+            
+        
+
+        circle_marker_f1c36a9f029ac2d5d7f093fb7cfce1a0.bindPopup(popup_c5eedd19b78b156417b8961498faccfc)
+        ;
+
+        
+    
+    
+            var circle_marker_cb95066ff020f36a30626cc292709a7b = L.circleMarker(
+                [45.7, -122.6],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 2}
+            ).addTo(map_8bfc41f2eaf639073e2a4ef046e18126);
+        
+    
+        var popup_7634617e810f46bab96551f4d2e8ab5e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bd0a994f96a9453ff6b773e353e4ba42 = $(`<div id="html_bd0a994f96a9453ff6b773e353e4ba42" style="width: 100.0%; height: 100.0%;">             <b>Clark County</b><br>             District: CLAR<br>             Avg Delta-T: 68°F<br>             Annual WH Demand: ~54 therms/customer             </div>`)[0];
+                popup_7634617e810f46bab96551f4d2e8ab5e.setContent(html_bd0a994f96a9453ff6b773e353e4ba42);
+            
+        
+
+        circle_marker_cb95066ff020f36a30626cc292709a7b.bindPopup(popup_7634617e810f46bab96551f4d2e8ab5e)
+        ;
+
+        
+    
+    
+            var circle_marker_6237367a878a9e9e3a49fe806fbd3321 = L.circleMarker(
+                [45.8, -121.8],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 2}
+            ).addTo(map_8bfc41f2eaf639073e2a4ef046e18126);
+        
+    
+        var popup_5cb8c4b8af31c3e0dbdf62dd12b9a0d9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e26bdf0bc059a15108eea3782b005c2e = $(`<div id="html_e26bdf0bc059a15108eea3782b005c2e" style="width: 100.0%; height: 100.0%;">             <b>Skamania County</b><br>             District: SKAM<br>             Avg Delta-T: 65°F<br>             Annual WH Demand: ~52 therms/customer             </div>`)[0];
+                popup_5cb8c4b8af31c3e0dbdf62dd12b9a0d9.setContent(html_e26bdf0bc059a15108eea3782b005c2e);
+            
+        
+
+        circle_marker_6237367a878a9e9e3a49fe806fbd3321.bindPopup(popup_5cb8c4b8af31c3e0dbdf62dd12b9a0d9)
+        ;
+
+        
+    
+</script>
+</html>

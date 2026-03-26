@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_04336b67d82cb1c86a80874c117f27d9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+        <div style="position: fixed; 
+                    bottom: 50px; right: 50px; width: 200px; height: 150px; 
+                    background-color: white; border:2px solid grey; z-index:9999; 
+                    font-size:14px; padding: 10px">
+        <p style="margin: 0;"><b>Weather Station Sources</b></p>
+        <p style="margin: 5px 0;"><i class="fa fa-circle" style="color:blue"></i> NW Natural</p>
+        <p style="margin: 5px 0;"><i class="fa fa-circle" style="color:green"></i> NOAA</p>
+        <p style="margin: 5px 0;"><i class="fa fa-circle" style="color:orange"></i> Proxy</p>
+        </div>
+        
+    
+            <div class="folium-map" id="map_04336b67d82cb1c86a80874c117f27d9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_04336b67d82cb1c86a80874c117f27d9 = L.map(
+                "map_04336b67d82cb1c86a80874c117f27d9",
+                {
+                    center: [45.0, -122.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3bcf840b56f3c9786c1a86437a3c23d6 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_3bcf840b56f3c9786c1a86437a3c23d6.addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+            var circle_marker_7f429154ef346c0d7a4505b01f8a20c2 = L.circleMarker(
+                [45.5891, -122.5975],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+        var popup_913744a15a692c4ebe28a49abc835151 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_65df73eecc4e4c40bab001d1f176819c = $(`<div id="html_65df73eecc4e4c40bab001d1f176819c" style="width: 100.0%; height: 100.0%;">             <b>Portland International</b><br>             ICAO: KPDX<br>             GHCND: USW00024229<br>             Source: NW Natural<br>             Lat: 45.5891, Lon: -122.5975             </div>`)[0];
+                popup_913744a15a692c4ebe28a49abc835151.setContent(html_65df73eecc4e4c40bab001d1f176819c);
+            
+        
+
+        circle_marker_7f429154ef346c0d7a4505b01f8a20c2.bindPopup(popup_913744a15a692c4ebe28a49abc835151)
+        ;
+
+        
+    
+    
+            var marker_624e6a63a1fb42d06f50e972be682126 = L.marker(
+                [45.5891, -122.5975],
+                {
+}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+            var icon_7e41233f7bca8f9ab7501c965af6c018 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ad17cb3ab9d1d9235f82ccba685a1860 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_736699d4b2f9788c93da4d17dbd7142e = $(`<div id="html_736699d4b2f9788c93da4d17dbd7142e" style="width: 100.0%; height: 100.0%;">KPDX</div>`)[0];
+                popup_ad17cb3ab9d1d9235f82ccba685a1860.setContent(html_736699d4b2f9788c93da4d17dbd7142e);
+            
+        
+
+        marker_624e6a63a1fb42d06f50e972be682126.bindPopup(popup_ad17cb3ab9d1d9235f82ccba685a1860)
+        ;
+
+        
+    
+    
+                marker_624e6a63a1fb42d06f50e972be682126.setIcon(icon_7e41233f7bca8f9ab7501c965af6c018);
+            
+    
+            var circle_marker_50598cf8376f6f11587c1cfe2fcd9f17 = L.circleMarker(
+                [44.1239, -123.2171],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+        var popup_555e40dd8ebee82476ecd9a03288a8fe = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_031f3ac31d09b1ff2b8863234a358585 = $(`<div id="html_031f3ac31d09b1ff2b8863234a358585" style="width: 100.0%; height: 100.0%;">             <b>Eugene Airport</b><br>             ICAO: KEUG<br>             GHCND: USW00024218<br>             Source: NW Natural<br>             Lat: 44.1239, Lon: -123.2171             </div>`)[0];
+                popup_555e40dd8ebee82476ecd9a03288a8fe.setContent(html_031f3ac31d09b1ff2b8863234a358585);
+            
+        
+
+        circle_marker_50598cf8376f6f11587c1cfe2fcd9f17.bindPopup(popup_555e40dd8ebee82476ecd9a03288a8fe)
+        ;
+
+        
+    
+    
+            var marker_299bf12d2e8e91eac0a2159c8004165c = L.marker(
+                [44.1239, -123.2171],
+                {
+}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+            var icon_d459f3bb9af28aef65c97e971aef7bcf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_696231869dabece15876703afa062d89 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d6f279dacc8765fb3733e1acfea5d941 = $(`<div id="html_d6f279dacc8765fb3733e1acfea5d941" style="width: 100.0%; height: 100.0%;">KEUG</div>`)[0];
+                popup_696231869dabece15876703afa062d89.setContent(html_d6f279dacc8765fb3733e1acfea5d941);
+            
+        
+
+        marker_299bf12d2e8e91eac0a2159c8004165c.bindPopup(popup_696231869dabece15876703afa062d89)
+        ;
+
+        
+    
+    
+                marker_299bf12d2e8e91eac0a2159c8004165c.setIcon(icon_d459f3bb9af28aef65c97e971aef7bcf);
+            
+    
+            var circle_marker_1e2e76bedf031c46037b70443f7212ed = L.circleMarker(
+                [44.9209, -123.0065],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+        var popup_9dd444d23c89a133110da1dd72212d44 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b97bd2d2f4de6c857826492a01e53a7b = $(`<div id="html_b97bd2d2f4de6c857826492a01e53a7b" style="width: 100.0%; height: 100.0%;">             <b>Salem-Leckrone</b><br>             ICAO: KSLE<br>             GHCND: USW00024288<br>             Source: NW Natural<br>             Lat: 44.9209, Lon: -123.0065             </div>`)[0];
+                popup_9dd444d23c89a133110da1dd72212d44.setContent(html_b97bd2d2f4de6c857826492a01e53a7b);
+            
+        
+
+        circle_marker_1e2e76bedf031c46037b70443f7212ed.bindPopup(popup_9dd444d23c89a133110da1dd72212d44)
+        ;
+
+        
+    
+    
+            var marker_35af03e9f5aa8edd27b5c543edf6abd5 = L.marker(
+                [44.9209, -123.0065],
+                {
+}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+            var icon_defc777759fe1cd26ba44967c62faced = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d414ff5c0c40f832ff9cfc3d3f52bdac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d1d99dfd67ee86f6f520528fc29be34d = $(`<div id="html_d1d99dfd67ee86f6f520528fc29be34d" style="width: 100.0%; height: 100.0%;">KSLE</div>`)[0];
+                popup_d414ff5c0c40f832ff9cfc3d3f52bdac.setContent(html_d1d99dfd67ee86f6f520528fc29be34d);
+            
+        
+
+        marker_35af03e9f5aa8edd27b5c543edf6abd5.bindPopup(popup_d414ff5c0c40f832ff9cfc3d3f52bdac)
+        ;
+
+        
+    
+    
+                marker_35af03e9f5aa8edd27b5c543edf6abd5.setIcon(icon_defc777759fe1cd26ba44967c62faced);
+            
+    
+            var circle_marker_2db794789d8d884396cc8f23edb42882 = L.circleMarker(
+                [46.1583, -123.8783],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+        var popup_8fa9c4ab586f985a2eaac69505e14254 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a17822b2772483a2039df438b91a850f = $(`<div id="html_a17822b2772483a2039df438b91a850f" style="width: 100.0%; height: 100.0%;">             <b>Astoria Regional</b><br>             ICAO: KAST<br>             GHCND: USW00024218<br>             Source: NW Natural<br>             Lat: 46.1583, Lon: -123.8783             </div>`)[0];
+                popup_8fa9c4ab586f985a2eaac69505e14254.setContent(html_a17822b2772483a2039df438b91a850f);
+            
+        
+
+        circle_marker_2db794789d8d884396cc8f23edb42882.bindPopup(popup_8fa9c4ab586f985a2eaac69505e14254)
+        ;
+
+        
+    
+    
+            var marker_6452bbcba6899ba044fad839b50ed12f = L.marker(
+                [46.1583, -123.8783],
+                {
+}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+            var icon_4d89374e0a3ba1a4a5af8528c37dd5c7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5a6912a2741badb5cd5eac14406aebc5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9a0825bfbed9e9935461f15401bafc4d = $(`<div id="html_9a0825bfbed9e9935461f15401bafc4d" style="width: 100.0%; height: 100.0%;">KAST</div>`)[0];
+                popup_5a6912a2741badb5cd5eac14406aebc5.setContent(html_9a0825bfbed9e9935461f15401bafc4d);
+            
+        
+
+        marker_6452bbcba6899ba044fad839b50ed12f.bindPopup(popup_5a6912a2741badb5cd5eac14406aebc5)
+        ;
+
+        
+    
+    
+                marker_6452bbcba6899ba044fad839b50ed12f.setIcon(icon_4d89374e0a3ba1a4a5af8528c37dd5c7);
+            
+    
+            var circle_marker_683dd03facc3a99f1746e6b3a693172e = L.circleMarker(
+                [45.6089, -121.3089],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+        var popup_3a453a029b3a9c4ba19fd590a99ebb44 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7f399f169004bd900845bab9fed44a6a = $(`<div id="html_7f399f169004bd900845bab9fed44a6a" style="width: 100.0%; height: 100.0%;">             <b>The Dalles Municipal</b><br>             ICAO: KDLS<br>             GHCND: USW00024155<br>             Source: NW Natural<br>             Lat: 45.6089, Lon: -121.3089             </div>`)[0];
+                popup_3a453a029b3a9c4ba19fd590a99ebb44.setContent(html_7f399f169004bd900845bab9fed44a6a);
+            
+        
+
+        circle_marker_683dd03facc3a99f1746e6b3a693172e.bindPopup(popup_3a453a029b3a9c4ba19fd590a99ebb44)
+        ;
+
+        
+    
+    
+            var marker_1a5e5770d2c06eabb866d47e2ac5f866 = L.marker(
+                [45.6089, -121.3089],
+                {
+}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+            var icon_bc8c88e012b89be5b98c14a57fdede76 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6e35fea68c98fdc97291f8a6a15a321c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c47cd4371c7e5762e2443884539d9f55 = $(`<div id="html_c47cd4371c7e5762e2443884539d9f55" style="width: 100.0%; height: 100.0%;">KDLS</div>`)[0];
+                popup_6e35fea68c98fdc97291f8a6a15a321c.setContent(html_c47cd4371c7e5762e2443884539d9f55);
+            
+        
+
+        marker_1a5e5770d2c06eabb866d47e2ac5f866.bindPopup(popup_6e35fea68c98fdc97291f8a6a15a321c)
+        ;
+
+        
+    
+    
+                marker_1a5e5770d2c06eabb866d47e2ac5f866.setIcon(icon_bc8c88e012b89be5b98c14a57fdede76);
+            
+    
+            var circle_marker_5b2832205fc105513ab990f18e855ada = L.circleMarker(
+                [43.4089, -124.2539],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+        var popup_fcc0622098505d409a8e9fc1a7ca8938 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9980be22e85687ff636cc38939ec12b5 = $(`<div id="html_9980be22e85687ff636cc38939ec12b5" style="width: 100.0%; height: 100.0%;">             <b>North Bend/Coos Bay</b><br>             ICAO: KOTH<br>             GHCND: USW00024288<br>             Source: Proxy<br>             Lat: 43.4089, Lon: -124.2539             </div>`)[0];
+                popup_fcc0622098505d409a8e9fc1a7ca8938.setContent(html_9980be22e85687ff636cc38939ec12b5);
+            
+        
+
+        circle_marker_5b2832205fc105513ab990f18e855ada.bindPopup(popup_fcc0622098505d409a8e9fc1a7ca8938)
+        ;
+
+        
+    
+    
+            var marker_2e0d6b08615dc3f4995a1decfcbfaa91 = L.marker(
+                [43.4089, -124.2539],
+                {
+}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+            var icon_16ca53aa7a5e172a836b44577885c85c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f02400e34573775c93b19aa81cf1ba1a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6e90a3f851fd79af5d42e4dc37951eb4 = $(`<div id="html_6e90a3f851fd79af5d42e4dc37951eb4" style="width: 100.0%; height: 100.0%;">KOTH</div>`)[0];
+                popup_f02400e34573775c93b19aa81cf1ba1a.setContent(html_6e90a3f851fd79af5d42e4dc37951eb4);
+            
+        
+
+        marker_2e0d6b08615dc3f4995a1decfcbfaa91.bindPopup(popup_f02400e34573775c93b19aa81cf1ba1a)
+        ;
+
+        
+    
+    
+                marker_2e0d6b08615dc3f4995a1decfcbfaa91.setIcon(icon_16ca53aa7a5e172a836b44577885c85c);
+            
+    
+            var circle_marker_9eb17ceb3d0bdc616c0359bc79843ad1 = L.circleMarker(
+                [44.5847, -124.0503],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+        var popup_4d75aa2466b13da6a4f7753d6c0b805c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f05f3e699b40d2f96c168c3bd8166887 = $(`<div id="html_f05f3e699b40d2f96c168c3bd8166887" style="width: 100.0%; height: 100.0%;">             <b>Newport Airport</b><br>             ICAO: KONP<br>             GHCND: USW00024288<br>             Source: Proxy<br>             Lat: 44.5847, Lon: -124.0503             </div>`)[0];
+                popup_4d75aa2466b13da6a4f7753d6c0b805c.setContent(html_f05f3e699b40d2f96c168c3bd8166887);
+            
+        
+
+        circle_marker_9eb17ceb3d0bdc616c0359bc79843ad1.bindPopup(popup_4d75aa2466b13da6a4f7753d6c0b805c)
+        ;
+
+        
+    
+    
+            var marker_545c8bfcda3edc9bd8815c76a3c8b72b = L.marker(
+                [44.5847, -124.0503],
+                {
+}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+            var icon_6af20de3762fe4e2f75e63e78ac9622a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ef3bf2a4e9d74b740830581757135ee6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c75697b101f6724173f33dee52498ee3 = $(`<div id="html_c75697b101f6724173f33dee52498ee3" style="width: 100.0%; height: 100.0%;">KONP</div>`)[0];
+                popup_ef3bf2a4e9d74b740830581757135ee6.setContent(html_c75697b101f6724173f33dee52498ee3);
+            
+        
+
+        marker_545c8bfcda3edc9bd8815c76a3c8b72b.bindPopup(popup_ef3bf2a4e9d74b740830581757135ee6)
+        ;
+
+        
+    
+    
+                marker_545c8bfcda3edc9bd8815c76a3c8b72b.setIcon(icon_6af20de3762fe4e2f75e63e78ac9622a);
+            
+    
+            var circle_marker_2e9b8ae67187dc954920d2d765dccc44 = L.circleMarker(
+                [44.4915, -123.2803],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+        var popup_e44534ed35e17d43a9d3a56489bd27f5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d9649565e8cf2da30fb7c58c033422c7 = $(`<div id="html_d9649565e8cf2da30fb7c58c033422c7" style="width: 100.0%; height: 100.0%;">             <b>Corvallis Airport</b><br>             ICAO: KCVO<br>             GHCND: USW00024288<br>             Source: Proxy<br>             Lat: 44.4915, Lon: -123.2803             </div>`)[0];
+                popup_e44534ed35e17d43a9d3a56489bd27f5.setContent(html_d9649565e8cf2da30fb7c58c033422c7);
+            
+        
+
+        circle_marker_2e9b8ae67187dc954920d2d765dccc44.bindPopup(popup_e44534ed35e17d43a9d3a56489bd27f5)
+        ;
+
+        
+    
+    
+            var marker_e13dfe298d6ea5bde36ae9c2b2990ee6 = L.marker(
+                [44.4915, -123.2803],
+                {
+}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+            var icon_b13fde444fb8c045d066ba3b296594f6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2cd714bfc2b547c0aa93d02883c4997c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f148d98c590255cda5df0e9ffa10db55 = $(`<div id="html_f148d98c590255cda5df0e9ffa10db55" style="width: 100.0%; height: 100.0%;">KCVO</div>`)[0];
+                popup_2cd714bfc2b547c0aa93d02883c4997c.setContent(html_f148d98c590255cda5df0e9ffa10db55);
+            
+        
+
+        marker_e13dfe298d6ea5bde36ae9c2b2990ee6.bindPopup(popup_2cd714bfc2b547c0aa93d02883c4997c)
+        ;
+
+        
+    
+    
+                marker_e13dfe298d6ea5bde36ae9c2b2990ee6.setIcon(icon_b13fde444fb8c045d066ba3b296594f6);
+            
+    
+            var circle_marker_91a36547713c7e1ddd778433e88e6d4e = L.circleMarker(
+                [45.5411, -122.9897],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+        var popup_86b8cc61f2babd4fdef7e8bfc89d279f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6602ab2c34c8045a2df38d26b33a88a3 = $(`<div id="html_6602ab2c34c8045a2df38d26b33a88a3" style="width: 100.0%; height: 100.0%;">             <b>Hillsboro Airport</b><br>             ICAO: KHIO<br>             GHCND: USW00024229<br>             Source: Proxy<br>             Lat: 45.5411, Lon: -122.9897             </div>`)[0];
+                popup_86b8cc61f2babd4fdef7e8bfc89d279f.setContent(html_6602ab2c34c8045a2df38d26b33a88a3);
+            
+        
+
+        circle_marker_91a36547713c7e1ddd778433e88e6d4e.bindPopup(popup_86b8cc61f2babd4fdef7e8bfc89d279f)
+        ;
+
+        
+    
+    
+            var marker_827a255e8d6f7d05d0f503bc16cf684a = L.marker(
+                [45.5411, -122.9897],
+                {
+}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+            var icon_4c3c9ca119f1885e7784536261954c52 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b1c6d5dcb2feb5a804c98c8567b8f61f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8b9da47a482840cc9c478f0a1cd0c69d = $(`<div id="html_8b9da47a482840cc9c478f0a1cd0c69d" style="width: 100.0%; height: 100.0%;">KHIO</div>`)[0];
+                popup_b1c6d5dcb2feb5a804c98c8567b8f61f.setContent(html_8b9da47a482840cc9c478f0a1cd0c69d);
+            
+        
+
+        marker_827a255e8d6f7d05d0f503bc16cf684a.bindPopup(popup_b1c6d5dcb2feb5a804c98c8567b8f61f)
+        ;
+
+        
+    
+    
+                marker_827a255e8d6f7d05d0f503bc16cf684a.setIcon(icon_4c3c9ca119f1885e7784536261954c52);
+            
+    
+            var circle_marker_4b45696d226ba0bf7f39997d914e65ac = L.circleMarker(
+                [45.555, -122.2742],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+        var popup_abcbf42c403add9458b33868960a72d8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cb819cdf22b171816777ff54be25a331 = $(`<div id="html_cb819cdf22b171816777ff54be25a331" style="width: 100.0%; height: 100.0%;">             <b>Troutdale Airport</b><br>             ICAO: KTTD<br>             GHCND: USW00024229<br>             Source: Proxy<br>             Lat: 45.5550, Lon: -122.2742             </div>`)[0];
+                popup_abcbf42c403add9458b33868960a72d8.setContent(html_cb819cdf22b171816777ff54be25a331);
+            
+        
+
+        circle_marker_4b45696d226ba0bf7f39997d914e65ac.bindPopup(popup_abcbf42c403add9458b33868960a72d8)
+        ;
+
+        
+    
+    
+            var marker_7e5ff5326097f24b9bcc28ec43270fda = L.marker(
+                [45.555, -122.2742],
+                {
+}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+            var icon_66c3333d838d3077634a3ff4734ce188 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8435cef3d6694e869ffd43dbd04cff6d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7f768872e544bc2ef49546de3b75c518 = $(`<div id="html_7f768872e544bc2ef49546de3b75c518" style="width: 100.0%; height: 100.0%;">KTTD</div>`)[0];
+                popup_8435cef3d6694e869ffd43dbd04cff6d.setContent(html_7f768872e544bc2ef49546de3b75c518);
+            
+        
+
+        marker_7e5ff5326097f24b9bcc28ec43270fda.bindPopup(popup_8435cef3d6694e869ffd43dbd04cff6d)
+        ;
+
+        
+    
+    
+                marker_7e5ff5326097f24b9bcc28ec43270fda.setIcon(icon_66c3333d838d3077634a3ff4734ce188);
+            
+    
+            var circle_marker_7d94fe2bec3b76346d2c61cefe0b1116 = L.circleMarker(
+                [45.6872, -122.6611],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+        var popup_f13a7e237b2e10c335c5ece5fe0f5a8c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_da0640ed32986077d2408654cf146b60 = $(`<div id="html_da0640ed32986077d2408654cf146b60" style="width: 100.0%; height: 100.0%;">             <b>Vancouver-Pearson</b><br>             ICAO: KVUO<br>             GHCND: USW00024289<br>             Source: Proxy<br>             Lat: 45.6872, Lon: -122.6611             </div>`)[0];
+                popup_f13a7e237b2e10c335c5ece5fe0f5a8c.setContent(html_da0640ed32986077d2408654cf146b60);
+            
+        
+
+        circle_marker_7d94fe2bec3b76346d2c61cefe0b1116.bindPopup(popup_f13a7e237b2e10c335c5ece5fe0f5a8c)
+        ;
+
+        
+    
+    
+            var marker_b9f9d098423988225a28566c976e6b44 = L.marker(
+                [45.6872, -122.6611],
+                {
+}
+            ).addTo(map_04336b67d82cb1c86a80874c117f27d9);
+        
+    
+            var icon_f029820451d5a52dccd6e783a91e4a96 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a4bcde2e84c4fb4ddfa92898b79793ff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_896e89f498a82c32cc3f587eeda924a9 = $(`<div id="html_896e89f498a82c32cc3f587eeda924a9" style="width: 100.0%; height: 100.0%;">KVUO</div>`)[0];
+                popup_a4bcde2e84c4fb4ddfa92898b79793ff.setContent(html_896e89f498a82c32cc3f587eeda924a9);
+            
+        
+
+        marker_b9f9d098423988225a28566c976e6b44.bindPopup(popup_a4bcde2e84c4fb4ddfa92898b79793ff)
+        ;
+
+        
+    
+    
+                marker_b9f9d098423988225a28566c976e6b44.setIcon(icon_f029820451d5a52dccd6e783a91e4a96);
+            
+</script>
+</html>
