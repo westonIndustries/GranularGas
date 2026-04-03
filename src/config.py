@@ -178,7 +178,7 @@ ASHRAE_WA_MAINTENANCE_COST = os.path.join(ASHRAE_DIR, "WA-ASHRAE_Maintenance_Cos
 # NW NATURAL IRP LOAD DECAY FORECAST AND COMPANION DATA
 # ============================================================================
 
-IRP_LOAD_DECAY_FORECAST = os.path.join(DATA_DIR, "10-Year Load Decay Forecast (2025-2035).csv")
+IRP_LOAD_DECAY_FORECAST = os.path.join(DATA_DIR, "10-Year Load Decay Forecast (2025\u20132035).csv")
 LOAD_DECAY_DESCRIPTION = os.path.join(DATA_DIR, "prior load decay data description.txt")
 LOAD_DECAY_RECONSTRUCTED = os.path.join(DATA_DIR, "prior load decay data reconstructed.txt")
 LOAD_DECAY_SIMULATED = os.path.join(DATA_DIR, "prior load decay data simulated.txt")

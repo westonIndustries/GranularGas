@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Data Quality: or_rates</title>
+<style>
+body { font-family: 'Segoe UI', sans-serif; margin: 20px; background: #f8f9fa; }
+h1 { font-size: 1.3em; }
+table { border-collapse: collapse; width: 100%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px; }
+th { background: #343a40; color: #fff; padding: 8px 10px; text-align: left; font-size: 0.85em; }
+td { padding: 6px 10px; border-bottom: 1px solid #e9ecef; font-size: 0.84em; }
+tr:hover { background: #f1f3f5; }
+.sample td { max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.meta { color: #666; font-size: 0.9em; }
+</style></head><body>
+<h1>Data Quality Report: or_rates</h1>
+<p class="meta">Generated: 2026-04-01T14:28:37.284853 | Shape: 14 rows × 5 columns</p>
+<p>Filter pass rate: 14 rows after filtering</p>
+<h2>Column Summary</h2>
+<table><thead><tr><th>Column</th><th>Type</th><th>Nulls</th><th>Null%</th><th>Unique</th><th>Details</th></tr></thead>
+<tbody><tr><td>Schedule</td><td>str</td><td>0</td><td>0.0%</td><td>6</td><td>2 (3); 3 (3); 32 (3); 33 (3); 31 (1)</td></tr><tr><td>Type</td><td>str</td><td>0</td><td>0.0%</td><td>6</td><td>Residential (3); Basic Firm Sales (3); Large Vol Firm Sales (3); High-Volume ...</td></tr><tr><td>Description</td><td>str</td><td>0</td><td>0.0%</td><td>11</td><td>Customer Charge (4); Customer Charge (Single Family) (1); Customer Charge (Mu...</td></tr><tr><td>Rate/Value</td><td>float64</td><td>0</td><td>0.0%</td><td>12</td><td>min=0.0655, max=38000.0, mean=2806.71</td></tr><tr><td>Unit</td><td>str</td><td>0</td><td>0.0%</td><td>3</td><td>Month (7); per therm (6); Charge (1)</td></tr></tbody></table>
+<h2>Sample Rows</h2>
+<table border="1" class="dataframe sample">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Schedule</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Rate/Value</th>
+      <th>Unit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>Residential</td>
+      <td>Customer Charge (Single Family)</td>
+      <td>10.00000</td>
+      <td>Month</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Residential</td>
+      <td>Customer Charge (Multi Family)</td>
+      <td>8.00000</td>
+      <td>Month</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Residential</td>
+      <td>Usage Charge</td>
+      <td>1.41220</td>
+      <td>per therm</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Basic Firm Sales</td>
+      <td>Customer Charge</td>
+      <td>10.00000</td>
+      <td>Month</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Basic Firm Sales</td>
+      <td>Usage Charge (Commercial)</td>
+      <td>1.23970</td>
+      <td>per therm</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Basic Firm Sales</td>
+      <td>Usage Charge (Industrial)</td>
+      <td>1.08572</td>
+      <td>per therm</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>Non-Res Firm Sales</td>
+      <td>Customer Charge</td>
+      <td>325.00000</td>
+      <td>Month</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>Large Vol Firm Sales</td>
+      <td>Customer Charge</td>
+      <td>675.00000</td>
+      <td>Month</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>Large Vol Firm Sales</td>
+      <td>Volumetric (1st 10k therms)</td>
+      <td>0.67950</td>
+      <td>per therm</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>Large Vol Firm Sales</td>
+      <td>Pipeline Capacity (per MDDV)</td>
+      <td>1.47000</td>
+      <td>Charge</td>
+    </tr>
+  </tbody>
+</table>
+</body></html>

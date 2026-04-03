@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Data Quality: wa_rates</title>
+<style>
+body { font-family: 'Segoe UI', sans-serif; margin: 20px; background: #f8f9fa; }
+h1 { font-size: 1.3em; }
+table { border-collapse: collapse; width: 100%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px; }
+th { background: #343a40; color: #fff; padding: 8px 10px; text-align: left; font-size: 0.85em; }
+td { padding: 6px 10px; border-bottom: 1px solid #e9ecef; font-size: 0.84em; }
+tr:hover { background: #f1f3f5; }
+.sample td { max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.meta { color: #666; font-size: 0.9em; }
+</style></head><body>
+<h1>Data Quality Report: wa_rates</h1>
+<p class="meta">Generated: 2026-04-01T14:28:37.297197 | Shape: 14 rows × 4 columns</p>
+<p>Filter pass rate: 14 rows after filtering</p>
+<h2>Column Summary</h2>
+<table><thead><tr><th>Column</th><th>Type</th><th>Nulls</th><th>Null%</th><th>Unique</th><th>Details</th></tr></thead>
+<tbody><tr><td>Schedule</td><td>int64</td><td>0</td><td>0.0%</td><td>4</td><td>min=2, max=42, mean=16.57</td></tr><tr><td>Type</td><td>str</td><td>0</td><td>0.0%</td><td>4</td><td>Basic Firm (6); Residential (3); Large Volume Firm (3); Non-Residential Sales...</td></tr><tr><td>Description</td><td>str</td><td>0</td><td>0.0%</td><td>11</td><td>Customer Charge (3); CCA Credit (Com) (2); CCA Credit (1); Usage Charge (per ...</td></tr><tr><td>Value</td><td>str</td><td>0</td><td>0.0%</td><td>14</td><td>8.00 [cite: 51] (1); -26.32 [cite: 77] (1); 1.24164 [cite: 45] (1); 5.50 [cit...</td></tr></tbody></table>
+<h2>Sample Rows</h2>
+<table border="1" class="dataframe sample">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Schedule</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>Residential</td>
+      <td>Customer Charge</td>
+      <td>8.00 [cite: 51]</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Residential</td>
+      <td>CCA Credit</td>
+      <td>-26.32 [cite: 77]</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Residential</td>
+      <td>Usage Charge (per therm)</td>
+      <td>1.24164 [cite: 45]</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Basic Firm</td>
+      <td>Customer Charge (Res)</td>
+      <td>5.50 [cite: 29]</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Basic Firm</td>
+      <td>Customer Charge (Com)</td>
+      <td>7.00 [cite: 32]</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Basic Firm</td>
+      <td>CCA Credit (Res)</td>
+      <td>-1.82 [cite: 35]</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Basic Firm</td>
+      <td>CCA Credit (Com)</td>
+      <td>-5.34 [cite: 37]</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Basic Firm</td>
+      <td>Usage Charge (Res)</td>
+      <td>1.63252 [cite: 43]</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Basic Firm</td>
+      <td>Usage Charge (Com)</td>
+      <td>1.59582 [cite: 43]</td>
+    </tr>
+    <tr>
+      <td>41</td>
+      <td>Non-Residential Sales</td>
+      <td>Customer Charge</td>
+      <td>9.00 [cite: 120]</td>
+    </tr>
+  </tbody>
+</table>
+</body></html>

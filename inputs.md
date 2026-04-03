@@ -477,3 +477,119 @@ The model expects a comprehensive set of inputs spanning:
 9. **Scenario configuration**: User-defined parameters for projection runs
 
 All inputs are organized by source provenance in the `Data/` directory and are documented in the design.md and tasks.md files.
+
+
+## Data Source Inventory — Color-Coded Reference
+
+The table below classifies every data source along two dimensions:
+1. **Provenance**: 🟢 NW Natural (proprietary) · 🟡 Team-created (from NWN docs) · 🔵 External/Public
+2. **Access method**: 📁 Local file · 🌐 Runtime API call
+
+### 🟢 NW Natural — Proprietary / Blinded (15 sources, all 📁 FILE)
+
+| # | Data Source | Config Constant | Path | Loader |
+|---|-----------|----------------|------|--------|
+| 1 | Premise data (blinded) | `PREMISE_DATA` | `Data/NWNatural Data/premise_data_blinded.csv` | `load_premise_data()` |
+| 2 | Equipment inventory (blinded) | `EQUIPMENT_DATA` | `Data/NWNatural Data/equipment_data_blinded.csv` | `load_equipment_data()` |
+| 3 | Equipment codes lookup | `EQUIPMENT_CODES` | `Data/NWNatural Data/equipment_codes.csv` | `load_equipment_codes()` |
+| 4 | Segment data (blinded) | `SEGMENT_DATA` | `Data/NWNatural Data/segment_data_blinded.csv` | `load_segment_data()` |
+| 5 | Billing data (blinded) | `BILLING_DATA` | `Data/NWNatural Data/billing_data_blinded.csv` | `load_billing_data()` |
+| 6 | Daily weather — CalDay | `WEATHER_CALDAY` | `Data/NWNatural Data/DailyCalDay1985_Mar2025.csv` | `load_weather_data()` |
+| 7 | Daily weather — GasDay | `WEATHER_GASDAY` | `Data/NWNatural Data/DailyGasDay2008_Mar2025.csv` | `load_weather_data()` |
+| 8 | Bull Run water temperature | `WATER_TEMP` | `Data/NWNatural Data/BullRunWaterTemperature.csv` | `load_water_temperature()` |
+| 9 | Portland snow data | `PORTLAND_SNOW` | `Data/NWNatural Data/Portland_snow.csv` | `load_snow_data()` |
+| 10 | IRP 10-Year Load Decay Forecast | `IRP_LOAD_DECAY_FORECAST` | `Data/10-Year Load Decay Forecast (2025–2035).csv` | `load_load_decay_forecast()` |
+| 11 | Prior load decay — description | `LOAD_DECAY_DESCRIPTION` | `Data/prior load decay data description.txt` | `load_historical_upc()` |
+| 12 | Prior load decay — reconstructed | `LOAD_DECAY_RECONSTRUCTED` | `Data/prior load decay data reconstructed.txt` | `load_historical_upc()` |
+| 13 | Prior load decay — simulated | `LOAD_DECAY_SIMULATED` | `Data/prior load decay data simulated.txt` | `load_historical_upc()` |
+| 14 | IRP context document | `IRP_CONTEXT` | `Data/Integrated Resource Plan (IRP),.txt` | *reference only* |
+| 15 | Service territory FIPS codes | `NWN_SERVICE_TERRITORY_CSV` | `Data/NW Natural Service Territory Census data.csv` | `load_service_territory_fips()` |
+
+### 🟡 Team-Created — Extracted from NW Natural Rate PDFs (10 sources, all 📁 FILE)
+
+| # | Data Source | Config Constant | Path | Loader |
+|---|-----------|----------------|------|--------|
+| 16 | Oregon current rates (Oct 2025) | `OR_RATES` | `Data/or_rates_oct_2025.csv` | `load_or_rates()` |
+| 17 | Oregon rate case history | `OR_RATE_CASE_HISTORY` | `Data/or_rate_case_history.csv` | `load_rate_case_history()` |
+| 18 | Oregon WACOG history | `OR_WACOG_HISTORY` | `Data/or_wacog_history.csv` | `load_wacog_history()` |
+| 19 | Washington current rates (Nov 2025) | `WA_RATES` | `Data/wa_rates_nov_2025.csv` | `load_wa_rates()` |
+| 20 | Washington rate case history | `WA_RATE_CASE_HISTORY` | `Data/wa_rate_case_history.csv` | `load_rate_case_history()` |
+| 21 | Washington WACOG history | `WA_WACOG_HISTORY` | `Data/wa_wacog_history.csv` | `load_wacog_history()` |
+| 22 | Baseload consumption factors | `BASELOAD_FACTORS_CSV` | `Data/Baseload Consumption Factors.csv` | `load_baseload_factors()` |
+| 23 | Baseload factors reference impl. | `BASELOAD_FACTORS_PY` | `Data/Baseload Consumption factors.py` | *reference only* |
+| 24 | NW Energy Proxies (compact params) | `NW_ENERGY_PROXIES_CSV` | `Data/nw_energy_proxies.csv` | `load_nw_energy_proxies()` |
+| 25 | Equipment life math documentation | `EQUIPMENT_LIFE_MATH` | `Data/equipment life math.txt` | *reference only* |
+
+### 🔵 External / Public — NEEA RBSA (10 sources, all 📁 FILE)
+
+| # | Data Source | Config Constant | Path | Loader |
+|---|-----------|----------------|------|--------|
+| 26 | RBSA 2022 — SiteDetail | `RBSA_2022_SITE_DETAIL` | `Data/2022 RBSA Datasets/SiteDetail.csv` | `load_rbsa_site_detail()` |
+| 27 | RBSA 2022 — HVAC | `RBSA_2022_HVAC` | `Data/2022 RBSA Datasets/Mechanical_HeatingAndCooling.csv` | `load_rbsa_hvac()` |
+| 28 | RBSA 2022 — Water Heater | `RBSA_2022_WATER_HEATER` | `Data/2022 RBSA Datasets/Mechanical_WaterHeater.csv` | `load_rbsa_water_heater()` |
+| 29 | RBSA 2022 — Stove/Oven | `RBSA_2022_STOVE_OVEN` | `Data/2022 RBSA Datasets/Appliance_Stove_Oven.csv` | *not yet loaded* |
+| 30 | RBSA 2022 — Laundry | `RBSA_2022_LAUNDRY` | `Data/2022 RBSA Datasets/Appliance_Laundry.csv` | *not yet loaded* |
+| 31 | RBSA 2022 — Building Shell | `RBSA_2022_BUILDING_SHELL` | `Data/2022 RBSA Datasets/Building_Shell_One_Line.csv` | *not yet loaded* |
+| 32 | RBSA sub-metered data Year 1 | `RBSAM_Y1_DIR` | `Data/rbsam_y1/` | `load_rbsam_metering()` |
+| 33 | RBSA sub-metered data Year 2 | `RBSAM_Y2_DIR` | `Data/rbsam_y2/` | `load_rbsam_metering()` |
+| 34 | RBSA metering data dictionary | `RBSAM_DATA_DICT` | `Data/rbsa-metering-data-dictionary-2016-2017.xlsx` | *reference only* |
+| 35 | 2017 RBSA-II Combined Database | `RBSA_2017_DIR` | `Data/2017-RBSA-II-Combined-Database/` | `load_rbsa_2017_site_detail()` |
+
+### 🔵 External / Public — ASHRAE (4 sources, all 📁 FILE)
+
+| # | Data Source | Config Constant | Path | Loader |
+|---|-----------|----------------|------|--------|
+| 36 | ASHRAE Service Life — Oregon | `ASHRAE_OR_SERVICE_LIFE` | `Data/ashrae/OR-ASHRAE_Service_Life_Data.xls` | `load_ashrae_service_life()` |
+| 37 | ASHRAE Service Life — Washington | `ASHRAE_WA_SERVICE_LIFE` | `Data/ashrae/WA-ASHRAE_Service_Life_Data.xls` | `load_ashrae_service_life()` |
+| 38 | ASHRAE Maintenance Cost — Oregon | `ASHRAE_OR_MAINTENANCE_COST` | `Data/ashrae/OR-ASHRAE_Maintenance_Cost_Data.xls` | `load_ashrae_maintenance_cost()` |
+| 39 | ASHRAE Maintenance Cost — Washington | `ASHRAE_WA_MAINTENANCE_COST` | `Data/ashrae/WA-ASHRAE_Maintenance_Cost_Data.xls` | `load_ashrae_maintenance_cost()` |
+
+### 🔵 External / Public — U.S. Census Bureau (5 sources: 4 📁 FILE + 1 🌐 API)
+
+| # | Data Source | Config Constant | Path / Endpoint | Access | Loader |
+|---|-----------|----------------|----------------|--------|--------|
+| 40 | Census ACS B25034 — API | `CENSUS_API_BASE` | `https://api.census.gov/data/{year}/acs/acs5` | 🌐 API | `fetch_census_b25034()` |
+| 41 | Census B25034 county files (offline) | `B25034_COUNTY_DIR` | `Data/B25034-5y-county/` | 📁 FILE | `load_b25034_county_files()` |
+| 42 | Census B25040 (Heating Fuel) | `B25040_COUNTY_DIR` | `Data/B25040-5y-county/` | 📁 FILE | `load_b25040_county_files()` |
+| 43 | Census B25024 (Units in Structure) | `B25024_COUNTY_DIR` | `Data/B25024-5y-county/` | 📁 FILE | `load_b25024_county_files()` |
+| 44 | Census B25034 national backup | `B25034_BACKUP_DIR` | `Data/B25034-5y/` | 📁 FILE | *fallback only* |
+
+### 🔵 External / Public — Population & Housing Forecasts (2 sources, all 📁 FILE)
+
+| # | Data Source | Config Constant | Path | Loader |
+|---|-----------|----------------|------|--------|
+| 45 | PSU Population Forecasts (13 OR counties) | `PSU_PROJECTION_DIR` | `Data/PSU projection data/` | `load_psu_population_forecasts()` |
+| 46 | WA OFM Housing Estimates (3 WA counties) | `OFM_HOUSING_XLSX` | `Data/ofm_april1_housing.xlsx` | `load_ofm_housing()` |
+
+### 🔵 External / Public — NOAA Climate Normals (2 sources: 1 📁 FILE + 1 🌐 API)
+
+| # | Data Source | Config Constant | Path / Endpoint | Access | Loader |
+|---|-----------|----------------|----------------|--------|--------|
+| 47 | NOAA daily/monthly normals (11 stations) | `NOAA_NORMALS_DIR` | `Data/noaa_normals/` | 📁 FILE | `load_noaa_daily_normals()`, `load_noaa_monthly_normals()` |
+| 48 | NOAA CDO API | `NOAA_CDO_API_BASE` | `https://www.ncei.noaa.gov/cdo-web/api/v2` | 🌐 API | *used for initial download; normals cached locally* |
+
+### 🔵 External / Public — EIA RECS (4 sources, all 📁 FILE)
+
+| # | Data Source | Config Constant | Path | Loader |
+|---|-----------|----------------|------|--------|
+| 49 | RECS 2020 microdata | `RECS_2020_CSV` | `Data/Residential Energy Consumption Servey/recs2020_public_v7.csv` | `load_recs_microdata()` |
+| 50 | RECS 2015 microdata | `RECS_2015_CSV` | `Data/Residential Energy Consumption Servey/recs2015_public_v4.csv` | `load_recs_microdata()` |
+| 51 | RECS 2009 microdata | `RECS_2009_CSV` | `Data/Residential Energy Consumption Servey/2009/` | `load_recs_microdata()` |
+| 52 | RECS 2005 microdata | `RECS_2005_CSV` | `Data/Residential Energy Consumption Servey/2005/` | `load_recs_microdata()` |
+
+### 🔵 External / Public — Green Building Registry (1 source, 🌐 API)
+
+| # | Data Source | Config Constant | Endpoint | Access | Loader |
+|---|-----------|----------------|----------|--------|--------|
+| 53 | Green Building Registry API | `GBR_API_BASE_URL` | `https://api.greenbuildingregistry.com` | 🌐 API | `fetch_gbr_properties()` |
+
+### Totals
+
+| Category | Count | 📁 File | 🌐 API |
+|----------|-------|---------|--------|
+| 🟢 NW Natural (proprietary) | 15 | 15 | 0 |
+| 🟡 Team-created (from NWN docs) | 10 | 10 | 0 |
+| 🔵 External / Public | 28 | 25 | 3 |
+| **Total** | **53** | **50** | **3** |
+
+> API sources requiring runtime credentials: Census ACS B25034 (no key needed), NOAA CDO (`NOAA_CDO_TOKEN`), Green Building Registry (`GBR_API_KEY`). All other sources are local files on disk.

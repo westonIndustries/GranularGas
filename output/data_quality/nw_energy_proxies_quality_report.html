@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Data Quality: nw_energy_proxies</title>
+<style>
+body { font-family: 'Segoe UI', sans-serif; margin: 20px; background: #f8f9fa; }
+h1 { font-size: 1.3em; }
+table { border-collapse: collapse; width: 100%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px; }
+th { background: #343a40; color: #fff; padding: 8px 10px; text-align: left; font-size: 0.85em; }
+td { padding: 6px 10px; border-bottom: 1px solid #e9ecef; font-size: 0.84em; }
+tr:hover { background: #f1f3f5; }
+.sample td { max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.meta { color: #666; font-size: 0.9em; }
+</style></head><body>
+<h1>Data Quality Report: nw_energy_proxies</h1>
+<p class="meta">Generated: 2026-04-01T14:28:37.376939 | Shape: 12 rows × 6 columns</p>
+<p>Filter pass rate: 12 rows after filtering</p>
+<h2>Column Summary</h2>
+<table><thead><tr><th>Column</th><th>Type</th><th>Nulls</th><th>Null%</th><th>Unique</th><th>Details</th></tr></thead>
+<tbody><tr><td>Category</td><td>str</td><td>0</td><td>0.0%</td><td>6</td><td>Envelope (4); Infiltration (2); Efficiency (2); Retrofit (2); Building (1)</td></tr><tr><td>SubCategory</td><td>str</td><td>0</td><td>0.0%</td><td>12</td><td>UPC_Decay (1); Wall_Pre_1950 (1); Wall_1951_1980 (1); Wall_1981_2010 (1); Wal...</td></tr><tr><td>Parameter</td><td>str</td><td>0</td><td>0.0%</td><td>6</td><td>U_Value (5); ACH50 (3); Annual_Net_Rate (1); AFUE (1); HSPF2 (1)</td></tr><tr><td>Value</td><td>float64</td><td>0</td><td>0.0%</td><td>12</td><td>min=-0.0119, max=14.0, mean=2.78</td></tr><tr><td>Unit</td><td>str</td><td>0</td><td>0.0%</td><td>4</td><td>Btu/hr.sqft.F (5); Ratio (3); AirChanges/hr (3); Multiplier (1)</td></tr><tr><td>Source</td><td>str</td><td>0</td><td>0.0%</td><td>8</td><td>RBSA_2022 (5); NWN_2025_IRP (1); WA_Energy_Code_2024 (1); Current_Standard (1...</td></tr></tbody></table>
+<h2>Sample Rows</h2>
+<table border="1" class="dataframe sample">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Category</th>
+      <th>SubCategory</th>
+      <th>Parameter</th>
+      <th>Value</th>
+      <th>Unit</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Building</td>
+      <td>UPC_Decay</td>
+      <td>Annual_Net_Rate</td>
+      <td>-0.0119</td>
+      <td>Ratio</td>
+      <td>NWN_2025_IRP</td>
+    </tr>
+    <tr>
+      <td>Envelope</td>
+      <td>Wall_Pre_1950</td>
+      <td>U_Value</td>
+      <td>0.2500</td>
+      <td>Btu/hr.sqft.F</td>
+      <td>RBSA_2022</td>
+    </tr>
+    <tr>
+      <td>Envelope</td>
+      <td>Wall_1951_1980</td>
+      <td>U_Value</td>
+      <td>0.0810</td>
+      <td>Btu/hr.sqft.F</td>
+      <td>RBSA_2022</td>
+    </tr>
+    <tr>
+      <td>Envelope</td>
+      <td>Wall_1981_2010</td>
+      <td>U_Value</td>
+      <td>0.0560</td>
+      <td>Btu/hr.sqft.F</td>
+      <td>RBSA_2022</td>
+    </tr>
+    <tr>
+      <td>Envelope</td>
+      <td>Wall_2011_Current</td>
+      <td>U_Value</td>
+      <td>0.0380</td>
+      <td>Btu/hr.sqft.F</td>
+      <td>RBSA_2022</td>
+    </tr>
+    <tr>
+      <td>Infiltration</td>
+      <td>Leakage_Pre_1950</td>
+      <td>ACH50</td>
+      <td>14.0000</td>
+      <td>AirChanges/hr</td>
+      <td>RBSA_2022</td>
+    </tr>
+    <tr>
+      <td>Infiltration</td>
+      <td>Leakage_New_Code</td>
+      <td>ACH50</td>
+      <td>3.0000</td>
+      <td>AirChanges/hr</td>
+      <td>WA_Energy_Code_2024</td>
+    </tr>
+    <tr>
+      <td>Efficiency</td>
+      <td>Gas_Furnace</td>
+      <td>AFUE</td>
+      <td>0.9500</td>
+      <td>Ratio</td>
+      <td>Current_Standard</td>
+    </tr>
+    <tr>
+      <td>Efficiency</td>
+      <td>Heat_Pump</td>
+      <td>HSPF2</td>
+      <td>8.8000</td>
+      <td>Ratio</td>
+      <td>Energy_Star_v6.1</td>
+    </tr>
+    <tr>
+      <td>Retrofit</td>
+      <td>Target_Wall</td>
+      <td>U_Value</td>
+      <td>0.0600</td>
+      <td>Btu/hr.sqft.F</td>
+      <td>ETO_Weatherization</td>
+    </tr>
+  </tbody>
+</table>
+</body></html>

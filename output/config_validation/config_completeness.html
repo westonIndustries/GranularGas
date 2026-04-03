@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>Config Completeness</title>
+<style>
+body { font-family: 'Segoe UI', sans-serif; margin: 20px; background: #f8f9fa; }
+h1 { font-size: 1.4em; }
+table { border-collapse: collapse; width: 100%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px; }
+th { background: #343a40; color: #fff; padding: 10px; font-size: 0.85em; text-align: left; }
+td { padding: 8px 10px; border-bottom: 1px solid #e9ecef; font-size: 0.85em; }
+.result { padding: 12px; border-radius: 4px; font-weight: bold; font-size: 1.1em; margin-bottom: 16px; }
+</style></head><body>
+<h1>Config Completeness — Property Test Results</h1>
+<p>Generated: 2026-04-02T07:44:47.777221</p>
+<div class="result" style="background:#f8d7da;">
+  6/7 checks passed, 1 failed ❌
+</div>
+<table><thead><tr><th></th><th>Check</th><th>Detail</th></tr></thead>
+<tbody><tr style="background:#d4edda;"><td style="text-align:center;font-size:1.2em;">✅</td><td>END_USE_MAP values are non-empty strings</td><td>17 codes mapped. All valid.</td></tr><tr style="background:#d4edda;"><td style="text-align:center;font-size:1.2em;">✅</td><td>DEFAULT_EFFICIENCY keys match END_USE_MAP values</td><td>End-uses: ['clothes_drying', 'cooking', 'fireplace', 'other', 'space_heating', 'water_heating']. All keys matched.</td></tr><tr style="background:#d4edda;"><td style="text-align:center;font-size:1.2em;">✅</td><td>DEFAULT_EFFICIENCY values in (0, 1]</td><td>6 entries. All valid.</td></tr><tr style="background:#d4edda;"><td style="text-align:center;font-size:1.2em;">✅</td><td>USEFUL_LIFE keys match END_USE_MAP values</td><td>Life entries: ['clothes_drying', 'cooking', 'fireplace', 'other', 'space_heating', 'water_heating']. All matched.</td></tr><tr style="background:#d4edda;"><td style="text-align:center;font-size:1.2em;">✅</td><td>USEFUL_LIFE values are positive integers</td><td>6 entries. All valid.</td></tr><tr style="background:#d4edda;"><td style="text-align:center;font-size:1.2em;">✅</td><td>DISTRICT_WEATHER_MAP values are valid ICAO codes in ICAO_TO_GHCND</td><td>17 districts, 11 ICAO stations. All valid.</td></tr><tr style="background:#f8d7da;"><td style="text-align:center;font-size:1.2em;">❌</td><td>File paths reference existing files</td><td>11/20 files present. Missing: PREMISE_DATA, EQUIPMENT_DATA, EQUIPMENT_CODES, SEGMENT_DATA, BILLING_DATA, WEATHER_CALDAY, WEATHER_GASDAY, WATER_TEMP, PORTLAND_SNOW</td></tr></tbody></table>
+<h2>Missing Files (warnings)</h2>
+<table><thead><tr><th></th><th>Constant</th><th>Path</th></tr></thead>
+<tbody><tr><td>⚠️</td><td>PREMISE_DATA</td><td><code>Data/NWNatural Data\premise_data_blinded.csv</code></td></tr><tr><td>⚠️</td><td>EQUIPMENT_DATA</td><td><code>Data/NWNatural Data\equipment_data_blinded.csv</code></td></tr><tr><td>⚠️</td><td>EQUIPMENT_CODES</td><td><code>Data/NWNatural Data\equipment_codes.csv</code></td></tr><tr><td>⚠️</td><td>SEGMENT_DATA</td><td><code>Data/NWNatural Data\segment_data_blinded.csv</code></td></tr><tr><td>⚠️</td><td>BILLING_DATA</td><td><code>Data/NWNatural Data\billing_data_blinded.csv</code></td></tr><tr><td>⚠️</td><td>WEATHER_CALDAY</td><td><code>Data/NWNatural Data\DailyCalDay1985_Mar2025.csv</code></td></tr><tr><td>⚠️</td><td>WEATHER_GASDAY</td><td><code>Data/NWNatural Data\DailyGasDay2008_Mar2025.csv</code></td></tr><tr><td>⚠️</td><td>WATER_TEMP</td><td><code>Data/NWNatural Data\BullRunWaterTemperature.csv</code></td></tr><tr><td>⚠️</td><td>PORTLAND_SNOW</td><td><code>Data/NWNatural Data\Portland_snow.csv</code></td></tr></tbody></table>
+</body></html>
