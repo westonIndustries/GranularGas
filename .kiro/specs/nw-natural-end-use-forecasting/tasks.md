@@ -157,40 +157,40 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Document assumptions for missing data as log warnings
     - _Requirements: 1.4, 2.1, 3.1, 7.4, 8.1_
 
-  - [ ] 2.3 Write data ingestion validation suite with diagnostic outputs
+  - [x] 2.3 Write data ingestion validation suite with diagnostic outputs
     - All outputs saved to `output/data_quality/` as both HTML and Markdown (.md)
     - **Property 2: Filtering preserves only active residential premises â€” output contains only custtype='R' and status_code='AC'**
     - **Validates: Requirements 1.2, 7.1, 7.4**
 
-    - [ ] 2.3.1 Per-loader data quality reports
+    - [x] 2.3.1 Per-loader data quality reports
       - For each loader, generate an HTML + MD report with: row count, column dtypes, null counts per column, unique value counts, min/max/mean for numerics, top-10 value frequencies for categoricals
       - Include filter pass rates (e.g. "72% of premises are active residential", "85% of equipment codes map to END_USE_MAP")
       - Flag columns with >10% nulls as warnings, >50% as errors
       - Output: `output/data_quality/{loader_name}_quality_report.html` and `.md`
 
-    - [ ] 2.3.2 Cross-loader join audit
+    - [x] 2.3.2 Cross-loader join audit
       - Count blinded_ids in premises vs equipment vs segment vs billing â€” how many match, how many orphans in each direction
       - Count equipment_type_codes that map to END_USE_MAP vs unmapped codes (list the unmapped ones)
       - Count district_code_IRP values that map to DISTRICT_WEATHER_MAP vs unmapped
       - Produce a join summary table: source, total_ids, matched_ids, orphan_ids, match_rate
       - Output: `output/data_quality/join_audit.html` and `.md`
 
-    - [ ] 2.3.3 Sample mismatches export
+    - [x] 2.3.3 Sample mismatches export
       - Export CSV of rows that fail key validations: null end_use, zero/negative efficiency, missing weather_station, unparseable billing amounts, missing blinded_id joins
       - Include the reason for each flagged row
       - Output: `output/data_quality/validation_failures.csv`
 
-    - [ ] 2.3.4 Column coverage matrix
+    - [x] 2.3.4 Column coverage matrix
       - For each NW Natural file (premise, equipment, segment, codes, billing, weather), list expected columns vs actual columns present
       - Flag missing expected columns, unexpected extra columns
       - Output: `output/data_quality/column_coverage.html` and `.md`
 
-    - [ ] 2.3.5 Data freshness and date range check
+    - [x] 2.3.5 Data freshness and date range check
       - For each time-series file (weather, billing, WACOG, rate cases, water temp, snow), report min/max dates and total record count
       - Flag files that don't extend to 2025 as potentially stale
       - Output: `output/data_quality/date_ranges.html` and `.md`
 
-    - [ ] 2.3.6 Distribution plots for key fields
+    - [x] 2.3.6 Distribution plots for key fields
       - Histogram: equipment age distribution (from install year)
       - Histogram: efficiency values by end-use category
       - Histogram: billing utility_usage amounts (log scale)

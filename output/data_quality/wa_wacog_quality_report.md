@@ -1,9 +1,7 @@
 # Data Quality Report: wa_wacog
-Generated: 2026-04-01T14:28:37.311069
+Generated: 2026-04-03T19:43:00.252202
 
 **Shape**: 16 rows × 3 columns
-
-Filter pass rate: 16 rows after filtering
 
 ## Column Summary
 

@@ -1,9 +1,7 @@
 # Data Quality Report: nw_energy_proxies
-Generated: 2026-04-01T14:28:37.366398
+Generated: 2026-04-03T19:43:00.309593
 
 **Shape**: 12 rows × 6 columns
-
-Filter pass rate: 12 rows after filtering
 
 ## Column Summary
 

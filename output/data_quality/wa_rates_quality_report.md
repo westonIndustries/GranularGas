@@ -1,9 +1,7 @@
 # Data Quality Report: wa_rates
-Generated: 2026-04-01T14:28:37.288934
+Generated: 2026-04-03T19:43:00.228078
 
 **Shape**: 14 rows × 4 columns
-
-Filter pass rate: 14 rows after filtering
 
 ## Column Summary
 

@@ -1,9 +1,7 @@
 # Data Quality Report: baseload_factors
-Generated: 2026-04-01T14:28:37.354153
+Generated: 2026-04-03T19:43:00.296781
 
 **Shape**: 15 rows × 6 columns
-
-Filter pass rate: 15 rows after filtering
 
 ## Column Summary
 

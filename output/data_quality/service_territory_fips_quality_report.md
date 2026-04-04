@@ -1,9 +1,9 @@
 # Data Quality Report: service_territory_fips
-Generated: 2026-04-01T14:28:37.380732
+Generated: 2026-04-03T19:43:00.323977
 
 **Shape**: 16 rows × 3 columns
 
-Filter pass rate: 16 rows after filtering
+Loaded 16 county FIPS entries
 
 ## Column Summary
 

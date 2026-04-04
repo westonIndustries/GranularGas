@@ -1,9 +1,7 @@
 # Data Quality Report: or_rates
-Generated: 2026-04-01T14:28:37.236252
+Generated: 2026-04-03T19:43:00.175057
 
 **Shape**: 14 rows × 5 columns
-
-Filter pass rate: 14 rows after filtering
 
 ## Column Summary
 

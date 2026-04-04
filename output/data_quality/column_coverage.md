@@ -1,53 +1,11 @@
 # Column Coverage Matrix
-Generated: 2026-04-01T14:28:37.559234
+Generated: 2026-04-03T19:43:00.341034
 
-✅ = present, ❌ = missing expected, ➕ = unexpected extra
-
-## premise_data
-
-| Column | Expected | Present | Status |
-|--------|----------|---------|--------|
-| blinded_id | True | False | ❌ MISSING |
-| service_state | True | False | ❌ MISSING |
-| district_code_IRP | True | False | ❌ MISSING |
-| status_code | True | False | ❌ MISSING |
-| custtype | True | False | ❌ MISSING |
-
-## equipment_data
-
-| Column | Expected | Present | Status |
-|--------|----------|---------|--------|
-| blinded_id | True | False | ❌ MISSING |
-| equipment_type_code | True | False | ❌ MISSING |
-| QTY_OF_EQUIPMENT_TYPE | True | False | ❌ MISSING |
-
-## equipment_codes
-
-| Column | Expected | Present | Status |
-|--------|----------|---------|--------|
-| equipment_type_code | True | False | ❌ MISSING |
-| equipment_class | True | False | ❌ MISSING |
-| description | True | False | ❌ MISSING |
-
-## segment_data
-
-| Column | Expected | Present | Status |
-|--------|----------|---------|--------|
-| blinded_id | True | False | ❌ MISSING |
-| custtype | True | False | ❌ MISSING |
-| segment | True | False | ❌ MISSING |
-| subseg | True | False | ❌ MISSING |
-| mktseg | True | False | ❌ MISSING |
-| setmonth | True | False | ❌ MISSING |
-| setday | True | False | ❌ MISSING |
-| setyear | True | False | ❌ MISSING |
-
-## billing_data
-
-| Column | Expected | Present | Status |
-|--------|----------|---------|--------|
-| blinded_id | True | False | ❌ MISSING |
-| rate_schedule | True | False | ❌ MISSING |
-| rate_class | True | False | ❌ MISSING |
-| GL_revenue_date | True | False | ❌ MISSING |
-| utility_usage | True | False | ❌ MISSING |
+| file | status | expected_cols | actual_cols | missing | extra |
+| --- | --- | --- | --- | --- | --- |
+| premise | UNAVAILABLE | 4 | 0 | blinded_id, custtype, district_code_IRP, status_code | N/A |
+| equipment | UNAVAILABLE | 4 | 0 | blinded_id, efficiency, equipment_type_code, install_year | N/A |
+| segment | UNAVAILABLE | 2 | 0 | blinded_id, segment | N/A |
+| equipment_codes | UNAVAILABLE | 2 | 0 | equipment_class, equipment_type_code | N/A |
+| billing | UNAVAILABLE | 2 | 0 | blinded_id, utility_usage | N/A |
+| weather | UNAVAILABLE | 5 | 0 | AvgTemp, Date, MaxTemp, MinTemp, SiteId | N/A |
