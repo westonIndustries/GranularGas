@@ -203,7 +203,7 @@ graph LR
 
 ### Pipeline Stages
 
-1. **Data Ingestion & Cleaning**: Loads CSV files from Data/NWNatural Data/ (proprietary) and Data/ (external sources), filters to residential premises (custtype='R', status_code='AC'), joins premise/equipment/segment/billing tables on blinded_id, reconstructs historical $/therm rates from tariff CSVs, converts billing dollars to estimated therms, handles missing data with documented assumptions.
+1. **Data Ingestion & Cleaning**: Individual loaders in `src/loaders/` each handle one data source — loading CSV/XLS files from `Data/` or calling APIs. Each loader is runnable standalone (`python -m src.loaders.<name>`) and saves diagnostic output to `output/loaders/`. The `data_ingestion.py` module re-exports all loaders and provides the `build_premise_equipment_table` join that combines premise/equipment/segment/codes into a unified DataFrame. Tariff loaders reconstruct historical $/therm rates; billing loader converts dollars to estimated therms.
 
 2. **Housing Stock & Equipment Model**: Builds a representation of the residential housing stock with equipment inventories per premise. Applies scenario-driven equipment transitions (replacements via Weibull survival model, fuel switching) for projection years.
 
@@ -216,7 +216,46 @@ graph LR
 ```
 src/
 +-- config.py              # Constants, file paths, end-use mappings, default parameters
-+-- data_ingestion.py      # CSV loading, joining, filtering, cleaning, tariff processing
++-- loaders/               # Individual data loaders (one file per data source, each runnable standalone)
+|   +-- __init__.py
+|   +-- _helpers.py        # Shared diagnostics: save summary + sample CSV to output/loaders/
+|   +-- load_premise_data.py
+|   +-- load_equipment_data.py
+|   +-- load_segment_data.py
+|   +-- load_equipment_codes.py
+|   +-- load_weather_data.py
+|   +-- load_water_temperature.py
+|   +-- load_snow_data.py
+|   +-- load_billing_data.py
+|   +-- load_or_rates.py
+|   +-- load_wa_rates.py
+|   +-- load_wacog_history.py
+|   +-- load_rate_case_history.py
+|   +-- load_billing_to_therms.py    # build_historical_rate_table + convert_billing_to_therms
+|   +-- load_rbsa_site_detail.py
+|   +-- load_rbsa_hvac.py
+|   +-- load_rbsa_water_heater.py
+|   +-- load_rbsa_distributions.py   # build_rbsa_distributions
+|   +-- load_rbsam_metering.py
+|   +-- load_rbsa_2017.py
+|   +-- load_ashrae_service_life.py
+|   +-- load_ashrae_maintenance_cost.py
+|   +-- load_useful_life_table.py    # build_useful_life_table
+|   +-- load_load_decay_forecast.py
+|   +-- load_historical_upc.py
+|   +-- load_baseload_factors.py     # load_baseload_factors + calculate_site_baseload
+|   +-- load_nw_energy_proxies.py
+|   +-- load_gbr_properties.py       # fetch_gbr_properties + build_gbr_building_profiles
+|   +-- load_service_territory_fips.py
+|   +-- load_census_b25034.py        # fetch_census_b25034 + build_vintage_distribution
+|   +-- load_b25034_county.py
+|   +-- load_b25040_county.py
+|   +-- load_b25024_county.py
+|   +-- load_psu_forecasts.py
+|   +-- load_ofm_housing.py
+|   +-- load_noaa_normals.py         # daily + monthly + compute_weather_adjustment
+|   +-- load_recs_microdata.py       # load_recs_microdata + build_recs_enduse_benchmarks
++-- data_ingestion.py      # Re-exports all loaders + build_premise_equipment_table join
 +-- housing_stock.py       # Housing stock construction and projection
 +-- equipment.py           # Equipment inventory, Weibull survival, replacement cycles
 +-- weather.py             # Weather data processing, HDD/CDD calculation, station mapping
@@ -225,6 +264,12 @@ src/
 +-- scenarios.py           # Scenario definition, parameter validation, runner
 +-- main.py                # CLI entry point, orchestrates pipeline
 ```
+
+Each loader in `src/loaders/` can be run standalone for debugging:
+```bash
+python -m src.loaders.load_premise_data
+```
+This loads the data, prints a summary to console, and saves diagnostic output (summary text + sample CSV) to `output/loaders/`.
 
 ## Components and Interfaces
 

@@ -96,6 +96,9 @@ The model will be a prototype framework suitable for long-term scenario analysis
 2. WHEN weather data is available, THE Model SHALL use it to calibrate weather-sensitive end uses
 3. WHEN equipment inventory data is available, THE Model SHALL use it to establish baseline equipment characteristics
 4. IF data is incomplete or unavailable, THEN THE Model SHALL document data limitations and apply reasonable assumptions with clear justification
+5. EACH data loader SHALL be implemented as a standalone script in `src/loaders/` that can be run independently for debugging (`python -m src.loaders.<name>`)
+6. WHEN a loader runs standalone, IT SHALL print a summary to console and save diagnostic output (summary text + sample CSV) to `output/loaders/`
+7. THE `data_ingestion.py` module SHALL re-export all individual loaders for backward compatibility with downstream modules
 
 ### Requirement 8: Transparency and Documentation
 

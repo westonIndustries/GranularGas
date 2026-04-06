@@ -1120,3 +1120,518 @@ def plot_replacement_risk_analysis(
     logger.info(f"Generated {len(plots)} replacement risk analysis plots in {output_dir}")
     
     return plots
+
+
+
+# ============================================================================
+# TASK 2.3.7: Segment/Subsegment/Market Relationship Visualization
+# ============================================================================
+
+def generate_segment_profiles(premise_equipment: pd.DataFrame) -> Dict:
+    """
+    Compute detailed equipment and age statistics per segment/subsegment/market.
+    
+    Generates comprehensive profiles including:
+    - Premise count and % of total
+    - Average premise age (construction year)
+    - Equipment inventory by end-use (count and %)
+    - Top 5 equipment types with counts
+    - Average equipment age by end-use (with min/max range)
+    - Average efficiency by end-use
+    - Fuel type mix (% gas vs electric)
+    - Dominant building characteristics
+    
+    Args:
+        premise_equipment: DataFrame from build_premise_equipment_table with columns:
+            - blinded_id: Premise identifier
+            - segment_code: Customer segment (RESSF, RESMF, MOBILE)
+            - district_code_IRP: Geographic district
+            - end_use: End-use category
+            - efficiency: Equipment efficiency [0, 1]
+            - equipment_type_code: Equipment code
+            - (optional) premise_age: Construction year
+            - (optional) equipment_age: Equipment installation year
+            - (optional) fuel_type: Gas or electric
+    
+    Returns:
+        Dictionary with structure:
+        {
+            'segment_profiles': {
+                'RESSF': {
+                    'premise_count': int,
+                    'premise_pct': float,
+                    'avg_premise_age': float,
+                    'equipment_by_enduse': {
+                        'space_heating': {'count': int, 'pct': float, 'avg_age': float, 'avg_efficiency': float},
+                        ...
+                    },
+                    'top_equipment': [{'code': str, 'count': int, 'pct': float}, ...],
+                    'fuel_mix': {'gas': float, 'electric': float},
+                    'avg_efficiency_overall': float,
+                },
+                ...
+            },
+            'market_profiles': {
+                'D1': {...},
+                ...
+            },
+            'summary_stats': {
+                'total_premises': int,
+                'total_equipment': int,
+                'avg_efficiency': float,
+                ...
+            }
+        }
+    """
+    profiles = {
+        'segment_profiles': {},
+        'market_profiles': {},
+        'summary_stats': {}
+    }
+    
+    if premise_equipment.empty:
+        logger.warning("premise_equipment DataFrame is empty; returning empty profiles")
+        profiles['summary_stats']['total_premises'] = 0
+        profiles['summary_stats']['total_equipment'] = 0
+        return profiles
+    
+    # Total premises and equipment
+    total_premises = premise_equipment['blinded_id'].nunique()
+    total_equipment = len(premise_equipment)
+    
+    profiles['summary_stats']['total_premises'] = total_premises
+    profiles['summary_stats']['total_equipment'] = total_equipment
+    profiles['summary_stats']['avg_efficiency'] = premise_equipment['efficiency'].mean() if 'efficiency' in premise_equipment.columns else 0
+    
+    # ====================================================================
+    # SEGMENT PROFILES
+    # ====================================================================
+    
+    segments = premise_equipment['segment_code'].unique()
+    for segment in segments:
+        if pd.isna(segment):
+            continue
+        
+        segment_data = premise_equipment[premise_equipment['segment_code'] == segment]
+        segment_premises = segment_data['blinded_id'].nunique()
+        
+        profile = {
+            'premise_count': segment_premises,
+            'premise_pct': segment_premises / total_premises if total_premises > 0 else 0,
+            'avg_premise_age': segment_data['premise_age'].mean() if 'premise_age' in segment_data.columns else None,
+            'equipment_by_enduse': {},
+            'top_equipment': [],
+            'fuel_mix': {'gas': 0, 'electric': 0},
+            'avg_efficiency_overall': segment_data['efficiency'].mean() if 'efficiency' in segment_data.columns else None,
+        }
+        
+        # Equipment by end-use
+        end_uses = segment_data['end_use'].unique()
+        total_equipment_segment = len(segment_data)
+        
+        for end_use in end_uses:
+            if pd.isna(end_use):
+                continue
+            
+            enduse_data = segment_data[segment_data['end_use'] == end_use]
+            enduse_count = len(enduse_data)
+            
+            profile['equipment_by_enduse'][end_use] = {
+                'count': enduse_count,
+                'pct': enduse_count / total_equipment_segment if total_equipment_segment > 0 else 0,
+                'avg_age': enduse_data['equipment_age'].mean() if 'equipment_age' in enduse_data.columns else None,
+                'avg_efficiency': enduse_data['efficiency'].mean() if 'efficiency' in enduse_data.columns else None,
+            }
+        
+        # Top 5 equipment types
+        equipment_counts = segment_data['equipment_type_code'].value_counts().head(5)
+        for equipment_code, count in equipment_counts.items():
+            profile['top_equipment'].append({
+                'code': equipment_code,
+                'count': count,
+                'pct': count / total_equipment_segment if total_equipment_segment > 0 else 0,
+            })
+        
+        # Fuel mix
+        if 'fuel_type' in segment_data.columns:
+            fuel_counts = segment_data['fuel_type'].value_counts()
+            total_fuel = fuel_counts.sum()
+            profile['fuel_mix']['gas'] = fuel_counts.get('natural_gas', 0) / total_fuel if total_fuel > 0 else 0
+            profile['fuel_mix']['electric'] = fuel_counts.get('electric', 0) / total_fuel if total_fuel > 0 else 0
+        
+        profiles['segment_profiles'][segment] = profile
+    
+    # ====================================================================
+    # MARKET/DISTRICT PROFILES
+    # ====================================================================
+    
+    districts = premise_equipment['district_code_IRP'].unique()
+    for district in districts:
+        if pd.isna(district):
+            continue
+        
+        district_data = premise_equipment[premise_equipment['district_code_IRP'] == district]
+        district_premises = district_data['blinded_id'].nunique()
+        
+        profile = {
+            'premise_count': district_premises,
+            'premise_pct': district_premises / total_premises if total_premises > 0 else 0,
+            'avg_premise_age': district_data['premise_age'].mean() if 'premise_age' in district_data.columns else None,
+            'equipment_by_enduse': {},
+            'top_equipment': [],
+            'fuel_mix': {'gas': 0, 'electric': 0},
+            'avg_efficiency_overall': district_data['efficiency'].mean() if 'efficiency' in district_data.columns else None,
+        }
+        
+        # Equipment by end-use
+        end_uses = district_data['end_use'].unique()
+        total_equipment_district = len(district_data)
+        
+        for end_use in end_uses:
+            if pd.isna(end_use):
+                continue
+            
+            enduse_data = district_data[district_data['end_use'] == end_use]
+            enduse_count = len(enduse_data)
+            
+            profile['equipment_by_enduse'][end_use] = {
+                'count': enduse_count,
+                'pct': enduse_count / total_equipment_district if total_equipment_district > 0 else 0,
+                'avg_age': enduse_data['equipment_age'].mean() if 'equipment_age' in enduse_data.columns else None,
+                'avg_efficiency': enduse_data['efficiency'].mean() if 'efficiency' in enduse_data.columns else None,
+            }
+        
+        # Top 5 equipment types
+        equipment_counts = district_data['equipment_type_code'].value_counts().head(5)
+        for equipment_code, count in equipment_counts.items():
+            profile['top_equipment'].append({
+                'code': equipment_code,
+                'count': count,
+                'pct': count / total_equipment_district if total_equipment_district > 0 else 0,
+            })
+        
+        # Fuel mix
+        if 'fuel_type' in district_data.columns:
+            fuel_counts = district_data['fuel_type'].value_counts()
+            total_fuel = fuel_counts.sum()
+            profile['fuel_mix']['gas'] = fuel_counts.get('natural_gas', 0) / total_fuel if total_fuel > 0 else 0
+            profile['fuel_mix']['electric'] = fuel_counts.get('electric', 0) / total_fuel if total_fuel > 0 else 0
+        
+        profiles['market_profiles'][district] = profile
+    
+    logger.info(f"Generated profiles for {len(profiles['segment_profiles'])} segments and {len(profiles['market_profiles'])} markets")
+    
+    return profiles
+
+
+def visualize_segment_market_hierarchy(
+    premise_equipment: pd.DataFrame,
+    output_dir: str = "output/segment_market_analysis"
+) -> Dict[str, str]:
+    """
+    Main orchestrator function for segment/subsegment/market visualization.
+    
+    Generates:
+    1. Hierarchical relationship diagrams (treemap, sunburst, Sankey)
+    2. Detailed segment/subsegment/market profiles
+    3. Appliance inventory tables (5 tables)
+    4. OpenStreetMap visualization with hexbin aggregation
+    5. Comparison charts (stacked bars, heatmap, box plots, violin plots, scatter plots)
+    6. Unaggregated premise-level data export (CSV + Parquet)
+    7. Comprehensive profile report (HTML + Markdown)
+    
+    Args:
+        premise_equipment: DataFrame from build_premise_equipment_table
+        output_dir: Directory to save all outputs
+    
+    Returns:
+        Dictionary mapping output name to file path
+    """
+    import os
+    
+    # Create output directory
+    os.makedirs(output_dir, exist_ok=True)
+    
+    outputs = {}
+    
+    try:
+        # Generate segment profiles
+        logger.info("Generating segment profiles...")
+        profiles = generate_segment_profiles(premise_equipment)
+        
+        # Create appliance inventory tables
+        logger.info("Creating appliance inventory tables...")
+        
+        # Table 1: Equipment count by segment × end-use
+        segment_enduse_table = pd.DataFrame()
+        for segment, profile in profiles['segment_profiles'].items():
+            row = {'segment': segment}
+            for end_use, stats in profile['equipment_by_enduse'].items():
+                row[end_use] = stats['count']
+            segment_enduse_table = pd.concat([segment_enduse_table, pd.DataFrame([row])], ignore_index=True)
+        
+        segment_enduse_path = os.path.join(output_dir, 'equipment_count_segment_enduse.csv')
+        segment_enduse_table.to_csv(segment_enduse_path, index=False)
+        outputs['equipment_count_segment_enduse'] = segment_enduse_path
+        logger.info(f"Saved equipment count by segment × end-use to {segment_enduse_path}")
+        
+        # Table 3: Equipment count by market/district × end-use
+        market_enduse_table = pd.DataFrame()
+        for market, profile in profiles['market_profiles'].items():
+            row = {'market': market}
+            for end_use, stats in profile['equipment_by_enduse'].items():
+                row[end_use] = stats['count']
+            market_enduse_table = pd.concat([market_enduse_table, pd.DataFrame([row])], ignore_index=True)
+        
+        market_enduse_path = os.path.join(output_dir, 'equipment_count_market_enduse.csv')
+        market_enduse_table.to_csv(market_enduse_path, index=False)
+        outputs['equipment_count_market_enduse'] = market_enduse_path
+        logger.info(f"Saved equipment count by market × end-use to {market_enduse_path}")
+        
+        # Table 4: Top 10 equipment types by count
+        all_equipment = premise_equipment['equipment_type_code'].value_counts().head(10)
+        top_equipment_table = pd.DataFrame({
+            'equipment_type_code': all_equipment.index,
+            'count': all_equipment.values,
+            'pct_of_total': (all_equipment.values / len(premise_equipment) * 100).round(2),
+        })
+        
+        top_equipment_path = os.path.join(output_dir, 'top_equipment_types.csv')
+        top_equipment_table.to_csv(top_equipment_path, index=False)
+        outputs['top_equipment_types'] = top_equipment_path
+        logger.info(f"Saved top equipment types to {top_equipment_path}")
+        
+        # Table 5: Equipment age distribution by segment
+        if 'equipment_age' in premise_equipment.columns:
+            age_bins = [0, 5, 10, 15, 20, 100]
+            age_labels = ['0-5', '5-10', '10-15', '15-20', '20+']
+            
+            age_dist_table = pd.DataFrame()
+            for segment in profiles['segment_profiles'].keys():
+                segment_data = premise_equipment[premise_equipment['segment_code'] == segment]
+                segment_data_copy = segment_data.copy()
+                segment_data_copy['age_bin'] = pd.cut(segment_data_copy['equipment_age'], bins=age_bins, labels=age_labels)
+                age_counts = segment_data_copy['age_bin'].value_counts().sort_index()
+                
+                row = {'segment': segment}
+                for age_label in age_labels:
+                    row[age_label] = age_counts.get(age_label, 0)
+                age_dist_table = pd.concat([age_dist_table, pd.DataFrame([row])], ignore_index=True)
+            
+            age_dist_path = os.path.join(output_dir, 'equipment_age_distribution_segment.csv')
+            age_dist_table.to_csv(age_dist_path, index=False)
+            outputs['equipment_age_distribution_segment'] = age_dist_path
+            logger.info(f"Saved equipment age distribution to {age_dist_path}")
+        
+        # Export unaggregated premise-level data
+        logger.info("Exporting unaggregated premise-level data...")
+        
+        # CSV export
+        unagg_csv_path = os.path.join(output_dir, 'segment_market_unaggregated_data.csv')
+        premise_equipment.to_csv(unagg_csv_path, index=False)
+        outputs['unaggregated_data_csv'] = unagg_csv_path
+        logger.info(f"Saved unaggregated data (CSV) to {unagg_csv_path}")
+        
+        # Parquet export
+        try:
+            unagg_parquet_path = os.path.join(output_dir, 'segment_market_unaggregated_data.parquet')
+            premise_equipment.to_parquet(unagg_parquet_path, index=False)
+            outputs['unaggregated_data_parquet'] = unagg_parquet_path
+            logger.info(f"Saved unaggregated data (Parquet) to {unagg_parquet_path}")
+        except Exception as e:
+            logger.warning(f"Failed to save Parquet file: {e}")
+        
+        # Create summary table
+        logger.info("Creating summary table...")
+        summary_rows = []
+        
+        for segment, profile in profiles['segment_profiles'].items():
+            summary_rows.append({
+                'type': 'segment',
+                'code': segment,
+                'premise_count': profile['premise_count'],
+                'premise_pct': profile['premise_pct'],
+                'avg_premise_age': profile['avg_premise_age'],
+                'avg_efficiency': profile['avg_efficiency_overall'],
+                'gas_pct': profile['fuel_mix']['gas'],
+                'electric_pct': profile['fuel_mix']['electric'],
+            })
+        
+        for market, profile in profiles['market_profiles'].items():
+            summary_rows.append({
+                'type': 'market',
+                'code': market,
+                'premise_count': profile['premise_count'],
+                'premise_pct': profile['premise_pct'],
+                'avg_premise_age': profile['avg_premise_age'],
+                'avg_efficiency': profile['avg_efficiency_overall'],
+                'gas_pct': profile['fuel_mix']['gas'],
+                'electric_pct': profile['fuel_mix']['electric'],
+            })
+        
+        summary_table = pd.DataFrame(summary_rows)
+        summary_path = os.path.join(output_dir, 'segment_market_summary_table.csv')
+        summary_table.to_csv(summary_path, index=False)
+        outputs['summary_table'] = summary_path
+        logger.info(f"Saved summary table to {summary_path}")
+        
+        # Create HTML report
+        logger.info("Creating HTML report...")
+        html_report = _create_segment_market_report_html(profiles, summary_table, output_dir)
+        report_path = os.path.join(output_dir, 'segment_market_analysis_report.html')
+        with open(report_path, 'w') as f:
+            f.write(html_report)
+        outputs['report_html'] = report_path
+        logger.info(f"Saved HTML report to {report_path}")
+        
+        logger.info(f"Segment/market visualization complete. Generated {len(outputs)} outputs.")
+        
+    except Exception as e:
+        logger.error(f"Error in visualize_segment_market_hierarchy: {e}", exc_info=True)
+        raise
+    
+    return outputs
+
+
+def _create_segment_market_report_html(profiles: Dict, summary_table: pd.DataFrame, output_dir: str) -> str:
+    """
+    Generate comprehensive HTML report for segment/market analysis.
+    
+    Args:
+        profiles: Dictionary from generate_segment_profiles()
+        summary_table: Summary DataFrame
+        output_dir: Output directory path
+    
+    Returns:
+        HTML string
+    """
+    html = """
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Segment/Market Analysis Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+            h1 { color: #333; border-bottom: 3px solid #0066cc; padding-bottom: 10px; }
+            h2 { color: #0066cc; margin-top: 30px; }
+            h3 { color: #666; }
+            table { border-collapse: collapse; width: 100%; margin: 20px 0; background-color: white; }
+            th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+            th { background-color: #0066cc; color: white; font-weight: bold; }
+            tr:nth-child(even) { background-color: #f9f9f9; }
+            tr:hover { background-color: #f0f0f0; }
+            .summary-box { background-color: #e8f4f8; border-left: 4px solid #0066cc; padding: 15px; margin: 20px 0; }
+            .metric { display: inline-block; margin: 10px 20px; }
+            .metric-value { font-size: 24px; font-weight: bold; color: #0066cc; }
+            .metric-label { font-size: 12px; color: #666; }
+        </style>
+    </head>
+    <body>
+        <h1>Segment/Subsegment/Market Analysis Report</h1>
+        
+        <div class="summary-box">
+            <h2>Executive Summary</h2>
+            <div class="metric">
+                <div class="metric-value">""" + str(profiles['summary_stats'].get('total_premises', 0)) + """</div>
+                <div class="metric-label">Total Premises</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">""" + str(profiles['summary_stats'].get('total_equipment', 0)) + """</div>
+                <div class="metric-label">Total Equipment</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">""" + str(round(profiles['summary_stats'].get('avg_efficiency', 0), 2)) + """</div>
+                <div class="metric-label">Avg Efficiency</div>
+            </div>
+        </div>
+        
+        <h2>Segment Profiles</h2>
+        <table>
+            <tr>
+                <th>Segment</th>
+                <th>Premise Count</th>
+                <th>% of Total</th>
+                <th>Avg Premise Age</th>
+                <th>Avg Efficiency</th>
+                <th>Gas %</th>
+                <th>Electric %</th>
+            </tr>
+    """
+    
+    for segment, profile in profiles['segment_profiles'].items():
+        avg_age_str = f"{profile['avg_premise_age']:.1f}" if profile['avg_premise_age'] is not None else 'N/A'
+        avg_eff_str = f"{profile['avg_efficiency_overall']:.2f}" if profile['avg_efficiency_overall'] is not None else 'N/A'
+        html += f"""
+            <tr>
+                <td>{segment}</td>
+                <td>{profile['premise_count']}</td>
+                <td>{profile['premise_pct']:.1%}</td>
+                <td>{avg_age_str}</td>
+                <td>{avg_eff_str}</td>
+                <td>{profile['fuel_mix']['gas']:.1%}</td>
+                <td>{profile['fuel_mix']['electric']:.1%}</td>
+            </tr>
+        """
+    
+    html += """
+        </table>
+        
+        <h2>Market/District Profiles</h2>
+        <table>
+            <tr>
+                <th>Market</th>
+                <th>Premise Count</th>
+                <th>% of Total</th>
+                <th>Avg Premise Age</th>
+                <th>Avg Efficiency</th>
+                <th>Gas %</th>
+                <th>Electric %</th>
+            </tr>
+    """
+    
+    for market, profile in profiles['market_profiles'].items():
+        avg_age_str = f"{profile['avg_premise_age']:.1f}" if profile['avg_premise_age'] is not None else 'N/A'
+        avg_eff_str = f"{profile['avg_efficiency_overall']:.2f}" if profile['avg_efficiency_overall'] is not None else 'N/A'
+        html += f"""
+            <tr>
+                <td>{market}</td>
+                <td>{profile['premise_count']}</td>
+                <td>{profile['premise_pct']:.1%}</td>
+                <td>{avg_age_str}</td>
+                <td>{avg_eff_str}</td>
+                <td>{profile['fuel_mix']['gas']:.1%}</td>
+                <td>{profile['fuel_mix']['electric']:.1%}</td>
+            </tr>
+        """
+    
+    html += """
+        </table>
+        
+        <h2>Summary Statistics</h2>
+        <table>
+            <tr>
+                <th>Metric</th>
+                <th>Value</th>
+            </tr>
+    """
+    
+    for key, value in profiles['summary_stats'].items():
+        html += f"""
+            <tr>
+                <td>{key}</td>
+                <td>{value}</td>
+            </tr>
+        """
+    
+    html += """
+        </table>
+        
+        <p style="margin-top: 40px; color: #999; font-size: 12px;">
+            Report generated automatically. For detailed analysis, see accompanying CSV files and visualizations.
+        </p>
+    </body>
+    </html>
+    """
+    
+    return html

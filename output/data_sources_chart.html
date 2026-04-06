@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NW Natural End-Use Forecasting — Data Source Inventory</title>
+<style>
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background: #f8f9fa; color: #333; }
+  h1 { font-size: 1.4em; margin-bottom: 4px; }
+  .subtitle { color: #666; font-size: 0.9em; margin-bottom: 20px; }
+  .legend { display: flex; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 0.85em; }
+  .legend-swatch { width: 18px; height: 18px; border-radius: 3px; border: 1px solid #ccc; }
+  table { border-collapse: collapse; width: 100%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  th { background: #343a40; color: #fff; padding: 10px 12px; text-align: left; font-size: 0.85em; position: sticky; top: 0; }
+  td { padding: 8px 12px; border-bottom: 1px solid #e9ecef; font-size: 0.84em; vertical-align: top; }
+  tr:hover { background: #f1f3f5; }
+  /* Provenance colors */
+  .nwn { background-color: #d4edda; }          /* green — NW Natural */
+  .team { background-color: #fff3cd; }          /* yellow — Team-created */
+  .external { background-color: #cce5ff; }      /* blue — External/public */
+  /* Access method badges */
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.78em; font-weight: 600; }
+  .badge-file { background: #e2e3e5; color: #383d41; }
+  .badge-api  { background: #f8d7da; color: #721c24; }
+  .badge-both { background: #d1ecf1; color: #0c5460; }
+  .section-header td { background: #495057; color: #fff; font-weight: 700; font-size: 0.9em; padding: 6px 12px; }
+  .note { font-size: 0.8em; color: #888; }
+</style>
+</head>
+<body>
+
+<h1>Data Source Inventory — NW Natural End-Use Forecasting Model</h1>
+<p class="subtitle">Color = provenance (who owns/created it) &nbsp;|&nbsp; Badge = access method (file on disk vs. runtime API call)</p>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-swatch" style="background:#d4edda;"></div> NW Natural (proprietary / blinded)</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#fff3cd;"></div> Team-created (extracted from NWN PDFs / docs)</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#cce5ff;"></div> External / Public (NEEA, ASHRAE, Census, NOAA, EIA, PSU, OFM, GBR)</div>
+  <div class="legend-item"><span class="badge badge-file">FILE</span> Local CSV / XLS / TXT</div>
+  <div class="legend-item"><span class="badge badge-api">API</span> Runtime HTTP call</div>
+  <div class="legend-item"><span class="badge badge-both">FILE+API</span> Local files with optional API refresh</div>
+</div>
+
+<table>
+<thead>
+<tr>
+  <th>#</th>
+  <th>Data Source</th>
+  <th>Config Constant(s)</th>
+  <th>Path / Endpoint</th>
+  <th>Access</th>
+  <th>Loader Function(s)</th>
+</tr>
+</thead>
+<tbody>
+
+<!-- ===== NW NATURAL PROPRIETARY ===== -->
+<tr class="section-header"><td colspan="6">NW Natural — Proprietary / Blinded Data</td></tr>
+
+<tr class="nwn">
+  <td>1</td>
+  <td>Premise data (blinded)</td>
+  <td>PREMISE_DATA</td>
+  <td>Data/NWNatural Data/premise_data_blinded.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_premise_data()</td>
+</tr>
+<tr class="nwn">
+  <td>2</td>
+  <td>Equipment inventory (blinded)</td>
+  <td>EQUIPMENT_DATA</td>
+  <td>Data/NWNatural Data/equipment_data_blinded.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_equipment_data()</td>
+</tr>
+<tr class="nwn">
+  <td>3</td>
+  <td>Equipment codes lookup</td>
+  <td>EQUIPMENT_CODES</td>
+  <td>Data/NWNatural Data/equipment_codes.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_equipment_codes()</td>
+</tr>
+<tr class="nwn">
+  <td>4</td>
+  <td>Segment data (blinded)</td>
+  <td>SEGMENT_DATA</td>
+  <td>Data/NWNatural Data/segment_data_blinded.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_segment_data()</td>
+</tr>
+<tr class="nwn">
+  <td>5</td>
+  <td>Billing data (blinded)</td>
+  <td>BILLING_DATA, BILLING_DATA_SMALL</td>
+  <td>Data/NWNatural Data/billing_data_blinded.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_billing_data()</td>
+</tr>
+<tr class="nwn">
+  <td>6</td>
+  <td>Daily weather — CalDay (1985–2025)</td>
+  <td>WEATHER_CALDAY</td>
+  <td>Data/NWNatural Data/DailyCalDay1985_Mar2025.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_weather_data()</td>
+</tr>
+<tr class="nwn">
+  <td>7</td>
+  <td>Daily weather — GasDay (2008–2025)</td>
+  <td>WEATHER_GASDAY</td>
+  <td>Data/NWNatural Data/DailyGasDay2008_Mar2025.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_weather_data()</td>
+</tr>
+<tr class="nwn">
+  <td>8</td>
+  <td>Bull Run water temperature</td>
+  <td>WATER_TEMP</td>
+  <td>Data/NWNatural Data/BullRunWaterTemperature.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_water_temperature()</td>
+</tr>
+<tr class="nwn">
+  <td>9</td>
+  <td>Portland snow data (1985–2025)</td>
+  <td>PORTLAND_SNOW</td>
+  <td>Data/NWNatural Data/Portland_snow.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_snow_data()</td>
+</tr>
+<tr class="nwn">
+  <td>10</td>
+  <td>IRP 10-Year Load Decay Forecast</td>
+  <td>IRP_LOAD_DECAY_FORECAST</td>
+  <td>Data/10-Year Load Decay Forecast (2025–2035).csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_load_decay_forecast()</td>
+</tr>
+<tr class="nwn">
+  <td>11</td>
+  <td>Prior load decay data (description)</td>
+  <td>LOAD_DECAY_DESCRIPTION</td>
+  <td>Data/prior load decay data description.txt</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_historical_upc()</td>
+</tr>
+<tr class="nwn">
+  <td>12</td>
+  <td>Prior load decay data (reconstructed)</td>
+  <td>LOAD_DECAY_RECONSTRUCTED</td>
+  <td>Data/prior load decay data reconstructed.txt</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_historical_upc()</td>
+</tr>
+<tr class="nwn">
+  <td>13</td>
+  <td>Prior load decay data (simulated)</td>
+  <td>LOAD_DECAY_SIMULATED</td>
+  <td>Data/prior load decay data simulated.txt</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_historical_upc()</td>
+</tr>
+<tr class="nwn">
+  <td>14</td>
+  <td>IRP context document</td>
+  <td>IRP_CONTEXT</td>
+  <td>Data/Integrated Resource Plan (IRP),.txt</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td><span class="note">reference only</span></td>
+</tr>
+<tr class="nwn">
+  <td>15</td>
+  <td>Service territory FIPS codes</td>
+  <td>NWN_SERVICE_TERRITORY_CSV</td>
+  <td>Data/NW Natural Service Territory Census data.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_service_territory_fips()</td>
+</tr>
+
+<!-- ===== TEAM-CREATED ===== -->
+<tr class="section-header"><td colspan="6">Team-Created — Extracted from NW Natural Rate PDFs</td></tr>
+
+<tr class="team">
+  <td>16</td>
+  <td>Oregon current rates (Oct 2025)</td>
+  <td>OR_RATES</td>
+  <td>Data/or_rates_oct_2025.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_or_rates()</td>
+</tr>
+<tr class="team">
+  <td>17</td>
+  <td>Oregon rate case history</td>
+  <td>OR_RATE_CASE_HISTORY</td>
+  <td>Data/or_rate_case_history.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_rate_case_history()</td>
+</tr>
+<tr class="team">
+  <td>18</td>
+  <td>Oregon WACOG history</td>
+  <td>OR_WACOG_HISTORY</td>
+  <td>Data/or_wacog_history.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_wacog_history()</td>
+</tr>
+<tr class="team">
+  <td>19</td>
+  <td>Washington current rates (Nov 2025)</td>
+  <td>WA_RATES</td>
+  <td>Data/wa_rates_nov_2025.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_wa_rates()</td>
+</tr>
+<tr class="team">
+  <td>20</td>
+  <td>Washington rate case history</td>
+  <td>WA_RATE_CASE_HISTORY</td>
+  <td>Data/wa_rate_case_history.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_rate_case_history()</td>
+</tr>
+<tr class="team">
+  <td>21</td>
+  <td>Washington WACOG history</td>
+  <td>WA_WACOG_HISTORY</td>
+  <td>Data/wa_wacog_history.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_wacog_history()</td>
+</tr>
+<tr class="team">
+  <td>22</td>
+  <td>Baseload consumption factors</td>
+  <td>BASELOAD_FACTORS_CSV</td>
+  <td>Data/Baseload Consumption Factors.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_baseload_factors(), calculate_site_baseload()</td>
+</tr>
+<tr class="team">
+  <td>23</td>
+  <td>Baseload factors reference impl.</td>
+  <td>BASELOAD_FACTORS_PY</td>
+  <td>Data/Baseload Consumption factors.py</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td><span class="note">reference only</span></td>
+</tr>
+<tr class="team">
+  <td>24</td>
+  <td>NW Energy Proxies (compact params)</td>
+  <td>NW_ENERGY_PROXIES_CSV</td>
+  <td>Data/nw_energy_proxies.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_nw_energy_proxies()</td>
+</tr>
+<tr class="team">
+  <td>25</td>
+  <td>Equipment life math documentation</td>
+  <td>EQUIPMENT_LIFE_MATH</td>
+  <td>Data/equipment life math.txt</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td><span class="note">reference only</span></td>
+</tr>
+
+<!-- ===== EXTERNAL / PUBLIC ===== -->
+<tr class="section-header"><td colspan="6">External / Public — NEEA RBSA</td></tr>
+
+<tr class="external">
+  <td>26</td>
+  <td>RBSA 2022 — SiteDetail</td>
+  <td>RBSA_2022_SITE_DETAIL</td>
+  <td>Data/2022 RBSA Datasets/SiteDetail.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_rbsa_site_detail()</td>
+</tr>
+<tr class="external">
+  <td>27</td>
+  <td>RBSA 2022 — HVAC</td>
+  <td>RBSA_2022_HVAC</td>
+  <td>Data/2022 RBSA Datasets/Mechanical_HeatingAndCooling.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_rbsa_hvac()</td>
+</tr>
+<tr class="external">
+  <td>28</td>
+  <td>RBSA 2022 — Water Heater</td>
+  <td>RBSA_2022_WATER_HEATER</td>
+  <td>Data/2022 RBSA Datasets/Mechanical_WaterHeater.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_rbsa_water_heater()</td>
+</tr>
+<tr class="external">
+  <td>29</td>
+  <td>RBSA 2022 — Stove/Oven</td>
+  <td>RBSA_2022_STOVE_OVEN</td>
+  <td>Data/2022 RBSA Datasets/Appliance_Stove_Oven.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td><span class="note">not yet loaded</span></td>
+</tr>
+<tr class="external">
+  <td>30</td>
+  <td>RBSA 2022 — Laundry</td>
+  <td>RBSA_2022_LAUNDRY</td>
+  <td>Data/2022 RBSA Datasets/Appliance_Laundry.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td><span class="note">not yet loaded</span></td>
+</tr>
+<tr class="external">
+  <td>31</td>
+  <td>RBSA 2022 — Building Shell</td>
+  <td>RBSA_2022_BUILDING_SHELL</td>
+  <td>Data/2022 RBSA Datasets/Building_Shell_One_Line.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td><span class="note">not yet loaded</span></td>
+</tr>
+<tr class="external">
+  <td>32</td>
+  <td>RBSA sub-metered data Year 1</td>
+  <td>RBSAM_Y1_DIR</td>
+  <td>Data/rbsam_y1/ (~300MB TXT chunks)</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_rbsam_metering()</td>
+</tr>
+<tr class="external">
+  <td>33</td>
+  <td>RBSA sub-metered data Year 2</td>
+  <td>RBSAM_Y2_DIR</td>
+  <td>Data/rbsam_y2/ (~300MB TXT chunks)</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_rbsam_metering()</td>
+</tr>
+<tr class="external">
+  <td>34</td>
+  <td>RBSA metering data dictionary</td>
+  <td>RBSAM_DATA_DICT</td>
+  <td>Data/rbsa-metering-data-dictionary-2016-2017.xlsx</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td><span class="note">reference only</span></td>
+</tr>
+<tr class="external">
+  <td>35</td>
+  <td>2017 RBSA-II Combined Database</td>
+  <td>RBSA_2017_DIR</td>
+  <td>Data/2017-RBSA-II-Combined-Database/ (43 CSVs)</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_rbsa_2017_site_detail()</td>
+</tr>
+
+<tr class="section-header"><td colspan="6">External / Public — ASHRAE</td></tr>
+
+<tr class="external">
+  <td>36</td>
+  <td>ASHRAE Service Life — Oregon</td>
+  <td>ASHRAE_OR_SERVICE_LIFE</td>
+  <td>Data/ashrae/OR-ASHRAE_Service_Life_Data.xls</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_ashrae_service_life()</td>
+</tr>
+<tr class="external">
+  <td>37</td>
+  <td>ASHRAE Service Life — Washington</td>
+  <td>ASHRAE_WA_SERVICE_LIFE</td>
+  <td>Data/ashrae/WA-ASHRAE_Service_Life_Data.xls</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_ashrae_service_life()</td>
+</tr>
+<tr class="external">
+  <td>38</td>
+  <td>ASHRAE Maintenance Cost — Oregon</td>
+  <td>ASHRAE_OR_MAINTENANCE_COST</td>
+  <td>Data/ashrae/OR-ASHRAE_Maintenance_Cost_Data.xls</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_ashrae_maintenance_cost()</td>
+</tr>
+<tr class="external">
+  <td>39</td>
+  <td>ASHRAE Maintenance Cost — Washington</td>
+  <td>ASHRAE_WA_MAINTENANCE_COST</td>
+  <td>Data/ashrae/WA-ASHRAE_Maintenance_Cost_Data.xls</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_ashrae_maintenance_cost()</td>
+</tr>
+
+<tr class="section-header"><td colspan="6">External / Public — U.S. Census Bureau</td></tr>
+
+<tr class="external">
+  <td>40</td>
+  <td>Census ACS B25034 (Year Built) — API</td>
+  <td>CENSUS_API_BASE, CENSUS_B25034_GROUP</td>
+  <td>https://api.census.gov/data/{year}/acs/acs5</td>
+  <td><span class="badge badge-api">API</span></td>
+  <td>fetch_census_b25034()</td>
+</tr>
+<tr class="external">
+  <td>41</td>
+  <td>Census B25034 county files (offline)</td>
+  <td>B25034_COUNTY_DIR</td>
+  <td>Data/B25034-5y-county/ (2009–2023)</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_b25034_county_files()</td>
+</tr>
+<tr class="external">
+  <td>42</td>
+  <td>Census B25040 (Heating Fuel) county files</td>
+  <td>B25040_COUNTY_DIR</td>
+  <td>Data/B25040-5y-county/</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_b25040_county_files()</td>
+</tr>
+<tr class="external">
+  <td>43</td>
+  <td>Census B25024 (Units in Structure) county files</td>
+  <td>B25024_COUNTY_DIR</td>
+  <td>Data/B25024-5y-county/</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_b25024_county_files()</td>
+</tr>
+<tr class="external">
+  <td>44</td>
+  <td>Census B25034 national backup</td>
+  <td>B25034_BACKUP_DIR</td>
+  <td>Data/B25034-5y/</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td><span class="note">fallback only</span></td>
+</tr>
+
+<tr class="section-header"><td colspan="6">External / Public — Population & Housing Forecasts</td></tr>
+
+<tr class="external">
+  <td>45</td>
+  <td>PSU Population Forecasts (13 OR counties)</td>
+  <td>PSU_PROJECTION_DIR</td>
+  <td>Data/PSU projection data/ (2023/2024/2025 subdirs)</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_psu_population_forecasts()</td>
+</tr>
+<tr class="external">
+  <td>46</td>
+  <td>WA OFM Housing Estimates (3 WA counties)</td>
+  <td>OFM_HOUSING_XLSX</td>
+  <td>Data/ofm_april1_housing.xlsx</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_ofm_housing()</td>
+</tr>
+
+<tr class="section-header"><td colspan="6">External / Public — NOAA Climate Normals</td></tr>
+
+<tr class="external">
+  <td>47</td>
+  <td>NOAA daily/monthly normals (11 stations)</td>
+  <td>NOAA_NORMALS_DIR</td>
+  <td>Data/noaa_normals/{station}_daily_normals.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_noaa_daily_normals(), load_noaa_monthly_normals()</td>
+</tr>
+<tr class="external">
+  <td>48</td>
+  <td>NOAA CDO API (climate data online)</td>
+  <td>NOAA_CDO_API_BASE, NOAA_CDO_TOKEN_ENV_VAR</td>
+  <td>https://www.ncei.noaa.gov/cdo-web/api/v2</td>
+  <td><span class="badge badge-api">API</span></td>
+  <td><span class="note">used for initial download; normals cached locally</span></td>
+</tr>
+
+<tr class="section-header"><td colspan="6">External / Public — EIA RECS</td></tr>
+
+<tr class="external">
+  <td>49</td>
+  <td>RECS 2020 microdata</td>
+  <td>RECS_2020_CSV</td>
+  <td>Data/Residential Energy Consumption Servey/recs2020_public_v7.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_recs_microdata()</td>
+</tr>
+<tr class="external">
+  <td>50</td>
+  <td>RECS 2015 microdata</td>
+  <td>RECS_2015_CSV</td>
+  <td>Data/Residential Energy Consumption Servey/recs2015_public_v4.csv</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_recs_microdata()</td>
+</tr>
+<tr class="external">
+  <td>51</td>
+  <td>RECS 2009 microdata</td>
+  <td>RECS_2009_CSV</td>
+  <td>Data/Residential Energy Consumption Servey/2009/</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_recs_microdata()</td>
+</tr>
+<tr class="external">
+  <td>52</td>
+  <td>RECS 2005 microdata</td>
+  <td>RECS_2005_CSV</td>
+  <td>Data/Residential Energy Consumption Servey/2005/</td>
+  <td><span class="badge badge-file">FILE</span></td>
+  <td>load_recs_microdata()</td>
+</tr>
+
+<tr class="section-header"><td colspan="6">External / Public — Green Building Registry</td></tr>
+
+<tr class="external">
+  <td>53</td>
+  <td>Green Building Registry API</td>
+  <td>GBR_API_BASE_URL, GBR_API_KEY_ENV_VAR</td>
+  <td>https://api.greenbuildingregistry.com</td>
+  <td><span class="badge badge-api">API</span></td>
+  <td>fetch_gbr_properties(), build_gbr_building_profiles()</td>
+</tr>
+
+</tbody>
+</table>
+
+<br>
+<h2 style="font-size:1.1em;">Summary</h2>
+<table style="width:auto;">
+<thead><tr><th>Category</th><th>Count</th><th>File</th><th>API</th></tr></thead>
+<tbody>
+<tr class="nwn"><td>NW Natural (proprietary)</td><td>15</td><td>15</td><td>0</td></tr>
+<tr class="team"><td>Team-created (from NWN docs)</td><td>10</td><td>10</td><td>0</td></tr>
+<tr class="external"><td>External / Public</td><td>28</td><td>25</td><td>3</td></tr>
+<tr style="font-weight:700;"><td>Total</td><td>53</td><td>50</td><td>3</td></tr>
+</tbody>
+</table>
+<p class="note" style="margin-top:8px;">API sources: Census ACS B25034, NOAA CDO, Green Building Registry. All others are local files.</p>
+
+</body>
+</html>

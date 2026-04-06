@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Data Quality: baseload_factors</title>
+<style>
+body { font-family: 'Segoe UI', sans-serif; margin: 20px; background: #f8f9fa; }
+h1 { font-size: 1.3em; }
+table { border-collapse: collapse; width: 100%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px; }
+th { background: #343a40; color: #fff; padding: 8px 10px; text-align: left; font-size: 0.85em; }
+td { padding: 6px 10px; border-bottom: 1px solid #e9ecef; font-size: 0.84em; }
+tr:hover { background: #f1f3f5; }
+.sample td { max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.meta { color: #666; font-size: 0.9em; }
+</style></head><body>
+<h1>Data Quality Report: baseload_factors</h1>
+<p class="meta">Generated: 2026-04-03T19:43:00.306582 | Shape: 15 rows × 6 columns</p>
+
+<h2>Column Summary</h2>
+<table><thead><tr><th>Column</th><th>Type</th><th>Nulls</th><th>Null%</th><th>Unique</th><th>Details</th></tr></thead>
+<tbody><tr><td>Category</td><td>str</td><td>0</td><td>0.0%</td><td>6</td><td>Standby (4); Baseload (3); Adjustment (3); Equipment (2); Pilot (2)</td></tr><tr><td>SubCategory</td><td>str</td><td>0</td><td>0.0%</td><td>13</td><td>Fireplace (2); Climate (2); UPC_Decay (1); Gas_Furnace (1); Gas_Water_Heater (1)</td></tr><tr><td>Parameter</td><td>str</td><td>0</td><td>0.0%</td><td>7</td><td>Annual_Consumption (5); Base_Loss (4); Median_Life (2); Annual_Net_Rate (1); ...</td></tr><tr><td>Value</td><td>float64</td><td>0</td><td>0.0%</td><td>13</td><td>min=-0.0119, max=82.0, mean=30.42</td></tr><tr><td>Unit</td><td>str</td><td>0</td><td>0.0%</td><td>5</td><td>Therms (5); Therms/yr (4); Multiplier (3); Years (2); Ratio (1)</td></tr><tr><td>Source</td><td>str</td><td>0</td><td>0.0%</td><td>12</td><td>DOE_AEO_2026 (2); RECS_2020_PNW (2); NEEA_Metering_Study (2); NWN_2025_IRP (1...</td></tr></tbody></table>
+<h2>Sample Rows</h2>
+<table border="1" class="dataframe sample">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Category</th>
+      <th>SubCategory</th>
+      <th>Parameter</th>
+      <th>Value</th>
+      <th>Unit</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Building</td>
+      <td>UPC_Decay</td>
+      <td>Annual_Net_Rate</td>
+      <td>-0.0119</td>
+      <td>Ratio</td>
+      <td>NWN_2025_IRP</td>
+    </tr>
+    <tr>
+      <td>Equipment</td>
+      <td>Gas_Furnace</td>
+      <td>Median_Life</td>
+      <td>18.0000</td>
+      <td>Years</td>
+      <td>DOE_AEO_2026</td>
+    </tr>
+    <tr>
+      <td>Equipment</td>
+      <td>Gas_Water_Heater</td>
+      <td>Median_Life</td>
+      <td>12.0000</td>
+      <td>Years</td>
+      <td>DOE_AEO_2026</td>
+    </tr>
+    <tr>
+      <td>Baseload</td>
+      <td>Cooking</td>
+      <td>Annual_Consumption</td>
+      <td>30.0000</td>
+      <td>Therms</td>
+      <td>RECS_2020_PNW</td>
+    </tr>
+    <tr>
+      <td>Baseload</td>
+      <td>Drying</td>
+      <td>Annual_Consumption</td>
+      <td>20.0000</td>
+      <td>Therms</td>
+      <td>RECS_2020_PNW</td>
+    </tr>
+    <tr>
+      <td>Baseload</td>
+      <td>Fireplace</td>
+      <td>Annual_Consumption</td>
+      <td>55.0000</td>
+      <td>Therms</td>
+      <td>RBSA_2022_Metered</td>
+    </tr>
+    <tr>
+      <td>Pilot</td>
+      <td>Fireplace</td>
+      <td>Annual_Consumption</td>
+      <td>82.0000</td>
+      <td>Therms</td>
+      <td>NEEA_Metering_Study</td>
+    </tr>
+    <tr>
+      <td>Pilot</td>
+      <td>Water_Heater</td>
+      <td>Annual_Consumption</td>
+      <td>46.0000</td>
+      <td>Therms</td>
+      <td>NEEA_Metering_Study</td>
+    </tr>
+    <tr>
+      <td>Standby</td>
+      <td>WH_Pre_1990</td>
+      <td>Base_Loss</td>
+      <td>75.0000</td>
+      <td>Therms/yr</td>
+      <td>ASHRAE_90.1_Historical</td>
+    </tr>
+    <tr>
+      <td>Standby</td>
+      <td>WH_1991_2003</td>
+      <td>Base_Loss</td>
+      <td>55.0000</td>
+      <td>Therms/yr</td>
+      <td>DOE_Test_Proc_1998</td>
+    </tr>
+  </tbody>
+</table>
+</body></html>

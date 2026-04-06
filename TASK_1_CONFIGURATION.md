@@ -1,285 +1,152 @@
-# Task 1: Project Configuration and Setup
+# Task 1: Project Structure and Configuration
+
+## Status: ✅ Complete (1.1-1.7), 🔲 1.8 pending
 
 ## Overview
 
-Task 1 establishes the foundational configuration module for the NW Natural End-Use Forecasting Model. This task creates `src/config.py`, which centralizes all static configuration, file paths, and mappings used throughout the model. It's the first task in the implementation plan and must be completed before any data ingestion or simulation work can proceed.
-
-## What Task 1 Does
-
-Task 1 consists of two subtasks:
-
-### 1.1 Create Configuration Module (`src/config.py`)
-
-Creates a comprehensive configuration file that defines:
-
-- **End-use category mappings** — Maps equipment type codes to end-use categories (space heating, water heating, cooking, clothes drying, fireplace, other)
-- **Equipment efficiency defaults** — Default efficiency values by end-use category for when equipment-specific data is unavailable
-- **Equipment useful life assumptions** — Default equipment lifespans by end-use category (used for replacement modeling)
-- **Weibull survival model parameters** — Shape parameters (beta) for modeling equipment failure distributions
-- **Weather station assignments** — Maps NW Natural district codes to weather station identifiers
-- **File path constants** — Centralized paths to all data sources (NW Natural proprietary data, external datasets, tariffs, RBSA, ASHRAE, Census, etc.)
-- **API constants** — Configuration for external APIs (Green Building Registry, Census, NOAA)
-- **Simulation parameters** — Base year, default temperatures, and other simulation constants
-
-### 1.2 Write Property Test for Config Completeness
-
-Creates a property-based test (`tests/test_config_properties.py`) that validates:
-
-**Property 1**: All equipment_type_codes in END_USE_MAP resolve to a valid end-use category string
-
-This ensures that every equipment code defined in the mapping has a corresponding valid end-use category, preventing runtime errors when the model tries to classify equipment.
-
-## How It Works
+Task 1 sets up the `src/` package structure and `src/config.py` with all static configuration. Broken into 8 sub-tasks (max 6 items each). Sub-tasks 1.1-1.7 define the code structure and constants. Sub-task 1.8 is a property test that validates everything is wired correctly.
 
-### Configuration Structure
+---
 
-The `config.py` module is organized into logical sections:
+## Sub-task Details
 
-```python
-# Section 1: END-USE CATEGORY MAPPINGS
-END_USE_MAP = {
-    "HEAT": "space_heating",
-    "FURN": "space_heating",
-    "WTR": "water_heating",
-    "COOK": "cooking",
-    "DRYR": "clothes_drying",
-    "FRPL": "fireplace",
-    "OTHR": "other",
-    # ... more mappings
-}
+### 1.1 Create `src/` package structure ✅
 
-# Section 2: EQUIPMENT EFFICIENCY DEFAULTS
-DEFAULT_EFFICIENCY = {
-    "space_heating": 0.80,
-    "water_heating": 0.60,
-    "cooking": 0.75,
-    "clothes_drying": 0.65,
-    "fireplace": 0.10,
-    "other": 0.70,
-}
+Creates the Python package scaffolding so all modules can import each other.
 
-# Section 3: EQUIPMENT USEFUL LIFE
-USEFUL_LIFE = {
-    "space_heating": 20,
-    "water_heating": 13,
-    "cooking": 15,
-    "clothes_drying": 13,
-    "fireplace": 30,
-    "other": 15,
-}
+| File | Purpose |
+|------|---------|
+| `src/__init__.py` | Makes `src` a Python package |
+| `src/loaders/__init__.py` | Makes `src.loaders` a package for individual data loaders |
+| `src/loaders/_helpers.py` | Shared functions: `save_diagnostics()` (txt + CSV), `save_quality_report()` (HTML + MD) |
+| `src/validation/__init__.py` | Makes `src.validation` a package for validation scripts |
 
-# Section 4: WEIBULL SURVIVAL MODEL PARAMETERS
-WEIBULL_BETA = {
-    "space_heating": 3.0,
-    "water_heating": 3.0,
-    "cooking": 2.5,
-    "clothes_drying": 2.5,
-    "fireplace": 2.0,
-    "other": 2.5,
-}
+**How to verify:** Run `python -c "from src import config; print('OK')"` — should print `OK` with no import errors.
 
-# Section 5: DISTRICT TO WEATHER STATION MAPPING
-DISTRICT_WEATHER_MAP = {
-    "MULT": "KPDX",  # Multnomah -> Portland
-    "WASH": "KPDX",  # Washington -> Portland
-    # ... more mappings for all 16 NWN service territory counties
-}
+---
 
-# Section 6: FILE PATH CONSTANTS
-# NW Natural-supplied data
-PREMISE_DATA = "Data/NWNatural Data/premise_data_blinded.csv"
-EQUIPMENT_DATA = "Data/NWNatural Data/equipment_data_blinded.csv"
-# ... more file paths
+### 1.2 Define end-use and equipment mappings ✅
 
-# Section 7: API CONSTANTS
-GBR_API_BASE_URL = "https://api.greenbuildingregistry.com"
-CENSUS_API_BASE = "https://api.census.gov/data"
-# ... more API configuration
-```
+These dictionaries are the core lookup tables that drive the entire model. They live in `src/config.py`.
 
-### Key Design Decisions
+| Constant | What it does | Example |
+|----------|-------------|---------|
+| `END_USE_MAP` | Maps equipment_type_code → end-use category | `"HEAT" → "space_heating"`, `"WTR" → "water_heating"` |
+| `DEFAULT_EFFICIENCY` | Fallback efficiency when data is missing | `"space_heating" → 0.80`, `"water_heating" → 0.60` |
+| `USEFUL_LIFE` | Default equipment lifespan (years) | `"space_heating" → 20`, `"water_heating" → 13` |
+| `WEIBULL_BETA` | Shape parameter for Weibull survival model | `"space_heating" → 3.0`, `"appliances" → 2.5` |
+| `DISTRICT_WEATHER_MAP` | Maps IRP district → weather station ICAO code | `"MULT" → "KPDX"`, `"LANE" → "KEUG"` |
 
-1. **Centralized Configuration** — All constants are defined in one place, making it easy to update assumptions without searching through code.
+**How to verify:** Run `python -c "from src.config import END_USE_MAP, DEFAULT_EFFICIENCY, USEFUL_LIFE, DISTRICT_WEATHER_MAP; print(f'{len(END_USE_MAP)} end-use codes, {len(DEFAULT_EFFICIENCY)} efficiency defaults, {len(USEFUL_LIFE)} life defaults, {len(DISTRICT_WEATHER_MAP)} district mappings')"` — should show counts for all four dicts (e.g. `12 end-use codes, 6 efficiency defaults, 6 life defaults, 17 district mappings`).
 
-2. **End-Use Mapping** — Equipment type codes from NW Natural's equipment_codes.csv are mapped to standardized end-use categories. This allows the model to work with equipment-level data while aggregating to end-use level for analysis.
+---
 
-3. **Efficiency Defaults** — When equipment-specific efficiency data is missing, the model falls back to category-level defaults. These are conservative estimates based on pre-2010 equipment baselines.
+### 1.3 Define NW Natural proprietary file paths ✅
 
-4. **Weibull Parameters** — Different end-uses have different failure rate distributions. HVAC systems (beta=3.0) have a concentrated replacement window, while appliances (beta=2.5) fail more gradually.
+Points to the blinded/anonymized data files supplied by NW Natural in `Data/NWNatural Data/`.
 
-5. **Weather Station Mapping** — Each NW Natural district is assigned to the nearest weather station. This enables weather-driven simulation of space heating and water heating demand.
+| Constant | File | Content |
+|----------|------|---------|
+| `PREMISE_DATA` | `premise_data_blinded.csv` | ~500K residential premises |
+| `EQUIPMENT_DATA` | `equipment_data_blinded.csv` | ~1M equipment records |
+| `EQUIPMENT_CODES` | `equipment_codes.csv` | Equipment type lookup table |
+| `SEGMENT_DATA` | `segment_data_blinded.csv` | Customer segment/vintage info |
+| `BILLING_DATA` | `billing_data_blinded.csv` | Historical billing (full) |
+| `BILLING_DATA_SMALL` | `small_billing_data_blinded.csv` | Billing (dev subset) |
+| `WEATHER_CALDAY` | `DailyCalDay1985_Mar2025.csv` | Daily weather (calendar day) |
+| `WEATHER_GASDAY` | `DailyGasDay2008_Mar2025.csv` | Daily weather (gas day) |
+| `WATER_TEMP` | `BullRunWaterTemperature.csv` | Incoming cold water temp |
+| `PORTLAND_SNOW` | `Portland_snow.csv` | Daily snowfall/depth |
 
-6. **File Path Organization** — Paths are organized by data source provenance:
-   - NW Natural-supplied proprietary data
-   - Team-created tariff CSVs
-   - RBSA building stock data
-   - ASHRAE equipment data
-   - Census demographic data
-   - NOAA weather data
-   - EIA RECS microdata
+**How to verify:** Run `python -c "from src import config; import os; missing = [k for k in ['PREMISE_DATA','EQUIPMENT_DATA','EQUIPMENT_CODES','SEGMENT_DATA','WEATHER_CALDAY','WATER_TEMP','PORTLAND_SNOW'] if not os.path.exists(getattr(config, k))]; print(f'{len(missing)} missing: {missing}' if missing else 'All NWN files present')"` — will show which files are missing (expected until NW Natural data is placed).
 
-## How to Run the Tests
+---
 
-### Prerequisites
+### 1.4 Define tariff and rate file paths ✅
 
-Ensure you have Python 3.9+ and pytest installed:
+Points to team-created CSVs extracted from NW Natural rate PDFs. These are in `Data/` (root).
 
-```bash
-pip install pytest hypothesis pandas numpy
-```
+| Constant | File | Content |
+|----------|------|---------|
+| `OR_RATES` | `or_rates_oct_2025.csv` | Oregon current rates (14 rows) |
+| `OR_RATE_CASE_HISTORY` | `or_rate_case_history.csv` | Oregon rate cases 1975-2025 (22 rows) |
+| `OR_WACOG_HISTORY` | `or_wacog_history.csv` | Oregon WACOG 2018-2025 (16 rows) |
+| `WA_RATES` | `wa_rates_nov_2025.csv` | Washington current rates (14 rows) |
+| `WA_RATE_CASE_HISTORY` | `wa_rate_case_history.csv` | Washington rate cases (16 rows) |
+| `WA_WACOG_HISTORY` | `wa_wacog_history.csv` | Washington WACOG 2018-2025 (16 rows) |
+| `OR_CURRENT_RATE` | — | `1.41220` $/therm (OR Schedule 2) |
+| `WA_CURRENT_RATE` | — | `1.24164` $/therm (WA Schedule 2) |
 
-### Running Task 1 Tests
+**How to verify:** Run `python -c "from src import config; import os; files = ['OR_RATES','WA_RATES','OR_WACOG_HISTORY','WA_WACOG_HISTORY','OR_RATE_CASE_HISTORY','WA_RATE_CASE_HISTORY']; present = sum(1 for f in files if os.path.exists(getattr(config, f))); print(f'{present}/{len(files)} tariff files present')"` — should show `6/6 tariff files present`.
 
-#### Run All Task 1 Tests
+---
 
-```bash
-python -m pytest tests/test_config_properties.py -v
-```
+### 1.5 Define external data source paths ✅
 
-This runs all configuration property tests and displays verbose output showing each test name and result.
+Points to public/external datasets (RBSA, ASHRAE, IRP calibration, baseload factors, metering).
 
-#### Run Specific Test
+| Group | Key Constants | Source |
+|-------|--------------|--------|
+| RBSA 2022 | `RBSA_2022_SITE_DETAIL`, `RBSA_2022_HVAC`, `RBSA_2022_WATER_HEATER`, etc. | NEEA building stock assessment |
+| ASHRAE | `ASHRAE_OR_SERVICE_LIFE`, `ASHRAE_WA_SERVICE_LIFE`, etc. | Equipment service life/maintenance |
+| IRP/Calibration | `IRP_LOAD_DECAY_FORECAST`, `LOAD_DECAY_RECONSTRUCTED`, `LOAD_DECAY_SIMULATED` | NW Natural IRP UPC forecast |
+| Baseload | `BASELOAD_FACTORS_CSV`, `NW_ENERGY_PROXIES_CSV` | DOE/RECS/RBSA consumption factors |
+| Metering | `RBSAM_Y1_DIR`, `RBSAM_Y2_DIR`, `RBSA_2017_DIR` | RBSA sub-metered end-use data |
 
-```bash
-python -m pytest tests/test_config_properties.py::TestConfigCompleteness::test_end_use_map_all_codes_valid -v
-```
+**How to verify:** Run `python -c "from src import config; import os; print('IRP forecast:', os.path.exists(config.IRP_LOAD_DECAY_FORECAST)); print('Baseload factors:', os.path.exists(config.BASELOAD_FACTORS_CSV)); print('Energy proxies:', os.path.exists(config.NW_ENERGY_PROXIES_CSV))"` — IRP forecast, baseload factors, and energy proxies should all show `True`.
 
-This runs only the Property 1 test that validates all equipment codes map to valid end-use categories.
+---
 
-#### Run with Coverage
+### 1.6 Define API and Census constants ✅
 
-```bash
-python -m pytest tests/test_config_properties.py --cov=src.config --cov-report=html
-```
+API endpoints and Census data paths for runtime data fetching and offline fallback files.
 
-This generates a coverage report showing which parts of config.py are tested.
+| Group | Key Constants | Notes |
+|-------|--------------|-------|
+| GBR API | `GBR_API_BASE_URL`, `GBR_API_KEY_ENV_VAR` | Requires `GBR_API_KEY` env var |
+| Census API | `CENSUS_API_BASE`, `CENSUS_ACS1_TEMPLATE`, `CENSUS_ACS5_TEMPLATE` | No API key needed |
+| Census tables | `CENSUS_B25034_GROUP`, `CENSUS_B25040_GROUP`, `CENSUS_B25024_GROUP` | Year Built, Heating Fuel, Units in Structure |
+| Census files | `B25034_COUNTY_DIR`, `B25040_COUNTY_DIR`, `B25024_COUNTY_DIR` | Offline county-level CSVs |
+| Service territory | `NWN_SERVICE_TERRITORY_CSV` | 16 county FIPS codes |
+| PSU forecasts | `PSU_PROJECTION_DIR` | Oregon county population forecasts |
+| WA OFM | `OFM_HOUSING_XLSX` | Washington housing estimates |
+| NOAA | `NOAA_NORMALS_DIR`, `NOAA_CDO_API_BASE`, `ICAO_TO_GHCND` | 11 weather stations |
+| RECS | `RECS_DIR`, `RECS_2020_CSV`, etc. | EIA survey microdata |
 
-#### Run with Detailed Output
+**How to verify:** Run `python -c "from src import config; print(f'Service territory: {config.NWN_SERVICE_TERRITORY_CSV}'); print(f'ICAO stations: {len(config.ICAO_TO_GHCND)}'); print(f'Census API: {config.CENSUS_API_BASE}')"` — should show the service territory path, 11 ICAO stations, and the Census API URL.
 
-```bash
-python -m pytest tests/test_config_properties.py -vv --tb=short
-```
+---
 
-The `-vv` flag provides extra verbosity, and `--tb=short` shows concise traceback information if tests fail.
+### 1.7 Define simulation parameters ✅
 
-### Test Output Example
+Core constants used by the simulation engine.
 
-```
-tests/test_config_properties.py::TestConfigCompleteness::test_end_use_map_all_codes_valid PASSED [ 50%]
-tests/test_config_properties.py::TestConfigCompleteness::test_end_use_map_values_are_strings PASSED [100%]
+| Constant | Value | Purpose |
+|----------|-------|---------|
+| `BASE_YEAR` | 2025 | Starting year for projections |
+| `DEFAULT_BASE_TEMP` | 65.0°F | HDD/CDD base temperature |
+| `DEFAULT_HOT_WATER_TEMP` | 120.0°F | Target hot water temperature |
+| `DEFAULT_COLD_WATER_TEMP` | 55.0°F | Assumed incoming cold water temp |
+| `DEFAULT_DAILY_HOT_WATER_GALLONS` | 64.0 | Average daily hot water usage per household |
+| `LOG_LEVEL`, `LOG_FORMAT`, `OUTPUT_DIR` | — | Logging and output configuration |
 
-============================== 2 passed in 0.15s ==============================
-```
+**How to verify:** Run `python -c "from src.config import BASE_YEAR, DEFAULT_BASE_TEMP, DEFAULT_HOT_WATER_TEMP; print(f'Base year: {BASE_YEAR}, HDD base: {DEFAULT_BASE_TEMP}F, WH target: {DEFAULT_HOT_WATER_TEMP}F')"` — should show `Base year: 2025, HDD base: 65.0F, WH target: 120.0F`.
 
-## What Gets Tested
+---
 
-### Property 1: End-Use Map Completeness
+### 1.8 Property test: config completeness 🔲
 
-The test validates:
+Validates that all config dictionaries are internally consistent and all file paths point to real files.
 
-1. **All keys are valid equipment codes** — Every key in END_USE_MAP is a string
-2. **All values are valid end-use categories** — Every value maps to one of the defined end-use categories (space_heating, water_heating, cooking, clothes_drying, fireplace, other)
-3. **No null or empty mappings** — No mapping is missing or incomplete
-4. **Consistency** — The same equipment code always maps to the same end-use
+**What it checks:**
+1. All `END_USE_MAP` values are non-empty strings
+2. All `DEFAULT_EFFICIENCY` keys match `END_USE_MAP` values, all values in (0, 1]
+3. All `USEFUL_LIFE` keys match `END_USE_MAP` values, all values are positive integers
+4. All `DISTRICT_WEATHER_MAP` values are valid ICAO codes present in `ICAO_TO_GHCND`
+5. All file path constants reference files that exist on disk (missing = warning, not failure)
 
-### Example Test Scenarios
+**Output:** `output/config_validation/config_completeness.html` and `.md` with pass/fail per check
 
-```python
-# Valid mapping
-END_USE_MAP["FURN"] == "space_heating"  # ✓ Valid
+**How to run:** `python -m src.validation.run_config_completeness`
 
-# Invalid mapping (would fail test)
-END_USE_MAP["FURN"] == "invalid_category"  # ✗ Fails
-
-# Missing mapping (would fail test)
-END_USE_MAP["UNKNOWN_CODE"]  # ✗ KeyError or None
-```
-
-## Integration with Rest of Model
-
-Once Task 1 is complete, the configuration is imported and used throughout the model:
-
-```python
-# In data_ingestion.py
-from src import config
-
-# Map equipment codes to end-use
-df['end_use'] = df['equipment_type_code'].map(config.END_USE_MAP)
-
-# Apply default efficiency
-df['efficiency'] = df['efficiency'].fillna(
-    df['end_use'].map(config.DEFAULT_EFFICIENCY)
-)
-
-# Assign weather stations
-df['weather_station'] = df['district_code_IRP'].map(config.DISTRICT_WEATHER_MAP)
-```
-
-## File Locations
-
-- **Configuration module**: `src/config.py`
-- **Property tests**: `tests/test_config_properties.py`
-- **Test data**: Uses synthetic data generated in tests (no external files required)
-
-## Validation Checklist
-
-After completing Task 1, verify:
-
-- [ ] `src/config.py` exists and contains all required sections
-- [ ] All END_USE_MAP entries map to valid end-use categories
-- [ ] All DEFAULT_EFFICIENCY keys match end-use categories
-- [ ] All USEFUL_LIFE keys match end-use categories
-- [ ] All WEIBULL_BETA keys match end-use categories
-- [ ] DISTRICT_WEATHER_MAP covers all 16 NWN service territory counties
-- [ ] All file path constants point to correct locations
-- [ ] All API constants are defined
-- [ ] `tests/test_config_properties.py` exists and all tests pass
-- [ ] Property 1 test validates END_USE_MAP completeness
-
-## Common Issues and Troubleshooting
-
-### Issue: Import Error for config module
-
-**Symptom**: `ModuleNotFoundError: No module named 'src.config'`
-
-**Solution**: Ensure you're running pytest from the project root directory:
-```bash
-cd /path/to/GranularGas
-python -m pytest tests/test_config_properties.py -v
-```
-
-### Issue: File path constants point to wrong locations
-
-**Symptom**: Tests pass but data loading fails later
-
-**Solution**: Verify file paths in config.py match actual data directory structure:
-```bash
-ls -la Data/NWNatural\ Data/
-ls -la Data/
-```
-
-### Issue: Tests fail with "invalid end-use category"
-
-**Symptom**: `AssertionError: Invalid end-use category in END_USE_MAP`
-
-**Solution**: Check that all END_USE_MAP values are in the valid set:
-```python
-VALID_END_USES = {
-    "space_heating", "water_heating", "cooking", 
-    "clothes_drying", "fireplace", "other"
-}
-```
-
-## Next Steps
-
-After Task 1 is complete and all tests pass:
-
-1. Proceed to **Task 2: Data Ingestion Module** — Implements CSV loading and data cleaning functions
-2. Task 2 will import and use the configuration from Task 1
-3. Configuration can be updated as needed, but Task 1 provides the stable foundation
-
-## References
-
-- **Requirements**: 1.1, 1.4, 3.2, 4.2
-- **Design Document**: See `.kiro/specs/nw-natural-end-use-forecasting/design.md` for detailed architecture
-- **Tasks Document**: See `.kiro/specs/nw-natural-end-use-forecasting/tasks.md` for full implementation plan
+**How to verify output:** Open `output/config_validation/config_completeness.html` in a browser. Each check should show ✅ (pass) or ❌ (fail) with details. File existence checks will show ⚠️ for missing files — that's expected until all data is placed.
