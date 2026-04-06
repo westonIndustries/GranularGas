@@ -670,3 +670,453 @@ def plot_electrification_map(
     
     plt.close(fig)
     return fig
+
+
+def plot_housing_age_heatmap(
+    housing_age_by_district: Dict[str, float],
+    title: str = "Average Housing Age by District",
+    output_path: Optional[str] = None,
+    figsize: Tuple[int, int] = (12, 8)
+) -> plt.Figure:
+    """
+    Generate a heatmap showing average housing age by district.
+    
+    Color intensity represents age (blue=new, red=old).
+    
+    Args:
+        housing_age_by_district: Dict mapping district code to average age (years)
+        title: Title for the plot
+        output_path: Optional path to save the figure
+        figsize: Figure size as (width, height) tuple
+    
+    Returns:
+        matplotlib Figure object
+    """
+    fig, ax = plt.subplots(figsize=figsize)
+    
+    # Prepare data
+    districts = sorted(housing_age_by_district.keys())
+    ages = [housing_age_by_district[d] for d in districts]
+    
+    # Create bar chart with color gradient
+    colors = plt.cm.RdYlBu_r(np.linspace(0, 1, len(ages)))
+    bars = ax.bar(districts, ages, color=colors, edgecolor='black', linewidth=1.5)
+    
+    # Add value labels on bars
+    for bar, age in zip(bars, ages):
+        height = bar.get_height()
+        ax.text(bar.get_x() + bar.get_width()/2., height,
+               f'{age:.1f}', ha='center', va='bottom', fontsize=9, fontweight='bold')
+    
+    # Labels and title
+    ax.set_xlabel('District', fontsize=12, fontweight='bold')
+    ax.set_ylabel('Average Housing Age (years)', fontsize=12, fontweight='bold')
+    ax.set_title(title, fontsize=14, fontweight='bold')
+    ax.grid(True, alpha=0.3, axis='y')
+    
+    # Tight layout
+    plt.tight_layout()
+    
+    # Save if path provided
+    if output_path:
+        fig.savefig(output_path, dpi=300, bbox_inches='tight')
+        logger.info(f"Saved housing age heatmap to {output_path}")
+    
+    plt.close(fig)
+    return fig
+
+
+def plot_vintage_distribution_heatmap(
+    vintage_distribution_by_district: Dict[str, Dict[str, float]],
+    title: str = "Housing Vintage Distribution by District",
+    output_path: Optional[str] = None,
+    figsize: Tuple[int, int] = (12, 8)
+) -> plt.Figure:
+    """
+    Generate a heatmap showing housing vintage distribution by district.
+    
+    Rows are districts, columns are vintage eras (pre-1980, 1980-2000, 2000-2010, 2010+).
+    Color intensity represents percentage of homes in that era.
+    
+    Args:
+        vintage_distribution_by_district: Dict mapping district to vintage percentages
+        title: Title for the plot
+        output_path: Optional path to save the figure
+        figsize: Figure size as (width, height) tuple
+    
+    Returns:
+        matplotlib Figure object
+    """
+    fig, ax = plt.subplots(figsize=figsize)
+    
+    # Prepare data
+    districts = sorted(vintage_distribution_by_district.keys())
+    eras = ['pre-1980', '1980-2000', '2000-2010', '2010+']
+    
+    # Create matrix
+    data = []
+    for district in districts:
+        row = [vintage_distribution_by_district[district].get(era, 0) for era in eras]
+        data.append(row)
+    
+    data_array = np.array(data)
+    
+    # Create heatmap
+    im = ax.imshow(data_array, cmap='YlOrRd', aspect='auto')
+    
+    # Set ticks and labels
+    ax.set_xticks(np.arange(len(eras)))
+    ax.set_yticks(np.arange(len(districts)))
+    ax.set_xticklabels(eras)
+    ax.set_yticklabels(districts)
+    
+    # Rotate x labels
+    plt.setp(ax.get_xticklabels(), rotation=45, ha="right", rotation_mode="anchor")
+    
+    # Add text annotations
+    for i in range(len(districts)):
+        for j in range(len(eras)):
+            text = ax.text(j, i, f'{data_array[i, j]:.1%}',
+                          ha="center", va="center", color="black", fontsize=9, fontweight='bold')
+    
+    # Colorbar
+    cbar = plt.colorbar(im, ax=ax)
+    cbar.set_label('Percentage of Homes', rotation=270, labelpad=20, fontweight='bold')
+    
+    # Labels and title
+    ax.set_xlabel('Vintage Era', fontsize=12, fontweight='bold')
+    ax.set_ylabel('District', fontsize=12, fontweight='bold')
+    ax.set_title(title, fontsize=14, fontweight='bold')
+    
+    # Tight layout
+    plt.tight_layout()
+    
+    # Save if path provided
+    if output_path:
+        fig.savefig(output_path, dpi=300, bbox_inches='tight')
+        logger.info(f"Saved vintage distribution heatmap to {output_path}")
+    
+    plt.close(fig)
+    return fig
+
+
+def plot_replacement_probability_map(
+    replacement_probability_by_district: Dict[str, float],
+    title: str = "Equipment Replacement Probability by District",
+    output_path: Optional[str] = None,
+    figsize: Tuple[int, int] = (12, 8)
+) -> plt.Figure:
+    """
+    Generate a map showing equipment replacement probability by district.
+    
+    Color intensity represents replacement likelihood (blue=low, red=high).
+    
+    Args:
+        replacement_probability_by_district: Dict mapping district to replacement probability [0,1]
+        title: Title for the plot
+        output_path: Optional path to save the figure
+        figsize: Figure size as (width, height) tuple
+    
+    Returns:
+        matplotlib Figure object
+    """
+    fig, ax = plt.subplots(figsize=figsize)
+    
+    # Prepare data
+    districts = sorted(replacement_probability_by_district.keys())
+    probs = [replacement_probability_by_district[d] for d in districts]
+    
+    # Create bar chart with color gradient (blue to red)
+    colors = plt.cm.RdYlBu_r(np.linspace(0, 1, len(probs)))
+    bars = ax.bar(districts, probs, color=colors, edgecolor='black', linewidth=1.5)
+    
+    # Add value labels on bars
+    for bar, prob in zip(bars, probs):
+        height = bar.get_height()
+        ax.text(bar.get_x() + bar.get_width()/2., height,
+               f'{prob:.1%}', ha='center', va='bottom', fontsize=9, fontweight='bold')
+    
+    # Labels and title
+    ax.set_xlabel('District', fontsize=12, fontweight='bold')
+    ax.set_ylabel('Replacement Probability', fontsize=12, fontweight='bold')
+    ax.set_title(title, fontsize=14, fontweight='bold')
+    ax.set_ylim(0, 1.0)
+    ax.grid(True, alpha=0.3, axis='y')
+    
+    # Tight layout
+    plt.tight_layout()
+    
+    # Save if path provided
+    if output_path:
+        fig.savefig(output_path, dpi=300, bbox_inches='tight')
+        logger.info(f"Saved replacement probability map to {output_path}")
+    
+    plt.close(fig)
+    return fig
+
+
+def plot_housing_stock_composition(
+    baseline_stock,
+    projected_stocks: Dict[int, 'HousingStock'],
+    output_dir: str = "output",
+    show_plots: bool = False
+) -> Dict[str, str]:
+    """
+    Generate housing stock composition visualizations.
+    
+    Includes:
+    - Stacked bar chart: Housing vintage distribution by district
+    - Box plot: Housing age distribution by district
+    - Scatter plot: Average housing age vs. projected growth rate by district
+    - Heatmap: Percentage of homes by vintage era and district
+    
+    Args:
+        baseline_stock: HousingStock object for baseline year
+        projected_stocks: Dict mapping year to HousingStock object
+        output_dir: Directory to save plots
+        show_plots: Whether to display plots
+    
+    Returns:
+        Dictionary mapping plot name to file path
+    """
+    import os
+    
+    os.makedirs(output_dir, exist_ok=True)
+    plots = {}
+    
+    # 1. Stacked bar chart: Housing vintage distribution by district
+    fig1, ax1 = plt.subplots(figsize=(12, 6))
+    
+    districts = sorted(baseline_stock.vintage_distribution_by_district.keys())
+    eras = ['pre-1980', '1980-2000', '2000-2010', '2010+']
+    
+    # Prepare data
+    data_by_era = {era: [] for era in eras}
+    for district in districts:
+        for era in eras:
+            data_by_era[era].append(baseline_stock.vintage_distribution_by_district[district].get(era, 0))
+    
+    # Create stacked bar chart
+    bottom = np.zeros(len(districts))
+    colors = ['#d73027', '#fee090', '#91bfdb', '#4575b4']
+    
+    for era, color in zip(eras, colors):
+        ax1.bar(districts, data_by_era[era], bottom=bottom, label=era, color=color, edgecolor='black', linewidth=0.5)
+        bottom += np.array(data_by_era[era])
+    
+    ax1.set_xlabel('District', fontsize=12, fontweight='bold')
+    ax1.set_ylabel('Percentage of Homes', fontsize=12, fontweight='bold')
+    ax1.set_title('Housing Vintage Distribution by District', fontsize=14, fontweight='bold')
+    ax1.legend(loc='upper right', fontsize=10)
+    ax1.set_ylim(0, 1.0)
+    ax1.grid(True, alpha=0.3, axis='y')
+    
+    plt.tight_layout()
+    path1 = os.path.join(output_dir, "06_vintage_distribution_stacked.png")
+    fig1.savefig(path1, dpi=300, bbox_inches='tight')
+    plots['vintage_distribution_stacked'] = path1
+    plt.close(fig1)
+    
+    # 2. Box plot: Housing age distribution by district
+    fig2, ax2 = plt.subplots(figsize=(12, 6))
+    
+    ages = [baseline_stock.housing_age_by_district.get(d, 35) for d in districts]
+    ax2.boxplot([ages], tick_labels=['All Districts'])
+    ax2.set_ylabel('Housing Age (years)', fontsize=12, fontweight='bold')
+    ax2.set_title('Housing Age Distribution by District', fontsize=14, fontweight='bold')
+    ax2.grid(True, alpha=0.3, axis='y')
+    
+    plt.tight_layout()
+    path2 = os.path.join(output_dir, "07_housing_age_distribution.png")
+    fig2.savefig(path2, dpi=300, bbox_inches='tight')
+    plots['housing_age_distribution'] = path2
+    plt.close(fig2)
+    
+    # 3. Scatter plot: Average housing age vs. replacement probability
+    fig3, ax3 = plt.subplots(figsize=(10, 6))
+    
+    ages_list = [baseline_stock.housing_age_by_district.get(d, 35) for d in districts]
+    probs_list = [baseline_stock.replacement_probability_by_district.get(d, 0.15) for d in districts]
+    
+    ax3.scatter(ages_list, probs_list, s=100, alpha=0.6, edgecolors='black', linewidth=1)
+    
+    # Add district labels
+    for i, district in enumerate(districts):
+        ax3.annotate(district, (ages_list[i], probs_list[i]), fontsize=8, ha='right')
+    
+    ax3.set_xlabel('Average Housing Age (years)', fontsize=12, fontweight='bold')
+    ax3.set_ylabel('Replacement Probability', fontsize=12, fontweight='bold')
+    ax3.set_title('Housing Age vs. Replacement Probability by District', fontsize=14, fontweight='bold')
+    ax3.grid(True, alpha=0.3)
+    
+    plt.tight_layout()
+    path3 = os.path.join(output_dir, "08_age_vs_replacement.png")
+    fig3.savefig(path3, dpi=300, bbox_inches='tight')
+    plots['age_vs_replacement'] = path3
+    plt.close(fig3)
+    
+    # 4. Heatmap: Percentage of homes by vintage era and district
+    fig4, ax4 = plt.subplots(figsize=(10, 8))
+    
+    data = []
+    for district in districts:
+        row = [baseline_stock.vintage_distribution_by_district[district].get(era, 0) for era in eras]
+        data.append(row)
+    
+    data_array = np.array(data)
+    im = ax4.imshow(data_array, cmap='YlOrRd', aspect='auto')
+    
+    ax4.set_xticks(np.arange(len(eras)))
+    ax4.set_yticks(np.arange(len(districts)))
+    ax4.set_xticklabels(eras)
+    ax4.set_yticklabels(districts)
+    
+    plt.setp(ax4.get_xticklabels(), rotation=45, ha="right", rotation_mode="anchor")
+    
+    for i in range(len(districts)):
+        for j in range(len(eras)):
+            text = ax4.text(j, i, f'{data_array[i, j]:.1%}',
+                          ha="center", va="center", color="black", fontsize=8, fontweight='bold')
+    
+    cbar = plt.colorbar(im, ax=ax4)
+    cbar.set_label('Percentage', rotation=270, labelpad=20, fontweight='bold')
+    
+    ax4.set_xlabel('Vintage Era', fontsize=12, fontweight='bold')
+    ax4.set_ylabel('District', fontsize=12, fontweight='bold')
+    ax4.set_title('Housing Vintage Distribution Heatmap', fontsize=14, fontweight='bold')
+    
+    plt.tight_layout()
+    path4 = os.path.join(output_dir, "09_vintage_heatmap.png")
+    fig4.savefig(path4, dpi=300, bbox_inches='tight')
+    plots['vintage_heatmap'] = path4
+    plt.close(fig4)
+    
+    logger.info(f"Generated {len(plots)} housing stock composition plots in {output_dir}")
+    
+    return plots
+
+
+def plot_replacement_risk_analysis(
+    baseline_stock,
+    projected_stocks: Dict[int, 'HousingStock'],
+    output_dir: str = "output",
+    show_plots: bool = False
+) -> Dict[str, str]:
+    """
+    Generate replacement risk analysis visualizations.
+    
+    Includes:
+    - Line graph: Cumulative replacement probability over time by district
+    - Box plot: Distribution of replacement probabilities across all districts
+    - Scatter plot: Housing age vs. replacement probability by district
+    - Bar chart: Replacement likelihood ranking of top 10 districts
+    
+    Args:
+        baseline_stock: HousingStock object for baseline year
+        projected_stocks: Dict mapping year to HousingStock object
+        output_dir: Directory to save plots
+        show_plots: Whether to display plots
+    
+    Returns:
+        Dictionary mapping plot name to file path
+    """
+    import os
+    
+    os.makedirs(output_dir, exist_ok=True)
+    plots = {}
+    
+    # 1. Line graph: Cumulative replacement probability over time by district
+    fig1, ax1 = plt.subplots(figsize=(12, 6))
+    
+    years = sorted([baseline_stock.year] + list(projected_stocks.keys()))
+    districts = sorted(baseline_stock.replacement_probability_by_district.keys())
+    
+    for district in districts[:5]:  # Plot first 5 districts for clarity
+        probs = []
+        for year in years:
+            if year == baseline_stock.year:
+                prob = baseline_stock.replacement_probability_by_district.get(district, 0.15)
+            else:
+                prob = projected_stocks[year].replacement_probability_by_district.get(district, 0.15)
+            probs.append(prob)
+        
+        ax1.plot(years, probs, marker='o', label=district, linewidth=2)
+    
+    ax1.set_xlabel('Year', fontsize=12, fontweight='bold')
+    ax1.set_ylabel('Replacement Probability', fontsize=12, fontweight='bold')
+    ax1.set_title('Cumulative Replacement Probability Over Time', fontsize=14, fontweight='bold')
+    ax1.legend(fontsize=10, loc='best')
+    ax1.grid(True, alpha=0.3)
+    
+    plt.tight_layout()
+    path1 = os.path.join(output_dir, "10_cumulative_replacement.png")
+    fig1.savefig(path1, dpi=300, bbox_inches='tight')
+    plots['cumulative_replacement'] = path1
+    plt.close(fig1)
+    
+    # 2. Box plot: Distribution of replacement probabilities across all districts
+    fig2, ax2 = plt.subplots(figsize=(10, 6))
+    
+    probs_list = [baseline_stock.replacement_probability_by_district.get(d, 0.15) for d in districts]
+    ax2.boxplot([probs_list], tick_labels=['All Districts'])
+    ax2.set_ylabel('Replacement Probability', fontsize=12, fontweight='bold')
+    ax2.set_title('Distribution of Replacement Probabilities Across Districts', fontsize=14, fontweight='bold')
+    ax2.grid(True, alpha=0.3, axis='y')
+    
+    plt.tight_layout()
+    path2 = os.path.join(output_dir, "11_replacement_distribution.png")
+    fig2.savefig(path2, dpi=300, bbox_inches='tight')
+    plots['replacement_distribution'] = path2
+    plt.close(fig2)
+    
+    # 3. Scatter plot: Housing age vs. replacement probability by district
+    fig3, ax3 = plt.subplots(figsize=(10, 6))
+    
+    ages_list = [baseline_stock.housing_age_by_district.get(d, 35) for d in districts]
+    probs_list = [baseline_stock.replacement_probability_by_district.get(d, 0.15) for d in districts]
+    
+    ax3.scatter(ages_list, probs_list, s=100, alpha=0.6, edgecolors='black', linewidth=1)
+    
+    for i, district in enumerate(districts):
+        ax3.annotate(district, (ages_list[i], probs_list[i]), fontsize=8, ha='right')
+    
+    ax3.set_xlabel('Average Housing Age (years)', fontsize=12, fontweight='bold')
+    ax3.set_ylabel('Replacement Probability', fontsize=12, fontweight='bold')
+    ax3.set_title('Housing Age vs. Replacement Probability', fontsize=14, fontweight='bold')
+    ax3.grid(True, alpha=0.3)
+    
+    plt.tight_layout()
+    path3 = os.path.join(output_dir, "12_age_vs_replacement_scatter.png")
+    fig3.savefig(path3, dpi=300, bbox_inches='tight')
+    plots['age_vs_replacement_scatter'] = path3
+    plt.close(fig3)
+    
+    # 4. Bar chart: Replacement likelihood ranking of top 10 districts
+    fig4, ax4 = plt.subplots(figsize=(12, 6))
+    
+    # Sort districts by replacement probability
+    sorted_districts = sorted(districts, key=lambda d: baseline_stock.replacement_probability_by_district.get(d, 0.15), reverse=True)[:10]
+    sorted_probs = [baseline_stock.replacement_probability_by_district.get(d, 0.15) for d in sorted_districts]
+    
+    colors = plt.cm.RdYlBu_r(np.linspace(0, 1, len(sorted_probs)))
+    bars = ax4.barh(sorted_districts, sorted_probs, color=colors, edgecolor='black', linewidth=1.5)
+    
+    for bar, prob in zip(bars, sorted_probs):
+        width = bar.get_width()
+        ax4.text(width, bar.get_y() + bar.get_height()/2.,
+                f'{prob:.1%}', ha='left', va='center', fontsize=9, fontweight='bold')
+    
+    ax4.set_xlabel('Replacement Probability', fontsize=12, fontweight='bold')
+    ax4.set_title('Top 10 Districts by Replacement Likelihood', fontsize=14, fontweight='bold')
+    ax4.set_xlim(0, max(sorted_probs) * 1.15)
+    ax4.grid(True, alpha=0.3, axis='x')
+    
+    plt.tight_layout()
+    path4 = os.path.join(output_dir, "13_replacement_ranking.png")
+    fig4.savefig(path4, dpi=300, bbox_inches='tight')
+    plots['replacement_ranking'] = path4
+    plt.close(fig4)
+    
+    logger.info(f"Generated {len(plots)} replacement risk analysis plots in {output_dir}")
+    
+    return plots

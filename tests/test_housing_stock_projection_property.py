@@ -45,7 +45,13 @@ class TestHousingStockProjectionProperty:
             premises=premises,
             total_units=100,
             units_by_segment={'RESSF': 70, 'RESMF': 30},
-            units_by_district={'D1': 50, 'D2': 50}
+            units_by_district={'D1': 50, 'D2': 50},
+            housing_age_by_district={'D1': 35, 'D2': 40},
+            vintage_distribution_by_district={
+                'D1': {'pre-1980': 0.45, '1980-2000': 0.30, '2000-2010': 0.15, '2010+': 0.10},
+                'D2': {'pre-1980': 0.50, '1980-2000': 0.28, '2000-2010': 0.14, '2010+': 0.08},
+            },
+            replacement_probability_by_district={'D1': 0.15, 'D2': 0.18}
         )
     
     @pytest.mark.parametrize("growth_rate,target_year", [
@@ -143,7 +149,12 @@ class TestHousingStockProjectionProperty:
         - Bar chart: Segment distribution comparison (baseline vs projected)
         - Bar chart: District distribution comparison (baseline vs projected)
         - Line graph: Projected vs expected growth rates by year
-        - Choropleth map: Service territory by county with growth rates (CRITICAL - MISSING)
+        - Choropleth map: Service territory by county with growth rates
+        - Housing age heatmap
+        - Vintage distribution heatmap
+        - Replacement probability map
+        - Housing stock composition graphs (4 graphs)
+        - Replacement risk analysis graphs (4 graphs)
         
         Verifies:
         - All graphs are created
@@ -170,16 +181,43 @@ class TestHousingStockProjectionProperty:
                 show_plots=False
             )
             
+            # Generate additional visualizations
+            from src.visualization import plot_housing_stock_composition, plot_replacement_risk_analysis
+            
+            composition_plots = plot_housing_stock_composition(
+                baseline_stock,
+                projected_stocks,
+                output_dir=output_dir,
+                show_plots=False
+            )
+            plots.update(composition_plots)
+            
+            replacement_plots = plot_replacement_risk_analysis(
+                baseline_stock,
+                projected_stocks,
+                output_dir=output_dir,
+                show_plots=False
+            )
+            plots.update(replacement_plots)
+            
             # Verify output directory was created
             assert os.path.exists(output_dir), f"Output directory {output_dir} was not created"
             
-            # Verify all expected plots were created (5 total)
+            # Verify all expected plots were created (5 basic + 4 composition + 4 replacement = 13 total)
             expected_plots = [
                 'total_housing_stock',
                 'segment_distribution',
                 'district_distribution',
                 'growth_rate_analysis',
-                'service_territory_map'
+                'service_territory_map',
+                'vintage_distribution_stacked',
+                'housing_age_distribution',
+                'age_vs_replacement',
+                'vintage_heatmap',
+                'cumulative_replacement',
+                'replacement_distribution',
+                'age_vs_replacement_scatter',
+                'replacement_ranking'
             ]
             
             for plot_name in expected_plots:
@@ -190,7 +228,7 @@ class TestHousingStockProjectionProperty:
             
             # Verify file naming convention
             files = os.listdir(output_dir)
-            assert len(files) == 5, f"Expected 5 plot files, found {len(files)}"
+            assert len(files) >= 13, f"Expected at least 13 plot files, found {len(files)}"
             
             # Verify files are PNG format
             for filename in files:

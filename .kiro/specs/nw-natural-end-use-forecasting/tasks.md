@@ -102,6 +102,14 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
 - [x] 3. Checkpoint — Verify data ingestion
   - Ensure all tests pass, ask the user if questions arise.
   - Verify that `build_premise_equipment_table` produces a valid DataFrame from the actual CSV files in `Data/`.
+  - Verify each module file:
+    - **`src/config.py`**: All configuration constants defined (END_USE_MAP, DEFAULT_EFFICIENCY, USEFUL_LIFE, DISTRICT_WEATHER_MAP, file paths, API constants). Run property test 1 to validate END_USE_MAP completeness.
+    - **`src/data_ingestion.py`**: All CSV loading functions implemented and tested. Verify functions handle missing files gracefully and log warnings. Run property test 2 to validate filtering preserves only active residential premises. Run property test 3 to validate join integrity (non-null end_use, valid efficiency > 0).
+    - **`tests/test_config.py`**: Property test 1 passes — all equipment_type_codes in END_USE_MAP resolve to valid end-use categories.
+    - **`tests/test_data_ingestion.py`**: Property test 2 passes — filtering produces only custtype='R' and status_code='AC'. Property test 3 passes — every row has non-null end_use and efficiency > 0.
+    - **`tests/test_premise_equipment_join.py`**: Verify `build_premise_equipment_table` produces valid DataFrame with expected columns (blinded_id, equipment_type_code, end_use, efficiency, weather_station, fuel_type, etc.). Spot-check a few rows to confirm data integrity.
+    - **Data validation**: Verify that actual CSV files in `Data/NWNatural Data/` load without errors. Check for any data gaps or anomalies logged during ingestion. Confirm weather station assignments are correct for all districts. Confirm efficiency values are within expected ranges (0 < efficiency <= 1.0 for most equipment, or > 1.0 for heat pumps).
+    - **Integration check**: Run a quick end-to-end test loading all data files and building the premise-equipment table. Verify output row count matches expected number of active residential premises × equipment units per premise.
 
 - [ ] 4. Implement housing stock module
   - [x] 4.1 Create `src/housing_stock.py` with `HousingStock` dataclass and baseline builder
