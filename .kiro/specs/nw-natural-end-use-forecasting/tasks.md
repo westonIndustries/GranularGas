@@ -582,14 +582,14 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Columns: year, end_use, scenario_name, total_therms, use_per_customer
     - _Requirements: 6.2, 9.4_
 
-  - [ ]* 11.4 Property test: scenario determinism
+  - [ ] 11.4 Property test: scenario determinism
     - **Property 13: Same config twice → identical results**
     - Table: side-by-side comparison of two runs
     - Report: max absolute difference (should be 0)
     - Output: `output/scenarios/property13_results.html` and `.md`
     - **Validates: Requirements 6.2, 6.3**
 
-  - [ ]* 11.5 Property test: scenario validation
+  - [ ] 11.5 Property test: scenario validation
     - **Property 14: validate_scenario warns for rates outside [0,1] and horizon <= 0**
     - Table: test cases with expected vs actual results
     - Output: `output/scenarios/property14_results.html` and `.md`
@@ -609,7 +609,7 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Document parameters with inline comments
     - _Requirements: 6.1, 8.1_
 
-  - [ ]* 12.3 Property test: full pipeline integration
+  - [ ] 12.3 Property test: full pipeline integration
     - **Test: load → stock → simulate → aggregate → export produces valid CSV**
     - Verify output has expected columns and non-empty rows
     - Report: row count, column list, sample values
