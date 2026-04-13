@@ -265,87 +265,71 @@ Key sections:
 | **[ALGORITHM.md](ALGORITHM.md)** | Detailed algorithm description and methodology | 20 min |
 | **[REGIONS_AND_CELLS.md](REGIONS_AND_CELLS.md)** | Geographic analysis framework (6 levels) | 15 min |
 | **[API_DOCUMENTATION.md](API_DOCUMENTATION.md)** | REST API reference (23 endpoints) | 20 min |
+| **[inputs.md](inputs.md)** | Input data specifications (53 sources) | 15 min |
 | **[outputs.md](outputs.md)** | Output file specifications and formats | 10 min |
+| **[SCOPE.md](SCOPE.md)** | Project scope, objectives, and team | 10 min |
 | **[FUTURE_DATA_SOURCES.md](FUTURE_DATA_SOURCES.md)** | Enhancement opportunities (15 data sources) | 10 min |
 | **[CROSS_REFERENCE.md](CROSS_REFERENCE.md)** | Complete cross-reference index | 5 min |
+| **[TASK_1_CONFIGURATION.md](TASK_1_CONFIGURATION.md)** | Task 1 implementation notes (config module) | 5 min |
+| **[TASK_2_DATA_INGESTION.md](TASK_2_DATA_INGESTION.md)** | Task 2 implementation notes (data loaders) | 5 min |
+| **[TASK_3_CHECKPOINT.md](TASK_3_CHECKPOINT.md)** | Task 3 checkpoint status (needs NWN data) | 3 min |
 
 ---
 
 ## Project Status
 
-### Current Phase: Specification Complete ✅
+### Current Phase: Implementation In Progress 🔶
 
-All specification documents are complete and synchronized:
-- ✅ Requirements document (26 requirements)
-- ✅ Design document (9 modules)
-- ✅ Implementation plan (22 task groups)
-- ✅ Sync report (100% coverage)
+Specification documents are complete. Implementation is underway:
 
-### Next Phase: Implementation
+| Task | Description | Status |
+|------|-------------|--------|
+| 1 | Project structure and configuration | ✅ Complete |
+| 2 | Data ingestion module (36 loaders + validation) | 🔶 In Progress |
+| 2.1–2.2 | All 36 loaders + premise-equipment join | ✅ Complete |
+| 2.3 | Data ingestion validation suite | ✅ Complete |
+| 2.4 | Join integrity validation suite | 🔲 Needs NWN data |
+| 3 | Checkpoint — data ingestion pipeline | 🔲 Needs NWN data |
+| 4 | Housing stock module | 🔶 Partial (4.1–4.2 done) |
+| 5 | Equipment module | 🔶 Partial (5.1–5.2 done) |
+| 6 | Weather processing module | 🔶 Partial (6.1 done) |
+| 7–14 | Simulation, aggregation, scenarios, CLI, validation | 🔲 Not started |
 
-Ready to begin implementation. See [tasks.md](.kiro/specs/nw-natural-end-use-forecasting/tasks.md) for detailed implementation plan.
-
-**Recommended Start**:
-1. Tasks 1-3: Project structure and data ingestion
-2. Tasks 4-10: Core model pipeline
-3. Tasks 15-22: Visualization, API, deployment, and testing
+See [tasks.md](.kiro/specs/nw-natural-end-use-forecasting/tasks.md) for the full implementation plan.
 
 ---
 
 ## Key Features
 
-### Core Model
-- ✅ Bottom-up residential demand simulation
-- ✅ End-use disaggregation (6 categories)
-- ✅ Weibull survival model for equipment replacement
-- ✅ Heat pump integration with COP calculations
-- ✅ Weather-driven space heating and water heating
-- ✅ Baseload consumption for cooking, drying, fireplace
+### Core Model (Implemented)
+- ✅ 36 data loaders across all source categories
+- ✅ `build_premise_equipment_table` join (premise + equipment + segment + codes)
+- ✅ Data ingestion validation suite with HTML/MD reports
+- ✅ Housing stock baseline and projection (Tasks 4.1–4.2)
+- ✅ Equipment inventory with Weibull survival model (Tasks 5.1–5.2)
+- ✅ Weather processing — HDD/CDD, water heating delta-T (Task 6.1)
+
+### Core Model (Planned)
+- 🔲 End-use energy simulation engine (Task 8)
+- 🔲 Aggregation and output module (Task 9)
+- 🔲 Scenario management (Task 11)
+- 🔲 CLI entry point (Task 12)
+- 🔲 Billing calibration and IRP comparison (Task 13)
 
 ### Data Integration
-- ✅ 20+ data sources integrated
-- ✅ NW Natural premise, equipment, segment, billing data
-- ✅ RBSA 2022 building characteristics
-- ✅ ASHRAE equipment service life
+- ✅ 53 data sources mapped and configured
+- ✅ NW Natural premise, equipment, segment, billing loaders
+- ✅ RBSA 2022 building characteristics loaders
+- ✅ ASHRAE equipment service life loaders
 - ✅ Census ACS housing data (B25034, B25040, B25024)
-- ✅ NOAA climate normals
-- ✅ EIA RECS microdata
-- ✅ PSU population forecasts
-- ✅ WA OFM housing estimates
+- ✅ NOAA climate normals loader
+- ✅ EIA RECS microdata loader
+- ✅ PSU population forecasts and WA OFM housing loaders
 
-### Geographic Analysis
-- ✅ 6-level geographic hierarchy
-- ✅ County, district, microclimate, microresidential, microadoption, composite-cell
-- ✅ Multi-dimensional analysis framework
-- ✅ Opportunity and success scoring
-
-### Visualization
-- ✅ Interactive Mapbox-based web interface
-- ✅ County/district drill-down
-- ✅ Time-series animation (2025-2035)
-- ✅ Scenario comparison
-- ✅ End-use breakdown charts
-- ✅ Multi-area comparison
-
-### REST API
-- ✅ 23 endpoints for scenario management
-- ✅ Async scenario execution
-- ✅ Results retrieval (JSON, CSV, Parquet, GeoJSON)
-- ✅ Scenario comparison
-- ✅ Configuration and data endpoints
-- ✅ Health and status monitoring
-
-### Deployment
-- ✅ Docker containerization
-- ✅ docker-compose for multi-container deployment
-- ✅ Local development environment support
-- ✅ Cloud deployment options (AWS, Azure, GCP)
-
-### Testing
-- ✅ 17 property-based tests
-- ✅ Unit tests for all modules
-- ✅ Integration tests for full pipeline
-- ✅ 80%+ code coverage target
+### Visualization / API / Deployment
+- 🔲 Interactive web visualization (planned Task 15)
+- 🔲 REST API (planned Task 16)
+- 🔲 Docker containerization (planned Task 18)
 
 ---
 
@@ -369,6 +353,7 @@ Data Ingestion → Housing Stock → Equipment → Weather → Simulation → Ag
 |----------|---------|----------|
 | **[INSTALLATION_AND_SETUP.md](INSTALLATION_AND_SETUP.md)** | Complete installation guide with troubleshooting | Developers, DevOps |
 | [README.md](README.md) | Project overview and quick links | Everyone |
+| [SCOPE.md](SCOPE.md) | Project scope, objectives, team, and work plan | Stakeholders, everyone |
 
 ### Specification Documents (`.kiro/specs/nw-natural-end-use-forecasting/`)
 | Document | Purpose | Audience |
@@ -378,12 +363,20 @@ Data Ingestion → Housing Stock → Equipment → Weather → Simulation → Ag
 | [tasks.md](.kiro/specs/nw-natural-end-use-forecasting/tasks.md) | Implementation plan (22 task groups, 80+ subtasks) | Developers |
 | [SYNC_REPORT.md](.kiro/specs/nw-natural-end-use-forecasting/SYNC_REPORT.md) | Specification sync audit (100% coverage) | Project managers |
 
+### Implementation Progress Notes
+| Document | Purpose | Audience |
+|----------|---------|----------|
+| [TASK_1_CONFIGURATION.md](TASK_1_CONFIGURATION.md) | Task 1 notes — config module, verify commands | Developers |
+| [TASK_2_DATA_INGESTION.md](TASK_2_DATA_INGESTION.md) | Task 2 notes — 36 loaders, validation suite status | Developers |
+| [TASK_3_CHECKPOINT.md](TASK_3_CHECKPOINT.md) | Task 3 checkpoint — blocked on NWN data files | Developers |
+
 ### User & Developer Guides
 | Document | Purpose | Audience |
 |----------|---------|----------|
 | [ALGORITHM.md](ALGORITHM.md) | Detailed algorithm description (8 steps, heat pump integration) | Developers, researchers |
 | [REGIONS_AND_CELLS.md](REGIONS_AND_CELLS.md) | Geographic analysis framework (6 levels, composite cells) | Analysts, users |
 | [API_DOCUMENTATION.md](API_DOCUMENTATION.md) | REST API reference (23 endpoints with examples) | Developers, integrators |
+| [inputs.md](inputs.md) | Input data specifications (53 sources, color-coded by provenance) | Developers, analysts |
 | [outputs.md](outputs.md) | Output file specifications (8 file types) | Analysts, users |
 | [FUTURE_DATA_SOURCES.md](FUTURE_DATA_SOURCES.md) | Enhancement opportunities (15 data sources) | Project managers |
 | [CROSS_REFERENCE.md](CROSS_REFERENCE.md) | Complete cross-reference index | Everyone |
