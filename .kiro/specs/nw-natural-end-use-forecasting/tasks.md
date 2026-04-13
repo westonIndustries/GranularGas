@@ -75,7 +75,7 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Output: `output/config_validation/config_completeness.html` and `.md` with pass/fail per check
     - **Validates: Requirements 1.1, 1.4**
 
-- [ ] 2. Implement data ingestion module
+- [x] 2. Implement data ingestion module
   - [x] 2.1 Create `src/loaders/` package with individual data loaders (one file per data source)
     - Each loader is a standalone script: `python -m src.loaders.<name>` loads data, prints summary, saves diagnostics to `output/loaders/`
     - Shared helper `_helpers.py` provides `save_diagnostics(df, name)` for consistent output
@@ -202,47 +202,132 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
       - All saved as PNG + embedded in HTML/MD summary
       - Output: `output/data_quality/distributions/` (PNGs) + `output/data_quality/distribution_summary.html` and `.md`
 
-  - [ ] 2.4 Write join integrity validation suite with diagnostic outputs
+  - [x] 2.4 Write join integrity validation suite with diagnostic outputs
     - All outputs saved to `output/join_integrity/` as both HTML and Markdown (.md)
     - **Property 3: Every row in premise_equipment_table has a non-null end_use category and a valid efficiency > 0**
     - **Validates: Requirements 1.4, 3.1**
 
-    - [ ] 2.4.1 Joined table quality report
+- [x] 3. Checkpoint — Verify data ingestion
+  - Ensure all tests pass, ask the user if questions arise.
+  - Verify that `build_premise_equipment_table` produces a valid DataFrame from the actual CSV files in `Data/`.
+  - Verify each module file:
+    - **`src/config.py`**: All configuration constants defined (END_USE_MAP, DEFAULT_EFFICIENCY, USEFUL_LIFE, DISTRICT_WEATHER_MAP, file paths, API constants). Run property test 1 to validate END_USE_MAP completeness.
+    - **`src/data_ingestion.py`**: All CSV loading functions implemented and tested. Verify functions handle missing files gracefully and log warnings. Run property test 2 to validate filtering preserves only active residential premises. Run property test 3 to validate join integrity (non-null end_use, valid efficiency > 0).
+    - **`tests/test_config.py`**: Property test 1 passes — all equipment_type_codes in END_USE_MAP resolve to valid end-use categories.
+    - **`tests/test_data_ingestion.py`**: Property test 2 passes — filtering produces only custtype='R' and status_code='AC'. Property test 3 passes — every row has non-null end_use and efficiency > 0.
+    - **`tests/test_premise_equipment_join.py`**: Verify `build_premise_equipment_table` produces valid DataFrame with expected columns (blinded_id, equipment_type_code, end_use, efficiency, weather_station, fuel_type, etc.). Spot-check a few rows to confirm data integrity.
+    - **Data validation**: Verify that actual CSV files in `Data/NWNatural Data/` load without errors. Check for any data gaps or anomalies logged during ingestion. Confirm weather station assignments are correct for all districts. Confirm efficiency values are within expected ranges (0 < efficiency <= 1.0 for most equipment, or > 1.0 for heat pumps).
+    - **Integration check**: Run a quick end-to-end test loading all data files and building the premise-equipment table. Verify output row count matches expected number of active residential premises × equipment units per premise.
+    - [x] 2.4.1 Joined table quality report
       - Build `premise_equipment_table` from all four source tables
       - Generate HTML + MD report with: total row count, unique premises, unique equipment codes, column dtypes, null counts, value distributions for derived columns (end_use, efficiency, weather_station)
       - Report join expansion factor (rows in joined table / unique premises)
       - Output: `output/join_integrity/joined_table_quality_report.html` and `.md`
 
-    - [ ] 2.4.2 End-use mapping completeness audit
+    - [x] 2.4.2 End-use mapping completeness audit
       - For every unique equipment_type_code in the joined table, show: code, mapped end_use (or UNMAPPED), row count, % of total
       - Summarize: total mapped vs unmapped codes, total mapped vs unmapped rows
       - List all unmapped codes with their equipment_class and description from equipment_codes
       - Output: `output/join_integrity/enduse_mapping_audit.html` and `.md` + `enduse_mapping_detail.csv`
 
-    - [ ] 2.4.3 Efficiency validation report
+    - [x] 2.4.3 Efficiency validation report
       - For each end_use category, show: count, min/max/mean/median efficiency, % using default vs data-supplied efficiency
       - Flag rows with efficiency <= 0 or > 1.0 (out of valid range)
       - Flag rows where efficiency was filled from DEFAULT_EFFICIENCY (show how many per end_use)
       - Histogram: efficiency distribution by end_use category (PNG)
       - Output: `output/join_integrity/efficiency_validation.html` and `.md` + PNGs
 
-    - [ ] 2.4.4 Weather station assignment audit
+    - [x] 2.4.4 Weather station assignment audit
       - For each district_code_IRP, show: district, assigned weather_station, premise count, % of total
       - Flag districts with no weather station mapping
       - Map visualization: premises by weather station (bar chart)
       - Output: `output/join_integrity/weather_station_audit.html` and `.md`
 
-    - [ ] 2.4.5 Join integrity summary dashboard
+    - [x] 2.4.5 Join integrity summary dashboard
       - Single-page HTML + MD combining all 2.4 checks into a pass/fail dashboard
       - Property 3 check: % of rows with non-null end_use AND efficiency > 0 (target: 100%)
       - Traffic light indicators: green (>95%), yellow (80-95%), red (<80%) for each check
       - Links to detailed reports from 2.4.1-2.4.4
       - Output: `output/join_integrity/join_integrity_dashboard.html` and `.md`
 
-- [ ] 3. Checkpoint â€” Verify data ingestion pipeline
+  - [ ] 2.3.7 Create segment/subsegment/market relationship visualization on OpenStreetMap
+    - **Purpose**: Visualize how segment (RESSF, RESMF, MOBILE), subsegment (if available), and market (geographic/district) relate to each other
+  - [x] 2.3.7 Create segment/subsegment/market relationship visualization on OpenStreetMap with equipment profiles
+    - **Purpose**: Visualize how segment (RESSF, RESMF, MOBILE), subsegment (if available), and market (geographic/district) relate to each other, including detailed equipment profiles, appliance inventories, and age distributions
+    - Implement `visualize_segment_market_hierarchy()` in `src/visualization.py`
+    - Implement `generate_segment_profiles()` to compute detailed equipment and age statistics per segment/subsegment/market combination
+    - Generate hierarchical relationship diagram:
+      - Treemap: Segment → Subsegment → Market (color-coded by segment type)
+      - Sunburst chart: Same hierarchy with interactive drill-down
+      - Sankey diagram: Flow from segment → subsegment → market showing premise counts
+    - Generate detailed segment/subsegment/market profiles:
+      - For each segment (RESSF, RESMF, MOBILE):
+        * Average premise age (construction year)
+        * Average equipment age by end-use (space heating, water heating, cooking, drying, fireplace)
+        * Equipment type distribution (top 5 equipment types by count)
+        * Fuel type mix (% gas vs electric)
+        * Average efficiency by end-use
+        * Dominant building characteristics (vintage era, size proxy)
+      - For each subsegment (if available):
+        * Same metrics as segment level
+        * Comparison to parent segment
+      - For each market/district:
+        * Same metrics as segment level
+        * Geographic variation analysis
+    - Generate appliance inventory tables:
+      - Table 1: Equipment count by segment × end-use (rows=segments, columns=end-uses, values=count)
+      - Table 2: Equipment count by subsegment × end-use (if subsegments available)
+      - Table 3: Equipment count by market/district × end-use
+      - Table 4: Top 10 equipment types by count (with segment/subsegment/market breakdown)
+      - Table 5: Equipment age distribution by segment (histogram data: age bins vs count)
+    - Generate OpenStreetMap visualization:
+      - Base map: NW Natural service territory with county boundaries
+      - Hexbin aggregation: Premises grouped into hexagonal cells (7.5 km cell size)
+      - Color-coding: Each hexbin colored by dominant segment type (RESSF=blue, RESMF=red, MOBILE=green)
+      - Opacity: Intensity based on premise density within hexbin
+      - Popup: Hexbin shows:
+        * Segment breakdown (count and % for each type)
+        * Subsegment distribution (if available)
+        * Market/district info
+        * Average equipment age by end-use
+        * Top 3 equipment types in hexbin
+        * Average efficiency by end-use
+      - Layer control: Toggle between segment view, subsegment view, market/district view, equipment age view, efficiency view
+      - Marker overlay: District centroids with segment composition pie charts and equipment age indicators
+    - Generate comparison charts:
+      - Stacked bar: Segment distribution by market/district
+      - Stacked bar: Subsegment distribution by segment
+      - Heatmap: Segment × Market cross-tabulation (rows=segments, columns=markets, values=premise count)
+      - Box plot: Equipment age distribution by segment (showing median, quartiles, outliers)
+      - Box plot: Equipment age distribution by end-use (showing variation across segments)
+      - Violin plot: Equipment efficiency distribution by segment and end-use
+      - Scatter plot: Average equipment age vs average efficiency by segment/subsegment/market
+    - Export unaggregated premise-level data:
+      - CSV file: `segment_market_unaggregated_data.csv` with all premises and their segment, subsegment, market, equipment age, efficiency, end-use, appliance inventory, and geographic coordinates
+      - Parquet file: `segment_market_unaggregated_data.parquet` for efficient storage and querying
+      - Columns: blinded_id, segment, subsegment, market, district_code_IRP, latitude, longitude, premise_age, avg_equipment_age, avg_efficiency, dominant_end_use, top_3_equipment_types, premise_count_in_segment_market_combo, equipment_type_code, equipment_count_by_enduse_json
+      - Sorted by: segment, subsegment, market, blinded_id
+      - Enables: Custom analysis, filtering, and drill-down by users
+    - Generate segment/subsegment/market profile report (HTML + Markdown):
+      - Executive summary: Key statistics for each segment/subsegment/market
+      - Detailed profiles: For each combination, show:
+        * Premise count and % of total
+        * Average premise age (construction year)
+        * Equipment inventory by end-use (count and %)
+        * Top 5 equipment types with counts
+        * Average equipment age by end-use (with min/max range)
+        * Average efficiency by end-use
+        * Fuel type mix (% gas vs electric)
+        * Dominant building characteristics
+        * Comparison to system average
+      - Comparative analysis: Side-by-side comparison of segments, subsegments, markets
+      - Visualizations embedded: All charts and maps embedded in HTML report
+    - All visualizations, data exports, and reports saved to `output/segment_market_analysis/` directory
+    - Test verifies: map renders without errors, hexbins contain expected data, popups display correctly, layer controls work, unaggregated data files exist and contain all premises, profile statistics are accurate, all equipment types are represented
+    - _Requirements: 2.1, 2.2, 5.4, 13.1_tion pipeline
   - All outputs saved to `output/checkpoint_ingestion/` as HTML + MD
 
-  - [ ] 3.1 Pipeline readiness dashboard
+  - [x] 3.1 Pipeline readiness dashboard
     - Check which of the 53 data sources loaded successfully vs missing/errored
     - Compute overall readiness score (% of sources available)
     - Traffic-light status per data source group (NW Natural, tariff, RBSA, Census, etc.)
@@ -250,28 +335,28 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Output: `output/checkpoint_ingestion/pipeline_readiness.html` and `.md`
     - _Requirements: 7.4, 8.1_
 
-  - [ ] 3.2 Data volume summary report
+  - [x] 3.2 Data volume summary report
     - For each loaded table: row count, column count, memory usage
     - Expected vs actual row counts where known (e.g. ~500K premises, ~1M equipment)
     - Flag tables with zero rows or unexpectedly low counts
     - Output: `output/checkpoint_ingestion/data_volumes.html` and `.md`
     - _Requirements: 7.1, 10.1_
 
-  - [ ] 3.3 Premise-equipment table profile
+  - [x] 3.3 Premise-equipment table profile
     - Run `build_premise_equipment_table` on actual data
     - Report: total rows, unique premises, join expansion factor, end_use coverage %, efficiency coverage %
     - Top-10 equipment types by count, top-10 districts by premise count
     - Output: `output/checkpoint_ingestion/pet_profile.html` and `.md`
     - _Requirements: 1.4, 2.1, 3.1_
 
-  - [ ] 3.4 Service territory geographic coverage map
+  - [x] 3.4 Service territory geographic coverage map
     - Map of NW Natural service territory counties color-coded by premise count
     - Weather station markers with district assignments
     - Table: county, state, premise count, % of total, assigned weather station
     - Output: `output/checkpoint_ingestion/service_territory_map.html` and `.md` (map as PNG)
     - _Requirements: 2.2, 4.1_
 
-  - [ ] 3.5 Equipment and vintage distribution charts
+  - [x] 3.5 Equipment and vintage distribution charts
     - Bar chart: equipment count by end-use category (space_heating, water_heating, cooking, drying, fireplace, other)
     - Histogram: premise vintage (construction year) distribution by decade
     - Stacked bar: equipment fuel type by end-use (gas vs electric)
@@ -279,7 +364,7 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Output: `output/checkpoint_ingestion/equipment_vintage_charts.html` and `.md` (PNGs embedded)
     - _Requirements: 1.4, 3.1_
 
-  - [ ] 3.6 Cross-validation against external benchmarks
+  - [x] 3.6 Cross-validation against external benchmarks
     - Compare model premise counts by county vs Census B25034 housing unit counts (bar chart, side-by-side)
     - Compare model gas heating share by county vs Census B25040 utility gas share (scatter plot)
     - Compare model end-use consumption split vs RECS 2020 Pacific division benchmarks (stacked bar)
@@ -287,7 +372,7 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Output: `output/checkpoint_ingestion/cross_validation.html` and `.md` (PNGs embedded)
     - _Requirements: 5.3, 10.2, 10.3_
 
-- [ ] 4. Implement housing stock module
+- [x] 4. Implement housing stock module
 
   - [x] 4.1 Create `src/housing_stock.py` â€” HousingStock dataclass
     - Define `HousingStock` dataclass: year, premises DataFrame, total_units, units_by_segment, units_by_district
@@ -497,14 +582,14 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Columns: year, end_use, scenario_name, total_therms, use_per_customer
     - _Requirements: 6.2, 9.4_
 
-  - [ ]* 11.4 Property test: scenario determinism
+  - [ ] 11.4 Property test: scenario determinism
     - **Property 13: Same config twice → identical results**
     - Table: side-by-side comparison of two runs
     - Report: max absolute difference (should be 0)
     - Output: `output/scenarios/property13_results.html` and `.md`
     - **Validates: Requirements 6.2, 6.3**
 
-  - [ ]* 11.5 Property test: scenario validation
+  - [ ] 11.5 Property test: scenario validation
     - **Property 14: validate_scenario warns for rates outside [0,1] and horizon <= 0**
     - Table: test cases with expected vs actual results
     - Output: `output/scenarios/property14_results.html` and `.md`
@@ -524,7 +609,7 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Document parameters with inline comments
     - _Requirements: 6.1, 8.1_
 
-  - [ ]* 12.3 Property test: full pipeline integration
+  - [ ] 12.3 Property test: full pipeline integration
     - **Test: load → stock → simulate → aggregate → export produces valid CSV**
     - Verify output has expected columns and non-empty rows
     - Report: row count, column list, sample values

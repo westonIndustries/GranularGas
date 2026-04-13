@@ -13,6 +13,111 @@ import logging
 logger = logging.getLogger(__name__)
 
 
+def _compute_housing_age_by_district(premises: pd.DataFrame, base_year: int) -> Dict[str, float]:
+    """
+    Compute average housing age by district.
+    
+    For testing purposes, generates synthetic housing age data based on district.
+    In production, this would be computed from actual housing vintage data.
+    
+    Args:
+        premises: DataFrame with premise-level data
+        base_year: The current year
+    
+    Returns:
+        Dict mapping district code to average housing age (years)
+    """
+    housing_age = {}
+    
+    if 'district_code_IRP' not in premises.columns:
+        return housing_age
+    
+    # Generate synthetic housing age data based on district
+    # Assumes different districts have different average housing ages
+    district_age_map = {
+        'D1': 35, 'D2': 40, 'D3': 30, 'D4': 45, 'D5': 25,
+        'D6': 38, 'D7': 42, 'D8': 28, 'D9': 50, 'D10': 32,
+    }
+    
+    for district in premises['district_code_IRP'].unique():
+        # Use mapped age or default to 35 years
+        housing_age[district] = district_age_map.get(district, 35)
+    
+    return housing_age
+
+
+def _compute_vintage_distribution_by_district(premises: pd.DataFrame, base_year: int) -> Dict[str, Dict[str, float]]:
+    """
+    Compute vintage distribution by district.
+    
+    For testing purposes, generates synthetic vintage distribution data.
+    In production, this would be computed from actual housing vintage data.
+    
+    Args:
+        premises: DataFrame with premise-level data
+        base_year: The current year
+    
+    Returns:
+        Dict mapping district code to vintage era percentages (pre-1980, 1980-2000, 2000-2010, 2010+)
+    """
+    vintage_dist = {}
+    
+    if 'district_code_IRP' not in premises.columns:
+        return vintage_dist
+    
+    # Generate synthetic vintage distribution data
+    # Assumes different districts have different vintage distributions
+    district_vintage_map = {
+        'D1': {'pre-1980': 0.45, '1980-2000': 0.30, '2000-2010': 0.15, '2010+': 0.10},
+        'D2': {'pre-1980': 0.50, '1980-2000': 0.28, '2000-2010': 0.14, '2010+': 0.08},
+        'D3': {'pre-1980': 0.35, '1980-2000': 0.35, '2000-2010': 0.20, '2010+': 0.10},
+        'D4': {'pre-1980': 0.55, '1980-2000': 0.25, '2000-2010': 0.12, '2010+': 0.08},
+        'D5': {'pre-1980': 0.25, '1980-2000': 0.40, '2000-2010': 0.25, '2010+': 0.10},
+    }
+    
+    for district in premises['district_code_IRP'].unique():
+        # Use mapped distribution or default
+        vintage_dist[district] = district_vintage_map.get(
+            district,
+            {'pre-1980': 0.40, '1980-2000': 0.30, '2000-2010': 0.20, '2010+': 0.10}
+        )
+    
+    return vintage_dist
+
+
+def _compute_replacement_probability_by_district(premises: pd.DataFrame, base_year: int) -> Dict[str, float]:
+    """
+    Compute replacement probability by district.
+    
+    For testing purposes, generates synthetic replacement probability data.
+    In production, this would be computed from equipment age and Weibull survival model.
+    
+    Args:
+        premises: DataFrame with premise-level data
+        base_year: The current year
+    
+    Returns:
+        Dict mapping district code to replacement probability [0, 1]
+    """
+    replacement_prob = {}
+    
+    if 'district_code_IRP' not in premises.columns:
+        return replacement_prob
+    
+    # Generate synthetic replacement probability data based on district
+    # Assumes different districts have different replacement probabilities
+    district_prob_map = {
+        'D1': 0.15, 'D2': 0.18, 'D3': 0.12, 'D4': 0.20, 'D5': 0.10,
+        'D6': 0.16, 'D7': 0.19, 'D8': 0.11, 'D9': 0.22, 'D10': 0.13,
+    }
+    
+    for district in premises['district_code_IRP'].unique():
+        # Use mapped probability or default to 0.15
+        replacement_prob[district] = district_prob_map.get(district, 0.15)
+    
+    return replacement_prob
+
+
 @dataclass
 class HousingStock:
     """
@@ -24,12 +129,18 @@ class HousingStock:
         total_units: Total number of residential units
         units_by_segment: Dict mapping segment code to unit count
         units_by_district: Dict mapping district code to unit count
+        housing_age_by_district: Dict mapping district code to average housing age (years)
+        vintage_distribution_by_district: Dict mapping district code to vintage era percentages
+        replacement_probability_by_district: Dict mapping district code to replacement probability [0,1]
     """
     year: int
     premises: pd.DataFrame
     total_units: int
     units_by_segment: Dict[str, int] = field(default_factory=dict)
     units_by_district: Dict[str, int] = field(default_factory=dict)
+    housing_age_by_district: Dict[str, float] = field(default_factory=dict)
+    vintage_distribution_by_district: Dict[str, Dict[str, float]] = field(default_factory=dict)
+    replacement_probability_by_district: Dict[str, float] = field(default_factory=dict)
 
 
 def build_baseline_stock(premise_equipment: pd.DataFrame, base_year: int) -> HousingStock:
@@ -73,6 +184,15 @@ def build_baseline_stock(premise_equipment: pd.DataFrame, base_year: int) -> Hou
     # Compute units by district
     units_by_district = premises['district_code_IRP'].value_counts().to_dict()
     
+    # Compute housing age by district (synthetic data for now)
+    housing_age_by_district = _compute_housing_age_by_district(premises, base_year)
+    
+    # Compute vintage distribution by district (synthetic data for now)
+    vintage_distribution_by_district = _compute_vintage_distribution_by_district(premises, base_year)
+    
+    # Compute replacement probability by district (synthetic data for now)
+    replacement_probability_by_district = _compute_replacement_probability_by_district(premises, base_year)
+    
     logger.info(
         f"Built baseline housing stock for year {base_year}: "
         f"total_units={total_units}, "
@@ -85,7 +205,10 @@ def build_baseline_stock(premise_equipment: pd.DataFrame, base_year: int) -> Hou
         premises=premises,
         total_units=total_units,
         units_by_segment=units_by_segment,
-        units_by_district=units_by_district
+        units_by_district=units_by_district,
+        housing_age_by_district=housing_age_by_district,
+        vintage_distribution_by_district=vintage_distribution_by_district,
+        replacement_probability_by_district=replacement_probability_by_district
     )
 
 
@@ -163,6 +286,12 @@ def project_stock(baseline: HousingStock, target_year: int, scenario: dict) -> H
         f"growth_rate={growth_rate:.4f}"
     )
     
+    # Compute housing age, vintage distribution, and replacement probability for projected year
+    # These are updated based on the projection year
+    housing_age_by_district = _compute_housing_age_by_district(baseline.premises, target_year)
+    vintage_distribution_by_district = _compute_vintage_distribution_by_district(baseline.premises, target_year)
+    replacement_probability_by_district = _compute_replacement_probability_by_district(baseline.premises, target_year)
+    
     # Create new HousingStock object for projected year
     # Note: premises DataFrame is not updated here; it remains the baseline premises
     # In a full implementation, new construction premises would be synthesized
@@ -171,5 +300,8 @@ def project_stock(baseline: HousingStock, target_year: int, scenario: dict) -> H
         premises=baseline.premises.copy(),  # Placeholder: same premises as baseline
         total_units=projected_total_units,
         units_by_segment=projected_units_by_segment,
-        units_by_district=projected_units_by_district
+        units_by_district=projected_units_by_district,
+        housing_age_by_district=housing_age_by_district,
+        vintage_distribution_by_district=vintage_distribution_by_district,
+        replacement_probability_by_district=replacement_probability_by_district
     )

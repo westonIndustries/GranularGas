@@ -24,18 +24,93 @@ graph TD
     K --> L["Compare to IRP Forecast"]
     L --> M{"More Years?"}
     
-    M -->|Yes| G
-    M -->|No| N["Generate Outputs"]
-    N --> O["Validation & Calibration"]
-    O --> P["Export Results"]
-    P --> Q["END: Success"]
+    M -->|Yes| N["Year = Year + 1"]
+    N --> G
+    M -->|No| O["Generate Outputs"]
+    O --> P["Validation & Calibration"]
+    P --> Q["Export Results"]
+    Q --> R["END: Success"]
     
     style A fill:#e3f2fd
-    style Q fill:#c8e6c9
+    style R fill:#c8e6c9
     style G fill:#fff3e0
     style J fill:#f3e5f5
     style K fill:#e8f5e9
+```
 
+---
+
+## Input-to-Output Mapping
+
+```mermaid
+graph LR
+    subgraph Inputs["📥 INPUT DATA SOURCES"]
+        I1["NW Natural<br/>Premise Data"]
+        I2["Equipment<br/>Inventory"]
+        I3["Billing Data<br/>& Rates"]
+        I4["Weather Data<br/>HDD/CDD"]
+        I5["RBSA Building<br/>Stock"]
+        I6["ASHRAE Service<br/>Life"]
+        I7["Census ACS<br/>Housing"]
+        I8["NOAA Climate<br/>Normals"]
+        I9["RECS Microdata<br/>Benchmarks"]
+    end
+    
+    subgraph Processing["⚙️ PROCESSING PIPELINE"]
+        P1["Data Ingestion<br/>& Cleaning"]
+        P2["Housing Stock<br/>Construction"]
+        P3["Equipment<br/>Inventory"]
+        P4["Replacement<br/>Simulation"]
+        P5["End-Use<br/>Simulation"]
+        P6["Aggregation<br/>& Rollup"]
+        P7["Validation &<br/>Calibration"]
+    end
+    
+    subgraph Outputs["📤 OUTPUT RESULTS"]
+        O1["Premise-Level<br/>Consumption"]
+        O2["End-Use<br/>Breakdown"]
+        O3["Segment<br/>Analysis"]
+        O4["District<br/>Analysis"]
+        O5["UPC Projections<br/>vs IRP"]
+        O6["Calibration<br/>Metrics"]
+        O7["Scenario<br/>Comparison"]
+        O8["Segment/Market<br/>Visualization"]
+    end
+    
+    I1 --> P1
+    I2 --> P1
+    I3 --> P1
+    I4 --> P1
+    I5 --> P1
+    I6 --> P1
+    I7 --> P1
+    I8 --> P1
+    I9 --> P1
+    
+    P1 --> P2
+    P1 --> P3
+    P2 --> P4
+    P3 --> P4
+    P4 --> P5
+    I4 --> P5
+    P5 --> P6
+    P6 --> P7
+    I3 --> P7
+    
+    P2 --> O1
+    P5 --> O1
+    P5 --> O2
+    P6 --> O3
+    P6 --> O4
+    P6 --> O5
+    P7 --> O6
+    P6 --> O7
+    P6 --> O8
+    
+    style Inputs fill:#e3f2fd
+    style Processing fill:#fff3e0
+    style Outputs fill:#c8e6c9
+```
 
 ---
 
@@ -544,32 +619,31 @@ graph TD
     B --> B1["Get Annual HDD<br/>from Weather Station"]
     B1 --> B2["Calculate Heating Factor<br/>from Building Vintage"]
     B2 --> B3["therms = HDD × Factor × Qty / Efficiency"]
+    B3 --> H["Sum All End-Uses"]
     
     C --> C1["Get Water Temp Delta<br/>from Bull Run Data"]
     C1 --> C2["Calculate BTU for<br/>64 gal/day × delta_t"]
     C2 --> C3["therms = BTU / 100k / Efficiency"]
+    C3 --> H
     
     D --> D1["Look Up Baseload<br/>30 therms/yr"]
     D1 --> D2["Apply Vintage<br/>Adjustments"]
     D2 --> D3["therms = Baseload / Efficiency"]
+    D3 --> H
     
     E --> E1["Look Up Baseload<br/>20 therms/yr"]
     E1 --> E2["Apply Vintage<br/>Adjustments"]
     E2 --> E3["therms = Baseload / Efficiency"]
+    E3 --> H
     
     F --> F1["Look Up Baseload<br/>55 therms/yr"]
     F1 --> F2["Apply Vintage<br/>Adjustments"]
     F2 --> F3["therms = Baseload / Efficiency"]
+    F3 --> H
     
     G --> G1["Look Up Baseload<br/>Variable"]
     G1 --> G2["Apply Vintage<br/>Adjustments"]
     G2 --> G3["therms = Baseload / Efficiency"]
-    
-    B3 --> H["Sum All End-Uses"]
-    C3 --> H
-    D3 --> H
-    E3 --> H
-    F3 --> H
     G3 --> H
     
     H --> I["Premise Total<br/>Annual Therms"]
