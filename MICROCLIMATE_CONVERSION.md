@@ -121,41 +121,44 @@ Weather drives space heating demand, and weather varies meaningfully across the 
 
 The full pipeline:
 
-```
-Region (county or district)
-        │
-        ▼
-  Clip all rasters to ODOE utility boundary
-        │
-        ▼
-  Each premise has a district_code_IRP
-        │
-        ▼
-  DISTRICT_WEATHER_MAP  ──►  base weather station (ICAO code)
-        │
-        ▼
-  PRISM temperature normals  ──►  spatially continuous base HDD grid (800m)
-        │
-        ▼
-  LiDAR DEM  ──►  aspect, slope, TPI, wind shadow masks
-        │          (downscaled to 1m; terrain position classified)
-        ▼
-  NLCD imperviousness  ──►  surface albedo  ──►  solar heat gain  ──►  UHI offset
-        │
-        ▼
-  Landsat 9 LST  ──►  validate and calibrate UHI offset
-        │
-        ▼
-  MesoWest / NREL wind  ──►  wind infiltration multiplier
-        │
-        ▼
-  ODOT / WSDOT AADT  ──►  road heat flux ribbons
-        │
-        ▼
-  Combine all corrections  ──►  effective_hdd per premise
-        │
-        ▼
-  Write to terrain_attributes.csv  ──►  simulation pipeline
+```mermaid
+flowchart TD
+    R["Region\ncounty or district"] --> C1["Clip rasters to\nODOE utility boundary"]
+    C1 --> C2["Map district_code_IRP\nto base weather station"]
+    C2 --> C3["PRISM temp normals\n→ base HDD grid 800m"]
+    C3 --> C4["Downscale all rasters\nto 1m LiDAR grid\nbilinear interpolation"]
+
+    C4 --> T1["LiDAR DEM\n→ aspect · slope · TPI\nwind shadow masks"]
+    T1 --> T2["Terrain position\nwindward / leeward\nvalley / ridge"]
+    T1 --> T3["Elevation lapse rate\n+630 HDD per 1000ft\nabove station"]
+
+    C4 --> U1["NLCD imperviousness\n→ surface albedo"]
+    U1 --> U2["Solar aspect multiplier\n0.8–1.2"]
+    U2 --> U3["UHI temp offset °F\nabove rural baseline"]
+    U4["Landsat 9 LST\nground-truth validation"] -->|"calibrate"| U3
+
+    C4 --> W1["MesoWest / NREL wind\n→ wind speed surface"]
+    W1 --> W2["TPI + wind shadow\n→ stagnation multiplier"]
+    W2 --> W3["UHI adjusted\nfor dispersal or trapping"]
+    W1 --> W4["Wind infiltration\nmultiplier"]
+
+    C4 --> A1["ODOT / WSDOT AADT\n→ road heat flux W/m²"]
+    A1 --> A2["50–200m road buffers\n→ heat ribbons"]
+
+    T2 --> COMBINE["Combine all corrections\nbase_hdd × terrain_mult\n+ elev_addition\n− uhi_reduction\n− traffic_reduction"]
+    T3 --> COMBINE
+    W3 --> COMBINE
+    W4 --> COMBINE
+    A2 --> COMBINE
+
+    COMBINE --> ADJ["Weather adjustment\nactual / normal HDD\noptional"]
+    ADJ --> OUT["terrain_attributes.csv\nmicroclimate_id · effective_hdd\nper district / block group"]
+    OUT --> SIM["Simulation pipeline\neffective_hdd per premise\nno raster re-sampling at runtime"]
+
+    style R fill:#e8f4f8,stroke:#4a90d9
+    style OUT fill:#fef9e7,stroke:#d4a017
+    style SIM fill:#c8e6c9,stroke:#5a9a3a
+    style U4 fill:#e8f4f8,stroke:#4a90d9
 ```
 
 ---
@@ -540,11 +543,13 @@ For example, if 2024 was 8% colder than normal at KPDX, multiply all KPDX-area e
 ```mermaid
 flowchart LR
     L1["All corrected\nraster layers"] --> L2["Aggregate to\ndistrict / block group"]
-    L2 --> L3["terrain_attributes.csv\none row per geo_id"]
-    L3 --> L4["Simulation pipeline\nloads at runtime\nno raster re-sampling"]
+    L2 --> L3["Assign microclimate_id\nregion_geo_station\ne.g. PDX_MULT_KPDX"]
+    L3 --> L4["terrain_attributes.csv\nmicroclimate_id · district_code_IRP\ngeo_id · effective_hdd · all corrections"]
+    L4 --> L5["Simulation pipeline\njoins on microclimate_id\nno raster re-sampling"]
     style L1 fill:#e8f4f8
-    style L3 fill:#fef9e7
-    style L4 fill:#c8e6c9
+    style L3 fill:#e8f4f8
+    style L4 fill:#fef9e7
+    style L5 fill:#c8e6c9
 ```
 
 The final output of the pipeline for each region is a row in `Data/terrain/terrain_attributes.csv` for each IRP district or Census block group. This pre-computed lookup table is loaded at simulation runtime — the pipeline does not re-sample rasters during a model run.
@@ -553,7 +558,11 @@ The final output of the pipeline for each region is a row in `Data/terrain/terra
 
 | Column | Description |
 |--------|-------------|
+| `microclimate_id` | Unique identifier — format `{region_code}_{district_code_IRP}_{base_station}` (e.g., `PDX_MULT_KPDX`, `DLS_SKAM_KDLS`). Used to join microclimate data back to premises and composite cells. |
 | `geo_id` | District code or Census block group GEOID |
+| `district_code_IRP` | NW Natural IRP district code (e.g., `MULT`, `LANE`, `SKAM`) — the primary join key back to the premise-equipment table |
+| `region` | Processing region name (e.g., `portland_metro`, `the_dalles`, `coos_bay`) |
+| `base_station` | NOAA weather station ICAO code (e.g., `KPDX`) |
 | `terrain_position` | `windward`, `leeward`, `valley`, or `ridge` |
 | `mean_wind_ms` | Mean annual surface wind speed (m/s) |
 | `wind_infiltration_mult` | HDD multiplier from wind-driven infiltration |
@@ -623,4 +632,106 @@ A single microclimate area can span multiple districts (e.g., KPDX covers MULT, 
 | 8 | Anthropogenic load: road buffers → heat flux | ODOT / WSDOT AADT | `road_heat_flux_wm2`, `road_temp_offset_f` |
 | 9 | Combine all corrections → effective HDD | All sources | `effective_hdd` per premise |
 | 10 | Weather adjustment factor (optional) | NOAA actual vs. normal | `effective_hdd_adjusted` |
-| 11 | Write terrain_attributes.csv | All sources | Lookup table for simulation runtime |
+| 11 | Write terrain_attributes.csv | All sources | `microclimate_id`, `effective_hdd`, lookup table for simulation runtime |
+
+---
+
+## Future Work
+
+The current pipeline produces a working `effective_hdd` for every district in the NW Natural service territory. The items below represent known gaps that should be addressed as the model matures.
+
+### 1 — Output Validation and QA Step
+
+There is currently no automated check that the pipeline output is physically reasonable before it enters the simulation. A dedicated QA step should be added between Step 11 and the simulation handoff that:
+
+- Flags any `effective_hdd` values outside a plausible range (e.g., < 2,000 or > 8,000 for the PNW)
+- Compares `effective_hdd` against billing-derived therms per customer for the same district — large divergences (> 15%) should trigger a warning
+- Checks that the direction of corrections is sensible (urban districts should have lower effective HDD than their rural neighbors; windward districts should be higher than leeward)
+- Produces a QA report in `output/microclimate/` as HTML + MD, consistent with the rest of the validation suite
+
+### 2 — Output Versioning
+
+`terrain_attributes.csv` currently has no metadata about when it was produced or which data vintages were used. Every row should carry:
+
+- `run_date` — ISO timestamp of when the pipeline was executed
+- `pipeline_version` — semantic version string (e.g., `1.0.0`)
+- `lidar_vintage` — year of the LiDAR DEM used (DOGAMI tiles are updated irregularly)
+- `nlcd_vintage` — NLCD release year (2019, 2021, etc.)
+- `prism_period` — climate normal period (e.g., `1991-2020`)
+
+Without these fields, there is no way to tell whether a cached CSV reflects current data or a stale run from a previous NLCD release.
+
+### 3 — Premises Without Coordinates
+
+The pipeline assumes raster sampling at premise-level lat/lon coordinates. NW Natural's blinded data may not include geographic coordinates. The current fallback — assigning district-level proxy values from `DISTRICT_IMPERVIOUS_DEFAULTS` — loses all sub-district variation. Two improvements are needed:
+
+- Document the fallback explicitly in the pipeline (currently only mentioned in `inputs.md`)
+- Explore whether Census block group centroids or address geocoding (using the blinded zip code + street type) can provide approximate coordinates for raster sampling without exposing PII
+
+### 4 — Precipitation and Moisture Effects
+
+PRISM provides precipitation normals at the same 800 m resolution as temperature. Windward slopes receive significantly more precipitation than leeward slopes, which affects:
+
+- Latent cooling load on building envelopes (wet walls lose more heat)
+- Soil moisture and evapotranspiration, which modulates the UHI effect
+- Snow accumulation at elevation, which adds insulation to roofs and reduces heating load
+
+A `mean_annual_precip_mm` column should be added to `terrain_attributes.csv` and a precipitation-based envelope moisture multiplier incorporated into the effective HDD calculation.
+
+### 5 — Monthly Effective HDD Profiles
+
+`effective_hdd` is currently an annual scalar. The simulation uses it as a single multiplier, but space heating demand is highly seasonal — most heating occurs November through March. Producing 12 monthly `effective_hdd` values per district would:
+
+- Enable calibration against monthly billing data rather than just annual totals
+- Improve accuracy for shoulder-season months (October, April) where terrain and UHI effects differ from the winter peak
+- Support future monthly load shape modeling
+
+The PRISM monthly temperature grids already support this — the pipeline just needs to retain the monthly breakdown rather than summing to annual.
+
+### 6 — Cold Air Drainage Quantification
+
+The TPI-based valley classification identifies where cold air pooling is likely but does not quantify the magnitude. The current multiplier table gives "+0–5%" for valleys with no method for choosing within that range. A more rigorous approach would:
+
+- Use the LiDAR DEM to compute a drainage flow accumulation grid, identifying valley floors that receive cold air from upslope
+- Correlate drainage area with observed temperature inversions from MesoWest stations in valley locations (e.g., KSLE in the Willamette Valley floor)
+- Derive an empirical cold air pooling penalty (°F) as a function of drainage area and valley depth
+
+### 7 — UTM Zone Boundary Handling
+
+The NW Natural service territory spans two UTM zones: Zone 10N (Oregon and most of Washington) and Zone 11N (eastern Washington, including parts of Klickitat County). The current pipeline specifies EPSG:26910 (NAD83 / UTM Zone 10N) as the target CRS without addressing the distortion introduced for Zone 11N areas. Options:
+
+- Use a single equal-area projection for the entire service territory (e.g., Oregon Lambert, EPSG:2992) to avoid zone boundary artifacts
+- Process Zone 11N districts (KLIC, eastern SKAM) in EPSG:26911 and reproject only at the final merge step
+
+### 8 — Cooling Degree Days (CDD) Output
+
+The pipeline is entirely HDD-focused. As heat pump adoption grows, cooling load becomes relevant for summer peak demand and equipment sizing. The pipeline should produce a parallel `effective_cdd` output using the same terrain and surface corrections applied in reverse:
+
+- Urban areas (high impervious fraction) have *higher* effective CDD — the UHI increases cooling load
+- Windward slopes have lower effective CDD due to evaporative cooling
+- Valleys may have higher CDD due to trapped heat on calm summer nights
+
+Adding `effective_cdd` to `terrain_attributes.csv` would position the model for future cooling load analysis without requiring a separate pipeline run.
+
+### 9 — Error Propagation and Uncertainty Bounds
+
+Each correction layer carries uncertainty: PRISM temperature normals have ±0.5–1.5°C RMSE; NLCD imperviousness has ±5–10% accuracy; MesoWest wind observations have station-specific biases. These errors compound through the pipeline. A future version should:
+
+- Quantify the uncertainty on `effective_hdd` for each district (e.g., ±200 HDD for urban districts, ±400 HDD for high-elevation districts)
+- Add `effective_hdd_low` and `effective_hdd_high` columns representing the 10th and 90th percentile estimates
+- Propagate these bounds through the simulation to produce uncertainty ranges on simulated therms per customer
+
+### 10 — Pipeline Re-Run Cadence
+
+There is no documented policy for when to re-run the terrain attributes pipeline. Recommended triggers:
+
+| Event | Action |
+|-------|--------|
+| New NLCD release (every 2–3 years) | Re-run Steps 6–11 for all regions |
+| New LiDAR tiles available (DOGAMI updates) | Re-run Steps 4–11 for affected regions |
+| Major wildfire changes land cover | Re-run Steps 6–11 for affected districts |
+| New weather station added to NWN network | Re-run Steps 2–11 for affected districts |
+| PRISM normal period updated (e.g., 1991–2020 → 2001–2030) | Re-run Steps 3–11 for all regions |
+| Annual model calibration cycle | Re-run Step 10 (weather adjustment) only |
+
+The `run_date` and `*_vintage` columns added in item 2 above make it straightforward to identify which rows are stale after any of these events.
