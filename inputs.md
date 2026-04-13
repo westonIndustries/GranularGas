@@ -474,7 +474,8 @@ The model expects a comprehensive set of inputs spanning:
 6. **Population forecasts**: PSU (Oregon) and OFM (Washington) housing growth projections
 7. **Weather normals**: NOAA 30-year climate normals for weather normalization
 8. **RECS microdata**: EIA survey data for independent end-use validation
-9. **Scenario configuration**: User-defined parameters for projection runs
+9. **Microclimate terrain data**: DOGAMI/WA DNR LiDAR (elevation, aspect, air drainage), PRISM temperature normals (800 m), Landsat 9 land surface temperature (30 m), MesoWest/NREL wind observations, NLCD impervious surface / asphalt albedo, and ODOT/WSDOT road networks for traffic heat emissions
+10. **Scenario configuration**: User-defined parameters for projection runs
 
 All inputs are organized by source provenance in the `Data/` directory and are documented in the design.md and tasks.md files.
 
@@ -583,13 +584,222 @@ The table below classifies every data source along two dimensions:
 |---|-----------|----------------|----------|--------|--------|
 | 53 | Green Building Registry API | `GBR_API_BASE_URL` | `https://api.greenbuildingregistry.com` | 🌐 API | `fetch_gbr_properties()` |
 
+### 🔵 External / Public — Microclimate: Terrain, Temperature, Wind, Asphalt & Emissions (9 sources, all 📁 FILE)
+
+These datasets power the terrain position classifier (windward / leeward / valley / ridge), the urban heat island (UHI) correction, wind-chill simulation, and traffic heat emissions described in [MICROCLIMATE_CONVERSION.md](MICROCLIMATE_CONVERSION.md). Raster sources (LiDAR, PRISM, Landsat, NLCD) are delivered as GeoTIFFs — `rasterio` opens them and `numpy` manipulates the pixel values (e.g., converting impervious-surface percentages into effective temperature offsets, or asphalt albedo values into solar absorption heat). Vector sources (ODOT/WSDOT roads) are loaded with `geopandas`.
+
+**Quick-reference table:**
+
+| Data Type | Primary Source | Resolution | Best Use Case |
+|-----------|---------------|-----------|---------------|
+| Elevation | DOGAMI / WA DNR LiDAR | 1 meter | Modeling air drainage & wind steering |
+| Temperature | PRISM / Landsat 9 | 800 m / 30 m | Mapping Urban Heat Islands & rural cooling |
+| Wind | MesoWest / NREL | Point / 2 km | Simulating wind-chill & heat dispersal |
+| Asphalt | NLCD | 30 meter | Calculating solar absorption (albedo) |
+| Emissions | ODOT / WSDOT | Vector (roads) | Adding heat from vehicle traffic |
+
+| # | Data Source | Config Constant | Path | Access | Loader |
+|---|-----------|----------------|------|--------|--------|
+| 54 | DOGAMI / WA DNR LiDAR DEM (1 m) | `LIDAR_DEM_RASTER` | `Data/terrain/lidar_dem_nwn.tif` | 📁 FILE | `load_lidar_dem()` |
+| 55 | PRISM gridded temperature normals (800 m) | `PRISM_TEMP_DIR` | `Data/terrain/prism_tmean/` | 📁 FILE | `load_prism_temperature()` |
+| 56 | Landsat 9 Land Surface Temperature (30 m) | `LANDSAT_LST_RASTER` | `Data/terrain/landsat9_lst_nwn.tif` | 📁 FILE | `load_landsat_lst()` |
+| 57 | MesoWest station wind observations | `MESOWEST_WIND_DIR` | `Data/terrain/mesowest_wind/` | 📁 FILE | `load_mesowest_wind()` |
+| 58 | NREL Wind Resource gridded data (2 km) | `NREL_WIND_RASTER` | `Data/terrain/nrel_wind_nwn.tif` | 📁 FILE | `load_nrel_wind()` |
+| 59 | NLCD Impervious Surface / Asphalt (30 m) | `NLCD_IMPERVIOUS_RASTER` | `Data/terrain/nlcd_impervious_nwn.tif` | 📁 FILE | `load_nlcd_impervious()` |
+| 60 | ODOT road network (Oregon) | `ODOT_ROADS_SHP` | `Data/terrain/odot_roads_oregon.shp` | 📁 FILE | `load_road_emissions()` |
+| 61 | WSDOT road network (Washington) | `WSDOT_ROADS_SHP` | `Data/terrain/wsdot_roads_washington.shp` | 📁 FILE | `load_road_emissions()` |
+| 62 | Derived terrain attributes (all sources combined) | `TERRAIN_ATTRIBUTES_CSV` | `Data/terrain/terrain_attributes.csv` | 📁 FILE | `load_terrain_attributes()` |
+
+#### 54 — DOGAMI / WA DNR LiDAR DEM (1 meter)
+
+**Purpose**: High-resolution bare-earth elevation for modeling air drainage (cold air pooling in valleys), wind steering around ridgelines, and precise windward/leeward slope classification. At 1 m resolution, individual hillsides and drainage channels are resolved — far more accurate than the 30 m USGS 3DEP product for terrain-driven microclimate work.
+
+**Format**: GeoTIFF, float32, elevation in meters. Oregon tiles from [DOGAMI Lidar Viewer](https://gis.dogami.oregon.gov/maps/lidarviewer/); Washington tiles from [WA DNR Lidar Portal](https://lidarportal.dnr.wa.gov/). Mosaic and clip to NWN service territory bounding box before use.
+
+**Key Derived Quantities**:
+- `aspect` (0–360°): Direction the slope faces. Windward = within ±90° of 225° (SW prevailing wind). Computed from the DEM using numpy gradient.
+- `slope` (degrees): Steepness. Ridges > 25°; valleys < 5°.
+- `terrain_position`: Classified as `windward`, `leeward`, `valley`, or `ridge` based on aspect and elevation relative to the nearest ridgeline.
+- `air_drainage_index`: Identifies low-lying areas where cold air pools overnight, increasing effective HDD.
+
+**Config Constants**: `TERRAIN_DIR`, `LIDAR_DEM_RASTER`
+
+**Loader**: `load_lidar_dem()` in `src/loaders/load_terrain_attributes.py`
+
+---
+
+#### 55 — PRISM Gridded Temperature Normals (800 m)
+
+**Purpose**: PRISM (Parameter-elevation Regressions on Independent Slopes Model) produces spatially continuous temperature grids that already account for terrain effects — the standard reference for Pacific Northwest climate mapping. Monthly mean temperature normals (1991–2020) at 800 m resolution capture valley inversions, coastal cooling, and Gorge channeling that point stations miss.
+
+**Format**: One GeoTIFF per month, float32, values in °C (raw values are °C × 100; divide by 100). Download from [PRISM Climate Group](https://prism.oregonstate.edu/normals/) — select "Monthly Normals", variable `tmean`, all 12 months, 800 m resolution. Free, no account required.
+
+**Required Files**: 12 monthly files named `PRISM_tmean_30yr_normal_800mM4_{MM}_bil.bil` stored in `Data/terrain/prism_tmean/`.
+
+**Key Columns** (after loading):
+- `month` (int): 1–12
+- `tmean_c` (float): Monthly mean temperature (°C)
+- `hdd_contribution` (float): Heating degree days contributed by this month (base 65°F)
+
+**Usage**: Compute a full annual HDD grid independent of point weather stations. Each monthly mean is multiplied by the number of days in that month to produce monthly HDD, then summed to annual HDD. Provides a spatially continuous alternative to the 11-station `DISTRICT_WEATHER_MAP` for sub-district microclimate refinement.
+
+**Config Constant**: `PRISM_TEMP_DIR`
+
+**Loader**: `load_prism_temperature()` in `src/loaders/load_terrain_attributes.py`
+
+---
+
+#### 56 — Landsat 9 Land Surface Temperature (30 m)
+
+**Purpose**: Landsat 9 Band 10 (thermal infrared) provides actual land surface temperature (LST) at 30 m resolution, directly measuring the heat emitted by asphalt, rooftops, and bare soil. Downtown Portland's asphalt surfaces reach 120–140°F on summer afternoons while nearby parks stay 20–30°F cooler. Used to validate and calibrate the NLCD-derived UHI offsets.
+
+**Format**: GeoTIFF, float32, raw digital number values. Apply the Landsat Collection 2 scale factor (`LST_K = pixel × 0.00341802 + 149.0`) to convert to Kelvin, then subtract 273.15 for Celsius. Download from [USGS EarthExplorer](https://earthexplorer.usgs.gov/) — Landsat Collection 2 Level-2, Band ST_B10. Choose cloud-free summer scenes (July–August) for maximum UHI signal. Fill pixels (values < 150 K after scaling) should be treated as missing.
+
+**Key Columns** (after loading):
+- `lst_celsius` (float): Land surface temperature (°C)
+- `uhi_intensity_c` (float): LST minus rural background temperature — positive values indicate urban warming
+
+**Usage**: Compare LST in urban pixels against rural/forested pixels to empirically measure UHI magnitude for Portland, Salem, and Eugene. Cross-validates the albedo-based UHI estimates derived from NLCD.
+
+**Config Constant**: `LANDSAT_LST_RASTER`
+
+**Loader**: `load_landsat_lst()` in `src/loaders/load_terrain_attributes.py`
+
+---
+
+#### 57 — MesoWest Station Wind Observations
+
+**Purpose**: MesoWest aggregates real-time and historical wind speed/direction from hundreds of surface stations across the Pacific Northwest, including non-NWS sites (fire weather, agricultural, highway sensors). Used to validate wind patterns and calibrate windward/leeward HDD multipliers against observed wind-chill effects.
+
+**Format**: CSV per station with columns `date_time`, `wind_speed_ms`, `wind_direction_deg`, `station_id`, `latitude`, `longitude`, `elevation_m`. Download via [MesoWest / Synoptic API](https://developers.synopticdata.com/mesonet/) — free tier available, requires API token. Store downloaded CSVs in `Data/terrain/mesowest_wind/`.
+
+**Key Columns** (after aggregation):
+- `station_id` (str): Station identifier
+- `mean_wind_ms` (float): Annual mean wind speed (m/s)
+- `p90_wind_ms` (float): 90th percentile wind speed (m/s) — captures peak infiltration events
+- `lat`, `lon` (float): Station coordinates
+
+**Usage**: Each 1 m/s of mean wind speed above 3 m/s (typical sheltered suburban baseline) adds approximately 1.5% to the effective heating load through increased envelope infiltration. Stations in the Columbia River Gorge corridor (KDLS area) and coastal headlands show persistently elevated wind speeds that justify higher HDD multipliers.
+
+**Config Constant**: `MESOWEST_WIND_DIR`
+
+**Loader**: `load_mesowest_wind()` in `src/loaders/load_terrain_attributes.py`
+
+---
+
+#### 58 — NREL Wind Resource Gridded Data (2 km)
+
+**Purpose**: Spatially continuous annual mean wind speed at 2 km resolution. Fills gaps where MesoWest has sparse station coverage (rural eastern Oregon, Skamania County) and captures terrain channeling effects like the Columbia River Gorge acceleration zone.
+
+**Format**: GeoTIFF, float32, wind speed in m/s at 80 m hub height. Download from [NREL Wind Prospector](https://maps.nrel.gov/wind-prospector/) or the [NREL Data Catalog](https://data.nrel.gov/). Values are scaled from 80 m to 10 m surface wind using a log-law correction (divide by approximately 1.3 for typical PNW surface roughness).
+
+**Key Columns** (after loading):
+- `wind_speed_10m_ms` (float): Annual mean wind speed at 10 m surface height (m/s)
+
+**Usage**: Used where MesoWest station density is insufficient. Combined with MesoWest observations to produce a spatially complete wind speed surface for the NWN service territory.
+
+**Config Constant**: `NREL_WIND_RASTER`
+
+**Loader**: `load_nrel_wind()` in `src/loaders/load_terrain_attributes.py`
+
+---
+
+#### 59 — NLCD Impervious Surface / Asphalt (30 m)
+
+**Purpose**: Quantifies the fraction of each 30 m cell covered by impervious surfaces (roads, parking lots, rooftops). Higher impervious fraction means lower surface albedo, more solar absorption, stronger urban heat island, and fewer effective HDD. Pixel values are integers 0–100 representing percent impervious cover.
+
+**Format**: GeoTIFF, uint8, values 0–100. Projected in Albers Equal Area (EPSG:5070); reproject to match LiDAR DEM CRS before combining. Sentinel values above 100 (e.g., 127 in some releases) indicate no data and should be treated as missing. Download from [MRLC.gov](https://www.mrlc.gov/data) — "NLCD Impervious Surface", 2021, Pacific Northwest region. Free, no account required.
+
+**Albedo conversion**: Asphalt albedo ≈ 0.05 (absorbs 95% of incoming solar radiation) vs. vegetated land ≈ 0.20. The impervious fraction is used to blend these two albedo values. Lower blended albedo → more absorbed solar energy → higher surface temperature → UHI warming → HDD reduction.
+
+**Key Columns** (after loading):
+- `impervious_pct` (float): Percent impervious cover (0–100)
+- `surface_albedo` (float): Blended effective albedo (0.05–0.20)
+- `uhi_offset_f` (float): Estimated UHI temperature offset (°F) above rural baseline
+- `hdd_reduction` (float): Annual HDD reduction from UHI warming
+
+**Practical impact reference**:
+
+| Land use | Impervious % | Albedo | UHI offset | HDD reduction |
+|----------|-------------|--------|-----------|---------------|
+| Dense urban core (downtown Portland) | 85% | 0.07 | ~3.4°F | ~612 HDD (−12.6%) |
+| Urban residential (inner SE Portland) | 55% | 0.12 | ~2.2°F | ~396 HDD (−8.2%) |
+| Suburban (Beaverton, Gresham) | 40% | 0.14 | ~1.6°F | ~288 HDD (−5.9%) |
+| Small city / town center | 30% | 0.16 | ~1.2°F | ~216 HDD (−4.5%) |
+| Rural / agricultural | 8% | 0.19 | ~0.3°F | ~54 HDD (−1.1%) |
+
+**Config Constant**: `NLCD_IMPERVIOUS_RASTER`
+
+**Loader**: `load_nlcd_impervious()` in `src/loaders/load_terrain_attributes.py`
+
+---
+
+#### 60 & 61 — ODOT / WSDOT Road Networks (Vector)
+
+**Purpose**: Vehicle traffic generates waste heat through engine exhaust, brake friction, and tire-road friction. In high-traffic corridors (I-5, I-84, US-26), this adds a measurable sensible heat flux to the urban boundary layer — typically 5–20 W/m² along major arterials. Road network data from ODOT (Oregon) and WSDOT (Washington) provides the geometry and traffic volume attributes needed to estimate this heat contribution.
+
+**Format**: Shapefile or GeoJSON, line geometry. Key attributes: `AADT` (Annual Average Daily Traffic, vehicles/day), `road_class` (Interstate, US Highway, State Route, Local), `lanes`, `speed_limit_mph`. Rows with missing AADT are excluded.
+
+**Download**:
+- Oregon: [ODOT GIS Data](https://www.oregon.gov/odot/data/pages/gis.aspx) — "Oregon Road Network" shapefile. Free.
+- Washington: [WSDOT GIS Open Data](https://gisdata-wsdot.opendata.arcgis.com/) — "All Roads" layer. Free.
+
+**Key Columns** (after loading):
+- `AADT` (float): Annual Average Daily Traffic (vehicles/day)
+- `road_class` (str): Road classification
+- `heat_flux_wm2` (float): Estimated sensible heat flux from traffic (W/m²)
+- `temp_offset_f` (float): Estimated air temperature offset from traffic heat (°F)
+
+**Usage**: Each vehicle dissipates approximately 150 kJ/km as waste heat. I-5 through Portland (~150,000 vehicles/day) produces roughly 8 W/m² of road surface heat flux, contributing ~0.1–0.3°F to local air temperature. This is modest individually but additive with asphalt albedo and building HVAC effects in the urban core.
+
+**Config Constants**: `ODOT_ROADS_SHP`, `WSDOT_ROADS_SHP`
+
+**Loader**: `load_road_emissions()` in `src/loaders/load_terrain_attributes.py`
+
+---
+
+#### 62 — Derived Terrain Attributes CSV
+
+**Purpose**: A pre-computed lookup table combining all five microclimate data types into a single flat CSV, so the simulation pipeline does not re-sample rasters or query APIs at runtime. Generated once from all source rasters using `src/loaders/load_terrain_attributes.py` and stored in `Data/terrain/`.
+
+**Format**: CSV with one row per geographic unit (IRP district or Census block group).
+
+**Required Columns**:
+
+| Column | Source | Type | Description |
+|--------|--------|------|-------------|
+| `geo_id` | — | str | District code or Census block group GEOID |
+| `mean_elevation_ft` | LiDAR | float | Mean elevation of premises in this unit (feet) |
+| `dominant_aspect_deg` | LiDAR | float | Modal terrain aspect (0–360°, 225° = SW prevailing wind) |
+| `terrain_position` | LiDAR | str | `windward`, `leeward`, `valley`, or `ridge` |
+| `mean_wind_ms` | MesoWest / NREL | float | Mean annual surface wind speed (m/s) |
+| `wind_infiltration_mult` | MesoWest / NREL | float | HDD multiplier from wind-driven infiltration |
+| `prism_annual_hdd` | PRISM | float | PRISM-derived annual HDD (°F-days, base 65°F) |
+| `lst_summer_c` | Landsat 9 | float | Mean summer land surface temperature (°C) |
+| `mean_impervious_pct` | NLCD | float | Mean impervious surface % across the unit |
+| `surface_albedo` | NLCD | float | Effective blended surface albedo (0–1) |
+| `uhi_offset_f` | NLCD + Landsat | float | UHI temperature offset above rural baseline (°F) |
+| `road_heat_flux_wm2` | ODOT / WSDOT | float | Traffic waste heat flux (W/m²) |
+| `road_temp_offset_f` | ODOT / WSDOT | float | Air temperature offset from traffic heat (°F) |
+| `hdd_terrain_mult` | LiDAR | float | HDD multiplier from terrain position (e.g., 1.07 for windward) |
+| `hdd_elev_addition` | LiDAR | float | HDD addition from elevation lapse rate above station |
+| `hdd_uhi_reduction` | NLCD + Landsat | float | HDD reduction from UHI warming |
+| `effective_hdd` | All sources | float | Final adjusted HDD used in simulation |
+
+**Config Constant**: `TERRAIN_ATTRIBUTES_CSV`
+
+**Loader**: `load_terrain_attributes()` in `src/loaders/load_terrain_attributes.py`
+
+---
+
 ### Totals
 
 | Category | Count | 📁 File | 🌐 API |
 |----------|-------|---------|--------|
 | 🟢 NW Natural (proprietary) | 15 | 15 | 0 |
 | 🟡 Team-created (from NWN docs) | 10 | 10 | 0 |
-| 🔵 External / Public | 28 | 25 | 3 |
-| **Total** | **53** | **50** | **3** |
+| 🔵 External / Public | 36 | 33 | 3 |
+| **Total** | **61** | **58** | **3** |
 
 > API sources requiring runtime credentials: Census ACS B25034 (no key needed), NOAA CDO (`NOAA_CDO_TOKEN`), Green Building Registry (`GBR_API_KEY`). All other sources are local files on disk.
+> Microclimate rasters (sources 54–59) are large files (500 MB – 2 GB each for full Pacific Northwest coverage). Clip to the NWN service territory bounding box before committing to the repo or sharing with the team.

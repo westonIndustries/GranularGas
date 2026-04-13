@@ -264,6 +264,7 @@ Key sections:
 | **[INSTALLATION_AND_SETUP.md](INSTALLATION_AND_SETUP.md)** | Complete setup guide with troubleshooting | 15 min |
 | **[ALGORITHM.md](ALGORITHM.md)** | Detailed algorithm description and methodology | 20 min |
 | **[REGIONS_AND_CELLS.md](REGIONS_AND_CELLS.md)** | Geographic analysis framework (6 levels) | 15 min |
+| **[MICROCLIMATE_CONVERSION.md](MICROCLIMATE_CONVERSION.md)** | Step-by-step: convert a region to microclimate areas | 10 min |
 | **[API_DOCUMENTATION.md](API_DOCUMENTATION.md)** | REST API reference (23 endpoints) | 20 min |
 | **[inputs.md](inputs.md)** | Input data specifications (53 sources) | 15 min |
 | **[outputs.md](outputs.md)** | Output file specifications and formats | 10 min |
@@ -375,6 +376,7 @@ Data Ingestion → Housing Stock → Equipment → Weather → Simulation → Ag
 |----------|---------|----------|
 | [ALGORITHM.md](ALGORITHM.md) | Detailed algorithm description (8 steps, heat pump integration) | Developers, researchers |
 | [REGIONS_AND_CELLS.md](REGIONS_AND_CELLS.md) | Geographic analysis framework (6 levels, composite cells) | Analysts, users |
+| [MICROCLIMATE_CONVERSION.md](MICROCLIMATE_CONVERSION.md) | Step-by-step guide: region → microclimate areas | Developers, analysts |
 | [API_DOCUMENTATION.md](API_DOCUMENTATION.md) | REST API reference (23 endpoints with examples) | Developers, integrators |
 | [inputs.md](inputs.md) | Input data specifications (53 sources, color-coded by provenance) | Developers, analysts |
 | [outputs.md](outputs.md) | Output file specifications (8 file types) | Analysts, users |
