@@ -10,6 +10,32 @@ For the full geographic hierarchy (county → district → microclimate → comp
 
 ---
 
+## Table of Contents
+
+- [Pipeline Overview](#pipeline-overview)
+- [Spatial Boundary and Utility Context](#spatial-boundary-and-utility-context)
+- [Data Layers](#data-layers)
+- [Conceptual Model](#conceptual-model)
+- [Step 1 — Define the Region and Clip to Utility Boundary](#step-1--define-the-region-and-clip-to-utility-boundary)
+- [Step 2 — Map Districts to Base Weather Stations](#step-2--map-districts-to-base-weather-stations)
+- [Step 3 — Build the Atmospheric Base (PRISM + NOAA)](#step-3--build-the-atmospheric-base-prism--noaa)
+- [Step 4 — Downscale to LiDAR Resolution](#step-4--downscale-to-lidar-resolution)
+- [Step 5 — Terrain Analysis (LiDAR DEM)](#step-5--terrain-analysis-lidar-dem)
+- [Step 6 — Thermal Logic: Heat Gain from Asphalt (NLCD)](#step-6--thermal-logic-heat-gain-from-asphalt-nlcd)
+- [Step 7 — Wind Steering: TPI and Wind Shadow](#step-7--wind-steering-tpi-and-wind-shadow)
+- [Step 8 — Anthropogenic Heat Load (ODOT / WSDOT Traffic)](#step-8--anthropogenic-heat-load-odot--wsdot-traffic)
+- [Step 9 — Combine All Corrections into Effective HDD](#step-9--combine-all-corrections-into-effective-hdd)
+- [Step 10 — Weather Adjustment Factor (Optional)](#step-10--weather-adjustment-factor-optional)
+- [Step 11 — Write to Terrain Attributes CSV](#step-11--write-to-terrain-attributes-csv)
+- [Data Sources Summary](#data-sources-summary)
+- [Adding a New District or Station](#adding-a-new-district-or-station)
+- [Relationship to Other Geographic Levels](#relationship-to-other-geographic-levels)
+- [Pipeline Step Summary](#pipeline-step-summary)
+- [Future Work](#future-work)
+- [Appendix A — Data Source Reference](#appendix-a--data-source-reference)
+
+---
+
 ## Pipeline Overview
 
 ```mermaid
@@ -735,3 +761,92 @@ There is no documented policy for when to re-run the terrain attributes pipeline
 | Annual model calibration cycle | Re-run Step 10 (weather adjustment) only |
 
 The `run_date` and `*_vintage` columns added in item 2 above make it straightforward to identify which rows are stale after any of these events.
+
+---
+
+## Appendix A — Data Source Reference
+
+All data sources used by the microclimate pipeline, with access details, file locations, and config constants.
+
+### A.1 Terrain
+
+| # | Source | Data | Resolution | Format | Location | Config Constant | Access |
+|---|--------|------|-----------|--------|----------|----------------|--------|
+| 1 | DOGAMI Oregon Lidar Consortium | Bare-earth LiDAR DEM (Oregon) | 1 meter | GeoTIFF | `Data/terrain/lidar_dem_nwn.tif` | `LIDAR_DEM_RASTER` | [DOGAMI Lidar Viewer](https://gis.dogami.oregon.gov/maps/lidarviewer/) — free |
+| 2 | WA DNR Lidar Portal | Bare-earth LiDAR DEM (Washington) | 1 meter | GeoTIFF | `Data/terrain/lidar_dem_nwn.tif` (merged) | `LIDAR_DEM_RASTER` | [WA DNR Lidar Portal](https://lidarportal.dnr.wa.gov/) — free |
+| 3 | ODOE Gas Utility Boundaries | NW Natural service area mask | Vector | Shapefile / GeoJSON | `Data/terrain/odoe_utility_boundary.shp` | `ODOE_BOUNDARY_SHP` | [Oregon Dept of Energy GIS](https://www.oregon.gov/energy/Get-Involved/Pages/GIS-Data.aspx) — free |
+
+### A.2 Temperature
+
+| # | Source | Data | Resolution | Format | Location | Config Constant | Access |
+|---|--------|------|-----------|--------|----------|----------------|--------|
+| 4 | PRISM Climate Group | Monthly mean temperature normals 1991–2020 | 800 meter | GeoTIFF (BIL) | `Data/terrain/prism_tmean/` | `PRISM_TEMP_DIR` | [prism.oregonstate.edu/normals](https://prism.oregonstate.edu/normals/) — free |
+| 5 | NOAA CDO | 30-year daily and monthly climate normals (11 stations) | Point | CSV | `Data/noaa_normals/` | `NOAA_NORMALS_DIR` | Pre-downloaded; [NOAA CDO API](https://www.ncei.noaa.gov/cdo-web/api/v2) requires token (`NOAA_CDO_TOKEN`) |
+| 6 | Landsat 9 TIRS Band 10 | Land surface temperature (ground-truth UHI validation) | 30 meter | GeoTIFF | `Data/terrain/landsat9_lst_nwn.tif` | `LANDSAT_LST_RASTER` | [USGS EarthExplorer](https://earthexplorer.usgs.gov/) or `pystac-client` via Microsoft Planetary Computer — free |
+
+### A.3 Wind
+
+| # | Source | Data | Resolution | Format | Location | Config Constant | Access |
+|---|--------|------|-----------|--------|----------|----------------|--------|
+| 7 | MesoWest / Synoptic Data | Historical wind speed and direction (surface stations) | Point | CSV per station | `Data/terrain/mesowest_wind/` | `MESOWEST_WIND_DIR` | [Synoptic API](https://developers.synopticdata.com/mesonet/) — free tier, API token required |
+| 8 | NREL Wind Resource | Annual mean wind speed at 80 m hub height | 2 km | GeoTIFF | `Data/terrain/nrel_wind_nwn.tif` | `NREL_WIND_RASTER` | [NREL Wind Prospector](https://maps.nrel.gov/wind-prospector/) or [NREL Data Catalog](https://data.nrel.gov/) — free |
+
+### A.4 Asphalt / Imperviousness
+
+| # | Source | Data | Resolution | Format | Location | Config Constant | Access |
+|---|--------|------|-----------|--------|----------|----------------|--------|
+| 9 | MRLC / USGS NLCD 2021 | Impervious surface percentage | 30 meter | GeoTIFF | `Data/terrain/nlcd_impervious_nwn.tif` | `NLCD_IMPERVIOUS_RASTER` | [MRLC.gov](https://www.mrlc.gov/data) — free, no account required |
+
+### A.5 Traffic Emissions
+
+| # | Source | Data | Resolution | Format | Location | Config Constant | Access |
+|---|--------|------|-----------|--------|----------|----------------|--------|
+| 10 | ODOT | Oregon road network with AADT traffic volumes | Vector | Shapefile | `Data/terrain/odot_roads_oregon.shp` | `ODOT_ROADS_SHP` | [ODOT GIS Data](https://www.oregon.gov/odot/data/pages/gis.aspx) — free |
+| 11 | WSDOT | Washington road network with AADT traffic volumes | Vector | Shapefile | `Data/terrain/wsdot_roads_washington.shp` | `WSDOT_ROADS_SHP` | [WSDOT GIS Open Data](https://gisdata-wsdot.opendata.arcgis.com/) — free |
+
+### A.6 NW Natural Reference Data
+
+| # | Source | Data | Format | Location | Config Constant | Notes |
+|---|--------|------|--------|----------|----------------|-------|
+| 12 | NW Natural | IRP district codes and weather station mapping | Python dict | `src/config.py` | `DISTRICT_WEATHER_MAP` | 17 districts → 11 ICAO stations |
+| 13 | NW Natural | Premise data with `district_code_IRP` | CSV | `Data/NWNatural Data/premise_data_blinded.csv` | `PREMISE_DATA` | Blinded; required for premise-level join |
+| 14 | NW Natural | Daily weather data (CalDay 1985–2025) | CSV | `Data/NWNatural Data/DailyCalDay1985_Mar2025.csv` | `WEATHER_CALDAY` | Used for actual-year HDD (Step 10) |
+
+### A.7 Pipeline Output
+
+| # | Artifact | Format | Location | Config Constant | Description |
+|---|----------|--------|----------|----------------|-------------|
+| 15 | Terrain attributes lookup table | CSV | `Data/terrain/terrain_attributes.csv` | `TERRAIN_ATTRIBUTES_CSV` | One row per district / block group; all microclimate corrections pre-computed; joined to premise-equipment table on `microclimate_id` and `district_code_IRP` |
+
+### A.8 Key Config Constants (src/config.py)
+
+| Constant | Value / Path | Purpose |
+|----------|-------------|---------|
+| `TERRAIN_DIR` | `Data/terrain/` | Root directory for all microclimate raster files |
+| `LIDAR_DEM_RASTER` | `Data/terrain/lidar_dem_nwn.tif` | 1 m bare-earth DEM |
+| `PRISM_TEMP_DIR` | `Data/terrain/prism_tmean/` | 12 monthly PRISM temperature GeoTIFFs |
+| `LANDSAT_LST_RASTER` | `Data/terrain/landsat9_lst_nwn.tif` | Landsat 9 land surface temperature |
+| `MESOWEST_WIND_DIR` | `Data/terrain/mesowest_wind/` | MesoWest station wind CSVs |
+| `NREL_WIND_RASTER` | `Data/terrain/nrel_wind_nwn.tif` | NREL 2 km gridded wind speed |
+| `NLCD_IMPERVIOUS_RASTER` | `Data/terrain/nlcd_impervious_nwn.tif` | NLCD 2021 imperviousness |
+| `ODOT_ROADS_SHP` | `Data/terrain/odot_roads_oregon.shp` | ODOT road network with AADT |
+| `WSDOT_ROADS_SHP` | `Data/terrain/wsdot_roads_washington.shp` | WSDOT road network with AADT |
+| `ODOE_BOUNDARY_SHP` | `Data/terrain/odoe_utility_boundary.shp` | ODOE Gas Utility boundary mask |
+| `TERRAIN_ATTRIBUTES_CSV` | `Data/terrain/terrain_attributes.csv` | Pre-computed microclimate lookup table |
+| `DISTRICT_WEATHER_MAP` | dict in config.py | 17 IRP districts → 11 NOAA station ICAO codes |
+| `NOAA_NORMALS_DIR` | `Data/noaa_normals/` | Pre-downloaded NOAA 30-year normals |
+| `NOAA_CDO_TOKEN_ENV_VAR` | `"NOAA_CDO_TOKEN"` | Environment variable name for NOAA API token |
+
+### A.9 Python Dependencies
+
+| Package | Version | Purpose |
+|---------|---------|---------|
+| `rasterio` | ≥ 1.3 | GeoTIFF I/O, reprojection, raster sampling |
+| `numpy` | ≥ 1.24 | Array math, gradient computation, masking |
+| `geopandas` | ≥ 0.14 | Shapefile I/O, road buffer geometry |
+| `scipy` | ≥ 1.11 | Bilinear interpolation smoothing (`ndimage`) |
+| `pystac-client` | ≥ 0.7 | Landsat 9 scene discovery via STAC catalog |
+| `pandas` | ≥ 2.0 | CSV I/O, terrain attributes table |
+| `pyproj` | ≥ 3.6 | CRS transformations (UTM zone handling) |
+| `shapely` | ≥ 2.0 | Road buffer geometry (via geopandas) |
+| `richdem` | ≥ 0.3 | TPI and flow accumulation from DEM (optional) |
