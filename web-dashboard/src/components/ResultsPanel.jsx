@@ -137,6 +137,10 @@ const ResultsPanel = ({ results }) => {
               </thead>
               <tbody>
                 <tr>
+                  <td>Zone Number</td>
+                  <td>{results.zone_number}</td>
+                </tr>
+                <tr>
                   <td>Scenario ID</td>
                   <td>{results.scenario_id}</td>
                 </tr>

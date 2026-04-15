@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_id": 10,
+        "name": "Baker City",
+        "region": "Eastern",
+        "description": "Baker City area in Baker County"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.5,
+              45.0
+            ],
+            [
+              -117.5,
+              45.0
+            ],
+            [
+              -117.5,
+              44.2
+            ],
+            [
+              -118.5,
+              44.2
+            ],
+            [
+              -118.5,
+              45.0
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

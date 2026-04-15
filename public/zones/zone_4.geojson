@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_id": 4,
+        "name": "Gorge Region",
+        "region": "NW",
+        "description": "Columbia River Gorge area including Hood River and Wasco counties"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.0,
+              45.8
+            ],
+            [
+              -120.5,
+              45.8
+            ],
+            [
+              -120.5,
+              45.2
+            ],
+            [
+              -122.0,
+              45.2
+            ],
+            [
+              -122.0,
+              45.8
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

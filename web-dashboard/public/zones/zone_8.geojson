@@ -1,0 +1,25 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_number": 8,
+        "zone_name": "Tillamook County",
+        "description": "Coastal region and dairy country"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-124.5, 45.0],
+            [-123.5, 45.0],
+            [-123.5, 45.5],
+            [-124.5, 45.5],
+            [-124.5, 45.0]
+          ]
+        ]
+      }
+    }
+  ]
+}

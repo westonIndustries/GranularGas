@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Housing Stock Verification Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { color: #333; border-bottom: 3px solid #0066cc; padding-bottom: 10px; }
+        h2 { color: #0066cc; margin-top: 30px; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0066cc; color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        .metric { display: inline-block; margin: 10px 20px 10px 0; padding: 15px; background-color: #f0f0f0; border-radius: 5px; }
+        .metric-value { font-size: 24px; font-weight: bold; color: #0066cc; }
+        .metric-label { font-size: 12px; color: #666; }
+        img { max-width: 100%; height: auto; margin: 20px 0; }
+        .timestamp { color: #999; font-size: 12px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Housing Stock Verification Report</h1>
+        
+            <h2>Housing Stock Verification Report - Data Not Available</h2>
+            <p><strong>Status:</strong> NW Natural proprietary data files are not available in this environment.</p>
+            
+            <h3>Expected Outputs (when data is available)</h3>
+            <ul>
+                <li>Total residential units in service territory</li>
+                <li>Segment distribution (RESSF, RESMF, MOBILE)</li>
+                <li>District distribution across service territory</li>
+                <li>Comparison to Census B25034 county totals</li>
+                <li>Bar chart showing premises by segment</li>
+            </ul>
+            
+            <h3>Data Requirements</h3>
+            <p>This report requires the following NW Natural proprietary files:</p>
+            <ul>
+                <li>Data/NWNatural Data/premise_data_blinded.csv</li>
+                <li>Data/NWNatural Data/equipment_data_blinded.csv</li>
+                <li>Data/NWNatural Data/segment_data_blinded.csv</li>
+                <li>Data/NWNatural Data/equipment_codes.csv</li>
+            </ul>
+            
+            <h3>Verification Checklist</h3>
+            <p>When data becomes available, this report will verify:</p>
+            <ul>
+                <li>Total units matches expected service territory size</li>
+                <li>Segment split aligns with historical proportions</li>
+                <li>District assignments are complete and valid</li>
+                <li>Premise counts align with Census housing unit estimates</li>
+            </ul>
+            
+        <div class="timestamp">Generated: 2026-04-13 18:08:28</div>
+    </div>
+</body>
+</html>

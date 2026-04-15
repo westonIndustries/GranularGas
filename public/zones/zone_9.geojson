@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_id": 9,
+        "name": "Pendleton-La Grande",
+        "region": "NE",
+        "description": "Pendleton-La Grande area in Umatilla and Union counties"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -119.5,
+              45.8
+            ],
+            [
+              -118.0,
+              45.8
+            ],
+            [
+              -118.0,
+              45.0
+            ],
+            [
+              -119.5,
+              45.0
+            ],
+            [
+              -119.5,
+              45.8
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

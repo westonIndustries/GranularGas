@@ -1,0 +1,25 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_number": 1,
+        "zone_name": "Portland Metro",
+        "description": "Portland metropolitan area and surrounding Willamette Valley"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-124.5, 45.0],
+            [-122.0, 45.0],
+            [-122.0, 46.5],
+            [-124.5, 46.5],
+            [-124.5, 45.0]
+          ]
+        ]
+      }
+    }
+  ]
+}

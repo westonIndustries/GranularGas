@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { runForecast } from '../api/client';
+import ZoneSelector from './ZoneSelector';
 
 const ParameterPanel = ({
   onForecastComplete,
@@ -8,6 +9,7 @@ const ParameterPanel = ({
   onScenariosUpdate
 }) => {
   const [params, setParams] = useState({
+    zone_number: 1,
     base_year: 2025,
     forecast_horizon: 10,
     housing_growth_rate: 0.01,
@@ -40,6 +42,7 @@ const ParameterPanel = ({
 
   const handleReset = () => {
     setParams({
+      zone_number: 1,
       base_year: 2025,
       forecast_horizon: 10,
       housing_growth_rate: 0.01,
@@ -52,6 +55,12 @@ const ParameterPanel = ({
   return (
     <div className="parameter-panel">
       <h2>Scenario Parameters</h2>
+
+      <ZoneSelector
+        selectedZone={params.zone_number}
+        onZoneChange={(zone) => handleParameterChange('zone_number', zone)}
+        disabled={false}
+      />
 
       <div className="parameter-group">
         <label>Scenario Name (optional)</label>
@@ -149,6 +158,7 @@ const ParameterPanel = ({
       <div className="parameter-summary">
         <h3>Current Configuration</h3>
         <ul>
+          <li><strong>Zone:</strong> {params.zone_number}</li>
           <li><strong>Base Year:</strong> {params.base_year}</li>
           <li><strong>Horizon:</strong> {params.forecast_horizon} years</li>
           <li><strong>Housing Growth:</strong> {(params.housing_growth_rate * 100).toFixed(2)}% annually</li>

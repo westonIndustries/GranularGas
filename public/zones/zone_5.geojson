@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_id": 5,
+        "name": "Bend-Redmond",
+        "region": "Central",
+        "description": "Bend-Redmond area in Deschutes County"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.0,
+              44.5
+            ],
+            [
+              -120.5,
+              44.5
+            ],
+            [
+              -120.5,
+              43.5
+            ],
+            [
+              -122.0,
+              43.5
+            ],
+            [
+              -122.0,
+              44.5
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

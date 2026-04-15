@@ -1,0 +1,25 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_number": 5,
+        "zone_name": "Bend-Redmond",
+        "description": "Central Oregon high desert region"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-122.5, 43.5],
+            [-120.5, 43.5],
+            [-120.5, 45.0],
+            [-122.5, 45.0],
+            [-122.5, 43.5]
+          ]
+        ]
+      }
+    }
+  ]
+}

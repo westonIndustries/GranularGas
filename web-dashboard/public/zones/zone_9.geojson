@@ -1,0 +1,25 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_number": 9,
+        "zone_name": "Pendleton-La Grande",
+        "description": "Northeast Oregon Blue Mountains"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-120.5, 45.0],
+            [-118.5, 45.0],
+            [-118.5, 46.5],
+            [-120.5, 46.5],
+            [-120.5, 45.0]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -39,6 +39,388 @@ from src.equipment import (
 from src.config import USEFUL_LIFE
 
 
+def generate_property6_report(equipment_data, after_equipment, output_dir):
+    """Generate HTML and Markdown reports for Property 6 validation."""
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Compute statistics
+    before_count = len(equipment_data)
+    after_count = len(after_equipment)
+    
+    before_fuel = equipment_data['fuel_type'].value_counts().to_dict()
+    after_fuel = after_equipment['fuel_type'].value_counts().to_dict()
+    
+    before_enduse = equipment_data['end_use'].value_counts().to_dict()
+    after_enduse = after_equipment['end_use'].value_counts().to_dict()
+    
+    # Calculate fuel switching
+    fuel_switching = {}
+    for end_use in equipment_data['end_use'].unique():
+        before_gas = len(equipment_data[(equipment_data['end_use'] == end_use) & (equipment_data['fuel_type'] == 'natural_gas')])
+        after_gas = len(after_equipment[(after_equipment['end_use'] == end_use) & (after_equipment['fuel_type'] == 'natural_gas')])
+        fuel_switching[end_use] = before_gas - after_gas
+    
+    # Generate Markdown report
+    md_lines = [
+        "# Property 6: Fuel Switching Conservation Test Results",
+        "",
+        "**Validates: Requirements 3.3, 3.4**",
+        "",
+        "## Test Summary",
+        "",
+        f"**Property 6**: Total equipment count before and after apply_replacements is equal",
+        "",
+        "### Conservation Check",
+        "",
+        f"- **Before replacements**: {before_count:,} units",
+        f"- **After replacements**: {after_count:,} units",
+        f"- **Conservation**: {'✓ PASS' if before_count == after_count else '✗ FAIL'} (difference: {after_count - before_count})",
+        "",
+        "## Fuel Type Distribution",
+        "",
+        "### Before Replacements",
+        "",
+    ]
+    
+    for fuel_type, count in sorted(before_fuel.items(), key=lambda x: x[1], reverse=True):
+        pct = (count / before_count) * 100
+        md_lines.append(f"- **{fuel_type}**: {count:,} units ({pct:.1f}%)")
+    
+    md_lines += [
+        "",
+        "### After Replacements",
+        "",
+    ]
+    
+    for fuel_type, count in sorted(after_fuel.items(), key=lambda x: x[1], reverse=True):
+        pct = (count / after_count) * 100
+        md_lines.append(f"- **{fuel_type}**: {count:,} units ({pct:.1f}%)")
+    
+    md_lines += [
+        "",
+        "## End-Use Distribution",
+        "",
+        "### Before Replacements",
+        "",
+    ]
+    
+    for end_use, count in sorted(before_enduse.items(), key=lambda x: x[1], reverse=True):
+        pct = (count / before_count) * 100
+        md_lines.append(f"- **{end_use}**: {count:,} units ({pct:.1f}%)")
+    
+    md_lines += [
+        "",
+        "### After Replacements",
+        "",
+    ]
+    
+    for end_use, count in sorted(after_enduse.items(), key=lambda x: x[1], reverse=True):
+        pct = (count / after_count) * 100
+        md_lines.append(f"- **{end_use}**: {count:,} units ({pct:.1f}%)")
+    
+    md_lines += [
+        "",
+        "## Fuel Switching Volume by End-Use",
+        "",
+    ]
+    
+    for end_use, switched in sorted(fuel_switching.items(), key=lambda x: x[1], reverse=True):
+        if switched > 0:
+            md_lines.append(f"- **{end_use}**: {switched:,} units converted from gas to electric")
+    
+    md_lines += [
+        "",
+        "## Visualizations",
+        "",
+        "The following visualizations have been generated:",
+        "",
+        "1. **Equipment Count by Year** - Line graph showing total equipment count before and after replacements",
+        "2. **Fuel Type Distribution** - Pie charts comparing fuel type split before and after",
+        "3. **End-Use Distribution** - Stacked area chart showing equipment by end-use category",
+        "4. **Fuel Switching Volume** - Bar chart showing gas-to-electric conversions by end-use",
+        "5. **District Conservation** - Scatter plot verifying conservation at district level",
+        "6. **Equipment Age Distribution** - Box plot comparing age before and after replacements",
+        "",
+        "## Conclusion",
+        "",
+        f"**Property 6 Status**: {'✓ PASS' if before_count == after_count else '✗ FAIL'}",
+        "",
+        "The apply_replacements function successfully conserves total equipment count while allowing",
+        "fuel switching and efficiency improvements. All equipment units are preserved during the",
+        "replacement process, with only their characteristics (fuel type, efficiency, install year) modified.",
+    ]
+    
+    md_content = "\n".join(md_lines)
+    
+    # Generate HTML report
+    html_content = f"""<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Property 6: Fuel Switching Conservation Test Results</title>
+    <style>
+        body {{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+        }}
+        .container {{
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+        }}
+        h1 {{
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }}
+        h2 {{
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }}
+        .summary {{
+            background: #ecf0f1;
+            border-left: 4px solid #27ae60;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }}
+        .pass {{
+            color: #27ae60;
+            font-weight: bold;
+        }}
+        .fail {{
+            color: #e74c3c;
+            font-weight: bold;
+        }}
+        table {{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }}
+        th {{
+            background: #34495e;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }}
+        td {{
+            padding: 10px 12px;
+            border-bottom: 1px solid #ecf0f1;
+        }}
+        tr:hover {{
+            background: #f8f9fa;
+        }}
+        .metric {{
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 4px;
+            font-weight: 600;
+        }}
+        .metric-label {{
+            font-size: 0.9em;
+            opacity: 0.9;
+        }}
+        .metric-value {{
+            font-size: 1.3em;
+            display: block;
+        }}
+        .chart-container {{
+            margin: 30px 0;
+            text-align: center;
+        }}
+        .chart-container img {{
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }}
+        .footer {{
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }}
+        ul {{
+            line-height: 1.8;
+        }}
+        li {{
+            margin: 8px 0;
+        }}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Property 6: Fuel Switching Conservation Test Results</h1>
+        
+        <div class="summary">
+            <strong>Validates: Requirements 3.3, 3.4</strong><br>
+            <strong>Property 6:</strong> Total equipment count before and after apply_replacements is equal
+        </div>
+        
+        <h2>Conservation Check</h2>
+        <div>
+            <div class="metric">
+                <span class="metric-label">Before Replacements</span>
+                <span class="metric-value">{before_count:,}</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">After Replacements</span>
+                <span class="metric-value">{after_count:,}</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">Difference</span>
+                <span class="metric-value">{after_count - before_count}</span>
+            </div>
+            <div class="metric" style="background: {'#27ae60' if before_count == after_count else '#e74c3c'};">
+                <span class="metric-label">Status</span>
+                <span class="metric-value">{'✓ PASS' if before_count == after_count else '✗ FAIL'}</span>
+            </div>
+        </div>
+        
+        <h2>Fuel Type Distribution</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fuel Type</th>
+                    <th>Before (Count)</th>
+                    <th>Before (%)</th>
+                    <th>After (Count)</th>
+                    <th>After (%)</th>
+                    <th>Change</th>
+                </tr>
+            </thead>
+            <tbody>
+"""
+    
+    all_fuels = set(before_fuel.keys()) | set(after_fuel.keys())
+    for fuel_type in sorted(all_fuels):
+        before_cnt = before_fuel.get(fuel_type, 0)
+        after_cnt = after_fuel.get(fuel_type, 0)
+        before_pct = (before_cnt / before_count) * 100 if before_count > 0 else 0
+        after_pct = (after_cnt / after_count) * 100 if after_count > 0 else 0
+        change = after_cnt - before_cnt
+        change_str = f"+{change}" if change > 0 else str(change)
+        
+        html_content += f"""                <tr>
+                    <td><strong>{fuel_type}</strong></td>
+                    <td>{before_cnt:,}</td>
+                    <td>{before_pct:.1f}%</td>
+                    <td>{after_cnt:,}</td>
+                    <td>{after_pct:.1f}%</td>
+                    <td>{change_str}</td>
+                </tr>
+"""
+    
+    html_content += """            </tbody>
+        </table>
+        
+        <h2>End-Use Distribution</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>End-Use</th>
+                    <th>Before (Count)</th>
+                    <th>Before (%)</th>
+                    <th>After (Count)</th>
+                    <th>After (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+"""
+    
+    all_enduses = set(before_enduse.keys()) | set(after_enduse.keys())
+    for end_use in sorted(all_enduses):
+        before_cnt = before_enduse.get(end_use, 0)
+        after_cnt = after_enduse.get(end_use, 0)
+        before_pct = (before_cnt / before_count) * 100 if before_count > 0 else 0
+        after_pct = (after_cnt / after_count) * 100 if after_count > 0 else 0
+        
+        html_content += f"""                <tr>
+                    <td><strong>{end_use}</strong></td>
+                    <td>{before_cnt:,}</td>
+                    <td>{before_pct:.1f}%</td>
+                    <td>{after_cnt:,}</td>
+                    <td>{after_pct:.1f}%</td>
+                </tr>
+"""
+    
+    html_content += """            </tbody>
+        </table>
+        
+        <h2>Fuel Switching Volume by End-Use</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>End-Use</th>
+                    <th>Gas Units Converted to Electric</th>
+                </tr>
+            </thead>
+            <tbody>
+"""
+    
+    for end_use in sorted(fuel_switching.keys(), key=lambda x: fuel_switching[x], reverse=True):
+        switched = fuel_switching[end_use]
+        html_content += f"""                <tr>
+                    <td><strong>{end_use}</strong></td>
+                    <td>{switched:,}</td>
+                </tr>
+"""
+    
+    html_content += f"""            </tbody>
+        </table>
+        
+        <h2>Visualizations</h2>
+        <p>The following visualizations have been generated:</p>
+        <ul>
+            <li><strong>Equipment Count by Year</strong> - Line graph showing total equipment count before and after replacements</li>
+            <li><strong>Fuel Type Distribution</strong> - Pie charts comparing fuel type split before and after</li>
+            <li><strong>End-Use Distribution</strong> - Stacked area chart showing equipment by end-use category</li>
+            <li><strong>Fuel Switching Volume</strong> - Bar chart showing gas-to-electric conversions by end-use</li>
+            <li><strong>District Conservation</strong> - Scatter plot verifying conservation at district level</li>
+            <li><strong>Equipment Age Distribution</strong> - Box plot comparing age before and after replacements</li>
+        </ul>
+        
+        <h2>Conclusion</h2>
+        <p><strong>Property 6 Status:</strong> <span class="{'pass' if before_count == after_count else 'fail'}">{'✓ PASS' if before_count == after_count else '✗ FAIL'}</span></p>
+        <p>The apply_replacements function successfully conserves total equipment count while allowing fuel switching and efficiency improvements. All equipment units are preserved during the replacement process, with only their characteristics (fuel type, efficiency, install year) modified.</p>
+        
+        <div class="footer">
+            <p>Generated: {datetime.now().isoformat()}</p>
+            <p>Test: Property 6 - Fuel Switching Conservation</p>
+        </div>
+    </div>
+</body>
+</html>"""
+    
+    # Save reports
+    md_path = os.path.join(output_dir, "property6_results.md")
+    with open(md_path, "w", encoding="utf-8") as f:
+        f.write(md_content)
+    
+    html_path = os.path.join(output_dir, "property6_results.html")
+    with open(html_path, "w", encoding="utf-8") as f:
+        f.write(html_content)
+    
+    return md_path, html_path
+
+
 class TestFuelSwitchingConservation:
     """Test suite for fuel switching conservation and visualization."""
     
@@ -120,7 +502,7 @@ class TestFuelSwitchingConservation:
         - Heatmap: Fuel switching rates by end-use category and efficiency tier
         - Box plot: Equipment age distribution before and after replacements
         """
-        output_dir = "output/fuel_switching_conservation"
+        output_dir = "output/fuel_switching"
         os.makedirs(output_dir, exist_ok=True)
         
         scenario = {
@@ -263,3 +645,12 @@ class TestFuelSwitchingConservation:
             filepath = os.path.join(output_dir, filename)
             assert os.path.exists(filepath), f"Plot file {filepath} does not exist"
             assert os.path.getsize(filepath) > 0, f"Plot file {filepath} is empty"
+        
+        # Generate HTML and Markdown reports
+        md_path, html_path = generate_property6_report(equipment_data, after_equipment, output_dir)
+        
+        # Verify report files were created
+        assert os.path.exists(md_path), f"Markdown report {md_path} does not exist"
+        assert os.path.getsize(md_path) > 0, f"Markdown report {md_path} is empty"
+        assert os.path.exists(html_path), f"HTML report {html_path} does not exist"
+        assert os.path.getsize(html_path) > 0, f"HTML report {html_path} is empty"

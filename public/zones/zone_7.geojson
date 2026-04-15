@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_id": 7,
+        "name": "Corvallis-Albany",
+        "region": "Central",
+        "description": "Corvallis-Albany area in Benton and Linn counties"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -123.5,
+              44.8
+            ],
+            [
+              -122.5,
+              44.8
+            ],
+            [
+              -122.5,
+              44.2
+            ],
+            [
+              -123.5,
+              44.2
+            ],
+            [
+              -123.5,
+              44.8
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

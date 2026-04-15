@@ -1,0 +1,11 @@
+zone_number,zone_name,description,area_sqmi,population
+1,Portland Metro,Portland metropolitan area and surrounding Willamette Valley,3200,2100000
+2,Eugene-Springfield,Eugene and Springfield metropolitan area,1800,380000
+3,Salem-Keizer,Salem and Keizer metropolitan area,1200,420000
+4,Gorge Region,Columbia River Gorge and Hood River Valley,950,85000
+5,Bend-Redmond,Central Oregon high desert region,2100,210000
+6,Medford-Ashland,Southern Oregon Rogue Valley,1400,220000
+7,Corvallis-Albany,Willamette Valley mid-region,800,180000
+8,Tillamook County,Coastal region and dairy country,1100,25000
+9,Pendleton-La Grande,Northeast Oregon Blue Mountains,2800,65000
+10,Baker City,Eastern Oregon mining region,3200,35000

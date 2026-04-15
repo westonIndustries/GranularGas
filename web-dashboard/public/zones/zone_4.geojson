@@ -1,0 +1,25 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_number": 4,
+        "zone_name": "Gorge Region",
+        "description": "Columbia River Gorge and Hood River Valley"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-122.0, 45.0],
+            [-120.5, 45.0],
+            [-120.5, 46.0],
+            [-122.0, 46.0],
+            [-122.0, 45.0]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -13,7 +13,7 @@ const client = axios.create({
 
 /**
  * Run a forecast with the given parameters
- * @param {Object} params - Scenario parameters
+ * @param {Object} params - Scenario parameters including zone_number
  * @returns {Promise<Object>} Forecast results
  */
 export const runForecast = async (params) => {

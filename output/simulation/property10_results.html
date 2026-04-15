@@ -1,0 +1,58 @@
+
+    <html>
+    <head>
+        <title>Property 10: Efficiency Impact Monotonicity</title>
+        <meta charset="utf-8">
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1 { color: #333; }
+            .pass { color: green; font-weight: bold; }
+            table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #4CAF50; color: white; }
+            img { max-width: 100%; height: auto; margin: 20px 0; }
+        </style>
+    </head>
+    <body>
+        <h1>Property 10: Efficiency Impact Monotonicity</h1>
+        <p><strong>Validates: Requirements 4.2, 3.2</strong></p>
+        
+        <h2>Property Statement</h2>
+        <p>Higher efficiency results in lower or equal therms</p>
+        
+        <h2>Test Results</h2>
+        <table>
+            <tr>
+                <th>End-Use</th>
+                <th>Low Efficiency</th>
+                <th>High Efficiency</th>
+                <th>Improvement Potential</th>
+            </tr>
+            <tr>
+                <td>Space Heating</td>
+                <td>0.70</td>
+                <td>0.95</td>
+                <td>26.3%</td>
+            </tr>
+            <tr>
+                <td>Water Heating</td>
+                <td>0.50</td>
+                <td>0.85</td>
+                <td>41.2%</td>
+            </tr>
+            <tr>
+                <td>Cooking</td>
+                <td>0.60</td>
+                <td>0.90</td>
+                <td>33.3%</td>
+            </tr>
+        </table>
+        
+        <h2>Visualizations</h2>
+        <img src="property10_results.png" alt="Property 10 Visualizations">
+        
+        <h2>Conclusion</h2>
+        <p><span class="pass">PASS</span> - All end-uses demonstrate the expected inverse relationship between efficiency and consumption. Higher efficiency equipment consistently produces lower therms values.</p>
+    </body>
+    </html>
+    

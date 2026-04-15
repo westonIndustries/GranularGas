@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a7491667c0aaf5617a3d67a41b1e3f46 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+        <div style="position: fixed; 
+                    bottom: 50px; right: 50px; width: 200px; height: auto; 
+                    background-color: white; border:2px solid grey; z-index:9999; 
+                    font-size:14px; padding: 10px">
+        <p style="margin: 0; font-weight: bold;">Zone Regions</p>
+        <p style="margin: 5px 0;"><span style="background-color: #0066cc; padding: 3px 8px; border-radius: 3px;">&nbsp;</span> NW</p><p style="margin: 5px 0;"><span style="background-color: #ff6600; padding: 3px 8px; border-radius: 3px;">&nbsp;</span> SW</p><p style="margin: 5px 0;"><span style="background-color: #00cc66; padding: 3px 8px; border-radius: 3px;">&nbsp;</span> Central</p><p style="margin: 5px 0;"><span style="background-color: #cc00cc; padding: 3px 8px; border-radius: 3px;">&nbsp;</span> NE</p><p style="margin: 5px 0;"><span style="background-color: #ffcc00; padding: 3px 8px; border-radius: 3px;">&nbsp;</span> Eastern</p></div>
+    
+            <div class="folium-map" id="map_a7491667c0aaf5617a3d67a41b1e3f46" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a7491667c0aaf5617a3d67a41b1e3f46 = L.map(
+                "map_a7491667c0aaf5617a3d67a41b1e3f46",
+                {
+                    center: [45.5152, -122.6784],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_beed963afec3f12555311584e5191f7a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_beed963afec3f12555311584e5191f7a.addTo(map_a7491667c0aaf5617a3d67a41b1e3f46);
+        
+    
+        function geo_json_b696503c8e7b2b3fd8afb08244e324ae_styler(feature) {
+            switch(feature.properties.zone_id) {
+                default:
+                    return {"color": "black", "fillColor": "#00cc66", "fillOpacity": 0.6, "opacity": 0.8, "weight": 2};
+            }
+        }
+
+        function geo_json_b696503c8e7b2b3fd8afb08244e324ae_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_b696503c8e7b2b3fd8afb08244e324ae = L.geoJson(null, {
+                onEachFeature: geo_json_b696503c8e7b2b3fd8afb08244e324ae_onEachFeature,
+            
+                style: geo_json_b696503c8e7b2b3fd8afb08244e324ae_styler,
+            ...{
+}
+        });
+
+        function geo_json_b696503c8e7b2b3fd8afb08244e324ae_add (data) {
+            geo_json_b696503c8e7b2b3fd8afb08244e324ae
+                .addData(data);
+        }
+            geo_json_b696503c8e7b2b3fd8afb08244e324ae_add({"features": [{"geometry": {"coordinates": [[[-123.5, 45.8], [-122.0, 45.8], [-122.0, 45.0], [-123.5, 45.0], [-123.5, 45.8]]], "type": "Polygon"}, "properties": {"description": "Portland metropolitan area including Multnomah, Washington, Clackamas counties", "name": "Portland Metro", "region": "NW", "zone_id": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_b696503c8e7b2b3fd8afb08244e324ae.bindTooltip(
+                `<div>
+                     zone_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        var popup_2f99e272b3eac33bdec8a3ef581b5b4a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a33a4c48eae420111b20791f81bb8f2a = $(`<div id="html_a33a4c48eae420111b20791f81bb8f2a" style="width: 100.0%; height: 100.0%;"><b>zone_1</b><br>Region: Central</div>`)[0];
+                popup_2f99e272b3eac33bdec8a3ef581b5b4a.setContent(html_a33a4c48eae420111b20791f81bb8f2a);
+            
+        
+
+        geo_json_b696503c8e7b2b3fd8afb08244e324ae.bindPopup(popup_2f99e272b3eac33bdec8a3ef581b5b4a)
+        ;
+
+        
+    
+    
+            geo_json_b696503c8e7b2b3fd8afb08244e324ae.addTo(map_a7491667c0aaf5617a3d67a41b1e3f46);
+        
+    
+        function geo_json_2b9d31786d86ee7bfdb432a965db01b0_styler(feature) {
+            switch(feature.properties.zone_id) {
+                default:
+                    return {"color": "black", "fillColor": "#00cc66", "fillOpacity": 0.6, "opacity": 0.8, "weight": 2};
+            }
+        }
+
+        function geo_json_2b9d31786d86ee7bfdb432a965db01b0_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_2b9d31786d86ee7bfdb432a965db01b0 = L.geoJson(null, {
+                onEachFeature: geo_json_2b9d31786d86ee7bfdb432a965db01b0_onEachFeature,
+            
+                style: geo_json_2b9d31786d86ee7bfdb432a965db01b0_styler,
+            ...{
+}
+        });
+
+        function geo_json_2b9d31786d86ee7bfdb432a965db01b0_add (data) {
+            geo_json_2b9d31786d86ee7bfdb432a965db01b0
+                .addData(data);
+        }
+            geo_json_2b9d31786d86ee7bfdb432a965db01b0_add({"features": [{"geometry": {"coordinates": [[[-118.5, 45.0], [-117.5, 45.0], [-117.5, 44.2], [-118.5, 44.2], [-118.5, 45.0]]], "type": "Polygon"}, "properties": {"description": "Baker City area in Baker County", "name": "Baker City", "region": "Eastern", "zone_id": 10}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_2b9d31786d86ee7bfdb432a965db01b0.bindTooltip(
+                `<div>
+                     zone_10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        var popup_1267c173e9124fb4c76f5ad140012238 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_61beaa7af44df7d97b92310f87709b5f = $(`<div id="html_61beaa7af44df7d97b92310f87709b5f" style="width: 100.0%; height: 100.0%;"><b>zone_10</b><br>Region: Central</div>`)[0];
+                popup_1267c173e9124fb4c76f5ad140012238.setContent(html_61beaa7af44df7d97b92310f87709b5f);
+            
+        
+
+        geo_json_2b9d31786d86ee7bfdb432a965db01b0.bindPopup(popup_1267c173e9124fb4c76f5ad140012238)
+        ;
+
+        
+    
+    
+            geo_json_2b9d31786d86ee7bfdb432a965db01b0.addTo(map_a7491667c0aaf5617a3d67a41b1e3f46);
+        
+    
+        function geo_json_268299293170a2f480eeee37e4267968_styler(feature) {
+            switch(feature.properties.zone_id) {
+                default:
+                    return {"color": "black", "fillColor": "#00cc66", "fillOpacity": 0.6, "opacity": 0.8, "weight": 2};
+            }
+        }
+
+        function geo_json_268299293170a2f480eeee37e4267968_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_268299293170a2f480eeee37e4267968 = L.geoJson(null, {
+                onEachFeature: geo_json_268299293170a2f480eeee37e4267968_onEachFeature,
+            
+                style: geo_json_268299293170a2f480eeee37e4267968_styler,
+            ...{
+}
+        });
+
+        function geo_json_268299293170a2f480eeee37e4267968_add (data) {
+            geo_json_268299293170a2f480eeee37e4267968
+                .addData(data);
+        }
+            geo_json_268299293170a2f480eeee37e4267968_add({"features": [{"geometry": {"coordinates": [[[-123.5, 44.5], [-122.5, 44.5], [-122.5, 43.5], [-123.5, 43.5], [-123.5, 44.5]]], "type": "Polygon"}, "properties": {"description": "Eugene-Springfield area in Lane County", "name": "Eugene-Springfield", "region": "SW", "zone_id": 2}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_268299293170a2f480eeee37e4267968.bindTooltip(
+                `<div>
+                     zone_2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        var popup_ae3eb0ad91fb7637973fefdfaf06516b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8b19ba65b21a5f3677bb6a0f05b7dcf9 = $(`<div id="html_8b19ba65b21a5f3677bb6a0f05b7dcf9" style="width: 100.0%; height: 100.0%;"><b>zone_2</b><br>Region: Central</div>`)[0];
+                popup_ae3eb0ad91fb7637973fefdfaf06516b.setContent(html_8b19ba65b21a5f3677bb6a0f05b7dcf9);
+            
+        
+
+        geo_json_268299293170a2f480eeee37e4267968.bindPopup(popup_ae3eb0ad91fb7637973fefdfaf06516b)
+        ;
+
+        
+    
+    
+            geo_json_268299293170a2f480eeee37e4267968.addTo(map_a7491667c0aaf5617a3d67a41b1e3f46);
+        
+    
+        function geo_json_41b9f9849f4416212a266177176cfc2d_styler(feature) {
+            switch(feature.properties.zone_id) {
+                default:
+                    return {"color": "black", "fillColor": "#00cc66", "fillOpacity": 0.6, "opacity": 0.8, "weight": 2};
+            }
+        }
+
+        function geo_json_41b9f9849f4416212a266177176cfc2d_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_41b9f9849f4416212a266177176cfc2d = L.geoJson(null, {
+                onEachFeature: geo_json_41b9f9849f4416212a266177176cfc2d_onEachFeature,
+            
+                style: geo_json_41b9f9849f4416212a266177176cfc2d_styler,
+            ...{
+}
+        });
+
+        function geo_json_41b9f9849f4416212a266177176cfc2d_add (data) {
+            geo_json_41b9f9849f4416212a266177176cfc2d
+                .addData(data);
+        }
+            geo_json_41b9f9849f4416212a266177176cfc2d_add({"features": [{"geometry": {"coordinates": [[[-123.5, 45.2], [-122.5, 45.2], [-122.5, 44.5], [-123.5, 44.5], [-123.5, 45.2]]], "type": "Polygon"}, "properties": {"description": "Salem-Keizer area in Marion and Polk counties", "name": "Salem-Keizer", "region": "Central", "zone_id": 3}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_41b9f9849f4416212a266177176cfc2d.bindTooltip(
+                `<div>
+                     zone_3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        var popup_beb80fd27740fc4485b2417dc371f4b3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_47f2965c7615451e8594ae5333376e84 = $(`<div id="html_47f2965c7615451e8594ae5333376e84" style="width: 100.0%; height: 100.0%;"><b>zone_3</b><br>Region: Central</div>`)[0];
+                popup_beb80fd27740fc4485b2417dc371f4b3.setContent(html_47f2965c7615451e8594ae5333376e84);
+            
+        
+
+        geo_json_41b9f9849f4416212a266177176cfc2d.bindPopup(popup_beb80fd27740fc4485b2417dc371f4b3)
+        ;
+
+        
+    
+    
+            geo_json_41b9f9849f4416212a266177176cfc2d.addTo(map_a7491667c0aaf5617a3d67a41b1e3f46);
+        
+    
+        function geo_json_691f03c67e866e79d4d465ca681a0159_styler(feature) {
+            switch(feature.properties.zone_id) {
+                default:
+                    return {"color": "black", "fillColor": "#00cc66", "fillOpacity": 0.6, "opacity": 0.8, "weight": 2};
+            }
+        }
+
+        function geo_json_691f03c67e866e79d4d465ca681a0159_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_691f03c67e866e79d4d465ca681a0159 = L.geoJson(null, {
+                onEachFeature: geo_json_691f03c67e866e79d4d465ca681a0159_onEachFeature,
+            
+                style: geo_json_691f03c67e866e79d4d465ca681a0159_styler,
+            ...{
+}
+        });
+
+        function geo_json_691f03c67e866e79d4d465ca681a0159_add (data) {
+            geo_json_691f03c67e866e79d4d465ca681a0159
+                .addData(data);
+        }
+            geo_json_691f03c67e866e79d4d465ca681a0159_add({"features": [{"geometry": {"coordinates": [[[-122.0, 45.8], [-120.5, 45.8], [-120.5, 45.2], [-122.0, 45.2], [-122.0, 45.8]]], "type": "Polygon"}, "properties": {"description": "Columbia River Gorge area including Hood River and Wasco counties", "name": "Gorge Region", "region": "NW", "zone_id": 4}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_691f03c67e866e79d4d465ca681a0159.bindTooltip(
+                `<div>
+                     zone_4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        var popup_978c2a99d3d9799dad10398247375aa6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_13b5269942cc711f67a819815ecb2f24 = $(`<div id="html_13b5269942cc711f67a819815ecb2f24" style="width: 100.0%; height: 100.0%;"><b>zone_4</b><br>Region: Central</div>`)[0];
+                popup_978c2a99d3d9799dad10398247375aa6.setContent(html_13b5269942cc711f67a819815ecb2f24);
+            
+        
+
+        geo_json_691f03c67e866e79d4d465ca681a0159.bindPopup(popup_978c2a99d3d9799dad10398247375aa6)
+        ;
+
+        
+    
+    
+            geo_json_691f03c67e866e79d4d465ca681a0159.addTo(map_a7491667c0aaf5617a3d67a41b1e3f46);
+        
+    
+        function geo_json_1c890e7e0ad6f944f1da4b18e709e643_styler(feature) {
+            switch(feature.properties.zone_id) {
+                default:
+                    return {"color": "black", "fillColor": "#00cc66", "fillOpacity": 0.6, "opacity": 0.8, "weight": 2};
+            }
+        }
+
+        function geo_json_1c890e7e0ad6f944f1da4b18e709e643_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_1c890e7e0ad6f944f1da4b18e709e643 = L.geoJson(null, {
+                onEachFeature: geo_json_1c890e7e0ad6f944f1da4b18e709e643_onEachFeature,
+            
+                style: geo_json_1c890e7e0ad6f944f1da4b18e709e643_styler,
+            ...{
+}
+        });
+
+        function geo_json_1c890e7e0ad6f944f1da4b18e709e643_add (data) {
+            geo_json_1c890e7e0ad6f944f1da4b18e709e643
+                .addData(data);
+        }
+            geo_json_1c890e7e0ad6f944f1da4b18e709e643_add({"features": [{"geometry": {"coordinates": [[[-122.0, 44.5], [-120.5, 44.5], [-120.5, 43.5], [-122.0, 43.5], [-122.0, 44.5]]], "type": "Polygon"}, "properties": {"description": "Bend-Redmond area in Deschutes County", "name": "Bend-Redmond", "region": "Central", "zone_id": 5}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_1c890e7e0ad6f944f1da4b18e709e643.bindTooltip(
+                `<div>
+                     zone_5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        var popup_a76660e9e979d13aa9ebc92892f826fb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_86023fae5b2709e8769da04fd5b833ec = $(`<div id="html_86023fae5b2709e8769da04fd5b833ec" style="width: 100.0%; height: 100.0%;"><b>zone_5</b><br>Region: Central</div>`)[0];
+                popup_a76660e9e979d13aa9ebc92892f826fb.setContent(html_86023fae5b2709e8769da04fd5b833ec);
+            
+        
+
+        geo_json_1c890e7e0ad6f944f1da4b18e709e643.bindPopup(popup_a76660e9e979d13aa9ebc92892f826fb)
+        ;
+
+        
+    
+    
+            geo_json_1c890e7e0ad6f944f1da4b18e709e643.addTo(map_a7491667c0aaf5617a3d67a41b1e3f46);
+        
+    
+        function geo_json_87de4834b3acbcf0673ef2d8e57f5b3d_styler(feature) {
+            switch(feature.properties.zone_id) {
+                default:
+                    return {"color": "black", "fillColor": "#00cc66", "fillOpacity": 0.6, "opacity": 0.8, "weight": 2};
+            }
+        }
+
+        function geo_json_87de4834b3acbcf0673ef2d8e57f5b3d_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_87de4834b3acbcf0673ef2d8e57f5b3d = L.geoJson(null, {
+                onEachFeature: geo_json_87de4834b3acbcf0673ef2d8e57f5b3d_onEachFeature,
+            
+                style: geo_json_87de4834b3acbcf0673ef2d8e57f5b3d_styler,
+            ...{
+}
+        });
+
+        function geo_json_87de4834b3acbcf0673ef2d8e57f5b3d_add (data) {
+            geo_json_87de4834b3acbcf0673ef2d8e57f5b3d
+                .addData(data);
+        }
+            geo_json_87de4834b3acbcf0673ef2d8e57f5b3d_add({"features": [{"geometry": {"coordinates": [[[-123.5, 43.5], [-122.0, 43.5], [-122.0, 42.0], [-123.5, 42.0], [-123.5, 43.5]]], "type": "Polygon"}, "properties": {"description": "Medford-Ashland area in Jackson County", "name": "Medford-Ashland", "region": "SW", "zone_id": 6}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_87de4834b3acbcf0673ef2d8e57f5b3d.bindTooltip(
+                `<div>
+                     zone_6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        var popup_10cc9810ec0cb9ea87c741ffc4903b31 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8178fb4d9414b4f36b2caffc5e2b2390 = $(`<div id="html_8178fb4d9414b4f36b2caffc5e2b2390" style="width: 100.0%; height: 100.0%;"><b>zone_6</b><br>Region: Central</div>`)[0];
+                popup_10cc9810ec0cb9ea87c741ffc4903b31.setContent(html_8178fb4d9414b4f36b2caffc5e2b2390);
+            
+        
+
+        geo_json_87de4834b3acbcf0673ef2d8e57f5b3d.bindPopup(popup_10cc9810ec0cb9ea87c741ffc4903b31)
+        ;
+
+        
+    
+    
+            geo_json_87de4834b3acbcf0673ef2d8e57f5b3d.addTo(map_a7491667c0aaf5617a3d67a41b1e3f46);
+        
+    
+        function geo_json_e2b0ecbb536071a095d123ac8f7c612a_styler(feature) {
+            switch(feature.properties.zone_id) {
+                default:
+                    return {"color": "black", "fillColor": "#00cc66", "fillOpacity": 0.6, "opacity": 0.8, "weight": 2};
+            }
+        }
+
+        function geo_json_e2b0ecbb536071a095d123ac8f7c612a_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_e2b0ecbb536071a095d123ac8f7c612a = L.geoJson(null, {
+                onEachFeature: geo_json_e2b0ecbb536071a095d123ac8f7c612a_onEachFeature,
+            
+                style: geo_json_e2b0ecbb536071a095d123ac8f7c612a_styler,
+            ...{
+}
+        });
+
+        function geo_json_e2b0ecbb536071a095d123ac8f7c612a_add (data) {
+            geo_json_e2b0ecbb536071a095d123ac8f7c612a
+                .addData(data);
+        }
+            geo_json_e2b0ecbb536071a095d123ac8f7c612a_add({"features": [{"geometry": {"coordinates": [[[-123.5, 44.8], [-122.5, 44.8], [-122.5, 44.2], [-123.5, 44.2], [-123.5, 44.8]]], "type": "Polygon"}, "properties": {"description": "Corvallis-Albany area in Benton and Linn counties", "name": "Corvallis-Albany", "region": "Central", "zone_id": 7}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_e2b0ecbb536071a095d123ac8f7c612a.bindTooltip(
+                `<div>
+                     zone_7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        var popup_4d3ee79b447f528b1cdb954ff5168382 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d054838b485f779adb362fe50a828b80 = $(`<div id="html_d054838b485f779adb362fe50a828b80" style="width: 100.0%; height: 100.0%;"><b>zone_7</b><br>Region: Central</div>`)[0];
+                popup_4d3ee79b447f528b1cdb954ff5168382.setContent(html_d054838b485f779adb362fe50a828b80);
+            
+        
+
+        geo_json_e2b0ecbb536071a095d123ac8f7c612a.bindPopup(popup_4d3ee79b447f528b1cdb954ff5168382)
+        ;
+
+        
+    
+    
+            geo_json_e2b0ecbb536071a095d123ac8f7c612a.addTo(map_a7491667c0aaf5617a3d67a41b1e3f46);
+        
+    
+        function geo_json_3b7f06058a9758fec1df1af5cb2dddd9_styler(feature) {
+            switch(feature.properties.zone_id) {
+                default:
+                    return {"color": "black", "fillColor": "#00cc66", "fillOpacity": 0.6, "opacity": 0.8, "weight": 2};
+            }
+        }
+
+        function geo_json_3b7f06058a9758fec1df1af5cb2dddd9_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_3b7f06058a9758fec1df1af5cb2dddd9 = L.geoJson(null, {
+                onEachFeature: geo_json_3b7f06058a9758fec1df1af5cb2dddd9_onEachFeature,
+            
+                style: geo_json_3b7f06058a9758fec1df1af5cb2dddd9_styler,
+            ...{
+}
+        });
+
+        function geo_json_3b7f06058a9758fec1df1af5cb2dddd9_add (data) {
+            geo_json_3b7f06058a9758fec1df1af5cb2dddd9
+                .addData(data);
+        }
+            geo_json_3b7f06058a9758fec1df1af5cb2dddd9_add({"features": [{"geometry": {"coordinates": [[[-124.0, 45.5], [-123.5, 45.5], [-123.5, 45.0], [-124.0, 45.0], [-124.0, 45.5]]], "type": "Polygon"}, "properties": {"description": "Tillamook County coastal area", "name": "Tillamook County", "region": "NW", "zone_id": 8}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_3b7f06058a9758fec1df1af5cb2dddd9.bindTooltip(
+                `<div>
+                     zone_8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        var popup_d1ea43ffd2e365c66daa2ff954937465 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_eff04890112c6da5ae33e9b5db325ab5 = $(`<div id="html_eff04890112c6da5ae33e9b5db325ab5" style="width: 100.0%; height: 100.0%;"><b>zone_8</b><br>Region: Central</div>`)[0];
+                popup_d1ea43ffd2e365c66daa2ff954937465.setContent(html_eff04890112c6da5ae33e9b5db325ab5);
+            
+        
+
+        geo_json_3b7f06058a9758fec1df1af5cb2dddd9.bindPopup(popup_d1ea43ffd2e365c66daa2ff954937465)
+        ;
+
+        
+    
+    
+            geo_json_3b7f06058a9758fec1df1af5cb2dddd9.addTo(map_a7491667c0aaf5617a3d67a41b1e3f46);
+        
+    
+        function geo_json_4b585f74710bc696edd127d951b924d7_styler(feature) {
+            switch(feature.properties.zone_id) {
+                default:
+                    return {"color": "black", "fillColor": "#00cc66", "fillOpacity": 0.6, "opacity": 0.8, "weight": 2};
+            }
+        }
+
+        function geo_json_4b585f74710bc696edd127d951b924d7_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_4b585f74710bc696edd127d951b924d7 = L.geoJson(null, {
+                onEachFeature: geo_json_4b585f74710bc696edd127d951b924d7_onEachFeature,
+            
+                style: geo_json_4b585f74710bc696edd127d951b924d7_styler,
+            ...{
+}
+        });
+
+        function geo_json_4b585f74710bc696edd127d951b924d7_add (data) {
+            geo_json_4b585f74710bc696edd127d951b924d7
+                .addData(data);
+        }
+            geo_json_4b585f74710bc696edd127d951b924d7_add({"features": [{"geometry": {"coordinates": [[[-119.5, 45.8], [-118.0, 45.8], [-118.0, 45.0], [-119.5, 45.0], [-119.5, 45.8]]], "type": "Polygon"}, "properties": {"description": "Pendleton-La Grande area in Umatilla and Union counties", "name": "Pendleton-La Grande", "region": "NE", "zone_id": 9}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_4b585f74710bc696edd127d951b924d7.bindTooltip(
+                `<div>
+                     zone_9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        var popup_b8868020282eec061b63db8beb0df47d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c40a87b557dd384e2e910d0ec8b1b7a7 = $(`<div id="html_c40a87b557dd384e2e910d0ec8b1b7a7" style="width: 100.0%; height: 100.0%;"><b>zone_9</b><br>Region: Central</div>`)[0];
+                popup_b8868020282eec061b63db8beb0df47d.setContent(html_c40a87b557dd384e2e910d0ec8b1b7a7);
+            
+        
+
+        geo_json_4b585f74710bc696edd127d951b924d7.bindPopup(popup_b8868020282eec061b63db8beb0df47d)
+        ;
+
+        
+    
+    
+            geo_json_4b585f74710bc696edd127d951b924d7.addTo(map_a7491667c0aaf5617a3d67a41b1e3f46);
+        
+</script>
+</html>

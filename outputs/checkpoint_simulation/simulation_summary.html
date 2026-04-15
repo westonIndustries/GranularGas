@@ -1,0 +1,239 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Simulation Results Summary</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1 { color: #333; }
+            h2 { color: #666; margin-top: 30px; }
+            table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+            th, td { border: 1px solid #ddd; padding: 12px; text-align: right; }
+            th { background-color: #4CAF50; color: white; text-align: left; }
+            tr:nth-child(even) { background-color: #f2f2f2; }
+            .metric { text-align: left; font-weight: bold; }
+            .summary-box { background-color: #e8f5e9; padding: 15px; border-radius: 5px; margin: 20px 0; }
+            .chart-container { position: relative; width: 100%; max-width: 800px; margin: 30px 0; }
+        </style>
+    </head>
+    <body>
+        <h1>Baseline Simulation Results Summary</h1>
+        <p>Generated: 2026-04-15T13:57:35.662734</p>
+        
+        <div style="background-color: #fff3cd; border: 1px solid #ffc107; padding: 15px; border-radius: 5px; margin: 20px 0;">
+            <strong>⚠️ Note:</strong> Placeholder data - NWNatural proprietary data files not available
+        </div>
+        
+        
+        <div class="summary-box">
+            <h2>Key Metrics</h2>
+            <table>
+                <tr>
+                    <td class="metric">Base Year</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td class="metric">Total Premises</td>
+                    <td>650,000</td>
+                </tr>
+                <tr>
+                    <td class="metric">Total Equipment Units</td>
+                    <td>1,200,000</td>
+                </tr>
+                <tr>
+                    <td class="metric">Total Demand (therms)</td>
+                    <td>627,346</td>
+                </tr>
+                <tr>
+                    <td class="metric">Number of Customers</td>
+                    <td>1,000</td>
+                </tr>
+                <tr>
+                    <td class="metric">Use Per Customer (UPC)</td>
+                    <td>627.35</td>
+                </tr>
+            </table>
+        </div>
+        
+        <h2>End-Use Composition Visualization</h2>
+        <div class="chart-container">
+            <canvas id="endUseChart"></canvas>
+        </div>
+        
+        <h2>Demand by End-Use</h2>
+        <table>
+            <tr>
+                <th>End-Use</th>
+                <th>Therms</th>
+                <th>% of Total</th>
+            </tr>
+    
+            <tr>
+                <td>clothes_drying</td>
+                <td>103,972</td>
+                <td>16.6%</td>
+            </tr>
+            
+            <tr>
+                <td>cooking</td>
+                <td>127,510</td>
+                <td>20.3%</td>
+            </tr>
+            
+            <tr>
+                <td>fireplace</td>
+                <td>137,920</td>
+                <td>22.0%</td>
+            </tr>
+            
+            <tr>
+                <td>space_heating</td>
+                <td>140,196</td>
+                <td>22.3%</td>
+            </tr>
+            
+            <tr>
+                <td>water_heating</td>
+                <td>117,747</td>
+                <td>18.8%</td>
+            </tr>
+            
+        </table>
+        
+        <h2>Demand by Segment</h2>
+        <table>
+            <tr>
+                <th>Segment</th>
+                <th>Therms</th>
+                <th>% of Total</th>
+            </tr>
+    
+            <tr>
+                <td>MOBILE</td>
+                <td>39,681</td>
+                <td>6.3%</td>
+            </tr>
+            
+            <tr>
+                <td>MOBILE</td>
+                <td>38,807</td>
+                <td>6.2%</td>
+            </tr>
+            
+            <tr>
+                <td>MOBILE</td>
+                <td>51,913</td>
+                <td>8.3%</td>
+            </tr>
+            
+            <tr>
+                <td>MOBILE</td>
+                <td>41,318</td>
+                <td>6.6%</td>
+            </tr>
+            
+            <tr>
+                <td>MOBILE</td>
+                <td>47,615</td>
+                <td>7.6%</td>
+            </tr>
+            
+            <tr>
+                <td>RESMF</td>
+                <td>33,496</td>
+                <td>5.3%</td>
+            </tr>
+            
+            <tr>
+                <td>RESMF</td>
+                <td>39,463</td>
+                <td>6.3%</td>
+            </tr>
+            
+            <tr>
+                <td>RESMF</td>
+                <td>47,560</td>
+                <td>7.6%</td>
+            </tr>
+            
+            <tr>
+                <td>RESMF</td>
+                <td>55,302</td>
+                <td>8.8%</td>
+            </tr>
+            
+            <tr>
+                <td>RESMF</td>
+                <td>36,482</td>
+                <td>5.8%</td>
+            </tr>
+            
+            <tr>
+                <td>RESSF</td>
+                <td>30,795</td>
+                <td>4.9%</td>
+            </tr>
+            
+            <tr>
+                <td>RESSF</td>
+                <td>49,240</td>
+                <td>7.8%</td>
+            </tr>
+            
+            <tr>
+                <td>RESSF</td>
+                <td>38,447</td>
+                <td>6.1%</td>
+            </tr>
+            
+            <tr>
+                <td>RESSF</td>
+                <td>43,577</td>
+                <td>6.9%</td>
+            </tr>
+            
+            <tr>
+                <td>RESSF</td>
+                <td>33,650</td>
+                <td>5.4%</td>
+            </tr>
+            
+        </table>
+    </body>
+    </html>
+    
+    <script>
+        // End-use composition pie chart
+        const ctx = document.getElementById('endUseChart').getContext('2d');
+        const endUseChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ["clothes_drying", "cooking", "fireplace", "space_heating", "water_heating"],
+                datasets: [{
+                    data: [103972.40554019564, 127509.80578387684, 137920.1655360071, 140196.28156933223, 117747.39995687437],
+                    backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"],
+                    borderColor: '#fff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const percentage = ((context.parsed / total) * 100).toFixed(1);
+                                return context.label + ': ' + context.parsed.toLocaleString() + ' therms (' + percentage + '%)';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+    

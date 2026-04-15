@@ -1,0 +1,25 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_number": 2,
+        "zone_name": "Eugene-Springfield",
+        "description": "Eugene and Springfield metropolitan area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-124.5, 43.5],
+            [-122.5, 43.5],
+            [-122.5, 44.5],
+            [-124.5, 44.5],
+            [-124.5, 43.5]
+          ]
+        ]
+      }
+    }
+  ]
+}

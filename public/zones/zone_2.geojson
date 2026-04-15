@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_id": 2,
+        "name": "Eugene-Springfield",
+        "region": "SW",
+        "description": "Eugene-Springfield area in Lane County"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -123.5,
+              44.5
+            ],
+            [
+              -122.5,
+              44.5
+            ],
+            [
+              -122.5,
+              43.5
+            ],
+            [
+              -123.5,
+              43.5
+            ],
+            [
+              -123.5,
+              44.5
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

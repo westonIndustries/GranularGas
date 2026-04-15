@@ -385,7 +385,7 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Simulate new construction additions proportional to existing segment distribution
     - _Requirements: 2.3, 6.1_
 
-  - [ ] 4.3 Property test: housing stock projection
+  - [x] 4.3 Property test: housing stock projection
     - **Property 4: Projected total_units = baseline Ã— (1 + growth_rate)^(years), within rounding tolerance**
     - Line graph: baseline vs projected total units over time
     - Bar chart: segment distribution comparison (baseline vs projected)
@@ -412,7 +412,7 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Apply efficiency improvements from scenario config
     - _Requirements: 3.3, 3.4, 6.1_
 
-  - [ ] 5.3 Property test: Weibull survival monotonicity
+  - [x] 5.3 Property test: Weibull survival monotonicity
     - **Property 5: S(t) <= S(t-1) for all t > 0, and S(0) = 1.0**
     - **Property 5b: replacement_probability is always in [0, 1]**
     - Line graph: Weibull survival curves by end-use category
@@ -421,7 +421,7 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Output: `output/equipment_replacement/property5_results.html` and `.md`
     - **Validates: Requirements 3.3**
 
-  - [ ] 5.4 Property test: fuel switching conservation
+  - [x] 5.4 Property test: fuel switching conservation
     - **Property 6: Total equipment count before and after apply_replacements is equal**
     - Pie chart: fuel type split before vs after replacements
     - Bar chart: fuel switching volume by end-use category
@@ -439,7 +439,7 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Implement `assign_weather_station(district_code)`
     - _Requirements: 4.1, 7.2_
 
-  - [ ] 6.2 Property test: HDD computation
+  - [x] 6.2 Property test: HDD computation
     - **Property 7: HDD >= 0, exactly one of HDD/CDD is positive (or both zero at base temp)**
     - Line graph: daily HDD and CDD by day of year for KPDX
     - Heatmap: monthly average HDD by station
@@ -448,7 +448,7 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Output: `output/weather_analysis/property7_results.html` and `.md`
     - **Validates: Requirements 4.1, 4.2**
 
-  - [ ] 6.3 Property test: water heating delta
+  - [x] 6.3 Property test: water heating delta
     - **Property 8: delta_t > 0 when cold water temp < target_temp**
     - Line graph: daily delta-T by day of year (2008-2025 overlay)
     - Seasonal pattern: monthly delta-T with min/max bands
@@ -457,10 +457,10 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Output: `output/water_heating/property8_results.html` and `.md`
     - **Validates: Requirements 4.1, 4.2**
 
-- [ ] 7. Checkpoint — Verify core model components
+- [x] 7. Checkpoint — Verify core model components
   - All outputs saved to `output/checkpoint_core/` as HTML + MD
 
-  - [ ] 7.1 Housing stock verification report
+  - [x] 7.1 Housing stock verification report
     - Run `build_baseline_stock` on actual data
     - Report total units, segment split, district split
     - Compare premise counts vs Census B25034 county totals
@@ -468,36 +468,49 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Output: `output/checkpoint_core/housing_verification.html` and `.md`
     - _Requirements: 2.1, 2.2_
 
-  - [ ] 7.2 Equipment module verification report
+  - [x] 7.2 Equipment module verification report
     - Run `build_equipment_inventory` on actual data
     - Report equipment counts by end-use, Weibull params per end-use
     - Histogram: equipment age distribution
     - Output: `output/checkpoint_core/equipment_verification.html` and `.md`
     - _Requirements: 3.1, 3.2_
 
-  - [ ] 7.3 Weather module verification report
+  - [x] 7.3 Weather module verification report
     - Compute annual HDD for all 11 stations for 2024
     - Compare to NOAA normals, report weather adjustment factors
     - Heatmap: monthly HDD by station
     - Output: `output/checkpoint_core/weather_verification.html` and `.md`
     - _Requirements: 4.1, 7.2_
 
-- [ ] 8. Implement end-use energy simulation module
+  - [x] 7.4 Zone geographic verification map
+    - Load all zone GeoJSON files from `public/zones/`
+    - Generate interactive OpenStreetMap visualization using folium
+    - Draw zone boundaries as colored polygons on map
+    - Add zone labels and metadata popups
+    - Color-code zones by region (NW, SW, Central, NE, Eastern)
+    - Include legend showing all 10 zones
+    - Add premise density heatmap overlay (if data available)
+    - Export as HTML: `output/checkpoint_core/zone_verification_map.html`
+    - Verify all zones cover service territory with no gaps
+    - Output: `output/checkpoint_core/zone_verification_map.html` and `.md`
+    - _Requirements: 2.2, 4.1, 13.1_
 
-  - [ ] 8.1 Create `src/simulation.py` — per-end-use functions
+- [x] 8. Implement end-use energy simulation module
+
+  - [x] 8.1 Create `src/simulation.py` — per-end-use functions
     - Implement `simulate_space_heating(equipment, annual_hdd, heating_factor)`
     - Implement `simulate_water_heating(equipment, delta_t, gallons_per_day=64.0)`
     - Implement `simulate_baseload(equipment, annual_consumption)`
     - _Requirements: 4.1, 4.2, 4.4_
 
-  - [ ] 8.2 Implement `simulate_all_end_uses` orchestrator
+  - [x] 8.2 Implement `simulate_all_end_uses` orchestrator
     - Dispatch to simulation function per premise based on end_use
     - Collect weather data (HDD, delta-T) per premise's weather station
     - Return DataFrame: blinded_id, end_use, annual_therms, efficiency, year
     - Maintain separation between end uses (no double-counting)
     - _Requirements: 1.4, 4.2, 4.3, 5.4_
 
-  - [ ] 8.3 Property test: simulation non-negativity
+  - [x] 8.3 Property test: simulation non-negativity
     - **Property 9: All simulated annual_therms >= 0**
     - Histogram: annual therms distribution by end-use
     - Box plot: annual therms by end-use (median, quartiles)
@@ -506,7 +519,7 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Output: `output/simulation/property9_results.html` and `.md`
     - **Validates: Requirements 4.2**
 
-  - [ ] 8.4 Property test: efficiency impact monotonicity
+  - [x] 8.4 Property test: efficiency impact monotonicity
     - **Property 10: Higher efficiency → lower or equal therms**
     - Line graph: therms vs efficiency by end-use
     - Bar chart: efficiency improvement potential by end-use
@@ -514,9 +527,9 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Output: `output/simulation/property10_results.html` and `.md`
     - **Validates: Requirements 4.2, 3.2**
 
-- [ ] 9. Implement aggregation and output module
+- [x] 9. Implement aggregation and output module
 
-  - [ ] 9.1 Create `src/aggregation.py` — rollup functions
+  - [x] 9.1 Create `src/aggregation.py` — rollup functions
     - Implement `aggregate_by_end_use(simulation_results)`
     - Implement `aggregate_by_segment(simulation_results, segments)`
     - Implement `aggregate_by_district(simulation_results, premises)`
@@ -525,38 +538,38 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Implement `export_results(results, output_path, format='csv')`
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 9.1_
 
-  - [ ] 9.2 Property test: aggregation conservation
+  - [x] 9.2 Property test: aggregation conservation
     - **Property 11: Sum across end uses = total demand (no therms lost/created)**
     - Bar chart: total demand by aggregation level — all should match
     - Waterfall: end-use contributions summing to total
     - Output: `output/aggregation/property11_results.html` and `.md`
     - **Validates: Requirements 5.1, 5.4**
 
-  - [ ] 9.3 Property test: use-per-customer
+  - [x] 9.3 Property test: use-per-customer
     - **Property 12: UPC = total / count for count > 0, handles count == 0**
     - Line graph: model UPC vs IRP forecast UPC (2025-2035)
     - Bar chart: UPC by vintage era vs anchors (820/720/650)
     - Output: `output/aggregation/property12_results.html` and `.md`
     - **Validates: Requirements 5.2**
 
-- [ ] 10. Checkpoint — Verify simulation and aggregation
+- [-] 10. Checkpoint — Verify simulation and aggregation
   - All outputs saved to `output/checkpoint_simulation/` as HTML + MD
 
-  - [ ] 10.1 Simulation results summary
+  - [x] 10.1 Simulation results summary
     - Run baseline simulation on actual data
     - Report: total demand, UPC, demand by end-use and segment
     - Stacked bar: end-use composition of total demand
     - Output: `output/checkpoint_simulation/simulation_summary.html` and `.md`
     - _Requirements: 5.1, 10.1_
 
-  - [ ] 10.2 Model vs IRP comparison
+  - [x] 10.2 Model vs IRP comparison
     - Compare model UPC to IRP 10-year forecast
     - Line graph: model UPC vs IRP UPC (2025-2035)
     - Report: year-by-year difference and % deviation
     - Output: `output/checkpoint_simulation/irp_comparison.html` and `.md`
     - _Requirements: 10.2, 10.3_
 
-  - [ ] 10.3 Billing calibration check
+  - [x] 10.3 Billing calibration check
     - Compare simulated vs billing-derived therms per premise
     - Scatter: simulated vs billed therms (with 1:1 line)
     - Report: MAE, mean bias, R²

@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_id": 3,
+        "name": "Salem-Keizer",
+        "region": "Central",
+        "description": "Salem-Keizer area in Marion and Polk counties"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -123.5,
+              45.2
+            ],
+            [
+              -122.5,
+              45.2
+            ],
+            [
+              -122.5,
+              44.5
+            ],
+            [
+              -123.5,
+              44.5
+            ],
+            [
+              -123.5,
+              45.2
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

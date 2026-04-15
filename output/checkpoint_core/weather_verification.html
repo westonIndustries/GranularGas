@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Weather Module Verification Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { color: #333; border-bottom: 3px solid #0066cc; padding-bottom: 10px; }
+        h2 { color: #0066cc; margin-top: 30px; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0066cc; color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        .metric { display: inline-block; margin: 10px 20px 10px 0; padding: 15px; background-color: #f0f0f0; border-radius: 5px; }
+        .metric-value { font-size: 24px; font-weight: bold; color: #0066cc; }
+        .metric-label { font-size: 12px; color: #666; }
+        img { max-width: 100%; height: auto; margin: 20px 0; }
+        .timestamp { color: #999; font-size: 12px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Module Verification Report</h1>
+        
+            <h2>Weather Module Verification Report - Data Not Available</h2>
+            <p><strong>Status:</strong> NW Natural weather data files are not available in this environment.</p>
+            
+            <h3>Expected Outputs (when data is available)</h3>
+            <ul>
+                <li>Annual HDD for all 11 weather stations for 2024</li>
+                <li>Comparison to NOAA climate normals</li>
+                <li>Weather adjustment factors by station</li>
+                <li>Monthly HDD heatmap visualization</li>
+            </ul>
+            
+            <h3>Data Requirements</h3>
+            <p>This report requires the following NW Natural weather data files:</p>
+            <ul>
+                <li>Data/NWNatural Data/DailyCalDay1985_Mar2025.csv</li>
+                <li>Data/NWNatural Data/DailyGasDay2008_Mar2025.csv</li>
+                <li>Data/NWNatural Data/BullRunWaterTemperature.csv</li>
+            </ul>
+            
+            <h3>Weather Stations Covered</h3>
+            <p>The model uses 11 weather stations across the NW Natural service territory:</p>
+            <ul>
+                <li>KPDX (Portland, OR)</li>
+                <li>KEUG (Eugene, OR)</li>
+                <li>KSLE (Salem, OR)</li>
+                <li>KAST (Astoria, OR)</li>
+                <li>KDLS (The Dalles, OR)</li>
+                <li>KOTH (Coos Bay, OR)</li>
+                <li>KONP (Newport, OR)</li>
+                <li>KCVO (Corvallis, OR)</li>
+                <li>KHIO (Hillsboro, OR)</li>
+                <li>KTTD (Troutdale, OR)</li>
+                <li>KVUO (Vancouver, WA)</li>
+            </ul>
+            
+            <h3>Verification Checklist</h3>
+            <p>When data becomes available, this report will verify:</p>
+            <ul>
+                <li>Annual HDD values are within expected ranges (3000-6000 HDD)</li>
+                <li>Weather data covers full calendar year</li>
+                <li>All 11 stations have complete data</li>
+                <li>HDD values align with NOAA climate normals</li>
+            </ul>
+            
+        <div class="timestamp">Generated: 2026-04-13 18:08:28</div>
+    </div>
+</body>
+</html>
