@@ -576,33 +576,33 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Output: `output/checkpoint_simulation/billing_calibration.html` and `.md`
     - _Requirements: 7.1, 10.2_
 
-- [ ] 11. Implement scenario management module
+- [x] 11. Implement scenario management module
 
-  - [ ] 11.1 Create `src/scenarios.py` — ScenarioConfig and validation
+  - [x] 11.1 Create `src/scenarios.py` — ScenarioConfig and validation
     - Define `ScenarioConfig` dataclass: name, base_year, forecast_horizon, housing_growth_rate, electrification_rate, efficiency_improvement, weather_assumption
     - Implement `validate_scenario(config)`
     - _Requirements: 6.1, 6.4, 8.1_
 
-  - [ ] 11.2 Implement `run_scenario` pipeline orchestrator
+  - [x] 11.2 Implement `run_scenario` pipeline orchestrator
     - Load base data, build baseline housing stock
     - For each year: project stock, apply replacements, simulate, aggregate
     - Store per-year results with scenario_name label
     - Log significant events
     - _Requirements: 6.2, 6.3, 8.2_
 
-  - [ ] 11.3 Implement `compare_scenarios`
+  - [x] 11.3 Implement `compare_scenarios`
     - Merge results from multiple runs into comparison DataFrame
     - Columns: year, end_use, scenario_name, total_therms, use_per_customer
     - _Requirements: 6.2, 9.4_
 
-  - [ ] 11.4 Property test: scenario determinism
+  - [x] 11.4 Property test: scenario determinism
     - **Property 13: Same config twice → identical results**
     - Table: side-by-side comparison of two runs
     - Report: max absolute difference (should be 0)
     - Output: `output/scenarios/property13_results.html` and `.md`
     - **Validates: Requirements 6.2, 6.3**
 
-  - [ ] 11.5 Property test: scenario validation
+  - [x] 11.5 Property test: scenario validation
     - **Property 14: validate_scenario warns for rates outside [0,1] and horizon <= 0**
     - Table: test cases with expected vs actual results
     - Output: `output/scenarios/property14_results.html` and `.md`
