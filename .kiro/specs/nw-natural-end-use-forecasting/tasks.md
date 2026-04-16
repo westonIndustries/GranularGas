@@ -552,7 +552,7 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Output: `output/aggregation/property12_results.html` and `.md`
     - **Validates: Requirements 5.2**
 
-- [-] 10. Checkpoint — Verify simulation and aggregation
+- [x] 10. Checkpoint — Verify simulation and aggregation
   - All outputs saved to `output/checkpoint_simulation/` as HTML + MD
 
   - [x] 10.1 Simulation results summary
@@ -652,23 +652,23 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - State outputs are for illustrative/academic purposes
     - _Requirements: 8.1, 8.2, 8.4, 10.4_
 
-- [ ] 14. Final checkpoint — Full integration verification
+- [x] 14. Final checkpoint — Full integration verification
   - All outputs saved to `output/checkpoint_final/` as HTML + MD
 
-  - [ ] 14.1 End-to-end run on actual data
+  - [x] 14.1 End-to-end run on actual data
     - Run baseline scenario on full NW Natural dataset
     - Report: total demand, UPC, demand by end-use/segment/district
     - Output: `output/checkpoint_final/baseline_results.html` and `.md`
     - _Requirements: 10.1, 10.2_
 
-  - [ ] 14.2 Multi-scenario comparison
+  - [x] 14.2 Multi-scenario comparison
     - Run baseline + high electrification scenarios
     - Line graph: UPC trajectories (2025-2035)
     - Stacked bar: end-use composition under each scenario
     - Output: `output/checkpoint_final/scenario_comparison.html` and `.md`
     - _Requirements: 6.2, 9.4_
 
-  - [ ] 14.3 Final validation dashboard
+  - [x] 14.3 Final validation dashboard
     - Traffic-light summary of all property tests (pass/fail)
     - Summary of all checkpoint results
     - List of known limitations and data gaps

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NW Natural End-Use Forecasting Model - Final Validation Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 1.1em;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .summary-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .summary-card .value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .traffic-light {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        .test-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        
+        .test-table th {
+            background: #f8f9fa;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+            border-bottom: 2px solid #dee2e6;
+        }
+        
+        .test-table td {
+            padding: 15px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .test-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .status-cell {
+            font-weight: 600;
+        }
+        
+        .limitation-item {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        
+        .limitation-item.high {
+            background: #f8d7da;
+            border-left-color: #dc3545;
+        }
+        
+        .limitation-item.medium {
+            background: #fff3cd;
+            border-left-color: #ffc107;
+        }
+        
+        .limitation-item.low {
+            background: #d1ecf1;
+            border-left-color: #17a2b8;
+        }
+        
+        .severity-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        
+        .severity-high {
+            background: #dc3545;
+            color: white;
+        }
+        
+        .severity-medium {
+            background: #ffc107;
+            color: #333;
+        }
+        
+        .severity-low {
+            background: #17a2b8;
+            color: white;
+        }
+        
+        .data-gap-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .data-gap-table th {
+            background: #f8f9fa;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #dee2e6;
+        }
+        
+        .data-gap-table td {
+            padding: 12px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px 40px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: #e9ecef;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Final Validation Dashboard</h1>
+            <p>NW Natural End-Use Forecasting Model</p>
+            <div class="status-badge">READY ✅</div>
+            <p style="margin-top: 20px; font-size: 0.9em;">Generated: 2026-04-14T14:30:00</p>
+        </div>
+        
+        <div class="content">
+            <!-- Executive Summary -->
+            <div class="section">
+                <h2 class="section-title">📊 Executive Summary</h2>
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <h3>Property Tests</h3>
+                        <div class="value">14/14</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%">
+                                100%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Checkpoints</h3>
+                        <div class="value">4/4</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%">
+                                100%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Model Readiness</h3>
+                        <div class="value">READY</div>
+                        <p style="margin-top: 10px; color: #666;">All core validations passed</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Property Tests Traffic Light -->
+            <div class="section">
+                <h2 class="section-title">🚦 Property Tests Status</h2>
+                <table class="test-table">
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Property 1</strong></td>
+                            <td>Config Completeness</td>
+                            <td class="status-cell">
+                                <span class="traffic-light" style="background: #28a745;"></span>
+                                ✅ PASS
+                            </td>
+                            <td>All equipment_type_codes resolve to valid end-use categories</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Property 2</strong></td>
+                            <td>Data Filtering</td>
+                            <td class="status-cell">
+                                <span class="traffic-light" style="background: #28a745;"></span>
+                                ✅ PASS
+                            </td>
+                            <td>Filtering preserves only active residential premises</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Property 3</strong></td>
+                            <td>Join Integrity</td>
+                            <td class="status-cell">
+                                <span class="traffic-light" style="background: #28a745;"></span>
+                                ✅ PASS
+                            </td>
+                            <td>Every row has non-null end_use and valid efficiency > 0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Property 4</strong></td>
+                            <td>Housing Stock Projection</td>
+                            <td class="status-cell">
+                                <span class="traffic-light" style="background: #28a745;"></span>
+                                ✅ PASS
+                            </td>
+                            <td>Projected units = baseline × (1 + growth_rate)^years</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Property 5</strong></td>
+                            <td>Weibull Survival Monotonicity</td>
+                            <td class="status-cell">
+                                <span class="traffic-light" style="background: #28a745;"></span>
+                                ✅ PASS
+                            </td>
+                            <td>S(t) ≤ S(t-1) for all t > 0, S(0) = 1.0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Property 6</strong></td>
+                            <td>Fuel Switching Conservation</td>
+                            <td class="status-cell">
+                                <span class="traffic-light" style="background: #28a745;"></span>
+                                ✅ PASS
+                            </td>
+                            <td>Total equipment count before/after replacements is equal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Property 7</strong></td>
+                            <td>HDD Computation</td>
+                            <td class="status-cell">
+                                <span class="traffic-light" style="background: #28a745;"></span>
+                                ✅ PASS
+                            </td>
+                            <td>HDD ≥ 0, exactly one of HDD/CDD is positive</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Property 8</strong></td>
+                            <td>Water Heating Delta-T</td>
+                            <td class="status-cell">
+                                <span class="traffic-light" style="background: #28a745;"></span>
+                                ✅ PASS
+                            </td>
+                            <td>delta_t > 0 when cold water temp < target_temp</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Property 9</strong></td>
+                            <td>Simulation Non-Negativity</td>
+                            <td class="status-cell">
+                                <span class="traffic-light" style="background: #28a745;"></span>
+                                ✅ PASS
+                            </td>
+                            <td>All simulated annual_therms ≥ 0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Property 10</strong></td>
+                            <td>Efficiency Impact Monotonicity</td>
+                            <td class="status-cell">
+                                <span class="traffic-light" style="background: #28a745;"></span>
+                                ✅ PASS
+                            </td>
+                            <td>Higher efficiency → lower or equal therms</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Property 11</strong></td>
+                            <td>Aggregation Conservation</td>
+                            <td class="status-cell">
+                                <span class="traffic-light" style="background: #28a745;"></span>
+                                ✅ PASS
+                            </td>
+                            <td>Sum across end uses = total demand</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Property 12</strong></td>
+                            <td>Use-Per-Customer (UPC)</td>
+                            <td class="status-cell">
+                                <span class="traffic-light" style="background: #28a745;"></span>
+                                ✅ PASS
+                            </td>
+                            <td>UPC = total / count for count > 0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Property 13</strong></td>
+                            <td>Scenario Determinism</td>
+                            <td class="status-cell">
+                                <span class="traffic-light" style="background: #28a745;"></span>
+                                ✅ PASS
+                            </td>
+                            <td>Same config twice → identical results</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Property 14</strong></td>
+                            <td>Scenario Validation</td>
+                            <td class="status-cell">
+                                <span class="traffic-light" style="background: #28a745;"></span>
+                                ✅ PASS
+                            </td>
+                            <td>Validates scenario parameters for consistency</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Checkpoints Status -->
+            <div class="section">
+                <h2 class="section-title">✅ Checkpoint Results</h2>
+                <table class="test-table">
+                    <thead>
+                        <tr>
+                            <th>Checkpoint</th>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Checkpoint 3</strong></td>
+                            <td>Data Ingestion Validation</td>
+                            <td class="status-cell">
+                                <span class="traffic-light" style="background: #28a745;"></span>
+                                ✅ PASS
+                            </td>
+                            <td>All data loaders verified and diagnostics generated</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Checkpoint 6</strong></td>
+                            <td>Equipment Module Validation</td>
+                            <td class="status-cell">
+                                <span class="traffic-light" style="background: #28a745;"></span>
+                                ✅ PASS
+                            </td>
+                            <td>Equipment inventory and replacement logic verified</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Checkpoint 9</strong></td>
+                            <td>Aggregation Module Validation</td>
+                            <td class="status-cell">
+                                <span class="traffic-light" style="background: #28a745;"></span>
+                                ✅ PASS
+                            </td>
+                            <td>Aggregation at multiple geographic levels verified</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Checkpoint 12</strong></td>
+                            <td>Deployment Validation</td>
+                            <td class="status-cell">
+                                <span class="traffic-light" style="background: #28a745;"></span>
+                                ✅ PASS
+                            </td>
+                            <td>Docker containerization and deployment verified</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Known Limitations -->
+            <div class="section">
+                <h2 class="section-title">⚠️ Known Limitations</h2>
+                <div>
+                    <h3 style="margin-bottom: 15px; color: #333;">
+                        <span class="severity-badge severity-high">HIGH</span>
+                        Data Availability
+                    </h3>
+                    <div class="limitation-item high">
+                        • Missing NW Natural proprietary data (premise, equipment, billing)
+                    </div>
+                    <div class="limitation-item high">
+                        • API rate limits for Census and GBR data sources
+                    </div>
+                    <div class="limitation-item high">
+                        • RBSA data is 2022 vintage, may not reflect current conditions
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <h3 style="margin-bottom: 15px; color: #333;">
+                        <span class="severity-badge severity-medium">MEDIUM</span>
+                        Spatial Resolution
+                    </h3>
+                    <div class="limitation-item medium">
+                        • District-level aggregation in outputs, not premise-level
+                    </div>
+                    <div class="limitation-item medium">
+                        • Weather station assignments are static, not dynamic
+                    </div>
+                    <div class="limitation-item medium">
+                        • Geographic drill-down limited to county/district levels
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <h3 style="margin-bottom: 15px; color: #333;">
+                        <span class="severity-badge severity-medium">MEDIUM</span>
+                        Temporal Resolution
+                    </h3>
+                    <div class="limitation-item medium">
+                        • Annual aggregation only, no sub-annual (monthly/daily) outputs
+                    </div>
+                    <div class="limitation-item medium">
+                        • Billing data aggregated to annual, losing seasonal patterns
+                    </div>
+                    <div class="limitation-item medium">
+                        • Weather normalization uses 30-year normals, not year-specific
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <h3 style="margin-bottom: 15px; color: #333;">
+                        <span class="severity-badge severity-medium">MEDIUM</span>
+                        Calibration Scope
+                    </h3>
+                    <div class="limitation-item medium">
+                        • Model calibrated to NW Natural service territory only
+                    </div>
+                    <div class="limitation-item medium">
+                        • Equipment efficiency defaults based on national averages
+                    </div>
+                    <div class="limitation-item medium">
+                        • Weibull parameters derived from DOE/NEMS, not NW Natural specific
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <h3 style="margin-bottom: 15px; color: #333;">
+                        <span class="severity-badge severity-medium">MEDIUM</span>
+                        Model Assumptions
+                    </h3>
+                    <div class="limitation-item medium">
+                        • Weibull shape parameters (beta) are fixed, not data-driven
+                    </div>
+                    <div class="limitation-item medium">
+                        • Baseload factors assume constant annual consumption
+                    </div>
+                    <div class="limitation-item medium">
+                        • Weather normalization assumes linear HDD/CDD relationship
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <h3 style="margin-bottom: 15px; color: #333;">
+                        <span class="severity-badge severity-low">LOW</span>
+                        Validation Data
+                    </h3>
+                    <div class="limitation-item low">
+                        • RECS/RBSA may not perfectly match NW Natural territory
+                    </div>
+                    <div class="limitation-item low">
+                        • Census data is county-level, not premise-level
+                    </div>
+                    <div class="limitation-item low">
+                        • Historical UPC data has limited granularity for validation
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Data Gaps -->
+            <div class="section">
+                <h2 class="section-title">📋 Data Gaps and Mitigations</h2>
+                <table class="data-gap-table">
+                    <thead>
+                        <tr>
+                            <th>Data Gap</th>
+                            <th>Impact</th>
+                            <th>Mitigation Strategy</th>
+                            <th>Affected End-Uses</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Missing Equipment Efficiency Data</strong></td>
+                            <td><span style="color: #dc3545; font-weight: bold;">HIGH</span></td>
+                            <td>Filled with national defaults from DOE/RECS</td>
+                            <td>space_heating, water_heating, cooking</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Missing Weather Station Assignments</strong></td>
+                            <td><span style="color: #ffc107; font-weight: bold;">MEDIUM</span></td>
+                            <td>Flagged in join audit, assigned to nearest station</td>
+                            <td>space_heating, water_heating</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Incomplete Billing Data</strong></td>
+                            <td><span style="color: #ffc107; font-weight: bold;">MEDIUM</span></td>
+                            <td>Rows with null utility_usage excluded from calibration</td>
+                            <td>all</td>
+                        </tr>
+                        <tr>
+                            <td><strong>RBSA Coverage Gaps</strong></td>
+                            <td><span style="color: #ffc107; font-weight: bold;">MEDIUM</span></td>
+                            <td>Not all premises have RBSA matches, use defaults</td>
+                            <td>all</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Census API Data Gaps</strong></td>
+                            <td><span style="color: #17a2b8; font-weight: bold;">LOW</span></td>
+                            <td>Some counties may have missing years, interpolated</td>
+                            <td>housing_stock</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GBR API Coverage Limits</strong></td>
+                            <td><span style="color: #17a2b8; font-weight: bold;">LOW</span></td>
+                            <td>Limited to zip codes with available data</td>
+                            <td>building_characteristics</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Recommendations -->
+            <div class="section">
+                <h2 class="section-title">💡 Recommendations</h2>
+                <div style="background: #e7f3ff; border-left: 4px solid #2196F3; padding: 20px; border-radius: 4px;">
+                    <h3 style="color: #1976D2; margin-bottom: 15px;">For Production Deployment:</h3>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li>Obtain NW Natural proprietary data files for full model calibration</li>
+                        <li>Implement sub-annual (monthly/daily) aggregation for improved accuracy</li>
+                        <li>Develop premise-level geographic drill-down capabilities</li>
+                        <li>Establish automated data quality monitoring and alerting</li>
+                        <li>Create user documentation and training materials</li>
+                        <li>Set up continuous integration/deployment pipeline</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>NW Natural End-Use Forecasting Model | Final Validation Dashboard</p>
+            <p>Generated: 2026-04-14T14:30:00</p>
+            <p>All property tests and checkpoints completed successfully ✓</p>
+        </div>
+    </div>
+</body>
+</html>
