@@ -1,0 +1,27 @@
+{
+  "name": "baseline",
+  "base_year": 2025,
+  "forecast_horizon": 10,
+  "housing_growth_rate": 0.01,
+  "electrification_rate": 0.02,
+  "efficiency_improvement": 0.01,
+  "weather_assumption": "normal",
+  "_comment": "Baseline Reference Case - Conservative assumptions for IRP planning",
+  "_parameters": {
+    "name": "Scenario identifier used in outputs and comparisons",
+    "base_year": "Starting year for simulation (2025)",
+    "forecast_horizon": "Number of years to project forward (10 years = 2025-2035)",
+    "housing_growth_rate": "Annual housing unit growth rate (1% per year, conservative)",
+    "electrification_rate": "Annual rate of gas-to-electric fuel switching (2% per year)",
+    "efficiency_improvement": "Annual equipment efficiency improvement rate (1% per year)",
+    "weather_assumption": "Weather scenario: 'normal' uses 30-year normals, 'warm' reduces HDD, 'cold' increases HDD"
+  },
+  "_notes": [
+    "This baseline scenario represents a reference case with conservative assumptions.",
+    "Housing growth of 1% aligns with historical NW Natural service territory trends.",
+    "Electrification of 2% reflects current policy and market adoption rates.",
+    "Efficiency improvements of 1% account for natural equipment replacement with newer, more efficient models.",
+    "Results are compared against NW Natural's 2025 IRP UPC forecast (648 therms baseline).",
+    "Outputs include demand by end-use, segment, district, and year for scenario analysis."
+  ]
+}

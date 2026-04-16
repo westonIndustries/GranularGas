@@ -608,21 +608,21 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Output: `output/scenarios/property14_results.html` and `.md`
     - **Validates: Requirements 6.4**
 
-- [ ] 12. Implement CLI entry point
+- [x] 12. Implement CLI entry point
 
-  - [ ] 12.1 Create `src/main.py` as CLI entry point
+  - [x] 12.1 Create `src/main.py` as CLI entry point
     - Parse args: scenario config path, output dir, --baseline-only, --compare
     - Wire pipeline: config → ingest → stock → simulate → aggregate → export
     - Print summary statistics to stdout
     - _Requirements: 8.2, 9.1, 9.2_
 
-  - [ ] 12.2 Create default scenario configs
+  - [x] 12.2 Create default scenario configs
     - Create `scenarios/baseline.json` with reference case parameters
     - Create `scenarios/high_electrification.json` for demonstration
     - Document parameters with inline comments
     - _Requirements: 6.1, 8.1_
 
-  - [ ] 12.3 Property test: full pipeline integration
+  - [x] 12.3 Property test: full pipeline integration
     - **Test: load → stock → simulate → aggregate → export produces valid CSV**
     - Verify output has expected columns and non-empty rows
     - Report: row count, column list, sample values
