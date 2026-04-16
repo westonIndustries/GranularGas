@@ -1,0 +1,2 @@
+blinded_id,end_use,annual_therms,expected_min,expected_max,violation_type,severity
+PREM_00078,drying,8.490394176322075,10,50,below_min,warning

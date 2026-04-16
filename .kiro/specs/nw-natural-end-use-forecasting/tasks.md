@@ -629,9 +629,9 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Output: `output/integration/pipeline_test.html` and `.md`
     - **Validates: Requirements 5.1, 9.1, 10.2**
 
-- [ ] 13. Implement validation and limitation reporting
+- [x] 13. Implement validation and limitation reporting
 
-  - [ ] 13.1 Billing-based calibration
+  - [x] 13.1 Billing-based calibration
     - Load billing data and build historical rate table
     - Convert billing dollars to therms
     - Compare simulated vs billing-derived therms per premise
@@ -639,14 +639,14 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Flag premises with divergence > threshold
     - _Requirements: 7.1, 10.2, 10.3_
 
-  - [ ] 13.2 Range-checking and IRP comparison
+  - [x] 13.2 Range-checking and IRP comparison
     - Flag results outside expected ranges
     - Compare model UPC vs IRP 10-year forecast
     - Compare vintage-cohort UPC vs era anchors (820/720/650)
     - Log and report discrepancies
     - _Requirements: 10.1, 10.2, 10.3, 10.4_
 
-  - [ ] 13.3 Documentation and limitation metadata
+  - [x] 13.3 Documentation and limitation metadata
     - Include metadata with each export: scenario name, run date, parameters
     - Document data gaps encountered during ingestion
     - State outputs are for illustrative/academic purposes

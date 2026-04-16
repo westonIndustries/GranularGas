@@ -1,0 +1,112 @@
+{
+  "run_id": "39a4f4691e73",
+  "scenario_name": "Test Scenario",
+  "run_date": "2026-04-15T18:28:43.307417",
+  "base_year": 2025,
+  "forecast_horizon": 10,
+  "parameters": {
+    "housing_growth_rate": 0.01
+  },
+  "data_sources": [
+    {
+      "name": "NW Natural Premise Data",
+      "description": "Blinded premise characteristics (location, segment, vintage)",
+      "status": "loaded"
+    },
+    {
+      "name": "NW Natural Equipment Data",
+      "description": "Equipment inventory by premise (type, efficiency, vintage)",
+      "status": "loaded"
+    },
+    {
+      "name": "NW Natural Billing Data",
+      "description": "Historical billing data for calibration",
+      "status": "loaded"
+    },
+    {
+      "name": "Weather Data",
+      "description": "Daily temperature and precipitation (2008-2025)",
+      "status": "loaded"
+    },
+    {
+      "name": "RBSA 2022",
+      "description": "Residential Building Stock Assessment (NEEA)",
+      "status": "loaded"
+    },
+    {
+      "name": "IRP Forecast",
+      "description": "NW Natural 2025 IRP 10-year UPC forecast",
+      "status": "loaded"
+    }
+  ],
+  "data_gaps": [
+    {
+      "name": "Equipment Efficiency Ratings",
+      "description": "Not all equipment has explicit efficiency ratings in NW Natural data",
+      "impact": "Used RBSA-derived efficiency distributions and defaults",
+      "mitigation": "Calibrated against billing data"
+    },
+    {
+      "name": "Building Envelope Characteristics",
+      "description": "NW Natural data lacks detailed envelope properties (insulation, window type)",
+      "impact": "Used RBSA 2022 building shell data as proxy",
+      "mitigation": "Validated against historical UPC trends"
+    },
+    {
+      "name": "Occupancy and Usage Patterns",
+      "description": "No detailed occupancy or usage pattern data available",
+      "impact": "Used RECS national averages and RBSA metering data",
+      "mitigation": "Calibrated to billing-derived consumption"
+    }
+  ],
+  "assumptions": [
+    {
+      "name": "Heating Degree Days (HDD) Model",
+      "description": "Space heating consumption modeled as linear function of HDD (base 65\u00b0F)",
+      "justification": "Standard industry practice; validated against RBSA metering data"
+    },
+    {
+      "name": "Equipment Replacement via Weibull Survival",
+      "description": "Equipment replacement timing follows Weibull survival distribution",
+      "justification": "Empirically grounded in ASHRAE service life data"
+    },
+    {
+      "name": "Baseload Consumption Factors",
+      "description": "Non-weather-sensitive end uses (cooking, drying) modeled as constant annual consumption",
+      "justification": "Derived from RECS 2020 and RBSA metering data"
+    },
+    {
+      "name": "Weather Station Assignment",
+      "description": "Premises assigned to nearest weather station by district",
+      "justification": "Practical approach given limited weather station coverage"
+    }
+  ],
+  "limitations": [
+    {
+      "name": "Spatial Resolution",
+      "description": "Model operates at premise level but aggregates to district/system level. No sub-district geographic granularity.",
+      "scope": "Affects ability to analyze localized demand patterns"
+    },
+    {
+      "name": "Temporal Resolution",
+      "description": "Model produces annual demand projections. No monthly or daily profiles.",
+      "scope": "Limits ability to analyze peak demand or seasonal patterns"
+    },
+    {
+      "name": "Calibration Scope",
+      "description": "Calibrated to 2025 baseline year. Historical calibration limited to available billing data.",
+      "scope": "Projections beyond 2035 increasingly uncertain"
+    },
+    {
+      "name": "Electrification Modeling",
+      "description": "Fuel switching rates are scenario parameters, not endogenously determined. No economic optimization or market dynamics.",
+      "scope": "Electrification projections depend on scenario assumptions"
+    },
+    {
+      "name": "Data Blinding",
+      "description": "NW Natural data is blinded (premise IDs anonymized). Cannot validate against specific customer accounts.",
+      "scope": "Limits ability to identify and correct premise-level errors"
+    }
+  ],
+  "disclaimer": "This model is a prototype framework for academic and illustrative purposes only. Outputs are not suitable for regulatory filings or production forecasting. Results should be interpreted with consideration of documented limitations and data gaps. See limitations section for details."
+}
