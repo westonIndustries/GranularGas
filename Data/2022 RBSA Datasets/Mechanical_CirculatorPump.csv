@@ -1,0 +1,105 @@
+﻿"SiteID","Mechanical_ID","Make","Model","Horsepower","Control_Type","Control_Type_Other"
+"SITE_1003","MECH_131427","Grundfos","UP 26-99 F","0.166666667","Timer",NA
+"SITE_1022","MECH_60981","Grundfos","UP15-10SU7P/TLC","0.04","Timer",NA
+"SITE_1041","MECH_120052","Grundfos","UPS15-58FC","0.04","Other","controller"
+"SITE_1047","MECH_94675","Grundfos","Unknown","Unknown","Timer",NA
+"SITE_1047","MECH_2514","Grundfos","UPS 26-99FC","0.166666667","Always On",NA
+"SITE_1060","MECH_112577","Grundfos","UP15-29SU","0.04","Unknown",NA
+"SITE_108","MECH_167755","Unknown","Unknown","Unknown","Unknown",NA
+"SITE_1091","MECH_149593","Grundfos","UP 15-10 B7/TLC","0.04","Timer",NA
+"SITE_1092","MECH_103639","Grundfos","UP15-10SU7P/TLC","0.04","Always On",NA
+"SITE_1093","MECH_30443","Grundfos","UPS15-58FC","0.04","Timer",NA
+"SITE_1099","MECH_31880","Grundfos","59896343 P1","Unknown","Unknown",NA
+"SITE_1111","MECH_25485","Grundfos","UP10-16BU/ATLC","0.0113987","Timer",NA
+"SITE_1126","MECH_67687","Grundfos","UP 15-10 B5","0.04","Always On",NA
+"SITE_1131","MECH_63355","Danfoss","Unknown","Unknown","Always On",NA
+"SITE_1134","MECH_47328","Grundfos","59896155 P1","Unknown","Always On",NA
+"SITE_1172","MECH_29919","Grundfos","Unknown","Unknown","Always On",NA
+"SITE_1181","MECH_161361","Powerflo","PFWRC2017C1F","0.13","On-demand Push Button",NA
+"SITE_1210","MECH_56402","Grundfos","UP10-16APM","0.0113987","Always On",NA
+"SITE_1303","MECH_1669","Myers","SG102","Unknown","Unknown",NA
+"SITE_1304","MECH_36145","Grundfos","UP10-16 A PM","0.0113987","Always On",NA
+"SITE_1309","MECH_163393","Taco","Unknown","Unknown","Unknown",NA
+"SITE_1310","MECH_148709","Taco","006-B4","Unknown","Unknown",NA
+"SITE_1316","MECH_72938","Grundfos","UP15-10BUC7/TLC","0.04","Timer",NA
+"SITE_1373","MECH_109705","Taco","006-BC4","0.025","Always On",NA
+"SITE_1395","MECH_156278","Grundfos","UP15-18B5","0.04","Unknown",NA
+"SITE_1410","MECH_114411","Taco","003-BC4","0.025","Always On",NA
+"SITE_1420","MECH_146614","Taco","#006E3","Unknown","Unknown",NA
+"SITE_1425","MECH_69016","Grundfos","UPS15-58FC","0.04","On-demand Push Button",NA
+"SITE_1452","MECH_70325","Grundfos","#500800","0.5","Timer",NA
+"SITE_1537","MECH_20393","Taco","006-BC4-PNP","0.25","Timer",NA
+"SITE_1553","MECH_28641","Taco","006-1QB4","0.025","Always On",NA
+"SITE_1560","MECH_59488","Taco","003-BC4-PNP","0.025","Timer",NA
+"SITE_1579","MECH_137002","Wilo","Unknown","Unknown","Unknown",NA
+"SITE_1617","MECH_81163","Taco","009-SF5","0.125","Other","Controlled electronically"
+"SITE_1625","MECH_137977","Fasco","JB1R115NSW","0.1","Unknown",NA
+"SITE_1634","MECH_118008","Challenger","Unknown","Unknown","Unknown",NA
+"SITE_1647","MECH_15635","Watts","#500800","Unknown","Timer",NA
+"SITE_1792","MECH_30671","Grundfos","UP10-16A PM","0.0113987","Timer",NA
+"SITE_1832","MECH_91667","Taco","006E3LC","Unknown","Timer",NA
+"SITE_1853","MECH_26872","AO Smith","LPT52","Unknown","Always On",NA
+"SITE_1864","MECH_62188","Grundfos","UP15-42F","0.04","Unknown",NA
+"SITE_1915","MECH_71887","Grundfos","UPS15-58FC","0.04","Always On",NA
+"SITE_1926","MECH_169996","Unknown","Unknown","Unknown","Always On",NA
+"SITE_1928","MECH_88807","Wing","SM-303-BS 1/2'","Unknown","Timer",NA
+"SITE_1947","MECH_40571_1","Grundfos","15-18SF 59896125","0.33","Always On",NA
+"SITE_1947","MECH_40571_2","Grundfos","UPS15-35SFC","0.04","Unknown",NA
+"SITE_1981","MECH_9633_1","Grundfos","UPS 15 58 FC","0.04","Unknown",NA
+"SITE_1981","MECH_9633_2","Grundfos","UPS 26-99 FC","0.166666667","Unknown",NA
+"SITE_1981","MECH_9633_3","Grundfos","UPS 26-99 FC","0.166666667","Unknown",NA
+"SITE_1996","MECH_103200","Laing","SMT-303-BS 1/2","Unknown","Timer",NA
+"SITE_1997","MECH_61554","Taco","006-B4","0.025","Always On",NA
+"SITE_202","MECH_157606","Grundfos","Unknown","Unknown","Always On",NA
+"SITE_2044","MECH_132410","Unknown","Unknown","Unknown","Timer",NA
+"SITE_214","MECH_113705","Watts","#500800","Unknown","Unknown",NA
+"SITE_247","MECH_143500","Watts","#500800","Unknown","Unknown",NA
+"SITE_251","MECH_40325","Grundfos","Unknown","Unknown","Timer",NA
+"SITE_27","MECH_28170","Grundfos","UP15-10SE7P/TLC","0.04","Timer",NA
+"SITE_282","MECH_123877","Grundfos","UP 15-42 F","0.04","Always On",NA
+"SITE_32","MECH_110427","Unknown","Unknown","Unknown","Unknown",NA
+"SITE_329","MECH_116747","Unknown","Unknown","0.5","Always On",NA
+"SITE_350","MECH_111608","Watts","#500800","0.04","Timer",NA
+"SITE_371","MECH_138749","Unknown","Unknown","Unknown","Timer",NA
+"SITE_387","MECH_143561","Grundfos","59896288P1","Unknown","Timer",NA
+"SITE_397","MECH_33654","Grundfos","Unknown","Unknown","Timer",NA
+"SITE_401","MECH_22197","Wilo","Unknown","Unknown","Always On",NA
+"SITE_426","MECH_86022","PRO SOURCE","PSC-85-25-01","Unknown","Unknown",NA
+"SITE_446","MECH_41714","Hartell","MD-18-HE","Unknown","Always On",NA
+"SITE_459","MECH_31714","Taco","#006E3","Unknown","Always On",NA
+"SITE_500","MECH_40852","Taco","007-F5","0.04","Unknown",NA
+"SITE_501","MECH_139767","READYTEMP","TL500D","0.125","Other","PROGRAMMABLE ALSO HAS ANALOG CONTROL"
+"SITE_540","MECH_112534","Grundfos","UP15-25SU","0.04","On-demand Push Button",NA
+"SITE_574","MECH_118141","Goulds","Unknown","Unknown","Unknown",NA
+"SITE_585","MECH_4011_1","Grundfos","UP15-42 SU","0.04","Unknown",NA
+"SITE_585","MECH_4011_2","Grundfos","UP15-42 SU","0.04","Unknown",NA
+"SITE_586","MECH_103083","Unknown","Unknown","Unknown","Other","temperature"
+"SITE_597","MECH_156530","Grundfos","Unknown","Unknown","Timer",NA
+"SITE_646","MECH_27587","Watts","#500800","Unknown","Timer",NA
+"SITE_651","MECH_87763","Grundfos","UP15-10SU7P/TCL","0.04","Timer",NA
+"SITE_671","MECH_5931","Grundfos","#500800","Unknown","Timer",NA
+"SITE_688","MECH_120098","Grundfos","UP15-42SU","0.04","Always On",NA
+"SITE_702","MECH_52644","Grundfos","UPS15-58FC","0.04","Always On",NA
+"SITE_71","MECH_38149","Taco","006-BC4","0.025","Always On",NA
+"SITE_713","MECH_168399","Taco","007-ZF5-1IFC","0.04","On-demand Push Button",NA
+"SITE_723","MECH_49773","Grundfos","UPS15-58FC","0.04","Unknown",NA
+"SITE_726","MECH_77996","Taco","006-B4-PNP","0.025","Timer",NA
+"SITE_740","MECH_59916","Grundfos","Unknown","Unknown","On-demand Push Button",NA
+"SITE_747","MECH_12371","Grundfos","Unknown","Unknown","Unknown",NA
+"SITE_750","MECH_142393","Taco","#007-BE4","0.04","Timer",NA
+"SITE_763","MECH_119164_1","Grundfos","UPS 15-58 FC","0.04","Other","Controlled by distribution box"
+"SITE_763","MECH_119164_2","Grundfos","UPS 15-58 FC","0.04","Other","Distribution box"
+"SITE_763","MECH_119164_3","Grundfos","UPS 15-58 FC","0.04","Other","Distribution box"
+"SITE_766","MECH_161492","Taco","Unknown","Unknown","Unknown",NA
+"SITE_791","MECH_31997","Fasco","#702110060","Unknown","Always On",NA
+"SITE_810","MECH_127839","Rain Bird","ESP-LX+","Unknown","Timer",NA
+"SITE_829","MECH_68203","Grundfos","UM 15-10 B7","0.04","Unknown",NA
+"SITE_84","MECH_39842","Varem","SOLARVAREM","0.75","Always On",NA
+"SITE_847","MECH_143899","Armstrong","ASTRO-30","Unknown","Always On",NA
+"SITE_853","MECH_74761","Taco","Unknown","0.5","Always On",NA
+"SITE_854","MECH_8601","Taco","#265","Unknown","Timer",NA
+"SITE_868","MECH_75324","Taco","0011-F4-IFC","0.125","Always On",NA
+"SITE_915","MECH_147285","Grundfos","UPS15-58FC","0.04","Timer",NA
+"SITE_942","MECH_40933","Grundfos","UP15-10SU7P/TLC","0.04","Timer",NA
+"SITE_962","MECH_61185","Unknown","Unknown","Unknown","Unknown",NA
+"SITE_991","MECH_56743","Laing","Unknown","0.0625","Timer",NA

@@ -1,0 +1,1788 @@
+﻿SiteID,Mechanical_ID,System_Type,Ventilation_Controls
+SITE_1,MECH_96171,Small Capacity Exhaust,On/off
+SITE_10,MECH_55068,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_100,MECH_14893,Small Capacity Exhaust,On/off
+SITE_1000,MECH_53680,Recirculating Only,On/off
+SITE_1001,MECH_95709,Recirculating Only,On/off
+SITE_1002,MECH_14437,High Capacity Exhaust,On/off
+SITE_1003,MECH_66872,Small Capacity Exhaust,Timer
+SITE_1004,MECH_70328,Recirculating Only,On/off
+SITE_1006,MECH_148624,High Capacity Exhaust,On/off
+SITE_1007,MECH_151396,Small Capacity Exhaust,On/off
+SITE_1008,MECH_5351,High Capacity Exhaust,On/off
+SITE_1009,MECH_51790,High Capacity Exhaust,On/off
+SITE_101,MECH_74790,Small Capacity Exhaust,On/off
+SITE_1010,MECH_116520,Recirculating Only,On/off
+SITE_1011,MECH_11009,Recirculating Only,On/off
+SITE_1012,MECH_74085,High Capacity Exhaust,On/off
+SITE_1013,MECH_125782,Recirculating Only,On/off
+SITE_1014,MECH_41525,Small Capacity Exhaust,On/off
+SITE_1015,MECH_38085,Recirculating Only,On/off
+SITE_1016,MECH_150785,Recirculating Only,On/off
+SITE_1017,MECH_11762,Recirculating Only,On/off
+SITE_1018,MECH_104378,Recirculating Only,On/off
+SITE_1019,MECH_126446,Recirculating Only,On/off
+SITE_1019,MECH_126446,Small Capacity Exhaust,On/off
+SITE_102,MECH_2625,Small Capacity Exhaust,On/off
+SITE_1020,MECH_22783,Small Capacity Exhaust,On/off
+SITE_1021,MECH_67448,Unknown,On/off
+SITE_1022,MECH_161292,High Capacity Exhaust,On/off
+SITE_1023,MECH_123303,Small Capacity Exhaust,On/off
+SITE_1025,MECH_88355,Recirculating Only,On/off
+SITE_1028,MECH_87515,Recirculating Only,On/off
+SITE_1029,MECH_156669,Small Capacity Exhaust,On/off
+SITE_103,MECH_47326,Small Capacity Exhaust,On/off
+SITE_1030,MECH_60627,Small Capacity Exhaust,On/off
+SITE_1031,MECH_51925,Recirculating Only,On/off
+SITE_1032,MECH_73194,High Capacity Exhaust,On/off
+SITE_1033,MECH_54131,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1034,MECH_25388,Small Capacity Exhaust,On/off
+SITE_1036,MECH_63284,Small Capacity Exhaust,On/off
+SITE_1038,MECH_42130,Recirculating Only,On/off
+SITE_1038,MECH_42130,Small Capacity Exhaust,On/off
+SITE_1039,MECH_92331,Small Capacity Exhaust,On/off
+SITE_104,MECH_136703,Small Capacity Exhaust,On/off
+SITE_1040,MECH_1991,Small Capacity Exhaust,On/off
+SITE_1041,MECH_88573,Small Capacity Exhaust,On/off
+SITE_1042,MECH_139745,Small Capacity Exhaust,On/off
+SITE_1043,MECH_146375,High Capacity Exhaust,On/off
+SITE_1045,MECH_148625,Unknown,On/off
+SITE_1048,MECH_127857,Recirculating Only,On/off
+SITE_1050,MECH_85906,High Capacity Exhaust,On/off
+SITE_1052,MECH_114281,Small Capacity Exhaust,On/off
+SITE_1053,MECH_110356,Recirculating Only,On/off
+SITE_1054,MECH_165104,High Capacity Exhaust,Manual thermostat - Analog
+SITE_1055,MECH_115015,Small Capacity Exhaust,On/off
+SITE_1056,MECH_12916,Recirculating Only,On/off
+SITE_1056,MECH_97871,Recirculating Only,On/off
+SITE_1058,MECH_74807,Recirculating Only,Manual thermostat - Analog
+SITE_1059,MECH_89145,Small Capacity Exhaust,On/off
+SITE_1061,MECH_137122,Small Capacity Exhaust,On/off
+SITE_1063,MECH_122162,Recirculating Only,On/off
+SITE_1064,MECH_158616,Small Capacity Exhaust,On/off
+SITE_1065,MECH_28818,Recirculating Only,On/off
+SITE_1066,MECH_154712,High Capacity Exhaust,On/off
+SITE_1068,MECH_148640,Small Capacity Exhaust,On/off
+SITE_1069,MECH_89661,Small Capacity Exhaust,On/off
+SITE_107,MECH_72665,Small Capacity Exhaust,On/off
+SITE_107,MECH_52001,Small Capacity Exhaust,On/off
+SITE_1070,MECH_149489,Small Capacity Exhaust,On/off
+SITE_1072,MECH_86253,Unknown,On/off
+SITE_1073,MECH_44957,High Capacity Exhaust,On/off
+SITE_1074,MECH_158908,Small Capacity Exhaust,On/off
+SITE_1076,MECH_63639,High Capacity Exhaust,On/off
+SITE_1078,MECH_155820,Small Capacity Exhaust,On/off
+SITE_1078,MECH_143268,Small Capacity Exhaust,On/off
+SITE_108,MECH_13811,High Capacity Exhaust,On/off
+SITE_1080,MECH_56671,Small Capacity Exhaust,On/off
+SITE_1081,MECH_39539,High Capacity Exhaust,On/off
+SITE_1082,MECH_166309,High Capacity Exhaust,On/off
+SITE_1083,MECH_157865,Recirculating Only,On/off
+SITE_1084,MECH_19478,Small Capacity Exhaust,On/off
+SITE_1085,MECH_172909,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_1087,MECH_56894,Recirculating Only,On/off
+SITE_1090,MECH_141078,Small Capacity Exhaust,On/off
+SITE_1091,MECH_153107,High Capacity Exhaust,On/off
+SITE_1092,MECH_26215,Small Capacity Exhaust,On/off
+SITE_1093,MECH_82210,Recirculating Only,On/off
+SITE_1094,MECH_2294,Recirculating Only,On/off
+SITE_1095,MECH_160615,Small Capacity Exhaust,On/off
+SITE_1096,MECH_174318,Small Capacity Exhaust,On/off
+SITE_1098,MECH_33281,Small Capacity Exhaust,On/off
+SITE_11,MECH_131710,Unknown,On/off
+SITE_110,MECH_173767,High Capacity Exhaust,Timer
+SITE_1100,MECH_33733,Small Capacity Exhaust,On/off
+SITE_1100,MECH_151036,Small Capacity Exhaust,On/off
+SITE_1101,MECH_38638,Small Capacity Exhaust,On/off
+SITE_1102,MECH_138419,Recirculating Only,On/off
+SITE_1103,MECH_52721,Small Capacity Exhaust,On/off
+SITE_1105,MECH_79079,Recirculating Only,On/off
+SITE_1108,MECH_13387,Recirculating Only,On/off
+SITE_1109,MECH_86755,High Capacity Exhaust,On/off
+SITE_1110,MECH_1060,Small Capacity Exhaust,On/off
+SITE_1111,MECH_13904,High Capacity Exhaust,On/off
+SITE_1113,MECH_47360,Recirculating Only,On/off
+SITE_1114,MECH_22215,Small Capacity Exhaust,On/off
+SITE_1115,MECH_169516,Recirculating Only,On/off
+SITE_1116,MECH_123080,Small Capacity Exhaust,On/off
+SITE_1117,MECH_79660,Small Capacity Exhaust,On/off
+SITE_1118,MECH_48641,Recirculating Only,On/off
+SITE_1119,MECH_161542,High Capacity Exhaust,Manual thermostat - Analog
+SITE_112,MECH_90922,Small Capacity Exhaust,On/off
+SITE_1120,MECH_124218,Small Capacity Exhaust,On/off
+SITE_1121,MECH_39614,Recirculating Only,On/off
+SITE_1123,MECH_63353,High Capacity Exhaust,On/off
+SITE_1124,MECH_165336,Small Capacity Exhaust,On/off
+SITE_1125,MECH_174201,Recirculating Only,On/off
+SITE_1126,MECH_94379,High Capacity Exhaust,On/off
+SITE_1127,MECH_104565,High Capacity Exhaust,On/off
+SITE_1128,MECH_8985,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1128,MECH_135633,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_1129,MECH_28384,Small Capacity Exhaust,On/off
+SITE_1130,MECH_158663,Small Capacity Exhaust,On/off
+SITE_1131,MECH_30876,Recirculating Only,On/off
+SITE_1132,MECH_127328,Recirculating Only,On/off
+SITE_1133,MECH_109425,Small Capacity Exhaust,On/off
+SITE_1135,MECH_77906,Recirculating Only,On/off
+SITE_1137,MECH_106483,Small Capacity Exhaust,On/off
+SITE_1138,MECH_62524,High Capacity Exhaust,On/off
+SITE_1139,MECH_43964,Recirculating Only,On/off
+SITE_114,MECH_135579,Small Capacity Exhaust,On/off
+SITE_1140,MECH_49534,Small Capacity Exhaust,On/off
+SITE_1141,MECH_149139,Small Capacity Exhaust,On/off
+SITE_1144,MECH_75511,Small Capacity Exhaust,On/off
+SITE_1145,MECH_33495,High Capacity Exhaust,On/off
+SITE_1146,MECH_53467,Small Capacity Exhaust,On/off
+SITE_1148,MECH_72007,Recirculating Only,On/off
+SITE_1149,MECH_71137,Recirculating Only,On/off
+SITE_1150,MECH_87550,High Capacity Exhaust,On/off
+SITE_1151,MECH_5186,High Capacity Exhaust,On/off
+SITE_1152,MECH_143740,Recirculating Only,On/off
+SITE_1154,MECH_75902,Recirculating Only,On/off
+SITE_1155,MECH_165341,Small Capacity Exhaust,On/off
+SITE_1156,MECH_141689,Recirculating Only,On/off
+SITE_1157,MECH_43232,Recirculating Only,On/off
+SITE_1160,MECH_7704,Small Capacity Exhaust,On/off
+SITE_1161,MECH_33670,High Capacity Exhaust,On/off
+SITE_1161,MECH_76772,Small Capacity Exhaust,On/off
+SITE_1162,MECH_154599,Recirculating Only,Manual thermostat - Digital
+SITE_1163,MECH_153676,High Capacity Exhaust,On/off
+SITE_1165,MECH_105981,Recirculating Only,On/off
+SITE_1166,MECH_18712,High Capacity Exhaust,On/off
+SITE_1169,MECH_95433,Recirculating Only,On/off
+SITE_1170,MECH_56252,Recirculating Only,On/off
+SITE_1171,MECH_84139,Recirculating Only,On/off
+SITE_1172,MECH_106579,High Capacity Exhaust,Manual thermostat - Analog
+SITE_1175,MECH_139453,High Capacity Exhaust,On/off
+SITE_1178,MECH_23813,Small Capacity Exhaust,On/off
+SITE_1179,MECH_80646,High Capacity Exhaust,On/off
+SITE_118,MECH_40455,High Capacity Exhaust,On/off
+SITE_1180,MECH_54051,Small Capacity Exhaust,On/off
+SITE_1181,MECH_142002,High Capacity Exhaust,On/off
+SITE_1182,MECH_106383,Small Capacity Exhaust,On/off
+SITE_1183,MECH_169392,Unknown,On/off
+SITE_1184,MECH_138031,Recirculating Only,On/off
+SITE_1185,MECH_69265,High Capacity Exhaust,On/off
+SITE_1186,MECH_156525,Recirculating Only,On/off
+SITE_1187,MECH_153159,Recirculating Only,On/off
+SITE_1188,MECH_63081,Small Capacity Exhaust,On/off
+SITE_119,MECH_50564,Small Capacity Exhaust,On/off
+SITE_1190,MECH_18186,Small Capacity Exhaust,On/off
+SITE_1191,MECH_160131,Recirculating Only,Manual thermostat - Analog
+SITE_1192,MECH_102194,Recirculating Only,On/off
+SITE_1193,MECH_509,Small Capacity Exhaust,On/off
+SITE_1194,MECH_19454,Small Capacity Exhaust,On/off
+SITE_1195,MECH_18295,Recirculating Only,On/off
+SITE_1196,MECH_78990,Recirculating Only,Manual thermostat - Analog
+SITE_1197,MECH_17428,Recirculating Only,Manual thermostat - Analog
+SITE_1198,MECH_93886,Recirculating Only,Manual thermostat - Digital
+SITE_1199,MECH_86887,Recirculating Only,On/off
+SITE_12,MECH_11547,Unknown,On/off
+SITE_1200,MECH_154818,Small Capacity Exhaust,On/off
+SITE_1201,MECH_140359,High Capacity Exhaust,On/off
+SITE_1202,MECH_142920,Recirculating Only,On/off
+SITE_1203,MECH_167163,High Capacity Exhaust,On/off
+SITE_1205,MECH_19009,High Capacity Exhaust,On/off
+SITE_1206,MECH_166410,Small Capacity Exhaust,On/off
+SITE_1207,MECH_22410,High Capacity Exhaust,On/off
+SITE_1208,MECH_59147,Recirculating Only,On/off
+SITE_1209,MECH_16082,Recirculating Only,On/off
+SITE_121,MECH_4890,Small Capacity Exhaust,On/off
+SITE_1210,MECH_106236,High Capacity Exhaust,On/off
+SITE_1211,MECH_38414,Small Capacity Exhaust,On/off
+SITE_1212,MECH_76441,High Capacity Exhaust,On/off
+SITE_1213,MECH_28060,Recirculating Only,On/off
+SITE_1216,MECH_2158,High Capacity Exhaust,On/off
+SITE_1217,MECH_23435,High Capacity Exhaust,On/off
+SITE_1218,MECH_151513,High Capacity Exhaust,On/off
+SITE_1219,MECH_154784,Recirculating Only,On/off
+SITE_122,MECH_32715,Unknown,On/off
+SITE_1220,MECH_81812,Small Capacity Exhaust,On/off
+SITE_1221,MECH_122253,Recirculating Only,On/off
+SITE_1222,MECH_116215,High Capacity Exhaust,On/off
+SITE_1224,MECH_14741,Recirculating Only,On/off
+SITE_1224,MECH_90155,Small Capacity Exhaust,On/off
+SITE_1227,MECH_164166,Unknown,On/off
+SITE_1228,MECH_153013,Recirculating Only,On/off
+SITE_1229,MECH_166325,Recirculating Only,On/off
+SITE_1230,MECH_23013,Unknown,On/off
+SITE_1234,MECH_113501,Recirculating Only,On/off
+SITE_1235,MECH_119952,High Capacity Exhaust,On/off
+SITE_1237,MECH_173935,Recirculating Only,On/off
+SITE_1238,MECH_37349,Recirculating Only,On/off
+SITE_1239,MECH_19889,Recirculating Only,On/off
+SITE_124,MECH_15059,Recirculating Only,On/off
+SITE_1240,MECH_46421,Recirculating Only,On/off
+SITE_1241,MECH_111224,Small Capacity Exhaust,On/off
+SITE_1242,MECH_71413,High Capacity Exhaust,On/off
+SITE_1243,MECH_62056,Small Capacity Exhaust,On/off
+SITE_1244,MECH_125544,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1245,MECH_49179,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1246,MECH_74319,Recirculating Only,Manual thermostat - Analog
+SITE_1248,MECH_153943,Recirculating Only,Manual thermostat - Digital
+SITE_1249,MECH_163706,High Capacity Exhaust,On/off
+SITE_1250,MECH_170321,Recirculating Only,On/off
+SITE_1251,MECH_106635,High Capacity Exhaust,On/off
+SITE_1252,MECH_122927,Recirculating Only,On/off
+SITE_1253,MECH_70637,High Capacity Exhaust,On/off
+SITE_1254,MECH_149458,Small Capacity Exhaust,On/off
+SITE_1255,MECH_130084,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1256,MECH_54106,Recirculating Only,On/off
+SITE_1257,MECH_135391,Recirculating Only,On/off
+SITE_1258,MECH_137898,Recirculating Only,On/off
+SITE_1259,MECH_76045,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_1260,MECH_6474,Recirculating Only,On/off
+SITE_1261,MECH_168140,Small Capacity Exhaust,On/off
+SITE_1262,MECH_129983,Recirculating Only,Unknown
+SITE_1263,MECH_100897,Recirculating Only,Manual thermostat - Analog
+SITE_1264,MECH_5898,High Capacity Exhaust,On/off
+SITE_1265,MECH_75784,Small Capacity Exhaust,On/off
+SITE_1266,MECH_38967,Recirculating Only,On/off
+SITE_1267,MECH_22525,Small Capacity Exhaust,On/off
+SITE_1267,MECH_82588,Small Capacity Exhaust,Unknown
+SITE_1268,MECH_144720,Small Capacity Exhaust,On/off
+SITE_1270,MECH_83317,Small Capacity Exhaust,On/off
+SITE_1271,MECH_9070,Recirculating Only,On/off
+SITE_1272,MECH_111735,Recirculating Only,On/off
+SITE_1273,MECH_100691,Recirculating Only,On/off
+SITE_1274,MECH_160613,Recirculating Only,On/off
+SITE_1275,MECH_144654,Small Capacity Exhaust,On/off
+SITE_1276,MECH_448,Small Capacity Exhaust,On/off
+SITE_1278,MECH_41602,Small Capacity Exhaust,On/off
+SITE_1279,MECH_75969,High Capacity Exhaust,On/off
+SITE_1280,MECH_15684,Recirculating Only,On/off
+SITE_1281,MECH_142480,Small Capacity Exhaust,On/off
+SITE_1283,MECH_132120,Small Capacity Exhaust,On/off
+SITE_1284,MECH_70285,High Capacity Exhaust,On/off
+SITE_1287,MECH_104004,Small Capacity Exhaust,On/off
+SITE_1288,MECH_127292,Small Capacity Exhaust,On/off
+SITE_1289,MECH_68468,Recirculating Only,On/off
+SITE_129,MECH_106994,Small Capacity Exhaust,On/off
+SITE_1290,MECH_158899,Small Capacity Exhaust,On/off
+SITE_1291,MECH_96136,Unknown,On/off
+SITE_1292,MECH_7600,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1293,MECH_147498,Small Capacity Exhaust,On/off
+SITE_1295,MECH_129075,High Capacity Exhaust,On/off
+SITE_1295,MECH_74132,Small Capacity Exhaust,On/off
+SITE_1297,MECH_132261,Small Capacity Exhaust,On/off
+SITE_1298,MECH_25988,Small Capacity Exhaust,On/off
+SITE_1299,MECH_19097,Small Capacity Exhaust,On/off
+SITE_1300,MECH_5708,Small Capacity Exhaust,On/off
+SITE_1301,MECH_105503,Small Capacity Exhaust,On/off
+SITE_1302,MECH_26172,Recirculating Only,On/off
+SITE_1304,MECH_60002,Recirculating Only,Manual thermostat - Digital
+SITE_1306,MECH_72396,Small Capacity Exhaust,On/off
+SITE_1307,MECH_157287,Small Capacity Exhaust,On/off
+SITE_1309,MECH_82186,Small Capacity Exhaust,On/off
+SITE_131,MECH_47933,Small Capacity Exhaust,On/off
+SITE_1310,MECH_16458,High Capacity Exhaust,On/off
+SITE_1312,MECH_114788,High Capacity Exhaust,On/off
+SITE_1313,MECH_27435,Recirculating Only,On/off
+SITE_1314,MECH_77200,Small Capacity Exhaust,On/off
+SITE_1315,MECH_57568,Small Capacity Exhaust,On/off
+SITE_1316,MECH_67829,Recirculating Only,Manual thermostat - Analog
+SITE_132,MECH_171864,Small Capacity Exhaust,On/off
+SITE_1320,MECH_95374,Recirculating Only,On/off
+SITE_1321,MECH_38500,Small Capacity Exhaust,On/off
+SITE_1322,MECH_153557,Recirculating Only,On/off
+SITE_1326,MECH_5330,Recirculating Only,On/off
+SITE_1327,MECH_5371,Small Capacity Exhaust,On/off
+SITE_1328,MECH_154613,Recirculating Only,On/off
+SITE_1329,MECH_104838,Unknown,On/off
+SITE_133,MECH_148547,Small Capacity Exhaust,On/off
+SITE_1330,MECH_159024,Unknown,On/off
+SITE_1331,MECH_19180,Unknown,On/off
+SITE_1332,MECH_38948,Small Capacity Exhaust,On/off
+SITE_1332,MECH_86183,Small Capacity Exhaust,On/off
+SITE_1333,MECH_145325,Small Capacity Exhaust,On/off
+SITE_1334,MECH_105939,Small Capacity Exhaust,On/off
+SITE_1335,MECH_127754,Small Capacity Exhaust,On/off
+SITE_1336,MECH_155931,High Capacity Exhaust,On/off
+SITE_1338,MECH_26884,Small Capacity Exhaust,On/off
+SITE_1339,MECH_99384,High Capacity Exhaust,On/off
+SITE_134,MECH_173227,Small Capacity Exhaust,On/off
+SITE_1340,MECH_41966,Small Capacity Exhaust,On/off
+SITE_1341,MECH_84663,Recirculating Only,On/off
+SITE_1342,MECH_157291,Unknown,On/off
+SITE_1343,MECH_141035,Recirculating Only,On/off
+SITE_1344,MECH_54871,Small Capacity Exhaust,On/off
+SITE_1345,MECH_71489,Small Capacity Exhaust,On/off
+SITE_1346,MECH_91223,Recirculating Only,On/off
+SITE_1347,MECH_11707,Recirculating Only,On/off
+SITE_1347,MECH_11707,Unknown,On/off
+SITE_1348,MECH_170821,Small Capacity Exhaust,On/off
+SITE_1349,MECH_51216,High Capacity Exhaust,On/off
+SITE_135,MECH_151870,Small Capacity Exhaust,On/off
+SITE_135,MECH_66856,Small Capacity Exhaust,On/off
+SITE_1350,MECH_67662,Small Capacity Exhaust,On/off
+SITE_1351,MECH_23095,Small Capacity Exhaust,On/off
+SITE_1352,MECH_100882,Small Capacity Exhaust,On/off
+SITE_1353,MECH_91838,Small Capacity Exhaust,On/off
+SITE_1354,MECH_56304,High Capacity Exhaust,On/off
+SITE_1355,MECH_17875,Recirculating Only,On/off
+SITE_1356,MECH_161662,Recirculating Only,On/off
+SITE_1357,MECH_91540,Small Capacity Exhaust,On/off
+SITE_1358,MECH_154125,Recirculating Only,On/off
+SITE_1360,MECH_22846,Small Capacity Exhaust,On/off
+SITE_1361,MECH_112492,Recirculating Only,On/off
+SITE_1365,MECH_74259,Recirculating Only,On/off
+SITE_1366,MECH_85163,Small Capacity Exhaust,On/off
+SITE_1368,MECH_54367,Recirculating Only,Manual thermostat - Analog
+SITE_1369,MECH_55576,Recirculating Only,On/off
+SITE_1370,MECH_153736,Small Capacity Exhaust,On/off
+SITE_1371,MECH_41747,Small Capacity Exhaust,On/off
+SITE_1372,MECH_69106,Recirculating Only,Manual thermostat - Digital
+SITE_1373,MECH_66500,High Capacity Exhaust,On/off
+SITE_1374,MECH_89746,Recirculating Only,Manual thermostat - Digital
+SITE_1375,MECH_41726,Recirculating Only,On/off
+SITE_1376,MECH_128684,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_1377,MECH_47245,Recirculating Only,On/off
+SITE_1379,MECH_91158,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_138,MECH_121198,Small Capacity Exhaust,On/off
+SITE_1380,MECH_67408,Recirculating Only,On/off
+SITE_1381,MECH_50936,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1382,MECH_112165,Recirculating Only,On/off
+SITE_1383,MECH_121637,Small Capacity Exhaust,On/off
+SITE_1384,MECH_28781,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1385,MECH_75080,Small Capacity Exhaust,On/off
+SITE_1386,MECH_75755,Recirculating Only,On/off
+SITE_1387,MECH_148205,Small Capacity Exhaust,On/off
+SITE_1388,MECH_35150,Recirculating Only,On/off
+SITE_1389,MECH_86604,Recirculating Only,On/off
+SITE_139,MECH_66666,Small Capacity Exhaust,On/off
+SITE_1390,MECH_6659,Small Capacity Exhaust,On/off
+SITE_1392,MECH_23718,High Capacity Exhaust,On/off
+SITE_1394,MECH_73456,Recirculating Only,On/off
+SITE_1396,MECH_160046,High Capacity Exhaust,On/off
+SITE_1396,MECH_129714,Small Capacity Exhaust,On/off
+SITE_1397,MECH_164407,Small Capacity Exhaust,On/off
+SITE_1398,MECH_23534,Recirculating Only,On/off
+SITE_1400,MECH_4418,Small Capacity Exhaust,On/off
+SITE_1401,MECH_105901,Recirculating Only,On/off
+SITE_1402,MECH_100269,High Capacity Exhaust,On/off
+SITE_1403,MECH_154714,Small Capacity Exhaust,On/off
+SITE_1404,MECH_19319,Recirculating Only,Manual thermostat - Digital
+SITE_1405,MECH_110269,Small Capacity Exhaust,On/off
+SITE_1406,MECH_53138,Small Capacity Exhaust,On/off
+SITE_1409,MECH_95044,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_141,MECH_15831,Unknown,On/off
+SITE_1410,MECH_139225,Recirculating Only,Manual thermostat - Digital
+SITE_1411,MECH_114958,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_1413,MECH_88924,High Capacity Exhaust,On/off
+SITE_1414,MECH_25902,Small Capacity Exhaust,On/off
+SITE_1418,MECH_34764,Small Capacity Exhaust,On/off
+SITE_142,MECH_35543,High Capacity Exhaust,Timer
+SITE_1420,MECH_138213,Small Capacity Exhaust,On/off
+SITE_1421,MECH_157162,Recirculating Only,On/off
+SITE_1422,MECH_59,Small Capacity Exhaust,On/off
+SITE_1423,MECH_35453,Small Capacity Exhaust,On/off
+SITE_1424,MECH_40060,High Capacity Exhaust,On/off
+SITE_1425,MECH_37662,Recirculating Only,Manual thermostat - Digital
+SITE_1426,MECH_128326,Small Capacity Exhaust,On/off
+SITE_1427,MECH_147482,Recirculating Only,On/off
+SITE_1428,MECH_116972,Small Capacity Exhaust,On/off
+SITE_1429,MECH_26818,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_143,MECH_82059,High Capacity Exhaust,Timer
+SITE_1430,MECH_39240,Small Capacity Exhaust,On/off
+SITE_1432,MECH_163567,High Capacity Exhaust,On/off
+SITE_1433,MECH_53598,Recirculating Only,On/off
+SITE_1435,MECH_77436,High Capacity Exhaust,On/off
+SITE_1436,MECH_163592,Small Capacity Exhaust,On/off
+SITE_1437,MECH_151804,Small Capacity Exhaust,On/off
+SITE_1437,MECH_103380,Small Capacity Exhaust,On/off
+SITE_1438,MECH_42849,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_1439,MECH_27950,Small Capacity Exhaust,On/off
+SITE_144,MECH_96775,Recirculating Only,On/off
+SITE_1440,MECH_132780,Recirculating Only,On/off
+SITE_1440,MECH_14106,Recirculating Only,On/off
+SITE_1441,MECH_53417,High Capacity Exhaust,On/off
+SITE_1442,MECH_157231,Recirculating Only,On/off
+SITE_1443,MECH_93089,High Capacity Exhaust,On/off
+SITE_1445,MECH_160222,Recirculating Only,On/off
+SITE_1447,MECH_131227,Recirculating Only,On/off
+SITE_1448,MECH_43814,Small Capacity Exhaust,On/off
+SITE_1449,MECH_125563,Small Capacity Exhaust,On/off
+SITE_145,MECH_5805,Small Capacity Exhaust,On/off
+SITE_1451,MECH_101603,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1452,MECH_12266,Small Capacity Exhaust,Timer
+SITE_1453,MECH_33387,Small Capacity Exhaust,On/off
+SITE_1454,MECH_144537,Recirculating Only,On/off
+SITE_1455,MECH_77943,Small Capacity Exhaust,On/off
+SITE_1456,MECH_46776,Recirculating Only,On/off
+SITE_1458,MECH_152707,Recirculating Only,On/off
+SITE_1459,MECH_3106,Recirculating Only,On/off
+SITE_1461,MECH_91335,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_1462,MECH_23448,Small Capacity Exhaust,On/off
+SITE_1463,MECH_163103,Small Capacity Exhaust,On/off
+SITE_1464,MECH_7858,Recirculating Only,Manual thermostat - Analog
+SITE_1465,MECH_134173,Small Capacity Exhaust,On/off
+SITE_1466,MECH_166114,Small Capacity Exhaust,On/off
+SITE_1469,MECH_1433,High Capacity Exhaust,On/off
+SITE_1471,MECH_6101,Recirculating Only,On/off
+SITE_1471,MECH_134174,Recirculating Only,Unknown
+SITE_1472,MECH_4735,High Capacity Exhaust,On/off
+SITE_1473,MECH_148868,Small Capacity Exhaust,On/off
+SITE_1474,MECH_118226,Recirculating Only,On/off
+SITE_1475,MECH_113950,Recirculating Only,On/off
+SITE_1476,MECH_116001,Small Capacity Exhaust,On/off
+SITE_1478,MECH_24556,Small Capacity Exhaust,On/off
+SITE_1479,MECH_161197,Small Capacity Exhaust,On/off
+SITE_148,MECH_169141,High Capacity Exhaust,On/off
+SITE_1480,MECH_148048,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1481,MECH_147479,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_1482,MECH_13311,Small Capacity Exhaust,On/off
+SITE_1483,MECH_84111,Recirculating Only,On/off
+SITE_1483,MECH_49703,Small Capacity Exhaust,On/off
+SITE_1484,MECH_12320,Small Capacity Exhaust,On/off
+SITE_1485,MECH_63921,Recirculating Only,On/off
+SITE_1486,MECH_109196,Recirculating Only,On/off
+SITE_1487,MECH_35792,High Capacity Exhaust,On/off
+SITE_1488,MECH_28164,Recirculating Only,On/off
+SITE_149,MECH_68680,Small Capacity Exhaust,On/off
+SITE_1490,MECH_1898,Recirculating Only,On/off
+SITE_1491,MECH_33165,Recirculating Only,On/off
+SITE_1492,MECH_131672,High Capacity Exhaust,On/off
+SITE_1493,MECH_28327,Recirculating Only,On/off
+SITE_1494,MECH_62932,Recirculating Only,On/off
+SITE_1495,MECH_151728,Small Capacity Exhaust,On/off
+SITE_1497,MECH_98522,Recirculating Only,Manual thermostat - Analog
+SITE_1499,MECH_112311,Recirculating Only,On/off
+SITE_15,MECH_80238,Small Capacity Exhaust,On/off
+SITE_1502,MECH_167821,Recirculating Only,On/off
+SITE_1503,MECH_351,High Capacity Exhaust,On/off
+SITE_1504,MECH_135571,Small Capacity Exhaust,On/off
+SITE_1505,MECH_17740,High Capacity Exhaust,On/off
+SITE_1506,MECH_30743,Recirculating Only,On/off
+SITE_1507,MECH_93343,Small Capacity Exhaust,On/off
+SITE_1509,MECH_58143,Small Capacity Exhaust,On/off
+SITE_151,MECH_144023,Small Capacity Exhaust,On/off
+SITE_1510,MECH_60249,Recirculating Only,On/off
+SITE_1511,MECH_74393,Recirculating Only,On/off
+SITE_1514,MECH_165539,Recirculating Only,On/off
+SITE_1515,MECH_137246,Small Capacity Exhaust,On/off
+SITE_1516,MECH_28365,High Capacity Exhaust,On/off
+SITE_1518,MECH_44397,Recirculating Only,On/off
+SITE_1519,MECH_102229,High Capacity Exhaust,On/off
+SITE_152,MECH_88808,Small Capacity Exhaust,On/off
+SITE_1520,MECH_45925,High Capacity Exhaust,On/off
+SITE_1521,MECH_132468,Recirculating Only,On/off
+SITE_1522,MECH_53108,Recirculating Only,On/off
+SITE_1525,MECH_59841,Small Capacity Exhaust,On/off
+SITE_1526,MECH_50417,Small Capacity Exhaust,On/off
+SITE_1527,MECH_1714,Recirculating Only,On/off
+SITE_1529,MECH_18183,High Capacity Exhaust,On/off
+SITE_153,MECH_84051,High Capacity Exhaust,On/off
+SITE_1530,MECH_96795,Small Capacity Exhaust,On/off
+SITE_1531,MECH_45944,Recirculating Only,On/off
+SITE_1532,MECH_54985,Small Capacity Exhaust,On/off
+SITE_1533,MECH_112052,Recirculating Only,On/off
+SITE_1534,MECH_93058,Recirculating Only,On/off
+SITE_1535,MECH_24065,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1536,MECH_94843,Recirculating Only,On/off
+SITE_1538,MECH_174144,Recirculating Only,On/off
+SITE_1539,MECH_85103,Small Capacity Exhaust,On/off
+SITE_1540,MECH_64837,Recirculating Only,On/off
+SITE_1541,MECH_109534,Small Capacity Exhaust,On/off
+SITE_1542,MECH_142440,Recirculating Only,On/off
+SITE_1543,MECH_69715,Small Capacity Exhaust,On/off
+SITE_1544,MECH_49809,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_1545,MECH_170550,Small Capacity Exhaust,On/off
+SITE_1547,MECH_150387,Recirculating Only,Manual thermostat - Digital
+SITE_1548,MECH_45274,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_155,MECH_15397,Small Capacity Exhaust,On/off
+SITE_1551,MECH_22631,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1553,MECH_123705,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_1555,MECH_94391,Recirculating Only,On/off
+SITE_1557,MECH_62382,Small Capacity Exhaust,On/off
+SITE_1558,MECH_171476,Small Capacity Exhaust,On/off
+SITE_1559,MECH_74882,Recirculating Only,On/off
+SITE_156,MECH_143574,Small Capacity Exhaust,On/off
+SITE_1560,MECH_102905,High Capacity Exhaust,On/off
+SITE_1562,MECH_46296,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1563,MECH_135468,Recirculating Only,On/off
+SITE_1564,MECH_157994,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_1566,MECH_117116,Small Capacity Exhaust,On/off
+SITE_1567,MECH_14750,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1568,MECH_57500,Recirculating Only,Manual thermostat - Analog
+SITE_1571,MECH_92866,High Capacity Exhaust,On/off
+SITE_1572,MECH_42846,Small Capacity Exhaust,Unknown
+SITE_1577,MECH_17346,Recirculating Only,On/off
+SITE_1579,MECH_80096,Unknown,On/off
+SITE_1580,MECH_59213,Small Capacity Exhaust,On/off
+SITE_1581,MECH_152670,Recirculating Only,On/off
+SITE_1582,MECH_98881,Small Capacity Exhaust,On/off
+SITE_1583,MECH_131480,Recirculating Only,On/off
+SITE_1584,MECH_146300,Recirculating Only,On/off
+SITE_1586,MECH_106572,Small Capacity Exhaust,On/off
+SITE_1587,MECH_116804,Small Capacity Exhaust,On/off
+SITE_1588,MECH_84333,Recirculating Only,On/off
+SITE_1589,MECH_12918,Recirculating Only,On/off
+SITE_159,MECH_15398,Unknown,On/off
+SITE_1590,MECH_118303,Recirculating Only,On/off
+SITE_1592,MECH_49138,Small Capacity Exhaust,On/off
+SITE_1595,MECH_84327,Recirculating Only,On/off
+SITE_1596,MECH_4947,Recirculating Only,On/off
+SITE_1597,MECH_136511,Small Capacity Exhaust,On/off
+SITE_1598,MECH_27285,Unknown,On/off
+SITE_1599,MECH_173320,High Capacity Exhaust,On/off
+SITE_16,MECH_110365,Small Capacity Exhaust,On/off
+SITE_160,MECH_21801,High Capacity Exhaust,On/off
+SITE_1600,MECH_119009,High Capacity Exhaust,On/off
+SITE_1602,MECH_17071,Recirculating Only,On/off
+SITE_1604,MECH_58802,Recirculating Only,On/off
+SITE_1605,MECH_148314,High Capacity Exhaust,On/off
+SITE_1605,MECH_148314,Unknown,On/off
+SITE_1606,MECH_167877,Recirculating Only,On/off
+SITE_1607,MECH_99337,Small Capacity Exhaust,On/off
+SITE_1608,MECH_131325,Small Capacity Exhaust,On/off
+SITE_161,MECH_164114,Recirculating Only,On/off
+SITE_1611,MECH_81449,Small Capacity Exhaust,On/off
+SITE_1612,MECH_438,Small Capacity Exhaust,On/off
+SITE_1613,MECH_48146,Unknown,On/off
+SITE_1613,MECH_77293,High Capacity Exhaust,On/off
+SITE_1614,MECH_44034,Unknown,On/off
+SITE_1615,MECH_135015,Small Capacity Exhaust,On/off
+SITE_1618,MECH_105074,High Capacity Exhaust,On/off
+SITE_162,MECH_125694,Small Capacity Exhaust,On/off
+SITE_1620,MECH_166455,Recirculating Only,On/off
+SITE_1621,MECH_152614,High Capacity Exhaust,On/off
+SITE_1622,MECH_164408,Small Capacity Exhaust,On/off
+SITE_1623,MECH_11057,Recirculating Only,On/off
+SITE_1624,MECH_62896,Small Capacity Exhaust,On/off
+SITE_1625,MECH_88898,High Capacity Exhaust,On/off
+SITE_1627,MECH_21096,High Capacity Exhaust,On/off
+SITE_1628,MECH_30024,Small Capacity Exhaust,On/off
+SITE_1629,MECH_32931,Small Capacity Exhaust,On/off
+SITE_163,MECH_89864,Small Capacity Exhaust,On/off
+SITE_1630,MECH_65092,Recirculating Only,On/off
+SITE_1631,MECH_122866,High Capacity Exhaust,On/off
+SITE_1632,MECH_29150,Recirculating Only,On/off
+SITE_1633,MECH_45931,High Capacity Exhaust,On/off
+SITE_1635,MECH_173243,Recirculating Only,On/off
+SITE_1636,MECH_79589,Recirculating Only,On/off
+SITE_1637,MECH_61544,Recirculating Only,On/off
+SITE_1637,MECH_124540,Small Capacity Exhaust,On/off
+SITE_1639,MECH_72309,Small Capacity Exhaust,On/off
+SITE_164,MECH_66224,Small Capacity Exhaust,On/off
+SITE_1640,MECH_167611,Recirculating Only,On/off
+SITE_1641,MECH_2629,Small Capacity Exhaust,On/off
+SITE_1642,MECH_87772,Recirculating Only,On/off
+SITE_1643,MECH_44389,Small Capacity Exhaust,On/off
+SITE_1644,MECH_155256,Recirculating Only,On/off
+SITE_1645,MECH_152082,Recirculating Only,On/off
+SITE_1646,MECH_27142,Recirculating Only,On/off
+SITE_1647,MECH_87635,High Capacity Exhaust,On/off
+SITE_165,MECH_55115,Small Capacity Exhaust,On/off
+SITE_166,MECH_120914,Small Capacity Exhaust,On/off
+SITE_167,MECH_11993,High Capacity Exhaust,On/off
+SITE_168,MECH_151862,High Capacity Exhaust,On/off
+SITE_169,MECH_57294,Small Capacity Exhaust,On/off
+SITE_17,MECH_28263,Small Capacity Exhaust,On/off
+SITE_170,MECH_73801,Small Capacity Exhaust,On/off
+SITE_171,MECH_57023,Small Capacity Exhaust,On/off
+SITE_173,MECH_136806,Recirculating Only,On/off
+SITE_1731,MECH_174954,Small Capacity Exhaust,On/off
+SITE_1733,MECH_134512,Small Capacity Exhaust,On/off
+SITE_1734,MECH_173518,Unknown,On/off
+SITE_1735,MECH_23002,Small Capacity Exhaust,On/off
+SITE_1736,MECH_1918,Small Capacity Exhaust,On/off
+SITE_1739,MECH_86737,Small Capacity Exhaust,On/off
+SITE_174,MECH_52988,High Capacity Exhaust,On/off
+SITE_1740,MECH_80853,Unknown,On/off
+SITE_1741,MECH_171356,High Capacity Exhaust,On/off
+SITE_1742,MECH_86116,High Capacity Exhaust,On/off
+SITE_1743,MECH_41296,High Capacity Exhaust,On/off
+SITE_1745,MECH_14215,Small Capacity Exhaust,On/off
+SITE_1747,MECH_155873,Small Capacity Exhaust,On/off
+SITE_1750,MECH_113753,Recirculating Only,On/off
+SITE_1754,MECH_46746,Small Capacity Exhaust,On/off
+SITE_1755,MECH_100825,High Capacity Exhaust,On/off
+SITE_1757,MECH_105528,Small Capacity Exhaust,On/off
+SITE_1759,MECH_44407,High Capacity Exhaust,On/off
+SITE_176,MECH_119432,Small Capacity Exhaust,On/off
+SITE_1760,MECH_88793,High Capacity Exhaust,On/off
+SITE_1762,MECH_96159,Recirculating Only,On/off
+SITE_1763,MECH_120197,Small Capacity Exhaust,On/off
+SITE_1764,MECH_83086,Recirculating Only,On/off
+SITE_1765,MECH_121261,High Capacity Exhaust,On/off
+SITE_1766,MECH_23345,Small Capacity Exhaust,On/off
+SITE_1768,MECH_148969,Small Capacity Exhaust,On/off
+SITE_1769,MECH_22105,Recirculating Only,On/off
+SITE_177,MECH_86119,Small Capacity Exhaust,On/off
+SITE_1772,MECH_78947,Small Capacity Exhaust,On/off
+SITE_1774,MECH_147621,Small Capacity Exhaust,On/off
+SITE_1776,MECH_174535,Small Capacity Exhaust,On/off
+SITE_1779,MECH_112083,Small Capacity Exhaust,On/off
+SITE_178,MECH_153346,Small Capacity Exhaust,Timer
+SITE_1780,MECH_166493,Recirculating Only,On/off
+SITE_1782,MECH_38326,Small Capacity Exhaust,On/off
+SITE_1784,MECH_122868,Small Capacity Exhaust,On/off
+SITE_1786,MECH_145120,Small Capacity Exhaust,On/off
+SITE_1787,MECH_93676,Recirculating Only,On/off
+SITE_1789,MECH_144697,Small Capacity Exhaust,On/off
+SITE_1791,MECH_155521,Small Capacity Exhaust,On/off
+SITE_1792,MECH_82074,Small Capacity Exhaust,On/off
+SITE_1793,MECH_106846,Recirculating Only,On/off
+SITE_1794,MECH_39473,Small Capacity Exhaust,On/off
+SITE_1795,MECH_34842,Small Capacity Exhaust,On/off
+SITE_1798,MECH_158096,Unknown,On/off
+SITE_180,MECH_163159,Small Capacity Exhaust,On/off
+SITE_1800,MECH_24023,Small Capacity Exhaust,On/off
+SITE_1802,MECH_121943,Recirculating Only,On/off
+SITE_1804,MECH_77890,Recirculating Only,On/off
+SITE_1805,MECH_29410,High Capacity Exhaust,Programmable thermostat
+SITE_1807,MECH_140406,Recirculating Only,Manual thermostat - Digital
+SITE_1809,MECH_127566,Small Capacity Exhaust,On/off
+SITE_181,MECH_168967,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1812,MECH_148013,Small Capacity Exhaust,On/off
+SITE_1813,MECH_55722,Small Capacity Exhaust,Timer
+SITE_1814,MECH_123910,Small Capacity Exhaust,On/off
+SITE_1815,MECH_42668,Recirculating Only,On/off
+SITE_1816,MECH_27468,Recirculating Only,On/off
+SITE_1817,MECH_103734,Small Capacity Exhaust,On/off
+SITE_1818,MECH_154646,Recirculating Only,On/off
+SITE_1819,MECH_158535,Small Capacity Exhaust,On/off
+SITE_182,MECH_31527,Small Capacity Exhaust,On/off
+SITE_1820,MECH_38843,Small Capacity Exhaust,On/off
+SITE_1822,MECH_42728,High Capacity Exhaust,On/off
+SITE_1825,MECH_122821,Recirculating Only,On/off
+SITE_1826,MECH_89709,Recirculating Only,On/off
+SITE_1827,MECH_121860,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1828,MECH_171026,Small Capacity Exhaust,On/off
+SITE_1829,MECH_65779,Small Capacity Exhaust,On/off
+SITE_1829,MECH_131838,Recirculating Only,On/off
+SITE_1831,MECH_115687,Small Capacity Exhaust,On/off
+SITE_1833,MECH_17884,High Capacity Exhaust,On/off
+SITE_1834,MECH_66834,High Capacity Exhaust,Manual thermostat - Analog
+SITE_1836,MECH_43398,Small Capacity Exhaust,On/off
+SITE_1839,MECH_51103,Small Capacity Exhaust,On/off
+SITE_1840,MECH_62784,High Capacity Exhaust,On/off
+SITE_1842,MECH_104835,Small Capacity Exhaust,On/off
+SITE_1844,MECH_172640,Recirculating Only,Manual thermostat - Digital
+SITE_1845,MECH_17171,Recirculating Only,On/off
+SITE_1846,MECH_45520,Recirculating Only,On/off
+SITE_1847,MECH_170195,Recirculating Only,On/off
+SITE_1848,MECH_134171,Recirculating Only,On/off
+SITE_185,MECH_107458,Recirculating Only,On/off
+SITE_1851,MECH_75665,Recirculating Only,Unknown
+SITE_1852,MECH_86295,Small Capacity Exhaust,On/off
+SITE_1853,MECH_40608,Recirculating Only,On/off
+SITE_186,MECH_3614,High Capacity Exhaust,On/off
+SITE_1863,MECH_57153,Small Capacity Exhaust,On/off
+SITE_1864,MECH_132425,Recirculating Only,On/off
+SITE_1867,MECH_26615,Recirculating Only,On/off
+SITE_1868,MECH_102333,Small Capacity Exhaust,On/off
+SITE_1869,MECH_79902,Small Capacity Exhaust,On/off
+SITE_187,MECH_174229,Unknown,On/off
+SITE_1872,MECH_673,Small Capacity Exhaust,On/off
+SITE_1873,MECH_111787,Recirculating Only,Manual thermostat - Analog
+SITE_1874,MECH_155531,Recirculating Only,On/off
+SITE_1876,MECH_34204,Small Capacity Exhaust,Timer
+SITE_1878,MECH_153642,Small Capacity Exhaust,On/off
+SITE_188,MECH_154485,High Capacity Exhaust,On/off
+SITE_188,MECH_119387,Recirculating Only,On/off
+SITE_1888,MECH_8416,Small Capacity Exhaust,On/off
+SITE_1889,MECH_114424,Small Capacity Exhaust,On/off
+SITE_189,MECH_22078,Small Capacity Exhaust,On/off
+SITE_1891,MECH_52266,Small Capacity Exhaust,On/off
+SITE_1891,MECH_32175,Small Capacity Exhaust,On/off
+SITE_1892,MECH_95785,Recirculating Only,Manual thermostat - Digital
+SITE_1893,MECH_37948,Recirculating Only,Manual thermostat - Digital
+SITE_1894,MECH_96457,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1895,MECH_63537,Recirculating Only,On/off
+SITE_1896,MECH_115296,Recirculating Only,Manual thermostat - Digital
+SITE_19,MECH_126163,Small Capacity Exhaust,On/off
+SITE_190,MECH_94398,Recirculating Only,On/off
+SITE_1901,MECH_62370,Small Capacity Exhaust,On/off
+SITE_1903,MECH_118575,Small Capacity Exhaust,None
+SITE_1904,MECH_82878,Small Capacity Exhaust,On/off
+SITE_1906,MECH_15353,Small Capacity Exhaust,On/off
+SITE_1907,MECH_63224,Recirculating Only,On/off
+SITE_1909,MECH_14522,Recirculating Only,Manual thermostat - Digital
+SITE_1910,MECH_120568,Recirculating Only,On/off
+SITE_1911,MECH_89343,Recirculating Only,On/off
+SITE_1914,MECH_140730,Recirculating Only,On/off
+SITE_1915,MECH_168136,High Capacity Exhaust,Manual thermostat - Analog
+SITE_1916,MECH_145384,Recirculating Only,On/off
+SITE_192,MECH_86058,Small Capacity Exhaust,On/off
+SITE_1920,MECH_159517,Recirculating Only,On/off
+SITE_1921,MECH_108657,Small Capacity Exhaust,On/off
+SITE_1921,MECH_108657,Recirculating Only,On/off
+SITE_1924,MECH_137857,Recirculating Only,On/off
+SITE_1925,MECH_3939,Recirculating Only,On/off
+SITE_1926,MECH_101070,Recirculating Only,On/off
+SITE_1928,MECH_88565,Small Capacity Exhaust,On/off
+SITE_193,MECH_109997,High Capacity Exhaust,On/off
+SITE_1932,MECH_129718,Recirculating Only,On/off
+SITE_1934,MECH_77452,Recirculating Only,Manual thermostat - Digital
+SITE_1935,MECH_152350,Recirculating Only,On/off
+SITE_1936,MECH_125429,Recirculating Only,On/off
+SITE_1937,MECH_87050,Small Capacity Exhaust,On/off
+SITE_1939,MECH_27643,Recirculating Only,On/off
+SITE_194,MECH_85399,Small Capacity Exhaust,On/off
+SITE_1940,MECH_25194,Recirculating Only,Manual thermostat - Analog
+SITE_1942,MECH_24477,High Capacity Exhaust,On/off
+SITE_1944,MECH_89534,Recirculating Only,On/off
+SITE_1946,MECH_171965,Unknown,On/off
+SITE_1947,MECH_41203,Recirculating Only,On/off
+SITE_1948,MECH_70653,Recirculating Only,On/off
+SITE_1950,MECH_40477,Small Capacity Exhaust,On/off
+SITE_1951,MECH_92697,Recirculating Only,On/off
+SITE_1955,MECH_27835,High Capacity Exhaust,On/off
+SITE_1956,MECH_94495,Recirculating Only,On/off
+SITE_1956,MECH_118719,Small Capacity Exhaust,On/off
+SITE_1957,MECH_60524,Unknown,On/off
+SITE_1958,MECH_112284,Small Capacity Exhaust,On/off
+SITE_1958,MECH_112284,High Capacity Exhaust,On/off
+SITE_196,MECH_90812,Small Capacity Exhaust,On/off
+SITE_1967,MECH_11768,Recirculating Only,On/off
+SITE_1968,MECH_17225,Small Capacity Exhaust,On/off
+SITE_1969,MECH_33470,Recirculating Only,Manual thermostat - Analog
+SITE_197,MECH_149069,Recirculating Only,On/off
+SITE_1971,MECH_72989,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1972,MECH_98603,Recirculating Only,On/off
+SITE_1972,MECH_98603,Small Capacity Exhaust,On/off
+SITE_1974,MECH_167776,Recirculating Only,On/off
+SITE_1978,MECH_162788,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_198,MECH_120613,Small Capacity Exhaust,On/off
+SITE_1980,MECH_143848,Recirculating Only,Manual thermostat - Analog
+SITE_1980,MECH_163275,Small Capacity Exhaust,On/off
+SITE_1981,MECH_130026,High Capacity Exhaust,Manual thermostat - Analog
+SITE_1982,MECH_748,Recirculating Only,On/off
+SITE_1983,MECH_151697,Recirculating Only,On/off
+SITE_1984,MECH_106307,Recirculating Only,Manual thermostat - Digital
+SITE_1985,MECH_48035,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1988,MECH_112692,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_1990,MECH_142130,Recirculating Only,Manual thermostat - Digital
+SITE_1991,MECH_80665,Recirculating Only,On/off
+SITE_1994,MECH_16782,Small Capacity Exhaust,On/off
+SITE_1996,MECH_122750,Small Capacity Exhaust,On/off
+SITE_1998,MECH_122566,Recirculating Only,Manual thermostat - Analog
+SITE_1999,MECH_25843,Recirculating Only,On/off
+SITE_2,MECH_19544,Recirculating Only,On/off
+SITE_20,MECH_38579,Small Capacity Exhaust,On/off
+SITE_20,MECH_72174,Small Capacity Exhaust,On/off
+SITE_200,MECH_163822,Small Capacity Exhaust,On/off
+SITE_2007,MECH_167259,Recirculating Only,On/off
+SITE_2008,MECH_114211,Recirculating Only,On/off
+SITE_201,MECH_109890,Small Capacity Exhaust,On/off
+SITE_2010,MECH_54683,Unknown,On/off
+SITE_2011,MECH_76166,High Capacity Exhaust,On/off
+SITE_2013,MECH_57660,High Capacity Exhaust,On/off
+SITE_2015,MECH_96927,Small Capacity Exhaust,On/off
+SITE_2016,MECH_119119,High Capacity Exhaust,On/off
+SITE_2017,MECH_167060,Recirculating Only,On/off
+SITE_202,MECH_84546,Small Capacity Exhaust,On/off
+SITE_2020,MECH_118602,Recirculating Only,On/off
+SITE_2022,MECH_96677,Recirculating Only,On/off
+SITE_2025,MECH_136977,Small Capacity Exhaust,On/off
+SITE_2027,MECH_111694,Recirculating Only,On/off
+SITE_2028,MECH_132253,Small Capacity Exhaust,On/off
+SITE_2029,MECH_49025,Small Capacity Exhaust,On/off
+SITE_203,MECH_18944,Recirculating Only,On/off
+SITE_2030,MECH_83175,Recirculating Only,On/off
+SITE_2031,MECH_121043,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_2033,MECH_126299,Small Capacity Exhaust,On/off
+SITE_2035,MECH_26509,Recirculating Only,On/off
+SITE_2036,MECH_129857,Recirculating Only,On/off
+SITE_2037,MECH_154716,Small Capacity Exhaust,On/off
+SITE_2038,MECH_157034,Recirculating Only,On/off
+SITE_2039,MECH_167653,Small Capacity Exhaust,On/off
+SITE_204,MECH_945,Small Capacity Exhaust,On/off
+SITE_2040,MECH_117429,Small Capacity Exhaust,On/off
+SITE_2041,MECH_118687,Recirculating Only,On/off
+SITE_2043,MECH_172502,Small Capacity Exhaust,On/off
+SITE_2044,MECH_40126,Recirculating Only,On/off
+SITE_205,MECH_123354,Unknown,On/off
+SITE_206,MECH_25392,Small Capacity Exhaust,On/off
+SITE_207,MECH_83894,Small Capacity Exhaust,On/off
+SITE_208,MECH_110361,Small Capacity Exhaust,On/off
+SITE_21,MECH_62741,Recirculating Only,On/off
+SITE_210,MECH_21738,Small Capacity Exhaust,On/off
+SITE_211,MECH_66008,Small Capacity Exhaust,On/off
+SITE_214,MECH_46797,Recirculating Only,On/off
+SITE_215,MECH_164530,Small Capacity Exhaust,On/off
+SITE_216,MECH_48143,Small Capacity Exhaust,On/off
+SITE_217,MECH_172862,Unknown,On/off
+SITE_218,MECH_140927,Unknown,On/off
+SITE_219,MECH_78818,Small Capacity Exhaust,On/off
+SITE_22,MECH_14628,Small Capacity Exhaust,On/off
+SITE_220,MECH_88140,Small Capacity Exhaust,On/off
+SITE_221,MECH_156185,Small Capacity Exhaust,None
+SITE_222,MECH_84436,Small Capacity Exhaust,On/off
+SITE_223,MECH_151983,Recirculating Only,On/off
+SITE_224,MECH_18551,Unknown,On/off
+SITE_225,MECH_83472,High Capacity Exhaust,On/off
+SITE_227,MECH_73724,Small Capacity Exhaust,On/off
+SITE_23,MECH_19036,Small Capacity Exhaust,On/off
+SITE_231,MECH_42583,Small Capacity Exhaust,On/off
+SITE_232,MECH_27618,Small Capacity Exhaust,On/off
+SITE_234,MECH_32668,Unknown,On/off
+SITE_235,MECH_159926,High Capacity Exhaust,Timer
+SITE_236,MECH_71164,Small Capacity Exhaust,On/off
+SITE_237,MECH_164785,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_238,MECH_18441,Small Capacity Exhaust,On/off
+SITE_239,MECH_115929,Small Capacity Exhaust,On/off
+SITE_240,MECH_37678,High Capacity Exhaust,On/off
+SITE_241,MECH_150814,Small Capacity Exhaust,On/off
+SITE_243,MECH_73510,Small Capacity Exhaust,On/off
+SITE_244,MECH_55142,Recirculating Only,Manual thermostat - Digital
+SITE_245,MECH_63658,Unknown,On/off
+SITE_246,MECH_52612,Small Capacity Exhaust,On/off
+SITE_247,MECH_107579,Unknown,On/off
+SITE_248,MECH_79417,High Capacity Exhaust,On/off
+SITE_249,MECH_35285,Small Capacity Exhaust,On/off
+SITE_25,MECH_26002,High Capacity Exhaust,On/off
+SITE_250,MECH_73676,Small Capacity Exhaust,On/off
+SITE_251,MECH_66914,Unknown,On/off
+SITE_253,MECH_53741,Small Capacity Exhaust,On/off
+SITE_254,MECH_42827,Small Capacity Exhaust,On/off
+SITE_255,MECH_26946,Recirculating Only,On/off
+SITE_256,MECH_169193,Unknown,On/off
+SITE_259,MECH_161847,Small Capacity Exhaust,On/off
+SITE_26,MECH_234,Recirculating Only,On/off
+SITE_260,MECH_31003,Small Capacity Exhaust,On/off
+SITE_262,MECH_90647,Small Capacity Exhaust,On/off
+SITE_263,MECH_58525,Small Capacity Exhaust,On/off
+SITE_264,MECH_153454,Small Capacity Exhaust,On/off
+SITE_267,MECH_114457,Small Capacity Exhaust,On/off
+SITE_268,MECH_126861,High Capacity Exhaust,On/off
+SITE_27,MECH_70168,Small Capacity Exhaust,On/off
+SITE_270,MECH_161827,Recirculating Only,On/off
+SITE_273,MECH_131862,Small Capacity Exhaust,On/off
+SITE_274,MECH_52571,Small Capacity Exhaust,On/off
+SITE_275,MECH_48140,Small Capacity Exhaust,On/off
+SITE_277,MECH_42197,Small Capacity Exhaust,On/off
+SITE_278,MECH_61076,Unknown,On/off
+SITE_279,MECH_25972,High Capacity Exhaust,On/off
+SITE_28,MECH_163420,Small Capacity Exhaust,On/off
+SITE_280,MECH_146592,Small Capacity Exhaust,On/off
+SITE_281,MECH_15668,Small Capacity Exhaust,On/off
+SITE_282,MECH_31744,Small Capacity Exhaust,On/off
+SITE_283,MECH_54173,Small Capacity Exhaust,On/off
+SITE_284,MECH_55194,Small Capacity Exhaust,On/off
+SITE_285,MECH_124851,Small Capacity Exhaust,On/off
+SITE_286,MECH_132586,High Capacity Exhaust,On/off
+SITE_288,MECH_83394,Small Capacity Exhaust,On/off
+SITE_29,MECH_44931,Small Capacity Exhaust,On/off
+SITE_290,MECH_104182,Small Capacity Exhaust,On/off
+SITE_292,MECH_169224,Small Capacity Exhaust,On/off
+SITE_295,MECH_116843,Small Capacity Exhaust,On/off
+SITE_298,MECH_161600,Unknown,On/off
+SITE_299,MECH_100381,High Capacity Exhaust,On/off
+SITE_3,MECH_91757,Small Capacity Exhaust,On/off
+SITE_30,MECH_174898,Small Capacity Exhaust,On/off
+SITE_301,MECH_3895,High Capacity Exhaust,Timer
+SITE_302,MECH_30307,Small Capacity Exhaust,On/off
+SITE_303,MECH_136140,Small Capacity Exhaust,On/off
+SITE_304,MECH_78058,High Capacity Exhaust,On/off
+SITE_305,MECH_37666,Small Capacity Exhaust,On/off
+SITE_306,MECH_33186,Small Capacity Exhaust,On/off
+SITE_307,MECH_133142,Small Capacity Exhaust,On/off
+SITE_308,MECH_79428,Small Capacity Exhaust,On/off
+SITE_309,MECH_163864,Small Capacity Exhaust,On/off
+SITE_31,MECH_55715,Unknown,On/off
+SITE_310,MECH_97110,Small Capacity Exhaust,On/off
+SITE_311,MECH_49494,Small Capacity Exhaust,On/off
+SITE_312,MECH_82288,High Capacity Exhaust,On/off
+SITE_313,MECH_30728,Unknown,On/off
+SITE_314,MECH_39916,High Capacity Exhaust,On/off
+SITE_315,MECH_166836,Small Capacity Exhaust,On/off
+SITE_316,MECH_112557,Small Capacity Exhaust,On/off
+SITE_32,MECH_1561,Small Capacity Exhaust,On/off
+SITE_320,MECH_89759,Unknown,On/off
+SITE_323,MECH_96057,Small Capacity Exhaust,On/off
+SITE_324,MECH_140756,High Capacity Exhaust,On/off
+SITE_326,MECH_76218,Unknown,On/off
+SITE_327,MECH_164944,Small Capacity Exhaust,On/off
+SITE_329,MECH_41823,Small Capacity Exhaust,On/off
+SITE_330,MECH_9960,Small Capacity Exhaust,On/off
+SITE_331,MECH_162253,Unknown,On/off
+SITE_333,MECH_119340,High Capacity Exhaust,On/off
+SITE_334,MECH_96868,Unknown,On/off
+SITE_336,MECH_59497,Small Capacity Exhaust,On/off
+SITE_337,MECH_161838,High Capacity Exhaust,On/off
+SITE_338,MECH_39302,Small Capacity Exhaust,On/off
+SITE_339,MECH_2507,Recirculating Only,On/off
+SITE_34,MECH_84277,Unknown,On/off
+SITE_34,MECH_23539,High Capacity Exhaust,On/off
+SITE_340,MECH_164350,Recirculating Only,On/off
+SITE_341,MECH_73140,Small Capacity Exhaust,On/off
+SITE_342,MECH_130005,Recirculating Only,On/off
+SITE_343,MECH_23017,Small Capacity Exhaust,On/off
+SITE_344,MECH_135103,High Capacity Exhaust,On/off
+SITE_344,MECH_100242,High Capacity Exhaust,On/off
+SITE_345,MECH_51069,Unknown,On/off
+SITE_346,MECH_118684,Recirculating Only,On/off
+SITE_349,MECH_123958,Small Capacity Exhaust,On/off
+SITE_35,MECH_168354,Small Capacity Exhaust,On/off
+SITE_351,MECH_101598,Small Capacity Exhaust,On/off
+SITE_352,MECH_60371,Recirculating Only,On/off
+SITE_353,MECH_7762,Small Capacity Exhaust,On/off
+SITE_354,MECH_35979,Recirculating Only,On/off
+SITE_355,MECH_88736,Small Capacity Exhaust,On/off
+SITE_356,MECH_32265,Small Capacity Exhaust,On/off
+SITE_357,MECH_8576,Small Capacity Exhaust,On/off
+SITE_358,MECH_106025,High Capacity Exhaust,On/off
+SITE_36,MECH_170803,Small Capacity Exhaust,On/off
+SITE_36,MECH_120500,Small Capacity Exhaust,On/off
+SITE_362,MECH_5562,Small Capacity Exhaust,On/off
+SITE_364,MECH_71261,Small Capacity Exhaust,On/off
+SITE_366,MECH_106607,Small Capacity Exhaust,On/off
+SITE_367,MECH_84691,Small Capacity Exhaust,On/off
+SITE_368,MECH_8935,Small Capacity Exhaust,None
+SITE_369,MECH_93642,Small Capacity Exhaust,On/off
+SITE_371,MECH_103090,High Capacity Exhaust,On/off
+SITE_373,MECH_14488,Small Capacity Exhaust,Timer
+SITE_374,MECH_31101,Recirculating Only,On/off
+SITE_375,MECH_65162,Small Capacity Exhaust,On/off
+SITE_378,MECH_28459,Recirculating Only,On/off
+SITE_379,MECH_165344,Recirculating Only,On/off
+SITE_38,MECH_142454,Small Capacity Exhaust,On/off
+SITE_381,MECH_19455,Recirculating Only,On/off
+SITE_383,MECH_7588,Recirculating Only,On/off
+SITE_385,MECH_103231,Small Capacity Exhaust,On/off
+SITE_387,MECH_65677,High Capacity Exhaust,Timer
+SITE_389,MECH_101393,Recirculating Only,On/off
+SITE_39,MECH_4027,Recirculating Only,On/off
+SITE_391,MECH_127771,Recirculating Only,On/off
+SITE_392,MECH_76501,Small Capacity Exhaust,On/off
+SITE_393,MECH_89577,High Capacity Exhaust,Timer
+SITE_395,MECH_626,Small Capacity Exhaust,On/off
+SITE_397,MECH_47611,Small Capacity Exhaust,On/off
+SITE_398,MECH_141963,Unknown,On/off
+SITE_399,MECH_8307,Small Capacity Exhaust,On/off
+SITE_4,MECH_7427,Small Capacity Exhaust,On/off
+SITE_40,MECH_165524,Unknown,On/off
+SITE_400,MECH_82077,Recirculating Only,On/off
+SITE_402,MECH_82609,Small Capacity Exhaust,On/off
+SITE_404,MECH_105758,Small Capacity Exhaust,On/off
+SITE_405,MECH_66536,Small Capacity Exhaust,On/off
+SITE_407,MECH_2242,Small Capacity Exhaust,On/off
+SITE_408,MECH_32994,Recirculating Only,On/off
+SITE_409,MECH_157527,Recirculating Only,On/off
+SITE_410,MECH_7828,High Capacity Exhaust,On/off
+SITE_411,MECH_93045,Small Capacity Exhaust,On/off
+SITE_414,MECH_163688,High Capacity Exhaust,On/off
+SITE_415,MECH_17060,High Capacity Exhaust,On/off
+SITE_416,MECH_2758,Recirculating Only,On/off
+SITE_418,MECH_31506,Small Capacity Exhaust,On/off
+SITE_419,MECH_111221,Recirculating Only,On/off
+SITE_42,MECH_105373,Small Capacity Exhaust,On/off
+SITE_420,MECH_44102,High Capacity Exhaust,On/off
+SITE_421,MECH_44594,Small Capacity Exhaust,On/off
+SITE_422,MECH_167902,Recirculating Only,On/off
+SITE_423,MECH_138339,Recirculating Only,On/off
+SITE_424,MECH_136226,High Capacity Exhaust,On/off
+SITE_426,MECH_5942,Small Capacity Exhaust,On/off
+SITE_427,MECH_116757,Small Capacity Exhaust,On/off
+SITE_428,MECH_48165,Unknown,On/off
+SITE_429,MECH_67423,Small Capacity Exhaust,On/off
+SITE_430,MECH_165240,Small Capacity Exhaust,On/off
+SITE_431,MECH_41623,Recirculating Only,On/off
+SITE_432,MECH_124809,Recirculating Only,On/off
+SITE_433,MECH_147148,Recirculating Only,On/off
+SITE_435,MECH_124211,Recirculating Only,On/off
+SITE_436,MECH_108960,Recirculating Only,On/off
+SITE_437,MECH_11930,Small Capacity Exhaust,On/off
+SITE_439,MECH_151591,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_441,MECH_103684,Small Capacity Exhaust,On/off
+SITE_442,MECH_173019,Recirculating Only,On/off
+SITE_443,MECH_17034,Small Capacity Exhaust,On/off
+SITE_444,MECH_90093,Small Capacity Exhaust,On/off
+SITE_446,MECH_147688,High Capacity Exhaust,On/off
+SITE_447,MECH_115480,Small Capacity Exhaust,On/off
+SITE_448,MECH_98910,High Capacity Exhaust,On/off
+SITE_449,MECH_164117,Small Capacity Exhaust,On/off
+SITE_45,MECH_140780,Recirculating Only,On/off
+SITE_450,MECH_36725,Small Capacity Exhaust,On/off
+SITE_452,MECH_117223,Recirculating Only,On/off
+SITE_453,MECH_30188,High Capacity Exhaust,On/off
+SITE_454,MECH_71034,Recirculating Only,On/off
+SITE_455,MECH_170968,Recirculating Only,On/off
+SITE_456,MECH_104398,Small Capacity Exhaust,On/off
+SITE_457,MECH_145825,Small Capacity Exhaust,On/off
+SITE_458,MECH_140774,Small Capacity Exhaust,On/off
+SITE_459,MECH_104154,Recirculating Only,On/off
+SITE_460,MECH_79412,High Capacity Exhaust,On/off
+SITE_461,MECH_26328,Recirculating Only,On/off
+SITE_462,MECH_43634,Recirculating Only,On/off
+SITE_463,MECH_16646,Recirculating Only,On/off
+SITE_465,MECH_108550,High Capacity Exhaust,On/off
+SITE_466,MECH_169594,Small Capacity Exhaust,On/off
+SITE_467,MECH_160722,Small Capacity Exhaust,On/off
+SITE_468,MECH_108732,Unknown,On/off
+SITE_469,MECH_134277,Recirculating Only,On/off
+SITE_470,MECH_46876,High Capacity Exhaust,On/off
+SITE_471,MECH_97552,High Capacity Exhaust,On/off
+SITE_472,MECH_100738,Recirculating Only,On/off
+SITE_474,MECH_166693,Unknown,On/off
+SITE_475,MECH_51607,Small Capacity Exhaust,On/off
+SITE_476,MECH_76715,High Capacity Exhaust,On/off
+SITE_477,MECH_174810,Small Capacity Exhaust,On/off
+SITE_478,MECH_3351,Small Capacity Exhaust,On/off
+SITE_48,MECH_143768,Small Capacity Exhaust,On/off
+SITE_480,MECH_111164,High Capacity Exhaust,On/off
+SITE_481,MECH_49019,Small Capacity Exhaust,On/off
+SITE_484,MECH_61383,Recirculating Only,Manual thermostat - Analog
+SITE_485,MECH_13138,Small Capacity Exhaust,On/off
+SITE_486,MECH_85084,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_487,MECH_171324,High Capacity Exhaust,On/off
+SITE_489,MECH_1194,Small Capacity Exhaust,On/off
+SITE_490,MECH_168351,Small Capacity Exhaust,On/off
+SITE_491,MECH_90065,High Capacity Exhaust,On/off
+SITE_492,MECH_117923,Small Capacity Exhaust,On/off
+SITE_493,MECH_72432,Recirculating Only,On/off
+SITE_494,MECH_5404,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_497,MECH_160438,Recirculating Only,On/off
+SITE_50,MECH_72504,Unknown,On/off
+SITE_500,MECH_48758,Unknown,On/off
+SITE_502,MECH_1066,Small Capacity Exhaust,On/off
+SITE_503,MECH_8678,Small Capacity Exhaust,On/off
+SITE_505,MECH_26252,Small Capacity Exhaust,On/off
+SITE_507,MECH_144461,Small Capacity Exhaust,On/off
+SITE_508,MECH_97919,Unknown,On/off
+SITE_51,MECH_20803,Unknown,On/off
+SITE_510,MECH_8129,High Capacity Exhaust,On/off
+SITE_511,MECH_26710,Recirculating Only,On/off
+SITE_514,MECH_74296,Small Capacity Exhaust,On/off
+SITE_515,MECH_88727,Recirculating Only,On/off
+SITE_516,MECH_55518,High Capacity Exhaust,Timer
+SITE_517,MECH_169903,Recirculating Only,On/off
+SITE_519,MECH_22186,Small Capacity Exhaust,On/off
+SITE_520,MECH_118615,High Capacity Exhaust,On/off
+SITE_521,MECH_29995,Small Capacity Exhaust,On/off
+SITE_522,MECH_107156,High Capacity Exhaust,On/off
+SITE_524,MECH_91112,High Capacity Exhaust,On/off
+SITE_527,MECH_69028,High Capacity Exhaust,Timer
+SITE_529,MECH_26511,Recirculating Only,On/off
+SITE_53,MECH_110636,Recirculating Only,On/off
+SITE_531,MECH_46380,Small Capacity Exhaust,On/off
+SITE_532,MECH_160351,Recirculating Only,On/off
+SITE_533,MECH_140886,Recirculating Only,On/off
+SITE_534,MECH_55742,High Capacity Exhaust,On/off
+SITE_535,MECH_111973,Small Capacity Exhaust,On/off
+SITE_537,MECH_110822,Small Capacity Exhaust,On/off
+SITE_539,MECH_162840,Small Capacity Exhaust,On/off
+SITE_539,MECH_20764,Small Capacity Exhaust,On/off
+SITE_54,MECH_107773,Unknown,On/off
+SITE_541,MECH_142231,Small Capacity Exhaust,On/off
+SITE_543,MECH_152044,High Capacity Exhaust,On/off
+SITE_544,MECH_69435,Recirculating Only,On/off
+SITE_546,MECH_19303,Recirculating Only,On/off
+SITE_547,MECH_59936,Unknown,On/off
+SITE_548,MECH_143771,High Capacity Exhaust,On/off
+SITE_548,MECH_28997,High Capacity Exhaust,On/off
+SITE_549,MECH_110263,Unknown,On/off
+SITE_55,MECH_8264,Recirculating Only,On/off
+SITE_55,MECH_173982,High Capacity Exhaust,On/off
+SITE_550,MECH_152505,High Capacity Exhaust,Timer
+SITE_551,MECH_46994,Recirculating Only,On/off
+SITE_553,MECH_99841,Recirculating Only,On/off
+SITE_554,MECH_166571,High Capacity Exhaust,On/off
+SITE_555,MECH_3668,Small Capacity Exhaust,On/off
+SITE_556,MECH_123865,Small Capacity Exhaust,On/off
+SITE_558,MECH_132331,Small Capacity Exhaust,On/off
+SITE_560,MECH_844,Small Capacity Exhaust,On/off
+SITE_562,MECH_6782,Recirculating Only,On/off
+SITE_563,MECH_29601,High Capacity Exhaust,On/off
+SITE_563,MECH_29601,Recirculating Only,On/off
+SITE_564,MECH_48617,Small Capacity Exhaust,On/off
+SITE_565,MECH_66984,Small Capacity Exhaust,On/off
+SITE_566,MECH_75107,High Capacity Exhaust,On/off
+SITE_567,MECH_72617,Small Capacity Exhaust,On/off
+SITE_569,MECH_142437,Unknown,On/off
+SITE_57,MECH_55462,High Capacity Exhaust,On/off
+SITE_570,MECH_58869,Recirculating Only,Manual thermostat - Digital
+SITE_571,MECH_169776,Recirculating Only,On/off
+SITE_572,MECH_119553,Small Capacity Exhaust,On/off
+SITE_573,MECH_165573,Small Capacity Exhaust,On/off
+SITE_574,MECH_83224,Recirculating Only,On/off
+SITE_575,MECH_165065,Small Capacity Exhaust,On/off
+SITE_576,MECH_138181,Small Capacity Exhaust,On/off
+SITE_58,MECH_142368,Small Capacity Exhaust,On/off
+SITE_580,MECH_161030,Small Capacity Exhaust,On/off
+SITE_581,MECH_167049,High Capacity Exhaust,On/off
+SITE_582,MECH_55413,High Capacity Exhaust,On/off
+SITE_584,MECH_24647,Recirculating Only,On/off
+SITE_584,MECH_24647,Small Capacity Exhaust,On/off
+SITE_585,MECH_12953,Recirculating Only,On/off
+SITE_586,MECH_31712,High Capacity Exhaust,On/off
+SITE_587,MECH_19897,Recirculating Only,On/off
+SITE_588,MECH_138224,Small Capacity Exhaust,On/off
+SITE_589,MECH_161833,Small Capacity Exhaust,On/off
+SITE_59,MECH_162444,Small Capacity Exhaust,On/off
+SITE_590,MECH_66495,Recirculating Only,On/off
+SITE_592,MECH_88648,Small Capacity Exhaust,On/off
+SITE_593,MECH_6861,Recirculating Only,On/off
+SITE_594,MECH_172783,High Capacity Exhaust,Timer
+SITE_595,MECH_73429,Unknown,On/off
+SITE_596,MECH_80761,High Capacity Exhaust,On/off
+SITE_599,MECH_62961,High Capacity Exhaust,On/off
+SITE_60,MECH_105789,Small Capacity Exhaust,On/off
+SITE_600,MECH_157151,Unknown,On/off
+SITE_601,MECH_79731,High Capacity Exhaust,On/off
+SITE_602,MECH_65057,Unknown,On/off
+SITE_603,MECH_25951,Small Capacity Exhaust,On/off
+SITE_604,MECH_152960,Small Capacity Exhaust,On/off
+SITE_605,MECH_90293,High Capacity Exhaust,On/off
+SITE_607,MECH_123691,Unknown,On/off
+SITE_608,MECH_64339,High Capacity Exhaust,On/off
+SITE_609,MECH_73525,Recirculating Only,On/off
+SITE_610,MECH_141878,High Capacity Exhaust,On/off
+SITE_611,MECH_95324,High Capacity Exhaust,Unknown
+SITE_613,MECH_157292,High Capacity Exhaust,On/off
+SITE_614,MECH_31298,Small Capacity Exhaust,On/off
+SITE_615,MECH_81821,High Capacity Exhaust,On/off
+SITE_616,MECH_37118,Recirculating Only,On/off
+SITE_617,MECH_138283,Small Capacity Exhaust,On/off
+SITE_618,MECH_106360,Unknown,On/off
+SITE_619,MECH_128111,High Capacity Exhaust,On/off
+SITE_62,MECH_81010,Recirculating Only,Timer
+SITE_620,MECH_40761,Small Capacity Exhaust,On/off
+SITE_621,MECH_102593,Small Capacity Exhaust,On/off
+SITE_622,MECH_109961,High Capacity Exhaust,On/off
+SITE_623,MECH_98049,High Capacity Exhaust,On/off
+SITE_625,MECH_166271,Recirculating Only,On/off
+SITE_626,MECH_155566,Recirculating Only,On/off
+SITE_627,MECH_56496,Small Capacity Exhaust,On/off
+SITE_630,MECH_19769,High Capacity Exhaust,On/off
+SITE_631,MECH_172773,Unknown,On/off
+SITE_634,MECH_85170,Unknown,On/off
+SITE_635,MECH_152570,Small Capacity Exhaust,On/off
+SITE_636,MECH_118218,Small Capacity Exhaust,On/off
+SITE_637,MECH_164236,Small Capacity Exhaust,On/off
+SITE_638,MECH_126631,Recirculating Only,On/off
+SITE_64,MECH_173501,Small Capacity Exhaust,On/off
+SITE_641,MECH_35319,Unknown,On/off
+SITE_642,MECH_93764,Small Capacity Exhaust,On/off
+SITE_643,MECH_165463,Small Capacity Exhaust,On/off
+SITE_644,MECH_97125,Small Capacity Exhaust,On/off
+SITE_645,MECH_135760,Recirculating Only,On/off
+SITE_646,MECH_92523,Small Capacity Exhaust,On/off
+SITE_648,MECH_46852,Recirculating Only,On/off
+SITE_649,MECH_37943,Small Capacity Exhaust,On/off
+SITE_65,MECH_122177,Recirculating Only,On/off
+SITE_650,MECH_24307,Recirculating Only,On/off
+SITE_651,MECH_135758,Small Capacity Exhaust,On/off
+SITE_652,MECH_37074,Small Capacity Exhaust,On/off
+SITE_653,MECH_5838,Small Capacity Exhaust,On/off
+SITE_654,MECH_91359,Recirculating Only,On/off
+SITE_655,MECH_122505,Small Capacity Exhaust,On/off
+SITE_656,MECH_63158,Small Capacity Exhaust,On/off
+SITE_657,MECH_28567,Recirculating Only,On/off
+SITE_658,MECH_58249,Recirculating Only,On/off
+SITE_659,MECH_159885,Small Capacity Exhaust,On/off
+SITE_66,MECH_109774,Unknown,On/off
+SITE_661,MECH_57830,Unknown,On/off
+SITE_662,MECH_43936,Small Capacity Exhaust,On/off
+SITE_663,MECH_79272,Recirculating Only,On/off
+SITE_664,MECH_94859,Recirculating Only,On/off
+SITE_665,MECH_132133,Recirculating Only,On/off
+SITE_666,MECH_69879,Small Capacity Exhaust,On/off
+SITE_668,MECH_113851,High Capacity Exhaust,On/off
+SITE_669,MECH_18482,Small Capacity Exhaust,On/off
+SITE_67,MECH_49798,Recirculating Only,On/off
+SITE_671,MECH_162866,Small Capacity Exhaust,On/off
+SITE_672,MECH_162273,Small Capacity Exhaust,On/off
+SITE_674,MECH_147607,Small Capacity Exhaust,On/off
+SITE_675,MECH_151184,High Capacity Exhaust,On/off
+SITE_676,MECH_161570,Small Capacity Exhaust,On/off
+SITE_677,MECH_117242,High Capacity Exhaust,On/off
+SITE_678,MECH_75058,Small Capacity Exhaust,On/off
+SITE_68,MECH_12018,High Capacity Exhaust,On/off
+SITE_681,MECH_145071,Small Capacity Exhaust,On/off
+SITE_682,MECH_146017,Small Capacity Exhaust,On/off
+SITE_683,MECH_58181,Small Capacity Exhaust,On/off
+SITE_684,MECH_8166,Small Capacity Exhaust,On/off
+SITE_685,MECH_76846,Small Capacity Exhaust,On/off
+SITE_686,MECH_10235,Small Capacity Exhaust,On/off
+SITE_686,MECH_171565,Recirculating Only,On/off
+SITE_687,MECH_95676,High Capacity Exhaust,On/off
+SITE_689,MECH_36287,Small Capacity Exhaust,On/off
+SITE_69,MECH_12094,Small Capacity Exhaust,On/off
+SITE_690,MECH_132777,Recirculating Only,On/off
+SITE_691,MECH_62058,Recirculating Only,On/off
+SITE_693,MECH_15387,Small Capacity Exhaust,On/off
+SITE_694,MECH_139066,Small Capacity Exhaust,On/off
+SITE_695,MECH_140553,Small Capacity Exhaust,On/off
+SITE_696,MECH_139339,Small Capacity Exhaust,On/off
+SITE_698,MECH_66532,High Capacity Exhaust,On/off
+SITE_699,MECH_108360,High Capacity Exhaust,On/off
+SITE_7,MECH_80016,Small Capacity Exhaust,On/off
+SITE_700,MECH_142518,High Capacity Exhaust,On/off
+SITE_702,MECH_61352,High Capacity Exhaust,On/off
+SITE_703,MECH_41472,Small Capacity Exhaust,On/off
+SITE_705,MECH_137266,Recirculating Only,Manual thermostat - Digital
+SITE_707,MECH_123881,Small Capacity Exhaust,On/off
+SITE_708,MECH_125111,Recirculating Only,On/off
+SITE_710,MECH_155023,Recirculating Only,On/off
+SITE_711,MECH_139573,Small Capacity Exhaust,On/off
+SITE_712,MECH_54796,Recirculating Only,On/off
+SITE_714,MECH_15738,Recirculating Only,On/off
+SITE_716,MECH_41316,Recirculating Only,On/off
+SITE_717,MECH_134053,Recirculating Only,Manual thermostat - Digital
+SITE_718,MECH_128005,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_719,MECH_28196,High Capacity Exhaust,On/off
+SITE_72,MECH_20964,Unknown,None
+SITE_720,MECH_153832,Recirculating Only,On/off
+SITE_721,MECH_61163,Small Capacity Exhaust,On/off
+SITE_722,MECH_44518,High Capacity Exhaust,On/off
+SITE_723,MECH_61823,High Capacity Exhaust,Manual thermostat - Analog
+SITE_724,MECH_51011,High Capacity Exhaust,Manual thermostat - Digital
+SITE_726,MECH_105318,Small Capacity Exhaust,On/off
+SITE_727,MECH_135461,Recirculating Only,On/off
+SITE_728,MECH_73742,Recirculating Only,On/off
+SITE_729,MECH_18595,Small Capacity Exhaust,On/off
+SITE_731,MECH_95836,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_732,MECH_129101,High Capacity Exhaust,Manual thermostat - Analog
+SITE_733,MECH_88890,Small Capacity Exhaust,On/off
+SITE_734,MECH_4072,High Capacity Exhaust,On/off
+SITE_735,MECH_150646,High Capacity Exhaust,On/off
+SITE_736,MECH_12130,Small Capacity Exhaust,On/off
+SITE_737,MECH_119988,Recirculating Only,On/off
+SITE_738,MECH_166129,Small Capacity Exhaust,On/off
+SITE_738,MECH_19714,Small Capacity Exhaust,On/off
+SITE_739,MECH_170427,High Capacity Exhaust,On/off
+SITE_740,MECH_130182,Recirculating Only,On/off
+SITE_742,MECH_19874,Small Capacity Exhaust,On/off
+SITE_744,MECH_32273,Recirculating Only,On/off
+SITE_745,MECH_146451,Small Capacity Exhaust,On/off
+SITE_746,MECH_73799,Recirculating Only,On/off
+SITE_748,MECH_114094,Small Capacity Exhaust,On/off
+SITE_749,MECH_144162,Small Capacity Exhaust,On/off
+SITE_750,MECH_96007,High Capacity Exhaust,On/off
+SITE_751,MECH_127198,Recirculating Only,On/off
+SITE_752,MECH_166045,Recirculating Only,On/off
+SITE_755,MECH_36349,Recirculating Only,On/off
+SITE_757,MECH_70852,Small Capacity Exhaust,On/off
+SITE_758,MECH_94240,Recirculating Only,On/off
+SITE_759,MECH_4041,Small Capacity Exhaust,On/off
+SITE_76,MECH_91719,Recirculating Only,On/off
+SITE_760,MECH_126836,Small Capacity Exhaust,On/off
+SITE_762,MECH_118920,Recirculating Only,On/off
+SITE_763,MECH_125519,Recirculating Only,On/off
+SITE_764,MECH_132735,Recirculating Only,Unknown
+SITE_765,MECH_122714,Recirculating Only,Manual thermostat - Analog
+SITE_765,MECH_161443,Recirculating Only,On/off
+SITE_766,MECH_40622,Unknown,On/off
+SITE_767,MECH_171892,Small Capacity Exhaust,On/off
+SITE_768,MECH_131925,Recirculating Only,Manual thermostat - Digital
+SITE_770,MECH_11025,Recirculating Only,Timer
+SITE_771,MECH_134266,Recirculating Only,On/off
+SITE_774,MECH_117709,Recirculating Only,On/off
+SITE_775,MECH_65612,High Capacity Exhaust,On/off
+SITE_776,MECH_145601,Small Capacity Exhaust,Timer
+SITE_777,MECH_158553,Unknown,On/off
+SITE_777,MECH_26749,High Capacity Exhaust,On/off
+SITE_778,MECH_152060,Small Capacity Exhaust,On/off
+SITE_779,MECH_90160,Recirculating Only,On/off
+SITE_78,MECH_17498,Recirculating Only,On/off
+SITE_780,MECH_9874,Small Capacity Exhaust,On/off
+SITE_781,MECH_92548,Recirculating Only,On/off
+SITE_782,MECH_90546,Recirculating Only,Manual thermostat - Digital
+SITE_784,MECH_151908,Small Capacity Exhaust,On/off
+SITE_785,MECH_93736,Small Capacity Exhaust,On/off
+SITE_786,MECH_59211,Recirculating Only,On/off
+SITE_787,MECH_133921,Small Capacity Exhaust,On/off
+SITE_789,MECH_5039,Small Capacity Exhaust,On/off
+SITE_79,MECH_2010,Small Capacity Exhaust,On/off
+SITE_790,MECH_78205,Small Capacity Exhaust,On/off
+SITE_791,MECH_126522,High Capacity Exhaust,On/off
+SITE_792,MECH_40186,Recirculating Only,On/off
+SITE_793,MECH_56051,High Capacity Exhaust,On/off
+SITE_794,MECH_66110,Small Capacity Exhaust,On/off
+SITE_795,MECH_55811,Recirculating Only,On/off
+SITE_798,MECH_34026,Small Capacity Exhaust,On/off
+SITE_799,MECH_93228,Recirculating Only,On/off
+SITE_8,MECH_123218,High Capacity Exhaust,On/off
+SITE_800,MECH_59535,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_801,MECH_119812,Unknown,On/off
+SITE_802,MECH_170484,Recirculating Only,On/off
+SITE_803,MECH_152233,High Capacity Exhaust,On/off
+SITE_804,MECH_22556,High Capacity Exhaust,On/off
+SITE_805,MECH_79441,Recirculating Only,On/off
+SITE_806,MECH_69584,Recirculating Only,On/off
+SITE_807,MECH_103573,Recirculating Only,On/off
+SITE_808,MECH_60595,Small Capacity Exhaust,On/off
+SITE_809,MECH_174654,Recirculating Only,On/off
+SITE_81,MECH_105698,Unknown,On/off
+SITE_813,MECH_97738,High Capacity Exhaust,Manual thermostat - Analog
+SITE_814,MECH_170779,Small Capacity Exhaust,On/off
+SITE_815,MECH_4677,Small Capacity Exhaust,On/off
+SITE_816,MECH_106268,Recirculating Only,On/off
+SITE_817,MECH_113143,Small Capacity Exhaust,On/off
+SITE_818,MECH_132788,Small Capacity Exhaust,On/off
+SITE_819,MECH_141020,Small Capacity Exhaust,On/off
+SITE_82,MECH_15211,Small Capacity Exhaust,On/off
+SITE_820,MECH_4480,Recirculating Only,On/off
+SITE_822,MECH_108683,High Capacity Exhaust,On/off
+SITE_823,MECH_130833,Small Capacity Exhaust,On/off
+SITE_824,MECH_165242,Small Capacity Exhaust,On/off
+SITE_828,MECH_40003,High Capacity Exhaust,On/off
+SITE_829,MECH_75750,Recirculating Only,On/off
+SITE_83,MECH_9990,Unknown,On/off
+SITE_830,MECH_168041,Recirculating Only,On/off
+SITE_831,MECH_70058,Recirculating Only,On/off
+SITE_832,MECH_150323,Recirculating Only,On/off
+SITE_833,MECH_95111,Recirculating Only,On/off
+SITE_834,MECH_60043,Small Capacity Exhaust,On/off
+SITE_835,MECH_1434,Small Capacity Exhaust,On/off
+SITE_839,MECH_159639,Recirculating Only,Manual thermostat - Analog
+SITE_84,MECH_31519,Small Capacity Exhaust,On/off
+SITE_840,MECH_21108,High Capacity Exhaust,On/off
+SITE_841,MECH_42539,Recirculating Only,Manual thermostat - Analog
+SITE_842,MECH_94596,Small Capacity Exhaust,On/off
+SITE_843,MECH_174328,Small Capacity Exhaust,On/off
+SITE_844,MECH_39699,High Capacity Exhaust,Manual thermostat - Digital
+SITE_846,MECH_164250,Small Capacity Exhaust,On/off
+SITE_847,MECH_148186,Recirculating Only,On/off
+SITE_848,MECH_132564,Recirculating Only,On/off
+SITE_849,MECH_34771,Small Capacity Exhaust,On/off
+SITE_851,MECH_25570,High Capacity Exhaust,On/off
+SITE_852,MECH_24827,Small Capacity Exhaust,On/off
+SITE_854,MECH_76967,Recirculating Only,On/off
+SITE_855,MECH_170972,High Capacity Exhaust,On/off
+SITE_856,MECH_156272,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_857,MECH_71371,Recirculating Only,On/off
+SITE_858,MECH_58833,Recirculating Only,On/off
+SITE_859,MECH_136067,Recirculating Only,On/off
+SITE_860,MECH_118708,Small Capacity Exhaust,On/off
+SITE_861,MECH_30550,Small Capacity Exhaust,On/off
+SITE_863,MECH_63661,Small Capacity Exhaust,On/off
+SITE_864,MECH_131538,Small Capacity Exhaust,On/off
+SITE_865,MECH_68075,Small Capacity Exhaust,On/off
+SITE_866,MECH_99862,Small Capacity Exhaust,On/off
+SITE_867,MECH_26473,Small Capacity Exhaust,On/off
+SITE_868,MECH_152800,Recirculating Only,On/off
+SITE_869,MECH_19866,Recirculating Only,On/off
+SITE_870,MECH_70576,Small Capacity Exhaust,Manual thermostat - Analog
+SITE_871,MECH_3567,Small Capacity Exhaust,On/off
+SITE_872,MECH_47414,Small Capacity Exhaust,On/off
+SITE_873,MECH_47501,Recirculating Only,On/off
+SITE_874,MECH_158382,Recirculating Only,On/off
+SITE_875,MECH_18735,Recirculating Only,On/off
+SITE_877,MECH_121842,Small Capacity Exhaust,On/off
+SITE_879,MECH_61134,High Capacity Exhaust,On/off
+SITE_88,MECH_10531,Recirculating Only,On/off
+SITE_880,MECH_7315,Small Capacity Exhaust,On/off
+SITE_881,MECH_702,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_882,MECH_57138,Recirculating Only,On/off
+SITE_883,MECH_149552,Recirculating Only,On/off
+SITE_884,MECH_47391,Recirculating Only,On/off
+SITE_885,MECH_142894,Recirculating Only,On/off
+SITE_886,MECH_123641,Recirculating Only,On/off
+SITE_887,MECH_109226,Recirculating Only,On/off
+SITE_888,MECH_16212,Recirculating Only,On/off
+SITE_888,MECH_16212,Small Capacity Exhaust,On/off
+SITE_889,MECH_153289,Small Capacity Exhaust,On/off
+SITE_89,MECH_31969,Unknown,On/off
+SITE_890,MECH_174605,Small Capacity Exhaust,On/off
+SITE_891,MECH_1905,Small Capacity Exhaust,On/off
+SITE_892,MECH_40268,Recirculating Only,On/off
+SITE_894,MECH_174828,Unknown,On/off
+SITE_895,MECH_73041,Recirculating Only,On/off
+SITE_896,MECH_113054,Small Capacity Exhaust,On/off
+SITE_897,MECH_63357,Recirculating Only,On/off
+SITE_899,MECH_129538,Recirculating Only,On/off
+SITE_9,MECH_155211,High Capacity Exhaust,On/off
+SITE_90,MECH_172034,Small Capacity Exhaust,On/off
+SITE_900,MECH_93182,Small Capacity Exhaust,On/off
+SITE_901,MECH_49866,Small Capacity Exhaust,On/off
+SITE_902,MECH_149132,Small Capacity Exhaust,On/off
+SITE_903,MECH_131852,Unknown,On/off
+SITE_904,MECH_10954,Small Capacity Exhaust,On/off
+SITE_905,MECH_110916,Small Capacity Exhaust,On/off
+SITE_907,MECH_153926,Recirculating Only,On/off
+SITE_908,MECH_123106,Small Capacity Exhaust,On/off
+SITE_909,MECH_71500,Recirculating Only,On/off
+SITE_91,MECH_14587,Recirculating Only,On/off
+SITE_911,MECH_70840,Small Capacity Exhaust,On/off
+SITE_912,MECH_128711,Recirculating Only,On/off
+SITE_913,MECH_151066,Recirculating Only,On/off
+SITE_915,MECH_25059,Recirculating Only,On/off
+SITE_916,MECH_131916,Small Capacity Exhaust,On/off
+SITE_917,MECH_122795,Small Capacity Exhaust,On/off
+SITE_918,MECH_43991,High Capacity Exhaust,On/off
+SITE_919,MECH_86595,Recirculating Only,On/off
+SITE_92,MECH_122858,Recirculating Only,On/off
+SITE_920,MECH_4929,High Capacity Exhaust,On/off
+SITE_921,MECH_127741,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_924,MECH_9580,High Capacity Exhaust,On/off
+SITE_925,MECH_165580,Recirculating Only,On/off
+SITE_926,MECH_155652,Small Capacity Exhaust,On/off
+SITE_927,MECH_99665,Small Capacity Exhaust,On/off
+SITE_928,MECH_157258,Small Capacity Exhaust,On/off
+SITE_930,MECH_26088,Small Capacity Exhaust,On/off
+SITE_932,MECH_32377,High Capacity Exhaust,On/off
+SITE_933,MECH_96862,Recirculating Only,On/off
+SITE_934,MECH_122690,Small Capacity Exhaust,On/off
+SITE_936,MECH_13370,Recirculating Only,On/off
+SITE_938,MECH_70963,Recirculating Only,On/off
+SITE_939,MECH_131823,Small Capacity Exhaust,On/off
+SITE_94,MECH_146757,Unknown,On/off
+SITE_940,MECH_92148,Recirculating Only,On/off
+SITE_941,MECH_119203,Small Capacity Exhaust,On/off
+SITE_942,MECH_92582,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_943,MECH_103737,High Capacity Exhaust,On/off
+SITE_944,MECH_174603,Recirculating Only,On/off
+SITE_946,MECH_75329,High Capacity Exhaust,On/off
+SITE_947,MECH_59550,Small Capacity Exhaust,Unknown
+SITE_948,MECH_80599,Recirculating Only,On/off
+SITE_95,MECH_130323,Small Capacity Exhaust,On/off
+SITE_951,MECH_160033,Small Capacity Exhaust,On/off
+SITE_952,MECH_156255,Recirculating Only,On/off
+SITE_953,MECH_80372,Small Capacity Exhaust,On/off
+SITE_954,MECH_53621,Small Capacity Exhaust,On/off
+SITE_955,MECH_74371,Recirculating Only,On/off
+SITE_956,MECH_66586,Small Capacity Exhaust,On/off
+SITE_956,MECH_43860,Small Capacity Exhaust,On/off
+SITE_957,MECH_99998,High Capacity Exhaust,On/off
+SITE_959,MECH_49183,Small Capacity Exhaust,On/off
+SITE_96,MECH_127641,Unknown,On/off
+SITE_960,MECH_89201,Recirculating Only,Manual thermostat - Digital
+SITE_961,MECH_137723,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_962,MECH_174199,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_963,MECH_17157,Recirculating Only,On/off
+SITE_964,MECH_57423,High Capacity Exhaust,On/off
+SITE_965,MECH_162376,Small Capacity Exhaust,On/off
+SITE_966,MECH_15757,High Capacity Exhaust,On/off
+SITE_967,MECH_171171,Small Capacity Exhaust,On/off
+SITE_968,MECH_93348,High Capacity Exhaust,On/off
+SITE_969,MECH_103172,Recirculating Only,On/off
+SITE_972,MECH_140064,Unknown,On/off
+SITE_973,MECH_20413,Small Capacity Exhaust,Timer
+SITE_974,MECH_152618,Recirculating Only,On/off
+SITE_975,MECH_156787,High Capacity Exhaust,On/off
+SITE_976,MECH_107136,Small Capacity Exhaust,On/off
+SITE_977,MECH_90208,Small Capacity Exhaust,Manual thermostat - Digital
+SITE_978,MECH_144028,High Capacity Exhaust,On/off
+SITE_979,MECH_30176,Small Capacity Exhaust,On/off
+SITE_98,MECH_53010,Small Capacity Exhaust,On/off
+SITE_980,MECH_39795,Recirculating Only,On/off
+SITE_981,MECH_25737,Small Capacity Exhaust,Timer
+SITE_982,MECH_56517,Recirculating Only,On/off
+SITE_983,MECH_59167,High Capacity Exhaust,On/off
+SITE_984,MECH_2932,High Capacity Exhaust,On/off
+SITE_985,MECH_129411,Small Capacity Exhaust,On/off
+SITE_986,MECH_163943,High Capacity Exhaust,On/off
+SITE_987,MECH_22022,Small Capacity Exhaust,On/off
+SITE_988,MECH_73010,Small Capacity Exhaust,On/off
+SITE_99,MECH_99150,Small Capacity Exhaust,On/off
+SITE_990,MECH_79006,Small Capacity Exhaust,On/off
+SITE_992,MECH_56187,Small Capacity Exhaust,On/off
+SITE_993,MECH_139563,High Capacity Exhaust,On/off
+SITE_994,MECH_169386,Recirculating Only,On/off
+SITE_995,MECH_129032,Recirculating Only,On/off
+SITE_996,MECH_56367,Recirculating Only,On/off
+SITE_999,MECH_162936,High Capacity Exhaust,On/off
+SITE_3047,MECH_130463,Recirculating Only,On/off
+SITE_3048,MECH_119773,Recirculating Only,On/off
+SITE_3049,MECH_136353,Recirculating Only,On/off
+SITE_3050,MECH_76534,Recirculating Only,On/off
+SITE_3051,MECH_130741,Small Capacity Exhaust,On/off
+SITE_3052,MECH_49216,Recirculating Only,On/off
+SITE_3053,MECH_112471,Small Capacity Exhaust,On/off
+SITE_3054,MECH_111878,Unknown,On/off
+SITE_3055,MECH_11643,Small Capacity Exhaust,On/off
+SITE_3056,MECH_120913,Recirculating Only,On/off
+SITE_3057,MECH_121747,High Capacity Exhaust,On/off
+SITE_3059,MECH_118442,Unknown,On/off
+SITE_3060,MECH_87815,Recirculating Only,On/off
+SITE_3061,MECH_100051,Recirculating Only,On/off
+SITE_3062,MECH_18789,Small Capacity Exhaust,On/off
+SITE_3063,MECH_101987,Recirculating Only,On/off
+SITE_3064,MECH_105136,Small Capacity Exhaust,On/off
+SITE_3065,MECH_163418,Recirculating Only,On/off
+SITE_3066,MECH_79491,Unknown,On/off
+SITE_3067,MECH_84890,Small Capacity Exhaust,On/off
+SITE_3068,MECH_102403,Recirculating Only,On/off
+SITE_3069,MECH_163072,Recirculating Only,On/off
+SITE_3070,MECH_144971,Unknown,On/off
+SITE_3071,MECH_38409,Recirculating Only,On/off
+SITE_3072,MECH_6537,Small Capacity Exhaust,On/off
+SITE_3073,MECH_28585,Small Capacity Exhaust,On/off
+SITE_3075,MECH_137920,High Capacity Exhaust,On/off
+SITE_3076,MECH_139445,Small Capacity Exhaust,On/off
+SITE_3077,MECH_87785,Small Capacity Exhaust,On/off
+SITE_3078,MECH_68978,Recirculating Only,On/off
+SITE_3079,MECH_62573,Small Capacity Exhaust,On/off
+SITE_3081,MECH_113450,Small Capacity Exhaust,On/off
+SITE_3082,MECH_35691,Recirculating Only,On/off
+SITE_3083,MECH_73840,High Capacity Exhaust,On/off
+SITE_3084,MECH_105088,Recirculating Only,On/off
+SITE_3086,MECH_99285,Small Capacity Exhaust,On/off
+SITE_3087,MECH_9298,Small Capacity Exhaust,On/off
+SITE_3088,MECH_118563,Small Capacity Exhaust,On/off
+SITE_3090,MECH_89295,Recirculating Only,On/off
+SITE_3091,MECH_128457,High Capacity Exhaust,On/off
+SITE_3092,MECH_93916,Recirculating Only,On/off
+SITE_3093,MECH_150016,High Capacity Exhaust,None
+SITE_3094,MECH_58417,Recirculating Only,On/off
+SITE_3095,MECH_115992,Small Capacity Exhaust,On/off
+SITE_3096,MECH_4601,Recirculating Only,On/off
+SITE_3097,MECH_9057,Small Capacity Exhaust,On/off
+SITE_3098,MECH_170999,Recirculating Only,On/off
+SITE_3099,MECH_55768,Small Capacity Exhaust,On/off
+SITE_3100,MECH_78225,Recirculating Only,On/off
+SITE_3102,MECH_23328,Small Capacity Exhaust,On/off
+SITE_3104,MECH_58266,Small Capacity Exhaust,On/off
+SITE_3105,MECH_154096,Recirculating Only,On/off
+SITE_3106,MECH_102648,Unknown,On/off
+SITE_3107,MECH_130377,Recirculating Only,On/off
+SITE_3107,MECH_130377,Unknown,On/off
+SITE_3108,MECH_76389,Small Capacity Exhaust,On/off
+SITE_3109,MECH_104484,Recirculating Only,On/off
+SITE_3110,MECH_158822,Unknown,On/off
+SITE_3111,MECH_42329,Small Capacity Exhaust,On/off
+SITE_3113,MECH_102439,Small Capacity Exhaust,On/off
+SITE_3115,MECH_123977,High Capacity Exhaust,On/off
+SITE_3116,MECH_117054,Recirculating Only,On/off
+SITE_3117,MECH_13599,Recirculating Only,On/off
+SITE_3118,MECH_120893,Recirculating Only,On/off
+SITE_3119,MECH_160164,Recirculating Only,On/off
+SITE_3122,MECH_82307,High Capacity Exhaust,On/off
+SITE_3123,MECH_12509,Recirculating Only,On/off
+SITE_3124,MECH_159023,Small Capacity Exhaust,On/off
+SITE_3125,MECH_22391,Recirculating Only,On/off
+SITE_3126,MECH_165497,High Capacity Exhaust,On/off
+SITE_3127,MECH_154509,Unknown,On/off
+SITE_3128,MECH_111903,Unknown,On/off
+SITE_3129,MECH_147457,Unknown,On/off
+SITE_3130,MECH_92839,Small Capacity Exhaust,On/off
+SITE_3131,MECH_84433,Recirculating Only,On/off
+SITE_3132,MECH_38168,Recirculating Only,On/off
+SITE_3133,MECH_174156,Recirculating Only,On/off
+SITE_3134,MECH_33382,Recirculating Only,On/off
+SITE_3135,MECH_25978,Small Capacity Exhaust,On/off
+SITE_3137,MECH_124817,Recirculating Only,On/off
+SITE_3138,MECH_127102,Recirculating Only,On/off
+SITE_3139,MECH_127394,Recirculating Only,On/off
+SITE_3140,MECH_83428,Recirculating Only,On/off
+SITE_3141,MECH_62000,Recirculating Only,On/off
+SITE_3142,MECH_94355,Small Capacity Exhaust,On/off
+SITE_3144,MECH_30180,Recirculating Only,On/off
+SITE_3145,MECH_91912,Recirculating Only,On/off
+SITE_3146,MECH_18109,Recirculating Only,On/off
+SITE_3147,MECH_90414,Recirculating Only,On/off
+SITE_3148,MECH_20458,Small Capacity Exhaust,On/off
+SITE_3150,MECH_80149,Recirculating Only,On/off
+SITE_3151,MECH_23268,Small Capacity Exhaust,On/off
+SITE_3152,MECH_149074,Small Capacity Exhaust,On/off
+SITE_3153,MECH_172977,Small Capacity Exhaust,On/off
+SITE_3154,MECH_144655,Small Capacity Exhaust,On/off
+SITE_3155,MECH_15646,High Capacity Exhaust,On/off
+SITE_3156,MECH_155275,Small Capacity Exhaust,On/off
+SITE_3157,MECH_174775,Recirculating Only,On/off
+SITE_3158,MECH_169862,Recirculating Only,On/off
+SITE_3159,MECH_94757,Recirculating Only,On/off
+SITE_3160,MECH_58010,Recirculating Only,On/off
+SITE_3161,MECH_49653,Recirculating Only,On/off
+SITE_3162,MECH_20527,Recirculating Only,On/off
+SITE_3163,MECH_92792,Recirculating Only,On/off
+SITE_3164,MECH_166976,Recirculating Only,On/off
+SITE_3165,MECH_15731,Small Capacity Exhaust,On/off
+SITE_3166,MECH_174138,Small Capacity Exhaust,On/off
+SITE_3167,MECH_44704,Small Capacity Exhaust,On/off
+SITE_3168,MECH_65646,Recirculating Only,On/off
+SITE_3169,MECH_165319,Small Capacity Exhaust,On/off
+SITE_3170,MECH_171881,Small Capacity Exhaust,On/off
+SITE_3171,MECH_163272,Recirculating Only,On/off
+SITE_3172,MECH_39364,Small Capacity Exhaust,On/off
+SITE_3174,MECH_58519,Recirculating Only,On/off
+SITE_3175,MECH_39228,Recirculating Only,On/off
+SITE_3176,MECH_65984,High Capacity Exhaust,On/off
+SITE_3177,MECH_123029,Recirculating Only,On/off
+SITE_3178,MECH_50297,High Capacity Exhaust,On/off
+SITE_3179,MECH_48189,Small Capacity Exhaust,On/off
+SITE_3180,MECH_62944,Small Capacity Exhaust,On/off
+SITE_3181,MECH_110834,Small Capacity Exhaust,On/off
+SITE_3182,MECH_157050,Recirculating Only,On/off
+SITE_3183,MECH_78513,Recirculating Only,On/off
+SITE_3187,MECH_82585,Recirculating Only,On/off
+SITE_3189,MECH_75960,Recirculating Only,On/off
+SITE_3190,MECH_131311,Recirculating Only,On/off
+SITE_3191,MECH_447,Small Capacity Exhaust,On/off
+SITE_3193,MECH_138266,Small Capacity Exhaust,On/off
+SITE_3194,MECH_103603,Recirculating Only,None
+SITE_3195,MECH_28871,Small Capacity Exhaust,On/off
+SITE_3198,MECH_46449,Unknown,On/off
+SITE_3199,MECH_146933,Recirculating Only,On/off
+SITE_3201,MECH_93268,Recirculating Only,On/off
+SITE_3202,MECH_126014,Recirculating Only,On/off
+SITE_3207,MECH_152322,Recirculating Only,On/off
+SITE_3209,MECH_6234,Small Capacity Exhaust,On/off
+SITE_3210,MECH_12122,Small Capacity Exhaust,On/off
+SITE_3211,MECH_67903,Recirculating Only,On/off
+SITE_3212,MECH_39615,Small Capacity Exhaust,On/off
+SITE_3213,MECH_57765,Recirculating Only,On/off
+SITE_3214,MECH_90529,Small Capacity Exhaust,On/off
+SITE_3215,MECH_53863,Unknown,On/off
+SITE_3216,MECH_108781,Recirculating Only,On/off
+SITE_3217,MECH_160480,Small Capacity Exhaust,On/off
+SITE_3218,MECH_39987,Small Capacity Exhaust,On/off
+SITE_3219,MECH_4285,Small Capacity Exhaust,On/off
+SITE_3221,MECH_105867,Small Capacity Exhaust,On/off
+SITE_3222,MECH_171968,Recirculating Only,On/off
+SITE_3224,MECH_29361,Small Capacity Exhaust,On/off
+SITE_3225,MECH_169889,Recirculating Only,On/off
+SITE_3226,MECH_174790,High Capacity Exhaust,On/off
+SITE_3227,MECH_67001,Recirculating Only,On/off
+SITE_3228,MECH_53854,Recirculating Only,Programmable thermostat
+SITE_3229,MECH_70700,Recirculating Only,On/off
+SITE_3232,MECH_152472,High Capacity Exhaust,On/off
+SITE_3233,MECH_123358,Recirculating Only,Manual thermostat - Analog
+SITE_3234,MECH_161205,High Capacity Exhaust,On/off
+SITE_3235,MECH_171209,Small Capacity Exhaust,On/off
+SITE_3236,MECH_35581,Recirculating Only,On/off
+SITE_3237,MECH_56755,Small Capacity Exhaust,On/off
+SITE_3238,MECH_89108,Recirculating Only,On/off
+SITE_3239,MECH_120836,Recirculating Only,On/off
+SITE_3240,MECH_75026,Recirculating Only,On/off
+SITE_3243,MECH_76137,Recirculating Only,On/off
+SITE_3244,MECH_71695,Small Capacity Exhaust,On/off
+SITE_3245,MECH_75545,Unknown,On/off
+SITE_3247,MECH_59681,Recirculating Only,On/off
+SITE_3248,MECH_14510,High Capacity Exhaust,On/off
+SITE_3249,MECH_50990,Small Capacity Exhaust,On/off
+SITE_3251,MECH_91236,Recirculating Only,On/off
+SITE_3253,MECH_53892,Recirculating Only,On/off
+SITE_3254,MECH_34817,Recirculating Only,On/off
+SITE_3255,MECH_90672,Small Capacity Exhaust,On/off
+SITE_3256,MECH_74558,Small Capacity Exhaust,On/off
+SITE_3257,MECH_23792,Small Capacity Exhaust,On/off
+SITE_3258,MECH_120089,Small Capacity Exhaust,On/off
+SITE_3259,MECH_143466,Unknown,On/off
+SITE_3261,MECH_68676,Recirculating Only,On/off
+SITE_3264,MECH_31091,Small Capacity Exhaust,On/off
+SITE_3267,MECH_165478,High Capacity Exhaust,On/off
+SITE_3268,MECH_82469,Recirculating Only,On/off
+SITE_3269,MECH_160918,Small Capacity Exhaust,On/off
+SITE_3270,MECH_37882,Small Capacity Exhaust,On/off
+SITE_3271,MECH_34765,Recirculating Only,On/off
+SITE_3272,MECH_112520,Small Capacity Exhaust,On/off
+SITE_3273,MECH_111354,Recirculating Only,On/off
+SITE_3274,MECH_118287,Small Capacity Exhaust,On/off
+SITE_3277,MECH_145644,Small Capacity Exhaust,On/off
+SITE_3278,MECH_113890,Recirculating Only,On/off
+SITE_3279,MECH_99704,Recirculating Only,On/off
+SITE_3280,MECH_5826,Small Capacity Exhaust,On/off
+SITE_3282,MECH_103663,Small Capacity Exhaust,On/off
+SITE_3283,MECH_154397,Recirculating Only,On/off
+SITE_3284,MECH_166241,Small Capacity Exhaust,On/off
+SITE_3286,MECH_143142,Small Capacity Exhaust,On/off
+SITE_3287,MECH_166270,Small Capacity Exhaust,On/off
+SITE_3289,MECH_134072,Small Capacity Exhaust,On/off
+SITE_3290,MECH_106309,Small Capacity Exhaust,On/off
+SITE_3291,MECH_131014,Small Capacity Exhaust,On/off
+SITE_3292,MECH_39715,High Capacity Exhaust,On/off
+SITE_3294,MECH_150852,High Capacity Exhaust,On/off
+SITE_3296,MECH_79987,Small Capacity Exhaust,On/off
+SITE_3298,MECH_121346,Recirculating Only,On/off
+SITE_3299,MECH_44712,Small Capacity Exhaust,On/off
+SITE_3300,MECH_122552,Unknown,On/off
+SITE_3301,MECH_99724,Recirculating Only,On/off
+SITE_3302,MECH_100577,Small Capacity Exhaust,On/off
+SITE_3303,MECH_168336,Recirculating Only,On/off
+SITE_3304,MECH_122151,Small Capacity Exhaust,On/off
+SITE_3305,MECH_101109,Recirculating Only,On/off
+SITE_3306,MECH_162356,Recirculating Only,On/off
+SITE_3307,MECH_15178,Recirculating Only,On/off
+SITE_3310,MECH_110564,Unknown,On/off
+SITE_3311,MECH_27999,Small Capacity Exhaust,On/off
+SITE_3313,MECH_13046,Recirculating Only,On/off
+SITE_3314,MECH_151111,High Capacity Exhaust,On/off
+SITE_3315,MECH_9497,Small Capacity Exhaust,On/off
+SITE_3316,MECH_167563,Recirculating Only,On/off
+SITE_3317,MECH_102262,Recirculating Only,On/off
+SITE_3318,MECH_16397,Recirculating Only,On/off
+SITE_3319,MECH_12514,Recirculating Only,On/off
+SITE_3320,MECH_155419,Recirculating Only,On/off
+SITE_3322,MECH_38618,Recirculating Only,On/off
+SITE_3323,MECH_152112,Recirculating Only,On/off
+SITE_3324,MECH_68365,Small Capacity Exhaust,On/off
+SITE_3325,MECH_163438,Small Capacity Exhaust,On/off
+SITE_3327,MECH_101173,Small Capacity Exhaust,On/off
+SITE_3328,MECH_7554,Recirculating Only,On/off
+SITE_3329,MECH_127200,Recirculating Only,On/off
+SITE_3330,MECH_70466,Unknown,On/off
+SITE_3331,MECH_131199,Small Capacity Exhaust,On/off
+SITE_3332,MECH_49588,Recirculating Only,On/off
+SITE_3334,MECH_30789,Unknown,On/off
+SITE_3335,MECH_114012,Small Capacity Exhaust,On/off
+SITE_3336,MECH_136865,Small Capacity Exhaust,On/off
+SITE_3337,MECH_147117,Small Capacity Exhaust,On/off
+SITE_3338,MECH_34755,Recirculating Only,On/off
+SITE_3339,MECH_141505,Recirculating Only,Manual thermostat - Analog
+SITE_3340,MECH_117557,Recirculating Only,On/off
+SITE_3341,MECH_60863,Small Capacity Exhaust,On/off
+SITE_3342,MECH_153739,High Capacity Exhaust,On/off
+SITE_3343,MECH_27246,Small Capacity Exhaust,On/off
+SITE_3344,MECH_43999,Small Capacity Exhaust,On/off
+SITE_3345,MECH_55377,Small Capacity Exhaust,On/off
+SITE_3346,MECH_74288,Recirculating Only,On/off
+SITE_3347,MECH_129720,High Capacity Exhaust,On/off
+SITE_3348,MECH_128268,Small Capacity Exhaust,On/off
+SITE_3351,MECH_137879,Small Capacity Exhaust,On/off
+SITE_3353,MECH_143533,Small Capacity Exhaust,On/off
+SITE_3354,MECH_89920,Small Capacity Exhaust,On/off
+SITE_3355,MECH_45867,Small Capacity Exhaust,On/off
+SITE_3356,MECH_51134,Small Capacity Exhaust,On/off
+SITE_3357,MECH_10527,Unknown,On/off
+SITE_3358,MECH_117535,Small Capacity Exhaust,On/off
+SITE_3359,MECH_113120,Small Capacity Exhaust,On/off
+SITE_3360,MECH_50228,Recirculating Only,On/off
+SITE_3361,MECH_36490,Small Capacity Exhaust,On/off
+SITE_3362,MECH_40932,Small Capacity Exhaust,On/off
+SITE_3363,MECH_21529,Recirculating Only,On/off
+SITE_3364,MECH_33271,High Capacity Exhaust,On/off
+SITE_3365,MECH_68112,Small Capacity Exhaust,On/off
+SITE_3368,MECH_21325,Small Capacity Exhaust,On/off
+SITE_3370,MECH_107893,Recirculating Only,On/off
+SITE_3371,MECH_6233,Unknown,On/off
+SITE_3372,MECH_26624,Recirculating Only,On/off
+SITE_3373,MECH_133356,Small Capacity Exhaust,On/off
+SITE_3374,MECH_66883,Small Capacity Exhaust,On/off
+SITE_3375,MECH_14607,Recirculating Only,On/off
+SITE_3377,MECH_28975,Recirculating Only,On/off
+SITE_3379,MECH_145708,Small Capacity Exhaust,On/off
+SITE_3380,MECH_21978,Small Capacity Exhaust,On/off
+SITE_3381,MECH_160826,Recirculating Only,On/off
+SITE_3382,MECH_147046,Recirculating Only,On/off
+SITE_3384,MECH_48307,Recirculating Only,On/off
+SITE_3385,MECH_48648,Recirculating Only,On/off
+SITE_3386,MECH_1376,Small Capacity Exhaust,On/off
+SITE_3388,MECH_111016,Small Capacity Exhaust,On/off
+SITE_3389,MECH_126644,Small Capacity Exhaust,On/off
+SITE_3390,MECH_75648,Unknown,On/off
+SITE_3391,MECH_91746,Small Capacity Exhaust,On/off
+SITE_3392,MECH_131962,Recirculating Only,On/off
+SITE_3393,MECH_8777,Small Capacity Exhaust,On/off
+SITE_3395,MECH_155478,Recirculating Only,On/off
+SITE_3396,MECH_172512,Small Capacity Exhaust,On/off
+SITE_3397,MECH_149799,Small Capacity Exhaust,On/off
+SITE_3402,MECH_131276,High Capacity Exhaust,On/off
+SITE_3403,MECH_159712,Recirculating Only,On/off
+SITE_3404,MECH_147030,Small Capacity Exhaust,On/off
+SITE_3405,MECH_136754,Recirculating Only,On/off
+SITE_3407,MECH_161610,Recirculating Only,On/off
+SITE_3408,MECH_62050,Unknown,On/off
+SITE_3409,MECH_86127,Recirculating Only,On/off
+SITE_3410,MECH_28899,Unknown,On/off
+SITE_3411,MECH_163568,Small Capacity Exhaust,On/off
+SITE_3412,MECH_101848,Recirculating Only,On/off
+SITE_3413,MECH_81235,Recirculating Only,On/off
+SITE_3414,MECH_130261,Recirculating Only,On/off
+SITE_3416,MECH_85160,Recirculating Only,On/off
+SITE_3417,MECH_134196,Recirculating Only,On/off
+SITE_3418,MECH_121758,High Capacity Exhaust,On/off
+SITE_3419,MECH_101153,Recirculating Only,On/off
+SITE_3420,MECH_20439,Recirculating Only,On/off
+SITE_3421,MECH_72217,Small Capacity Exhaust,On/off
+SITE_3422,MECH_33824,Small Capacity Exhaust,On/off
+SITE_3423,MECH_43678,Small Capacity Exhaust,On/off
+SITE_3424,MECH_19299,Recirculating Only,On/off
+SITE_3425,MECH_45067,Unknown,On/off
+SITE_3426,MECH_172241,Small Capacity Exhaust,On/off
+SITE_3427,MECH_85811,Small Capacity Exhaust,On/off
+SITE_3429,MECH_13054,Small Capacity Exhaust,On/off

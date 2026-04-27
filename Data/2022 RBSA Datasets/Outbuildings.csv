@@ -1,0 +1,1383 @@
+﻿"SiteID","Outbuilding_Description","Outbuilding_Type","Is_Outbuilding_Occupied","Outbuilding_Occupants","Outbuilding_Sq_Ft","Outbuilding_Sq_Ft_is_Estimated","Outbuilding_Heating_Fuel_Type","Outbuilding_Heating_Fuel_Type_-_Other","Is_Outbuilding_Attached","Outbuilding_Meter_Shared_with_Home","Outbuilding_Meter_Shared_Type","Outbuilding_Meter_Shared_Type_-_Other"
+"SITE_1002","Guesthouse","Other House","No",NA,"350","Estimated","Propane",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1002","Barn","Barn","No",NA,"1400","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric, Propane",NA
+"SITE_1002","Garage","Garage","No",NA,"1200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Propane, Electric",NA
+"SITE_1004","Shop","Shop","No",NA,"1040","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric, Gas",NA
+"SITE_1007","Shop","Shop","No",NA,"660","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1008","Garage","Garage","No",NA,"800","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_101","Detached garage","Garage","No",NA,"400","Measured or Known","Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1012","Shop","Shop","No",NA,"1344","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1012","Shed","Shed","No",NA,"50","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_1013","Shop","Shop","No",NA,"1700","Estimated","Propane",NA,"No","Meter shared with main residence","Electric, Propane",NA
+"SITE_1013","Garage/wood shop","Mixed Use","Yes","1","1000","Estimated","Propane",NA,"No","Meter shared with main residence","Electric, Propane",NA
+"SITE_1014","Shed","Shed","No",NA,"50","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1017","Barn","Barn","No",NA,"400","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1018","Detached garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1022","Shed","Shed","No",NA,"68","Measured or Known","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_1023","Studio","Other","No",NA,"300","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_1023","Barn","Barn","No",NA,"3090","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1026","Shed","Shed","No",NA,"96","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1028","Shop","Shop","Yes","3","500","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1028","Garage","Garage","No",NA,"400","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1029","Garage","Garage","No",NA,"750","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1029","Shed","Shed","No",NA,"100","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_103","Shed","Shed","No",NA,"180","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_103","Tower","Other","No",NA,"300","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_103","Old house","Other House","No",NA,"2100","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_1032","Detached","Other","No",NA,"300","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1033","Shed","Shed","No",NA,"90","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1034","Shed","Shed","No",NA,"80","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1034","Shop","Shop","No",NA,"900","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1037","Chicken house","Coop","No",NA,"64","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1037","Shed 1","Shed","No",NA,"80","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1037","Shed 2","Shed","No",NA,"80","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1037","Shed 3","Shed","No",NA,"80","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1040","Detached garage","Garage","No",NA,"600","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1042","Detached","Other","No",NA,"600","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1044","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1044","Utility shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1045","Shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1045","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1048","Shed 2","Shed","No",NA,"336","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1048","Shed 1","Shed","No",NA,"192","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1048","Shed 3","Shed","No",NA,"1000","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_105","Poolhouse","Pool house","No",NA,"200","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_1050","Barn + apt unit","Barn","Yes","1","1200","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_1051","Garage","Garage","No",NA,"450","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1054","Mini cabin","Cabin","Yes","1","Unknown","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_1055","Garage","Garage","No",NA,"200","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1056","Garage","Garage","No",NA,"720","Measured or Known","Wood",NA,"No","Own meter",NA,NA
+"SITE_106","Shop","Shop","No",NA,"1500","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_106","Machine shed","Shed","No",NA,"560","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1060","Shed","Shed","No",NA,"96","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1060","Fort","Other","No",NA,"96","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1061","Detached","Other","No",NA,"736","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1061","Greenhouse","Greenhouse","No",NA,"36","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1063","She’d","Shed","No",NA,"96","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1065","Sauna","Other","No",NA,"40","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1066","Garage","Garage","No",NA,"600","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1067","Shop","Shop","No",NA,"960","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1068","Detatched garage","Garage","No",NA,"400","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1072","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1073","Shed 1","Shed","No",NA,"100","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1073","Shed 2","Shed","No",NA,"100","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1074","Boat garage","Boat house","No",NA,"480","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1074","Car garage + art studio","Garage","No",NA,"800","Measured or Known","Propane",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1076","Shed","Shed","No",NA,"360","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1077","Barn","Barn","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1079","Shed 1","Shed","No",NA,"60","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1079","Shed 2","Shed","No",NA,"96","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1079","Detached garage","Garage","No",NA,"750","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_108","Workshop","Shop","No",NA,"200","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1080","Barn","Barn","No",NA,"800","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1083","Shed","Shed","No",NA,"120","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1085","Shed","Shed","No",NA,"200","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_1086","Shed","Shed","No",NA,"64","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1088","Shed","Shed","No",NA,"140","Measured or Known","Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1089","Shop","Shop","No",NA,"2000","Estimated","Electric",NA,"No","Meter shared with main residence","Electric, Water",NA
+"SITE_1089","Calf barn","Barn","No",NA,"900","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1089","Red shed","Shed","No",NA,"2400","Estimated","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_1089","Hoop barn","Barn","No",NA,"5000","Estimated","Electric",NA,"No","Meter shared with main residence","Electric, Water",NA
+"SITE_1090","Garage","Garage","No",NA,"576","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1092","Shed","Shed","No",NA,"96","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1093","Garage thing","Garage","No",NA,"400","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1094","Garage","Garage","No",NA,"1852","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1095","Shed","Shed","No",NA,"80","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1095","Shed","Shed","No",NA,"30","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1096","Pump house","Pump Room","No",NA,"Unknown",NA,"Unknown",NA,"Unknown","Unknown",NA,NA
+"SITE_1097","Shed","Shed","No",NA,"240","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1097","Generator shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1099","Shed","Shed","No",NA,"Unknown",NA,"None",NA,"No","No meter/No power",NA,NA
+"SITE_11","Shed","Shed","No",NA,"64","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_110","Shed","Shed","No",NA,"94","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_1100","Shop","Shop","No",NA,"1000","Estimated","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1102","Shed","Shed","No",NA,"64","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1107","Shed","Shed","No",NA,"100","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1108","Garage","Garage","No",NA,"400","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1109","Shed","Shed","No",NA,"100","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1109","Coop","Coop","No",NA,"64","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1109","Shed","Shed","No",NA,"36","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1109","Metal shed","Shed","No",NA,"120","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1109","Bike shed","Shed","Unknown","Unknown","80","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_111","Shed","Shed","No",NA,"60","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1110","Shop","Shop","No",NA,"2080","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1112","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1112","Shed 2","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1117","Storage","Other","No",NA,"35","Measured or Known","Wood",NA,"Yes","No meter/No power",NA,NA
+"SITE_1118","Shed 1","Shed","No",NA,"130","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1118","Shed 2","Shed","No",NA,"16","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1118","Shed 3","Shed","No",NA,"60","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_112","Shed","Shed","No",NA,"640",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1121","Two car garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1121","Shed 1","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1121","Shed 2","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1122","Shed","Shed","No",NA,"130","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1122","Farm equipment","Other","No",NA,"1125","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1123","Garage","Garage","No",NA,"625","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1123","Shop","Shop","No",NA,"1250","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1124","Boathouse","Boat house","No",NA,"200","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1126","Shed","Shed","No",NA,"288","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1126","Detached","Other","No",NA,"775","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric, Water",NA
+"SITE_1127","Shed","Shed","No",NA,"36","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1128","Pool house","Pool house","No",NA,"240","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1132","Storage","Other","No",NA,"50","Measured or Known","Wood",NA,"Yes","No meter/No power",NA,NA
+"SITE_1133","Wood shop","Shop","No",NA,"240","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1133","Garage","Garage","No",NA,"792","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1133","Shed","Shed","No",NA,"80","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1133","Greenhouse","Greenhouse","No",NA,"104","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1134","Garage","Garage","No",NA,"1200","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1134","Stove house","Other","No",NA,"100","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1135","Garage","Garage","No",NA,"462","Measured or Known","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_1136","Shed","Shed","No",NA,"50","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1138","Pump house","Pump Room","No",NA,"700","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1138","Garage","Garage","No",NA,"700","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1139","Greenhouse","Greenhouse","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1139","Shop","Shop","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1140","Barn","Barn","No",NA,"1032","Measured or Known","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_1140","Chicken coop","Coop","No",NA,"77","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1140","Goat shed","Shed","No",NA,"74","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1140","Cistern","Other","No",NA,"47","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1140","Greenhouse","Greenhouse","No",NA,"85","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1142","Sauna","Other","No",NA,"120","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1143","Shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1144","Shed","Shed","No",NA,"112","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1147","Shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1147","Garage","Garage","No",NA,"Unknown",NA,"Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1149","Shed","Shed","No",NA,"180","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_115","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1150","Garage","Garage","No",NA,"336","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1150","Garage 2","Garage","No",NA,"240","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1151","Garage","Garage","No",NA,"1728","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1153","Wood shed","Shed","No",NA,"196","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1155","Shed","Shed","No",NA,"81","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1159","Shop","Shop","No",NA,"750","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1159","Barn","Barn","No",NA,"2000","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_116","Garage","Garage","No",NA,"360","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1160","Barn","Barn","No",NA,"1440","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1160","Detatched garage","Garage","No",NA,"878","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1163","She-shed","Shed","No",NA,"96","Measured or Known","Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1163","Mancave","Other","No",NA,"372","Measured or Known","Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1167","Shed","Shed","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1167","Car port","Garage","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1168","Mother in law","Other House","No",NA,"400","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1171","Shed","Shed","No",NA,"80","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1172","Shed","Shed","No",NA,"160","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1174","Back garage","Garage","No",NA,"450","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1176","Garage","Garage","No",NA,"600","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1179","Garage","Garage","No",NA,"736","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_118","Shed","Shed","No",NA,"16","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1180","Shed","Shed","No",NA,"660","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1180","Barn","Barn","No",NA,"120","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1184","Shed","Shed","No",NA,"100","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1185","Shop","Shop","No",NA,"1200","Estimated","Wood",NA,"No","Meter shared with main residence","Electric, Gas",NA
+"SITE_1185","Shed","Shed","No",NA,"480","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1187","Pottery shop","Shop","No",NA,"240","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1187","Garage","Garage","No",NA,"720","Estimated","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1188","Pump house","Pump Room","No",NA,"96","Estimated","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1189","Garage","Garage","No",NA,"400","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1190","Shed","Shed","No",NA,"80","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1190","Shop","Shop","No",NA,"200","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1193","Wood","Other","No",NA,"145","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1193","Metal","Other","No",NA,"110","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1194","Garage","Garage","No",NA,"350","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1199","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1200","Storage","Other","No",NA,"110","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1201","Shed","Shed","No",NA,"72","Estimated","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_1202","Shop","Shop","No",NA,"1200","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1203","Shed","Shed","No",NA,"120","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1205","Garage","Garage","No",NA,"1600","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1205","Barn","Barn","No",NA,"1800","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1208","Shop","Shop","No",NA,"1200","Estimated","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_121","Garden shed / chicken coop","Mixed Use","No",NA,"64","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_1210","Garage","Garage","Yes","1","760","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric, Propane",NA
+"SITE_1210","Storage","Other","No",NA,"112","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1212","Shed","Shed","No",NA,"30","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1213","Shop","Shop","No",NA,"138","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1214","Garage","Garage","No",NA,"400","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1215","Shed","Shed","No",NA,"160","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1217","Detached","Other","No",NA,"400","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1218","Garage","Garage","No",NA,"773","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1220","Unknown","Other","No",NA,"Unknown","Estimated","Unknown",NA,"Unknown","Unknown",NA,NA
+"SITE_1221","Garage","Garage","No",NA,"1248","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1227","Garage","Garage","No",NA,"800","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1227","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1227","Tin shed","Shed","No",NA,"600","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1230","Garage","Garage","No",NA,"Unknown","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1233","Shed","Shed","No",NA,"80","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1235","Storage shed","Shed","No",NA,"80","Measured or Known","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_1235","Workshop","Shop","No",NA,"200","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1238","Shed 1","Shed","No",NA,"80","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1238","Shed 2","Shed","No",NA,"Unknown",NA,"None",NA,"No","No meter/No power",NA,NA
+"SITE_124","Barn","Barn","No",NA,"2500","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_124","Tool shed","Shed","No",NA,"150","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_124","Block house","Other","No",NA,"120","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1241","Cabin","Cabin","No",NA,"300","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1242","Storage","Other","No",NA,"13","Measured or Known","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_1246","Shed/green house","Mixed Use","No",NA,"231","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1248","Shop","Shop","No",NA,"875","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1249","Garage","Garage","No",NA,"500","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_125","Garage","Garage","No",NA,"300","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1250","Detached","Other","No",NA,"750","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1251","Shop","Shop","No",NA,"2460","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1251","Chicken 1","Coop","No",NA,"48","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1251","Chicken 2","Coop","No",NA,"64","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1251","Shed 1","Shed","No",NA,"200","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1251","Shed 2","Shed","No",NA,"100","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1253","Shed","Shed","No",NA,"48","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1256","Double garage","Garage","No",NA,"Unknown",NA,"Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1256","Double garage that’s a workshop","Shop","No",NA,"Unknown",NA,"Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1256","Pump house","Pump Room","No",NA,"Unknown",NA,"Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1256","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1256","Cottage","Other House","No",NA,"Unknown",NA,"Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1256","Bunk","Other House","No",NA,"Unknown",NA,"Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1258","Garage","Garage","No",NA,"200","Estimated","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1259","Green house","Greenhouse","No",NA,"112","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1261","Pole barn","Barn","No",NA,"1431","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1262","Shed","Shed","No",NA,"80","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1263","Shop","Shop","No",NA,"1600","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1264","Garage","Garage","No",NA,"1000","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1266","Barn","Barn","No",NA,"480","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1267","Shed","Shed","No",NA,"112","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1268","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1269","Fruitroom/wood storage","Mixed Use","No",NA,"338","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1269","Outhouse","Other","No",NA,"36","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric, Water",NA
+"SITE_1269","Tool shed","Shed","No",NA,"46","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1269","Garage","Garage","No",NA,"700","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1269","Sauna house","Other","No",NA,"54","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1269","Guest cabin","Cabin","No",NA,"120","Measured or Known","Unknown",NA,"No","No meter/No power","Electric",NA
+"SITE_127","Pump house","Pump Room","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_127","Barn","Barn","No",NA,"900","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1274","Shed","Shed","No",NA,"48","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1274","Garage","Garage","No",NA,"750","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1275","Barn","Barn","No",NA,"Unknown",NA,"Unknown",NA,"Unknown","Unknown",NA,NA
+"SITE_1276","Barn","Barn","No",NA,"2600","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_1277","Shop","Shop","No",NA,"1067","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1278","Detached","Other","No",NA,"400","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1278","Shed","Shed","No",NA,"100","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1279","Shed","Shed","No",NA,"40","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1279","Garage","Garage","No",NA,"360","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1280","Shop","Shop","No",NA,"1728","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1281","Detached garage","Garage","No",NA,"1500","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1282","Barn","Barn","No",NA,"1800","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1283","Shop","Shop","No",NA,"512","Measured or Known","Fuel oil/kerosene",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1284","Shed","Shed","No",NA,"600","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1286","Shed","Shed","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1288","Shed","Shed","No",NA,"80","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1288","Green shed","Shed","No",NA,"160","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1289","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1290","Green house","Greenhouse","No",NA,"112","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1292","Shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1293","Pump","Pump Room","No",NA,"35","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1293","Shop","Shop","No",NA,"800","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1293","Barn","Barn","No",NA,"1842","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1294","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1294","Hay shed","Shed","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1295","Garage","Garage","No",NA,"450","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1295","Shop","Shop","No",NA,"700",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1295","Barn","Barn","No",NA,"780","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1296","Shop","Shop","No",NA,"1109","Measured or Known","Wood",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_1296","Horse barn","Barn","No",NA,"933.14","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1297","Shop","Shop","No",NA,"156","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1297","Well house","Other","No",NA,"16","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1297","Well house","Other","No",NA,"20","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1299","Garage","Garage","No",NA,"Unknown",NA,"Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_130","Barn","Barn","No",NA,"2200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1302","Studio","Other","No",NA,"400","Measured or Known","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_1303","Garage","Garage","No",NA,"2500","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1305","Garden shed","Shed","No",NA,"120","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1306","Shop","Shop","No",NA,"600","Estimated","Natural Gas",NA,"No","Meter shared with main residence","Electric, Gas",NA
+"SITE_1309","Shed","Shed","No",NA,"95.1","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_131","Shed","Shed","No",NA,"31","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1310","Shop","Shop","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1316","Garage and studio above","Mixed Use","Yes","1","1200","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1318","Shed 1","Shed","No",NA,"80","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_1318","Shed 2","Shed","No",NA,"480","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1319","Pump house","Pump Room","No",NA,"80","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1319","Tool shed","Shed","No",NA,"48","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1321","Garage","Garage","No",NA,"200","Measured or Known","Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1323","Shed","Shed","No",NA,"288","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1325","Shop","Shop","No",NA,"2000","Estimated","Natural Gas",NA,"No","Own meter",NA,NA
+"SITE_1326","Detached garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1326","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1327","Detached garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1328","Detached garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1329","Barn","Barn","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1330","Shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1332","Shop","Shop","No",NA,"864","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1333","Shed","Shed","No",NA,"120","Estimated","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_1334","Unknown","Other","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_134","Shed","Shed","No",NA,"48","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_1341","Shed 1","Shed","No",NA,"40","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1341","Shed 2","Shed","No",NA,"50","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1342","Garden shed","Shed","No",NA,"170","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1343","Greenhouse","Greenhouse","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1343","Pum house 1","Pump Room","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1343","Pump house 2","Pump Room","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1346","Shed","Shed","No",NA,"15","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1347","Detached garage","Garage","No",NA,"480","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1349","Pump house","Pump Room","No",NA,"Unknown",NA,"Unknown",NA,"No","Own meter",NA,NA
+"SITE_1349","Shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1349","Greenhouse","Greenhouse","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1350","Garage","Garage","No",NA,"210","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1354","Shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1357","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_136","Detached garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1361","Guest house","Other House","No",NA,"1000","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1361","Observatory","Other","No",NA,"150","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1365","Shop","Shop","No",NA,"576","Measured or Known","Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1365","Garden shed","Shed","No",NA,"160","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1365","Shed","Shed","No",NA,"180","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_137","Barn","Barn","No",NA,"360","Measured or Known","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_1370","Chicken coop","Coop","No",NA,"100","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1370","Shed","Shed","No",NA,"800","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1371","Shed","Shed","No",NA,"80","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1376","Shop","Shop","No",NA,"750","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1379","Garage","Garage","No",NA,"840","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1380","Barn","Barn","No",NA,"400","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1382","Garage","Garage","No",NA,"900","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1383","Rental unit","Other","Yes","1","600","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_1384","Pump house","Pump Room","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1385","Garage","Garage","No",NA,"200","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1391","Shed","Shed","No",NA,"80","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_1392","Garage","Garage","No",NA,"300","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1393","Garage","Garage","No",NA,"600","Estimated","None",NA,"No","Own meter",NA,NA
+"SITE_1395","Shop","Shop","No",NA,"2000","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1395","Garage upper guest house","Other","No",NA,"865","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1396","Garage","Garage","No",NA,"960","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1396","Shop","Shop","No",NA,"1296","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1396","Barn","Barn","No",NA,"2304","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1396","Guest hut","Other","Yes","1","48","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1399","Barn","Barn","No",NA,"1500","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_140","Shed","Shed","No",NA,"50","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1400","Shed","Shed","No",NA,"60","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_1401","Garage","Garage","No",NA,"80","Estimated","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1402","Detached garage","Garage","No",NA,"1000","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1402","Garden shed","Shed","No",NA,"400","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1403","Shop","Shop","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1404","Shed","Shed","No",NA,"48","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_1404","Shed 2","Shed","No",NA,"24","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_1406","Shed","Shed","No",NA,"96","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_141","Greenhouse","Greenhouse","No",NA,"64","Measured or Known","Unknown",NA,"Unknown","Meter shared with main residence","Electric",NA
+"SITE_1410","Barn","Barn","No",NA,"1500","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1411","Shop","Shop","No",NA,"1200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1412","Garage","Garage","No",NA,"600","Measured or Known","Electric",NA,"No","Meter shared with main residence",NA,NA
+"SITE_1413","Barn","Barn","No",NA,"800","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1413","Chicken house","Coop","No",NA,"240","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1413","Woodshed","Shed","No",NA,"450","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1413","Quonset","Other","No",NA,"2400","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1413","Shop","Shop","No",NA,"3500","Estimated","Electric",NA,"No","Meter shared with main residence","Electric, Water",NA
+"SITE_1414","Shed 1","Shed","No",NA,"80","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1414","Shed 2","Shed","No",NA,"200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1415","Garage","Garage","No",NA,"370","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1416","Shed","Shed","No",NA,"364","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1416","Horse stable","Barn","No",NA,"616","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1418","Garage","Garage","No",NA,"527","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1418","Cabin","Cabin","No",NA,"400","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1418","Shed","Shed","No",NA,"208","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1418","Barn","Barn","No",NA,"500","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_1418","Shop","Shop","No",NA,"2400","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_1418","Pump house","Pump Room","No",NA,"36","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_1418","Garden shed","Shed","No",NA,"48","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1419","Shop","Shop","No",NA,"1638","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1421","Gymnasium","Other","No",NA,"6000","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_1421","Cottage","Other House","Yes","2","1200","Estimated","Propane",NA,"No","Unknown",NA,NA
+"SITE_1421","Garden shed","Shed","No",NA,"1800","Estimated","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1421","Diesel generator shed","Shed","No",NA,"64","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1424","Electronics shop","Shop","No",NA,"240","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1424","Shop","Shop","No",NA,"960","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1424","Pump house","Pump Room","No",NA,"64","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1427","Garage","Garage","No",NA,"400","Estimated","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1428","Shed 1","Shed","No",NA,"80","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1428","Shed 2","Shed","No",NA,"100","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_143","Garage","Garage","No",NA,"250","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1431","Garage","Garage","No",NA,"300","Estimated","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1432","Cabin","Cabin","No",NA,"1000","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_1432","Shop","Shop","No",NA,"Unknown","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1432","Pump house","Pump Room","No",NA,"100","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1433","Shop","Shop","No",NA,"1200","Estimated","Electric",NA,"No","Own meter","Electric",NA
+"SITE_1433","Shed","Shed","No",NA,"130","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1434","Garage","Garage","No",NA,"198","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1435","Shed 1","Shed","No",NA,"200","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1435","Shed 2","Shed","No",NA,"320","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1435","Shed","Shed","No",NA,"200","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1435","Shop","Shop","No",NA,"1200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1436","Garage","Garage","No",NA,"300","Estimated","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1436","Shop","Shop","No",NA,"4800","Estimated","Wood",NA,"No","Own meter",NA,NA
+"SITE_1436","Horse barn","Barn","No",NA,"4800","Estimated","Wood",NA,"No","Unknown",NA,NA
+"SITE_1437","Shop","Shop","No",NA,"600","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1437","Barn","Barn","No",NA,"300","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1438","Shop","Shop","No",NA,"1200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1440","Garage","Garage","Yes","2","1552","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1442","Barn","Barn","No",NA,"1000","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1443","Wood shed","Shed","No",NA,"64","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1443","Shop","Shop","No",NA,"576","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1443","Pump house","Pump Room","No",NA,"120","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1444","Cabin","Cabin","No",NA,"120","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1444","Shop","Shop","No",NA,"336","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1445","Shop","Shop","No",NA,"1200","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1446","Firewood","Other","No",NA,"300","Estimated","Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1447","Garage","Garage","No",NA,"672","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_1449","Shop","Shop","No",NA,"1200","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1450","Ga","Other","Unknown","Unknown","Unknown",NA,"Unknown",NA,"Unknown","Unknown",NA,NA
+"SITE_1452","Shop","Shop","No",NA,"750","Estimated","Electric",NA,"No","Unknown",NA,NA
+"SITE_1453","Shop","Shop","No",NA,"850","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1455","Garage/shop","Mixed Use","No",NA,"750","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1455","Shed","Shed","No",NA,"144","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1457","Trailer","Other","Yes","1","230","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_146","Office","Other","Yes","1","208","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1460","Garage","Garage","No",NA,"378.5","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1461","Shop","Shop","No",NA,"1250","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1462","Garage","Garage","No",NA,"676","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1463","Barn","Barn","No",NA,"700","Estimated","None",NA,"No","Own meter",NA,NA
+"SITE_1463","Pool shed","Shed","No",NA,"20","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1464","Shed","Shed","No",NA,"90","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1466","Shed","Shed","No",NA,"120","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1467","Shop","Shop","No",NA,"4500","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1468","Shop","Shop","No",NA,"2400","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1469","Garage","Garage","No",NA,"600","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_147","Shed","Shed","No",NA,"96","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_1470","Garage","Garage","No",NA,"Unknown",NA,"Unknown",NA,"Unknown","Unknown",NA,NA
+"SITE_1473","Garden shed","Shed","No",NA,"240","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1474","Shed","Shed","No",NA,"192","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1474","Garden shed","Shed","No",NA,"24","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1475","Garage","Garage","No",NA,"250","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1476","Shed","Shed","No",NA,"49","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1478","Garage","Garage","No",NA,"484","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1479","Shop","Shop","No",NA,"900","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1479","Cabin","Cabin","No",NA,"350","Estimated","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1481","Barn","Barn","No",NA,"10000","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1482","Garage","Garage","No",NA,"400","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1483","Cottage","Other House","No",NA,"960","Measured or Known","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_1483","Barn","Barn","No",NA,"1200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1486","Detached garag","Garage","No",NA,"729","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1486","Barn","Barn","No",NA,"4550","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1489","Garage","Garage","No",NA,"Unknown",NA,"Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_149","Shed","Shed","No",NA,"36","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_1490","Garage","Garage","No",NA,"400","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1491","Garage","Garage","No",NA,"1200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1491","Shed 1","Shed","No",NA,"75","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1491","Shed","Shed","No",NA,"150","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1494","Garage","Garage","No",NA,"750","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1496","Detached garage","Garage","No",NA,"720","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1496","Barn","Barn","No",NA,"1080","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1496","Shop","Shop","No",NA,"3600","Measured or Known","Gas/oil",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1496","Truck park","Garage","No",NA,"3960","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1499","Garage","Garage","No",NA,"1000","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1499","Carriage house","Garage","No",NA,"1800","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1499","But no house","Other","No",NA,"96","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1500","Garage","Garage","No",NA,"600","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1500","Utility shed","Shed","No",NA,"600","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1502","Shed","Shed","No",NA,"100","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1503","Shed 1","Shed","No",NA,"80","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1503","Shed 2","Shed","Unknown","Unknown","80","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1503","Shed 3","Shed","Unknown","Unknown","200","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1504","Garage","Garage","No",NA,"385.4","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1505","Wood shed","Shed","No",NA,"36","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1505","Boat house","Boat house","No",NA,"320","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_1505","Garage","Garage","No",NA,"409","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1506","Garage","Garage","No",NA,"1000","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_151","Greenhouse","Greenhouse","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1514","Shop","Shop","No",NA,"1900","Estimated","Wood",NA,"No","Own meter","Electric",NA
+"SITE_1514","Guest house","Other House","No",NA,"600","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1514","Shed","Shed","No",NA,"200","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1515","Detached garage","Garage","No",NA,"750","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1517","Shop","Shop","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1518","Shop","Shop","No",NA,"800","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1519","Shop","Shop","No",NA,"1000","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1519","Shed","Shed","No",NA,"96","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_152","Shed","Shed","No",NA,"160","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1522","Detached","Other","No",NA,"400","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1525","Garage","Garage","No",NA,"1084","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1529","Shop","Shop","No",NA,"2400","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_1531","Shed","Shed","No",NA,"144","Estimated","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_1531","Garage","Garage","No",NA,"220","Measured or Known","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_1532","Barn","Barn","No",NA,"2000","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1532","Shed","Shed","No",NA,"720","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1535","Shed","Shed","No",NA,"220","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1536","Shed","Shed","No",NA,"100",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1537","Guest accessory building","Other House","No",NA,"2000","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_1538","Shop","Shop","No",NA,"1200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1539","Shed","Shed","No",NA,"145","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_154","Shed","Shed","No",NA,"36","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1541","Shed 1","Shed","No",NA,"100","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1541","Shed 2","Shed","No",NA,"64","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1543","Barn","Barn","No",NA,"2768","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_1543","Garage","Garage","No",NA,"1920","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1545","Barn","Barn","No",NA,"300","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1545","Chicken shed","Shed","No",NA,"320","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1546","Pole barn","Barn","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1546","Barn","Barn","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1548","Shop","Shop","No",NA,"1200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1549","Garage in back","Garage","No",NA,"1350","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_1552","Shop","Shop","No",NA,"2280","Measured or Known","None",NA,"No","Own meter",NA,NA
+"SITE_1552","Garage","Garage","No",NA,"660","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1552","Pump house","Pump Room","No",NA,"35","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1552","Wood shed","Shed","No",NA,"230","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1554","Shop","Shop","No",NA,"2300","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_1554","Guest cabin","Cabin","No",NA,"96","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1554","Shed","Shed","No",NA,"432","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_1556","Garage","Garage","No",NA,"792","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1559","Garage","Garage","No",NA,"300","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1560","Shipping container","Other","No",NA,"320","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1561","Old house","Other House","No",NA,"1200","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_1561","Pump","Pump Room","No",NA,"180","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_1561","Barn","Barn","No",NA,"1500","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1561","Shed","Shed","No",NA,"150","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1561","Machine","Other","No",NA,"1500","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1561","Garage","Garage","No",NA,"1400","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_1562","Barn","Barn","No",NA,"540","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1562","Shed/tiny house","Mixed Use","Yes","1","240","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1564","Shed","Shed","No",NA,"1050","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1566","Barn","Barn","No",NA,"200","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1568","Shop","Shop","No",NA,"1200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1573","Detached garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1574","Detached garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1575","Apartment (detached)","Apartment","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1576","Shed","Shed","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1577","Work shop","Shop","No",NA,"1680","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1579","Pool shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1579","Shop","Shop","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_158","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1583","Shop","Shop","No",NA,"3420",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1584","Shop","Shop","No",NA,"1536","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1585","Garage","Garage","No",NA,"Unknown",NA,"None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1590","Shop","Shop","No",NA,"400","Estimated","Natural Gas",NA,"No","Meter shared with main residence","Electric, Gas",NA
+"SITE_1594","Shed","Shed","No",NA,"70","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1595","Shed","Shed","No",NA,"250","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1598","Detached garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1598","House pump","Pump Room","No",NA,"Unknown","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1599","Yurt","Other House","Yes","Unknown","320","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1599","Art studio","Other","Yes","Unknown","190","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_160","Carport","Garage","No",NA,"104","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_160","Pump house","Pump Room","No",NA,"80","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1603","Shop","Shop","No",NA,"3600","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1604","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1604","Greenhouse","Greenhouse","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1605","Shed","Shed","No",NA,"24","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1606","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1609","Garage","Garage","No",NA,"250","Measured or Known","None",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_1611","Shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1613","Pump house","Pump Room","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1614","Shop/garage","Mixed Use","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1616","Shop","Shop","No",NA,"250","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1621","Shed","Shed","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1624","Garage","Garage","No",NA,"670","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1627","Detached garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1627","Barn","Barn","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1630","Storage shed","Shed","No",NA,"200","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_1632","Shop","Shop","No",NA,"360","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1634","Shop","Shop","No",NA,"3200","Measured or Known","Natural Gas",NA,"No","Meter shared with main residence","Electric, Gas",NA
+"SITE_1637","Detached garage","Garage","No",NA,"Unknown",NA,"Unknown",NA,"Unknown","Unknown",NA,NA
+"SITE_1638","Unknown","Other","No",NA,"Unknown",NA,"Unknown",NA,"Unknown","Unknown",NA,NA
+"SITE_1639","Shed","Shed","Unknown","Unknown","Unknown",NA,"Unknown",NA,"Unknown","Unknown",NA,NA
+"SITE_1645","Shed","Shed","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_168","Barn","Barn","No",NA,"6000","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_168","Pump house","Pump Room","No",NA,"10","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_17","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1727","Shed","Shed","No",NA,"96","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1728","Shed","Shed","No",NA,"1098","Measured or Known","Propane",NA,"No","Own meter",NA,NA
+"SITE_173","Garden shed","Shed","No",NA,"40","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1731","Barn","Barn","No",NA,"2400","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1731","Travel trailer","Other","Yes","1","800","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1732","Garage","Garage","No",NA,"400","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1736","Playhouse","Other","No",NA,"48","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1738","Garage","Garage","No",NA,"200","Estimated","Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1740","Garage","Garage","No",NA,"286","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1741","Studio","Other","No",NA,"160","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1743","Shop","Shop","No",NA,"1400","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_1745","Garage","Garage","No",NA,"230","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1754","Garage","Garage","No",NA,"800","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1757","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1758","Loft/shop","Mixed Use","Yes","1","Unknown",NA,"Unknown",NA,"No","Meter shared with main residence","Electric, Propane",NA
+"SITE_176","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1762","Shed","Shed","No",NA,"54","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1763","Shed","Shed","No",NA,"60","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1768","Shed","Shed","No",NA,"175","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1768","Shop","Shop","No",NA,"88","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1768","Play","Other","No",NA,"88","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1770","Garage","Garage","No",NA,"247","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1771","Main residence. This building is a secondary home.","Other House","Yes","4","1400","Estimated","Electric",NA,"No","Meter shared with main residence","Electric, Water",NA
+"SITE_1771","Shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1771","Chicken coop","Coop","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1772","Shed","Shed","No",NA,"90","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1776","Shed","Shed","No",NA,"605","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1776","Shed 2","Shed","No",NA,"42","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1777","Tent","Other","Yes","Unknown","32","Measured or Known","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_1778","Shop","Shop","No",NA,"800","Measured or Known","Other","pellet stove","No","Meter shared with main residence","Electric, Gas",NA
+"SITE_1782","Mancave/shop","Mixed Use","No",NA,"1280","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1785","Well house","Other","No",NA,"120","Measured or Known","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_1785","Shop","Shop","No",NA,"1200","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_179","Shed","Shed","No",NA,"200","Estimated","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_1792","Shed","Shed","No",NA,"240","Measured or Known","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_1796","Shop","Shop","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1796","Well house","Other","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1797","Shed","Shed","No",NA,"100","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1798","Detached garage","Garage","No",NA,"Unknown","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1803","Shed","Shed","No",NA,"120","Measured or Known","Unknown",NA,"No","Meter shared with main residence",NA,NA
+"SITE_1805","Detached garage","Garage","No",NA,"Unknown","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1806","Shop","Shop","No",NA,"625","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1810","Shop","Shop","No",NA,"576","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1810","Cold storage","Other","No",NA,"360","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1813","Sauna","Other","No",NA,"25","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1815","Shed","Shed","No",NA,"80","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_182","Barn","Barn","No",NA,"800","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_182","Shop","Shop","No",NA,"150",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1821","Second garage","Garage","No",NA,"720","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1822","Big shed","Shed","No",NA,"1440","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1822","Metal shed","Shed","No",NA,"80","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1822","Shed","Shed","No",NA,"140","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1822","Cabin","Cabin","No",NA,"160","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1823","Shed","Shed","No",NA,"70","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1825","Shed","Shed","No",NA,"150","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1829","Barn","Barn","No",NA,"288","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1831","Shop","Shop","No",NA,"1200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1833","Second garage","Garage","No",NA,"100","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1834","Shop","Shop","No",NA,"3200","Measured or Known","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_1838","Garage","Garage","No",NA,"600","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1839","Garsge","Garage","No",NA,"1200","Measured or Known","Electric",NA,"Yes","Own meter",NA,NA
+"SITE_1841","Shop","Shop","No",NA,"4800","Measured or Known","Gas/oil",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1841","Barn","Barn","No",NA,"Unknown","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1842","Barn","Barn","No",NA,"1800","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1844","Shed","Shed","No",NA,"200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1846","Shop","Shop","No",NA,"2000","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1847","Shop","Shop","No",NA,"864","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_185","Shop","Shop","No",NA,"500","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1851","Shed","Shed","No",NA,"120","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1853","Work shop","Shop","No",NA,"1500","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_186","Garage","Garage","No",NA,"300","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1861","Outhouse","Other","No",NA,"48","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1861","Barn","Barn","No",NA,"200","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1861","Cabin","Cabin","Yes","1","225","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_1863","Garage","Garage","No",NA,"Unknown",NA,"Natural Gas",NA,"No","Own meter",NA,NA
+"SITE_1864","Shed","Shed","No",NA,"120","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1865","Garage","Garage","No",NA,"488.22",NA,"Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1866","Shed","Shed","No",NA,"12","Estimated","Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1868","Shem","Shed","No",NA,"200","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_187","Garage","Garage","No",NA,"Unknown",NA,"Unknown",NA,"No","Unknown",NA,NA
+"SITE_1874","Chicken house","Coop","No",NA,"220","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1874","Barn","Barn","No",NA,"308","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1876","Shop","Shop","No",NA,"1200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1877","Garage","Garage","No",NA,"Unknown",NA,"Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1879","Greenhouse","Greenhouse","No",NA,"2300","Measured or Known","Propane",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1879","Processing shed","Shed","No",NA,"1900","Estimated","Propane",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1880","Shed","Shed","No",NA,"Unknown","Measured or Known","Wood",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_1882","Shed","Shed","No",NA,"100","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_1885","Shed","Shed","No",NA,"100","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1887","Garage","Garage","No",NA,"326","Estimated","Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_189","Garage","Garage","No",NA,"806","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1891","Barn","Barn","Yes","1","Unknown",NA,"Unknown",NA,"No","Own meter",NA,NA
+"SITE_1893","Shed","Shed","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1895","Shop/garage","Mixed Use","No",NA,"1000","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1895","Shed","Shed","No",NA,"1000","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1897","Shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_190","Shed","Shed","No",NA,"Unknown",NA,"None",NA,"No","No meter/No power",NA,NA
+"SITE_1901","Storage","Other","No",NA,"40","Measured or Known","Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1902","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1903","Workshop","Shop","No",NA,"1056","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1905","Shop","Shop","No",NA,"640","Measured or Known","Other","Hot water floor heating","No","Meter shared with main residence","Electric",NA
+"SITE_1908","Detached garage","Garage","No",NA,"200","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1909","Shed","Shed","No",NA,"40","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1912","Shop","Shop","No",NA,"2400","Measured or Known","Natural Gas",NA,"No","Meter shared with main residence","Electric, Gas",NA
+"SITE_1915","Shop","Shop","No",NA,"1680","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1918","Garage","Garage","No",NA,"384","Measured or Known","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_1920","Tiny house","Other House","No",NA,"Unknown","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1920","Greenhouse","Greenhouse","No",NA,"Unknown","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1920","Shed","Shed","No",NA,"Unknown","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1920","Chicken coop","Coop","No",NA,"Unknown","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1926","Shed","Shed","No",NA,"80","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1931","Garage","Garage","No",NA,"646","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1932","Garage","Garage","No",NA,"Unknown",NA,"Propane",NA,"No","Meter shared with main residence","Electric, Propane",NA
+"SITE_1936","Shop","Shop","No",NA,"2000","Measured or Known","Natural Gas",NA,"No","Meter shared with main residence","Electric, Gas",NA
+"SITE_1937","Garage","Garage","No",NA,"816","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1938","Shop","Shop","No",NA,"Unknown",NA,"Unknown",NA,"No","Unknown",NA,NA
+"SITE_1939","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1939","Shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1940","Shed","Shed","No",NA,"140","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1942","Shed","Shed","No",NA,"80","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_1943","Shed","Shed","No",NA,"220","Estimated","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1946","Shed","Shed","Unknown","Unknown","Unknown",NA,"Electric",NA,"No","Unknown",NA,NA
+"SITE_1946","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Own meter",NA,NA
+"SITE_1949","Garage","Garage","No",NA,"900","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_195","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1950","Shed","Shed","No",NA,"73","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1951","Garage","Garage","No",NA,"Unknown",NA,"Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1952","Garage","Garage","No",NA,"1200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1955","Shop","Shop","No",NA,"225","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1955","Shed","Shed","No",NA,"63","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1958","Barn","Barn","No",NA,"200","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_196","Garage","Garage","No",NA,"483","Measured or Known","Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1969","Shed","Shed","No",NA,"30","Estimated","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_1973","Toolsshed","Shed","No",NA,"100","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1975","Shed","Shed","No",NA,"100","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1978","Pump house","Pump Room","No",NA,"50","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1978","Shop","Shop","No",NA,"1200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1979","Garage","Garage","No",NA,"236.4","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_198","Shed (lawn)","Shed","No",NA,"20","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_1980","Shop","Shop","No",NA,"1130","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1981","Barn","Barn","No",NA,"980","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1982","Garage","Garage","No",NA,"700","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1984","Shop","Shop","No",NA,"1000","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1986","Garage","Garage","No",NA,"600","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1987","Barn","Barn","No",NA,"400","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1988","Shed","Shed","No",NA,"80","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1990","Shed","Shed","No",NA,"15","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_1991","Boathouse","Boat house","No",NA,"400","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_1992","Shed","Shed","No",NA,"25","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_1992","Shed 2","Shed","No",NA,"175","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_1996","Barns","Barn","No",NA,"4000","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_1996","Barn","Barn","No",NA,"851","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_1996","Barn","Barn","No",NA,"1700","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_1996","Check in","Other","No",NA,"425","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_1996","Guest shop","Shop","No",NA,"250","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_1997","Barn","Barn","No",NA,"Unknown",NA,"Electric",NA,"No","Own meter",NA,NA
+"SITE_20","Garage","Garage","No",NA,"120","Estimated","Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_200","Shed","Shed","No",NA,"20","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_2002","Shed","Shed","No",NA,"40","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_2010","Shop","Shop","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_2013","Garage","Garage","No",NA,"Unknown",NA,"Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_2015","Garage apartment","Apartment","Yes","2","500","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_2019","Garage","Garage","No",NA,"Unknown","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_202","Pump house and chicken coop","Mixed Use","No",NA,"200","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_2022","Unknown","Other","No",NA,"100","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_2025","Shop","Shop","No",NA,"974","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_203","Shed","Shed","No",NA,"120","Estimated","None",NA,"No","Own meter",NA,NA
+"SITE_2030","Shed","Shed","No",NA,"100","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_2032","Shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_2033","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_2035","Shop","Shop","No",NA,"629","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_2036","Shop, storage","Mixed Use","No",NA,"1440","Measured or Known","Natural Gas",NA,"No","Meter shared with main residence","Electric, Gas",NA
+"SITE_2039","Pump house","Pump Room","No",NA,"60","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_204","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"Unknown","No meter/No power",NA,NA
+"SITE_2040","Unknown","Other","No",NA,"100",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_2044","Shed","Shed","Unknown","Unknown","Unknown",NA,"Electric",NA,"Unknown","Meter shared with main residence","Electric",NA
+"SITE_2044","Shop","Shop","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_208","Shed","Shed","No",NA,"80","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_209","Garage","Garage","No",NA,"400","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_212","Shed","Shed","No",NA,"64","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_212","Shed #2","Shed","No",NA,"49","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_213","Shed","Shed","No",NA,"100","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_219","Garage - single car","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence",NA,NA
+"SITE_220","Shed","Shed","No",NA,"96","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_224","Garage","Garage","No",NA,"600","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_229","Shed","Shed","No",NA,"120","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_24","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","No meter/No power",NA,NA
+"SITE_240","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_240","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_244","Shed","Shed","No",NA,"96","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_245","Shed","Shed","No",NA,"64","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_248","Garage","Garage","No",NA,"250","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_251","Shed","Shed","No",NA,"168","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_254","Shed","Shed","No",NA,"140","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_256","Pool shed","Shed","No",NA,"35","Measured or Known","Unknown",NA,"Yes","No meter/No power",NA,NA
+"SITE_256","Garden shed","Shed","No",NA,"64","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_259","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_26","Shed","Shed","No",NA,"78.1","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_260","Garage","Garage","No",NA,"198","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_262","Horse barn","Barn","No",NA,"1000","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_268","Garage","Garage","No",NA,"204","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_269","Garage","Garage","No",NA,"350","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_27","Shed","Shed","No",NA,"100","Estimated","Wood",NA,"Yes","No meter/No power",NA,NA
+"SITE_270","Finished garage","Garage","No",NA,"294","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_272","Cabin","Cabin","No",NA,"200","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_279","Garage","Garage","No",NA,"500","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_279","Garden shed","Shed","No",NA,"60","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_28","Shop","Shop","No",NA,"240","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_282","The shack","Other","No",NA,"500","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_284","Garage","Garage","No",NA,"350","Estimated","Electric",NA,"No","Meter shared with main residence","Electric, Gas",NA
+"SITE_285","Shed","Shed","No",NA,"80","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_286","Shed","Shed","No",NA,"100","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_288","Greenhouse/shed","Mixed Use","No",NA,"60","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_288","Garage","Garage","No",NA,"200","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_29","Garage","Garage","No",NA,"900","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_290","Gardening","Other","No",NA,"24","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_291","Shed","Shed","No",NA,"80","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_293","Storage shed","Shed","No",NA,"60","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_295","Shed","Shed","No",NA,"180","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_296","Shed","Shed","No",NA,"50","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_298","Shed","Shed","No",NA,"100","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_30","Shed","Shed","No",NA,"80","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_301","Barn","Barn","No",NA,"2400","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_301","Garage","Garage","No",NA,"600","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_301","Shop","Shop","No",NA,"1300","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_303","Shed","Shed","No",NA,"140","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_303","Shed #2","Shed","No",NA,"120","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_304","Cottage","Other House","No",NA,"300","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_304","Garage 2 car in back","Garage","No",NA,"300","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_304","Garage in front","Garage","No",NA,"150","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_306","Shed","Shed","No",NA,"100","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_308","Shed","Shed","No",NA,"120","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_309","Shed under deck","Shed","No",NA,"56","Measured or Known","Electric",NA,"Unknown","Meter shared with main residence","Electric",NA
+"SITE_309","Outdoor kitchen and metal shop","Mixed Use","No",NA,"344",NA,"Other","Rocket oven,  plus biogas digester","No","Own meter",NA,NA
+"SITE_310","Small shed","Shed","No",NA,"96","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_312","Shop","Shop","No",NA,"1200",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_312","Pump house","Pump Room","No",NA,"200","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_315","Garage","Garage","No",NA,"Unknown","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_316","Sheds","Shed","No",NA,"240","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_317","Two sheds,  garage","Mixed Use","No",NA,"784","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_32","Shed","Shed","No",NA,"120","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_322","Garden shed","Shed","No",NA,"100","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_322","Shop","Shop","No",NA,"750","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_323","Shed","Shed","No",NA,"300","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_326","Playhouse","Other","No",NA,"180","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_326","Shed","Shed","No",NA,"100","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_338","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_338","Unknown","Other","Unknown","Unknown","Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_339","Unknown","Other","No",NA,"Unknown",NA,"Unknown",NA,"Unknown","No meter/No power",NA,NA
+"SITE_34","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_344","Shed","Shed","No",NA,"96","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_348","Garage","Garage","No",NA,"800","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_348","Project car garage","Garage","No",NA,"970","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_349","Shed","Shed","No",NA,"120","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_35","Shed","Shed","No",NA,"960","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_350","Garage","Garage","No",NA,"720","Measured or Known","Propane",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_36","Shop","Shop","No",NA,"600","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_360","Shop","Shop","No",NA,"200","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_365","Garage studio","Garage","No",NA,"3200",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_369","Shed","Shed","No",NA,"96","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_37","Barn","Barn","No",NA,"6000","Estimated","Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_37","2nd barn and guest house","Mixed Use","Yes","2","4000","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_370","Garage","Garage","No",NA,"3800","Estimated","Propane",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_372","Barn","Barn","No",NA,"1600","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_373","Studio","Other","No",NA,"200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_376","Shop","Shop","No",NA,"2000","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_376","Adu","ADU","Yes","1","900","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_378","Shed","Shed","No",NA,"125","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_379","Shed","Shed","No",NA,"200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_380","Shed","Shed","No",NA,"200","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_381","Shed","Shed","No",NA,"400","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_382","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_389","Shed","Shed","No",NA,"400","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_39","Unknown","Other","No",NA,"128","Estimated","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_391","Shed","Shed","No",NA,"120","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_392","Shed","Shed","No",NA,"100","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_393","Shed","Shed","No",NA,"32","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_394","Shed","Shed","No",NA,"49","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_4","Detached garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_40","Detached garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_400","Shed","Shed","No",NA,"187","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_401","Pool pump room","Pump Room","No",NA,"10","Estimated","Unknown",NA,"Yes","No meter/No power",NA,NA
+"SITE_402","Shed","Shed","No",NA,"100","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_402","Greenhouse/bomb shelter","Mixed Use","No",NA,"110",NA,"None",NA,"No","No meter/No power",NA,NA
+"SITE_402","Conservatory","Other","No",NA,"80",NA,"Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_403","Shed","Shed","No",NA,"256","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_404","Storage","Other","No",NA,"80","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_411","Garage","Garage","No",NA,"540","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_413","Shed","Shed","No",NA,"200","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_414","Shed 1","Shed","No",NA,"120","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_414","Chicken coop","Coop","No",NA,"100","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_414","Barn","Barn","No",NA,"2500","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_417","Shed","Shed","No",NA,"102","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_418","Garage","Garage","No",NA,"780","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_421","Shed","Shed","No",NA,"70","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_421","Garage","Garage","No",NA,"1600","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_422","Shed","Shed","No",NA,"40","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_423","Garage","Garage","No",NA,"Unknown","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric, Water",NA
+"SITE_423","Hanger","Other","No",NA,"1720","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_423","Shed","Shed","No",NA,"350","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_423","Barn","Barn","No",NA,"300","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_424","Chicken coop","Coop","No",NA,"100","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_424","Greenhouse","Greenhouse","No",NA,"80","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_424","Container","Other","No",NA,"120","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_425","Wood shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","Unknown",NA,NA
+"SITE_425","Garage","Garage","No",NA,"Unknown",NA,"Unknown",NA,"No","Unknown",NA,NA
+"SITE_425","Tractor shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","Unknown",NA,NA
+"SITE_429","Gazebo","Other","No",NA,"125","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_432","Shed/garage","Mixed Use","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_433","Workshop","Shop","No",NA,"768","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_435","Shed","Shed","No",NA,"32","Measured or Known","Unknown",NA,"Yes","No meter/No power",NA,NA
+"SITE_435","Storage","Other","No",NA,"68","Measured or Known","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_437","Shed","Shed","No",NA,"180","Measured or Known","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_438","Shed","Shed","No",NA,"100","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_44","Shed","Shed","No",NA,"120","Measured or Known","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_440","Tack room","Other","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_440","Barn","Barn","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_440","Shop","Shop","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_441","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_442","Shed with electricity","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_442","Shed without electricity","Shed","No",NA,"Unknown",NA,"None",NA,"No","No meter/No power",NA,NA
+"SITE_446","Barn","Barn","No",NA,"870","Measured or Known","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_446","Power","Other","No",NA,"350","Measured or Known","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_447","Shop","Shop","No",NA,"240","Estimated","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_447","Shed","Shed","No",NA,"60","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_448","Shed","Shed","No",NA,"60","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_45","Potting shed","Shed","No",NA,"900","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_450","Shed","Shed","No",NA,"120","Measured or Known","Propane",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_452","Shop","Shop","No",NA,"900","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_453","Shipping container","Other","No",NA,"320","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_456","Shed","Shed","No",NA,"183","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_459","Telescope observatory","Other","No",NA,"49","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_460","Shop","Shop","No",NA,"712.5","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_460","Abandoned house","Other House","No",NA,"1800","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_461","Shed","Shed","No",NA,"240","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_463","Storage shed","Shed","No",NA,"38","Measured or Known","Electric",NA,"Yes","Meter shared with main residence","Electric, Propane, Water",NA
+"SITE_464","Shed 1","Shed","No",NA,"200","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_464","Shed 2","Shed","No",NA,"80","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_464","Shed 3","Shed","No",NA,"100","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_465","Shed","Shed","No",NA,"96","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_47","Pump house","Pump Room","No",NA,"200","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_47","Shop building","Shop","No",NA,"3500","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_47","Small outbuilding shed","Shed","No",NA,"150","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_470","Garage","Garage","No",NA,"543","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_470","Shed 1","Shed","No",NA,"120","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_470","Shed 2","Shed","No",NA,"300","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_470","Shed 3","Shed","No",NA,"160","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_470","Pump house","Pump Room","No",NA,"32","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_473","Shed","Shed","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_474","Garage","Garage","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_475","Yard shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_477","Pump house","Pump Room","No",NA,"120","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_477","Shop/garage","Mixed Use","No",NA,"864","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_477","Wood shed","Shed","No",NA,"98","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_478","Shed","Shed","No",NA,"70","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_478","Playhouse","Other","No",NA,"100","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_480","Shed","Shed","No",NA,"96","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_481","Unknown","Other","Unknown","Unknown","Unknown",NA,"Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_481","Big red","Other","No",NA,"Unknown",NA,"Propane",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_481","Little red","Other","No",NA,"Unknown",NA,"Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_481","Brown","Other","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_483","Shed","Shed","No",NA,"480","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_483","Shop","Shop","No",NA,"864","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_483","Rv storage","Other","No",NA,"782","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_483","Old garage","Garage","No",NA,"480","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_483","Storage","Other","No",NA,"100","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_485","Shop","Shop","No",NA,"150","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_488","Shed","Shed","No",NA,"80","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_49","Garage","Garage","No",NA,"368","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_490","Shop","Shop","No",NA,"1000","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_494","Shop","Shop","No",NA,"Unknown",NA,"Electric",NA,"No","Own meter",NA,NA
+"SITE_494","Well house","Other","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_495","Barn","Barn","No",NA,"660","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_495","Shed","Shed","No",NA,"84","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_500","Unknown","Other","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_501","Shop","Shop","No",NA,"3250","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_501","Greenhouse","Greenhouse","No",NA,"120","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_507","Storage","Other","No",NA,"50","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_509","Shed","Shed","No",NA,"100","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_51","Shop","Shop","No",NA,"1500","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_511","Shop","Shop","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_514","Garage/shop","Mixed Use","No",NA,"576","Measured or Known","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_516","Shop","Shop","No",NA,"2500","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_519","Shop","Shop","No",NA,"850","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_52","Shed","Shed","No",NA,"120","Measured or Known","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_520","Shop","Shop","No",NA,"700","Measured or Known","Electric",NA,"No","Unknown",NA,NA
+"SITE_520","Shed","Shed","No",NA,"252","Measured or Known","Electric",NA,"No","Unknown",NA,NA
+"SITE_521","Original garage","Garage","No",NA,"640","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_521","Pump house","Pump Room","No",NA,"144","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_521","Horse barn","Barn","No",NA,"144","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_522","Pool house","Pool house","No",NA,"40","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_524","Greenhouse","Greenhouse","No",NA,"3000","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_524","Shed","Shed","No",NA,"1200","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_524","Barn","Barn","No",NA,"5600","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_524","Barn 2","Barn","No",NA,"7000","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_524","Guest house","Other House","No",NA,"Unknown",NA,"Electric",NA,"No","Own meter",NA,NA
+"SITE_525","Shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_527","Shed","Shed","No",NA,"84","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_527","Greenhouse","Greenhouse","No",NA,"48","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_529","Garage","Garage","No",NA,"900","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_533","Pump","Pump Room","No",NA,"81","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_533","Storage","Other","No",NA,"1283","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_533","Shop","Shop","No",NA,"504","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_535","Garge","Garage","No",NA,"336","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_539","Shop","Shop","No",NA,"Unknown","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_54","Shed","Shed","No",NA,"120","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_541","Garage","Garage","No",NA,"823","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_542","Garage","Garage","No",NA,"720","Measured or Known","Other","Hydronic floor heat","No","Meter shared with main residence","Electric, Gas",NA
+"SITE_542","Shed","Shed","No",NA,"320","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_542","Garden shed","Shed","No",NA,"64","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_543","Studio","Other","Yes","1","300","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_543","Pump","Pump Room","No",NA,"Unknown","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_544","Shed","Shed","No",NA,"120","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_544","Extra storage","Other","No",NA,"64","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_546","Garage","Garage","No",NA,"525","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_549","Barn","Barn","No",NA,"1500","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_549","Garage","Garage","No",NA,"1000","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_549","Shed","Shed","No",NA,"40","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_549","Shed 2","Shed","No",NA,"100","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_550","Garage","Garage","No",NA,"600","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_554","Shop","Shop","No",NA,"1369","Measured or Known","Propane",NA,"No","Own meter",NA,NA
+"SITE_559","Garage","Garage","Yes","Unknown","Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_559","Barn","Barn","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_560","Garage","Garage","No",NA,"300","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_561","Shed/water pump","Mixed Use","No",NA,"77","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_563","Shop","Shop","No",NA,"5000","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_564","Unknown","Other","No",NA,"120","Measured or Known","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_565","Shop","Shop","No",NA,"Unknown","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_565","Garage","Garage","No",NA,"572","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_566","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_568","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_57","Pool shed","Shed","No",NA,"300","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_570","Shop","Shop","No",NA,"1500","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_571","Shed","Shed","No",NA,"300","Estimated","Natural Gas",NA,"No","Meter shared with main residence","Electric, Gas",NA
+"SITE_572","Greenhouse","Greenhouse","No",NA,"Unknown",NA,"Electric",NA,"No","Own meter",NA,NA
+"SITE_574","Shop","Shop","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_575","Shop","Shop","No",NA,"Unknown",NA,"Wood",NA,"No","Own meter",NA,NA
+"SITE_575","Mower shed","Shed","No",NA,"180","Measured or Known","None",NA,"Yes","Unknown",NA,NA
+"SITE_575","Garden shed","Shed","No",NA,"100","Measured or Known","None",NA,"No","Unknown",NA,NA
+"SITE_579","Shed","Shed","No",NA,"120","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_58","Carport","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_580","Storage","Other","No",NA,"1000","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_582","Barn","Barn","No",NA,"Unknown","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_582","Lawn shed","Shed","No",NA,"260","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_582","Pump house","Pump Room","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_583","Shop","Shop","No",NA,"400","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_584","Garage","Garage","No",NA,"400","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_584","Cabin","Cabin","No",NA,"Unknown",NA,"Electric",NA,"No","Own meter",NA,NA
+"SITE_584","Barn","Barn","No",NA,"Unknown",NA,"None",NA,"No","No meter/No power",NA,NA
+"SITE_588","Shop","Shop","No",NA,"1080","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_588","Garage","Garage","No",NA,"192","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_589","Shop","Shop","No",NA,"960","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_590","Shed 1","Shed","No",NA,"100","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_590","Shed 2","Shed","No",NA,"192","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_592","Garage","Garage","No",NA,"1650","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_599","Unknown","Other","No",NA,"Unknown",NA,"Unknown",NA,"No","Unknown",NA,NA
+"SITE_606","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_608","Shed","Shed","No",NA,"150","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_611","Shop","Shop","No",NA,"5600","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_611","Pool house","Pool house","No",NA,"400","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_614","Shop","Shop","No",NA,"806","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_614","Barn","Barn","No",NA,"1660","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_615","Garage","Garage","No",NA,"600","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_615","Chicken house","Coop","No",NA,"144","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_615","Pump house","Pump Room","No",NA,"64","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_615","Bunk house","Other House","No",NA,"740","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric, Propane, Water",NA
+"SITE_615","Shed 1","Shed","No",NA,"120","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_615","Shed 2","Shed","No",NA,"64","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_615","Shed 3","Shed","No",NA,"80","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_617","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_62","Garage","Garage","No",NA,"500","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_620","Garage","Garage","No",NA,"294","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_623","Shed","Shed","No",NA,"200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_623","Reiki room","Other","No",NA,"150","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_624","Cabin","Cabin","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_624","Garage/shop","Mixed Use","No",NA,"658","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_624","Pump house","Pump Room","No",NA,"54","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_626","Unknown","Other","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_628","Garage","Garage","No",NA,"80","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_629","Shop","Shop","No",NA,"800","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_63","Shed","Shed","No",NA,"160","Measured or Known","Unknown",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_630","Shed","Shed","No",NA,"80","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_632","Storage shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_633","Shed","Shed","No",NA,"80","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_634","Shop","Shop","No",NA,"1554","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_634","Barn","Barn","No",NA,"1525","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_634","Pump house","Pump Room","No",NA,"46","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_637","Garage","Garage","No",NA,"250","Measured or Known","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_638","Shed","Shed","No",NA,"144","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_638","Small shed","Shed","No",NA,"80","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_639","Generator shed","Shed","No",NA,"50","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_64","Garage","Garage","No",NA,"290","Measured or Known","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_644","Unknown","Other","No",NA,"Unknown",NA,"Unknown",NA,"No","Unknown",NA,NA
+"SITE_645","Shed 1","Shed","No",NA,"90","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_645","Shed","Shed","No",NA,"110","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_647","Shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_648","Bike storage shed","Shed","No",NA,"73","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_650","Garage","Garage","No",NA,"1378","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_651","Garden shed","Shed","No",NA,"180","Estimated","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_652","Shed","Shed","No",NA,"38","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_653","Shed","Shed","No",NA,"200","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_656","Shed","Shed","No",NA,"36","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_657","Shed","Shed","No",NA,"80","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_658","Pool house","Pool house","No",NA,"1368","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_658","Barn","Barn","No",NA,"500","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_658","Shop","Shop","No",NA,"600","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_658","Pump house","Pump Room","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_659","Second house","Other House","No",NA,"877","Measured or Known","Natural Gas",NA,"No","Meter shared with main residence","Electric, Gas",NA
+"SITE_660","West","Other","No",NA,"120","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_660","East","Other","No",NA,"192","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_661","Shop","Shop","No",NA,"900","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_662","Shed","Shed","No",NA,"120","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_665","Detached garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_667","Shop","Shop","No",NA,"1500","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_667","Barn","Barn","No",NA,"800","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_667","Barn 2","Barn","No",NA,"808","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_667","Outbuilding","Other","No",NA,"800","Measured or Known","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_668","Barn","Barn","No",NA,"2000","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_67","Office space","Other","No",NA,"350","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_67","Garage","Garage","No",NA,"300","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_672","Workshop","Shop","No",NA,"400","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_680","Shop","Shop","No",NA,"700","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_681","Shed","Shed","No",NA,"80","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_686","Garage","Garage","No",NA,"192","Estimated","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_687","Garage","Garage","No",NA,"2400","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric, Other",NA
+"SITE_687","Chicken coop","Coop","No",NA,"24","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_688","Shop","Shop","No",NA,"1500","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_688","Barn","Barn","No",NA,"1500","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_688","Shed 1","Shed","No",NA,"96","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_688","Shed 2","Shed","No",NA,"300","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_688","Shed 3","Shed","No",NA,"600","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_692","Garage","Garage","No",NA,"72.5","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_694","Greenhouse","Greenhouse","No",NA,"80","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_695","Garage","Garage","No",NA,"1200","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_697","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_700","Shop","Shop","No",NA,"1000","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric, Water",NA
+"SITE_700","Shed","Shed","No",NA,"180","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_701","Garage","Garage","No",NA,"Unknown",NA,"Unknown",NA,"Unknown","Unknown",NA,NA
+"SITE_703","Shed","Shed","No",NA,"114","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_704","Shop/garage","Mixed Use","No",NA,"1200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_704","Shed","Shed","No",NA,"200","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_707","Shed","Shed","No",NA,"48","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_707","Chicken shed","Shed","No",NA,"288","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_710","Garage","Garage","No",NA,"601","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_710","Shop","Shop","No",NA,"2800","Measured or Known","Wood",NA,"No","Own meter",NA,NA
+"SITE_713","Quanset","Other","No",NA,"320","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_716","Garage","Garage","No",NA,"439.3","Estimated","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_717","Shed","Shed","No",NA,"170","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_719","Shop","Shop","No",NA,"900","Estimated","Electric",NA,"No","Meter shared with main residence","Electric, Water",NA
+"SITE_72","Unknown","Other","No",NA,"550","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_721","Storage","Other","No",NA,"80","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_722","Shop","Shop","No",NA,"1024","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_722","Shed","Shed","No",NA,"320","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_725","Detached garage","Garage","No",NA,"400","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_726","Shop","Shop","No",NA,"1457","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_73","Garage","Garage","No",NA,"200","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_732","Guest house","Other House","No",NA,"195","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_733","Garage built in 1938","Garage","No",NA,"450","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_733","Ceramic shop","Shop","No",NA,"800","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_733","Trailer","Other","No",NA,"400","Estimated","Unknown",NA,"No","Own meter",NA,NA
+"SITE_733","Pump house","Pump Room","No",NA,"Unknown",NA,"Unknown",NA,"No","Own meter",NA,NA
+"SITE_733","White shed","Shed","No",NA,"80","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_734","Garage","Garage","No",NA,"510","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_735","Garage","Garage","No",NA,"700","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_738","Detached garage","Garage","No",NA,"685","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_739","Shed","Shed","No",NA,"9","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_74","Garage","Garage","No",NA,"400","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_740","Shop","Shop","No",NA,"1200","Estimated","Electric",NA,"No","Meter shared with main residence","Electric, Propane",NA
+"SITE_741","Shed","Shed","No",NA,"80","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_741","Garage","Garage","No",NA,"500","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_743","Shop","Shop","No",NA,"1126","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_748","Shop","Shop","No",NA,"1536","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_749","Garage","Garage","No",NA,"250","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_75","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_752","Shop","Shop","No",NA,"900","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_753","Shop","Shop","No",NA,"1000","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_756","Pump house","Pump Room","No",NA,"48","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_756","Llama barn","Barn","No",NA,"608","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_756","Horse barn","Barn","No",NA,"2380","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_756","Shed","Shed","No",NA,"622","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_758","Garage","Garage","No",NA,"Unknown",NA,"Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_761","Shop","Shop","No",NA,"1120","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_762","Shop","Shop","No",NA,"5500","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_762","Barn","Barn","No",NA,"1500","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_762","Chicken coop","Coop","No",NA,"160","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_762","Pump house","Pump Room","No",NA,"168","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_765","Shop","Shop","No",NA,"1500","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_766","Workshop","Shop","No",NA,"800","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_766","Tiny house","Other House","Unknown","Unknown","140","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_768","Shed","Shed","No",NA,"20",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_769","Shed","Shed","No",NA,"80","Measured or Known","Other","Unknown","No","No meter/No power",NA,NA
+"SITE_77","Shed","Shed","No",NA,"1000","Measured or Known","Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_775","Shed","Shed","No",NA,"180","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_777","Barn","Barn","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_777","Detached garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_778","Shop","Shop","No",NA,"1200","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_78","Garage","Garage","No",NA,"260","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_780","Shop","Shop","No",NA,"Unknown","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_781","Detached","Other","No",NA,"480","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_781","Shed","Shed","No",NA,"100","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_784","Shop","Shop","No",NA,"2000","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_784","Garage","Garage","No",NA,"770","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_784","Barn","Barn","No",NA,"931","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_786","Greenhouse","Greenhouse","No",NA,"Unknown",NA,"Electric",NA,"Unknown","Meter shared with main residence","Electric",NA
+"SITE_786","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_786","Storage building","Other","Unknown","Unknown","Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_786","Large storage shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_790","Guest house/garage","Mixed Use","No",NA,"1200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_791","Shop/garage","Mixed Use","No",NA,"988","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_792","Wood shed","Shed","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_792","Milk house","Other","No",NA,"50","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_792","Detached garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_792","Gas house","Other","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_792","Machine shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_792","Barn","Barn","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_792","Bull house and hay shed","Mixed Use","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_795","Garden shed","Shed","No",NA,"150","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_795","Barn","Barn","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_798","Car park","Garage","No",NA,"501","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_798","Garage","Garage","No",NA,"783","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_799","Garage","Garage","No",NA,"640","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_80","Shed","Shed","No",NA,"200","Measured or Known","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_80","Garden shed","Shed","No",NA,"100","Measured or Known","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_80","Studio","Other","No",NA,"200","Measured or Known","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_80","Pump house","Pump Room","No",NA,"20","Measured or Known","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_801","Shop","Shop","No",NA,"2500","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_804","Shed","Shed","No",NA,"40","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_807","Shed","Shed","No",NA,"160","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_808","Shed","Shed","No",NA,"198","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_809","Storage","Other","No",NA,"50","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_811","Barn,  guesthouse, shop","Mixed Use","No",NA,"1200","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_813","Garden","Other","No",NA,"32","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_814","Detatched garage","Garage","No",NA,"336","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_815","Shed","Shed","No",NA,"48","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_817","Shop","Shop","No",NA,"573","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_817","Pump","Pump Room","No",NA,"168","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_821","Garage","Garage","No",NA,"400","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_822","Shed","Shed","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_823","Greenhouse","Greenhouse","No",NA,"430","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_823","Fuel shed","Shed","No",NA,"24","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_823","Garden shed","Shed","No",NA,"130","Estimated","Unknown",NA,"No","Unknown",NA,NA
+"SITE_823","Wood shes","Shed","No",NA,"130","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_823","Car port","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_823","Shop","Shop","No",NA,"640","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_824","Detatched garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_826","Shop","Shop","No",NA,"600","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_828","Shed","Shed","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_830","Garage","Garage","No",NA,"800",NA,"None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_831","Garage","Garage","No",NA,"372","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_832","Garage","Garage","No",NA,"600","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_832","Shed","Shed","No",NA,"250","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_834","Shop","Shop","No",NA,"100","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_834","Shed","Shed","No",NA,"200","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_835","Garage","Garage","No",NA,"450","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_837","Shed","Shed","No",NA,"512","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_837","Shop","Shop","No",NA,"1024","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_838","Shed","Shed","No",NA,"80","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_84","Garage","Garage","No",NA,"Unknown",NA,"Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_84","Unknown","Other","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_840","Shop","Shop","No",NA,"1000","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_840","Shed","Shed","No",NA,"400","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_840","Farm building","Other","No",NA,"1800","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_841","Green house","Greenhouse","No",NA,"178","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_841","Tool shed","Shed","No",NA,"193","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_844","Barn","Barn","No",NA,"2000","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_845","Shop","Shop","No",NA,"180","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_845","Shop barn","Barn","No",NA,"1200","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_845","Barn","Barn","No",NA,"600","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_845","Shed","Shed","No",NA,"70","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_846","Garage","Garage","No",NA,"1200","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_847","Shop","Shop","No",NA,"2400","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_847","Barn","Barn","No",NA,"1296","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_848","Shed","Shed","No",NA,"64","Measured or Known","None",NA,"No","No meter/No power",NA,NA
+"SITE_848","Attached garage","Garage","No",NA,"596","Measured or Known","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_849","Shop","Shop","No",NA,"1074","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_849","Wood","Other","No",NA,"616","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_850","Storage unit","Other","No",NA,"Unknown",NA,"Unknown",NA,"Yes","No meter/No power",NA,NA
+"SITE_851","Shed","Shed","No",NA,"18","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_854","Shop","Shop","No",NA,"1872","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_854","Peacock house","Animal Housing","No",NA,"189","Measured or Known","Unknown",NA,"Unknown","Meter shared with main residence","Electric",NA
+"SITE_855","Garage","Garage","No",NA,"750","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_855","Animal house","Animal Housing","No",NA,"168","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_855","Barn","Barn","No",NA,"6000","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_86","Shed 1","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_86","Shed 2","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_860","Garage","Garage","No",NA,"684","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_862","Shop","Shop","No",NA,"1536","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_862","Chicken coop","Coop","No",NA,"168","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_864","Barn","Barn","No",NA,"2100","Estimated","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_866","Shop","Shop","No",NA,"1050","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_867","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_873","Garage","Garage","No",NA,"800","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_874","Shed","Shed","No",NA,"120","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_876","Shop","Shop","No",NA,"400","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_879","Shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_884","Garage","Garage","No",NA,"500","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_884","Shop","Shop","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_884","Little house","Other House","Yes","1","50","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_885","Barn","Barn","No",NA,"1500","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_891","Garage 1","Garage","No",NA,"1500","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_891","Garage 2","Garage","No",NA,"2000","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_892","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_894","Barn","Barn","No",NA,"720","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_896","Barn","Barn","No",NA,"1728","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_897","Shed","Shed","No",NA,"240","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_898","Garage","Garage","No",NA,"500",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_9","Unknown","Other","No",NA,"Unknown","Estimated","Unknown",NA,"Unknown","Unknown",NA,NA
+"SITE_90","Garage","Garage","No",NA,"1000","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_900","Garage","Garage","No",NA,"576","Measured or Known","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_900","Shed","Shed","No",NA,"160","Measured or Known","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_901","Shop","Shop","No",NA,"1422","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_902","Reloading room","Other","No",NA,"Unknown","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_903","Barn","Barn","No",NA,"Unknown",NA,"Unknown",NA,"No","Own meter",NA,NA
+"SITE_903","Greenhouse","Greenhouse","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_908","Shed 1","Shed","No",NA,"216","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_908","Shed 2","Shed","No",NA,"36","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_909","Shed","Shed","No",NA,"11.8","Measured or Known","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_91","Garage","Garage","No",NA,"300","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_91","Shed","Shed","No",NA,"80","Estimated","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_911","Barn","Barn","No",NA,"1120","Measured or Known","None",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_911","Shop","Shop","No",NA,"1800","Measured or Known","Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_912","Shed","Shed","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_914","Barn","Barn","No",NA,"384","Estimated","Electric",NA,"No","Meter shared with main residence","Electric, Gas",NA
+"SITE_915","Shed","Shed","No",NA,"120","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_916","Garage","Garage","No",NA,"300","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_917","Garage","Garage","No",NA,"421","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_920","Shed","Shed","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_920","Shop","Shop","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_920","Barn","Barn","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_924","Shed","Shed","No",NA,"96","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_924","Detached garage","Garage","No",NA,"680","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_928","Garag","Garage","No",NA,"385","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_930","Shop","Shop","No",NA,"480","Measured or Known","Natural Gas",NA,"No","Meter shared with main residence","Electric, Gas",NA
+"SITE_932","Garage","Garage","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_936","Guest house","Other House","No",NA,"400","Estimated","Natural Gas",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_94","Unknown","Other","No",NA,"99","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_940","Shed","Shed","No",NA,"80","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_942","Shop","Shop","No",NA,"2400","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_943","Garage","Garage","No",NA,"896","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_943","Wood shed","Shed","No",NA,"Unknown",NA,"Wood",NA,"No","No meter/No power",NA,NA
+"SITE_944","Shop","Shop","No",NA,"576","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_946","Shed","Shed","No",NA,"100","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_946","Carport storage","Garage","No",NA,"50","Measured or Known","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_947","Workshop","Shop","Yes","2","2500","Estimated","Electric",NA,"No","Meter shared with main residence","Electric, Water",NA
+"SITE_947","Hut","Cabin","No",NA,"750","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_947","Shed","Shed","No",NA,"100","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_948","Mini shed","Shed","No",NA,"42","Estimated","None",NA,"No","Meter shared with main residence","Electric, Gas",NA
+"SITE_948","Storage shed","Shed","No",NA,"160","Estimated","None",NA,"No","Meter shared with main residence","Electric, Gas",NA
+"SITE_952","Garage","Garage","No",NA,"Unknown",NA,"Wood",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_953","Shop","Shop","No",NA,"1300","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_954","Shop","Shop","No",NA,"1000","Measured or Known","Electric",NA,"Unknown","Own meter",NA,NA
+"SITE_956","Morten building","Other","No",NA,"2160","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_956","Green machine shed","Shed","No",NA,"3750","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_956","Bunk house","Other House","No",NA,"1000","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_956","Cow barn","Barn","No",NA,"8000","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_956","Shop","Shop","No",NA,"1500","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_956","Grainery","Other","No",NA,"600","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_957","Barn","Barn","No",NA,"1200","Estimated","Electric",NA,"No","Meter shared with main residence","Electric, Water",NA
+"SITE_957","Man cave","Other","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_959","Unknown","Other","No",NA,"Unknown","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_960","Shed","Shed","No",NA,"24","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_962","Shed","Shed","No",NA,"100","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_964","Shed","Shed","No",NA,"120","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_965","Barn","Barn","No",NA,"445.6",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_965","Garage","Garage","No",NA,"670",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_966","Shed","Shed","No",NA,"1200","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_97","Cottage","Other House","Yes","1","600","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_970","Shed","Shed","No",NA,"100","Estimated","None",NA,"No","No meter/No power",NA,NA
+"SITE_972","Shed","Shed","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_972","Greenhouse","Greenhouse","No",NA,"Unknown",NA,"Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_973","Shed","Shed","No",NA,"60","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_974","Shed","Shed","No",NA,"64","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_975","Garage","Garage","No",NA,"450","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_975","Barn","Barn","No",NA,"360","Estimated","Electric",NA,"No","Own meter",NA,NA
+"SITE_975","Potting shed","Shed","No",NA,"288","Measured or Known","Electric",NA,"No","Own meter",NA,NA
+"SITE_976","Detatched garage","Garage","No",NA,"958","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_976","Machine shed","Shed","No",NA,"888","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_978","Shed","Shed","No",NA,"144","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_978","Greenhouse","Greenhouse","No",NA,"120","Measured or Known","Unknown",NA,"No","No meter/No power",NA,NA
+"SITE_980","Garage","Garage","No",NA,"1200","Measured or Known","Unknown",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_980","Barn","Barn","No",NA,"100",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_981","Shop","Shop","No",NA,"2352","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_983","Detached garage","Garage","No",NA,"1556","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_985","Guesthouse","Other House","Yes","1","340","Estimated","Propane",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_985","Shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_986","Garage","Garage","No",NA,"269","Measured or Known","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_986","Shop","Shop","No",NA,"715","Measured or Known","Electric",NA,"No","No meter/No power",NA,NA
+"SITE_987","Shop","Shop","No",NA,"1120","Measured or Known","Natural Gas",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_989","Shed","Shed","No",NA,"Unknown",NA,"Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_989","Car port","Garage","No",NA,"Unknown",NA,"Electric",NA,"Unknown","Meter shared with main residence","Electric",NA
+"SITE_990","Shop","Shop","No",NA,"822","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_990","Wood","Other","No",NA,"542","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_991","Barn","Barn","No",NA,"2800","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_992","Detached garage","Garage","No",NA,"864","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_994","Garage","Garage","No",NA,"900","Estimated","Electric",NA,"Unknown","Meter shared with main residence","Electric",NA
+"SITE_995","Garage","Garage","No",NA,"300","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_997","Detached garage","Garage","No",NA,"324","Measured or Known","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_998","Garage","Garage","No",NA,"480","Estimated","Wood",NA,"No","No meter/No power",NA,NA
+"SITE_3070","Shed","Shed","No",NA,"100","Estimated","Electric",NA,"Unknown","Meter shared with main residence","Electric",NA
+"SITE_3071","Shed","Shed","No",NA,"15","Estimated","Unknown",NA,"Yes","Unknown",NA,NA
+"SITE_3076","Shed","Shed","No",NA,"50","Estimated","None",NA,"Yes","No meter/No power",NA,NA
+"SITE_3165","Shed","Shed","No",NA,"50","Estimated","None",NA,"Yes","No meter/No power",NA,NA
+"SITE_3190","Closet","Other","No",NA,"30","Estimated","Electric",NA,"Yes","Meter shared with main residence","Electric",NA
+"SITE_3277","Out closet","Other","No",NA,"30","Estimated","Electric",NA,"No","Meter shared with main residence","Electric",NA
+"SITE_3381","Closet off balcony","Other","No",NA,"21","Estimated","None",NA,"Yes","No meter/No power",NA,NA
+"SITE_3390","Shed thing","Other","No",NA,"50","Estimated","None",NA,"Yes","No meter/No power",NA,NA
+"SITE_3396","Shed","Shed","No",NA,"50","Estimated","None",NA,"Yes","No meter/No power",NA,NA

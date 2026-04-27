@@ -1,0 +1,2349 @@
+Table,Variable,Values
+Appliance_AirCleaner.csv,Energy_Star,No
+Appliance_AirCleaner.csv,Energy_Star,Yes
+Appliance_AirCleaner.csv,WiFi_Capable,No
+Appliance_AirCleaner.csv,WiFi_Capable,Yes
+Appliance_AudioEquipment.csv,Audio_Connected_to_TV,No
+Appliance_AudioEquipment.csv,Audio_Connected_to_TV,Yes
+Appliance_AudioEquipment.csv,Audio_Voice_Assistant,No
+Appliance_AudioEquipment.csv,Audio_Voice_Assistant,Yes
+Appliance_AudioEquipment.csv,Audio_Wifi_Enabled,No
+Appliance_AudioEquipment.csv,Audio_Wifi_Enabled,Yes
+Appliance_AudioEquipment.csv,Contains_Subwoofer,No
+Appliance_AudioEquipment.csv,Contains_Subwoofer,Yes
+Appliance_AudioEquipment.csv,Does_Subwoofer_have_indicator_light_or_warm_to_touch,No
+Appliance_AudioEquipment.csv,Does_Subwoofer_have_indicator_light_or_warm_to_touch,Yes
+Appliance_AudioEquipment.csv,Energy_Star,No
+Appliance_AudioEquipment.csv,Energy_Star,Yes
+Appliance_Computer.csv,Computer_External_Drive,No
+Appliance_Computer.csv,Computer_External_Drive,Yes
+Appliance_Computer.csv,Computer_In_single_strip,No
+Appliance_Computer.csv,Computer_In_single_strip,Yes
+Appliance_Computer.csv,Computer_Is_Left_On,No
+Appliance_Computer.csv,Computer_Is_Left_On,Yes
+Appliance_Computer.csv,Computer_Primary_External_Monitor,No
+Appliance_Computer.csv,Computer_Primary_External_Monitor,Yes
+Appliance_Computer.csv,Computer_Printer,No
+Appliance_Computer.csv,Computer_Printer,Yes
+Appliance_Computer.csv,Computer_Uninterruptible_Power,No
+Appliance_Computer.csv,Computer_Uninterruptible_Power,Yes
+Appliance_Computer.csv,Computer_Wifi,No
+Appliance_Computer.csv,Computer_Wifi,Yes
+Appliance_Computer.csv,Energy_Star,No
+Appliance_Computer.csv,Energy_Star,Yes
+Appliance_Computer.csv,Internet_Access,No
+Appliance_Computer.csv,Internet_Access,Yes
+Appliance_Computer.csv,Primary_Computer,No
+Appliance_Computer.csv,Primary_Computer,Yes
+Appliance_Computer.csv,Primary_Monitor_Size_Is_Estimated,Estimated
+Appliance_Computer.csv,Primary_Monitor_Size_Is_Estimated,Measured or Known
+Appliance_Computer.csv,Primary_Monitor_Type,CRT/Tube
+Appliance_Computer.csv,Primary_Monitor_Type,LCD - Fluorescent
+Appliance_Computer.csv,Primary_Monitor_Type,LCD - LED
+Appliance_Computer.csv,Primary_Monitor_Type,OLED
+Appliance_Computer.csv,Room_Type,Basement
+Appliance_Computer.csv,Room_Type,Bathroom
+Appliance_Computer.csv,Room_Type,Bedroom
+Appliance_Computer.csv,Room_Type,Closet
+Appliance_Computer.csv,Room_Type,Dining Room
+Appliance_Computer.csv,Room_Type,Entry/Entryway
+Appliance_Computer.csv,Room_Type,Family Room
+Appliance_Computer.csv,Room_Type,Garage
+Appliance_Computer.csv,Room_Type,Hallway
+Appliance_Computer.csv,Room_Type,Kitchen
+Appliance_Computer.csv,Room_Type,Laundry
+Appliance_Computer.csv,Room_Type,Living Room
+Appliance_Computer.csv,Room_Type,Mechanical
+Appliance_Computer.csv,Room_Type,Office
+Appliance_Computer.csv,Room_Type,Other
+Appliance_Computer.csv,Room_Type,Outbuilding / Addition
+Appliance_Computer.csv,Room_Type,Outside
+Appliance_Computer.csv,Secondary_Monitor_External,No
+Appliance_Computer.csv,Secondary_Monitor_External,Yes
+Appliance_Computer.csv,Secondary_Monitor_Size_Is_Estimated,Estimated
+Appliance_Computer.csv,Secondary_Monitor_Size_Is_Estimated,Measured or Known
+Appliance_Computer.csv,Secondary_Monitor_Type,LCD - Fluorescent
+Appliance_Computer.csv,Secondary_Monitor_Type,LCD - LED
+Appliance_Computer.csv,Secondary_Monitor_Type,OLED
+Appliance_Computer.csv,Third_Monitor_Size_Is_Estimated,Estimated
+Appliance_Computer.csv,Third_Monitor_Size_Is_Estimated,Measured or Known
+Appliance_Computer.csv,Type,Desktop
+Appliance_Computer.csv,Type,Integrated
+Appliance_Computer.csv,Type,Laptop
+Appliance_Dehumidifier.csv,Dehumidifier_Amps_Is_Estimated,Measured or Known
+Appliance_Dehumidifier.csv,Dehumidifier_Capacity_Is_Estimated,Measured or Known
+Appliance_Dehumidifier.csv,Dehumidifier_Direct_Plumbed,No
+Appliance_Dehumidifier.csv,Dehumidifier_Direct_Plumbed,Yes
+Appliance_Dehumidifier.csv,Dehumidifier_Watts_Is_Estimated,Measured or Known
+Appliance_Dehumidifier.csv,Energy_Star,No
+Appliance_Dehumidifier.csv,Energy_Star,Yes
+Appliance_Dehumidifier.csv,Room_Type,Attic
+Appliance_Dehumidifier.csv,Room_Type,Basement
+Appliance_Dehumidifier.csv,Room_Type,Bathroom
+Appliance_Dehumidifier.csv,Room_Type,Bedroom
+Appliance_Dehumidifier.csv,Room_Type,Closet
+Appliance_Dehumidifier.csv,Room_Type,Crawlspace
+Appliance_Dehumidifier.csv,Room_Type,Family Room
+Appliance_Dehumidifier.csv,Room_Type,Garage
+Appliance_Dehumidifier.csv,Room_Type,Hallway
+Appliance_Dehumidifier.csv,Room_Type,Laundry
+Appliance_Dehumidifier.csv,Room_Type,Living Room
+Appliance_Dehumidifier.csv,Room_Type,Mechanical
+Appliance_Dehumidifier.csv,Room_Type,Office
+Appliance_Dehumidifier.csv,Room_Type,Other
+Appliance_Dishwasher.csv,Dishwasher_Missing_Model_Reason,NAMEPLATE IS ILLEGIBLE
+Appliance_Dishwasher.csv,Dishwasher_Missing_Model_Reason,NO NAMEPLATE
+Appliance_Dishwasher.csv,Energy_Star,No
+Appliance_Dishwasher.csv,Energy_Star,Yes
+Appliance_Dishwasher.csv,Room_Type,Basement
+Appliance_Dishwasher.csv,Room_Type,Bedroom
+Appliance_Dishwasher.csv,Room_Type,Dining Room
+Appliance_Dishwasher.csv,Room_Type,Family Room
+Appliance_Dishwasher.csv,Room_Type,Garage
+Appliance_Dishwasher.csv,Room_Type,Kitchen
+Appliance_Dishwasher.csv,Room_Type,Laundry
+Appliance_Dishwasher.csv,Room_Type,Living Room
+Appliance_Dishwasher.csv,Room_Type,Office
+Appliance_Dishwasher.csv,Room_Type,Other
+Appliance_Dishwasher.csv,Room_Type,Outbuilding / Addition
+Appliance_Dishwasher.csv,Type,Compact (< 18in.)
+Appliance_Dishwasher.csv,Type,Countertop
+Appliance_Dishwasher.csv,Type,Standard (approx 24in.)
+Appliance_Dishwasher.csv,WiFi_Capable,No
+Appliance_Dishwasher.csv,WiFi_Capable,Yes
+Appliance_Disposal.csv,Disposal_Missing_Model_Reason,NO NAMEPLATE
+Appliance_Disposal.csv,Disposal_Missing_Model_Reason,OTHER
+Appliance_Disposal.csv,Make,Americana
+Appliance_Disposal.csv,Make,Crosley
+Appliance_Disposal.csv,Make,Frigidaire
+Appliance_Disposal.csv,Make,General Electric
+Appliance_Disposal.csv,Make,InSinkErator
+Appliance_Disposal.csv,Make,Jenn Air
+Appliance_Disposal.csv,Make,Kenmore
+Appliance_Disposal.csv,Make,KitchenAid
+Appliance_Disposal.csv,Make,Maytag
+Appliance_Disposal.csv,Make,Other
+Appliance_Disposal.csv,Make,Sears
+Appliance_Disposal.csv,Make,Tappan
+Appliance_Disposal.csv,Make,Viking
+Appliance_Disposal.csv,Make,Waste King
+Appliance_Disposal.csv,Make,Whirlpool
+Appliance_Disposal.csv,Motor_Power_Units,BHP
+Appliance_Disposal.csv,Motor_Power_Units,HP
+Appliance_Disposal.csv,Motor_Power_Units,kW
+Appliance_Disposal.csv,WiFi_Capable,No
+Appliance_Disposal.csv,WiFi_Capable,Yes
+Appliance_GameConsole.csv,Room_Type,Basement
+Appliance_GameConsole.csv,Room_Type,Bedroom
+Appliance_GameConsole.csv,Room_Type,Closet
+Appliance_GameConsole.csv,Room_Type,Dining Room
+Appliance_GameConsole.csv,Room_Type,Family Room
+Appliance_GameConsole.csv,Room_Type,Garage
+Appliance_GameConsole.csv,Room_Type,Hallway
+Appliance_GameConsole.csv,Room_Type,Kitchen
+Appliance_GameConsole.csv,Room_Type,Laundry
+Appliance_GameConsole.csv,Room_Type,Living Room
+Appliance_GameConsole.csv,Room_Type,Mechanical
+Appliance_GameConsole.csv,Room_Type,Office
+Appliance_GameConsole.csv,Room_Type,Other
+Appliance_GameConsole.csv,Room_Type,Outbuilding / Addition
+Appliance_GameConsole.csv,Used_for_DVD_or_Bluray,No
+Appliance_GameConsole.csv,Used_for_DVD_or_Bluray,Yes
+Appliance_GameConsole.csv,Wifi_Enabled,No
+Appliance_GameConsole.csv,Wifi_Enabled,Yes
+Appliance_KitchenMisc.csv,Kitchen_Appliance_Type,Air Fryer
+Appliance_KitchenMisc.csv,Kitchen_Appliance_Type,Blender
+Appliance_KitchenMisc.csv,Kitchen_Appliance_Type,Coffee maker
+Appliance_KitchenMisc.csv,Kitchen_Appliance_Type,Electric Kettle/Water Heater
+Appliance_KitchenMisc.csv,Kitchen_Appliance_Type,Food processor
+Appliance_KitchenMisc.csv,Kitchen_Appliance_Type,Ice cream maker
+Appliance_KitchenMisc.csv,Kitchen_Appliance_Type,Microwave
+Appliance_KitchenMisc.csv,Kitchen_Appliance_Type,Mixer
+Appliance_KitchenMisc.csv,Kitchen_Appliance_Type,Other
+Appliance_KitchenMisc.csv,Kitchen_Appliance_Type,Rice cooker
+Appliance_KitchenMisc.csv,Kitchen_Appliance_Type,Slow cooker
+Appliance_KitchenMisc.csv,Kitchen_Appliance_Type,Slow cooker / Pressure Cooker / Instapot
+Appliance_KitchenMisc.csv,Kitchen_Appliance_Type,Sous-vide
+Appliance_KitchenMisc.csv,Kitchen_Appliance_Type,Standalone Ice-maker
+Appliance_KitchenMisc.csv,Kitchen_Appliance_Type,Toaster - conventional
+Appliance_KitchenMisc.csv,Kitchen_Appliance_Type,Toaster - toaster oven
+Appliance_LargeUnusualLoad.csv,Energy_Star,No
+Appliance_LargeUnusualLoad.csv,Energy_Star,Yes
+Appliance_LargeUnusualLoad.csv,Room_Type,Basement
+Appliance_LargeUnusualLoad.csv,Room_Type,Bathroom
+Appliance_LargeUnusualLoad.csv,Room_Type,Bedroom
+Appliance_LargeUnusualLoad.csv,Room_Type,Crawlspace
+Appliance_LargeUnusualLoad.csv,Room_Type,Dining Room
+Appliance_LargeUnusualLoad.csv,Room_Type,Entry/Entryway
+Appliance_LargeUnusualLoad.csv,Room_Type,Family Room
+Appliance_LargeUnusualLoad.csv,Room_Type,Garage
+Appliance_LargeUnusualLoad.csv,Room_Type,Hallway
+Appliance_LargeUnusualLoad.csv,Room_Type,Kitchen
+Appliance_LargeUnusualLoad.csv,Room_Type,Laundry
+Appliance_LargeUnusualLoad.csv,Room_Type,Living Room
+Appliance_LargeUnusualLoad.csv,Room_Type,Mechanical
+Appliance_LargeUnusualLoad.csv,Room_Type,Office
+Appliance_LargeUnusualLoad.csv,Room_Type,Other
+Appliance_LargeUnusualLoad.csv,Room_Type,Outbuilding / Addition
+Appliance_LargeUnusualLoad.csv,Room_Type,Outside
+Appliance_LargeUnusualLoad.csv,Type,Chicken heat lamp
+Appliance_LargeUnusualLoad.csv,Type,Exercise Equipment
+Appliance_LargeUnusualLoad.csv,Type,Freshwater Pump (i.e. House supply)
+Appliance_LargeUnusualLoad.csv,Type,Garage door opener
+Appliance_LargeUnusualLoad.csv,Type,Heated Pool
+Appliance_LargeUnusualLoad.csv,Type,Hot Tub
+Appliance_LargeUnusualLoad.csv,Type,Irrigation Pump
+Appliance_LargeUnusualLoad.csv,Type,Kiln (Electric)
+Appliance_LargeUnusualLoad.csv,Type,Other
+Appliance_LargeUnusualLoad.csv,Type,Pool Pump
+Appliance_LargeUnusualLoad.csv,Type,Power Tool
+Appliance_LargeUnusualLoad.csv,Type,Sauna
+Appliance_LargeUnusualLoad.csv,Type,Septic pump
+Appliance_LargeUnusualLoad.csv,Type,Stock tank heaters
+Appliance_LargeUnusualLoad.csv,Type,Water Circulator Pump
+Appliance_LargeUnusualLoad.csv,Type,Water feature
+Appliance_LargeUnusualLoad.csv,Type,Welder (electric)
+Appliance_LargeUnusualLoad.csv,Type,Whole House Vacuum
+Appliance_Laundry.csv,Dryer_Fuel,Electric
+Appliance_Laundry.csv,Dryer_Fuel,Natural Gas
+Appliance_Laundry.csv,Dryer_Fuel,Propane
+Appliance_Laundry.csv,Dryer_Gas_Line_Available,No
+Appliance_Laundry.csv,Dryer_Gas_Line_Available,Yes
+Appliance_Laundry.csv,Dryer_Vented,Vented
+Appliance_Laundry.csv,Dryer_Vented,Ventless (condensing)
+Appliance_Laundry.csv,Energy_Star,No
+Appliance_Laundry.csv,Energy_Star,Yes
+Appliance_Laundry.csv,Heat_Pump_Dryer,No
+Appliance_Laundry.csv,Heat_Pump_Dryer,Yes
+Appliance_Laundry.csv,Laundry_Missing_Model_Reason,NAMEPLATE IS ILLEGIBLE
+Appliance_Laundry.csv,Laundry_Missing_Model_Reason,NO NAMEPLATE
+Appliance_Laundry.csv,Laundry_Missing_Model_Reason,OTHER
+Appliance_Laundry.csv,Primary,No
+Appliance_Laundry.csv,Primary,Yes
+Appliance_Laundry.csv,Type,Dryer
+Appliance_Laundry.csv,Type,Washer
+Appliance_Laundry.csv,Type,Washer / Dryer - Stacked Combo
+Appliance_Laundry.csv,Type,Washer / Dryer Combo
+Appliance_Laundry.csv,Washer_Axis,Front load washer
+Appliance_Laundry.csv,Washer_Axis,Top load washer
+Appliance_Laundry.csv,Washer_Depth_Is_Estimated,Estimated
+Appliance_Laundry.csv,Washer_Depth_Is_Estimated,Measured or Known
+Appliance_Laundry.csv,Washer_Diameter_Is_Estimated,Estimated
+Appliance_Laundry.csv,Washer_Diameter_Is_Estimated,Measured or Known
+Appliance_Laundry.csv,Washer_Dryer_Matched_Pair,No
+Appliance_Laundry.csv,Washer_Dryer_Matched_Pair,Yes
+Appliance_Laundry.csv,Washer_Size_Is_Estimated,Estimated
+Appliance_Laundry.csv,Washer_Size_Is_Estimated,Measured or Known
+Appliance_Laundry.csv,Wifi_Enabled,No
+Appliance_Laundry.csv,Wifi_Enabled,Yes
+Appliance_Misc.csv,Small_Appliance_Type,Copier (only)
+Appliance_Misc.csv,Small_Appliance_Type,Cordless Phone
+Appliance_Misc.csv,Small_Appliance_Type,Other
+Appliance_Misc.csv,Small_Appliance_Type,Printer (only)
+Appliance_Misc.csv,Small_Appliance_Type,Printer / Scanner / Copier (combined)
+Appliance_Misc.csv,Small_Appliance_Type,Scanner (only)
+Appliance_One_Line.csv,Attached_Detached_SF_StrataVar,Attached
+Appliance_One_Line.csv,Attached_Detached_SF_StrataVar,Detached
+Appliance_One_Line.csv,BPA_SF_StrataVar,BPA
+Appliance_One_Line.csv,BPA_SF_StrataVar,Non-BPA
+Appliance_One_Line.csv,Building_Category,"Duplex, Triplex, or Fourplex"
+Appliance_One_Line.csv,Building_Category,Manufactured - Double Wide
+Appliance_One_Line.csv,Building_Category,Manufactured - Single Wide
+Appliance_One_Line.csv,Building_Category,Single Family Detached
+Appliance_One_Line.csv,Building_Category,Townhome or Rowhome
+Appliance_One_Line.csv,Building_Type,Single Family
+Appliance_One_Line.csv,Electric_Utility_BPA,No
+Appliance_One_Line.csv,Electric_Utility_BPA,Yes
+Appliance_One_Line.csv,Gas_Utility,AVISTA
+Appliance_One_Line.csv,Gas_Utility,BIG SKY GAS
+Appliance_One_Line.csv,Gas_Utility,CASCADE NATURAL GAS COMPANY
+Appliance_One_Line.csv,Gas_Utility,ENERGY WEST
+Appliance_One_Line.csv,Gas_Utility,INTERMOUNTAIN GAS
+Appliance_One_Line.csv,Gas_Utility,MONTANA DOKOTA GAS
+Appliance_One_Line.csv,Gas_Utility,NORTHWESTERN
+Appliance_One_Line.csv,Gas_Utility,NW NATURAL GAS
+Appliance_One_Line.csv,Gas_Utility,PUGET SOUND ENERGY
+Appliance_One_Line.csv,Gas_Utility,UNKNOWN
+Appliance_One_Line.csv,NWN_SF_StrataVar,NWN
+Appliance_One_Line.csv,NWN_SF_StrataVar,Non-NWN
+Appliance_One_Line.csv,Ownership,Own
+Appliance_One_Line.csv,Ownership,Rent
+Appliance_One_Line.csv,Region_SF_StrataVar,ID
+Appliance_One_Line.csv,Region_SF_StrataVar,MT - BPA
+Appliance_One_Line.csv,Region_SF_StrataVar,OR - Eastern
+Appliance_One_Line.csv,Region_SF_StrataVar,OR - Western
+Appliance_One_Line.csv,Region_SF_StrataVar,WA - Eastern
+Appliance_One_Line.csv,Region_SF_StrataVar,WA - Puget Sound
+Appliance_One_Line.csv,Region_SF_StrataVar,WA - Western
+Appliance_One_Line.csv,Sample_SF_StrataVar,Avista
+Appliance_One_Line.csv,Sample_SF_StrataVar,BPA
+Appliance_One_Line.csv,Sample_SF_StrataVar,Base/Core
+Appliance_One_Line.csv,Sample_SF_StrataVar,HZ 2/3
+Appliance_One_Line.csv,Sample_SF_StrataVar,NWN
+Appliance_One_Line.csv,State,ID
+Appliance_One_Line.csv,State,MT
+Appliance_One_Line.csv,State,OR
+Appliance_One_Line.csv,State,WA
+Appliance_PowerStrip.csv,Application,Entertainment Center
+Appliance_PowerStrip.csv,Application,Home Office
+Appliance_PowerStrip.csv,Application,Other
+Appliance_PowerStrip.csv,Room_Type,Attic
+Appliance_PowerStrip.csv,Room_Type,Basement
+Appliance_PowerStrip.csv,Room_Type,Bathroom
+Appliance_PowerStrip.csv,Room_Type,Bedroom
+Appliance_PowerStrip.csv,Room_Type,Closet
+Appliance_PowerStrip.csv,Room_Type,Dining Room
+Appliance_PowerStrip.csv,Room_Type,Entry/Entryway
+Appliance_PowerStrip.csv,Room_Type,Family Room
+Appliance_PowerStrip.csv,Room_Type,Garage
+Appliance_PowerStrip.csv,Room_Type,Hallway
+Appliance_PowerStrip.csv,Room_Type,Kitchen
+Appliance_PowerStrip.csv,Room_Type,Laundry
+Appliance_PowerStrip.csv,Room_Type,Living Room
+Appliance_PowerStrip.csv,Room_Type,Mechanical
+Appliance_PowerStrip.csv,Room_Type,Office
+Appliance_PowerStrip.csv,Room_Type,Other
+Appliance_PowerStrip.csv,Room_Type,Outbuilding / Addition
+Appliance_PowerStrip.csv,Room_Type,Outside
+Appliance_PowerStrip.csv,Smart_Power_Strip,No
+Appliance_PowerStrip.csv,Smart_Power_Strip,Yes
+Appliance_PowerStrip.csv,Wifi_Enabled,No
+Appliance_PowerStrip.csv,Wifi_Enabled,Yes
+Appliance_Refrigerator_Freezer.csv,Door_in_Door,No
+Appliance_Refrigerator_Freezer.csv,Door_in_Door,Yes
+Appliance_Refrigerator_Freezer.csv,Energy_Star,No
+Appliance_Refrigerator_Freezer.csv,Energy_Star,Yes
+Appliance_Refrigerator_Freezer.csv,Icemaker_Present,No
+Appliance_Refrigerator_Freezer.csv,Icemaker_Present,Yes
+Appliance_Refrigerator_Freezer.csv,Icemaker_Working,No
+Appliance_Refrigerator_Freezer.csv,Icemaker_Working,Yes
+Appliance_Refrigerator_Freezer.csv,Icemaker_type,In freezer
+Appliance_Refrigerator_Freezer.csv,Icemaker_type,None
+Appliance_Refrigerator_Freezer.csv,Icemaker_type,Through door
+Appliance_Refrigerator_Freezer.csv,Integrated_Scren,No
+Appliance_Refrigerator_Freezer.csv,Integrated_Scren,Yes
+Appliance_Refrigerator_Freezer.csv,Primary,No
+Appliance_Refrigerator_Freezer.csv,Primary,Yes
+Appliance_Refrigerator_Freezer.csv,Refrigerator_Freezer_Missing_Model_Reason,NAMEPLATE IS ILLEGIBLE
+Appliance_Refrigerator_Freezer.csv,Refrigerator_Freezer_Missing_Model_Reason,NO NAMEPLATE
+Appliance_Refrigerator_Freezer.csv,Refrigerator_Freezer_Missing_Model_Reason,OTHER
+Appliance_Refrigerator_Freezer.csv,Room_Type,Basement
+Appliance_Refrigerator_Freezer.csv,Room_Type,Bathroom
+Appliance_Refrigerator_Freezer.csv,Room_Type,Bedroom
+Appliance_Refrigerator_Freezer.csv,Room_Type,Closet
+Appliance_Refrigerator_Freezer.csv,Room_Type,Crawlspace
+Appliance_Refrigerator_Freezer.csv,Room_Type,Dining Room
+Appliance_Refrigerator_Freezer.csv,Room_Type,Entry/Entryway
+Appliance_Refrigerator_Freezer.csv,Room_Type,Family Room
+Appliance_Refrigerator_Freezer.csv,Room_Type,Garage
+Appliance_Refrigerator_Freezer.csv,Room_Type,Hallway
+Appliance_Refrigerator_Freezer.csv,Room_Type,Kitchen
+Appliance_Refrigerator_Freezer.csv,Room_Type,Laundry
+Appliance_Refrigerator_Freezer.csv,Room_Type,Living Room
+Appliance_Refrigerator_Freezer.csv,Room_Type,Mechanical
+Appliance_Refrigerator_Freezer.csv,Room_Type,Office
+Appliance_Refrigerator_Freezer.csv,Room_Type,Other
+Appliance_Refrigerator_Freezer.csv,Room_Type,Outbuilding / Addition
+Appliance_Refrigerator_Freezer.csv,Room_Type,Outside
+Appliance_Refrigerator_Freezer.csv,Size_Is_Estimated,Estimated
+Appliance_Refrigerator_Freezer.csv,Size_Is_Estimated,Measured or Known
+Appliance_Refrigerator_Freezer.csv,Type,Chest Freezer
+Appliance_Refrigerator_Freezer.csv,Type,Full Size Single Refrigerator Only
+Appliance_Refrigerator_Freezer.csv,Type,Mini-Fridge
+Appliance_Refrigerator_Freezer.csv,Type,R/F Bottom Freezer
+Appliance_Refrigerator_Freezer.csv,Type,R/F Top Freezer
+Appliance_Refrigerator_Freezer.csv,Type,Side by Side Refrigerator/Freezer
+Appliance_Refrigerator_Freezer.csv,Type,Side by Side Refrigerators Only
+Appliance_Refrigerator_Freezer.csv,Type,Side by Side w/ Bottom Freezer
+Appliance_Refrigerator_Freezer.csv,Type,Upright Full Size Single Freezer Only
+Appliance_Refrigerator_Freezer.csv,Wifi_Enabled,No
+Appliance_Refrigerator_Freezer.csv,Wifi_Enabled,Yes
+Appliance_Stove_Oven.csv,Oven_Fuel,Electric
+Appliance_Stove_Oven.csv,Oven_Fuel,Natural Gas
+Appliance_Stove_Oven.csv,Oven_Fuel,Other
+Appliance_Stove_Oven.csv,Oven_Fuel,Propane
+Appliance_Stove_Oven.csv,Oven_Fuel,Wood (cord)
+Appliance_Stove_Oven.csv,Oven_Single_Or_Double,Double Oven
+Appliance_Stove_Oven.csv,Oven_Single_Or_Double,Single Oven
+Appliance_Stove_Oven.csv,Oven_Type,Both
+Appliance_Stove_Oven.csv,Oven_Type,Convection
+Appliance_Stove_Oven.csv,Oven_Type,Radiant
+Appliance_Stove_Oven.csv,Primary,No
+Appliance_Stove_Oven.csv,Primary,Yes
+Appliance_Stove_Oven.csv,Room_Type,Basement
+Appliance_Stove_Oven.csv,Room_Type,Bedroom
+Appliance_Stove_Oven.csv,Room_Type,Closet
+Appliance_Stove_Oven.csv,Room_Type,Dining Room
+Appliance_Stove_Oven.csv,Room_Type,Family Room
+Appliance_Stove_Oven.csv,Room_Type,Garage
+Appliance_Stove_Oven.csv,Room_Type,Kitchen
+Appliance_Stove_Oven.csv,Room_Type,Laundry
+Appliance_Stove_Oven.csv,Room_Type,Living Room
+Appliance_Stove_Oven.csv,Room_Type,Mechanical
+Appliance_Stove_Oven.csv,Room_Type,Office
+Appliance_Stove_Oven.csv,Room_Type,Other
+Appliance_Stove_Oven.csv,Room_Type,Outbuilding / Addition
+Appliance_Stove_Oven.csv,Stove_Fuel,Electric
+Appliance_Stove_Oven.csv,Stove_Fuel,Natural Gas
+Appliance_Stove_Oven.csv,Stove_Fuel,Propane
+Appliance_Stove_Oven.csv,Stove_Fuel,Wood (cord)
+Appliance_Stove_Oven.csv,Stove_Oven_Missing_Model_Reason,NAMEPLATE IS ILLEGIBLE
+Appliance_Stove_Oven.csv,Stove_Oven_Missing_Model_Reason,NO NAMEPLATE
+Appliance_Stove_Oven.csv,Stove_Oven_Missing_Model_Reason,OTHER
+Appliance_Stove_Oven.csv,Stove_Type,Coils
+Appliance_Stove_Oven.csv,Stove_Type,Combustion
+Appliance_Stove_Oven.csv,Stove_Type,Glass Top
+Appliance_Stove_Oven.csv,Stove_Type,Induction
+Appliance_Stove_Oven.csv,Stove_Type,Other
+Appliance_Stove_Oven.csv,Type,Mini-oven (standalone / wall)
+Appliance_Stove_Oven.csv,Type,Oven (standalone / wall)
+Appliance_Stove_Oven.csv,Type,Stove / Oven combo
+Appliance_Stove_Oven.csv,Type,Stovetop
+Appliance_Stove_Oven.csv,Wifi_Enabled,No
+Appliance_Stove_Oven.csv,Wifi_Enabled,Yes
+Appliance_Television.csv,DVR_Present,No
+Appliance_Television.csv,DVR_Present,Yes
+Appliance_Television.csv,Energy_Star,No
+Appliance_Television.csv,Energy_Star,Yes
+Appliance_Television.csv,Primary,All used about the same
+Appliance_Television.csv,Primary,Primary
+Appliance_Television.csv,Primary,Secondary
+Appliance_Television.csv,Primary,Used less
+Appliance_Television.csv,Room_Type,Basement
+Appliance_Television.csv,Room_Type,Bathroom
+Appliance_Television.csv,Room_Type,Bedroom
+Appliance_Television.csv,Room_Type,Dining Room
+Appliance_Television.csv,Room_Type,Entry/Entryway
+Appliance_Television.csv,Room_Type,Family Room
+Appliance_Television.csv,Room_Type,Garage
+Appliance_Television.csv,Room_Type,Hallway
+Appliance_Television.csv,Room_Type,Kitchen
+Appliance_Television.csv,Room_Type,Laundry
+Appliance_Television.csv,Room_Type,Living Room
+Appliance_Television.csv,Room_Type,Mechanical
+Appliance_Television.csv,Room_Type,Office
+Appliance_Television.csv,Room_Type,Other
+Appliance_Television.csv,Room_Type,Outbuilding / Addition
+Appliance_Television.csv,Room_Type,Outside
+Appliance_Television.csv,STB_Present,No
+Appliance_Television.csv,STB_Present,Yes
+Appliance_Television.csv,Size_Is_Estimated,Estimated
+Appliance_Television.csv,Size_Is_Estimated,Measured or Known
+Appliance_Television.csv,TV_Resolution,FHD (1080p)
+Appliance_Television.csv,TV_Resolution,High Definition (720p)
+Appliance_Television.csv,TV_Resolution,Other
+Appliance_Television.csv,TV_Resolution,Standard Definition
+Appliance_Television.csv,TV_Resolution,UHD (4080p) - 4K
+Appliance_Television.csv,TV_Resolution,XUHD (8096p) - 8K
+Appliance_Television.csv,TV_Screen_Surface,Curved
+Appliance_Television.csv,TV_Screen_Surface,Flat
+Appliance_Television.csv,TV_Screen_Surface,None (Projector)
+Appliance_Television.csv,TV_Screen_Type,LCD - Fluorescent
+Appliance_Television.csv,TV_Screen_Type,LCD - LED
+Appliance_Television.csv,TV_Screen_Type,OLED
+Appliance_Television.csv,TV_Screen_Type,Other
+Appliance_Television.csv,TV_Screen_Type,Plasma
+Appliance_Television.csv,TV_Screen_Type,Projector (Non-CRT)
+Appliance_Television.csv,TV_Screen_Type,QLED
+Appliance_Television.csv,TV_Screen_Type,Tube (CRT and internal or rear projector)
+Appliance_Television.csv,TV_Wifi,No
+Appliance_Television.csv,TV_Wifi,Yes
+Appliance_Television.csv,Wattage_Is_Estimated,Estimated
+Appliance_Television.csv,Wattage_Is_Estimated,Measured or Known
+Appliance_Thermostat.csv,Energy_Star,No
+Appliance_Thermostat.csv,Energy_Star,Yes
+Appliance_Thermostat.csv,Programmed,No
+Appliance_Thermostat.csv,Programmed,Yes
+Appliance_Thermostat.csv,Room_Type,Attic
+Appliance_Thermostat.csv,Room_Type,Basement
+Appliance_Thermostat.csv,Room_Type,Bathroom
+Appliance_Thermostat.csv,Room_Type,Bedroom
+Appliance_Thermostat.csv,Room_Type,Closet
+Appliance_Thermostat.csv,Room_Type,Crawlspace
+Appliance_Thermostat.csv,Room_Type,Dining Room
+Appliance_Thermostat.csv,Room_Type,Entry/Entryway
+Appliance_Thermostat.csv,Room_Type,Family Room
+Appliance_Thermostat.csv,Room_Type,Garage
+Appliance_Thermostat.csv,Room_Type,Hallway
+Appliance_Thermostat.csv,Room_Type,Kitchen
+Appliance_Thermostat.csv,Room_Type,Laundry
+Appliance_Thermostat.csv,Room_Type,Living Room
+Appliance_Thermostat.csv,Room_Type,Mechanical
+Appliance_Thermostat.csv,Room_Type,Office
+Appliance_Thermostat.csv,Room_Type,Other
+Appliance_Thermostat.csv,Room_Type,Outbuilding / Addition
+Appliance_Thermostat.csv,System_Controlled,Central System
+Appliance_Thermostat.csv,System_Controlled,Zonal System
+Appliance_Thermostat.csv,Thermostat_Wifi_Controls_Used,No
+Appliance_Thermostat.csv,Thermostat_Wifi_Controls_Used,Yes
+Appliance_Thermostat.csv,Type,Additional Thermostat Temperature Sensor
+Appliance_Thermostat.csv,Type,Manual thermostat - Analog
+Appliance_Thermostat.csv,Type,Manual thermostat - Digital
+Appliance_Thermostat.csv,Type,On/off
+Appliance_Thermostat.csv,Type,Programmable thermostat
+Appliance_Thermostat.csv,Type,Smart thermostat
+Appliance_Thermostat.csv,Type,Smart/Wi-Fi thermostat
+Appliance_Thermostat.csv,Type,Timer
+Appliance_Thermostat.csv,Type,Wi-Fi enabled thermostat
+Building_Shell_One_Line.csv,Attached_Detached_SF_StrataVar,Attached
+Building_Shell_One_Line.csv,Attached_Detached_SF_StrataVar,Detached
+Building_Shell_One_Line.csv,BPA_SF_StrataVar,BPA
+Building_Shell_One_Line.csv,BPA_SF_StrataVar,Non-BPA
+Building_Shell_One_Line.csv,Building_Category,"Duplex, Triplex, or Fourplex"
+Building_Shell_One_Line.csv,Building_Category,Manufactured - Double Wide
+Building_Shell_One_Line.csv,Building_Category,Manufactured - Single Wide
+Building_Shell_One_Line.csv,Building_Category,Single Family Detached
+Building_Shell_One_Line.csv,Building_Category,Townhome or Rowhome
+Building_Shell_One_Line.csv,Building_Type,Single Family
+Building_Shell_One_Line.csv,Electric_Utility_BPA,No
+Building_Shell_One_Line.csv,Electric_Utility_BPA,Yes
+Building_Shell_One_Line.csv,Gas_Utility,AVISTA
+Building_Shell_One_Line.csv,Gas_Utility,BIG SKY GAS
+Building_Shell_One_Line.csv,Gas_Utility,CASCADE NATURAL GAS COMPANY
+Building_Shell_One_Line.csv,Gas_Utility,ENERGY WEST
+Building_Shell_One_Line.csv,Gas_Utility,INTERMOUNTAIN GAS
+Building_Shell_One_Line.csv,Gas_Utility,MONTANA DOKOTA GAS
+Building_Shell_One_Line.csv,Gas_Utility,NORTHWESTERN
+Building_Shell_One_Line.csv,Gas_Utility,NW NATURAL GAS
+Building_Shell_One_Line.csv,Gas_Utility,PUGET SOUND ENERGY
+Building_Shell_One_Line.csv,Gas_Utility,UNKNOWN
+Building_Shell_One_Line.csv,NWN_SF_StrataVar,NWN
+Building_Shell_One_Line.csv,NWN_SF_StrataVar,Non-NWN
+Building_Shell_One_Line.csv,Ownership,Own
+Building_Shell_One_Line.csv,Ownership,Rent
+Building_Shell_One_Line.csv,Region_SF_StrataVar,ID
+Building_Shell_One_Line.csv,Region_SF_StrataVar,MT - BPA
+Building_Shell_One_Line.csv,Region_SF_StrataVar,OR - Eastern
+Building_Shell_One_Line.csv,Region_SF_StrataVar,OR - Western
+Building_Shell_One_Line.csv,Region_SF_StrataVar,WA - Eastern
+Building_Shell_One_Line.csv,Region_SF_StrataVar,WA - Puget Sound
+Building_Shell_One_Line.csv,Region_SF_StrataVar,WA - Western
+Building_Shell_One_Line.csv,Sample_SF_StrataVar,Avista
+Building_Shell_One_Line.csv,Sample_SF_StrataVar,BPA
+Building_Shell_One_Line.csv,Sample_SF_StrataVar,Base/Core
+Building_Shell_One_Line.csv,Sample_SF_StrataVar,HZ 2/3
+Building_Shell_One_Line.csv,Sample_SF_StrataVar,NWN
+Building_Shell_One_Line.csv,State,ID
+Building_Shell_One_Line.csv,State,MT
+Building_Shell_One_Line.csv,State,OR
+Building_Shell_One_Line.csv,State,WA
+Door.csv,Door_Construction,Double
+Door.csv,Door_Construction,Dutch
+Door.csv,Door_Construction,Single
+Door.csv,Door_Dimensions_Are_Estimated,Estimated
+Door.csv,Door_Dimensions_Are_Estimated,Measured or Known
+Door.csv,Door_Mechanism,Hinge
+Door.csv,Door_Mechanism,Slider
+Door.csv,Door_Type,Fiberglass
+Door.csv,Door_Type,Metal
+Door.csv,Door_Type,Vinyl
+Door.csv,Door_Type,Wood Hollow
+Door.csv,Door_Type,Wood Solid Core
+Door.csv,Door_Window_Type,> 80% window (glass French door)
+Door.csv,Door_Window_Type,"Decorative window (arch, etc.)"
+Door.csv,Door_Window_Type,Half window
+Door.csv,Door_Window_Type,None
+Door.csv,Door_Window_Type,Other
+Door.csv,Interior_or_Exterior,Exterior
+Door.csv,Interior_or_Exterior,Interior
+Ducting.csv,Cavity_Used_for_Air_Transport,No
+Ducting.csv,Cavity_Used_for_Air_Transport,Yes
+Ducting.csv,Crossover_Condition,Connected
+Ducting.csv,Crossover_Condition,Disconnected
+Ducting.csv,Crossover_Condition,Partially connected
+Ducting.csv,Crossover_Present,No
+Ducting.csv,Crossover_Present,Yes
+Ducting.csv,Duct_Sealing_Material,Mastic
+Ducting.csv,Duct_Sealing_Material,Mortite
+Ducting.csv,Duct_Sealing_Material,Caulking
+Ducting.csv,Duct_Sealing_Material,Duct or Foil tape
+Ducting.csv,Duct_Sealing_Material,Other
+Ducting.csv,Duct_Sealing_Material,Unknown
+Ducting.csv,Evidence_of_Duct_Sealing,No
+Ducting.csv,Evidence_of_Duct_Sealing,Yes
+Ducting.csv,Flex_Run_Insulation_Type,R4
+Ducting.csv,Flex_Run_Insulation_Type,R6
+Ducting.csv,Flex_Run_Insulation_Type,R8
+Ducting.csv,Insulation_Present,No
+Ducting.csv,Insulation_Present,Yes
+Ducting.csv,Insulation_Type,Duct board
+Ducting.csv,Insulation_Type,Fiberglass batts
+Ducting.csv,Insulation_Type,Foam board
+Ducting.csv,Insulation_Type,Foil-faced bubble wrap
+Ducting.csv,Insulation_Type,Foil-faced fiberglass
+Ducting.csv,System_Type,90 Flex (spider system)
+Ducting.csv,System_Type,All Metal
+Ducting.csv,System_Type,"Duct Board Plenum, Flex Runs"
+Ducting.csv,System_Type,"Metal Plenum, Flex Runs"
+ElectricalPanel.csv,Electrical_Panel_Type,Breaker Panel
+ElectricalPanel.csv,Electrical_Panel_Type,Fuse Panel
+ElectricalPanel.csv,Primary_Panel,Primary
+ElectricalPanel.csv,Primary_Panel,Secondary
+ElectricVehicleChargers.csv,EV_Charging_Station_Type,Level 1 - 1.3kW -110V (standard wall outlet)
+ElectricVehicleChargers.csv,EV_Charging_Station_Type,Level 2 - 19.2kW (100A service)
+ElectricVehicleChargers.csv,EV_Charging_Station_Type,Level 2 - 3.3kW (15A service)
+ElectricVehicleChargers.csv,EV_Charging_Station_Type,Level 2 - 6.6kW (30A Service)
+ElectricVehicleChargers.csv,EV_Charging_Station_Type,Level 2 - 9.6kW (50A service)
+ElectricVehicleChargers.csv,EV_Charging_Station_Type,Other
+ElectricVehicles.csv,Electric_Vehicle_Type,EV
+ElectricVehicles.csv,Electric_Vehicle_Type,PHEV
+Envelope_Ceiling.csv,Ceiling_Accessible,No
+Envelope_Ceiling.csv,Ceiling_Accessible,Yes
+Envelope_Ceiling.csv,Ceiling_Framing_Material,Metal
+Envelope_Ceiling.csv,Ceiling_Framing_Material,Other
+Envelope_Ceiling.csv,Ceiling_Framing_Material,TJI
+Envelope_Ceiling.csv,Ceiling_Framing_Material,Wood
+Envelope_Ceiling.csv,Ceiling_Framing_Size,2x10
+Envelope_Ceiling.csv,Ceiling_Framing_Size,2x12
+Envelope_Ceiling.csv,Ceiling_Framing_Size,2x2
+Envelope_Ceiling.csv,Ceiling_Framing_Size,2x4
+Envelope_Ceiling.csv,Ceiling_Framing_Size,2x6
+Envelope_Ceiling.csv,Ceiling_Framing_Size,2x8
+Envelope_Ceiling.csv,Ceiling_Framing_Size,Open web truss
+Envelope_Ceiling.csv,Ceiling_Framing_Size,Scissor Truss
+Envelope_Ceiling.csv,Ceiling_Framing_Spacing,16 inches on center
+Envelope_Ceiling.csv,Ceiling_Framing_Spacing,24 inches on center
+Envelope_Ceiling.csv,Ceiling_Framing_Spacing,30 inches on center
+Envelope_Ceiling.csv,Ceiling_Framing_Spacing,Other
+Envelope_Ceiling.csv,Ceiling_Insulated,No
+Envelope_Ceiling.csv,Ceiling_Insulated,Yes
+Envelope_Ceiling.csv,Ceiling_Insulation_Source,IR Camera
+Envelope_Ceiling.csv,Ceiling_Insulation_Source,Other
+Envelope_Ceiling.csv,Ceiling_Insulation_Source,Visual inspection
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_1,Blown cellulose
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_1,Blown fiberglass
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_1,Blown mineral wool
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_1,Cellulose batts
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_1,Closed-cell spray foam
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_1,Expanded polystyrene foam board (white)
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_1,Extruded polystyrene foam board (pink or blue)
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_1,Fiberglass batts
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_1,Foil-faced polyiscyanurate foam board
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_1,Mineral wool batts
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_1,Mixed
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_1,Open-cell spray foam
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_1,Perlite
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_1,Vermiculite
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_2,Blown cellulose
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_2,Blown fiberglass
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_2,Blown mineral wool
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_2,Cellulose batts
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_2,Closed-cell spray foam
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_2,Expanded polystyrene foam board (white)
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_2,Extruded polystyrene foam board (pink or blue)
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_2,Fiberglass batts
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_2,Foil-faced polyiscyanurate foam board
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_2,Mineral wool batts
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_2,None
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_2,Perlite
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_2,Vermiculite
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_3,Blown cellulose
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_3,Blown fiberglass
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_3,Blown mineral wool
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_3,Closed-cell spray foam
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_3,Expanded polystyrene foam board (white)
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_3,Fiberglass batts
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_3,Mineral wool batts
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_3,None
+Envelope_Ceiling.csv,Ceiling_Insulation_Type_3,Vermiculite
+Envelope_Ceiling.csv,Ceiling_Type,Adiabatic
+Envelope_Ceiling.csv,Ceiling_Type,Attic
+Envelope_Ceiling.csv,Ceiling_Type,Other
+Envelope_Ceiling.csv,Ceiling_Type,Roof Deck
+Envelope_Ceiling.csv,Ceiling_Type,Sloped / Vaulted (no Attic)
+Envelope_Ceiling.csv,Type_of_Area_Above_Ceiling,Residential occupancy
+Envelope_Construction.csv,Construction_Type,Frame
+Envelope_Construction.csv,Construction_Type,Frame over concrete slab
+Envelope_Construction.csv,Construction_Type,Rigid frame (concrete or steel)
+Envelope_Construction.csv,Construction_Type,Solid masonry
+Envelope_Construction.csv,Foundation_Type,>90% Conditioned Basement
+Envelope_Construction.csv,Foundation_Type,>90% Crawlspace
+Envelope_Construction.csv,Foundation_Type,>90% Slab
+Envelope_Construction.csv,Foundation_Type,>90% Unconditioned Basement
+Envelope_Construction.csv,Foundation_Type,Adiabatic Space Below
+Envelope_Construction.csv,Foundation_Type,Mixed Basement and Slab
+Envelope_Construction.csv,Foundation_Type,Mixed Conditioned Basement and Slab
+Envelope_Construction.csv,Foundation_Type,Mixed Crawlspace and Conditioned Basement
+Envelope_Construction.csv,Foundation_Type,Mixed Crawlspace and Garage
+Envelope_Construction.csv,Foundation_Type,Mixed Crawlspace and Slab
+Envelope_Construction.csv,Foundation_Type,Other
+Envelope_Construction.csv,Framing_Type,Concrete
+Envelope_Construction.csv,Framing_Type,Masonry
+Envelope_Construction.csv,Framing_Type,Other
+Envelope_Construction.csv,Framing_Type,Steel
+Envelope_Construction.csv,Framing_Type,Wood
+Envelope_Construction.csv,Total_Building_Levels,1
+Envelope_Construction.csv,Total_Building_Levels,1.5
+Envelope_Construction.csv,Total_Building_Levels,2
+Envelope_Construction.csv,Total_Building_Levels,2.5
+Envelope_Construction.csv,Total_Building_Levels,3+
+Envelope_Floor_Foundation.csv,Basement_Floor_Above_Insulated,No
+Envelope_Floor_Foundation.csv,Basement_Floor_Above_Insulated,Yes
+Envelope_Floor_Foundation.csv,Basement_Floor_Above_Insulation_Source,IR Camera
+Envelope_Floor_Foundation.csv,Basement_Floor_Above_Insulation_Source,Other
+Envelope_Floor_Foundation.csv,Basement_Floor_Above_Insulation_Source,Visual inspection
+Envelope_Floor_Foundation.csv,Basement_Floor_Above_Insulation_Type,Blown cellulose
+Envelope_Floor_Foundation.csv,Basement_Floor_Above_Insulation_Type,Blown mineral wool
+Envelope_Floor_Foundation.csv,Basement_Floor_Above_Insulation_Type,Expanded polystyrene foam board (white)
+Envelope_Floor_Foundation.csv,Basement_Floor_Above_Insulation_Type,Fiberglass batts
+Envelope_Floor_Foundation.csv,Basement_Floor_Above_Insulation_Type,Foil-faced polyiscyanurate foam board
+Envelope_Floor_Foundation.csv,Basement_Floor_Above_Insulation_Type,Mineral wool batts
+Envelope_Floor_Foundation.csv,Basement_Floor_Above_Insulation_Type,Mixed
+Envelope_Floor_Foundation.csv,Basement_Floor_Above_Insulation_Type,None
+Envelope_Floor_Foundation.csv,Basement_Floor_Above_Insulation_Type,Open-cell spray foam
+Envelope_Floor_Foundation.csv,Central_Heating_Equipment_in_Basement,No
+Envelope_Floor_Foundation.csv,Central_Heating_Equipment_in_Basement,Yes
+Envelope_Floor_Foundation.csv,Crawlspace_Vents_Blocked,No
+Envelope_Floor_Foundation.csv,Crawlspace_Vents_Blocked,Yes
+Envelope_Floor_Foundation.csv,Crawlspace_Vents_Present,No
+Envelope_Floor_Foundation.csv,Crawlspace_Vents_Present,Yes
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Exterior_Insulation_Source,IR Camera
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Exterior_Insulation_Source,Other
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Exterior_Insulation_Source,Visual inspection
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Exterior_Insulation_Type,Expanded polystyrene foam board (white)
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Exterior_Insulation_Type,Extruded polystyrene foam board (pink or blue)
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Exterior_Insulation_Type,Rigid Insulation Sheathing
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Exteriors_Insulated,No
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Exteriors_Insulated,Yes
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Insulation_Source,Other
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Insulation_Source,Visual inspection
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Insulation_Type,Blown cellulose
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Insulation_Type,Blown mineral wool
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Insulation_Type,Closed-cell spray foam
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Insulation_Type,Expanded polystyrene foam board (white)
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Insulation_Type,Extruded polystyrene foam board (pink or blue)
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Insulation_Type,Fiberglass batts
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Insulation_Type,Foil-faced polyiscyanurate foam board
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Insulation_Type,Mineral wool batts
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Insulation_Type,Mixed
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Insulation_Type,Open-cell spray foam
+Envelope_Floor_Foundation.csv,Crawlspace_Wall_Insulation_Type,Vermiculite
+Envelope_Floor_Foundation.csv,Crawlspace_Walls_Insulated,No
+Envelope_Floor_Foundation.csv,Crawlspace_Walls_Insulated,Yes
+Envelope_Floor_Foundation.csv,Ducting_in_Basement,Insulated
+Envelope_Floor_Foundation.csv,Ducting_in_Basement,No
+Envelope_Floor_Foundation.csv,Ducting_in_Basement,Uninsulated
+Envelope_Floor_Foundation.csv,Floor_Above_Insulation_Source,IR Camera
+Envelope_Floor_Foundation.csv,Floor_Above_Insulation_Source,Other
+Envelope_Floor_Foundation.csv,Floor_Above_Insulation_Source,Visual inspection
+Envelope_Floor_Foundation.csv,Floor_Area_Is_Estimated,Estimated
+Envelope_Floor_Foundation.csv,Floor_Area_Is_Estimated,Measured or Known
+Envelope_Floor_Foundation.csv,Floor_Insulated,No
+Envelope_Floor_Foundation.csv,Floor_Insulated,Yes
+Envelope_Floor_Foundation.csv,Floor_Insulation_Type,Blown cellulose
+Envelope_Floor_Foundation.csv,Floor_Insulation_Type,Blown fiberglass
+Envelope_Floor_Foundation.csv,Floor_Insulation_Type,Blown mineral wool
+Envelope_Floor_Foundation.csv,Floor_Insulation_Type,Cellulose batts
+Envelope_Floor_Foundation.csv,Floor_Insulation_Type,Closed-cell spray foam
+Envelope_Floor_Foundation.csv,Floor_Insulation_Type,Expanded polystyrene foam board (white)
+Envelope_Floor_Foundation.csv,Floor_Insulation_Type,Extruded polystyrene foam board (pink or blue)
+Envelope_Floor_Foundation.csv,Floor_Insulation_Type,Fiberglass batts
+Envelope_Floor_Foundation.csv,Floor_Insulation_Type,Foil-faced polyiscyanurate foam board
+Envelope_Floor_Foundation.csv,Floor_Insulation_Type,Mineral wool batts
+Envelope_Floor_Foundation.csv,Floor_Insulation_Type,Mixed
+Envelope_Floor_Foundation.csv,Floor_Insulation_Type,Open-cell spray foam
+Envelope_Floor_Foundation.csv,Floor_Type,Basement
+Envelope_Floor_Foundation.csv,Floor_Type,Cantilever
+Envelope_Floor_Foundation.csv,Floor_Type,Crawlspace
+Envelope_Floor_Foundation.csv,Floor_Type,Floor over other - Frame
+Envelope_Floor_Foundation.csv,Floor_Type,Floor over other - Other
+Envelope_Floor_Foundation.csv,Floor_Type,Floor over other - Slab
+Envelope_Floor_Foundation.csv,Floor_Type,Floor over other - Unknown
+Envelope_Floor_Foundation.csv,Floor_Type,Slab
+Envelope_Floor_Foundation.csv,Framing_Size,2x10 or 4x10
+Envelope_Floor_Foundation.csv,Framing_Size,2x12 or 4x12
+Envelope_Floor_Foundation.csv,Framing_Size,2x6 or 4x6
+Envelope_Floor_Foundation.csv,Framing_Size,2x8 or 4x8
+Envelope_Floor_Foundation.csv,Framing_Spacing,12 inches on center
+Envelope_Floor_Foundation.csv,Framing_Spacing,16 inches on center
+Envelope_Floor_Foundation.csv,Framing_Spacing,24 inches on center
+Envelope_Floor_Foundation.csv,Framing_Spacing,30 inches on center
+Envelope_Floor_Foundation.csv,Framing_Spacing,Other
+Envelope_Floor_Foundation.csv,Framing_Type,Joist
+Envelope_Floor_Foundation.csv,Framing_Type,Post and Beam
+Envelope_Floor_Foundation.csv,Is_Space_Conditioned,No
+Envelope_Floor_Foundation.csv,Is_Space_Conditioned,Yes
+Envelope_Floor_Foundation.csv,Perimeter_Is_Estimated,Estimated
+Envelope_Floor_Foundation.csv,Perimeter_Is_Estimated,Measured or Known
+Envelope_Floor_Foundation.csv,Slab_Heated,No
+Envelope_Floor_Foundation.csv,Slab_Heated,Yes
+Envelope_Floor_Foundation.csv,Slab_Insulated,No
+Envelope_Floor_Foundation.csv,Slab_Insulated,Yes
+Envelope_Floor_Foundation.csv,Slab_Insulation_Position,Complete
+Envelope_Floor_Foundation.csv,Slab_Insulation_Position,Perimeter
+Envelope_Floor_Foundation.csv,Slab_Insulation_Source,IR Camera
+Envelope_Floor_Foundation.csv,Slab_Insulation_Source,Other
+Envelope_Floor_Foundation.csv,Slab_Insulation_Source,Visual inspection
+Envelope_Floor_Foundation.csv,Slab_Insulation_Type,Closed-cell spray foam
+Envelope_Floor_Foundation.csv,Slab_Insulation_Type,Expanded polystyrene foam board (white)
+Envelope_Floor_Foundation.csv,Slab_Insulation_Type,Extruded polystyrene foam board (pink or blue)
+Envelope_Floor_Foundation.csv,Slab_Insulation_Type,Fiberglass batts
+Envelope_Floor_Foundation.csv,Slab_Insulation_Type,Foil-faced polyiscyanurate foam board
+Envelope_Floor_Foundation.csv,Slab_Insulation_Type,Open-cell spray foam
+Envelope_Wall.csv,Basement_Wall_Area_Sq_Ft_Is_Estimated,Estimated
+Envelope_Wall.csv,Basement_Wall_Area_Sq_Ft_Is_Estimated,Measured or Known
+Envelope_Wall.csv,Furred_Wall,No
+Envelope_Wall.csv,Furred_Wall,Yes
+Envelope_Wall.csv,Furred_Wall_Insulated,No
+Envelope_Wall.csv,Furred_Wall_Insulated,Yes
+Envelope_Wall.csv,Furred_Wall_Insulation_Source,IR Camera
+Envelope_Wall.csv,Furred_Wall_Insulation_Source,Other
+Envelope_Wall.csv,Furred_Wall_Insulation_Source,Visual inspection
+Envelope_Wall.csv,Furred_Wall_Insulation_Type,Closed-cell spray foam
+Envelope_Wall.csv,Furred_Wall_Insulation_Type,Expanded polystyrene foam board (white)
+Envelope_Wall.csv,Furred_Wall_Insulation_Type,Extruded polystyrene foam board (pink or blue)
+Envelope_Wall.csv,Furred_Wall_Insulation_Type,Fiberglass batts
+Envelope_Wall.csv,Furred_Wall_Insulation_Type,Foil-faced polyiscyanurate foam board
+Envelope_Wall.csv,Furred_Wall_Insulation_Type,Mineral wool batts
+Envelope_Wall.csv,Furred_Wall_Insulation_Type,Open-cell spray foam
+Envelope_Wall.csv,Furred_Wall_Insulation_Type,Vermiculite
+Envelope_Wall.csv,Wall_Area_is_Estimated,Estimated
+Envelope_Wall.csv,Wall_Area_is_Estimated,Measured or Known
+Envelope_Wall.csv,Wall_Cavity_Insulated,No
+Envelope_Wall.csv,Wall_Cavity_Insulated,Yes
+Envelope_Wall.csv,Wall_Cavity_Insulation_Source,IR Camera
+Envelope_Wall.csv,Wall_Cavity_Insulation_Source,Other
+Envelope_Wall.csv,Wall_Cavity_Insulation_Source,Visual inspection
+Envelope_Wall.csv,Wall_Cavity_Insulation_Type,Blown cellulose
+Envelope_Wall.csv,Wall_Cavity_Insulation_Type,Blown fiberglass
+Envelope_Wall.csv,Wall_Cavity_Insulation_Type,Blown mineral wool
+Envelope_Wall.csv,Wall_Cavity_Insulation_Type,Cellulose batts
+Envelope_Wall.csv,Wall_Cavity_Insulation_Type,Closed-cell spray foam
+Envelope_Wall.csv,Wall_Cavity_Insulation_Type,Expanded polystyrene foam board (white)
+Envelope_Wall.csv,Wall_Cavity_Insulation_Type,Extruded polystyrene foam board (pink or blue)
+Envelope_Wall.csv,Wall_Cavity_Insulation_Type,Fiberglass batts
+Envelope_Wall.csv,Wall_Cavity_Insulation_Type,Foil-faced polyiscyanurate foam board
+Envelope_Wall.csv,Wall_Cavity_Insulation_Type,Mineral wool batts
+Envelope_Wall.csv,Wall_Cavity_Insulation_Type,Mixed
+Envelope_Wall.csv,Wall_Cavity_Insulation_Type,None
+Envelope_Wall.csv,Wall_Cavity_Insulation_Type,Open-cell spray foam
+Envelope_Wall.csv,Wall_Cavity_Insulation_Type,Vermiculite
+Envelope_Wall.csv,Wall_Exterior_Insulated,No
+Envelope_Wall.csv,Wall_Exterior_Insulated,Yes
+Envelope_Wall.csv,Wall_Exterior_Insulation_Source,IR Camera
+Envelope_Wall.csv,Wall_Exterior_Insulation_Source,Other
+Envelope_Wall.csv,Wall_Exterior_Insulation_Source,Visual inspection
+Envelope_Wall.csv,Wall_Exterior_Insulation_Type,Closed-cell spray foam
+Envelope_Wall.csv,Wall_Exterior_Insulation_Type,Expanded polystyrene foam board (white)
+Envelope_Wall.csv,Wall_Exterior_Insulation_Type,Extruded polystyrene foam board (pink or blue)
+Envelope_Wall.csv,Wall_Exterior_Insulation_Type,Foil-faced polyisocyanurate foam board
+Envelope_Wall.csv,Wall_Exterior_Insulation_Type,Open-cell spray foam
+Envelope_Wall.csv,Wall_Exterior_Insulation_Type,Rigid Insulation Sheathing
+Envelope_Wall.csv,Wall_Framing_Material,Metal
+Envelope_Wall.csv,Wall_Framing_Material,Other
+Envelope_Wall.csv,Wall_Framing_Material,Reinforced concrete
+Envelope_Wall.csv,Wall_Framing_Material,Wood
+Envelope_Wall.csv,Wall_Framing_Size,2x10
+Envelope_Wall.csv,Wall_Framing_Size,2x12
+Envelope_Wall.csv,Wall_Framing_Size,2x2
+Envelope_Wall.csv,Wall_Framing_Size,2x4
+Envelope_Wall.csv,Wall_Framing_Size,2x6
+Envelope_Wall.csv,Wall_Framing_Size,2x8
+Envelope_Wall.csv,Wall_Framing_Spacing,16 inches on center
+Envelope_Wall.csv,Wall_Framing_Spacing,24 inches on center
+Envelope_Wall.csv,Wall_Framing_Spacing,30 inches on center
+Envelope_Wall.csv,Wall_Framing_Spacing,Other
+Envelope_Wall.csv,Wall_Sub_Type,Brick
+Envelope_Wall.csv,Wall_Sub_Type,Concrete Block
+Envelope_Wall.csv,Wall_Sub_Type,Expanded polystyrene foam board (white)
+Envelope_Wall.csv,Wall_Sub_Type,ICF
+Envelope_Wall.csv,Wall_Sub_Type,Other
+Envelope_Wall.csv,Wall_Sub_Type,Poured Concrete
+Envelope_Wall.csv,Wall_Sub_Type,Stone
+Envelope_Wall.csv,Wall_Sub_Type,Urethane
+Envelope_Wall.csv,Wall_Sub_Type,Wall to heated non-residential occupancy
+Envelope_Wall.csv,Wall_Sub_Type,Wall to other living space
+Envelope_Wall.csv,Wall_Type,Adiabatic
+Envelope_Wall.csv,Wall_Type,Adiabatic (Framed)
+Envelope_Wall.csv,Wall_Type,Adiabatic (Masonry)
+Envelope_Wall.csv,Wall_Type,Adiabatic (Unknown)
+Envelope_Wall.csv,Wall_Type,Alternative Framing
+Envelope_Wall.csv,Wall_Type,Framed
+Envelope_Wall.csv,Wall_Type,ICF
+Envelope_Wall.csv,Wall_Type,Knee Wall
+Envelope_Wall.csv,Wall_Type,Log
+Envelope_Wall.csv,Wall_Type,Masonry
+Envelope_Wall.csv,Wall_Type,Masonry (Basement)
+Envelope_Wall.csv,Wall_Type,Other
+Envelope_Wall.csv,Wall_Type,SIP
+Envelope_Wall.csv,Wall_Type,Structural Steel
+Lighting_Installed_Fixtures.csv,Fixture_Collected_As_Fixture_Group,Yes
+Lighting_Installed_Fixtures.csv,Fixture_Type,Ceiling Fan
+Lighting_Installed_Fixtures.csv,Fixture_Type,Ceiling Mount Fixture (Troffer or Flushmount)
+Lighting_Installed_Fixtures.csv,Fixture_Type,Exit Sign
+Lighting_Installed_Fixtures.csv,Fixture_Type,Exterior (Flood or Security)
+Lighting_Installed_Fixtures.csv,Fixture_Type,Floor Lamp
+Lighting_Installed_Fixtures.csv,Fixture_Type,Garage Door Opener
+Lighting_Installed_Fixtures.csv,Fixture_Type,Hanging (Chandelier or Pendant)
+Lighting_Installed_Fixtures.csv,Fixture_Type,High Bay
+Lighting_Installed_Fixtures.csv,Fixture_Type,LED Strip
+Lighting_Installed_Fixtures.csv,Fixture_Type,Landscape
+Lighting_Installed_Fixtures.csv,Fixture_Type,Low Bay
+Lighting_Installed_Fixtures.csv,Fixture_Type,Other
+Lighting_Installed_Fixtures.csv,Fixture_Type,Recessed - Can
+Lighting_Installed_Fixtures.csv,Fixture_Type,Recessed - Other
+Lighting_Installed_Fixtures.csv,Fixture_Type,Table Lamp
+Lighting_Installed_Fixtures.csv,Fixture_Type,Torchiere (upward-facing lamp)
+Lighting_Installed_Fixtures.csv,Fixture_Type,Track Mounted
+Lighting_Installed_Fixtures.csv,Fixture_Type,Wall Mount (Sconce or Vanity)
+Lighting_Installed_Fixtures.csv,Socket_Type,Can't Determine
+Lighting_Installed_Fixtures.csv,Socket_Type,Integral Fixture
+Lighting_Installed_Fixtures.csv,Socket_Type,Large Screw Base (Mogule)
+Lighting_Installed_Fixtures.csv,Socket_Type,Medium Screw Base (Standard)
+Lighting_Installed_Fixtures.csv,Socket_Type,Other
+Lighting_Installed_Fixtures.csv,Socket_Type,Pin Base
+Lighting_Installed_Fixtures.csv,Socket_Type,Small Screw Base (Candelabra)
+Lighting_Installed_Fixtures.csv,Solar_Powered_Fixture,No
+Lighting_Installed_Fixtures.csv,Solar_Powered_Fixture,Yes
+Lighting_Installed_Lamps.csv,Fixture_Type,Ceiling Fan
+Lighting_Installed_Lamps.csv,Fixture_Type,Ceiling Mount Fixture (Troffer or Flushmount)
+Lighting_Installed_Lamps.csv,Fixture_Type,Exit Sign
+Lighting_Installed_Lamps.csv,Fixture_Type,Exterior (Flood or Security)
+Lighting_Installed_Lamps.csv,Fixture_Type,Floor Lamp
+Lighting_Installed_Lamps.csv,Fixture_Type,Garage Door Opener
+Lighting_Installed_Lamps.csv,Fixture_Type,Hanging (Chandelier or Pendant)
+Lighting_Installed_Lamps.csv,Fixture_Type,High Bay
+Lighting_Installed_Lamps.csv,Fixture_Type,LED Strip
+Lighting_Installed_Lamps.csv,Fixture_Type,Landscape
+Lighting_Installed_Lamps.csv,Fixture_Type,Low Bay
+Lighting_Installed_Lamps.csv,Fixture_Type,Other
+Lighting_Installed_Lamps.csv,Fixture_Type,Recessed - Can
+Lighting_Installed_Lamps.csv,Fixture_Type,Recessed - Other
+Lighting_Installed_Lamps.csv,Fixture_Type,Table Lamp
+Lighting_Installed_Lamps.csv,Fixture_Type,Torchiere (upward-facing lamp)
+Lighting_Installed_Lamps.csv,Fixture_Type,Track Mounted
+Lighting_Installed_Lamps.csv,Fixture_Type,Wall Mount (Sconce or Vanity)
+Lighting_Installed_Lamps.csv,Lamp_Is_Color,No
+Lighting_Installed_Lamps.csv,Lamp_Is_Color,Yes - Color Changing
+Lighting_Installed_Lamps.csv,Lamp_Is_Color,Yes - Single Color
+Lighting_Installed_Lamps.csv,Lamp_Length_Ft_Is_Estimated,Estimated
+Lighting_Installed_Lamps.csv,Lamp_Length_Ft_Is_Estimated,Measured or Known
+Lighting_Installed_Lamps.csv,Lamp_Style,Bullet
+Lighting_Installed_Lamps.csv,Lamp_Style,Circline
+Lighting_Installed_Lamps.csv,Lamp_Style,Decorative
+Lighting_Installed_Lamps.csv,Lamp_Style,Globe
+Lighting_Installed_Lamps.csv,Lamp_Style,Heat Lamp
+Lighting_Installed_Lamps.csv,Lamp_Style,Integrated
+Lighting_Installed_Lamps.csv,Lamp_Style,Other
+Lighting_Installed_Lamps.csv,Lamp_Style,Reflector / Flood
+Lighting_Installed_Lamps.csv,Lamp_Style,Standard A Lamp
+Lighting_Installed_Lamps.csv,Lamp_Style,Straight Tube
+Lighting_Installed_Lamps.csv,Lamp_Style,T-12
+Lighting_Installed_Lamps.csv,Lamp_Style,T-4
+Lighting_Installed_Lamps.csv,Lamp_Style,T-5
+Lighting_Installed_Lamps.csv,Lamp_Style,T-8
+Lighting_Installed_Lamps.csv,Lamp_Style,Twist
+Lighting_Installed_Lamps.csv,Lamp_Temp_Fixed,Fixed
+Lighting_Installed_Lamps.csv,Lamp_Temp_Fixed,Variable
+Lighting_Installed_Lamps.csv,Lamp_Type,CFL
+Lighting_Installed_Lamps.csv,Lamp_Type,Empty Socket
+Lighting_Installed_Lamps.csv,Lamp_Type,Fluorescent
+Lighting_Installed_Lamps.csv,Lamp_Type,Halide
+Lighting_Installed_Lamps.csv,Lamp_Type,Halogen
+Lighting_Installed_Lamps.csv,Lamp_Type,High Intensity Discharge
+Lighting_Installed_Lamps.csv,Lamp_Type,Incandescent
+Lighting_Installed_Lamps.csv,Lamp_Type,Induction
+Lighting_Installed_Lamps.csv,Lamp_Type,LED
+Lighting_Installed_Lamps.csv,Lamp_Type,Other
+Lighting_Installed_Lamps.csv,Socket_Type,Can't Determine
+Lighting_Installed_Lamps.csv,Socket_Type,Integral Fixture
+Lighting_Installed_Lamps.csv,Socket_Type,Large Screw Base (Mogul)
+Lighting_Installed_Lamps.csv,Socket_Type,Medium Screw Base (Standard)
+Lighting_Installed_Lamps.csv,Socket_Type,Other
+Lighting_Installed_Lamps.csv,Socket_Type,Pin Base
+Lighting_Installed_Lamps.csv,Socket_Type,Small Screw Base (Candelabra)
+Lighting_Installed_Lamps.csv,Solar_Powered_Fixture,No
+Lighting_Installed_Lamps.csv,Solar_Powered_Fixture,Yes
+Lighting_One_Line.csv,Attached_Detached_SF_StrataVar,Attached
+Lighting_One_Line.csv,Attached_Detached_SF_StrataVar,Detached
+Lighting_One_Line.csv,BPA_SF_StrataVar,BPA
+Lighting_One_Line.csv,BPA_SF_StrataVar,Non-BPA
+Lighting_One_Line.csv,Building_Category,"Duplex, Triplex, or Fourplex"
+Lighting_One_Line.csv,Building_Category,Manufactured - Double Wide
+Lighting_One_Line.csv,Building_Category,Manufactured - Single Wide
+Lighting_One_Line.csv,Building_Category,Single Family Detached
+Lighting_One_Line.csv,Building_Category,Townhome or Rowhome
+Lighting_One_Line.csv,Building_Type,Single Family
+Lighting_One_Line.csv,Electric_Utility_BPA,No
+Lighting_One_Line.csv,Electric_Utility_BPA,Yes
+Lighting_One_Line.csv,Gas_Utility,AVISTA
+Lighting_One_Line.csv,Gas_Utility,BIG SKY GAS
+Lighting_One_Line.csv,Gas_Utility,CASCADE NATURAL GAS COMPANY
+Lighting_One_Line.csv,Gas_Utility,ENERGY WEST
+Lighting_One_Line.csv,Gas_Utility,INTERMOUNTAIN GAS
+Lighting_One_Line.csv,Gas_Utility,MONTANA DOKOTA GAS
+Lighting_One_Line.csv,Gas_Utility,NORTHWESTERN
+Lighting_One_Line.csv,Gas_Utility,NW NATURAL GAS
+Lighting_One_Line.csv,Gas_Utility,PUGET SOUND ENERGY
+Lighting_One_Line.csv,Gas_Utility,UNKNOWN
+Lighting_One_Line.csv,NWN_SF_StrataVar,NWN
+Lighting_One_Line.csv,NWN_SF_StrataVar,Non-NWN
+Lighting_One_Line.csv,Ownership,Own
+Lighting_One_Line.csv,Ownership,Rent
+Lighting_One_Line.csv,Region_SF_StrataVar,ID
+Lighting_One_Line.csv,Region_SF_StrataVar,MT - BPA
+Lighting_One_Line.csv,Region_SF_StrataVar,OR - Eastern
+Lighting_One_Line.csv,Region_SF_StrataVar,OR - Western
+Lighting_One_Line.csv,Region_SF_StrataVar,WA - Eastern
+Lighting_One_Line.csv,Region_SF_StrataVar,WA - Puget Sound
+Lighting_One_Line.csv,Region_SF_StrataVar,WA - Western
+Lighting_One_Line.csv,Sample_SF_StrataVar,Avista
+Lighting_One_Line.csv,Sample_SF_StrataVar,BPA
+Lighting_One_Line.csv,Sample_SF_StrataVar,Base/Core
+Lighting_One_Line.csv,Sample_SF_StrataVar,HZ 2/3
+Lighting_One_Line.csv,Sample_SF_StrataVar,NWN
+Lighting_One_Line.csv,State,ID
+Lighting_One_Line.csv,State,MT
+Lighting_One_Line.csv,State,OR
+Lighting_One_Line.csv,State,WA
+Lighting_Storage.csv,Lamp_Is_Color,No
+Lighting_Storage.csv,Lamp_Is_Color,Yes - Color Changing
+Lighting_Storage.csv,Lamp_Is_Color,Yes - Single Color
+Lighting_Storage.csv,Lamp_Style,Bullet
+Lighting_Storage.csv,Lamp_Style,Circline
+Lighting_Storage.csv,Lamp_Style,Decorative
+Lighting_Storage.csv,Lamp_Style,Globe
+Lighting_Storage.csv,Lamp_Style,Heat Lamp
+Lighting_Storage.csv,Lamp_Style,Integrated
+Lighting_Storage.csv,Lamp_Style,Other
+Lighting_Storage.csv,Lamp_Style,Reflector / Flood
+Lighting_Storage.csv,Lamp_Style,Standard A Lamp
+Lighting_Storage.csv,Lamp_Style,Straight Tube
+Lighting_Storage.csv,Lamp_Style,T-12
+Lighting_Storage.csv,Lamp_Style,T-5
+Lighting_Storage.csv,Lamp_Style,T-8
+Lighting_Storage.csv,Lamp_Style,Twist
+Lighting_Storage.csv,Lamp_Temp_Fixed,Fixed
+Lighting_Storage.csv,Lamp_Temp_Fixed,Variable
+Lighting_Storage.csv,Lamp_Type,CFL
+Lighting_Storage.csv,Lamp_Type,Fluorescent
+Lighting_Storage.csv,Lamp_Type,Halide
+Lighting_Storage.csv,Lamp_Type,Halogen
+Lighting_Storage.csv,Lamp_Type,Incandescent
+Lighting_Storage.csv,Lamp_Type,LED
+Lighting_Storage.csv,Lamp_Type,Other
+Lighting_Storage.csv,Socket_Type,Integral Fixture
+Lighting_Storage.csv,Socket_Type,Large Screw Base (Mogule)
+Lighting_Storage.csv,Socket_Type,Medium Screw Base (Standard)
+Lighting_Storage.csv,Socket_Type,Other
+Lighting_Storage.csv,Socket_Type,Pin Base
+Lighting_Storage.csv,Socket_Type,Small Screw Base (Candelabra)
+Mechanical_BathroomVent.csv,Ventilation_Controls,Manual thermostat - Analog
+Mechanical_BathroomVent.csv,Ventilation_Controls,Manual thermostat - Digital
+Mechanical_BathroomVent.csv,Ventilation_Controls,None
+Mechanical_BathroomVent.csv,Ventilation_Controls,On/off
+Mechanical_BathroomVent.csv,Ventilation_Controls,Programmable thermostat
+Mechanical_BathroomVent.csv,Ventilation_Controls,Smart thermostat
+Mechanical_BathroomVent.csv,Ventilation_Controls,Smart/Wi-Fi thermostat
+Mechanical_BathroomVent.csv,Ventilation_Controls,Timer
+Mechanical_BathroomVent.csv,Ventilation_Controls,Wi-Fi enabled thermostat
+Mechanical_BathroomVent.csv,Ventilation_Grade,Builder Grade
+Mechanical_BathroomVent.csv,Ventilation_Grade,Panasonic or equivalent
+Mechanical_BathroomVent.csv,Ventilation_Working,No
+Mechanical_BathroomVent.csv,Ventilation_Working,Yes
+Mechanical_CentralVent.csv,Ventilation_Controls,Manual thermostat - Analog
+Mechanical_CentralVent.csv,Ventilation_Controls,Manual thermostat - Digital
+Mechanical_CentralVent.csv,Ventilation_Controls,None
+Mechanical_CentralVent.csv,Ventilation_Controls,On/off
+Mechanical_CentralVent.csv,Ventilation_Controls,Programmable thermostat
+Mechanical_CentralVent.csv,Ventilation_Controls,Timer
+Mechanical_CentralVent.csv,Ventilation_Grade,Builder Grade
+Mechanical_CentralVent.csv,Ventilation_Grade,Panasonic or equivalent
+Mechanical_CentralVent.csv,Ventilation_Type,Controlled
+Mechanical_CentralVent.csv,Ventilation_Type,Non-controlled
+Mechanical_CentralVent.csv,Ventilation_With_Return,No
+Mechanical_CentralVent.csv,Ventilation_With_Return,Yes
+Mechanical_CentralVent.csv,Ventilation_Working,No
+Mechanical_CentralVent.csv,Ventilation_Working,Yes
+Mechanical_CirculatorPump.csv,Control_Type,Always On
+Mechanical_CirculatorPump.csv,Control_Type,On-demand Push Button
+Mechanical_CirculatorPump.csv,Control_Type,Other
+Mechanical_CirculatorPump.csv,Control_Type,Timer
+Mechanical_CirculatorPump.csv,Make,AO Smith
+Mechanical_CirculatorPump.csv,Make,Armstrong
+Mechanical_CirculatorPump.csv,Make,Challenger
+Mechanical_CirculatorPump.csv,Make,Danfoss
+Mechanical_CirculatorPump.csv,Make,Fasco
+Mechanical_CirculatorPump.csv,Make,Goulds
+Mechanical_CirculatorPump.csv,Make,Grundfos
+Mechanical_CirculatorPump.csv,Make,Hartell
+Mechanical_CirculatorPump.csv,Make,Laing
+Mechanical_CirculatorPump.csv,Make,Myers
+Mechanical_CirculatorPump.csv,Make,PRO SOURCE
+Mechanical_CirculatorPump.csv,Make,Powerflo
+Mechanical_CirculatorPump.csv,Make,READYTEMP
+Mechanical_CirculatorPump.csv,Make,Rain Bird
+Mechanical_CirculatorPump.csv,Make,Taco
+Mechanical_CirculatorPump.csv,Make,Varem
+Mechanical_CirculatorPump.csv,Make,Watts
+Mechanical_CirculatorPump.csv,Make,Wilo
+Mechanical_CirculatorPump.csv,Make,Wing
+Mechanical_ERV_HRV.csv,System_Type,Attached to duct system
+Mechanical_ERV_HRV.csv,System_Type,Stand-alone ducts
+Mechanical_ERV_HRV.csv,Ventilation_Controls,Manual thermostat - Analog
+Mechanical_ERV_HRV.csv,Ventilation_Controls,Manual thermostat - Digital
+Mechanical_ERV_HRV.csv,Ventilation_Controls,None
+Mechanical_ERV_HRV.csv,Ventilation_Controls,On/off
+Mechanical_ERV_HRV.csv,Ventilation_Controls,Programmable thermostat
+Mechanical_ERV_HRV.csv,Ventilation_Controls,Timer
+Mechanical_ERV_HRV.csv,Ventilation_Make,AirKing
+Mechanical_ERV_HRV.csv,Ventilation_Make,Aldes
+Mechanical_ERV_HRV.csv,Ventilation_Make,Broan
+Mechanical_ERV_HRV.csv,Ventilation_Make,Bryant
+Mechanical_ERV_HRV.csv,Ventilation_Make,Carrier
+Mechanical_ERV_HRV.csv,Ventilation_Make,Fantech
+Mechanical_ERV_HRV.csv,Ventilation_Make,Honeywell
+Mechanical_ERV_HRV.csv,Ventilation_Make,Lennox
+Mechanical_ERV_HRV.csv,Ventilation_Make,LifeBreath
+Mechanical_ERV_HRV.csv,Ventilation_Make,Mitsubishi
+Mechanical_ERV_HRV.csv,Ventilation_Make,RenewAire
+Mechanical_ERV_HRV.csv,Ventilation_Make,VanEE
+Mechanical_ERV_HRV.csv,Ventilation_Make,Venmar
+Mechanical_ERV_HRV.csv,Ventilation_Make,Zehnder
+Mechanical_ERV_HRV.csv,Ventilation_Working,No
+Mechanical_ERV_HRV.csv,Ventilation_Working,Yes
+Mechanical_HeatingAndCooling.csv,System_Type,Baseboard
+Mechanical_HeatingAndCooling.csv,System_Type,Boiler
+Mechanical_HeatingAndCooling.csv,System_Type,Central AC
+Mechanical_HeatingAndCooling.csv,System_Type,Central Air Source Heat Pump
+Mechanical_HeatingAndCooling.csv,System_Type,Ductless Mini-split AC (indoor)
+Mechanical_HeatingAndCooling.csv,System_Type,Ductless Mini-split AC (outdoor)
+Mechanical_HeatingAndCooling.csv,System_Type,Ductless Mini-split Heat Pump (indoor)
+Mechanical_HeatingAndCooling.csv,System_Type,Ductless Mini-split Heat Pump (outdoor)
+Mechanical_HeatingAndCooling.csv,System_Type,Evaporative Cooler
+Mechanical_HeatingAndCooling.csv,System_Type,Fireplace or Stove
+Mechanical_HeatingAndCooling.csv,System_Type,Furnace
+Mechanical_HeatingAndCooling.csv,System_Type,Geothermal Heat Pump
+Mechanical_HeatingAndCooling.csv,System_Type,Portable AC
+Mechanical_HeatingAndCooling.csv,System_Type,Portable Heat Pump
+Mechanical_HeatingAndCooling.csv,System_Type,Portable Heater
+Mechanical_HeatingAndCooling.csv,System_Type,PTAC Packaged Terminal Air Conditioner
+Mechanical_HeatingAndCooling.csv,System_Type,PTHP Packaged Terminal Heat Pump
+Mechanical_HeatingAndCooling.csv,System_Type,Radiant Heating
+Mechanical_HeatingAndCooling.csv,System_Type,Through-wall AC
+Mechanical_HeatingAndCooling.csv,System_Type,Through-wall Heat Pump
+Mechanical_HeatingAndCooling.csv,System_Type,Unit Heater
+Mechanical_HeatingAndCooling.csv,System_Type,Unknown
+Mechanical_HeatingAndCooling.csv,System_Type,Wall Heater
+Mechanical_HeatingAndCooling.csv,System_Type,Water Source Heat Pump
+Mechanical_HeatingAndCooling.csv,System_Type,Window AC
+Mechanical_HeatingAndCooling.csv,System_Type,Window Heat Pump
+Mechanical_HeatingAndCooling.csv,Baseboard_Length_is_Est,Estimated
+Mechanical_HeatingAndCooling.csv,Baseboard_Length_is_Est,Measured or Known
+Mechanical_HeatingAndCooling.csv,COP_or_AFUE_is_Est,Estimated
+Mechanical_HeatingAndCooling.csv,COP_or_AFUE_is_Est,Known or from Nameplate
+Mechanical_HeatingAndCooling.csv,COP_or_AFUE_is_Est,Model number lookup
+Mechanical_HeatingAndCooling.csv,Central_System_Number,Central System #1
+Mechanical_HeatingAndCooling.csv,Central_System_Number,Central System #2
+Mechanical_HeatingAndCooling.csv,Central_System_Number,Central System #3
+Mechanical_HeatingAndCooling.csv,Control_Type,Manual thermostat - Analog
+Mechanical_HeatingAndCooling.csv,Control_Type,Manual thermostat - Digital
+Mechanical_HeatingAndCooling.csv,Control_Type,None
+Mechanical_HeatingAndCooling.csv,Control_Type,On/off
+Mechanical_HeatingAndCooling.csv,Control_Type,Programmable thermostat
+Mechanical_HeatingAndCooling.csv,Control_Type,Smart thermostat
+Mechanical_HeatingAndCooling.csv,Control_Type,Smart/Wi-Fi thermostat
+Mechanical_HeatingAndCooling.csv,Control_Type,Timer
+Mechanical_HeatingAndCooling.csv,Control_Type,Wi-Fi enabled thermostat
+Mechanical_HeatingAndCooling.csv,Dehumidifer_or_Economizer_Part_of_System,No
+Mechanical_HeatingAndCooling.csv,Dehumidifer_or_Economizer_Part_of_System,Yes
+Mechanical_HeatingAndCooling.csv,Desuperheater_Present,No
+Mechanical_HeatingAndCooling.csv,Desuperheater_Present,Yes
+Mechanical_HeatingAndCooling.csv,Distribution_Type,Ceiling cassette
+Mechanical_HeatingAndCooling.csv,Distribution_Type,Central AHU
+Mechanical_HeatingAndCooling.csv,Distribution_Type,Ducted
+Mechanical_HeatingAndCooling.csv,Distribution_Type,Ducts / Forced Air
+Mechanical_HeatingAndCooling.csv,Distribution_Type,Ducts / Forced Air + Hot Water Distribution
+Mechanical_HeatingAndCooling.csv,Distribution_Type,Floor standing
+Mechanical_HeatingAndCooling.csv,Distribution_Type,Hot Water Distribution
+Mechanical_HeatingAndCooling.csv,Distribution_Type,Radiant Floor
+Mechanical_HeatingAndCooling.csv,Distribution_Type,Radiant Wall
+Mechanical_HeatingAndCooling.csv,Distribution_Type,Radiators
+Mechanical_HeatingAndCooling.csv,Distribution_Type,Wall mount
+Mechanical_HeatingAndCooling.csv,EER_is_Estimated,Estimated
+Mechanical_HeatingAndCooling.csv,EER_is_Estimated,Known or from Nameplate
+Mechanical_HeatingAndCooling.csv,EER_is_Estimated,Model number lookup
+Mechanical_HeatingAndCooling.csv,Energy_Star_Label_Present,No
+Mechanical_HeatingAndCooling.csv,Energy_Star_Label_Present,Yes
+Mechanical_HeatingAndCooling.csv,Equipment_Use,Both
+Mechanical_HeatingAndCooling.csv,Equipment_Use,Decorative
+Mechanical_HeatingAndCooling.csv,Equipment_Use,For Heat
+Mechanical_HeatingAndCooling.csv,Equipment_Use_Frequency,A little (1-2x per week)
+Mechanical_HeatingAndCooling.csv,Equipment_Use_Frequency,All the time (daily / almost daily)
+Mechanical_HeatingAndCooling.csv,Equipment_Use_Frequency,Seldom (1-2x per month)
+Mechanical_HeatingAndCooling.csv,Fan_Type,ECM
+Mechanical_HeatingAndCooling.csv,Fan_Type,PSC
+Mechanical_HeatingAndCooling.csv,Filter_Type,Disposable thick pleated
+Mechanical_HeatingAndCooling.csv,Filter_Type,Disposable thin
+Mechanical_HeatingAndCooling.csv,Filter_Type,Electronic air cleaner
+Mechanical_HeatingAndCooling.csv,Filter_Type,Electrostatic air filter
+Mechanical_HeatingAndCooling.csv,Filter_Type,None
+Mechanical_HeatingAndCooling.csv,Filter_Type,Other
+Mechanical_HeatingAndCooling.csv,Fireplace_Type,Factory Built Insert
+Mechanical_HeatingAndCooling.csv,Fireplace_Type,Glass Open Hearth
+Mechanical_HeatingAndCooling.csv,Fireplace_Type,Open Hearth
+Mechanical_HeatingAndCooling.csv,Fireplace_Type,Stove
+Mechanical_HeatingAndCooling.csv,Fuel,Electric
+Mechanical_HeatingAndCooling.csv,Fuel,Gasoline
+Mechanical_HeatingAndCooling.csv,Fuel,Kerosene
+Mechanical_HeatingAndCooling.csv,Fuel,Natural gas
+Mechanical_HeatingAndCooling.csv,Fuel,None
+Mechanical_HeatingAndCooling.csv,Fuel,Oil
+Mechanical_HeatingAndCooling.csv,Fuel,Other
+Mechanical_HeatingAndCooling.csv,Fuel,Propane
+Mechanical_HeatingAndCooling.csv,Fuel,Wood (cord)
+Mechanical_HeatingAndCooling.csv,Fuel,Wood (pellets)
+Mechanical_HeatingAndCooling.csv,Fuel_Valve_Type,Dual Stage
+Mechanical_HeatingAndCooling.csv,Fuel_Valve_Type,Modulating
+Mechanical_HeatingAndCooling.csv,Fuel_Valve_Type,Single Stage
+Mechanical_HeatingAndCooling.csv,HSPF_is_Est,Estimated
+Mechanical_HeatingAndCooling.csv,HSPF_is_Est,Known or from Nameplate
+Mechanical_HeatingAndCooling.csv,HSPF_is_Est,Measured or Known
+Mechanical_HeatingAndCooling.csv,HSPF_is_Est,Model number lookup
+Mechanical_HeatingAndCooling.csv,Heat_Pump_Compressor_Works_in_Heating_Mode,No
+Mechanical_HeatingAndCooling.csv,Heat_Pump_Compressor_Works_in_Heating_Mode,Yes
+Mechanical_HeatingAndCooling.csv,Heating_Size_BTUh_is_Est,Estimated
+Mechanical_HeatingAndCooling.csv,Heating_Size_BTUh_is_Est,Measured or Known
+Mechanical_HeatingAndCooling.csv,Heating_Size_BTUh_is_Est,Model number lookup
+Mechanical_HeatingAndCooling.csv,Heating_Size_kW_is_Est,Estimated
+Mechanical_HeatingAndCooling.csv,Heating_Size_kW_is_Est,Measured or Known
+Mechanical_HeatingAndCooling.csv,High_Heating_Efficiency_is_Est,Estimated
+Mechanical_HeatingAndCooling.csv,High_Heating_Efficiency_is_Est,Known or from Nameplate
+Mechanical_HeatingAndCooling.csv,High_Input_Heating_Capacity_BTUh_is_Est,Estimated
+Mechanical_HeatingAndCooling.csv,High_Input_Heating_Capacity_BTUh_is_Est,Known or from Nameplate
+Mechanical_HeatingAndCooling.csv,High_Output_Heating_Capacity_BTUh_is_Est,Estimated
+Mechanical_HeatingAndCooling.csv,High_Output_Heating_Capacity_BTUh_is_Est,Known or from Nameplate
+Mechanical_HeatingAndCooling.csv,Humidifier_Present,No
+Mechanical_HeatingAndCooling.csv,Humidifier_Present,Yes
+Mechanical_HeatingAndCooling.csv,Ignition_Type,Intermittent ignition
+Mechanical_HeatingAndCooling.csv,Ignition_Type,"Manual (matches, lighter, etc)"
+Mechanical_HeatingAndCooling.csv,Ignition_Type,Standing pilot
+Mechanical_HeatingAndCooling.csv,Known_to_be_Variable_Speed,No
+Mechanical_HeatingAndCooling.csv,Known_to_be_Variable_Speed,Yes
+Mechanical_HeatingAndCooling.csv,Lockout_HeatPump_Heating_Temp_Determined,No
+Mechanical_HeatingAndCooling.csv,Lockout_HeatPump_Heating_Temp_Determined,Yes
+Mechanical_HeatingAndCooling.csv,Low_Heating_Efficiency_is_Est,Estimated
+Mechanical_HeatingAndCooling.csv,Low_Heating_Efficiency_is_Est,Known or from Nameplate
+Mechanical_HeatingAndCooling.csv,Low_Input_Heating_Capacity_BTUh_is_Est,Estimated
+Mechanical_HeatingAndCooling.csv,Low_Input_Heating_Capacity_BTUh_is_Est,Known or from Nameplate
+Mechanical_HeatingAndCooling.csv,Low_Output_Heating_Capacity_BTUh_is_Est,Estimated
+Mechanical_HeatingAndCooling.csv,Low_Output_Heating_Capacity_BTUh_is_Est,Known or from Nameplate
+Mechanical_HeatingAndCooling.csv,Mini_Split_Has_Ducts,No
+Mechanical_HeatingAndCooling.csv,Mini_Split_Has_Ducts,Yes
+Mechanical_HeatingAndCooling.csv,Mini_Split_System_Number,Mini-split System #1
+Mechanical_HeatingAndCooling.csv,Mini_Split_System_Number,Mini-split System #2
+Mechanical_HeatingAndCooling.csv,Mini_Split_System_Number,Mini-split System #3
+Mechanical_HeatingAndCooling.csv,Mini_Split_System_Number,Mini-split System #4
+Mechanical_HeatingAndCooling.csv,Mini_Split_is_Multihead,No
+Mechanical_HeatingAndCooling.csv,Mini_Split_is_Multihead,Yes
+Mechanical_HeatingAndCooling.csv,Model_Missing,Nameplate is illegible
+Mechanical_HeatingAndCooling.csv,Model_Missing,Nameplate is inaccessible
+Mechanical_HeatingAndCooling.csv,Model_Missing,No nameplate
+Mechanical_HeatingAndCooling.csv,Model_Missing,Other
+Mechanical_HeatingAndCooling.csv,Primary_Cooling_System_Prescribed,No
+Mechanical_HeatingAndCooling.csv,Primary_Cooling_System_Prescribed,Yes
+Mechanical_HeatingAndCooling.csv,Primary_Cooling_System_SelfReport,No
+Mechanical_HeatingAndCooling.csv,Primary_Cooling_System_SelfReport,Yes
+Mechanical_HeatingAndCooling.csv,Primary_Heating_System_Prescribed,No
+Mechanical_HeatingAndCooling.csv,Primary_Heating_System_Prescribed,Yes
+Mechanical_HeatingAndCooling.csv,Primary_Heating_System_SelfReport,No
+Mechanical_HeatingAndCooling.csv,Primary_Heating_System_SelfReport,Yes
+Mechanical_HeatingAndCooling.csv,Provides_Cooling,No
+Mechanical_HeatingAndCooling.csv,Provides_Cooling,Yes
+Mechanical_HeatingAndCooling.csv,Provides_Heating,No
+Mechanical_HeatingAndCooling.csv,Provides_Heating,Yes
+Mechanical_HeatingAndCooling.csv,SEER_is_Estimated,Estimated
+Mechanical_HeatingAndCooling.csv,SEER_is_Estimated,Known or from Nameplate
+Mechanical_HeatingAndCooling.csv,SEER_is_Estimated,Model number lookup
+Mechanical_HeatingAndCooling.csv,Single_Stage_Input_Heating_Capacity_BTUh_is_Est,Estimated
+Mechanical_HeatingAndCooling.csv,Single_Stage_Input_Heating_Capacity_BTUh_is_Est,Known or from Nameplate
+Mechanical_HeatingAndCooling.csv,Single_Stage_Output_Heating_Capacity_BTUh_is_Est,Estimated
+Mechanical_HeatingAndCooling.csv,Single_Stage_Output_Heating_Capacity_BTUh_is_Est,Known or from Nameplate
+Mechanical_HeatingAndCooling.csv,Single_Stage_Output_Heating_Capacity_BTUh_is_Est,Model number lookup
+Mechanical_HeatingAndCooling.csv,System_is_Backup_for_Heatpump,No
+Mechanical_HeatingAndCooling.csv,System_is_Backup_for_Heatpump,Yes
+Mechanical_HeatingAndCooling.csv,System_on_same_Tstat_as_Heat_Pump,No
+Mechanical_HeatingAndCooling.csv,System_on_same_Tstat_as_Heat_Pump,Yes
+Mechanical_HeatingAndCooling.csv,Venting_Type,Atmospheric
+Mechanical_HeatingAndCooling.csv,Venting_Type,Condensing
+Mechanical_HeatingAndCooling.csv,Venting_Type,Draft Assist
+Mechanical_HeatingAndCooling.csv,WiFi_Capable,No
+Mechanical_HeatingAndCooling.csv,WiFi_Capable,Yes
+Mechanical_HeatingAndCooling.csv,Zones_Served,Downstairs
+Mechanical_HeatingAndCooling.csv,Zones_Served,Other
+Mechanical_HeatingAndCooling.csv,Zones_Served,Upstairs
+Mechanical_HeatingAndCooling.csv,Zones_Served,Whole Home
+Mechanical_KitchenVent.csv,System_Type,High Capacity Exhaust
+Mechanical_KitchenVent.csv,System_Type,Recirculating Only
+Mechanical_KitchenVent.csv,System_Type,Small Capacity Exhaust
+Mechanical_KitchenVent.csv,Ventilation_Controls,Manual thermostat - Analog
+Mechanical_KitchenVent.csv,Ventilation_Controls,Manual thermostat - Digital
+Mechanical_KitchenVent.csv,Ventilation_Controls,None
+Mechanical_KitchenVent.csv,Ventilation_Controls,On/off
+Mechanical_KitchenVent.csv,Ventilation_Controls,Programmable thermostat
+Mechanical_KitchenVent.csv,Ventilation_Controls,Timer
+Mechanical_One_Line.csv,Attached_Detached_SF_StrataVar,Attached
+Mechanical_One_Line.csv,Attached_Detached_SF_StrataVar,Detached
+Mechanical_One_Line.csv,BPA_SF_StrataVar,BPA
+Mechanical_One_Line.csv,BPA_SF_StrataVar,Non-BPA
+Mechanical_One_Line.csv,Building_Category,"Duplex, Triplex, or Fourplex"
+Mechanical_One_Line.csv,Building_Category,Manufactured - Double Wide
+Mechanical_One_Line.csv,Building_Category,Manufactured - Single Wide
+Mechanical_One_Line.csv,Building_Category,Single Family Detached
+Mechanical_One_Line.csv,Building_Category,Townhome or Rowhome
+Mechanical_One_Line.csv,Building_Type,Single Family
+Mechanical_One_Line.csv,Electric_Utility_BPA,No
+Mechanical_One_Line.csv,Electric_Utility_BPA,Yes
+Mechanical_One_Line.csv,Gas_Utility,AVISTA
+Mechanical_One_Line.csv,Gas_Utility,BIG SKY GAS
+Mechanical_One_Line.csv,Gas_Utility,CASCADE NATURAL GAS COMPANY
+Mechanical_One_Line.csv,Gas_Utility,ENERGY WEST
+Mechanical_One_Line.csv,Gas_Utility,INTERMOUNTAIN GAS
+Mechanical_One_Line.csv,Gas_Utility,MONTANA DOKOTA GAS
+Mechanical_One_Line.csv,Gas_Utility,NORTHWESTERN
+Mechanical_One_Line.csv,Gas_Utility,NW NATURAL GAS
+Mechanical_One_Line.csv,Gas_Utility,PUGET SOUND ENERGY
+Mechanical_One_Line.csv,Gas_Utility,UNKNOWN
+Mechanical_One_Line.csv,NWN_SF_StrataVar,NWN
+Mechanical_One_Line.csv,NWN_SF_StrataVar,Non-NWN
+Mechanical_One_Line.csv,Ownership,Own
+Mechanical_One_Line.csv,Ownership,Rent
+Mechanical_One_Line.csv,Primary_Cooling_System_Type,Central AC
+Mechanical_One_Line.csv,Primary_Cooling_System_Type,Central Air Source Heat Pump
+Mechanical_One_Line.csv,Primary_Cooling_System_Type,Ductless Mini-split AC
+Mechanical_One_Line.csv,Primary_Cooling_System_Type,Ductless Mini-split Heat Pump
+Mechanical_One_Line.csv,Primary_Cooling_System_Type,Evaporative Cooler
+Mechanical_One_Line.csv,Primary_Cooling_System_Type,Geothermal Heat Pump
+Mechanical_One_Line.csv,Primary_Cooling_System_Type,None
+Mechanical_One_Line.csv,Primary_Cooling_System_Type,"PTAC ""Packaged Terminal Air Conditioner"""
+Mechanical_One_Line.csv,Primary_Cooling_System_Type,"PTHP ""Packaged Terminal Heat Pump"""
+Mechanical_One_Line.csv,Primary_Cooling_System_Type,Portable AC
+Mechanical_One_Line.csv,Primary_Cooling_System_Type,Portable Heat Pump
+Mechanical_One_Line.csv,Primary_Cooling_System_Type,Through-wall AC
+Mechanical_One_Line.csv,Primary_Cooling_System_Type,Water Source Heat Pump
+Mechanical_One_Line.csv,Primary_Cooling_System_Type,Window AC
+Mechanical_One_Line.csv,Primary_Cooling_System_Type,Window Heat Pump
+Mechanical_One_Line.csv,Primary_Heating_Fuel_Type,Electric
+Mechanical_One_Line.csv,Primary_Heating_Fuel_Type,Gasoline
+Mechanical_One_Line.csv,Primary_Heating_Fuel_Type,Kerosene
+Mechanical_One_Line.csv,Primary_Heating_Fuel_Type,Natural gas
+Mechanical_One_Line.csv,Primary_Heating_Fuel_Type,Oil
+Mechanical_One_Line.csv,Primary_Heating_Fuel_Type,Other
+Mechanical_One_Line.csv,Primary_Heating_Fuel_Type,Propane
+Mechanical_One_Line.csv,Primary_Heating_Fuel_Type,Wood (cord)
+Mechanical_One_Line.csv,Primary_Heating_Fuel_Type,Wood (pellets)
+Mechanical_One_Line.csv,Primary_Heating_System_Type,Baseboard
+Mechanical_One_Line.csv,Primary_Heating_System_Type,Boiler
+Mechanical_One_Line.csv,Primary_Heating_System_Type,Central Air Source Heat Pump
+Mechanical_One_Line.csv,Primary_Heating_System_Type,Ductless Mini-split Heat Pump
+Mechanical_One_Line.csv,Primary_Heating_System_Type,Fireplace or Stove
+Mechanical_One_Line.csv,Primary_Heating_System_Type,Furnace
+Mechanical_One_Line.csv,Primary_Heating_System_Type,Geothermal Heat Pump
+Mechanical_One_Line.csv,Primary_Heating_System_Type,"PTAC ""Packaged Terminal Air Conditioner"""
+Mechanical_One_Line.csv,Primary_Heating_System_Type,"PTHP ""Packaged Terminal Heat Pump"""
+Mechanical_One_Line.csv,Primary_Heating_System_Type,Portable Heater
+Mechanical_One_Line.csv,Primary_Heating_System_Type,Radiant Heating
+Mechanical_One_Line.csv,Primary_Heating_System_Type,Unit Heater
+Mechanical_One_Line.csv,Primary_Heating_System_Type,Wall Heater
+Mechanical_One_Line.csv,Primary_Heating_System_Type,Water Source Heat Pump
+Mechanical_One_Line.csv,Primary_Heating_System_Type,Window Heat Pump
+Mechanical_One_Line.csv,Region_SF_StrataVar,ID
+Mechanical_One_Line.csv,Region_SF_StrataVar,MT - BPA
+Mechanical_One_Line.csv,Region_SF_StrataVar,OR - Eastern
+Mechanical_One_Line.csv,Region_SF_StrataVar,OR - Western
+Mechanical_One_Line.csv,Region_SF_StrataVar,WA - Eastern
+Mechanical_One_Line.csv,Region_SF_StrataVar,WA - Puget Sound
+Mechanical_One_Line.csv,Region_SF_StrataVar,WA - Western
+Mechanical_One_Line.csv,Sample_SF_StrataVar,Avista
+Mechanical_One_Line.csv,Sample_SF_StrataVar,BPA
+Mechanical_One_Line.csv,Sample_SF_StrataVar,Base/Core
+Mechanical_One_Line.csv,Sample_SF_StrataVar,HZ 2/3
+Mechanical_One_Line.csv,Sample_SF_StrataVar,NWN
+Mechanical_One_Line.csv,State,ID
+Mechanical_One_Line.csv,State,MT
+Mechanical_One_Line.csv,State,OR
+Mechanical_One_Line.csv,State,WA
+Mechanical_WaterHeater.csv,Air_Supply_From_Inside_House,No
+Mechanical_WaterHeater.csv,Air_Supply_From_Inside_House,Yes
+Mechanical_WaterHeater.csv,Can_Exhaust_to_Garage_or_Get_Supply_Air_from_Home_Interior,No
+Mechanical_WaterHeater.csv,Can_Exhaust_to_Garage_or_Get_Supply_Air_from_Home_Interior,Yes
+Mechanical_WaterHeater.csv,Capacity_BTUH_Is_Estimated,Estimated
+Mechanical_WaterHeater.csv,Capacity_BTUH_Is_Estimated,Measured or Known
+Mechanical_WaterHeater.csv,Capacity_kW_Is_Estimated,Estimated
+Mechanical_WaterHeater.csv,Capacity_kW_Is_Estimated,Measured or Known
+Mechanical_WaterHeater.csv,Circulator_Present,No
+Mechanical_WaterHeater.csv,Circulator_Present,Water heater inaccessible
+Mechanical_WaterHeater.csv,Circulator_Present,Yes
+Mechanical_WaterHeater.csv,Circulator_Present,Yes - captured with previous water heater
+Mechanical_WaterHeater.csv,Drain_Type,Floor drain
+Mechanical_WaterHeater.csv,Drain_Type,Plumbed drain
+Mechanical_WaterHeater.csv,Drain_Type,Pumped drain
+Mechanical_WaterHeater.csv,Eight_feet_of_Vertical_Space,No
+Mechanical_WaterHeater.csv,Eight_feet_of_Vertical_Space,Yes
+Mechanical_WaterHeater.csv,Fuel_Type,Electric
+Mechanical_WaterHeater.csv,Fuel_Type,Natural Gas
+Mechanical_WaterHeater.csv,Fuel_Type,Propane
+Mechanical_WaterHeater.csv,Fuel_Type,Solar
+Mechanical_WaterHeater.csv,HPWH_Current_Mode,Compressor Only Mode
+Mechanical_WaterHeater.csv,HPWH_Current_Mode,Hybrid Mode
+Mechanical_WaterHeater.csv,HPWH_Current_Mode,Other
+Mechanical_WaterHeater.csv,HPWH_Current_Mode,Resistance Mode
+Mechanical_WaterHeater.csv,HPWH_Ducting,Both
+Mechanical_WaterHeater.csv,HPWH_Ducting,Exhaust
+Mechanical_WaterHeater.csv,HPWH_Ducting,None
+Mechanical_WaterHeater.csv,HPWH_Port_Present,No
+Mechanical_WaterHeater.csv,HPWH_Port_Present,Yes
+Mechanical_WaterHeater.csv,HPWH_Relation_to_Space_Heating_Unit,Adjacent rooms
+Mechanical_WaterHeater.csv,HPWH_Relation_to_Space_Heating_Unit,Next to each other
+Mechanical_WaterHeater.csv,HPWH_Relation_to_Space_Heating_Unit,None of the above
+Mechanical_WaterHeater.csv,HPWH_Relation_to_Space_Heating_Unit,Same room
+Mechanical_WaterHeater.csv,"In_A_Room_Greater_Than_1,000_Cubic_Feet",No
+Mechanical_WaterHeater.csv,"In_A_Room_Greater_Than_1,000_Cubic_Feet",Yes
+Mechanical_WaterHeater.csv,Indirect_Water_Heater_Fuel,Natural Gas
+Mechanical_WaterHeater.csv,Indirect_Water_Heater_Fuel,Propane
+Mechanical_WaterHeater.csv,Indirect_Water_Heater_Fuel,Solar
+Mechanical_WaterHeater.csv,Location,Attic
+Mechanical_WaterHeater.csv,Location,Basement
+Mechanical_WaterHeater.csv,Location,Bathroom
+Mechanical_WaterHeater.csv,Location,Bedroom
+Mechanical_WaterHeater.csv,Location,Closet
+Mechanical_WaterHeater.csv,Location,Crawlspace
+Mechanical_WaterHeater.csv,Location,Dining Room
+Mechanical_WaterHeater.csv,Location,Entry/Entryway
+Mechanical_WaterHeater.csv,Location,Family Room
+Mechanical_WaterHeater.csv,Location,Garage
+Mechanical_WaterHeater.csv,Location,Hallway
+Mechanical_WaterHeater.csv,Location,Kitchen
+Mechanical_WaterHeater.csv,Location,Laundry
+Mechanical_WaterHeater.csv,Location,Living Room
+Mechanical_WaterHeater.csv,Location,Mechanical
+Mechanical_WaterHeater.csv,Location,Office
+Mechanical_WaterHeater.csv,Location,Other
+Mechanical_WaterHeater.csv,Location,Outbuilding / Addition
+Mechanical_WaterHeater.csv,Location,Outside
+Mechanical_WaterHeater.csv,Pipe_Wrap,No
+Mechanical_WaterHeater.csv,Pipe_Wrap,Yes
+Mechanical_WaterHeater.csv,Pipe_Wrap_Length_Is_Estimated,Estimated
+Mechanical_WaterHeater.csv,Pipe_Wrap_Length_Is_Estimated,Measured or Known
+Mechanical_WaterHeater.csv,Pipe_Wrap_Thickness_Is_Estimated,Estimated
+Mechanical_WaterHeater.csv,Pipe_Wrap_Thickness_Is_Estimated,Measured or Known
+Mechanical_WaterHeater.csv,Pipe_Wrap_Type,Fiberglass
+Mechanical_WaterHeater.csv,Pipe_Wrap_Type,Foam Foiled Tape
+Mechanical_WaterHeater.csv,Pipe_Wrap_Type,Other
+Mechanical_WaterHeater.csv,Pipe_Wrap_Type,Polyethylene Foam
+Mechanical_WaterHeater.csv,Pipe_Wrap_Type,Rubber
+Mechanical_WaterHeater.csv,Provided_by_Heating_System,No
+Mechanical_WaterHeater.csv,Provided_by_Heating_System,Yes
+Mechanical_WaterHeater.csv,Serves_Whole_House,No
+Mechanical_WaterHeater.csv,Serves_Whole_House,Yes
+Mechanical_WaterHeater.csv,Size_Is_Estimated,Estimated
+Mechanical_WaterHeater.csv,Size_Is_Estimated,Measured or Known
+Mechanical_WaterHeater.csv,Space_Is_Conditioned,No
+Mechanical_WaterHeater.csv,Space_Is_Conditioned,Yes
+Mechanical_WaterHeater.csv,Storage_Tankless,Storage
+Mechanical_WaterHeater.csv,Storage_Tankless,Tankless
+Mechanical_WaterHeater.csv,Supplemental_Solar_Water_Heating,No
+Mechanical_WaterHeater.csv,Supplemental_Solar_Water_Heating,Yes
+Mechanical_WaterHeater.csv,Tank_Wrap,No
+Mechanical_WaterHeater.csv,Tank_Wrap,Yes
+Mechanical_WaterHeater.csv,Tank_Wrap_Thickness,1.0 inch
+Mechanical_WaterHeater.csv,Tank_Wrap_Thickness,1.5 inches
+Mechanical_WaterHeater.csv,Tank_Wrap_Thickness,2.0 inches
+Mechanical_WaterHeater.csv,Tank_Wrap_Thickness,2.5 inches
+Mechanical_WaterHeater.csv,Tank_Wrap_Thickness,3.0 inches
+Mechanical_WaterHeater.csv,Technology_Description,Electric Heat Pump (Packaged)
+Mechanical_WaterHeater.csv,Technology_Description,Electric Heat Pump (Split System)
+Mechanical_WaterHeater.csv,Technology_Description,Electric Resistance
+Mechanical_WaterHeater.csv,Technology_Description,Fossil Fuel Condensing
+Mechanical_WaterHeater.csv,Technology_Description,Fossil Fuel Non-Condensing
+Mechanical_WaterHeater.csv,Technology_Description,Indirect Water Heater
+Mechanical_WaterHeater.csv,Water_Heater_Efficiency_Type,Energy Factor (EF)
+Mechanical_WaterHeater.csv,Water_Heater_Efficiency_Type,Integrated Energy Factor (IEF)
+Mechanical_WaterHeater.csv,Water_Heater_Efficiency_Type,Integrated energy factor
+Mechanical_WaterHeater.csv,Water_Heater_Efficiency_Type,Other
+Mechanical_WaterHeater.csv,Water_Heater_Efficiency_Type,Solar Uniform Energy Factor (SUEF)
+Mechanical_WaterHeater.csv,Water_Heater_Efficiency_Type,Uniform Energy Factor (UEF)
+Mechanical_WaterHeater.csv,Water_Heater_Missing_Model_Reason,NAMEPLATE IS ILLEGIBLE
+Mechanical_WaterHeater.csv,Water_Heater_Missing_Model_Reason,NO NAMEPLATE
+Mechanical_WaterHeater.csv,Water_Heater_Missing_Model_Reason,OTHER
+Mechanical_WaterHeater.csv,Wifi_Enabled,No
+Mechanical_WaterHeater.csv,Wifi_Enabled,Yes
+Mechanical_WaterHeater.csv,Within_4_feet_of_a_drain,No
+Mechanical_WaterHeater.csv,Within_4_feet_of_a_drain,Yes
+Mechanical_WellPump.csv,Units_of_Motor_Input,HP
+Mechanical_WellPump.csv,Units_of_Motor_Input,kW
+Mechanical_WellPump.csv,Well_Pump_Controlled_by_VSD,No
+Mechanical_WellPump.csv,Well_Pump_Controlled_by_VSD,Yes
+Mechanical_WellPump.csv,Well_Pump_Missing_Model_Reason,NAMEPLATE IS ILLEGIBLE
+Mechanical_WellPump.csv,Well_Pump_Missing_Model_Reason,NAMEPLATE IS INACCESSIBLE
+Mechanical_WellPump.csv,Well_Pump_Missing_Model_Reason,NO NAMEPLATE
+Mechanical_WellPump.csv,Wifi_Enabled,No
+Mechanical_WholeHouseFan.csv,Ventilation_Controls,Manual thermostat - Analog
+Mechanical_WholeHouseFan.csv,Ventilation_Controls,None
+Mechanical_WholeHouseFan.csv,Ventilation_Controls,On/off
+Mechanical_WholeHouseFan.csv,Ventilation_Controls,Smart/Wi-Fi thermostat
+Mechanical_WholeHouseFan.csv,Ventilation_Controls,Timer
+Outbuildings.csv,Is_Outbuilding_Attached,No
+Outbuildings.csv,Is_Outbuilding_Attached,Yes
+Outbuildings.csv,Is_Outbuilding_Occupied,No
+Outbuildings.csv,Is_Outbuilding_Occupied,Yes
+Outbuildings.csv,Outbuilding_Heating_Fuel_Type,Electric
+Outbuildings.csv,Outbuilding_Heating_Fuel_Type,Fuel oil/kerosene
+Outbuildings.csv,Outbuilding_Heating_Fuel_Type,Gas/oil
+Outbuildings.csv,Outbuilding_Heating_Fuel_Type,Natural Gas
+Outbuildings.csv,Outbuilding_Heating_Fuel_Type,None
+Outbuildings.csv,Outbuilding_Heating_Fuel_Type,Other
+Outbuildings.csv,Outbuilding_Heating_Fuel_Type,Propane
+Outbuildings.csv,Outbuilding_Heating_Fuel_Type,Wood
+Outbuildings.csv,Outbuilding_Meter_Shared_Type,Electric
+Outbuildings.csv,Outbuilding_Meter_Shared_Type,Gas
+Outbuildings.csv,Outbuilding_Meter_Shared_Type,Propane
+Outbuildings.csv,Outbuilding_Meter_Shared_Type,Water
+Outbuildings.csv,Outbuilding_Meter_Shared_Type,Other
+Outbuildings.csv,Outbuilding_Meter_Shared_with_Home,Meter shared with main residence
+Outbuildings.csv,Outbuilding_Meter_Shared_with_Home,No meter/No power
+Outbuildings.csv,Outbuilding_Meter_Shared_with_Home,Own meter
+Outbuildings.csv,Outbuilding_Sq_Ft_is_Estimated,Estimated
+Outbuildings.csv,Outbuilding_Sq_Ft_is_Estimated,Measured or Known
+Outbuildings.csv,Outbuilding_Type,ADU
+Outbuildings.csv,Outbuilding_Type,Animal Housing
+Outbuildings.csv,Outbuilding_Type,Apartment
+Outbuildings.csv,Outbuilding_Type,Barn
+Outbuildings.csv,Outbuilding_Type,Boat house
+Outbuildings.csv,Outbuilding_Type,Cabin
+Outbuildings.csv,Outbuilding_Type,Coop
+Outbuildings.csv,Outbuilding_Type,Garage
+Outbuildings.csv,Outbuilding_Type,Greenhouse
+Outbuildings.csv,Outbuilding_Type,Mixed Use
+Outbuildings.csv,Outbuilding_Type,Other
+Outbuildings.csv,Outbuilding_Type,Other House
+Outbuildings.csv,Outbuilding_Type,Pool house
+Outbuildings.csv,Outbuilding_Type,Pump Room
+Outbuildings.csv,Outbuilding_Type,Shed
+Outbuildings.csv,Outbuilding_Type,Shop
+Room.csv,Area_Is_Estimated,Estimated
+Room.csv,Area_Is_Estimated,Measured or Known
+Room.csv,Ceiling_Height_Is_Estimated,Estimated
+Room.csv,Ceiling_Height_Is_Estimated,Measured or Known
+Room.csv,Duct_Registers_Present,No
+Room.csv,Duct_Registers_Present,Yes
+Room.csv,Space_Cooling,Directly Cooled
+Room.csv,Space_Cooling,Indirectly Cooled from Adjacent Spaces
+Room.csv,Space_Cooling,Not Cooled
+Room.csv,Space_Heating,Directly Heated
+Room.csv,Space_Heating,Indirectly Heated from Adjacent Spaces (no heater or vent in room)
+Room.csv,Space_Heating,Indirectly Heated from Equipment in the Space
+Room.csv,Space_Heating,Unheated
+SiteDetail.csv,Attached_Detached_SF_StrataVar,Attached
+SiteDetail.csv,Attached_Detached_SF_StrataVar,Detached
+SiteDetail.csv,BPA_SF_StrataVar,BPA
+SiteDetail.csv,BPA_SF_StrataVar,Non-BPA
+SiteDetail.csv,Building_Category,"Duplex, Triplex, or Fourplex"
+SiteDetail.csv,Building_Category,Manufactured - Double Wide
+SiteDetail.csv,Building_Category,Manufactured - Single Wide
+SiteDetail.csv,Building_Category,Single Family Detached
+SiteDetail.csv,Building_Category,Townhome or Rowhome
+SiteDetail.csv,Building_Type,Single Family
+SiteDetail.csv,Electric_Utility_BPA,No
+SiteDetail.csv,Electric_Utility_BPA,Yes
+SiteDetail.csv,Gas_Utility,AVISTA
+SiteDetail.csv,Gas_Utility,BIG SKY GAS
+SiteDetail.csv,Gas_Utility,CASCADE NATURAL GAS COMPANY
+SiteDetail.csv,Gas_Utility,ENERGY WEST
+SiteDetail.csv,Gas_Utility,INTERMOUNTAIN GAS
+SiteDetail.csv,Gas_Utility,MONTANA DOKOTA GAS
+SiteDetail.csv,Gas_Utility,NORTHWESTERN
+SiteDetail.csv,Gas_Utility,NW NATURAL GAS
+SiteDetail.csv,Gas_Utility,PUGET SOUND ENERGY
+SiteDetail.csv,Gas_Utility,UNKNOWN
+SiteDetail.csv,NWN_SF_StrataVar,NWN
+SiteDetail.csv,NWN_SF_StrataVar,Non-NWN
+SiteDetail.csv,Region_SF_StrataVar,ID
+SiteDetail.csv,Region_SF_StrataVar,MT - BPA
+SiteDetail.csv,Region_SF_StrataVar,OR - Eastern
+SiteDetail.csv,Region_SF_StrataVar,OR - Western
+SiteDetail.csv,Region_SF_StrataVar,WA - Eastern
+SiteDetail.csv,Region_SF_StrataVar,WA - Puget Sound
+SiteDetail.csv,Region_SF_StrataVar,WA - Western
+SiteDetail.csv,Sample_SF_StrataVar,Avista
+SiteDetail.csv,Sample_SF_StrataVar,BPA
+SiteDetail.csv,Sample_SF_StrataVar,Base/Core
+SiteDetail.csv,Sample_SF_StrataVar,HZ 2/3
+SiteDetail.csv,Sample_SF_StrataVar,NWN
+SiteDetail.csv,State,ID
+SiteDetail.csv,State,MT
+SiteDetail.csv,State,OR
+SiteDetail.csv,State,WA
+SiteInterview_Demographics.csv,Any_Occupant_Moved_Out_within_Last_Year,No
+SiteInterview_Demographics.csv,Any_Occupant_Moved_Out_within_Last_Year,Yes
+SiteInterview_Demographics.csv,Any_Occupants_Moved_In_within_Last_Year,No
+SiteInterview_Demographics.csv,Any_Occupants_Moved_In_within_Last_Year,Yes
+SiteInterview_Demographics.csv,Business_Operated_Out_of_the_Home,No
+SiteInterview_Demographics.csv,Business_Operated_Out_of_the_Home,Other
+SiteInterview_Demographics.csv,Business_Operated_Out_of_the_Home,Yes
+SiteInterview_Demographics.csv,Do_you_own_or_rent_your_home,Own
+SiteInterview_Demographics.csv,Do_you_own_or_rent_your_home,Rent
+SiteInterview_Demographics.csv,Home_Usage_Type,Home where I live ALL/MOST of the time
+SiteInterview_Demographics.csv,Home_Usage_Type,It is VACANT ALL/MOST of the time
+SiteInterview_Demographics.csv,Home_Usage_Type,Other
+SiteInterview_Demographics.csv,Home_Usage_Type,Property that I RENT to others YEAR ROUND
+SiteInterview_Demographics.csv,Home_Usage_Type,Second home where I live PART of the time
+SiteInterview_Demographics.csv,Household_Education_Level,"Associate's Degree, academic (e.g., AS, AA)"
+SiteInterview_Demographics.csv,Household_Education_Level,"Associate's Degree, occupational (e.g., AAS, AAA)"
+SiteInterview_Demographics.csv,Household_Education_Level,"Bachelor's degree (e.g., BA, BS)"
+SiteInterview_Demographics.csv,Household_Education_Level,"Doctorate Degree (e.g., PhD, EdD)"
+SiteInterview_Demographics.csv,Household_Education_Level,High School graduate/GED
+SiteInterview_Demographics.csv,Household_Education_Level,Less than High School
+SiteInterview_Demographics.csv,Household_Education_Level,"Master's (e.g., MA, MS, MEng, MEd, MSW, MBA)"
+SiteInterview_Demographics.csv,Household_Education_Level,Other
+SiteInterview_Demographics.csv,Household_Education_Level,"Professional Degree (e.g., MD, DDS, DVM, LLB, JD)"
+SiteInterview_Demographics.csv,Household_Education_Level,Refused
+SiteInterview_Demographics.csv,Household_Education_Level,"Some college, no degree"
+SiteInterview_Demographics.csv,Household_Income,"$100,000 to less than $149,999"
+SiteInterview_Demographics.csv,Household_Income,"$15,000 to less than $24,999"
+SiteInterview_Demographics.csv,Household_Income,"$150,000 to less than $199,999"
+SiteInterview_Demographics.csv,Household_Income,"$200,000 and over"
+SiteInterview_Demographics.csv,Household_Income,"$25,000 to less than $34,999"
+SiteInterview_Demographics.csv,Household_Income,"$35,000 to less than $49,999"
+SiteInterview_Demographics.csv,Household_Income,"$50,000 to less than $74,999"
+SiteInterview_Demographics.csv,Household_Income,"$75,000 to less than $99,999"
+SiteInterview_Demographics.csv,Household_Income,Don't know
+SiteInterview_Demographics.csv,Household_Income,"Less than $15,000 per year"
+SiteInterview_Demographics.csv,Household_Income,Refused
+SiteInterview_Demographics.csv,Planning_to_Move_Within_Six_Months,No
+SiteInterview_Demographics.csv,Planning_to_Move_Within_Six_Months,Yes
+SiteInterview_Demographics.csv,Primary_Home,Primary
+SiteInterview_Demographics.csv,Primary_Home,Secondary
+SiteInterview_Demographics.csv,Who_pays_the_electric_bill,Landlord
+SiteInterview_Demographics.csv,Who_pays_the_electric_bill,Occupant
+SiteInterview_Demographics.csv,Who_pays_the_gas_bill,Landlord
+SiteInterview_Demographics.csv,Who_pays_the_gas_bill,Occupant
+SiteInterview_HomeEnergyUse.csv,Block_Off_Part_of_Home_In_Heating_Season,No
+SiteInterview_HomeEnergyUse.csv,Block_Off_Part_of_Home_In_Heating_Season,Yes
+SiteInterview_HomeEnergyUse.csv,Electric_Vehicle_Present,No
+SiteInterview_HomeEnergyUse.csv,Electric_Vehicle_Present,Yes
+SiteInterview_HomeEnergyUse.csv,Generator_Fuel,Diesel
+SiteInterview_HomeEnergyUse.csv,Generator_Fuel,Natural Gas
+SiteInterview_HomeEnergyUse.csv,Generator_Fuel,Other
+SiteInterview_HomeEnergyUse.csv,Generator_Fuel,Petrol
+SiteInterview_HomeEnergyUse.csv,Generator_Fuel,Propane
+SiteInterview_HomeEnergyUse.csv,Heating_Equipment_Operator,Other
+SiteInterview_HomeEnergyUse.csv,Heating_Equipment_Operator,Property owner / manager
+SiteInterview_HomeEnergyUse.csv,Heating_Equipment_Used_The_Most,Baseboard
+SiteInterview_HomeEnergyUse.csv,Heating_Equipment_Used_The_Most,Boiler
+SiteInterview_HomeEnergyUse.csv,Heating_Equipment_Used_The_Most,Central Air Source Heat Pump
+SiteInterview_HomeEnergyUse.csv,Heating_Equipment_Used_The_Most,Ductless Mini-split Heat Pump
+SiteInterview_HomeEnergyUse.csv,Heating_Equipment_Used_The_Most,Fireplace or Stove
+SiteInterview_HomeEnergyUse.csv,Heating_Equipment_Used_The_Most,Furnace
+SiteInterview_HomeEnergyUse.csv,Heating_Equipment_Used_The_Most,Geothermal Heat Pump
+SiteInterview_HomeEnergyUse.csv,Heating_Equipment_Used_The_Most,"PTHP ""Packaged Terminal Heat Pump"""
+SiteInterview_HomeEnergyUse.csv,Heating_Equipment_Used_The_Most,Portable Heater
+SiteInterview_HomeEnergyUse.csv,Heating_Equipment_Used_The_Most,Wall Heater
+SiteInterview_HomeEnergyUse.csv,Hot_Tub_Area_Is_Estimated,Estimated
+SiteInterview_HomeEnergyUse.csv,Hot_Tub_Area_Is_Estimated,Measured or Known
+SiteInterview_HomeEnergyUse.csv,Hot_Tub_Present,No
+SiteInterview_HomeEnergyUse.csv,Hot_Tub_Present,Yes
+SiteInterview_HomeEnergyUse.csv,Is_Portable_Cooling_Equipment_In_Storage,No
+SiteInterview_HomeEnergyUse.csv,Is_Portable_Cooling_Equipment_In_Storage,Yes
+SiteInterview_HomeEnergyUse.csv,Is_Portable_HP_Equipment_In_Storage,No
+SiteInterview_HomeEnergyUse.csv,Is_Portable_HP_Equipment_In_Storage,Yes
+SiteInterview_HomeEnergyUse.csv,Is_Portable_Heating_In_Storage,No
+SiteInterview_HomeEnergyUse.csv,Is_Portable_Heating_In_Storage,Yes
+SiteInterview_HomeEnergyUse.csv,Occupant_Controls_Heating_Cooling,No
+SiteInterview_HomeEnergyUse.csv,Occupant_Controls_Heating_Cooling,Yes
+SiteInterview_HomeEnergyUse.csv,Onsite_Power_Generation_Present,No
+SiteInterview_HomeEnergyUse.csv,Onsite_Power_Generation_Present,Yes
+SiteInterview_HomeEnergyUse.csv,Onsite_Power_Generation_Type,Solar / PV System
+SiteInterview_HomeEnergyUse.csv,Onsite_Power_Generation_Type,Fuel Cell System
+SiteInterview_HomeEnergyUse.csv,Onsite_Power_Generation_Type,Micro Hydro System
+SiteInterview_HomeEnergyUse.csv,Onsite_Power_Generation_Type,Solar Thermal System (hot water)
+SiteInterview_HomeEnergyUse.csv,Onsite_Power_Generation_Type,Wind System
+SiteInterview_HomeEnergyUse.csv,Onsite_Power_Generation_Type,"Fossil Fuel generator - hardwired with grid disconnects, NOT an emergency use unit"
+SiteInterview_HomeEnergyUse.csv,Onsite_Power_Generation_Type,Other
+SiteInterview_HomeEnergyUse.csv,Open_Windows_When_Heating,No
+SiteInterview_HomeEnergyUse.csv,Open_Windows_When_Heating,Yes
+SiteInterview_HomeEnergyUse.csv,PV_Financing,Bank loan
+SiteInterview_HomeEnergyUse.csv,PV_Financing,Other
+SiteInterview_HomeEnergyUse.csv,PV_Financing,Power purchase agreement with third party
+SiteInterview_HomeEnergyUse.csv,PV_Financing,Purchased outright
+SiteInterview_HomeEnergyUse.csv,PV_Financing,Solar leases
+SiteInterview_HomeEnergyUse.csv,Pool_Area_Is_Estimated,Estimated
+SiteInterview_HomeEnergyUse.csv,Pool_Area_Is_Estimated,Measured or Known
+SiteInterview_HomeEnergyUse.csv,Pool_Cover,No
+SiteInterview_HomeEnergyUse.csv,Pool_Cover,Yes
+SiteInterview_HomeEnergyUse.csv,Pool_Heat_Primary_Fuel_Type,Electric
+SiteInterview_HomeEnergyUse.csv,Pool_Heat_Primary_Fuel_Type,Natural Gas
+SiteInterview_HomeEnergyUse.csv,Pool_Heat_Primary_Fuel_Type,None
+SiteInterview_HomeEnergyUse.csv,Pool_Heat_Primary_Fuel_Type,Other
+SiteInterview_HomeEnergyUse.csv,Pool_Heat_Primary_Fuel_Type,Propane
+SiteInterview_HomeEnergyUse.csv,Pool_Heat_Primary_Fuel_Type,Wood
+SiteInterview_HomeEnergyUse.csv,Pool_Location,Indoor
+SiteInterview_HomeEnergyUse.csv,Pool_Location,Outdoor
+SiteInterview_HomeEnergyUse.csv,Pool_Present,No
+SiteInterview_HomeEnergyUse.csv,Pool_Present,Yes
+SiteInterview_HomeEnergyUse.csv,Pool_Solar_Assist,No
+SiteInterview_HomeEnergyUse.csv,Pool_Solar_Assist,Yes
+SiteInterview_HomeEnergyUse.csv,Pool_Type,Pool - heated
+SiteInterview_HomeEnergyUse.csv,Pool_Type,Pool - unheated
+SiteInterview_HomeEnergyUse.csv,Power_Storage_Present,No
+SiteInterview_HomeEnergyUse.csv,Power_Storage_Present,Yes
+SiteInterview_HomeEnergyUse.csv,Power_Storage_Type,Battery
+SiteInterview_HomeEnergyUse.csv,Power_Storage_Type,Hot Water
+SiteInterview_HomeEnergyUse.csv,Power_Storage_Type,Other
+SiteInterview_HomeEnergyUse.csv,Smart_Home_Devices_Present,No
+SiteInterview_HomeEnergyUse.csv,Smart_Home_Devices_Present,Yes
+SiteInterview_HomeEnergyUse.csv,Smart_Home_Hub_Communication,Desktop (using a desktop to program automated routines/schedules)
+SiteInterview_HomeEnergyUse.csv,Smart_Home_Hub_Communication,Phone App (using a phone application to start and stop devices and routines)
+SiteInterview_HomeEnergyUse.csv,Smart_Home_Hub_Communication,"Voice Assistant (using Alexa, Siri, or Google to control Smart Home features)"
+SiteInterview_HomeEnergyUse.csv,Use_Non_Utility_Fuels_For_Heat,No
+SiteInterview_HomeEnergyUse.csv,Use_Non_Utility_Fuels_For_Heat,Yes
+SiteInterview_HomeEnergyUse.csv,Use_Portable_Cooling_Equipment,No
+SiteInterview_HomeEnergyUse.csv,Use_Portable_Cooling_Equipment,Yes
+SiteInterview_HomeEnergyUse.csv,Use_Portable_HP_Equipment,No
+SiteInterview_HomeEnergyUse.csv,Use_Portable_HP_Equipment,Yes
+SiteInterview_HomeEnergyUse.csv,Use_Portable_Heating_Equipment,No
+SiteInterview_HomeEnergyUse.csv,Use_Portable_Heating_Equipment,Yes
+SiteInterview_OccupantConservation.csv,Conservation_Air_Sealing,No
+SiteInterview_OccupantConservation.csv,Conservation_Air_Sealing,Yes
+SiteInterview_OccupantConservation.csv,Conservation_Ceiling_Insulation,No
+SiteInterview_OccupantConservation.csv,Conservation_Ceiling_Insulation,Yes
+SiteInterview_OccupantConservation.csv,Conservation_Cooling_Equipment,No
+SiteInterview_OccupantConservation.csv,Conservation_Cooling_Equipment,Yes
+SiteInterview_OccupantConservation.csv,Conservation_Door_Replacement,No
+SiteInterview_OccupantConservation.csv,Conservation_Door_Replacement,Yes
+SiteInterview_OccupantConservation.csv,Conservation_Duct_Insulation,No
+SiteInterview_OccupantConservation.csv,Conservation_Duct_Insulation,Yes
+SiteInterview_OccupantConservation.csv,Conservation_Duct_Sealing,No
+SiteInterview_OccupantConservation.csv,Conservation_Duct_Sealing,Yes
+SiteInterview_OccupantConservation.csv,Conservation_Energy_Audit,No
+SiteInterview_OccupantConservation.csv,Conservation_Energy_Audit,Yes
+SiteInterview_OccupantConservation.csv,Conservation_Floor_Insulation,No
+SiteInterview_OccupantConservation.csv,Conservation_Floor_Insulation,Yes
+SiteInterview_OccupantConservation.csv,Conservation_Heating_Equipment,No
+SiteInterview_OccupantConservation.csv,Conservation_Heating_Equipment,Yes
+SiteInterview_OccupantConservation.csv,Conservation_Lighting,No
+SiteInterview_OccupantConservation.csv,Conservation_Lighting,Yes
+SiteInterview_OccupantConservation.csv,Conservation_Major_Appliance,No
+SiteInterview_OccupantConservation.csv,Conservation_Major_Appliance,Yes
+SiteInterview_OccupantConservation.csv,Conservation_Replacement_Windows,No
+SiteInterview_OccupantConservation.csv,Conservation_Replacement_Windows,Yes
+SiteInterview_OccupantConservation.csv,Conservation_Showerhead,No
+SiteInterview_OccupantConservation.csv,Conservation_Showerhead,Yes
+SiteInterview_OccupantConservation.csv,Conservation_Wall_Insulation,No
+SiteInterview_OccupantConservation.csv,Conservation_Wall_Insulation,Yes
+SiteInterview_OccupantConservation.csv,Conservation_Water_Heating,No
+SiteInterview_OccupantConservation.csv,Conservation_Water_Heating,Yes
+SiteInterview_OccupantConservation.csv,Conservation_Weatherization,No
+SiteInterview_OccupantConservation.csv,Federal_Tax_Credit,No
+SiteInterview_OccupantConservation.csv,Federal_Tax_Credit,Yes
+SiteInterview_OccupantConservation.csv,Participated_in_Utility_Conservation_Program_in_Last_2_Years,No
+SiteInterview_OccupantConservation.csv,Performed_Conservation_Measures_on_Their_Own_in_Last_2_Years,No
+SiteInterview_OccupantConservation.csv,Performed_Conservation_Measures_on_Their_Own_in_Last_2_Years,Yes
+SiteInterview_OccupantConservation.csv,Received_Tax_Credit_for_Conservation,No
+SiteInterview_OccupantConservation.csv,Received_Tax_Credit_for_Conservation,Yes
+SiteInterview_OccupantConservation.csv,State_Tax_Credit,No
+SiteInterview_OccupantConservation.csv,State_Tax_Credit,Yes
+Skylight.csv,Frame_Type,Aluminum
+Skylight.csv,Frame_Type,Fiberglass
+Skylight.csv,Frame_Type,"Fiberglass, interior wood clad"
+Skylight.csv,Frame_Type,Other
+Skylight.csv,Frame_Type,Vinyl
+Skylight.csv,Frame_Type,Wood - bare
+Skylight.csv,Frame_Type,Wood aluminum clad
+Skylight.csv,Frame_Type,Wood fiberglass clad
+Skylight.csv,Glazing_Type,Double
+Skylight.csv,Glazing_Type,Single
+Skylight.csv,Opening_Type,Electric
+Skylight.csv,Opening_Type,Manual
+Skylight.csv,Shade_Insulated,No
+Skylight.csv,Shade_Insulated,Yes
+Skylight.csv,Shade_Present,No
+Skylight.csv,Shade_Present,Yes
+Skylight.csv,Shade_Reflective,No
+Skylight.csv,Shade_Reflective,Yes
+Skylight.csv,Shape,Circle
+Skylight.csv,Shape,Other
+Skylight.csv,Shape,Rectangle / Square
+Skylight.csv,Shape,Triangle
+Skylight.csv,Skylight_Area_Inches_is_Estimated,Estimated
+Skylight.csv,Skylight_Area_Inches_is_Estimated,Imputed
+Skylight.csv,Skylight_Area_Inches_is_Estimated,Measured or Known
+Skylight.csv,Skylight_Direction,East
+Skylight.csv,Skylight_Direction,NE
+Skylight.csv,Skylight_Direction,NW
+Skylight.csv,Skylight_Direction,North
+Skylight.csv,Skylight_Direction,SE
+Skylight.csv,Skylight_Direction,SW
+Skylight.csv,Skylight_Direction,South
+Skylight.csv,Skylight_Direction,West
+Skylight.csv,Type,Fixed
+Skylight.csv,Type,Open
+Testing_Blowerdoor.csv,Blower_Door_Test_Type,Depressurized (preferred method)
+Testing_Blowerdoor.csv,Blower_Door_Test_Type,Pressurized
+Testing_Blowerdoor.csv,First_Trial_Windy,No
+Testing_Blowerdoor.csv,First_Trial_Windy,Yes
+Testing_Ductleakage.csv,Leakage_Ext_Blaster_Location,Furnace/Air Handler
+Testing_Ductleakage.csv,Leakage_Ext_Blaster_Location,Return/Supply Register
+Testing_Ductleakage.csv,Leakage_Ext_Test_Type,Depressurized
+Testing_Ductleakage.csv,Leakage_Ext_Test_Type,Pressurized (preferred method)
+Testing_Ductleakage.csv,T1_Target20_Ring_Size,Open Fan¬†
+Testing_Ductleakage.csv,T1_Target20_Ring_Size,Ring¬†1¬†
+Testing_Ductleakage.csv,T1_Target20_Ring_Size,Ring¬†2¬†
+Testing_Ductleakage.csv,T1_Target20_Ring_Size,Ring¬†3¬†
+Testing_Ductleakage.csv,T1_Target20_Ring_Size,Ring¬†4¬†
+Testing_Ductleakage.csv,T1_Target40_Ring_Size,Open Fan¬†
+Testing_Ductleakage.csv,T1_Target40_Ring_Size,Ring¬†1¬†
+Testing_Ductleakage.csv,T1_Target40_Ring_Size,Ring¬†2¬†
+Testing_Ductleakage.csv,T1_Target40_Ring_Size,Ring¬†3¬†
+Testing_Ductleakage.csv,T2_Side_Tested,Return Plenum
+Testing_Ductleakage.csv,T2_Side_Tested,Supply Plenum (preferred)
+Testing_Ductleakage.csv,T2_Target20_Ring_Size,Open Fan¬†
+Testing_Ductleakage.csv,T2_Target20_Ring_Size,Ring¬†1¬†
+Testing_Ductleakage.csv,T2_Target20_Ring_Size,Ring¬†2¬†
+Testing_Ductleakage.csv,T2_Target20_Ring_Size,Ring¬†3¬†
+Testing_Ductleakage.csv,T2_Target20_Ring_Size,Ring¬†4¬†
+Testing_Ductleakage.csv,T2_Target40_Ring_Size,Open Fan¬†
+Testing_Ductleakage.csv,T2_Target40_Ring_Size,Ring¬†1¬†
+Testing_Ductleakage.csv,T2_Target40_Ring_Size,Ring¬†2¬†
+Testing_Ductleakage.csv,T2_Target40_Ring_Size,Ring¬†3¬†
+Testing_Ductleakage.csv,T2_Target40_Ring_Size,Ring¬†4¬†
+Testing_Trueflow.csv,Filter_Condition,"Clean, like new"
+Testing_Trueflow.csv,Filter_Condition,Dirty and replaced
+Testing_Trueflow.csv,Filter_Condition,"Dirty, no replacement, test run with no filter"
+Testing_Trueflow.csv,Filter_Condition,Missing
+Testing_Trueflow.csv,HVAC_System_Mode,Cooling (AC is running)
+Testing_Trueflow.csv,HVAC_System_Mode,Fan Only (Avoid)
+Testing_Trueflow.csv,HVAC_System_Mode,Heating (furnace is running)
+Testing_Trueflow.csv,TrueFlow_Plate_Location,At the furnace/air handling unit
+Testing_Trueflow.csv,TrueFlow_Plate_Location,Other
+Testing_Trueflow.csv,TrueFlow_Plate_Location,Return Air Register
+Testing_Trueflow.csv,Trueflow_Duct_Leakage,Moderately leaky
+Testing_Trueflow.csv,Trueflow_Duct_Leakage,Tight sealed (Not leaky)
+Testing_Trueflow.csv,Trueflow_Duct_Leakage,Very leaky
+Testing_Trueflow.csv,Trueflow_Return_Pressure_Loc,Before furnace filter
+Testing_Trueflow.csv,Trueflow_Return_Pressure_Loc,Between furnace filter and blower fan (ideal)
+Usage_One_Line.csv,Building_Type,Double Wide
+Usage_One_Line.csv,Building_Type,"Duplex, Triplex, or Fourplex"
+Usage_One_Line.csv,Building_Type,Single Family Detached
+Usage_One_Line.csv,Building_Type,Single Wide
+Usage_One_Line.csv,Building_Type,Townhome or Rowhome
+Usage_One_Line.csv,Ownership,Own
+Usage_One_Line.csv,Ownership,Rent
+Usage_One_Line.csv,State,ID
+Usage_One_Line.csv,State,MT
+Usage_One_Line.csv,State,OR
+Usage_One_Line.csv,State,WA
+UtilMeters.csv,Meter_ID,MTR_1
+UtilMeters.csv,Meter_ID,MTR_2
+UtilMeters.csv,Meter_ID,MTR_3
+UtilMeters.csv,Meter_ID,MTR_4
+UtilMeters.csv,Meter_ID,MTR_5
+UtilMeters.csv,Meter_ID,MTR_6
+UtilMeters.csv,Meter_ID,MTR_7
+UtilMeters.csv,Meter_ID,MTR_8
+UtilMeters.csv,Meter_ID,MTR_9
+UtilMeters.csv,Meter_Type,Electric
+UtilMeters.csv,Meter_Type,Gas
+UtilMeters.csv,Smart_Meter,No
+UtilMeters.csv,Smart_Meter,Yes
+Water.csv,Fixture_Type,Bathtub
+Water.csv,Fixture_Type,Faucet
+Water.csv,Fixture_Type,Shower
+Water.csv,Fixture_Type,Shower / Bathtub combo with Diverter Valve
+Water.csv,Fixture_Type,Shower / Bathtub combo with Separate Valve
+Water.csv,Primary_Shower,All used about the same
+Water.csv,Primary_Shower,Primary
+Water.csv,Primary_Shower,Secondary
+Water.csv,Room_Type,Basement
+Water.csv,Room_Type,Bathroom
+Water.csv,Room_Type,Bedroom
+Water.csv,Room_Type,Closet
+Water.csv,Room_Type,Dining Room
+Water.csv,Room_Type,Entry/Entryway
+Water.csv,Room_Type,Family Room
+Water.csv,Room_Type,Garage
+Water.csv,Room_Type,Hallway
+Water.csv,Room_Type,Kitchen
+Water.csv,Room_Type,Laundry
+Water.csv,Room_Type,Living Room
+Water.csv,Room_Type,Mechanical
+Water.csv,Room_Type,Office
+Water.csv,Room_Type,Other
+Water.csv,Room_Type,Outbuilding / Addition
+Water.csv,Room_Type,Outside
+Water.csv,Usage,A few times per month
+Water.csv,Usage,A few times per week
+Water.csv,Usage,A few times per year
+Water.csv,Usage,A few times per year or less
+Water.csv,Usage,Daily / Almost Daily
+Window.csv,Frame_Body_Type,Aluminum
+Window.csv,Frame_Body_Type,Fiberglass
+Window.csv,Frame_Body_Type,"Fiberglass, interior wood clad"
+Window.csv,Frame_Body_Type,Other
+Window.csv,Frame_Body_Type,Vinyl
+Window.csv,Frame_Body_Type,Wood - bare
+Window.csv,Frame_Body_Type,Wood aluminum clad
+Window.csv,Frame_Body_Type,Wood fiberglass clad
+Window.csv,Glazing_Type,Double
+Window.csv,Glazing_Type,Other
+Window.csv,Glazing_Type,Single
+Window.csv,Glazing_Type,Triple
+Window.csv,Glazing_Type,Triple-thin
+Window.csv,Low_E_Coating,No
+Window.csv,Low_E_Coating,Yes
+Window.csv,Opening_Type,Awning
+Window.csv,Opening_Type,Casement
+Window.csv,Opening_Type,Double-hung
+Window.csv,Opening_Type,Fixed (picture)
+Window.csv,Opening_Type,Other
+Window.csv,Opening_Type,Single-hung
+Window.csv,Opening_Type,Slider
+Window.csv,Storm_Glazing_Type,Double
+Window.csv,Storm_Glazing_Type,Other
+Window.csv,Storm_Glazing_Type,Single
+Window.csv,Storm_Window_Present,No
+Window.csv,Storm_Window_Present,Yes - Exterior
+Window.csv,Storm_Window_Present,Yes - Interior
+Window.csv,True_Divided_Light,No
+Window.csv,True_Divided_Light,Yes
+Window.csv,Window_Dimensions_Are_Estimated,Estimated
+Window.csv,Window_Dimensions_Are_Estimated,Measured or Known
+Window.csv,Window_Direction,East
+Window.csv,Window_Direction,North
+Window.csv,Window_Direction,NorthEast
+Window.csv,Window_Direction,NorthWest
+Window.csv,Window_Direction,South
+Window.csv,Window_Direction,SouthEast
+Window.csv,Window_Direction,SouthWest
+Window.csv,Window_Direction,West
+Window.csv,Window_Has_Shades,No
+Window.csv,Window_Has_Shades,Yes
+Window.csv,Window_Shape,Circle
+Window.csv,Window_Shape,Half-circle
+Window.csv,Window_Shape,Hexagon
+Window.csv,Window_Shape,Octagon
+Window.csv,Window_Shape,Other
+Window.csv,Window_Shape,Rectangle / Square
+Window.csv,Window_Shape,Triangle
+MF_Building_Ceiling.csv,Type_of_Ceiling,Adiabatic
+MF_Building_Ceiling.csv,Type_of_Ceiling,Attic
+MF_Building_Ceiling.csv,Type_of_Ceiling,Other
+MF_Building_Ceiling.csv,Type_of_Ceiling,Roof Deck
+MF_Building_Ceiling.csv,Type_of_Ceiling,Sloped / Vaulted (no attic)
+MF_Building_Ceiling.csv,Data Collection Type,Partial/Remote Survey
+MF_Building_Ceiling.csv,Data Collection Type,Full Survey
+MF_Building_Construction.csv,Building_construction_type,Frame
+MF_Building_Construction.csv,Building_construction_type,Podium
+MF_Building_Construction.csv,Building_construction_type,Rigid frame (concrete or steel)
+MF_Building_Construction.csv,Building_construction_type,Solid masonry
+MF_Building_Construction.csv,Foundation_type,90% slab
+MF_Building_Construction.csv,Foundation_type,>90% crawl
+MF_Building_Construction.csv,Foundation_type,>90% heated basement
+MF_Building_Construction.csv,Foundation_type,>90% unheated basement
+MF_Building_Construction.csv,Foundation_type,Heated daylight basement Mixed basement and slab
+MF_Building_Construction.csv,Foundation_type,Mixed crawl and slab
+MF_Building_Construction.csv,Foundation_type,PT slab above nonresidential
+MF_Building_Construction.csv,Foundation_type,Parking/enclosed garage
+MF_Building_Construction.csv,Foundation_type,Parking/open
+MF_Building_Construction.csv,Type_of_frame,Concrete
+MF_Building_Construction.csv,Type_of_frame,Masonry
+MF_Building_Construction.csv,Type_of_frame,Other
+MF_Building_Construction.csv,Type_of_frame,Steel
+MF_Building_Construction.csv,Type_of_frame,Wood
+MF_Building_Construction.csv,Data Collection Type,Partial/Remote Survey
+MF_Building_Construction.csv,Data Collection Type,Full Survey
+MF_Building_HVAC.csv,COMMON AHU/RTU Cooling,No
+MF_Building_HVAC.csv,COMMON AHU/RTU Cooling,Yes
+MF_Building_HVAC.csv,COMMON AHU/RTU Heating,No
+MF_Building_HVAC.csv,COMMON AHU/RTU Heating,Yes
+MF_Building_HVAC.csv,COMMON Baseboard,No
+MF_Building_HVAC.csv,COMMON Baseboard,Yes
+MF_Building_HVAC.csv,COMMON Boiler,No
+MF_Building_HVAC.csv,COMMON Boiler,Yes
+MF_Building_HVAC.csv,COMMON Central AC,No
+MF_Building_HVAC.csv,COMMON Central AC,Yes
+MF_Building_HVAC.csv,COMMON Central Air Source Heat Pump,No
+MF_Building_HVAC.csv,COMMON Central Air Source Heat Pump,Yes
+MF_Building_HVAC.csv,COMMON Ductless Mini-split AC,No
+MF_Building_HVAC.csv,COMMON Ductless Mini-split AC,Yes
+MF_Building_HVAC.csv,COMMON Ductless Mini-split Heat Pump,No
+MF_Building_HVAC.csv,COMMON Ductless Mini-split Heat Pump,Yes
+MF_Building_HVAC.csv,COMMON Fireplace or Stove,No
+MF_Building_HVAC.csv,COMMON Fireplace or Stove,Yes
+MF_Building_HVAC.csv,COMMON Furnace,No
+MF_Building_HVAC.csv,COMMON Furnace,Yes
+MF_Building_HVAC.csv,COMMON MAU,No
+MF_Building_HVAC.csv,COMMON MAU,Yes
+MF_Building_HVAC.csv,"COMMON PTAC ""Packaged Terminal Air Conditioner""",No
+MF_Building_HVAC.csv,"COMMON PTAC ""Packaged Terminal Air Conditioner""",Yes
+MF_Building_HVAC.csv,"COMMON PTHP ""Packaged Terminal Heat Pump""",No
+MF_Building_HVAC.csv,"COMMON PTHP ""Packaged Terminal Heat Pump""",Yes
+MF_Building_HVAC.csv,COMMON Tower,No
+MF_Building_HVAC.csv,COMMON Tower,Yes
+MF_Building_HVAC.csv,COMMON Unit Heater,No
+MF_Building_HVAC.csv,COMMON Unit Heater,Yes
+MF_Building_HVAC.csv,COMMON Unknown Cooling,No
+MF_Building_HVAC.csv,COMMON Unknown Cooling,Yes
+MF_Building_HVAC.csv,COMMON Unknown Heating,No
+MF_Building_HVAC.csv,COMMON Unknown Heating,Yes
+MF_Building_HVAC.csv,COMMON Wall Heater,No
+MF_Building_HVAC.csv,COMMON Wall Heater,Yes
+MF_Building_HVAC.csv,COMMON Water Source Heat Pump,No
+MF_Building_HVAC.csv,COMMON Water Source Heat Pump,Yes
+MF_Building_HVAC.csv,Common Areas Cooled,No
+MF_Building_HVAC.csv,Common Areas Cooled,Yes
+MF_Building_HVAC.csv,Common Areas Heated,No
+MF_Building_HVAC.csv,Common Areas Heated,Yes
+MF_Building_HVAC.csv,Common Space has Evidence of Natural Gas Service,No
+MF_Building_HVAC.csv,Common Space has Evidence of Natural Gas Service,Yes
+MF_Building_HVAC.csv,Common Space has Evidence of Radiant Floor Heating,No
+MF_Building_HVAC.csv,Common Space has Evidence of Radiant Floor Heating,Yes
+MF_Building_HVAC.csv,Common Space has Radiators,No
+MF_Building_HVAC.csv,Common Space has Radiators,Yes
+MF_Building_HVAC.csv,Common Space has Registers,No
+MF_Building_HVAC.csv,Common Space has Registers,Yes
+MF_Building_HVAC.csv,Common and Tenant Cooling Likely the Same,No
+MF_Building_HVAC.csv,Common and Tenant Heating Likely the Same,No
+MF_Building_HVAC.csv,Common and Tenant Heating Likely the Same,Yes
+MF_Building_HVAC.csv,Cooling Visable in Common Areas,No
+MF_Building_HVAC.csv,Cooling Visable in Common Areas,Yes
+MF_Building_HVAC.csv,Heating Visable in Common Areas,No
+MF_Building_HVAC.csv,Heating Visable in Common Areas,Yes
+MF_Building_HVAC.csv,Remote Observation - AHUs or RTUs,No
+MF_Building_HVAC.csv,Remote Observation - AHUs or RTUs,Yes
+MF_Building_HVAC.csv,Remote Observation - Cooling Towers,No
+MF_Building_HVAC.csv,Remote Observation - Cooling Towers,Yes
+MF_Building_HVAC.csv,Remote Observation - Evidence of Radiant Floor,No
+MF_Building_HVAC.csv,Remote Observation - Evidence of Radiant Floor,Yes
+MF_Building_HVAC.csv,Remote Observation - Has Evidence of Natural Gas Service,No
+MF_Building_HVAC.csv,Remote Observation - Has Evidence of Natural Gas Service,Yes
+MF_Building_HVAC.csv,Remote Observation - Split Units on Roof,No
+MF_Building_HVAC.csv,Remote Observation - Split Units on Roof,Yes
+MF_Building_HVAC.csv,TENANT AHU/RTU Cooling,No
+MF_Building_HVAC.csv,TENANT AHU/RTU Cooling,Yes
+MF_Building_HVAC.csv,TENANT Baseboard,No
+MF_Building_HVAC.csv,TENANT Baseboard,Yes
+MF_Building_HVAC.csv,TENANT Boiler,No
+MF_Building_HVAC.csv,TENANT Boiler,Yes
+MF_Building_HVAC.csv,TENANT Central AC,No
+MF_Building_HVAC.csv,TENANT Central AC,Yes
+MF_Building_HVAC.csv,TENANT Central Air Source Heat Pump,No
+MF_Building_HVAC.csv,TENANT Central Air Source Heat Pump,Yes
+MF_Building_HVAC.csv,TENANT Ductless Mini-split Heat Pump,No
+MF_Building_HVAC.csv,TENANT Ductless Mini-split Heat Pump,Yes
+MF_Building_HVAC.csv,TENANT Fireplace or Stove,No
+MF_Building_HVAC.csv,TENANT Fireplace or Stove,Yes
+MF_Building_HVAC.csv,TENANT Furnace,No
+MF_Building_HVAC.csv,TENANT Furnace,Yes
+MF_Building_HVAC.csv,"TENANT PTAC ""Packaged Terminal Air Conditioner""",No
+MF_Building_HVAC.csv,"TENANT PTAC ""Packaged Terminal Air Conditioner""",Yes
+MF_Building_HVAC.csv,"TENANT PTHP ""Packaged Terminal Heat Pump""",No
+MF_Building_HVAC.csv,"TENANT PTHP ""Packaged Terminal Heat Pump""",Yes
+MF_Building_HVAC.csv,TENANT Portable AC,No
+MF_Building_HVAC.csv,TENANT Portable AC,Yes
+MF_Building_HVAC.csv,TENANT Portable Electric Heater,No
+MF_Building_HVAC.csv,TENANT Portable Electric Heater,Yes
+MF_Building_HVAC.csv,TENANT Portable Fossil Fuel Heater,No
+MF_Building_HVAC.csv,TENANT Portable Fossil Fuel Heater,Yes
+MF_Building_HVAC.csv,TENANT Portable Heat Pump,No
+MF_Building_HVAC.csv,TENANT Portable Heat Pump,Yes
+MF_Building_HVAC.csv,TENANT Through-Wall AC,No
+MF_Building_HVAC.csv,TENANT Through-Wall AC,Yes
+MF_Building_HVAC.csv,TENANT Through-Wall HP,No
+MF_Building_HVAC.csv,TENANT Through-Wall HP,Yes
+MF_Building_HVAC.csv,TENANT Tower,No
+MF_Building_HVAC.csv,TENANT Tower,Yes
+MF_Building_HVAC.csv,TENANT Unit Heater,No
+MF_Building_HVAC.csv,TENANT Unit Heater,Yes
+MF_Building_HVAC.csv,TENANT Unknown Cooling,No
+MF_Building_HVAC.csv,TENANT Unknown Heating,No
+MF_Building_HVAC.csv,TENANT Unknown Heating,Yes
+MF_Building_HVAC.csv,TENANT Wall Heater,No
+MF_Building_HVAC.csv,TENANT Wall Heater,Yes
+MF_Building_HVAC.csv,TENANT Water Source Heat Pump,No
+MF_Building_HVAC.csv,TENANT Water Source Heat Pump,Yes
+MF_Building_HVAC.csv,TENANT Window AC,No
+MF_Building_HVAC.csv,TENANT Window AC,Yes
+MF_Building_HVAC.csv,Tenant In-Unit HVAC Included,No
+MF_Building_HVAC.csv,Tenant In-Unit HVAC Included,Yes
+MF_Building_HVAC.csv,Tenant Space has Evidence of Natural Gas Service,No
+MF_Building_HVAC.csv,Tenant Space has Evidence of Natural Gas Service,Yes
+MF_Building_HVAC.csv,Tenant Space has Evidence of Radiant Floor Heating,No
+MF_Building_HVAC.csv,Tenant Space has Evidence of Radiant Floor Heating,Yes
+MF_Building_HVAC.csv,Tenant Space has Radiators,No
+MF_Building_HVAC.csv,Tenant Space has Radiators,Yes
+MF_Building_HVAC.csv,Tenant Space has Registers,No
+MF_Building_HVAC.csv,Tenant Space has Registers,Yes
+MF_Building_HVAC.csv,Tenant Units Cooled,No
+MF_Building_HVAC.csv,Tenant Units Cooled,Yes
+MF_Building_HVAC.csv,Tenant Units Have Cooling Equipment,No
+MF_Building_HVAC.csv,Tenant Units Have Cooling Equipment,Yes
+MF_Building_HVAC.csv,Tenant Units Have Heating Equipment,No
+MF_Building_HVAC.csv,Tenant Units Have Heating Equipment,Yes
+MF_Building_HVAC.csv,Data Collection Type,Partial/Remote Survey
+MF_Building_HVAC.csv,Data Collection Type,Full Survey
+MF_Building_Site_Detail.csv,Building_Category,Apartment Building (3 or fewer floors)
+MF_Building_Site_Detail.csv,Building_Category,Apartment Building (4 to 6 floors)
+MF_Building_Site_Detail.csv,Building_Category,Apartment Building (More than 6 floors)
+MF_Building_Site_Detail.csv,Building_Strata,High-Rise Bldg
+MF_Building_Site_Detail.csv,Building_Strata,Idaho Low-Rise Bldg
+MF_Building_Site_Detail.csv,Building_Strata,Mid-Rise Bldg
+MF_Building_Site_Detail.csv,Building_Strata,Montana Low-Rise Bldg
+MF_Building_Site_Detail.csv,Building_Strata,Oregon Low-Rise Bldg
+MF_Building_Site_Detail.csv,Building_Strata,Washington Low-Rise Bldg
+MF_Building_Site_Detail.csv,Building_Type,Multi-family Residence
+MF_Building_Site_Detail.csv,Building_area_(sq_ft)_is_estimated,Estimated
+MF_Building_Site_Detail.csv,Building_area_(sq_ft)_is_estimated,Measured / Known
+MF_Building_Site_Detail.csv,Building_vintage_is_estimated,Estimated
+MF_Building_Site_Detail.csv,Building_vintage_is_estimated,Measured / Known
+MF_Building_Site_Detail.csv,Commercial_space_present,No
+MF_Building_Site_Detail.csv,Commercial_space_present,Yes
+MF_Building_Site_Detail.csv,Electric_Utility,AVISTA CORPORATION
+MF_Building_Site_Detail.csv,Electric_Utility,CANBY UTILITY BOARD
+MF_Building_Site_Detail.csv,Electric_Utility,CONSUMERS POWER
+MF_Building_Site_Detail.csv,Electric_Utility,EUGENE WATER AND ELECTRIC BOARD
+MF_Building_Site_Detail.csv,Electric_Utility,FLATHEAD ELECTRIC COOPERATIVE
+MF_Building_Site_Detail.csv,Electric_Utility,IDAHO POWER COMPANY
+MF_Building_Site_Detail.csv,Electric_Utility,NORTHWESTERN ENERGY
+MF_Building_Site_Detail.csv,Electric_Utility,PACIFICORP (PACIFIC POWER)
+MF_Building_Site_Detail.csv,Electric_Utility,PORTLAND GENERAL ELECTRIC COMPANY
+MF_Building_Site_Detail.csv,Electric_Utility,PUBLIC UTILITY DISTRICT NO. 1 OF SNOHOMISH COUNTY
+MF_Building_Site_Detail.csv,Electric_Utility,PUGET SOUND ENERGY
+MF_Building_Site_Detail.csv,Electric_Utility,ROCKY MOUNTAIN POWER
+MF_Building_Site_Detail.csv,Electric_Utility,SEATTLE CITY LIGHT
+MF_Building_Site_Detail.csv,Electric_Utility,TACOMA POWER
+MF_Building_Site_Detail.csv,Electric_Utility,THE CITY OF MCMINNVILLE
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_1,Bullet
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_1,Decorative
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_1,Globe
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_1,Integrated
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_1,Other
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_1,Reflector / Flood
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_1,Standard A Lamp
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_1,Straight Tube
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_1,T-12
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_1,T-5
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_1,T-8
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_1,Twist
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_2,Bullet
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_2,Globe
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_2,Integrated
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_2,Other
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_2,Reflector / Flood
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_2,Standard A Lamp
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_2,Straight Tube
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_2,T-8
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_3,Bullet
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_3,Decorative
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_3,Integrated
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_3,Reflector / Flood
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_3,Standard A Lamp
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_3,T-8
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_3,Twist
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_4,Other
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_4,Reflector / Flood
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_4,Standard A Lamp
+MF_Building_Site_Detail.csv,Exterior_Lamp_Style_4,Twist
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_1,CFL
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_1,Fluorescent
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_1,Halogen
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_1,High Intensity Discharge
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_1,Incandescent
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_1,LED
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_2,CFL
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_2,Fluorescent
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_2,Halide
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_2,Halogen
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_2,High Intensity Discharge
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_2,Incandescent
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_2,LED
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_2,Other
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_3,CFL
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_3,Fluorescent
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_3,High Intensity Discharge
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_3,LED
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_4,CFL
+MF_Building_Site_Detail.csv,Exterior_Lamp_Type_4,LED
+MF_Building_Site_Detail.csv,Gas_Utility,AVISTA
+MF_Building_Site_Detail.csv,Gas_Utility,INTERMOUNTAIN GAS
+MF_Building_Site_Detail.csv,Gas_Utility,MONTANA DOKOTA GAS
+MF_Building_Site_Detail.csv,Gas_Utility,NORTHWESTERN
+MF_Building_Site_Detail.csv,Gas_Utility,NW NATURAL GAS
+MF_Building_Site_Detail.csv,Gas_Utility,PUGET SOUND ENERGY
+MF_Building_Site_Detail.csv,Gym_Present,No
+MF_Building_Site_Detail.csv,Gym_Present,Yes
+MF_Building_Site_Detail.csv,Height_Class,High-Rise (7+)
+MF_Building_Site_Detail.csv,Height_Class,Low-Rise (1-3)
+MF_Building_Site_Detail.csv,Height_Class,Mid-Rise (4-6)
+MF_Building_Site_Detail.csv,Hot_Tub_Present,No
+MF_Building_Site_Detail.csv,Hot_Tub_Present,Yes
+MF_Building_Site_Detail.csv,Indoor_Pool_Present,No
+MF_Building_Site_Detail.csv,Indoor_Pool_Present,Yes
+MF_Building_Site_Detail.csv,Laundry_Room_Present,No
+MF_Building_Site_Detail.csv,Laundry_Room_Present,Yes
+MF_Building_Site_Detail.csv,Lighted_exterior,No
+MF_Building_Site_Detail.csv,Lighted_exterior,Yes
+MF_Building_Site_Detail.csv,Lighted_parking,No
+MF_Building_Site_Detail.csv,Lighted_parking,Yes
+MF_Building_Site_Detail.csv,Outdoor_Pool_Present,No
+MF_Building_Site_Detail.csv,Outdoor_Pool_Present,Yes
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_1,Bullet
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_1,Circline
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_1,Decorative
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_1,Integrated
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_1,Other
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_1,Reflector / Flood
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_1,Standard A Lamp
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_1,Straight Tube
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_1,T-5
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_1,T-8
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_1,Twist
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_2,Integrated
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_2,Reflector / Flood
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_2,Standard A Lamp
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_2,T-8
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_3,Integrated
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_3,Standard A Lamp
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_3,T-12
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_3,T-8
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_4,Straight Tube
+MF_Building_Site_Detail.csv,Parking_Lamp_Style_5,T-12
+MF_Building_Site_Detail.csv,Parking_Lamp_Type_1,CFL
+MF_Building_Site_Detail.csv,Parking_Lamp_Type_1,Fluorescent
+MF_Building_Site_Detail.csv,Parking_Lamp_Type_1,Halogen
+MF_Building_Site_Detail.csv,Parking_Lamp_Type_1,High Intensity Discharge
+MF_Building_Site_Detail.csv,Parking_Lamp_Type_1,Incandescent
+MF_Building_Site_Detail.csv,Parking_Lamp_Type_1,LED
+MF_Building_Site_Detail.csv,Parking_Lamp_Type_2,Incandescent
+MF_Building_Site_Detail.csv,Parking_Lamp_Type_2,LED
+MF_Building_Site_Detail.csv,Parking_Lamp_Type_3,Fluorescent
+MF_Building_Site_Detail.csv,Parking_Lamp_Type_3,LED
+MF_Building_Site_Detail.csv,Parking_Lamp_Type_4,LED
+MF_Building_Site_Detail.csv,Parking_Lamp_Type_5,Fluorescent
+MF_Building_Site_Detail.csv,Parking_provided,No
+MF_Building_Site_Detail.csv,Parking_provided,Yes
+MF_Building_Site_Detail.csv,Part_of_MF_complex,No
+MF_Building_Site_Detail.csv,Part_of_MF_complex,Yes
+MF_Building_Site_Detail.csv,Power_generation_types,Solar / PV System
+MF_Building_Site_Detail.csv,Power_generation_types,Fuel Cell System
+MF_Building_Site_Detail.csv,Power_generation_types,Micro Hydro System
+MF_Building_Site_Detail.csv,Power_generation_types,Solar Thermal System (hot water)
+MF_Building_Site_Detail.csv,Power_generation_types,Large Gas Turbine
+MF_Building_Site_Detail.csv,Power_generation_types,Micro Gas Turbine
+MF_Building_Site_Detail.csv,Power_generation_types,Wind Turbine
+MF_Building_Site_Detail.csv,Power_generation_types,Fossil Fuel generator - NOT emergency use ONLY
+MF_Building_Site_Detail.csv,Power_generation_types,Other
+MF_Building_Site_Detail.csv,Presence_of_power_generation,No
+MF_Building_Site_Detail.csv,Presence_of_power_generation,Yes
+MF_Building_Site_Detail.csv,State,ID
+MF_Building_Site_Detail.csv,State,MT
+MF_Building_Site_Detail.csv,State,OR
+MF_Building_Site_Detail.csv,State,WA
+MF_Building_Site_Detail.csv,Tenant_units_in_building_is_estimated,Estimated
+MF_Building_Site_Detail.csv,Tenant_units_in_building_is_estimated,Measured / Known
+MF_Building_Site_Detail.csv,Type_of_parking,Parking Lot
+MF_Building_Site_Detail.csv,Type_of_parking,Covered Lot
+MF_Building_Site_Detail.csv,Type_of_parking,Open Garage
+MF_Building_Site_Detail.csv,Type_of_parking,Closed Garage
+MF_Building_Site_Detail.csv,Data Collection Type,Partial/Remote Survey
+MF_Building_Site_Detail.csv,Data Collection Type,Full Survey
+MF_Building_Walls.csv,Wall_Sub_Type,Brick
+MF_Building_Walls.csv,Wall_Sub_Type,Concrete Block
+MF_Building_Walls.csv,Wall_Sub_Type,Other
+MF_Building_Walls.csv,Wall_Sub_Type,Poured Concrete
+MF_Building_Walls.csv,Wall_Sub_Type,Stone
+MF_Building_Walls.csv,Wall_Sub_Type,Wall to other living space
+MF_Building_Walls.csv,Wall_Type,Adiabatic
+MF_Building_Walls.csv,Wall_Type,Framed 2x4
+MF_Building_Walls.csv,Wall_Type,Framed 2x6
+MF_Building_Walls.csv,Wall_Type,ICF
+MF_Building_Walls.csv,Wall_Type,Masonry
+MF_Building_Walls.csv,Wall_Type,Masonry (Basement)
+MF_Building_Walls.csv,Wall_Type,Other
+MF_Building_Walls.csv,Wall_Type,Structural Steel
+MF_Building_Walls.csv,Data Collection Type,Partial/Remote Survey
+MF_Building_Walls.csv,Data Collection Type,Full Survey
+MF_Building_WaterHeating.csv,COMMON Converter/Indirect Water Heater,No
+MF_Building_WaterHeating.csv,COMMON Converter/Indirect Water Heater,Yes
+MF_Building_WaterHeating.csv,COMMON Electric Resistance Boiler,No
+MF_Building_WaterHeating.csv,COMMON Electric Resistance Boiler,Yes
+MF_Building_WaterHeating.csv,COMMON Electric Resistance Instantaneous,No
+MF_Building_WaterHeating.csv,COMMON Electric Resistance Instantaneous,Yes
+MF_Building_WaterHeating.csv,COMMON Electric Resistance Storage,No
+MF_Building_WaterHeating.csv,COMMON Electric Resistance Storage,Yes
+MF_Building_WaterHeating.csv,COMMON Fossil Fuel Condensing Boiler,No
+MF_Building_WaterHeating.csv,COMMON Fossil Fuel Condensing Boiler,Yes
+MF_Building_WaterHeating.csv,COMMON Fossil Fuel Condensing Instantaneous,No
+MF_Building_WaterHeating.csv,COMMON Fossil Fuel Condensing Instantaneous,Yes
+MF_Building_WaterHeating.csv,COMMON Fossil Fuel Condensing Storage,No
+MF_Building_WaterHeating.csv,COMMON Fossil Fuel Condensing Storage,Yes
+MF_Building_WaterHeating.csv,COMMON Fossil Fuel Non-Condensing Boiler,No
+MF_Building_WaterHeating.csv,COMMON Fossil Fuel Non-Condensing Boiler,Yes
+MF_Building_WaterHeating.csv,COMMON Fossil Fuel Non-Condensing Storage,No
+MF_Building_WaterHeating.csv,COMMON Fossil Fuel Non-Condensing Storage,Yes
+MF_Building_WaterHeating.csv,COMMON Unknown Boiler,No
+MF_Building_WaterHeating.csv,COMMON Unknown Boiler,Yes
+MF_Building_WaterHeating.csv,COMMON Unknown Storage,No
+MF_Building_WaterHeating.csv,COMMON Unknown Storage,Yes
+MF_Building_WaterHeating.csv,COMMON Unknown Water Heating,No
+MF_Building_WaterHeating.csv,COMMON Unknown Water Heating,Yes
+MF_Building_WaterHeating.csv,Common Areas Have Hot Water,No
+MF_Building_WaterHeating.csv,Common Areas Have Hot Water,Yes
+MF_Building_WaterHeating.csv,Common Space has Evidence of Natural Gas Service,No
+MF_Building_WaterHeating.csv,Common Space has Evidence of Natural Gas Service,Yes
+MF_Building_WaterHeating.csv,Common Space has Evidence of Radiant Floor Heating,No
+MF_Building_WaterHeating.csv,Common Space has Evidence of Radiant Floor Heating,Yes
+MF_Building_WaterHeating.csv,Common Space has Radiators,No
+MF_Building_WaterHeating.csv,Common Space has Radiators,Yes
+MF_Building_WaterHeating.csv,Hot Water for Common Bathrooms,No
+MF_Building_WaterHeating.csv,Hot Water for Common Bathrooms,Yes
+MF_Building_WaterHeating.csv,Hot Water for Common Kitchens,No
+MF_Building_WaterHeating.csv,Hot Water for Common Kitchens,Yes
+MF_Building_WaterHeating.csv,Hot Water for Common Laundry,No
+MF_Building_WaterHeating.csv,Hot Water for Common Laundry,Yes
+MF_Building_WaterHeating.csv,Remote Observation - Evidence of Radiant Floor,No
+MF_Building_WaterHeating.csv,Remote Observation - Evidence of Radiant Floor,Yes
+MF_Building_WaterHeating.csv,Remote Observation - Has Evidence of Natural Gas Service,No
+MF_Building_WaterHeating.csv,Remote Observation - Has Evidence of Natural Gas Service,Yes
+MF_Building_WaterHeating.csv,TENANT Converter/Indirect Water Heater,No
+MF_Building_WaterHeating.csv,TENANT Converter/Indirect Water Heater,Yes
+MF_Building_WaterHeating.csv,TENANT Electric Resistance Boiler,No
+MF_Building_WaterHeating.csv,TENANT Electric Resistance Boiler,Yes
+MF_Building_WaterHeating.csv,TENANT Electric Resistance Instantaneous,No
+MF_Building_WaterHeating.csv,TENANT Electric Resistance Instantaneous,Yes
+MF_Building_WaterHeating.csv,TENANT Electric Resistance Storage,No
+MF_Building_WaterHeating.csv,TENANT Electric Resistance Storage,Yes
+MF_Building_WaterHeating.csv,TENANT Fossil Fuel Condensing Boiler,No
+MF_Building_WaterHeating.csv,TENANT Fossil Fuel Condensing Boiler,Yes
+MF_Building_WaterHeating.csv,TENANT Fossil Fuel Condensing Instantaneous,No
+MF_Building_WaterHeating.csv,TENANT Fossil Fuel Condensing Instantaneous,Yes
+MF_Building_WaterHeating.csv,TENANT Fossil Fuel Condensing Storage,No
+MF_Building_WaterHeating.csv,TENANT Fossil Fuel Condensing Storage,Yes
+MF_Building_WaterHeating.csv,TENANT Fossil Fuel Non-Condensing Boiler,No
+MF_Building_WaterHeating.csv,TENANT Fossil Fuel Non-Condensing Boiler,Yes
+MF_Building_WaterHeating.csv,TENANT Fossil Fuel Non-Condensing Storage,No
+MF_Building_WaterHeating.csv,TENANT Fossil Fuel Non-Condensing Storage,Yes
+MF_Building_WaterHeating.csv,TENANT Unknown Boiler,No
+MF_Building_WaterHeating.csv,TENANT Unknown Boiler,Yes
+MF_Building_WaterHeating.csv,TENANT Unknown Storage,No
+MF_Building_WaterHeating.csv,TENANT Unknown Storage,Yes
+MF_Building_WaterHeating.csv,TENANT Unknown Water Heating,No
+MF_Building_WaterHeating.csv,TENANT Unknown Water Heating,Yes
+MF_Building_WaterHeating.csv,Tenant In-Unit Water Heater Included,No
+MF_Building_WaterHeating.csv,Tenant In-Unit Water Heater Included,Yes
+MF_Building_WaterHeating.csv,Tenant Space has Evidence of Natural Gas Service,No
+MF_Building_WaterHeating.csv,Tenant Space has Evidence of Natural Gas Service,Yes
+MF_Building_WaterHeating.csv,Tenant Space has Evidence of Radiant Floor Heating,No
+MF_Building_WaterHeating.csv,Tenant Space has Evidence of Radiant Floor Heating,Yes
+MF_Building_WaterHeating.csv,Tenant Space has Radiators,No
+MF_Building_WaterHeating.csv,Tenant Space has Radiators,Yes
+MF_Building_WaterHeating.csv,Tenant Units Have Water Heating Equipment,No
+MF_Building_WaterHeating.csv,Tenant Units Have Water Heating Equipment,Yes
+MF_Building_WaterHeating.csv,Data Collection Type,Partial/Remote Survey
+MF_Building_WaterHeating.csv,Data Collection Type,Full Survey
+MF_Building_Windows.csv,Window_Type,Curtain Wall
+MF_Building_Windows.csv,Window_Type,Glass Curtain
+MF_Building_Windows.csv,Window_Type,Punched Opening
+MF_Building_Windows.csv,Window_Type,Store Front
+MF_Building_Windows.csv,Data Collection Type,Partial/Remote Survey
+MF_Building_Windows.csv,Data Collection Type,Full Survey

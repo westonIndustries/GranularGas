@@ -1,0 +1,1046 @@
+﻿"SiteID","RoomID","ApplianceID","Make","Model","Vintage","Energy_Star","Audio_Wifi_Enabled","Audio_Voice_Assistant","Audio_Connected_to_TV","Contains_Subwoofer","Does_Subwoofer_have_indicator_light_or_warm_to_touch"
+"SITE_1","ROOM_28473","APPL_35695","Samsung","WAM1500","2016","Unknown","Yes","Unknown","No","No",NA
+"SITE_1","ROOM_44685","APPL_54759","Polk Audio","SIGNA S2 SOUND BAR","Unknown","Yes","Unknown","Unknown","Yes","No",NA
+"SITE_1001","ROOM_13091","APPL_134492","Vizio","#10602142241","Unknown","Yes","Yes","Unknown","Yes","No",NA
+"SITE_1002","ROOM_15852","APPL_95963","Yamaha","Unknown","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_1003","ROOM_31860","APPL_60688","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","Unknown","Unknown"
+"SITE_1003","ROOM_43906","APPL_97219","Pioneer","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_1003","ROOM_4816","APPL_151832","Pioneer","TANNOY","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_1003","ROOM_23950","APPL_133499","Klipsch","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_1003","ROOM_16109","APPL_101335","Klipsch","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_1003","ROOM_20068","APPL_29593","Pioneer","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_1007","ROOM_9972","APPL_69230","Vizio","V51X-J6","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_101","ROOM_40893","APPL_112433","Bose","47788-WMS","Unknown","No","No","No","No","No",NA
+"SITE_1014","ROOM_27296","APPL_61360","Denon","PMA-880R","Unknown","Unknown","No","No","No","Yes","No"
+"SITE_1014","ROOM_27296","APPL_43712","Polk Audio","Unknown","Unknown","No","Unknown","Unknown","Yes","No",NA
+"SITE_1018","ROOM_3755","APPL_53915","Samsung","HW-A430","Unknown","Yes","No","No","Yes","No",NA
+"SITE_1022","ROOM_42561","APPL_78240","Vizio","SB2020N-G6","Unknown","Yes","No","No","Yes","No",NA
+"SITE_1023","ROOM_20433","APPL_148948","Bose","#418775","Unknown","No","No","No","Yes","No",NA
+"SITE_1024","ROOM_8232","APPL_158401","Sony","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1025","ROOM_23312","APPL_150766","Amazon","Unknown","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1025","ROOM_23312","APPL_139923","Sony","Unknown","Unknown","No","Unknown","No","Yes","Yes","Yes"
+"SITE_1025","ROOM_9421","APPL_88274","Amazon","ECHO DOT","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1027","ROOM_25549","APPL_21651","Yamaha","ATS-1080","Unknown","No","No","No","Yes","No",NA
+"SITE_1028","ROOM_43990","APPL_17075","LG","Unknown","Unknown","No","No","No","No","Yes","No"
+"SITE_1028","ROOM_27545","APPL_93724","LG","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_1028","ROOM_7492","APPL_1128","Hisense","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1032","ROOM_11630","APPL_141379","Vizio","SB2920-C6","Unknown","Yes","No","No","Yes","No",NA
+"SITE_1033","ROOM_28195","APPL_106224","Samsung","HE-JM45C","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_1036","ROOM_8344","APPL_134018","Proficient","PROTEGE FS8","Unknown","No","Unknown","No","Unknown","No",NA
+"SITE_1038","ROOM_38879","APPL_53204","Polk Audio","DSB1","Unknown","Unknown","Unknown","Unknown","Yes","Yes","No"
+"SITE_1039","ROOM_618","APPL_96087","Sony","Unknown","Unknown","Yes","Unknown","No","Yes","Yes","Unknown"
+"SITE_1043","ROOM_35869","APPL_56663","Sonos","S19","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1043","ROOM_20225","APPL_17192","Sonos","S14","Unknown","No","No","No","Yes","No",NA
+"SITE_1049","ROOM_38376","APPL_98479","Vizio","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","Yes","No"
+"SITE_105","ROOM_11614","APPL_6232","Altec-Lansing","ATP3","Unknown","No","No","No","No","No",NA
+"SITE_1050","ROOM_7369","APPL_119174","Polk Audio","DBRX1 SOUND BAR","Unknown","No","Unknown","No","Yes","Yes","No"
+"SITE_1052","ROOM_20232","APPL_72880","Samsung","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","Yes","Yes"
+"SITE_1054","ROOM_44816","APPL_134729","Yamaha","YAS-108","Unknown","No","Unknown","Unknown","Yes","No",NA
+"SITE_1058","ROOM_3289","APPL_33321","Onkyo","SKC-550C","Unknown","No","No","No","Yes","Yes","No"
+"SITE_106","ROOM_36159","APPL_103988","Polk Audio","DSS1","Unknown","No","No","No","Yes","No",NA
+"SITE_106","ROOM_3716","APPL_22595","JVC","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_1060","ROOM_43545","APPL_10064","Amazon","RS03QR","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1061","ROOM_15995","APPL_87017","Polk Audio","DSB1 SOUND BAR","Unknown","Yes","No","No","Yes","Yes","Yes"
+"SITE_1062","ROOM_28148","APPL_79336","Sony","Unknown","Unknown","Unknown","No","No","Yes","Yes","Yes"
+"SITE_1068","ROOM_26117","APPL_73670","Amazon","ALEXA","Unknown","Unknown","Yes","Yes","Yes","No",NA
+"SITE_1069","ROOM_43298","APPL_165890","Samsung","HW-KM45","2017","Yes","No","No","Yes","Yes","Yes"
+"SITE_1070","ROOM_16173","APPL_134176","JBL","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_1072","ROOM_24609","APPL_158566","Amazon","Unknown","Unknown","No","Yes","Yes","Unknown","No",NA
+"SITE_1072","ROOM_36703","APPL_150275","Amazon","Unknown","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1072","ROOM_24609","APPL_89400","TaoTronics","Unknown","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_1074","ROOM_22727","APPL_74366","ZVOX","#320","Unknown","No","No","No","Yes","No",NA
+"SITE_1075","ROOM_31353","APPL_68392","Amazon","36EBT3","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1079","ROOM_46315","APPL_40485","Vizio","V21X-J8","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1081","ROOM_23335","APPL_160425","Vizio","SB2020N-J6","Unknown","No","No","No","Yes","No",NA
+"SITE_1086","ROOM_20698","APPL_35080","Vizio","SB36512-F6","Unknown","Yes","Yes","Yes","Yes","Yes","No"
+"SITE_1087","ROOM_17778","APPL_92009","Samsung","HW-T650","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_1091","ROOM_4106","APPL_30885","Vizio","SB4051-D","Unknown","No","Unknown","No","Yes","Yes","No"
+"SITE_1093","ROOM_3264","APPL_137944","Bose","VCS-10","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_1093","ROOM_37121","APPL_84019","TCL","Unknown","Unknown","Yes","No","No","Yes","No",NA
+"SITE_1094","ROOM_23930","APPL_11948","Monster power","HTS 1650","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1098","ROOM_662","APPL_75446","Vizio","#SB3621N-E8","Unknown","No","No","No","Yes","No",NA
+"SITE_11","ROOM_45221","APPL_9818","Altec-Lansing","VS2120","Unknown","No","No","No","Yes","No",NA
+"SITE_11","ROOM_19267","APPL_1682","Samsung","HW-N450","Unknown","No","Yes","No","Yes","No",NA
+"SITE_11","ROOM_43134","APPL_111489","Bose","Unknown","Unknown","No","Yes","No","No","Yes","No"
+"SITE_11","ROOM_24523","APPL_90658","Bose","418775D","Unknown","No","No","No","Yes","No",NA
+"SITE_11","ROOM_24523","APPL_163242","JVC","HR-XVC26U","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_1104","ROOM_17956","APPL_29009","Polk Audio","DBRX1","2021","No","No","Yes","Yes","Yes","No"
+"SITE_1105","ROOM_38966","APPL_128037","Bose","SOLO SOUNDBAR II","Unknown","No","No","No","Yes","No",NA
+"SITE_1105","ROOM_3662","APPL_76677","Bose","#418775","Unknown","No","No","No","Yes","No",NA
+"SITE_1108","ROOM_45782","APPL_116742","LG","SL3D","2019","No","Yes","No","Yes","Yes","Yes"
+"SITE_1110","ROOM_38229","APPL_11282","Sony","STR-K850P","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1111","ROOM_24896","APPL_17997","Samsung","HW-MM55C","2018","Yes","No","No","Yes","Yes","No"
+"SITE_1115","ROOM_46183","APPL_38697","Vizio","Unknown","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_1115","ROOM_30765","APPL_109515","Sony","Unknown","Unknown","Unknown","No","No","Yes","Yes","No"
+"SITE_1116","ROOM_23638","APPL_38142","Unknown","Unknown","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_1117","ROOM_11908","APPL_159296","Bose","SOUNDTOUCH 300 SOUNDBAR","Unknown","No","Yes","No","Yes","Yes","No"
+"SITE_1121","ROOM_24511","APPL_71498","Amazon","Unknown","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_1121","ROOM_11003","APPL_14734","Samsung","Unknown","Unknown","Unknown","No","Unknown","Yes","Yes","No"
+"SITE_1121","ROOM_11003","APPL_99034","Amazon","Unknown","Unknown","Unknown","Yes","Yes","Unknown","No",NA
+"SITE_1125","ROOM_3448","APPL_40490","Samsung","HW-D450/ZA","Unknown","No","Yes","Unknown","Yes","No",NA
+"SITE_1126","ROOM_26933","APPL_91512","Bose","414642SB","Unknown","No","Yes","No","Yes","Yes","No"
+"SITE_1128","ROOM_21713","APPL_65531","Samsung","HW-HM45C","Unknown","Yes","No","No","Yes","Yes","Yes"
+"SITE_1128","ROOM_10601","APPL_98038","Bose","#418775","Unknown","No","No","No","No","No",NA
+"SITE_1129","ROOM_2313","APPL_41054","JBL","Unknown","Unknown","No","Yes","Unknown","Yes","Yes","No"
+"SITE_113","ROOM_33900","APPL_16642","Vizio","Unknown","Unknown","Yes","Yes","No","Yes","No",NA
+"SITE_1134","ROOM_39636","APPL_95283","Amazon","ECHO DOT","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1135","ROOM_39067","APPL_97847","Vizio","SB3821-C6","Unknown","Yes","No","No","Yes","Yes","No"
+"SITE_1137","ROOM_9973","APPL_168046","Vizio","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_1138","ROOM_67","APPL_99240","Samsung","HW-HM45C","2015","Yes","No","No","Yes","No",NA
+"SITE_114","ROOM_32205","APPL_141426","Yamaha","RX-V293","Unknown","No","No","No","Yes","No",NA
+"SITE_1141","ROOM_12427","APPL_64756","Polk Audio","SIGNATURE S35","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1146","ROOM_2934","APPL_10232","Sony","SA-RT5","2015","No","No","No","Yes","No",NA
+"SITE_1147","ROOM_16066","APPL_58191","Polk Audio","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_1148","ROOM_22019","APPL_100276","Samsung","HW-T510","2020","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_1153","ROOM_45573","APPL_119598","Bose","#418775","Unknown","No","No","No","Yes","No",NA
+"SITE_1155","ROOM_14873","APPL_135818","RCA","RTD317W","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1156","ROOM_39102","APPL_59425","Samsung","Unknown","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_1156","ROOM_3620","APPL_129517","Amazon","Unknown","Unknown","Unknown","Yes","Yes","Yes","No",NA
+"SITE_1158","ROOM_37214","APPL_143403","Yamaha","RX-V663","Unknown","No","No","No","No","Yes","No"
+"SITE_1171","ROOM_36451","APPL_43866","LG","NB3530A","Unknown","No","No","No","Yes","No",NA
+"SITE_1178","ROOM_28727","APPL_141933","JBL","CINEMA SB450","Unknown","No","Yes","No","Yes","Yes","No"
+"SITE_118","ROOM_2619","APPL_168066","Bose","Unknown","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_1181","ROOM_19314","APPL_172096","Bose","#418775","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_1186","ROOM_17123","APPL_172732","Vizio","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","Yes","No"
+"SITE_1189","ROOM_31591","APPL_72497","Vizio","VSB207","Unknown","Unknown","Yes","Unknown","Yes","No",NA
+"SITE_1189","ROOM_27123","APPL_129882","Vizio","S3821W-C0","Unknown","Yes","No","No","Yes","Yes","No"
+"SITE_119","ROOM_33943","APPL_121321","Amazon","Unknown","Unknown","No","Yes","Yes","No","No",NA
+"SITE_119","ROOM_9024","APPL_131731","Amazon","Unknown","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1191","ROOM_34867","APPL_57862","Bose","#418775","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_1195","ROOM_8598","APPL_31085","Yamaha","ATS-1070","Unknown","No","No","No","Yes","No",NA
+"SITE_1196","ROOM_22256","APPL_48922","Sony","SS-T$55","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1199","ROOM_10058","APPL_132249","Amazon","C7H6N3","Unknown","No","Yes","Yes","No","No",NA
+"SITE_12","ROOM_24675","APPL_76700","Sonos","S38","Unknown","No","No","No","No","No",NA
+"SITE_12","ROOM_33601","APPL_165826","Sonos","PLAY:1","Unknown","No","No","No","No","No",NA
+"SITE_12","ROOM_29721","APPL_109993","LG","SJ9","Unknown","No","No","No","Yes","Yes","No"
+"SITE_12","ROOM_29086","APPL_61706","Acoustic Authority","Unknown","Unknown","No","No","No","No","Yes","No"
+"SITE_12","ROOM_8911","APPL_123892","Sonos","PLAY:1","Unknown","No","No","No","No","No",NA
+"SITE_1202","ROOM_28406","APPL_105451","Klipsch","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1206","ROOM_27438","APPL_133226","Unknown","Unknown","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_1207","ROOM_39259","APPL_115087","Samsung","HW-M450","2017","Yes","No","No","Yes","No",NA
+"SITE_1210","ROOM_46293","APPL_5343","Bose","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_1216","ROOM_21175","APPL_16091","Amazon","H23K37","Unknown","No","Yes","Yes","Unknown","No",NA
+"SITE_1216","ROOM_12836","APPL_140267","LG","Unknown","Unknown","No","Yes","Unknown","Yes","Yes","No"
+"SITE_1216","ROOM_6514","APPL_71949","Amazon","B7W644","Unknown","No","Yes","Yes","Unknown","No",NA
+"SITE_1223","ROOM_15453","APPL_73410","Vizio","#SB2820N-E0","Unknown","Yes","Unknown","Unknown","Yes","No",NA
+"SITE_1224","ROOM_30122","APPL_28505","Vizio","SB2020N-G6","Unknown","Yes","No","No","Yes","No",NA
+"SITE_1224","ROOM_46772","APPL_150771","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_1226","ROOM_15576","APPL_158020","Audio Vizio","S451201WB4","Unknown","Unknown","Yes","Unknown","Yes","Yes","No"
+"SITE_1229","ROOM_5114","APPL_74099","Samsung","HW-KM57C/ZA","2017","Yes","Yes","Unknown","Yes","No",NA
+"SITE_1236","ROOM_5338","APPL_61239","Sony","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1238","ROOM_1924","APPL_78788","RCA","Unknown","Unknown","Unknown","No","No","No","No",NA
+"SITE_124","ROOM_26639","APPL_86088","Bose","#418775","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_1241","ROOM_20100","APPL_126599","LG","909HZBG425053","Unknown","No","No","No","Yes","No",NA
+"SITE_1241","ROOM_20100","APPL_161962","Google","Unknown","Unknown","No","Yes","Yes","Unknown","No",NA
+"SITE_1244","ROOM_33901","APPL_49149","Polk Audio","ASSY SB5500","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1244","ROOM_37438","APPL_71387","Samsung","HW-HM45C","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_1245","ROOM_25834","APPL_60894","Sony","Unknown","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_1245","ROOM_4934","APPL_64053","Samsung","HW-T510","Unknown","No","No","No","Yes","No",NA
+"SITE_1246","ROOM_21599","APPL_147875","Vizio","V21-H8","Unknown","Unknown","Unknown","Unknown","Yes","Yes","No"
+"SITE_1253","ROOM_7026","APPL_131384","Sonos","ARC","Unknown","No","Yes","Yes","Yes","No",NA
+"SITE_1254","ROOM_27853","APPL_166995","LG","SNC75","2021","No","Yes","Yes","Yes","Yes","No"
+"SITE_1256","ROOM_34218","APPL_99759","Sonos","Unknown","Unknown","No","Unknown","Yes","No","Unknown","Unknown"
+"SITE_1256","ROOM_17671","APPL_22913","Unknown","Unknown","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_1258","ROOM_37824","APPL_20686","Yamaha","DVR620KU","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1259","ROOM_8313","APPL_81241","Samsung","HW-HM45C","Unknown","Yes","No","No","Yes","Yes","Yes"
+"SITE_126","ROOM_26260","APPL_102767","Yamaha","ATS-2070","2018","No","Unknown","No","No","No",NA
+"SITE_1263","ROOM_15619","APPL_58057","Vizio","VHT215","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_1265","ROOM_14442","APPL_40880","Onkyo","TX-SR393","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1265","ROOM_35802","APPL_58428","Samsung","HW-J355","2016","Yes","No","No","Yes","Yes","No"
+"SITE_1274","ROOM_17925","APPL_126844","Bose","#418775","Unknown","No","No","No","Yes","No",NA
+"SITE_1276","ROOM_23565","APPL_154283","TaoTronics","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_1277","ROOM_34860","APPL_127051","Samsung","Unknown","Unknown","No","Unknown","No","Yes","Yes","No"
+"SITE_1277","ROOM_1275","APPL_123369","Vizio","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_1279","ROOM_40185","APPL_164039","Polk Audio","Unknown","Unknown","Yes","Unknown","Unknown","Yes","No",NA
+"SITE_1283","ROOM_25032","APPL_63287","Samsung","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_1287","ROOM_11033","APPL_83904","Vizio","VSB207","Unknown","No","No","No","No","No",NA
+"SITE_1287","ROOM_44872","APPL_44683","Unknown","20WMS008-BLK","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1287","ROOM_22384","APPL_90070","Philips","TAM4205/37","Unknown","No","No","No","No","Yes","No"
+"SITE_1288","ROOM_29592","APPL_60387","Onkyo","DX-C340","Unknown","No","No","No","No","Yes","No"
+"SITE_129","ROOM_8707","APPL_130840","Polk Audio","DBRX1","Unknown","No","No","No","Yes","No",NA
+"SITE_129","ROOM_8707","APPL_72125","Amazon","ALEXA","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1291","ROOM_32634","APPL_105557","ZVOX","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_1293","ROOM_30433","APPL_46081","Samsung","Unknown","Unknown","No","No","Unknown","Yes","No",NA
+"SITE_1295","ROOM_42033","APPL_99654","Amazon","ALEXA","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1295","ROOM_30602","APPL_114861","Amazon","ALEXA","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1298","ROOM_16469","APPL_141926","Vizio","SB324N-H6","Unknown","No","Unknown","No","Yes","Yes","No"
+"SITE_1298","ROOM_26444","APPL_31642","Amazon","ALEXA","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_13","ROOM_20115","APPL_68825","Technics","SL-D303","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_1300","ROOM_38852","APPL_4326","Bose","Unknown","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_1302","ROOM_2945","APPL_21509","Sony","HW-N650","2018","No","No","No","Yes","Yes","No"
+"SITE_1302","ROOM_34356","APPL_83450","Samsung","HW-E450C","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_1305","ROOM_1088","APPL_31668","Onkyo","Unknown","Unknown","No","No","No","Unknown","Yes","No"
+"SITE_1306","ROOM_12067","APPL_94362","Yamaha","YAS-101","Unknown","No","No","No","Yes","No",NA
+"SITE_1307","ROOM_42458","APPL_170081","Sonos","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_1309","ROOM_14569","APPL_18989","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","Unknown","Unknown"
+"SITE_1311","ROOM_35818","APPL_174625","Bose","#432552","Unknown","No","No","No","Yes","No",NA
+"SITE_1313","ROOM_9665","APPL_61071","Vizio","#SB3621N-E8","Unknown","Yes","Yes","No","Yes","Yes","No"
+"SITE_1316","ROOM_38098","APPL_75166","Samsung","MX-T70","2021","Yes","Yes","Unknown","Yes","Yes","No"
+"SITE_1317","ROOM_24944","APPL_117018","Insignia","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_1318","ROOM_32746","APPL_50951","Sanyo","Unknown","Unknown","Unknown","No","No","Yes","Yes","Unknown"
+"SITE_1319","ROOM_40533","APPL_144943","Unknown","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_1319","ROOM_25191","APPL_45380","Samsung","HW-J355","2015","No","No","No","Yes","Yes","No"
+"SITE_132","ROOM_1050","APPL_78244","Sonos","Unknown","Unknown","Unknown","Yes","Unknown","No","No",NA
+"SITE_1322","ROOM_6475","APPL_95001","Yamaha","Unknown","Unknown","No","Unknown","No","Yes","Yes","No"
+"SITE_1326","ROOM_11524","APPL_158064","Lenovo","CD-24501F","Unknown","No","Yes","No","No","No",NA
+"SITE_1327","ROOM_46155","APPL_17179","Yamaha","YAS-408","Unknown","No","Yes","No","Yes","No",NA
+"SITE_1332","ROOM_13296","APPL_154422","Bose","#418775","Unknown","No","No","No","Yes","No",NA
+"SITE_1337","ROOM_23542","APPL_154571","Bose","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1337","ROOM_33513","APPL_30151","Amazon","H23K37","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1337","ROOM_382","APPL_23030","Amazon","VN94DQ","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1337","ROOM_9783","APPL_132911","Unknown","IQPANEL4","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1337","ROOM_4200","APPL_166599","Unknown","Unknown","Unknown","No","No","Unknown","Yes","Yes","No"
+"SITE_1337","ROOM_650","APPL_19832","Amazon","DW84JL","Unknown","No","Yes","Yes","No","No",NA
+"SITE_134","ROOM_46218","APPL_57075","Bose","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_1342","ROOM_19629","APPL_11638","Bose","#418775","Unknown","No","No","No","Yes","No",NA
+"SITE_1342","ROOM_32243","APPL_56878","Google","HOME","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1343","ROOM_7385","APPL_174135","Samsung","HW-F450","2013","No","No","No","Yes","Yes","Yes"
+"SITE_1344","ROOM_39863","APPL_138328","Amazon","ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1344","ROOM_21523","APPL_92382","Amazon","RS03QR","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1344","ROOM_352","APPL_123857","Amazon","RS03QR","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1344","ROOM_31177","APPL_64289","Amazon","SK705DI","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1344","ROOM_31177","APPL_17678","Samsung","HW-JM45C","2016","No","No","No","Yes","Yes","No"
+"SITE_1352","ROOM_13939","APPL_13861","Sonos","ONE","Unknown","No","Yes","No","No","No",NA
+"SITE_1352","ROOM_34459","APPL_3931","Sonos","ONE","Unknown","No","Yes","No","No","No",NA
+"SITE_1352","ROOM_38882","APPL_139098","Polk Audio","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1352","ROOM_38882","APPL_164663","Sonos","ONE","Unknown","No","Yes","No","No","No",NA
+"SITE_1352","ROOM_38882","APPL_59929","Amazon","C76N8S","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1352","ROOM_40243","APPL_75122","Sonos","Unknown","Unknown","No","Yes","No","Yes","Yes","No"
+"SITE_1352","ROOM_1340","APPL_123131","Sonos","S100","Unknown","No","Yes","No","No","No",NA
+"SITE_1352","ROOM_1340","APPL_168879","Sonos","ONE","Unknown","No","Yes","No","No","No",NA
+"SITE_1352","ROOM_1340","APPL_102048","Amazon","A8H3N2","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1352","ROOM_30249","APPL_94386","Sonos","ONE","Unknown","No","Yes","No","No","No",NA
+"SITE_1352","ROOM_17586","APPL_3263","Polk Audio","Unknown","Unknown","No","Yes","No","No","No",NA
+"SITE_1353","ROOM_38463","APPL_25606","Vizio","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1358","ROOM_1595","APPL_120938","Amazon","C78MP8","Unknown","No","Yes","Yes","Unknown","No",NA
+"SITE_1359","ROOM_20164","APPL_73244","Samsung","HW-R450","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_136","ROOM_3520","APPL_69371","Amazon","ALEXA ECHO DOT","Unknown","No","Yes","Yes","No","No",NA
+"SITE_136","ROOM_3520","APPL_172251","Polk Audio","RN1600S","Unknown","No","No","No","Yes","Yes","No"
+"SITE_136","ROOM_24709","APPL_44169","Bose","COMPANION 2 SERIES 3","Unknown","No","No","No","No","No",NA
+"SITE_136","ROOM_9288","APPL_161705","Vizio","SB2020NG6M","Unknown","Yes","No","No","Yes","No",NA
+"SITE_1360","ROOM_34520","APPL_140235","Samsung","HW-J450","2015","No","No","No","Yes","No",NA
+"SITE_1364","ROOM_11273","APPL_22724","Vizio","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_1365","ROOM_14517","APPL_22715","Vizio","V51-H6","Unknown","No","Unknown","Unknown","Yes","Yes","No"
+"SITE_1367","ROOM_7067","APPL_13440","Yamaha","YAS-107","Unknown","No","Unknown","Unknown","Yes","No",NA
+"SITE_137","ROOM_31917","APPL_76960","Sonos","ZONEPLAYER ZP90","Unknown","No","Yes","No","No","No",NA
+"SITE_137","ROOM_5961","APPL_43152","Bose","#418775","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_137","ROOM_45124","APPL_121990","Polk Audio","D581 SOUND BAR","Unknown","Yes","Yes","No","Yes","No",NA
+"SITE_137","ROOM_31917","APPL_89013","Integra","DTM-59","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_137","ROOM_31917","APPL_152303","Integra","ADM 301","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_1373","ROOM_46499","APPL_7867","Yamaha","ATS-2090","Unknown","Unknown","Yes","Yes","Yes","Yes","No"
+"SITE_1382","ROOM_7750","APPL_154343","Samsung","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1383","ROOM_28682","APPL_110355","ILive","ITB260B","Unknown","No","No","No","Yes","No",NA
+"SITE_1392","ROOM_21846","APPL_47425","Rif6","Unknown","Unknown","No","Unknown","Unknown","No","No",NA
+"SITE_1393","ROOM_46472","APPL_133924","ILive","ITB031B","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_1395","ROOM_15970","APPL_61451","Polk Audio","DBXR1","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_1395","ROOM_41157","APPL_72014","LG","SL6Y","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_1399","ROOM_38706","APPL_58570","Mission","MC50","Unknown","No","Yes","Yes","Unknown","No",NA
+"SITE_1399","ROOM_32811","APPL_135756","Bose","SOLO SOUND BAR SERIES II","Unknown","No","Unknown","No","Yes","Yes","No"
+"SITE_14","ROOM_9150","APPL_171601","Amazon","ALEXA ECHO DOT","Unknown","No","No","Yes","No","No",NA
+"SITE_1401","ROOM_38965","APPL_11844","Sony","SA-S400","Unknown","No","Unknown","Unknown","Yes","No",NA
+"SITE_1403","ROOM_32769","APPL_29832","Samsung","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_1403","ROOM_31498","APPL_131316","RCA","#RTS7010B-E1","Unknown","No","Unknown","Unknown","Yes","No",NA
+"SITE_1406","ROOM_2435","APPL_70459","Yamaha","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_1406","ROOM_8369","APPL_52599","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_141","ROOM_19318","APPL_162155","Bose","Unknown","Unknown","No","No","No","No","No",NA
+"SITE_141","ROOM_38014","APPL_25362","Logitech","#00024","Unknown","No","No","No","No","No",NA
+"SITE_142","ROOM_42889","APPL_32942","Samsung","Unknown","Unknown","Unknown","No","No","Yes","Yes","Yes"
+"SITE_1420","ROOM_1502","APPL_25840","Bose","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_1423","ROOM_35955","APPL_33053","Amazon","ALEXA ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1423","ROOM_6830","APPL_116640","Amazon","ALEXA ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1423","ROOM_6830","APPL_23351","Google","Unknown","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1423","ROOM_10833","APPL_23714","Amazon","ALEXA ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1427","ROOM_39294","APPL_41989","Bose","#424096","Unknown","Yes","No","Yes","Yes","No",NA
+"SITE_143","ROOM_17431","APPL_107218","Behranger","ULTRA TONE K450FX","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_143","ROOM_17431","APPL_172939","Fender","MUSTANG 1","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_1433","ROOM_19938","APPL_72111","Yamaha","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_1435","ROOM_7894","APPL_163354","Vizio","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_1436","ROOM_26764","APPL_59306","Sony","SA-RT5","Unknown","No","Unknown","Unknown","Yes","No",NA
+"SITE_144","ROOM_16634","APPL_37363","Sonos","S14","Unknown","No","Yes","No","Yes","Yes","Yes"
+"SITE_144","ROOM_46334","APPL_56917","Technics","SL-190P","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_144","ROOM_46334","APPL_50153","Bose","#418392","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_144","ROOM_26036","APPL_10091","Bose","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_1443","ROOM_45128","APPL_157307","ILive","ITB037BO","Unknown","No","No","No","Yes","No",NA
+"SITE_1444","ROOM_3205","APPL_82817","Polk Audio","DBRX1","Unknown","Unknown","No","No","Yes","Yes","Yes"
+"SITE_1444","ROOM_15578","APPL_140536","Vizio","V21-H8R","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_1445","ROOM_16838","APPL_617","Samsung","HW-Q800A/ZA","Unknown","No","Unknown","Unknown","Yes","Yes","No"
+"SITE_1445","ROOM_38401","APPL_150519","Polk Audio","SIGNA S2","Unknown","Yes","Unknown","Unknown","Yes","No",NA
+"SITE_146","ROOM_7111","APPL_145717","Samsung","HW-N95","2018","No","Unknown","Unknown","Yes","Yes","No"
+"SITE_1462","ROOM_15392","APPL_34798","Polk Audio","DBRX1 SOUND BAR","Unknown","No","Unknown","No","Yes","Yes","No"
+"SITE_1463","ROOM_43072","APPL_21979","Vizio","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_1464","ROOM_27461","APPL_151909","Vizio","SB2020N-G6","Unknown","No","No","No","Yes","No",NA
+"SITE_147","ROOM_38909","APPL_160626","Bose","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","Unknown","Unknown"
+"SITE_1471","ROOM_28575","APPL_163113","Bose","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","Yes","No"
+"SITE_1473","ROOM_28283","APPL_85232","ONN","#100019624","Unknown","No","No","No","Yes","No",NA
+"SITE_1474","ROOM_10639","APPL_132266","Vizio","Unknown","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_1476","ROOM_35820","APPL_4821","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","Unknown","Unknown"
+"SITE_1478","ROOM_24070","APPL_112689","Kitsch","R-10B","Unknown","No","Unknown","Unknown","Yes","No",NA
+"SITE_1478","ROOM_9120","APPL_154149","Bose","VCS-10","Unknown","No","Unknown","Unknown","Yes","Yes","No"
+"SITE_1478","ROOM_41532","APPL_44722","Sonos","S19","Unknown","No","Unknown","Yes","Yes","Yes","No"
+"SITE_148","ROOM_40353","APPL_127671","Amazon","ALEXA","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1480","ROOM_18015","APPL_48475","Samsung","HW-MM55","Unknown","Yes","No","No","Yes","Yes","No"
+"SITE_1486","ROOM_30124","APPL_21775","Bestisan","ST08","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_1487","ROOM_7414","APPL_71223","Vizio","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","Yes","Yes"
+"SITE_149","ROOM_23590","APPL_21949","Sony","SA-CT60","Unknown","No","No","No","Yes","No",NA
+"SITE_1491","ROOM_46788","APPL_26568","ONN","#10002421","Unknown","No","Yes","No","Yes","No",NA
+"SITE_1493","ROOM_16028","APPL_103479","Yamaha","ATS-1080","Unknown","No","Unknown","No","Yes","Yes","No"
+"SITE_1498","ROOM_22258","APPL_90000","Bose","#418775","Unknown","No","Unknown","Unknown","Yes","No",NA
+"SITE_150","ROOM_35575","APPL_12113","Samsung","HW-N550","2018","No","No","No","Yes","Yes","No"
+"SITE_150","ROOM_35575","APPL_66429","NAD","AV713","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_150","ROOM_35575","APPL_6786","Sony","TC-WR535","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_150","ROOM_35575","APPL_127219","BIC","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_1500","ROOM_13207","APPL_119783","Samsung","Unknown","Unknown","No","Unknown","Unknown","Yes","Unknown","Unknown"
+"SITE_1504","ROOM_17867","APPL_5159","Vizio","SB2920-C6","Unknown","Yes","Yes","Unknown","Yes","No",NA
+"SITE_1514","ROOM_21640","APPL_135430","Samsung","HW-H550/ZA","2014","No","Unknown","Unknown","Yes","Yes","Yes"
+"SITE_1517","ROOM_8826","APPL_166633","Polk Audio","DBRX1","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_1518","ROOM_39088","APPL_110678","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_152","ROOM_4229","APPL_97216","Vizio","#10612170241","Unknown","No","No","No","Yes","Yes","No"
+"SITE_152","ROOM_21353","APPL_157375","Definitive","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1522","ROOM_8198","APPL_13264","Polk Audio","DSB1 SOUND BAR","Unknown","Yes","No","No","Yes","No",NA
+"SITE_1525","ROOM_26734","APPL_20096","Polk Audio","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_1527","ROOM_8041","APPL_129641","Samsung","HW-M360","2017","Yes","Unknown","No","Yes","Yes","Unknown"
+"SITE_1528","ROOM_1131","APPL_16080","Vizio","SB2920-C6","Unknown","Yes","No","No","Yes","No",NA
+"SITE_153","ROOM_42521","APPL_83425","Bose","#404600","Unknown","No","No","No","No","No",NA
+"SITE_1530","ROOM_34921","APPL_112426","JBL","CINEMA SB250","Unknown","No","Unknown","Unknown","Unknown","No",NA
+"SITE_1532","ROOM_17513","APPL_110890","Polk Audio","DBRX1","Unknown","No","Unknown","Yes","Yes","No",NA
+"SITE_1535","ROOM_25579","APPL_168880","Vizio","SB2920-D6","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_154","ROOM_8311","APPL_132199","LG","Unknown","2012","Unknown","No","No","Yes","Yes","Yes"
+"SITE_1548","ROOM_5270","APPL_116319","Samsung","HW-F550","Unknown","Yes","No","No","Yes","Yes","No"
+"SITE_1551","ROOM_18345","APPL_151718","Bose","Unknown","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_1555","ROOM_16933","APPL_70788","LG","Unknown","Unknown","Unknown","Unknown","No","Yes","Yes","No"
+"SITE_1561","ROOM_44042","APPL_24580","Bose","#418775","Unknown","No","Yes","No","Yes","No",NA
+"SITE_1562","ROOM_31242","APPL_68308","LG","SH3K","2017","No","Unknown","No","Yes","No",NA
+"SITE_1562","ROOM_5642","APPL_79920","Samsung","HW-J450","Unknown","No","Unknown","No","No","Yes","No"
+"SITE_1565","ROOM_44983","APPL_68920","Polk Audio","DSB1","Unknown","Yes","Unknown","No","Yes","No",NA
+"SITE_1568","ROOM_11475","APPL_159502","ONN","#100024201","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_157","ROOM_1285","APPL_156421","Unknown","SEIKI","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_1571","ROOM_28790","APPL_130793","Bose","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1579","ROOM_34458","APPL_116156","Amazon","Unknown","Unknown","Unknown","Yes","Yes","Unknown","No",NA
+"SITE_1580","ROOM_36744","APPL_109163","Yamaha","Unknown","Unknown","No","No","No","No","No",NA
+"SITE_1594","ROOM_16677","APPL_19740","Amazon","ECHO DOT","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1594","ROOM_16677","APPL_126219","Samsung","Unknown","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_1597","ROOM_42161","APPL_131689","TV Ears","Unknown","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_1598","ROOM_40883","APPL_123833","Polk Audio","MAGNIFI MINI SOUND BAR","Unknown","Yes","No","No","Yes","Unknown","Unknown"
+"SITE_1598","ROOM_12937","APPL_50976","Sony","SA-SD35","Unknown","No","No","No","Yes","No",NA
+"SITE_160","ROOM_35702","APPL_43249","Amazon","ECHO DOT","2019","Unknown","Yes","Yes","Yes","No",NA
+"SITE_1600","ROOM_19286","APPL_100167","Amazon","C78MP8","Unknown","Unknown","Yes","Yes","Unknown","No",NA
+"SITE_1600","ROOM_15441","APPL_28633","Amazon","Unknown","Unknown","No","Yes","Yes","Unknown","No",NA
+"SITE_1600","ROOM_18086","APPL_21484","Amazon","Unknown","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_1600","ROOM_10257","APPL_117729","Amazon","Unknown","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1600","ROOM_34655","APPL_120824","Amazon","Unknown","Unknown","No","Yes","Yes","Unknown","No",NA
+"SITE_1608","ROOM_21439","APPL_61573","Amazon","ECHO DOT","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1608","ROOM_29123","APPL_114764","Polk Audio","Unknown","Unknown","No","Unknown","No","Yes","Yes","Yes"
+"SITE_1608","ROOM_1008","APPL_142910","Amazon","ECHO DOT","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1608","ROOM_2657","APPL_61369","Amazon","ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1608","ROOM_12531","APPL_151156","Amazon","ECHO VERSION 1","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1608","ROOM_5032","APPL_123437","Amazon","ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1612","ROOM_19787","APPL_65097","LG","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1615","ROOM_31846","APPL_96340","Samsung","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_1617","ROOM_30203","APPL_110843","Samsung","HW-KM57C","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_162","ROOM_14812","APPL_132703","Sony","SA-MT300Z","2017","No","No","No","Yes","No",NA
+"SITE_162","ROOM_21424","APPL_13955","Amazon","ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_162","ROOM_22743","APPL_76890","Amazon","ALEXA","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1620","ROOM_4373","APPL_173152","Vizio","Unknown","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_1623","ROOM_44997","APPL_40627","Sony","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1625","ROOM_13033","APPL_66010","Samsung","SOUNDSHARE","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_1627","ROOM_43997","APPL_93849","Amazon","Unknown","Unknown","No","Yes","Yes","Unknown","No",NA
+"SITE_1628","ROOM_32362","APPL_146052","Amazon","Unknown","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1633","ROOM_32620","APPL_173680","Sony","Unknown","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_1635","ROOM_2230","APPL_41524","Bose","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_164","ROOM_13413","APPL_171924","Sonos","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_1647","ROOM_45197","APPL_591","ZVOX","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_168","ROOM_8362","APPL_133053","Fisher","RS-909","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_17","ROOM_39183","APPL_26813","Harman/Kardon","HW-Q6CR","2019","Yes","No","No","Yes","Yes","Unknown"
+"SITE_172","ROOM_40737","APPL_93858","Sonos","Unknown","Unknown","Unknown","Yes","No","Yes","No",NA
+"SITE_1730","ROOM_13773","APPL_6749","Onkyo","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1730","ROOM_4677","APPL_25279","Amazon","ECHO DOT","2019","Unknown","Yes","Yes","Yes","No",NA
+"SITE_1730","ROOM_43324","APPL_64490","Amazon","ECHO","Unknown","Unknown","Yes","Yes","Yes","No",NA
+"SITE_1730","ROOM_13773","APPL_41995","Amazon","EACHO","2019","No","Yes","Yes","Yes","No",NA
+"SITE_1730","ROOM_24881","APPL_82989","Amazon","ECHO","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_1730","ROOM_33004","APPL_25603","Amazon","ECHO DOT","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_1730","ROOM_38335","APPL_110707","Amazon","ECHO DOT","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_1730","ROOM_29565","APPL_81592","Amazon","ECHO DOT","Unknown","No","Yes","Yes","Yes","No",NA
+"SITE_1733","ROOM_6712","APPL_91873","Unknown","Unknown","Unknown","Unknown","No","No","Yes","Yes","No"
+"SITE_1735","ROOM_990","APPL_89332","Yamaha","Unknown","Unknown","No","No","No","Yes","Yes","Unknown"
+"SITE_1737","ROOM_34712","APPL_149396","Amazon","ECHO","2019","Unknown","Yes","Yes","No","No",NA
+"SITE_1738","ROOM_27956","APPL_52683","JBL","Unknown","Unknown","Unknown","Unknown","No","Yes","Yes","No"
+"SITE_1739","ROOM_36066","APPL_1685","Amazon","ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1739","ROOM_7790","APPL_78322","Yamaha","YAS-203","Unknown","No","Unknown","No","Yes","Yes","No"
+"SITE_174","ROOM_45423","APPL_92000","Miller and Kreisel","750THX MKLL","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1743","ROOM_35280","APPL_131952","Yamaha","ATS-1070","Unknown","No","No","No","Yes","No",NA
+"SITE_1747","ROOM_29810","APPL_105313","Sony","SS-CNP36","Unknown","No","Unknown","Unknown","Yes","Yes","No"
+"SITE_1747","ROOM_30152","APPL_70688","Panasonic","SB-HC760","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1751","ROOM_2211","APPL_90945","Realistic","SCT-90","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_1763","ROOM_21062","APPL_16521","Bose","#418775","Unknown","No","No","No","Yes","No",NA
+"SITE_1765","ROOM_13119","APPL_15991","Klipsch","PROMEDIA 21","2021","Unknown","Unknown","No","Yes","Yes","No"
+"SITE_178","ROOM_27192","APPL_58476","Vizio","SWA16","Unknown","Yes","Unknown","No","Yes","No",NA
+"SITE_1781","ROOM_37891","APPL_8460","Sonos","S14","Unknown","No","Yes","Yes","Yes","Yes","No"
+"SITE_1785","ROOM_15488","APPL_67178","Bose","Unknown","Unknown","Unknown","Unknown","No","Yes","Yes","Yes"
+"SITE_1786","ROOM_28836","APPL_82094","LG","NB3530A","2020","Unknown","Yes","No","Yes","Yes","Yes"
+"SITE_179","ROOM_10664","APPL_57277","Polk Audio","SMARTBAR SPEAKER","Unknown","Unknown","Yes","No","Yes","Yes","Yes"
+"SITE_179","ROOM_31730","APPL_113932","Boston","VR10","Unknown","No","No","No","Yes","No",NA
+"SITE_179","ROOM_31730","APPL_124119","Miller and Kreisel","S-125","Unknown","No","No","No","Yes","No",NA
+"SITE_179","ROOM_31730","APPL_56558","Bose","Unknown","Unknown","Unknown","Unknown","No","No","No",NA
+"SITE_179","ROOM_31730","APPL_3296","DENON","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_179","ROOM_30046","APPL_115563","Amazon","ALEXA","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_179","ROOM_19354","APPL_4631","Polk Audio","OWM3","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_179","ROOM_30046","APPL_157548","CELESTION","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_1792","ROOM_31491","APPL_129946","Unknown","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1792","ROOM_37864","APPL_68089","Onkyo","TX0NR626","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_1793","ROOM_19647","APPL_147990","Jensen","Unknown","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_1793","ROOM_19647","APPL_46216","Amazon","ALEXA","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_1794","ROOM_26650","APPL_121194","Amazon","ALEXA","2021","Unknown","Yes","Yes","No","No",NA
+"SITE_180","ROOM_11915","APPL_80691","Yamaha","ATS-1070","Unknown","No","No","No","Yes","No",NA
+"SITE_1817","ROOM_46084","APPL_133234","Amazon","ECHO","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_1819","ROOM_36210","APPL_74346","Yamaha","RX-V4A","Unknown","Unknown","Unknown","No","Yes","Yes","Yes"
+"SITE_1822","ROOM_28037","APPL_111401","ZVOX","AV200","Unknown","No","Yes","No","Yes","No",NA
+"SITE_1823","ROOM_16091","APPL_7009","Vizio","M21D-UBER","Unknown","No","No","No","Yes","No",NA
+"SITE_1823","ROOM_11702","APPL_90481","Vizio","Unknown","Unknown","Yes","No","No","Yes","Yes","Unknown"
+"SITE_1825","ROOM_40182","APPL_135787","Amazon","ECHO","Unknown","No","Yes","Yes","Yes","No",NA
+"SITE_1825","ROOM_40182","APPL_82803","Polk Audio","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_1829","ROOM_46119","APPL_101374","Sony","SS-CTB11","Unknown","No","Unknown","No","Yes","Yes","No"
+"SITE_1832","ROOM_32452","APPL_133680","Sonos","Unknown","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_1832","ROOM_38427","APPL_59555","Samsung","Unknown","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_1832","ROOM_17728","APPL_61034","Onkyo","Unknown","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_1835","ROOM_29500","APPL_105983","Yamaha","ATS-1030","Unknown","No","Yes","No","Yes","No",NA
+"SITE_1839","ROOM_25054","APPL_5262","Samsung","HW-A650/2A","Unknown","Yes","No","No","Yes","Yes","No"
+"SITE_1845","ROOM_17055","APPL_55810","ONN","Unknown","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_1847","ROOM_13345","APPL_100704","Insignia","ME-SB212","2012","No","No","Unknown","Yes","Yes","No"
+"SITE_185","ROOM_23838","APPL_103540","Polk Audio","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_186","ROOM_5620","APPL_148449","Google","HOME","Unknown","No","Yes","Yes","No","No",NA
+"SITE_186","ROOM_40785","APPL_121277","Polk Audio","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1864","ROOM_5612","APPL_164483","Polk Audio","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_1865","ROOM_17112","APPL_72831","Sherwood","RX-5502","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1873","ROOM_15779","APPL_123152","Bose","#418775","Unknown","No","Yes","No","Yes","No",NA
+"SITE_1873","ROOM_10282","APPL_121216","Vizio","V51-H6","Unknown","No","Unknown","Unknown","Yes","No",NA
+"SITE_1874","ROOM_5100","APPL_86399","Sony","Unknown","Unknown","No","No","No","No","Yes","No"
+"SITE_1874","ROOM_5100","APPL_54285","Vizio","#10602081041","Unknown","Yes","Unknown","No","Yes","No",NA
+"SITE_1875","ROOM_10398","APPL_127231","Samsung","HW-H550ZA","2014","No","Unknown","No","Yes","No",NA
+"SITE_1879","ROOM_11937","APPL_10660","T.c. Electronic","STEREO STEEL","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_1879","ROOM_39124","APPL_169968","Milkman sound","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_188","ROOM_35204","APPL_53520","Vizio","M51A-H6","Unknown","Unknown","Unknown","No","Yes","Yes","No"
+"SITE_188","ROOM_20456","APPL_134757","Yamaha","YAS-207","Unknown","Unknown","No","No","Yes","Yes","No"
+"SITE_1885","ROOM_35436","APPL_87073","Sony","Unknown","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_1888","ROOM_4455","APPL_3957","Samsung","HW-KM45C","Unknown","No","No","No","Yes","No",NA
+"SITE_189","ROOM_46592","APPL_130516","Vizio","Unknown","Unknown","Unknown","No","No","Yes","Yes","No"
+"SITE_1891","ROOM_7591","APPL_103536","Sonos","Unknown","Unknown","No","Yes","Yes","Yes","Yes","No"
+"SITE_1891","ROOM_4239","APPL_79344","Sonos","Unknown","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_1893","ROOM_35554","APPL_105271","Vizio","V21-H8","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_1899","ROOM_3357","APPL_19125","Vizio","SB3821-D6","Unknown","No","Yes","No","Yes","No",NA
+"SITE_19","ROOM_46360","APPL_25317","Google","HOME MINI","2019","Unknown","Yes","Yes","Yes","No",NA
+"SITE_19","ROOM_7418","APPL_9026","Google","HOME","2018","Unknown","Yes","Yes","Yes","No",NA
+"SITE_1902","ROOM_11654","APPL_166495","Polk Audio","DSB1 SOUND BAR","Unknown","No","No","No","Yes","Unknown","Unknown"
+"SITE_1905","ROOM_7852","APPL_35247","Aiwa","SUPER T-BASS","Unknown","No","No","No","No","Yes","No"
+"SITE_1905","ROOM_4094","APPL_3316","Midiland","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1907","ROOM_14453","APPL_111847","Bose","Unknown","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_1907","ROOM_31915","APPL_119602","Skullcandy","S7LACZ-04","Unknown","No","No","No","No","No",NA
+"SITE_1915","ROOM_25958","APPL_76446","Sonos","BEAM S14","Unknown","Unknown","Unknown","Yes","Yes","No",NA
+"SITE_192","ROOM_46175","APPL_85303","Yamaha","ATS-1050","Unknown","No","No","No","Yes","No",NA
+"SITE_192","ROOM_1655","APPL_31453","Google","HOME MINI","Unknown","No","Yes","Yes","No","No",NA
+"SITE_192","ROOM_35465","APPL_20697","Other","HOME","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_1926","ROOM_25173","APPL_60860","Vizio","Unknown","Unknown","Unknown","No","No","Yes","Yes","No"
+"SITE_1926","ROOM_40004","APPL_163658","Bower & Wilkins","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_1931","ROOM_32882","APPL_112981","Vizio","Unknown","2011","No","No","No","Yes","No",NA
+"SITE_1934","ROOM_13427","APPL_45958","Tcl","TS3100","Unknown","No","No","No","Yes","No",NA
+"SITE_1935","ROOM_36896","APPL_57063","Yamaha","Unknown","Unknown","Unknown","Unknown","Yes","Yes","Yes","No"
+"SITE_1936","ROOM_19100","APPL_99249","Bose","Unknown","Unknown","Unknown","No","No","Yes","Yes","No"
+"SITE_1937","ROOM_20457","APPL_102716","Samsung","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_194","ROOM_38725","APPL_7516","Philips","HTL2160","Unknown","No","No","No","Yes","Yes","No"
+"SITE_1947","ROOM_15398","APPL_47325","Bose","#424096","Unknown","No","Unknown","Unknown","Yes","Yes","No"
+"SITE_1948","ROOM_16839","APPL_157885","Polk Audio","DSB1","Unknown","Yes","Yes","Unknown","Yes","Yes","No"
+"SITE_195","ROOM_16427","APPL_148027","Amazon","ALEXA","Unknown","Unknown","Yes","Yes","Unknown","No",NA
+"SITE_1955","ROOM_22648","APPL_146944","Vizio","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_1958","ROOM_28079","APPL_80075","Coby","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_196","ROOM_42522","APPL_45110","Bose","SOUNDOCK 10","Unknown","No","No","No","No","No",NA
+"SITE_1968","ROOM_3351","APPL_3015","Polk Audio","DSBSOUNDBAR","Unknown","No","No","No","Yes","No",NA
+"SITE_197","ROOM_35647","APPL_158692","Yamaha","ATS-1050","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_1974","ROOM_14270","APPL_109467","Amazon","ECHO DOT","Unknown","No","Yes","Yes","No","No",NA
+"SITE_1975","ROOM_33633","APPL_136383","Samsung","HW-T40M","2020","Yes","Unknown","No","Yes","Yes","No"
+"SITE_1981","ROOM_44662","APPL_62929","Vizio","Unknown","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_1984","ROOM_19776","APPL_111480","Bose","Unknown","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_1985","ROOM_21659","APPL_52127","Klipsch","RSB-3","Unknown","Unknown","Yes","No","No","No",NA
+"SITE_1985","ROOM_29748","APPL_106947","Vizio","Unknown","Unknown","Unknown","Unknown","No","Yes","Yes","Yes"
+"SITE_1991","ROOM_27048","APPL_1162","Vizio","VSB210WS","Unknown","No","Unknown","Unknown","Yes","Yes","No"
+"SITE_1996","ROOM_39753","APPL_132818","Samsung","Unknown","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_1997","ROOM_35948","APPL_41956","Yamaha","ATS-2090","Unknown","Unknown","Unknown","No","Yes","Yes","No"
+"SITE_1998","ROOM_28988","APPL_27242","Onn","#100075108","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_1999","ROOM_27940","APPL_30762","LG","Unknown","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_20","ROOM_34258","APPL_36443","Samsung","HW-K450","2016","No","No","No","Yes","No",NA
+"SITE_2000","ROOM_46037","APPL_61114","Vizio","Unknown","Unknown","Unknown","Unknown","No","Yes","Yes","No"
+"SITE_2011","ROOM_4371","APPL_160494","Sonos","Unknown","Unknown","Unknown","Unknown","Yes","Yes","No",NA
+"SITE_2011","ROOM_27953","APPL_139337","Amazon","RS03QR","Unknown","No","Yes","Yes","Unknown","No",NA
+"SITE_2011","ROOM_27953","APPL_113987","Sonos","Unknown","Unknown","No","Unknown","Unknown","Yes","No",NA
+"SITE_2011","ROOM_44532","APPL_20168","Amazon","RS03QR","Unknown","No","Yes","Yes","No","No",NA
+"SITE_2016","ROOM_4377","APPL_33725","Bose","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_2016","ROOM_4377","APPL_22033","Amazon","ECHO DOT","Unknown","No","Yes","Yes","No","No",NA
+"SITE_2016","ROOM_37532","APPL_123907","Google","H1A 8B172AA05J7M","Unknown","No","Yes","Yes","No","No",NA
+"SITE_2016","ROOM_10513","APPL_106631","Sonos","ONE","Unknown","No","Yes","Yes","No","No",NA
+"SITE_2026","ROOM_200","APPL_162201","Sony","A5000","Unknown","No","No","No","Yes","No",NA
+"SITE_2028","ROOM_17542","APPL_127302","Sonos","ONE SL","Unknown","No","Yes","No","No","No",NA
+"SITE_2036","ROOM_32829","APPL_172625","Sonos","Unknown","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_2036","ROOM_46808","APPL_84246","Vizio","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_205","ROOM_42612","APPL_66296","Vizio","V21-H8","Unknown","No","Yes","No","No","Yes","No"
+"SITE_205","ROOM_27682","APPL_99701","Amazon","ALEXA ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_207","ROOM_6190","APPL_65607","Sony","38-CT351","Unknown","No","No","No","Yes","No",NA
+"SITE_207","ROOM_29812","APPL_49738","Google","HOME","Unknown","No","Yes","Yes","No","No",NA
+"SITE_207","ROOM_6190","APPL_11371","Sony","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_211","ROOM_35048","APPL_119427","Samsung","HW-F355","Unknown","No","No","No","Yes","No",NA
+"SITE_214","ROOM_13662","APPL_134836","Samsung","Unknown","Unknown","Unknown","Unknown","No","Yes","Yes","No"
+"SITE_214","ROOM_13662","APPL_83558","Amazon","RS03OR","Unknown","Unknown","Yes","Yes","Unknown","No",NA
+"SITE_216","ROOM_16406","APPL_94640","Yamaha","ATS-1080","Unknown","No","Unknown","Unknown","Yes","No",NA
+"SITE_216","ROOM_17663","APPL_15372","Amazon","ALEXA ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_216","ROOM_5773","APPL_12964","Amazon","ALEXA ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_217","ROOM_44946","APPL_32843","Polk Audio","SURROUNDBAR 6000","Unknown","No","No","No","Yes","No",NA
+"SITE_217","ROOM_34959","APPL_4193","iLive","Unknown","Unknown","No","No","No","Unknown","No",NA
+"SITE_218","ROOM_28781","APPL_114131","Sony","HTS350","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_22","ROOM_9488","APPL_173177","Vizio","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","Yes","Unknown"
+"SITE_221","ROOM_10901","APPL_79583","Amazon","D9N29T","Unknown","No","Yes","Yes","No","No",NA
+"SITE_221","ROOM_21188","APPL_28236","Amazon","Unknown","Unknown","No","Yes","Yes","No","No",NA
+"SITE_221","ROOM_12534","APPL_19602","Amazon","ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_221","ROOM_44362","APPL_126012","Amazon","ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_225","ROOM_33095","APPL_166979","Unknown","Unknown","Unknown","Unknown","Yes","No","Yes","No",NA
+"SITE_227","ROOM_40153","APPL_55436","Klipsch","Unknown","Unknown","Unknown","No","No","Yes","Yes","No"
+"SITE_227","ROOM_12790","APPL_108004","Klipsch","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_231","ROOM_43057","APPL_133176","Samsung","Unknown","Unknown","Unknown","Yes","No","Yes","No",NA
+"SITE_232","ROOM_17303","APPL_115396","iLive","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_233","ROOM_9333","APPL_120580","Panasonic","SU-HTB500","Unknown","No","No","No","Unknown","Yes","No"
+"SITE_236","ROOM_17471","APPL_138692","Sonos","PLAY 1","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_239","ROOM_21975","APPL_95440","Samsung","Unknown","Unknown","Yes","No","No","Yes","Yes","Unknown"
+"SITE_240","ROOM_7043","APPL_145742","Sonos","PLAYBAR","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_245","ROOM_41689","APPL_53540","Innovative Technology","TSB-100","2017","No","No","No","No","No",NA
+"SITE_245","ROOM_10542","APPL_107451","Realistic","NOVA-18","Unknown","No","No","No","Yes","No",NA
+"SITE_245","ROOM_10542","APPL_137032","Sanyo","GXT747A","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_245","ROOM_41689","APPL_81045","Sharper Image","ESI-P410","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_246","ROOM_13057","APPL_122987","Bose","#418775","2017","No","No","No","No","No",NA
+"SITE_249","ROOM_43959","APPL_95260","Sony","SS-CT500","Unknown","No","Yes","Yes","Yes","Yes","No"
+"SITE_249","ROOM_14640","APPL_76408","Ihome","IPL24","Unknown","No","Yes","No","Yes","No",NA
+"SITE_249","ROOM_45974","APPL_5646","TCL","TS6110","Unknown","No","Yes","No","Yes","Yes","No"
+"SITE_25","ROOM_4859","APPL_53112","TCL","TS7010","2019","Unknown","Yes","Unknown","Yes","Yes","No"
+"SITE_25","ROOM_7337","APPL_66213","Sony","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_250","ROOM_26244","APPL_76916","Samsung","HW-T650","2020","Unknown","Yes","No","Yes","Yes","Yes"
+"SITE_252","ROOM_16092","APPL_6138","Sonos","S22","Unknown","No","Yes","No","No","No",NA
+"SITE_252","ROOM_2086","APPL_144294","Sony","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","Yes","No"
+"SITE_252","ROOM_34814","APPL_154440","Amazon","D9N29T (ALEXA)","Unknown","No","Yes","Yes","No","No",NA
+"SITE_252","ROOM_2086","APPL_126246","Memorex","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_252","ROOM_2086","APPL_113585","Sony","SRI-ZR5","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_254","ROOM_20486","APPL_163624","Bose","#418775","Unknown","No","No","No","Yes","No",NA
+"SITE_255","ROOM_40730","APPL_147575","Bose","#418775","Unknown","No","Unknown","Unknown","Yes","No",NA
+"SITE_256","ROOM_33672","APPL_143519","Amazon","ALEXA ECHO DOT","Unknown","No","Yes","Yes","No","No",NA
+"SITE_256","ROOM_33672","APPL_84857","Vizio","SB3821-C6","Unknown","No","No","No","Yes","No",NA
+"SITE_256","ROOM_15014","APPL_128092","Bose","#415859","Unknown","No","No","No","No","No",NA
+"SITE_256","ROOM_33672","APPL_107143","Philips","HIGH FIDELITY INTERNATIONAL","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_26","ROOM_5259","APPL_45356","Pioneer","CT-W600R","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_26","ROOM_5259","APPL_92114","Technics","SL-D2","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_260","ROOM_41695","APPL_111747","Sony","BASS REFLEX","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_260","ROOM_45547","APPL_163419","Unknown","9101X","Unknown","No","No","No","Yes","No",NA
+"SITE_263","ROOM_15949","APPL_164599","Sonos","Unknown","2019","Unknown","No","Unknown","Yes","Yes","Unknown"
+"SITE_264","ROOM_35639","APPL_95858","Sony","HT-S200F","2021","No","Unknown","Unknown","Yes","No",NA
+"SITE_264","ROOM_9663","APPL_154368","Insignia","NS-SB212","2012","No","Unknown","Unknown","Yes","No",NA
+"SITE_265","ROOM_27474","APPL_153177","Onkyo","SKC-540C","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_266","ROOM_3553","APPL_82460","JBL","Unknown","1940","Unknown","Unknown","No","Yes","Unknown","Unknown"
+"SITE_267","ROOM_35346","APPL_135831","Sonos","Unknown","Unknown","No","Unknown","No","Yes","Yes","No"
+"SITE_267","ROOM_35346","APPL_51274","Sonos","PLAY1","Unknown","No","No","Yes","No","No",NA
+"SITE_27","ROOM_42528","APPL_47292","Bose","#320573","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_272","ROOM_33574","APPL_158751","Samsung","HW-M360/ZA","2017","No","Unknown","No","Yes","Yes","No"
+"SITE_276","ROOM_38140","APPL_174022","Sony","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","Yes","Unknown"
+"SITE_28","ROOM_6394","APPL_33651","Polk Audio","Unknown","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_280","ROOM_24406","APPL_136750","Samsung","HW-K950","2017","No","Yes","No","Yes","No",NA
+"SITE_280","ROOM_2931","APPL_64428","Bose","SOUNDLINK MINI","Unknown","No","No","No","No","No",NA
+"SITE_283","ROOM_43512","APPL_149209","tt","TT-SK016","Unknown","Unknown","No","No","Yes","Yes","No"
+"SITE_284","ROOM_19980","APPL_171282","Sony","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_285","ROOM_24513","APPL_104366","Amazon","ALEXA ECHO DOT","Unknown","No","Yes","Yes","No","No",NA
+"SITE_285","ROOM_17756","APPL_117908","Amazon","ALEXA ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_285","ROOM_33145","APPL_123828","Bose","#418775","Unknown","No","No","No","Yes","Yes","No"
+"SITE_288","ROOM_27225","APPL_64630","Vizio","SB4051-C0","Unknown","Yes","No","No","Yes","Yes","Yes"
+"SITE_289","ROOM_34916","APPL_149743","Amazon","ALEXA ECHO","Unknown","No","Yes","No","No","No",NA
+"SITE_289","ROOM_34916","APPL_52727","Bose","SOUNDTOUCH 20","Unknown","No","No","No","No","No",NA
+"SITE_289","ROOM_41619","APPL_9255","Amazon","ALEXA ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_298","ROOM_6926","APPL_167305","Bose","WAVE RADIO III","Unknown","No","No","No","No","No",NA
+"SITE_3","ROOM_37561","APPL_83927","Fisher","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_30","ROOM_34777","APPL_51678","Amazon","ALEXA CUBE-A78V3N","Unknown","No","Yes","Yes","No","Yes","Unknown"
+"SITE_30","ROOM_36935","APPL_92855","Amazon","ECHO DOT","Unknown","No","Yes","Yes","No","No",NA
+"SITE_30","ROOM_43668","APPL_100941","Amazon","CEO984","Unknown","No","Yes","Yes","No","No",NA
+"SITE_30","ROOM_42915","APPL_59953","Amazon","EX69VW","Unknown","No","Yes","Yes","Yes","No",NA
+"SITE_30","ROOM_42915","APPL_1612","Vizio","#10602081222","Unknown","Yes","No","No","Yes","Yes","No"
+"SITE_30","ROOM_11715","APPL_106135","Amazon","ECHO DOT","Unknown","No","Yes","Yes","No","No",NA
+"SITE_30","ROOM_21944","APPL_154665","Apple","HOME MINI","Unknown","No","Yes","Yes","Yes","No",NA
+"SITE_30","ROOM_21944","APPL_98571","Vizio","Unknown","Unknown","Yes","No","No","Yes","No",NA
+"SITE_300","ROOM_5420","APPL_19357","Bose","#4040800","Unknown","No","No","No","No","No",NA
+"SITE_300","ROOM_44783","APPL_58317","Bose","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_300","ROOM_39201","APPL_93154","Ion","STAR POWER ISP70","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_301","ROOM_28933","APPL_27474","Anthony Gallo Acoustics","#0725260","Unknown","No","No","No","Yes","Yes","No"
+"SITE_301","ROOM_28933","APPL_152099","Rotel","RMB-1048","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_301","ROOM_11467","APPL_21205","Yamaha","K-220","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_301","ROOM_11467","APPL_32673","Sony","PS-LX250H","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_303","ROOM_11585","APPL_12726","Samsung","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_304","ROOM_24473","APPL_122756","JBL","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","Yes","No"
+"SITE_307","ROOM_26205","APPL_14642","Insignia","Unknown","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_309","ROOM_19451","APPL_97636","Kenwood","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_309","ROOM_19451","APPL_147014","Boston","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_31","ROOM_7489","APPL_66076","Sony","VACS","Unknown","Yes","No","No","Yes","Yes","No"
+"SITE_311","ROOM_7884","APPL_62708","Bose","Unknown","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_311","ROOM_33351","APPL_7950","Sonos","Unknown","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_311","ROOM_12592","APPL_153216","Sonos","036-77-130","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_311","ROOM_39420","APPL_14244","Sonos","PLAYBAR","Unknown","Unknown","Unknown","No","Yes","Yes","Yes"
+"SITE_312","ROOM_15938","APPL_158366","Amazon","C78MP8","Unknown","No","Yes","Yes","No","No",NA
+"SITE_312","ROOM_35593","APPL_16008","Amazon","C78MP8","Unknown","No","Yes","Yes","No","No",NA
+"SITE_312","ROOM_29953","APPL_20086","Amazon","SK705D","Unknown","No","Yes","Yes","No","No",NA
+"SITE_312","ROOM_35593","APPL_33051","Google","AC1304","Unknown","No","Yes","Yes","No","No",NA
+"SITE_313","ROOM_28266","APPL_22826","Harman/Kardon","HK195","Unknown","No","No","No","No","No",NA
+"SITE_313","ROOM_42778","APPL_154800","Pioneer","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_313","ROOM_42778","APPL_149808","Sony","STR-K7100","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_313","ROOM_41904","APPL_131078","Marshall","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_313","ROOM_28266","APPL_55243","Crate","GLX212","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_313","ROOM_41904","APPL_119951","Rean","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_313","ROOM_42778","APPL_27733","Scott","SMP-30","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_313","ROOM_42778","APPL_112982","Tender deluxe","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_314","ROOM_5201","APPL_148440","Vizio","SB3821-C6","Unknown","Yes","Yes","No","Yes","Yes","No"
+"SITE_314","ROOM_19362","APPL_6687","Vizio","M21D-H8R","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_314","ROOM_244","APPL_4069","Vizio","S4251W-B4","Unknown","Yes","No","No","Yes","Yes","No"
+"SITE_317","ROOM_31309","APPL_23087","Bose","CINEMATE 15","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_320","ROOM_31306","APPL_51757","Vizio","V21-H8","Unknown","No","Yes","No","Yes","Yes","No"
+"SITE_321","ROOM_3463","APPL_81187","Paradigm","Unknown","Unknown","Unknown","No","No","No","No",NA
+"SITE_321","ROOM_31153","APPL_148998","Paradigm","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_321","ROOM_31153","APPL_81915","Nakamichi","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_323","ROOM_2998","APPL_142086","Bose","#428775","Unknown","No","No","No","No","No",NA
+"SITE_328","ROOM_34829","APPL_147569","RCA","RP-8250A","1995","No","No","No","No","Yes","No"
+"SITE_328","ROOM_34829","APPL_96414","Creative","MFT7480","Unknown","No","Yes","No","No","No",NA
+"SITE_331","ROOM_30128","APPL_67862","Top Vision","S01","Unknown","No","No","Yes","Yes","No",NA
+"SITE_334","ROOM_13139","APPL_174377","Bose","#418775","Unknown","No","No","No","Yes","No",NA
+"SITE_336","ROOM_45406","APPL_147141","Boston","TVEE 26","Unknown","No","Unknown","No","Yes","Yes","No"
+"SITE_338","ROOM_28224","APPL_130161","Insignia","Unknown","2013","No","No","No","Yes","No",NA
+"SITE_340","ROOM_30077","APPL_171771","Vizio","Unknown","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_345","ROOM_17462","APPL_92425","Vizio","V20-J8","Unknown","No","No","No","Yes","No",NA
+"SITE_345","ROOM_18700","APPL_124462","Amazon","ALEXA ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_345","ROOM_33488","APPL_159199","Amazon","ALEXA ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_346","ROOM_3850","APPL_125227","Amazon","Unknown","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_346","ROOM_28276","APPL_42327","Amazon","Unknown","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_347","ROOM_15327","APPL_129324","Vizio","M21D-H8R","Unknown","No","No","No","Yes","No",NA
+"SITE_347","ROOM_25301","APPL_66871","Sony","SS-V315","Unknown","No","No","No","Yes","Yes","No"
+"SITE_348","ROOM_37975","APPL_18926","Samsung","HW-HM45","Unknown","Yes","Unknown","No","Yes","Unknown","Unknown"
+"SITE_352","ROOM_25272","APPL_106538","LG","Unknown","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_353","ROOM_19262","APPL_399","Samsung","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_355","ROOM_33226","APPL_147690","Vizio","BTM257B","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_357","ROOM_7265","APPL_123223","Vizio","SB3821-C6","Unknown","Yes","No","No","Yes","Yes","No"
+"SITE_358","ROOM_23755","APPL_41489","Bose","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_358","ROOM_37584","APPL_18703","Samsung","HW-T40M","2020","Yes","No","No","Yes","No",NA
+"SITE_359","ROOM_40163","APPL_148806","Vizio","Unknown","Unknown","Yes","No","No","No","No",NA
+"SITE_36","ROOM_27250","APPL_58769","Labtec","911O1ST-9945A","Unknown","No","No","No","Yes","No",NA
+"SITE_36","ROOM_15373","APPL_163319","AudioSource","S325","Unknown","No","No","No","Yes","No",NA
+"SITE_36","ROOM_1390","APPL_74815","Kenwood","KA-99","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_36","ROOM_1390","APPL_117087","Technics","ST-K55","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_367","ROOM_42408","APPL_87667","Amazon","ECHO HOME","Unknown","No","Yes","Yes","No","No",NA
+"SITE_371","ROOM_28362","APPL_45607","Yamaha","ATS-1050","Unknown","No","No","No","Yes","No",NA
+"SITE_371","ROOM_22244","APPL_172328","Yamaha","ATS-1050","Unknown","No","No","No","Yes","No",NA
+"SITE_372","ROOM_29708","APPL_23707","Bose","Unknown","Unknown","Unknown","Unknown","No","Yes","Yes","No"
+"SITE_373","ROOM_15183","APPL_10321","Yamaha","ATS-1050","Unknown","No","Yes","No","Yes","No",NA
+"SITE_376","ROOM_33081","APPL_139969","Polk Audio","Unknown","Unknown","No","Unknown","Unknown","No","Yes","No"
+"SITE_379","ROOM_20546","APPL_135169","Bose","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_38","ROOM_32235","APPL_77181","Sanyo","MCD-Z10","Unknown","No","No","No","No","No",NA
+"SITE_381","ROOM_673","APPL_70965","LG","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_383","ROOM_8035","APPL_28535","LG","NB3530A","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_387","ROOM_26981","APPL_60591","LG","SKC9","Unknown","No","Yes","No","Yes","No",NA
+"SITE_391","ROOM_35369","APPL_30578","RSR","TB220L","Unknown","No","Unknown","Unknown","Yes","No",NA
+"SITE_397","ROOM_41625","APPL_22069","Vizio","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_4","ROOM_18610","APPL_141673","Vizio","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_400","ROOM_19143","APPL_31282","Bose","#432552","Unknown","Unknown","Yes","Yes","Yes","No",NA
+"SITE_401","ROOM_4597","APPL_103463","Samsung","Unknown","Unknown","No","Unknown","No","Yes","Yes","No"
+"SITE_404","ROOM_33196","APPL_8258","Onkyo","CP-1007A","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_416","ROOM_44655","APPL_81748","LG","Unknown","Unknown","Unknown","Unknown","No","Yes","Yes","No"
+"SITE_417","ROOM_2691","APPL_44955","Jensen","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_42","ROOM_17780","APPL_45381","Samsung","HW-J250","Unknown","Yes","Unknown","Unknown","Yes","No",NA
+"SITE_422","ROOM_29754","APPL_125986","Vizio","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","Yes"
+"SITE_422","ROOM_9640","APPL_69787","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_422","ROOM_9640","APPL_14325","Amazon","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_423","ROOM_25534","APPL_126346","Bestisan","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_423","ROOM_35926","APPL_151835","Bose","SOLO SOUNDBAR II","Unknown","No","No","No","Yes","No",NA
+"SITE_423","ROOM_39435","APPL_8132","Vizio","VSB200","Unknown","Unknown","No","No","Yes","Yes","No"
+"SITE_423","ROOM_39435","APPL_174641","Kenwood","KX-W6030","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_426","ROOM_4541","APPL_72714","Unknown","Unknown","Unknown","Unknown","Unknown","No","Yes","Yes","No"
+"SITE_428","ROOM_30234","APPL_11616","Panasonic","SC-HC57","Unknown","No","Yes","No","No","No",NA
+"SITE_428","ROOM_25663","APPL_142696","Unknown","Unknown","Unknown","No","No","No","No","No",NA
+"SITE_430","ROOM_44886","APPL_47896","Vizio","SB3621N-E8M","Unknown","Yes","No","No","Yes","Yes","No"
+"SITE_433","ROOM_19334","APPL_84571","ZVOX","SB380","Unknown","No","No","No","Yes","No",NA
+"SITE_435","ROOM_18782","APPL_111920","Polk Audio","SIGNA S2 SOUND BAR","Unknown","No","Yes","Yes","Yes","Yes","No"
+"SITE_435","ROOM_28514","APPL_134142","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_436","ROOM_24587","APPL_142524","Roku","9101X","Unknown","No","Yes","Yes","Yes","No",NA
+"SITE_44","ROOM_11448","APPL_81919","Vizio","Unknown","Unknown","Yes","No","No","Yes","No",NA
+"SITE_449","ROOM_5324","APPL_31797","Unknown","Unknown","Unknown","No","Yes","No","Yes","Yes","Yes"
+"SITE_449","ROOM_16251","APPL_110646","Bose","Unknown","Unknown","Unknown","Unknown","No","Yes","Unknown","Unknown"
+"SITE_451","ROOM_13367","APPL_50437","Amazon","ECHO DOT","Unknown","No","Yes","Yes","Yes","No",NA
+"SITE_453","ROOM_31032","APPL_123675","Roku","Unknown","Unknown","Unknown","Yes","No","Yes","No",NA
+"SITE_454","ROOM_21213","APPL_39652","Sony","Unknown","2017","Unknown","Yes","Yes","Yes","No",NA
+"SITE_455","ROOM_9842","APPL_148265","Sony","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_455","ROOM_9842","APPL_118235","Sony","STR-DH190","Unknown","No","Unknown","No","No","Yes","No"
+"SITE_459","ROOM_2633","APPL_88762","Roku","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","Yes","No"
+"SITE_46","ROOM_20569","APPL_156920","Vizio","VHT510","Unknown","No","No","No","Yes","No",NA
+"SITE_46","ROOM_42533","APPL_51575","Ion","Unknown","Unknown","No","No","No","No","No",NA
+"SITE_46","ROOM_35079","APPL_153453","Bose","Unknown","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_46","ROOM_42533","APPL_92559","Unknown","CHAMPIONS 40","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_46","ROOM_35079","APPL_91820","Yamaha","HER-6240","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_460","ROOM_13607","APPL_57994","Samsung","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_461","ROOM_1493","APPL_173941","Sonos","Unknown","Unknown","No","Unknown","Unknown","Yes","No",NA
+"SITE_462","ROOM_9235","APPL_64276","Samsung","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_463","ROOM_28987","APPL_25789","Samsung","HW-A430","2021","Yes","Yes","No","Yes","Yes","Unknown"
+"SITE_466","ROOM_22979","APPL_131431","Vizio","V21-H8","Unknown","No","No","No","Yes","Yes","No"
+"SITE_468","ROOM_20465","APPL_51758","Samsung","PS-CC6500","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_468","ROOM_35859","APPL_159587","Amazon","ECHO DOT","Unknown","No","Yes","Yes","No","No",NA
+"SITE_47","ROOM_18349","APPL_24862","Sansui","#2000","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_47","ROOM_18349","APPL_87705","Marshall","LED12","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_473","ROOM_25751","APPL_45513","Amazon","B7W644","Unknown","No","Yes","Yes","No","No",NA
+"SITE_473","ROOM_28170","APPL_41320","Amazon","B7W644","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_473","ROOM_23889","APPL_104975","Amazon","B7W644","Unknown","No","Yes","Yes","No","No",NA
+"SITE_476","ROOM_9713","APPL_7210","Amazon","ALEXA ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_476","ROOM_31697","APPL_163639","Elegant","Unknown","Unknown","No","No","No","No","No",NA
+"SITE_476","ROOM_34407","APPL_151422","Amazon","ALEXA ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_476","ROOM_29940","APPL_163936","Amazon","ALEXA ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_478","ROOM_2206","APPL_110031","Samsung","HW-C450/XAA","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_478","ROOM_42577","APPL_41951","Amazon","Unknown","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_478","ROOM_38499","APPL_122368","Amazon","ECHO","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_478","ROOM_10357","APPL_35652","Amazon","ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_478","ROOM_28632","APPL_158780","Energy","Unknown","Unknown","Unknown","Unknown","No","Yes","Yes","Unknown"
+"SITE_482","ROOM_44792","APPL_48905","Bose","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_489","ROOM_36756","APPL_20750","Onkyo","TX-NR807","Unknown","No","No","No","Yes","Yes","No"
+"SITE_490","ROOM_19976","APPL_95634","Roku","Unknown","Unknown","No","Yes","Yes","Yes","Yes","No"
+"SITE_491","ROOM_702","APPL_117462","M&S","MNCXCB","Unknown","No","No","No","Yes","No",NA
+"SITE_493","ROOM_9098","APPL_31529","Amazon","R9P2A5","Unknown","No","Yes","Yes","No","No",NA
+"SITE_494","ROOM_9366","APPL_57488","Unknown","Unknown","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_498","ROOM_39003","APPL_116813","Unknown","Unknown","Unknown","Unknown","No","Yes","Yes","No",NA
+"SITE_504","ROOM_30275","APPL_107754","Craig","Unknown","2014","Unknown","Unknown","No","Yes","No",NA
+"SITE_506","ROOM_26391","APPL_118011","Bose","#414255","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_51","ROOM_10368","APPL_23463","Sonos","Unknown","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_510","ROOM_45992","APPL_164953","Yamaha","ATS-1030","Unknown","No","Yes","No","Yes","No",NA
+"SITE_52","ROOM_16102","APPL_121053","Audio Vizio","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_521","ROOM_42105","APPL_12688","Sony","#TC-WE475","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_521","ROOM_42105","APPL_3729","MHC-GX450","MHC-GX450","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_522","ROOM_19331","APPL_23051","Sony","SA-CT60","Unknown","Unknown","Unknown","No","Yes","Yes","No"
+"SITE_534","ROOM_20963","APPL_94149","Sonos","S-18","Unknown","No","No","No","No","No",NA
+"SITE_534","ROOM_40280","APPL_111519","Sonos","S18","Unknown","No","No","No","No","No",NA
+"SITE_534","ROOM_7952","APPL_66266","Sonos","S18","Unknown","No","No","No","No","No",NA
+"SITE_535","ROOM_32041","APPL_81160","Unknown","Unknown","Unknown","Unknown","Unknown","No","Yes","Yes","Yes"
+"SITE_536","ROOM_5589","APPL_163866","Amazon","ALEXA","Unknown","Unknown","Yes","Yes","Unknown","Unknown","Unknown"
+"SITE_54","ROOM_39980","APPL_72541","Logitech","EA406","Unknown","No","No","No","No","No",NA
+"SITE_54","ROOM_39980","APPL_174902","Amazon","ALEXA ECHO DOT","Unknown","No","Yes","Yes","No","No",NA
+"SITE_54","ROOM_14192","APPL_122138","Oritron","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_540","ROOM_14208","APPL_61782","Sonos","Unknown","2022","Yes","Yes","No","Yes","No",NA
+"SITE_544","ROOM_20596","APPL_8809","Samsung","HW-T450","2020","Yes","No","No","Yes","Yes","Unknown"
+"SITE_545","ROOM_43302","APPL_56738","Clarienette","#102","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_550","ROOM_17424","APPL_168072","Audio technica","AT-PL50","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_552","ROOM_20788","APPL_112169","Vizio","#SB3651-E6","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_555","ROOM_25480","APPL_119993","Sonos","S14","Unknown","No","Yes","Yes","Yes","No",NA
+"SITE_560","ROOM_43001","APPL_62890","Amazon","ECHO","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_562","ROOM_24058","APPL_68710","KLM","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_563","ROOM_40671","APPL_73001","Bose","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_57","ROOM_17421","APPL_33885","Amazon","ECHO","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_570","ROOM_31987","APPL_140853","Vizio","SB3820-C6","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_572","ROOM_11863","APPL_113085","Polk Audio","Unknown","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_573","ROOM_770","APPL_13273","Wohome","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_575","ROOM_41469","APPL_173555","Polk Audio","SIGNA S1","Unknown","Yes","Unknown","No","Yes","Yes","No"
+"SITE_576","ROOM_30769","APPL_69135","Google","HOME","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_576","ROOM_30769","APPL_115064","LG","Unknown","2018","Unknown","Yes","No","Yes","No",NA
+"SITE_58","ROOM_22837","APPL_23579","Amazon","ALEXA","Unknown","No","Yes","Yes","No","No",NA
+"SITE_580","ROOM_16419","APPL_158275","Klipsch","R-34C","Unknown","No","No","No","Yes","No",NA
+"SITE_581","ROOM_16931","APPL_137885","Beogram 3404","#3404","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_582","ROOM_19944","APPL_110952","Samsung","HW-H450/ZA","2014","Yes","No","No","Yes","Yes","Unknown"
+"SITE_586","ROOM_29625","APPL_140968","Bose","#700","Unknown","Unknown","Yes","No","Yes","Yes","No"
+"SITE_590","ROOM_9093","APPL_100731","Yamaha","ATS-1080","Unknown","No","Yes","Yes","Yes","No",NA
+"SITE_597","ROOM_32648","APPL_718","Samsung","Unknown","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_599","ROOM_7983","APPL_19107","Samsung","Unknown","Unknown","Unknown","Unknown","No","Yes","Yes","Yes"
+"SITE_6","ROOM_20903","APPL_6036","Vizio","V51-H6","Unknown","No","Yes","Yes","Yes","No",NA
+"SITE_600","ROOM_4620","APPL_44529","Samsung","PS-JC2-1","Unknown","No","No","No","Yes","Yes","No"
+"SITE_605","ROOM_4869","APPL_39910","Sonos","#44358014","2019","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_607","ROOM_12373","APPL_25366","Boston Acoustics","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_607","ROOM_12373","APPL_50628","Harman/Kardon","HK3300","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_608","ROOM_31851","APPL_123862","TaoTronics","TT-SK15","Unknown","No","No","No","Yes","No",NA
+"SITE_610","ROOM_17282","APPL_130724","Samsung","HWMM45C","2017","Yes","Yes","Unknown","Yes","No",NA
+"SITE_611","ROOM_33614","APPL_90725","LG","SK9Y","Unknown","No","Yes","Yes","Yes","Yes","No"
+"SITE_613","ROOM_33698","APPL_143570","Bose","#4216500","Unknown","Unknown","Yes","Unknown","Yes","Yes","No"
+"SITE_616","ROOM_18817","APPL_1418","Panasonic","SA-AK300","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_616","ROOM_33105","APPL_126936","Panasonic","SA-AK630","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_616","ROOM_33105","APPL_6813","Technics","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_622","ROOM_21968","APPL_50114","Amazon","RS03GR","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_622","ROOM_3816","APPL_167731","Amazon","C78MP8","Unknown","No","Yes","Yes","Unknown","No",NA
+"SITE_626","ROOM_44005","APPL_151936","Vizio","Unknown","Unknown","Yes","No","No","Unknown","Yes","No"
+"SITE_627","ROOM_25886","APPL_96384","Vizio","SB4020E-AO","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_632","ROOM_20725","APPL_73235","Jensen","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_636","ROOM_8693","APPL_53936","Amazon","ECHO DOT","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_636","ROOM_41692","APPL_102297","Amazon","ECHO DOT","Unknown","No","Yes","Yes","No","No",NA
+"SITE_642","ROOM_12925","APPL_104932","Vizio","SB3821-D6","Unknown","No","No","No","Yes","No",NA
+"SITE_644","ROOM_11384","APPL_38538","LG","SK1","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_645","ROOM_38549","APPL_137929","Sony","SA-ST7","2013","No","No","Unknown","Yes","Yes","No"
+"SITE_647","ROOM_25114","APPL_80520","Magnavox","MSB2600/F7","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_648","ROOM_18781","APPL_112442","Sonos","Unknown","Unknown","Unknown","No","No","Yes","Yes","Unknown"
+"SITE_648","ROOM_404","APPL_129223","Amazon","C78MP8","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_648","ROOM_10391","APPL_57077","Sonos","Unknown","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_648","ROOM_22908","APPL_131574","Sonos","Unknown","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_649","ROOM_20274","APPL_53330","Other","Unknown","Unknown","No","No","Unknown","Yes","Yes","Unknown"
+"SITE_650","ROOM_20460","APPL_126482","Samsung","#HW-E450","Unknown","No","Yes","No","Yes","Yes","No"
+"SITE_652","ROOM_9870","APPL_143565","Klipsch","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_652","ROOM_6519","APPL_142928","Yamaha","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_652","ROOM_9870","APPL_50671","Klipsch","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_656","ROOM_15","APPL_169259","Samsung","HT-WS1","Unknown","Yes","Unknown","No","Yes","No",NA
+"SITE_66","ROOM_9499","APPL_46678","Bose","SOLO SOUNDBAR II","Unknown","No","Yes","No","Yes","No",NA
+"SITE_66","ROOM_9499","APPL_111398","Amazon","ALEXA ECHO","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_661","ROOM_7779","APPL_172841","ILive","ITB037BO","Unknown","No","No","No","Yes","No",NA
+"SITE_661","ROOM_42910","APPL_143383","Polk Audio","Unknown","Unknown","No","Yes","No","Yes","Yes","No"
+"SITE_661","ROOM_46177","APPL_85033","Sonos","S18","Unknown","No","No","No","Yes","No",NA
+"SITE_663","ROOM_9318","APPL_90439","Amazon","ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_665","ROOM_37341","APPL_90828","Yamaha","ATS-1070","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_665","ROOM_37341","APPL_27520","Amazon","Unknown","Unknown","Unknown","Yes","Yes","Unknown","No",NA
+"SITE_665","ROOM_41268","APPL_67924","Vizio","SB3821-C6","Unknown","Yes","No","No","Yes","Unknown","Unknown"
+"SITE_665","ROOM_41268","APPL_124832","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","No","No",NA
+"SITE_67","ROOM_2687","APPL_143947","LG","SL4Y","Unknown","No","Yes","No","Yes","No",NA
+"SITE_67","ROOM_45867","APPL_150637","Fender","RUMBLE 15","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_671","ROOM_15579","APPL_83081","Yamaha","YAS-207","Unknown","No","Unknown","No","Yes","Yes","No"
+"SITE_675","ROOM_36888","APPL_134106","Definitive","XTR SSA-3","Unknown","No","Unknown","No","Yes","Yes","Yes"
+"SITE_675","ROOM_36888","APPL_80604","Sony","STR-DN1050","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_677","ROOM_46267","APPL_134927","Philips","STA-300DQQQAA","Unknown","No","No","No","No","Yes","No"
+"SITE_677","ROOM_43786","APPL_133435","JBL","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_677","ROOM_46267","APPL_35771","Unknown","T758","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_677","ROOM_43786","APPL_108313","Yamaha","AX-V573","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_686","ROOM_3168","APPL_21805","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_69","ROOM_13791","APPL_125080","Samsung","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_691","ROOM_42287","APPL_34954","Bose","Unknown","Unknown","Unknown","Yes","Unknown","Yes","No",NA
+"SITE_695","ROOM_31370","APPL_172606","Bose","417788-WM8","Unknown","No","Unknown","No","Unknown","No",NA
+"SITE_696","ROOM_12412","APPL_14865","Vizio","SB3821-C6","Unknown","No","No","No","Yes","Yes","No"
+"SITE_699","ROOM_5147","APPL_110082","Sony","SS-B1000","Unknown","No","No","No","Yes","No",NA
+"SITE_7","ROOM_2189","APPL_45625","Samsung","SS-CT500","2009","No","No","No","Yes","Yes","Yes"
+"SITE_700","ROOM_34263","APPL_33852","Samsung","HW-J250","2016","Yes","No","No","Yes","No",NA
+"SITE_703","ROOM_12646","APPL_170100","Samsung","HW-M360","2018","Yes","No","No","Yes","Yes","Unknown"
+"SITE_71","ROOM_34143","APPL_51261","Vizio","V51-H6","Unknown","No","Unknown","Unknown","Yes","Yes","No"
+"SITE_71","ROOM_24925","APPL_12026","Sonos","753-34-024","Unknown","No","No","No","Yes","No",NA
+"SITE_71","ROOM_4508","APPL_13131","Bose","301-2RM038089","Unknown","No","No","No","No","No",NA
+"SITE_71","ROOM_34143","APPL_16552","Bose","WAVE RADIO III","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_710","ROOM_3210","APPL_129530","Polk Audio","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_717","ROOM_2124","APPL_34428","Polk Audio","MAGNIFI","Unknown","Unknown","No","No","Yes","Yes","No"
+"SITE_718","ROOM_41992","APPL_141718","Sonos","S14","Unknown","Unknown","Yes","No","Yes","No",NA
+"SITE_72","ROOM_14563","APPL_61193","Sony","SS-U610","Unknown","No","No","No","Yes","No",NA
+"SITE_721","ROOM_1078","APPL_111819","Vizio","SB3821-C6","Unknown","Yes","No","No","Yes","Yes","Unknown"
+"SITE_73","ROOM_19816","APPL_56027","Infinity","Unknown","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_73","ROOM_29740","APPL_167702","Sonos","Unknown","Unknown","Unknown","Yes","Unknown","No","No",NA
+"SITE_73","ROOM_19816","APPL_89106","Yamaha","P-500","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_732","ROOM_28854","APPL_102565","JBL","Unknown","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_735","ROOM_29365","APPL_139754","Yamaha","YAS-106","Unknown","No","No","No","Yes","No",NA
+"SITE_737","ROOM_15695","APPL_21884","Google","HOME","Unknown","No","Yes","Yes","No","No",NA
+"SITE_737","ROOM_20153","APPL_120462","Samsung","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_737","ROOM_3911","APPL_81942","TaoTronics","Unknown","Unknown","No","No","No","No","No",NA
+"SITE_738","ROOM_2569","APPL_30667","Bose","#418775","Unknown","No","No","No","Yes","No",NA
+"SITE_74","ROOM_7154","APPL_149123","Marantz","Unknown","Unknown","Unknown","No","No","No","No",NA
+"SITE_740","ROOM_21158","APPL_168347","Sony","SS-CT550W","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_751","ROOM_23636","APPL_80019","Pioneer","STUDIO 60 V3","Unknown","No","No","No","Unknown","No",NA
+"SITE_752","ROOM_9630","APPL_89790","Audio Vizio","Unknown","Unknown","Unknown","Yes","No","Yes","Yes","Yes"
+"SITE_753","ROOM_31538","APPL_146913","LG","SJ2","2021","Unknown","Unknown","Unknown","Yes","Yes","No"
+"SITE_758","ROOM_29547","APPL_133891","Bose","#418775","Unknown","No","No","No","Yes","No",NA
+"SITE_759","ROOM_41725","APPL_19605","Bedini","Q SERIES","Unknown","No","No","No","Yes","Yes","No"
+"SITE_759","ROOM_14627","APPL_16495","Amazon","Unknown","Unknown","No","Yes","Yes","Yes","No",NA
+"SITE_759","ROOM_29182","APPL_87573","Bedini","Q SERIES","Unknown","No","No","No","Yes","Yes","No"
+"SITE_761","ROOM_30966","APPL_62669","Samsung","HW-MM45C","Unknown","Yes","Yes","No","Yes","Yes","Yes"
+"SITE_763","ROOM_43600","APPL_103630","Miller and Kreisel","K17TTGM","Unknown","No","No","No","No","Yes","Yes"
+"SITE_766","ROOM_30090","APPL_94749","Unknown","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_769","ROOM_10952","APPL_7195","Vizio","SB36512-F6","Unknown","Yes","Unknown","No","Yes","No",NA
+"SITE_77","ROOM_40667","APPL_39378","JBL","BAR31","Unknown","No","No","No","Yes","Yes","No"
+"SITE_77","ROOM_20665","APPL_142486","Fosi Audio","BT20A","Unknown","No","No","No","No","No",NA
+"SITE_772","ROOM_28834","APPL_69618","Sony","SA-CT780","Unknown","No","Yes","Unknown","Yes","No",NA
+"SITE_773","ROOM_46366","APPL_92349","Elegant","SKU-288928","Unknown","No","No","No","No","No",NA
+"SITE_773","ROOM_27772","APPL_161152","Vizio","#SB3621N-E8","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_773","ROOM_46366","APPL_63762","Google","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_773","ROOM_27772","APPL_44362","Google","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_775","ROOM_15525","APPL_141090","Toshiba","SBX4250KN","Unknown","No","Yes","No","Yes","Yes","No"
+"SITE_776","ROOM_40763","APPL_61640","Polk Audio","Unknown","Unknown","Unknown","Yes","Unknown","Yes","Unknown","Unknown"
+"SITE_778","ROOM_5632","APPL_19703","Bose","MUSIC SYSTEM II","Unknown","No","No","No","No","No",NA
+"SITE_780","ROOM_41348","APPL_129450","Samsung","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_781","ROOM_41091","APPL_146333","Vizio","V51-H6","Unknown","No","No","No","Yes","Yes","No"
+"SITE_784","ROOM_34313","APPL_169756","Sony","SA-CT60","Unknown","No","No","No","Yes","Yes","No"
+"SITE_786","ROOM_18205","APPL_167791","RCA","RTS7010B","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_786","ROOM_30983","APPL_39496","Amazon","Unknown","Unknown","No","Yes","Yes","No","No",NA
+"SITE_788","ROOM_27818","APPL_36464","Google","NEST","Unknown","No","Yes","No","No","No",NA
+"SITE_79","ROOM_28060","APPL_134022","Vizio","STM257B","Unknown","No","No","No","Yes","No",NA
+"SITE_791","ROOM_24461","APPL_156416","Amazon","ALEXA ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_795","ROOM_6415","APPL_118808","Bose","#418775","Unknown","No","No","No","Yes","Unknown","Unknown"
+"SITE_796","ROOM_16524","APPL_68718","Sonos","Unknown","Unknown","Unknown","Unknown","No","Yes","Yes","No"
+"SITE_796","ROOM_41164","APPL_152407","Vizio","SB36512-F6","Unknown","Yes","No","No","Yes","Unknown","Unknown"
+"SITE_801","ROOM_43040","APPL_174884","Amazon","D9N29T","Unknown","No","Yes","Yes","Unknown","No",NA
+"SITE_801","ROOM_3159","APPL_123595","Sonos","Unknown","Unknown","No","Unknown","Unknown","Yes","No",NA
+"SITE_803","ROOM_4735","APPL_84508","Yamaha","ATS-2090","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_804","ROOM_22943","APPL_33586","Sonos","Unknown","Unknown","No","Yes","No","Yes","No",NA
+"SITE_806","ROOM_20325","APPL_26711","Sonos","Unknown","Unknown","Unknown","Unknown","No","Yes","Yes","Yes"
+"SITE_81","ROOM_20356","APPL_153764","Sony","CMT-BX20I","Unknown","No","No","No","Yes","No",NA
+"SITE_812","ROOM_1063","APPL_56029","Amazon","ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_813","ROOM_29417","APPL_49881","LG","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","Unknown","Unknown"
+"SITE_815","ROOM_9578","APPL_26102","Yamaha","ATS-1070","Unknown","No","No","No","Yes","No",NA
+"SITE_817","ROOM_32107","APPL_24779","Samsung","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_820","ROOM_3910","APPL_91138","Vizio","#SB3651-E6","Unknown","No","Yes","No","Yes","Yes","No"
+"SITE_823","ROOM_19646","APPL_108106","Amazon","RS03QR","Unknown","No","Yes","Yes","No","No",NA
+"SITE_828","ROOM_29150","APPL_7304","Bose","Unknown","Unknown","No","No","No","Yes","Unknown","Unknown"
+"SITE_833","ROOM_14129","APPL_2162","Kenwood","LR30707SKE","Unknown","No","No","No","No","Yes","No"
+"SITE_84","ROOM_5462","APPL_96967","Apple","HOME","Unknown","No","Yes","Yes","No","No",NA
+"SITE_84","ROOM_15042","APPL_43713","Apple","HOME","Unknown","No","Yes","Yes","No","No",NA
+"SITE_84","ROOM_5943","APPL_38449","Polk Audio","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_84","ROOM_40945","APPL_112880","Apple","HOME","Unknown","No","Yes","Yes","No","No",NA
+"SITE_84","ROOM_45932","APPL_30096","Sony","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_842","ROOM_25915","APPL_94829","Sony","Unknown","Unknown","No","No","No","No","Yes","Yes"
+"SITE_848","ROOM_6956","APPL_60797","Vizio","SB2920-C6","Unknown","Yes","No","No","Yes","No",NA
+"SITE_85","ROOM_30868","APPL_131367","Polk Audio","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_851","ROOM_10591","APPL_33743","LG","Unknown","Unknown","Unknown","Yes","Yes","Yes","No",NA
+"SITE_852","ROOM_46004","APPL_172879","Vizio","S3821W-CO","Unknown","Yes","Unknown","No","Yes","Yes","No"
+"SITE_856","ROOM_14498","APPL_131607","LG","SN5A","Unknown","Unknown","No","No","Yes","Yes","No"
+"SITE_858","ROOM_21834","APPL_164270","Vizio","Unknown","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_859","ROOM_45244","APPL_161091","Vizio","SB362AN-F6","Unknown","Yes","Unknown","No","Yes","Yes","Yes"
+"SITE_86","ROOM_24595","APPL_83261","Samsung","HW-MM55C","2018","No","No","Yes","Yes","Yes","No"
+"SITE_861","ROOM_3387","APPL_155374","Samsung","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_865","ROOM_28870","APPL_8242","Vizio","V51-H6","Unknown","No","Yes","No","Yes","No",NA
+"SITE_866","ROOM_28624","APPL_1748","Bose","MUSIC SYSTEM II","Unknown","No","No","No","No","No",NA
+"SITE_872","ROOM_15835","APPL_41893","Amazon","RSO3QR","Unknown","No","Yes","Yes","No","No",NA
+"SITE_872","ROOM_10668","APPL_173400","Samsung","Unknown","Unknown","No","Unknown","No","Yes","Yes","Yes"
+"SITE_872","ROOM_20017","APPL_16744","Vizio","SB2920-C6","Unknown","Yes","No","No","Yes","No",NA
+"SITE_872","ROOM_24729","APPL_103921","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_876","ROOM_29221","APPL_100968","Klipsch","Unknown","Unknown","No","Unknown","No","Yes","Yes","No"
+"SITE_877","ROOM_27219","APPL_46162","Yamaha","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_878","ROOM_36619","APPL_116890","Unknown","PAK MAGNIFIMAX","Unknown","No","No","No","Yes","Yes","No"
+"SITE_879","ROOM_32421","APPL_7442","TCL","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_879","ROOM_2125","APPL_6149","TCL","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_881","ROOM_1210","APPL_43167","Vizio","SB202N-G6M","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_882","ROOM_258","APPL_47200","Amazon","C7H6N3","Unknown","No","Yes","Yes","No","No",NA
+"SITE_882","ROOM_41262","APPL_106663","Amazon","ECHO DOT","Unknown","No","Yes","Yes","No","No",NA
+"SITE_882","ROOM_24825","APPL_102112","Amazon","PW3840KL","Unknown","No","Yes","Yes","No","No",NA
+"SITE_884","ROOM_4258","APPL_107152","Amazon","Unknown","Unknown","No","Yes","Yes","No","No",NA
+"SITE_884","ROOM_4258","APPL_67712","Sonos","Unknown","Unknown","Unknown","Unknown","Yes","No","No",NA
+"SITE_884","ROOM_8099","APPL_152831","Amazon","RS03QR","Unknown","No","Yes","Yes","No","No",NA
+"SITE_884","ROOM_21757","APPL_166120","Amazon","Unknown","Unknown","No","Yes","Yes","No","No",NA
+"SITE_884","ROOM_34815","APPL_147974","Sonos","Unknown","Unknown","Unknown","Unknown","Yes","No","No",NA
+"SITE_886","ROOM_19325","APPL_78071","Onkyo","C-7030","Unknown","No","No","No","No","Yes","No"
+"SITE_886","ROOM_12891","APPL_170326","Denon","TU-460","Unknown","No","No","No","Yes","Yes","No"
+"SITE_888","ROOM_12387","APPL_42281","Audio Vizio","#10612050248","Unknown","No","Unknown","Unknown","Yes","Unknown","Unknown"
+"SITE_894","ROOM_14941","APPL_115273","Samsung","HW-T400","Unknown","No","No","No","Yes","No",NA
+"SITE_897","ROOM_43084","APPL_117643","Klipsch","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","Yes","Yes"
+"SITE_897","ROOM_2971","APPL_37399","Polk Audio","MAGNIFIMAXBAR","Unknown","No","Yes","Yes","Yes","Yes","No"
+"SITE_899","ROOM_21716","APPL_152567","JVC","TH-L1","Unknown","No","No","No","Yes","Yes","No"
+"SITE_901","ROOM_20910","APPL_96769","Samsung","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_905","ROOM_12573","APPL_22670","Samsung","HW-FM45C","2013","No","Unknown","Unknown","No","No",NA
+"SITE_906","ROOM_12478","APPL_10627","Polk Audio","Unknown","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_908","ROOM_9377","APPL_142413","Vizio","SB2020N-G6","Unknown","Yes","No","No","Yes","No",NA
+"SITE_909","ROOM_11682","APPL_91831","Vizio","V51-H6","Unknown","No","No","Yes","Yes","Yes","No"
+"SITE_909","ROOM_33693","APPL_112697","Vizio","SB3821-C6 SOUNDBAR","Unknown","Yes","No","No","Yes","Yes","No"
+"SITE_91","ROOM_34165","APPL_61145","Panasonic","RX-DS620","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_91","ROOM_295","APPL_68821","Crate Acoustic","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_910","ROOM_4734","APPL_127750","Samsung","HW-FM55C","Unknown","No","Yes","No","Yes","Yes","Yes"
+"SITE_912","ROOM_39978","APPL_62122","Amazon","B7W64E","Unknown","No","Yes","Yes","No","No",NA
+"SITE_912","ROOM_27538","APPL_117347","Samsung","Unknown","Unknown","Unknown","No","No","Yes","Yes","No"
+"SITE_912","ROOM_27538","APPL_35723","Amazon","C78MP8","Unknown","No","Yes","Yes","Unknown","No",NA
+"SITE_912","ROOM_43162","APPL_58567","Amazon","Unknown","Unknown","No","Yes","Yes","No","No",NA
+"SITE_913","ROOM_20092","APPL_30372","Sonos","S14","Unknown","No","Yes","Unknown","Yes","No",NA
+"SITE_915","ROOM_32931","APPL_144271","Aiwa","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_916","ROOM_27464","APPL_85053","Amazon","ECHO DOT","Unknown","No","Yes","Yes","Yes","No",NA
+"SITE_916","ROOM_13319","APPL_145405","Sony","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_918","ROOM_22586","APPL_16626","Philips","CSS2133B/F7","Unknown","Unknown","No","No","No","Yes","No"
+"SITE_920","ROOM_45943","APPL_99225","Amazon","Unknown","Unknown","No","Yes","Yes","No","No",NA
+"SITE_921","ROOM_3624","APPL_101817","Sonos","941-06-962","Unknown","Unknown","Yes","Unknown","Yes","No",NA
+"SITE_923","ROOM_11001","APPL_66609","Audio Vizio","VSB211-V","Unknown","Unknown","Unknown","Unknown","Yes","Unknown","Unknown"
+"SITE_923","ROOM_11001","APPL_94369","Amazon","ECHO","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_924","ROOM_42879","APPL_170198","Vizio","#SB3621N—E8","Unknown","Yes","Yes","No","Yes","Yes","No"
+"SITE_925","ROOM_46545","APPL_62730","Harman/Kardon","HW-Q60R","Unknown","No","Unknown","No","Yes","Yes","No"
+"SITE_927","ROOM_37184","APPL_913","Samsung","HW-MM45","Unknown","Yes","Unknown","No","Yes","Yes","No"
+"SITE_928","ROOM_39949","APPL_121713","Sonos","PLAYBAR®","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_929","ROOM_35943","APPL_85414","LG","SLM3D","2020","No","No","No","Yes","Yes","No"
+"SITE_930","ROOM_8983","APPL_2710","Onkyo","DX-C390","Unknown","No","No","No","No","Yes","No"
+"SITE_930","ROOM_9750","APPL_81782","Yamaha","RX-V675","Unknown","No","No","No","No","Yes","No"
+"SITE_930","ROOM_14780","APPL_99138","Adcom","GTP-500II","Unknown","No","No","No","No","Yes","No"
+"SITE_931","ROOM_46646","APPL_150781","Bose","#418775","Unknown","No","No","No","Yes","No",NA
+"SITE_932","ROOM_41398","APPL_6743","ZVOX","Unknown","Unknown","Unknown","Unknown","No","Yes","No",NA
+"SITE_932","ROOM_41269","APPL_157348","Amazon","C78MP8","Unknown","No","Yes","Yes","Unknown","No",NA
+"SITE_940","ROOM_46331","APPL_111664","RCA","RTS7010B","Unknown","No","No","No","Yes","No",NA
+"SITE_95","ROOM_25050","APPL_139020","Samsung","HW-KM45C","Unknown","No","Yes","No","Yes","No",NA
+"SITE_950","ROOM_18641","APPL_147593","Samsung","HW-E450/ZA","Unknown","No","Unknown","Unknown","Yes","Yes","No"
+"SITE_956","ROOM_8691","APPL_123039","JBL","Unknown","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_956","ROOM_8691","APPL_61314","Amazon","ALEXA","Unknown","No","Yes","Yes","Unknown","No",NA
+"SITE_96","ROOM_43855","APPL_125021","Sonos","S18","Unknown","No","Yes","No","No","No",NA
+"SITE_96","ROOM_15647","APPL_167876","Amazon","ALEXA ECHO","Unknown","No","Yes","Yes","No","No",NA
+"SITE_96","ROOM_12221","APPL_121223","Vizio","S3851W-D4","Unknown","No","No","No","Yes","Yes","No"
+"SITE_96","ROOM_39667","APPL_123798","Udreamer","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_964","ROOM_2768","APPL_69796","Realistic","LAB-400","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_967","ROOM_41064","APPL_82481","ONN","Unknown","Unknown","Unknown","Yes","Yes","Yes","No",NA
+"SITE_967","ROOM_24495","APPL_30971","Polk Audio","SIGNA S1","Unknown","Yes","Yes","Yes","Yes","Yes","No"
+"SITE_979","ROOM_46524","APPL_18857","Samsung","HWK470","2016","No","No","No","Yes","Yes","No"
+"SITE_98","ROOM_33428","APPL_116638","Vizio","#10615070241","Unknown","Unknown","Unknown","No","Yes","Yes","No"
+"SITE_984","ROOM_22195","APPL_122554","Apple","A2374","Unknown","Yes","Yes","Yes","Yes","No",NA
+"SITE_987","ROOM_13336","APPL_89334","LG","FL5Y","2019","No","No","No","Yes","Yes","No"
+"SITE_987","ROOM_4662","APPL_1614","Samsung","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_991","ROOM_42298","APPL_128004","Polk Audio","SURROUNDBAR 3000 SPEAKER","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_992","ROOM_20979","APPL_148101","Amazon","Unknown","Unknown","No","Yes","Yes","Unknown","No",NA
+"SITE_994","ROOM_17966","APPL_130400","Sonos","Unknown","Unknown","Unknown","Yes","Yes","Yes","No",NA
+"SITE_994","ROOM_5957","APPL_156557","Sonos","Unknown","Unknown","Unknown","Yes","Yes","Yes","No",NA
+"SITE_995","ROOM_559","APPL_40467","Sony","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_997","ROOM_12988","APPL_115603","Vizio","VSB200","Unknown","No","No","No","Yes","No",NA
+"SITE_3048","ROOM_15137","APPL_40996","JBL","Unknown","Unknown","No","No","No","Yes","Yes","Yes"
+"SITE_3049","ROOM_9601","APPL_104181","Amazon","RS03QR","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_3053","ROOM_43740","APPL_25760","Google","GUIK2","Unknown","Unknown","Yes","Yes","Unknown","No",NA
+"SITE_3057","ROOM_43581","APPL_144782","Yamaha","ATS-1080","Unknown","Unknown","Yes","Unknown","Yes","No",NA
+"SITE_3075","ROOM_45901","APPL_15389","Super sonic","Unknown","Unknown","Unknown","Unknown","No","No","No",NA
+"SITE_3083","ROOM_18375","APPL_18336","Unknown","Unknown","Unknown","No","No","No","Yes","Unknown","Unknown"
+"SITE_3093","ROOM_37408","APPL_74184","Bose","Unknown","Unknown","No","Unknown","Unknown","Yes","No",NA
+"SITE_3101","ROOM_28721","APPL_33513","Yamaha","HTR5630","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_3101","ROOM_28721","APPL_158202","Technics","SL220","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_3108","ROOM_41439","APPL_171564","LG","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_3114","ROOM_21781","APPL_77543","Sonos","Unknown","Unknown","Unknown","Yes","No","No","Unknown","Unknown"
+"SITE_3114","ROOM_30727","APPL_169905","Sonos","S13","Unknown","No","Yes","Yes","No","No",NA
+"SITE_3114","ROOM_31170","APPL_40894","Apple","HOME MINI","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_3123","ROOM_21348","APPL_49050","Vizio","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_3123","ROOM_16117","APPL_35326","IIIP","Unknown","Unknown","Unknown","Unknown","No","Yes","Yes","Unknown"
+"SITE_3125","ROOM_44430","APPL_152594","JBL","Unknown","Unknown","No","Yes","No","Yes","No",NA
+"SITE_3132","ROOM_7622","APPL_102374","Unknown","Unknown","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_3133","ROOM_37118","APPL_154370","Sonos","Unknown","Unknown","Unknown","Unknown","Unknown","Yes","No",NA
+"SITE_3135","ROOM_12017","APPL_32769","LG","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_3141","ROOM_13423","APPL_168825","RCA","RT2870","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_3150","ROOM_6435","APPL_55348","Google","H0A","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_3151","ROOM_40560","APPL_151397","Sony","Unknown","Unknown","Unknown","Unknown","No","Yes","Yes","Unknown"
+"SITE_3159","ROOM_22115","APPL_2806","Other","#SE02","Unknown","No","No","No","No","No",NA
+"SITE_3166","ROOM_22020","APPL_110966","Samsung","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_3171","ROOM_42575","APPL_74672","Amazon","B7W64E","Unknown","Unknown","Yes","Yes","Unknown","No",NA
+"SITE_3182","ROOM_43415","APPL_134","DIGITAL PRODUCTS INT","ITB259B","2021","No","Unknown","No","Yes","No",NA
+"SITE_3190","ROOM_32946","APPL_39440","Bose","SOLO SOUND BAR 2","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_3201","ROOM_27428","APPL_52671","LG","LAS350B","2015","No","Unknown","Unknown","Yes","Yes","No"
+"SITE_3229","ROOM_611","APPL_84853","Vizio","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_3230","ROOM_30381","APPL_11353","Audio Vizio","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown"
+"SITE_3237","ROOM_24847","APPL_49282","Unknown","Unknown","Unknown","Unknown","Unknown","Unknown","No","No",NA
+"SITE_3242","ROOM_6906","APPL_156490","Amazon","A","Unknown","Unknown","Yes","Yes","No","Unknown","Unknown"
+"SITE_3243","ROOM_12172","APPL_28679","Yamaha","ATS-1060","Unknown","No","No","No","Yes","No",NA
+"SITE_3245","ROOM_16090","APPL_121557","Google","Unknown","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_3247","ROOM_25973","APPL_81544","Amazon","C78MP8","Unknown","Unknown","Yes","Yes","Unknown","No",NA
+"SITE_3247","ROOM_24442","APPL_144639","Amazon","C78MP8","Unknown","Unknown","Yes","Yes","Unknown","No",NA
+"SITE_3252","ROOM_23210","APPL_95868","Amazon","Unknown","Unknown","Unknown","Yes","Yes","No","Unknown","Unknown"
+"SITE_3259","ROOM_7957","APPL_4691","JBL","ND0005-DF0013787","Unknown","Unknown","No","No","Yes","Yes","No"
+"SITE_3267","ROOM_43808","APPL_67565","Amazon","Unknown","Unknown","No","Yes","Yes","No","No",NA
+"SITE_3272","ROOM_19831","APPL_154191","Samsung","HOW-FM45C/ZA","2013","Yes","No","No","Yes","No",NA
+"SITE_3274","ROOM_28476","APPL_50079","Vizio","Unknown","Unknown","No","No","No","No","No",NA
+"SITE_3279","ROOM_28425","APPL_113934","Unknown","Unknown","Unknown","No","Yes","Yes","No","No",NA
+"SITE_3294","ROOM_43836","APPL_55606","Google","Unknown","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_3300","ROOM_45830","APPL_135029","Amazon","Unknown","Unknown","Unknown","Yes","Yes","Unknown","No",NA
+"SITE_3301","ROOM_18447","APPL_158700","Sony","Unknown","Unknown","Unknown","Unknown","No","Yes","Yes","Yes"
+"SITE_3305","ROOM_28460","APPL_9686","Vizio","Unknown","Unknown","No","No","No","Yes","No",NA
+"SITE_3305","ROOM_28460","APPL_63372","Amazon","C2N6L4","Unknown","Unknown","Yes","Yes","Unknown","No",NA
+"SITE_3305","ROOM_14671","APPL_163760","Amazon","C2N6L4","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_3318","ROOM_28603","APPL_84624","Google","H0A","Unknown","Unknown","Yes","Yes","Unknown","No",NA
+"SITE_3318","ROOM_37811","APPL_132893","Amazon","B7W64E","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_3319","ROOM_34017","APPL_104229","Amazon","C76N8S","Unknown","No","No","Yes","No","No",NA
+"SITE_3319","ROOM_29839","APPL_107411","Amazon","C78MP8","Unknown","Unknown","Yes","Yes","Unknown","No",NA
+"SITE_3319","ROOM_7295","APPL_107835","Unknown","Unknown","Unknown","Unknown","No","No","Yes","No",NA
+"SITE_3320","ROOM_41831","APPL_1230","Amazon","D9N29T","Unknown","Unknown","Yes","No","Yes","No",NA
+"SITE_3320","ROOM_41831","APPL_164449","Amazon","D9N29T","Unknown","No","Yes","Yes","Yes","No",NA
+"SITE_3334","ROOM_18536","APPL_94943","Bose","Unknown","Unknown","No","No","No","Yes","Yes","No"
+"SITE_3338","ROOM_45799","APPL_4943","Yamaha","SR-C20A","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_3342","ROOM_27943","APPL_173649","Vizio","M SERIES 51","Unknown","No","No","No","Yes","Yes","Unknown"
+"SITE_3347","ROOM_2366","APPL_29011","Sony","Unknown","Unknown","No","No","No","Yes","Yes","Unknown"
+"SITE_3358","ROOM_36682","APPL_23872","Amazon","DOT 4","Unknown","No","Yes","Yes","Yes","No",NA
+"SITE_3358","ROOM_19468","APPL_104461","Amazon","B7W644","Unknown","Unknown","Yes","Yes","Unknown","No",NA
+"SITE_3361","ROOM_39901","APPL_62711","Vizio","#SB2820N-E0","Unknown","Yes","Unknown","No","Yes","Unknown","Unknown"
+"SITE_3362","ROOM_37552","APPL_58592","Amazon","Unknown","Unknown","No","Yes","Yes","No","No",NA
+"SITE_3366","ROOM_19990","APPL_21876","Amazon","ECHO SHOW","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_3366","ROOM_24559","APPL_97654","Amazon","ECHO DOT","Unknown","Unknown","Yes","No","No","No",NA
+"SITE_3372","ROOM_18875","APPL_4646","Samsung","HW-A550","2021","Yes","Unknown","No","Yes","Yes","No"
+"SITE_3386","ROOM_38115","APPL_134965","Amazon","RS03QR","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_3386","ROOM_39997","APPL_152279","Amazon","Unknown","Unknown","Unknown","Yes","Yes","No","No",NA
+"SITE_3407","ROOM_16912","APPL_114636","Samsung","HW-N450","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_3420","ROOM_34788","APPL_102719","Bose","SOLO SOUNDBAR II","Unknown","No","No","No","Yes","No",NA
+"SITE_3421","ROOM_5071","APPL_111791","Polk Audio","Unknown","Unknown","No","No","No","Yes","Yes","Unknown"
+"SITE_3421","ROOM_38510","APPL_74993","Audio Vizio","Unknown","Unknown","No","Unknown","No","Yes","No",NA
+"SITE_3421","ROOM_38510","APPL_65966","Vizio","SB4051-D5","Unknown","Unknown","No","No","No","No",NA

@@ -1,0 +1,80 @@
+﻿SiteID,Mechanical_ID,Ventilation_Grade,Ventilation_Type,Ventilation_Working,Ventilation_Controls,Ventilation_Use,Ventilation_With_Return
+SITE_1004,MECH_78118,Builder Grade,Controlled,Yes,On/off,0,No
+SITE_1030,MECH_76156,Builder Grade,Controlled,Yes,Manual thermostat - Digital,0,No
+SITE_1097,MECH_53850,Builder Grade,Controlled,Yes,Manual thermostat - Analog,0.25,Unknown
+SITE_112,MECH_78482,Builder Grade,Controlled,No,On/off,0,No
+SITE_1159,MECH_90645,Builder Grade,Controlled,Yes,On/off,0.75,No
+SITE_1177,MECH_52900,Builder Grade,Controlled,Yes,On/off,0.2,No
+SITE_1196,MECH_156644,Unknown,Unknown,Unknown,Unknown,Unknown,No
+SITE_1259,MECH_122297,Builder Grade,Controlled,Yes,On/off,24,No
+SITE_1276,MECH_40917,Panasonic or equivalent,Controlled,Yes,On/off,0,No
+SITE_1384,MECH_157312,Panasonic or equivalent,Controlled,Yes,On/off,0,No
+SITE_14,MECH_146667,Builder Grade,Controlled,Yes,On/off,Unknown,No
+SITE_1402,MECH_127728,Builder Grade,Controlled,Yes,On/off,0,No
+SITE_1406,MECH_110566,Panasonic or equivalent,Unknown,Yes,On/off,24,Unknown
+SITE_1411,MECH_26375,Builder Grade,Controlled,Yes,On/off,0,No
+SITE_1418,MECH_128808,Panasonic or equivalent,Controlled,Yes,Timer,12,No
+SITE_1424,MECH_122716,Builder Grade,Controlled,Yes,Timer,2,No
+SITE_1432,MECH_163567,Builder Grade,Controlled,Yes,On/off,0,No
+SITE_1435,MECH_119876,Builder Grade,Controlled,Yes,On/off,0.5,No
+SITE_1444,MECH_418,Builder Grade,Controlled,Yes,Manual thermostat - Analog,0,No
+SITE_1444,MECH_19595,Builder Grade,Controlled,Yes,Manual thermostat - Analog,0,No
+SITE_1444,MECH_118679,Builder Grade,Controlled,Yes,Manual thermostat - Analog,0,No
+SITE_1444,MECH_99179,Builder Grade,Controlled,Yes,Manual thermostat - Analog,0,No
+SITE_1519,MECH_51568,Panasonic or equivalent,Controlled,Yes,On/off,24,No
+SITE_1535,MECH_92285,Panasonic or equivalent,Controlled,Yes,On/off,24,No
+SITE_154,MECH_105697,Builder Grade,Non-controlled,Yes,None,Unknown,No
+SITE_154,MECH_133068,Builder Grade,Non-controlled,Yes,Unknown,Unknown,No
+SITE_1544,MECH_89772,Builder Grade,Controlled,Yes,On/off,24,No
+SITE_1562,MECH_95197,Builder Grade,Controlled,Yes,On/off,0,No
+SITE_1733,MECH_92216,Builder Grade,Controlled,Yes,On/off,0.5,No
+SITE_1773,MECH_13485,Builder Grade,Controlled,Yes,None,Unknown,Yes
+SITE_1802,MECH_167632,Builder Grade,Controlled,Yes,On/off,0.2,No
+SITE_1816,MECH_169918,Unknown,Unknown,Unknown,Unknown,Unknown,Yes
+SITE_1952,MECH_136381,Builder Grade,Controlled,Yes,Programmable thermostat,Unknown,No
+SITE_1985,MECH_5519,Builder Grade,Controlled,Yes,Manual thermostat - Digital,0,No
+SITE_284,MECH_164503,Panasonic or equivalent,Controlled,Yes,On/off,24,No
+SITE_364,MECH_168069,Builder Grade,Unknown,Yes,Timer,Unknown,No
+SITE_369,MECH_112261,Builder Grade,Controlled,Yes,On/off,0,No
+SITE_397,MECH_164478,Unknown,Unknown,Yes,On/off,Unknown,No
+SITE_416,MECH_54719,Builder Grade,Controlled,Yes,On/off,0.2,No
+SITE_534,MECH_83509,Builder Grade,Controlled,Yes,On/off,Unknown,No
+SITE_687,MECH_61960,Builder Grade,Controlled,Yes,On/off,24,No
+SITE_699,MECH_149094,Builder Grade,Controlled,Yes,On/off,Unknown,No
+SITE_746,MECH_173981,Builder Grade,Controlled,Yes,On/off,0,No
+SITE_808,MECH_96001,Unknown,Unknown,Unknown,Unknown,Unknown,No
+SITE_871,MECH_23649,Unknown,Unknown,Unknown,Unknown,Unknown,No
+SITE_900,MECH_38866,Builder Grade,Controlled,Yes,On/off,0.14,No
+SITE_972,MECH_155754,Builder Grade,Unknown,Unknown,Unknown,Unknown,No
+SITE_3053,MECH_28673,Panasonic or equivalent,Unknown,Yes,Unknown,Unknown,Unknown
+SITE_3054,MECH_140270,Builder Grade,Non-controlled,Yes,None,23,Unknown
+SITE_3059,MECH_126470,Unknown,Unknown,Yes,None,24,Unknown
+SITE_3110,MECH_69482,Unknown,Unknown,Yes,On/off,Unknown,Unknown
+SITE_3110,MECH_45572,Unknown,Unknown,Yes,On/off,Unknown,Unknown
+SITE_3118,MECH_93651,Unknown,Unknown,Yes,None,24,Yes
+SITE_3138,MECH_127102,Builder Grade,Unknown,Yes,None,24,Unknown
+SITE_3146,MECH_86464,Unknown,Unknown,Yes,None,24,Unknown
+SITE_3148,MECH_138930,Unknown,Unknown,Yes,None,24,Unknown
+SITE_3173,MECH_35724,Unknown,Non-controlled,Unknown,None,24,No
+SITE_3175,MECH_118095,Unknown,Unknown,Yes,None,Unknown,Unknown
+SITE_3195,MECH_126567,Unknown,Unknown,Yes,Timer,Unknown,Unknown
+SITE_3195,MECH_174544,Unknown,Unknown,Yes,On/off,Unknown,Unknown
+SITE_3203,MECH_163861,Builder Grade,Unknown,Yes,None,24,No
+SITE_3221,MECH_113060,Panasonic or equivalent,Unknown,Yes,None,24,No
+SITE_3221,MECH_46089,Panasonic or equivalent,Unknown,Yes,None,24,No
+SITE_3228,MECH_53854,NA,Unknown,Unknown,Unknown,Unknown,No
+SITE_3247,MECH_11247,Builder Grade,Unknown,Yes,On/off,0.1,Unknown
+SITE_3247,MECH_127522,Builder Grade,Unknown,Yes,On/off,Unknown,Unknown
+SITE_3261,MECH_33816,Unknown,Unknown,Yes,None,24,Unknown
+SITE_3281,MECH_134262,Builder Grade,Controlled,Yes,Timer,0.5,Unknown
+SITE_3286,MECH_5452,Unknown,Unknown,Yes,On/off,0,Unknown
+SITE_3286,MECH_129012,Unknown,Unknown,Yes,On/off,0,Unknown
+SITE_3286,MECH_156591,Unknown,Unknown,Yes,On/off,Unknown,Unknown
+SITE_3290,MECH_35624,Unknown,Unknown,Yes,On/off,0.25,Unknown
+SITE_3301,MECH_155289,Unknown,Unknown,Yes,Unknown,Unknown,Unknown
+SITE_3319,MECH_112465,Unknown,Unknown,Yes,Unknown,Unknown,Unknown
+SITE_3319,MECH_99790,Unknown,Unknown,Yes,Unknown,Unknown,Unknown
+SITE_3323,MECH_112562,Unknown,Unknown,Yes,None,24,Unknown
+SITE_3363,MECH_15945,Unknown,Unknown,Yes,Unknown,Unknown,Unknown
+SITE_3370,MECH_103218,Builder Grade,Unknown,Yes,None,24,Unknown
+SITE_3403,MECH_166669,Unknown,Unknown,Yes,None,Unknown,Unknown

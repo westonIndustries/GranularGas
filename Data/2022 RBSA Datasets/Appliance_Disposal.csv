@@ -1,0 +1,1255 @@
+﻿"SiteID","RoomID","ApplianceID","Make","Make_Other","Model","Vintage","Serial","WiFi_Capable","Motor_Power","Motor_Power_Units","Disposal_Missing_Model_Reason","Disposal_Missing_Model_Reason_Other"
+"SITE_10","ROOM_16318","APPL_44972","InSinkErator",NA,"BADGER 500-3","Unknown","#21081301321","No","0.5","HP",NA,NA
+"SITE_100","ROOM_3098","APPL_166834","InSinkErator",NA,"SELECT-6","Unknown","#22083010267","No","0.625","HP",NA,NA
+"SITE_1000","ROOM_32964","APPL_153572","InSinkErator",NA,"CONTRACTOR 333","Unknown","#09081637061","No","0.75","HP",NA,NA
+"SITE_1001","ROOM_8213","APPL_115215","InSinkErator",NA,"SELECT PLUS 8","Unknown","#21013026305","No","0.75","HP",NA,NA
+"SITE_1003","ROOM_30245","APPL_169211","InSinkErator",NA,"CONTRACTOR 333","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1004","ROOM_10328","APPL_116997","InSinkErator",NA,"BADGER 5-81","Unknown","#04064917912","No","0.5","HP",NA,NA
+"SITE_1005","ROOM_6312","APPL_169199","InSinkErator",NA,"EVERGRIND E202-2A","Unknown","#19071104956","No","0.5","HP",NA,NA
+"SITE_1007","ROOM_24901","APPL_30352","InSinkErator",NA,"#5-84A","Unknown","#14041852988","No","0.5","HP",NA,NA
+"SITE_101","ROOM_16774","APPL_159114","InSinkErator",NA,"COMPACT-P-1","Unknown","#11111525776","No","0.75","HP",NA,NA
+"SITE_1010","ROOM_44408","APPL_21995","Kenmore",NA,"#175605721","Unknown","#10041004953","No","0.75","HP",NA,NA
+"SITE_1011","ROOM_35445","APPL_29704","Other","Evergrind","E202-2","Unknown","#17011085111","No","0.5","HP",NA,NA
+"SITE_1014","ROOM_21794","APPL_150095","InSinkErator",NA,"E303-2","Unknown","#18103106172","No","0.625","HP",NA,NA
+"SITE_1015","ROOM_41236","APPL_20307","Waste King",NA,"GXP33C","2020","Unknown","No","0.33","HP",NA,NA
+"SITE_1016","ROOM_8156","APPL_6432","InSinkErator",NA,"#1-83","Unknown","#06061720873","No","0.33","HP",NA,NA
+"SITE_1018","ROOM_10704","APPL_32516","InSinkErator",NA,"BADGER 10S-2","Unknown","#10071518976","No","0.75","HP",NA,NA
+"SITE_1019","ROOM_34863","APPL_55292","InSinkErator",NA,"BADGER 1","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1021","ROOM_41289","APPL_82538","InSinkErator",NA,"COMPACT-2","Unknown","#190730550089","No","Unknown",NA,NA,NA
+"SITE_1022","ROOM_45248","APPL_83402","InSinkErator",NA,"#1-87A","Unknown","#16071055269","No","0.33","HP",NA,NA
+"SITE_1026","ROOM_18850","APPL_114803","Other","American Standard","CGWD93","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_1027","ROOM_30027","APPL_168860","InSinkErator",NA,"#5-75","Unknown","WE 76771614","No","0.5","HP",NA,NA
+"SITE_1028","ROOM_38264","APPL_80538","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1030","ROOM_32047","APPL_74538","Waste King",NA,"Unknown","Unknown","Unknown","No","0.75","HP","NO NAMEPLATE",NA
+"SITE_1032","ROOM_1889","APPL_90835","InSinkErator",NA,"#5-81A","Unknown","#05021640244","No","0.5","HP",NA,NA
+"SITE_1033","ROOM_30980","APPL_68989","InSinkErator",NA,"PRO SS","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1036","ROOM_11885","APPL_8895","InSinkErator",NA,"E101-2","Unknown","#15101016406","No","0.33","HP",NA,NA
+"SITE_1039","ROOM_17569","APPL_100617","Unknown",NA,"Unknown","Unknown","Unknown","Unknown","Unknown",NA,"Unknown",NA
+"SITE_104","ROOM_42246","APPL_76322","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_1041","ROOM_24279","APPL_154595","InSinkErator",NA,"#5-84A","Unknown","#16081330064","No","0.5","HP",NA,NA
+"SITE_1042","ROOM_46211","APPL_46513","InSinkErator",NA,"#1-87A","Unknown","#13041811875","No","0.33","HP",NA,NA
+"SITE_1044","ROOM_31724","APPL_117863","InSinkErator",NA,"#5-84","Unknown","#12091674509","No","0.5","HP",NA,NA
+"SITE_1046","ROOM_2757","APPL_116748","Viking",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"Unknown",NA
+"SITE_1047","ROOM_10514","APPL_157089","InSinkErator",NA,"#5-81","Unknown","#09051801560","No","0.5","HP",NA,NA
+"SITE_1049","ROOM_41375","APPL_103220","InSinkErator",NA,"SPACE SAVER XP-1","Unknown","#160443036040","No","0.75","HP",NA,NA
+"SITE_105","ROOM_32128","APPL_87478","InSinkErator",NA,"PREMIER","Unknown","#09071513951","No","0.75","HP",NA,NA
+"SITE_1052","ROOM_16484","APPL_88316","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1053","ROOM_17177","APPL_18016","InSinkErator",NA,"BADGER 100-1","Unknown","#19121298233","No","0.33","HP",NA,NA
+"SITE_1054","ROOM_29393","APPL_96038","Other","American Standard","ADD-1250","Unknown","Unknown","No","1","HP",NA,NA
+"SITE_1055","ROOM_6243","APPL_103733","Waste King",NA,"GXS75C","Unknown","2F0-049787-59","No","0.75","HP",NA,NA
+"SITE_1057","ROOM_22439","APPL_112215","InSinkErator",NA,"BADGER 500-1","Unknown","#16061042","No","0.5","HP",NA,NA
+"SITE_1058","ROOM_5584","APPL_78157","InSinkErator",NA,"SPACE SAVER P-1","Unknown","#10071587089","No","0.6","HP",NA,NA
+"SITE_1059","ROOM_32373","APPL_90833","InSinkErator",NA,"BADGER 5-89A","Unknown","#20071276929","No","0.5","HP",NA,NA
+"SITE_1061","ROOM_15032","APPL_2802","Other","Ace Hardware","#2000","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1062","ROOM_17880","APPL_136645","InSinkErator",NA,"BADGER5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1063","ROOM_15509","APPL_75256","InSinkErator",NA,"PRO750-2","Unknown","#17063063108","No","0.75","kW",NA,NA
+"SITE_1064","ROOM_35912","APPL_98120","InSinkErator",NA,"COMPACT","Unknown","#08021520605","No","0.75","HP",NA,NA
+"SITE_1065","ROOM_42983","APPL_38105","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","1","HP",NA,NA
+"SITE_1066","ROOM_35258","APPL_58740","InSinkErator",NA,"SELECT PLUS-6","Unknown","#20013009715","No","0.75","HP",NA,NA
+"SITE_1069","ROOM_13605","APPL_14593","Other","Sink Guard","SS170","Unknown","#1400008060500152","No","0.33","HP",NA,NA
+"SITE_1070","ROOM_4002","APPL_8698","Waste King",NA,"Unknown","Unknown","Unknown","No","0.75","HP","NO NAMEPLATE",NA
+"SITE_1071","ROOM_41638","APPL_26398","InSinkErator",NA,"#1-83","Unknown","#06071602483","No","0.3","HP",NA,NA
+"SITE_1072","ROOM_42765","APPL_144693","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_1074","ROOM_45325","APPL_47054","Waste King",NA,"LEGEND 3200","Unknown","1F5-04867-59","No","0.75","HP",NA,NA
+"SITE_1078","ROOM_8477","APPL_36178","General Electric",NA,"GFC100==03","Unknown","GV107866B","No","Unknown",NA,NA,NA
+"SITE_1078","ROOM_22021","APPL_9938","InSinkErator",NA,"#5-87 A","Unknown","#19041145580","No","Unknown",NA,NA,NA
+"SITE_108","ROOM_7714","APPL_105663","InSinkErator",NA,"EVOLUTION PRO 750","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_1082","ROOM_7660","APPL_42870","Other","Evergrind","#E101","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1087","ROOM_27111","APPL_83320","InSinkErator",NA,"#5-84","Unknown","#17091344108","No","0.5","HP",NA,NA
+"SITE_109","ROOM_43985","APPL_72355","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_1090","ROOM_23664","APPL_94375","InSinkErator",NA,"BADGER 5-89A","Unknown","#20071277015","No","Unknown",NA,NA,NA
+"SITE_1092","ROOM_22918","APPL_106777","InSinkErator",NA,"E101-2","Unknown","#16051160071","No","0.33","HP",NA,NA
+"SITE_1093","ROOM_16401","APPL_22596","InSinkErator",NA,"#5-84","Unknown","#17071131453","No","0.5","HP",NA,NA
+"SITE_1094","ROOM_5356","APPL_88599","InSinkErator",NA,"ESSENTIAL","Unknown","#07061740155","No","0.75","HP",NA,NA
+"SITE_1095","ROOM_23650","APPL_127767","InSinkErator",NA,"PRO 77","Unknown","Unknown","Unknown","1","HP",NA,NA
+"SITE_1099","ROOM_34801","APPL_82128","InSinkErator",NA,"PREMIER","Unknown","#08091518288","No","0.75","HP",NA,NA
+"SITE_11","ROOM_45221","APPL_43131","InSinkErator",NA,"333/SS-39","Unknown","LH 47717305","No","0.5","HP",NA,NA
+"SITE_1101","ROOM_13463","APPL_106881","Unknown",NA,"Unknown","Unknown","Unknown","Unknown","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_1102","ROOM_43119","APPL_134841","Waste King",NA,"GXP50C","Unknown","2J1-004267-59","No","0.5","HP",NA,NA
+"SITE_1103","ROOM_16295","APPL_97437","Waste King",NA,"EX50C","Unknown","281-175401-59","No","0.5","HP",NA,NA
+"SITE_1104","ROOM_40921","APPL_38810","InSinkErator",NA,"#EVERGRIND E101","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1105","ROOM_34173","APPL_124664","Whirlpool",NA,"#GC2000XE5","Unknown","FN71702740","No","0.5","HP",NA,NA
+"SITE_1107","ROOM_33514","APPL_157589","Waste King",NA,"LEGEND SERIES 8000","Unknown","1L5-10934-59","No","1","HP",NA,NA
+"SITE_1109","ROOM_22276","APPL_112934","InSinkErator",NA,"BADGER 15SS-1","Unknown","#14121825279","No","0.75","HP",NA,NA
+"SITE_111","ROOM_26336","APPL_19173","InSinkErator",NA,"BADGER 5XL-1","Unknown","#21061167740","No","0.5","HP",NA,NA
+"SITE_1111","ROOM_32450","APPL_117841","InSinkErator",NA,"#5-81A","Unknown","#10021708069","No","0.5","HP",NA,NA
+"SITE_1114","ROOM_15418","APPL_139342","InSinkErator",NA,"BADGER 900 PLUS-1","Unknown","#19031038159","No","0.75","HP",NA,NA
+"SITE_1115","ROOM_44068","APPL_116432","InSinkErator",NA,"PREMIER","Unknown","#09011737637","No","0.75","HP",NA,NA
+"SITE_1116","ROOM_32331","APPL_132940","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1117","ROOM_25181","APPL_54081","InSinkErator",NA,"5/84","Unknown","#17101230358","No","0.5","HP",NA,NA
+"SITE_1119","ROOM_19264","APPL_101399","Waste King",NA,"Unknown","Unknown","Unknown","No","0.75","HP","NO NAMEPLATE",NA
+"SITE_112","ROOM_35750","APPL_113763","Other","Ace Hardware","#4000","Unknown","Unknown","Unknown","Unknown",NA,NA,NA
+"SITE_1120","ROOM_4947","APPL_170083","Other","Premier","143052-1","Unknown","#14081640347","No","0.5","HP",NA,NA
+"SITE_1121","ROOM_8478","APPL_25780","InSinkErator",NA,"BADGER 5XP-6","Unknown","#21041133643","No","Unknown",NA,NA,NA
+"SITE_1122","ROOM_39352","APPL_112657","InSinkErator",NA,"BADGER 500","Unknown","#18011240264","No","0.5","HP",NA,NA
+"SITE_1124","ROOM_18066","APPL_41500","Kenmore",NA,"Unknown","Unknown","Unknown","No","0.5","HP","NO NAMEPLATE",NA
+"SITE_1127","ROOM_39196","APPL_113550","InSinkErator",NA,"SPACESAVER-XP-1","Unknown","#17093009720","No","0.75","HP",NA,NA
+"SITE_1129","ROOM_43399","APPL_16440","InSinkErator",NA,"#GC2000PE4","Unknown","FN01115446","No","0.5","HP",NA,NA
+"SITE_1130","ROOM_41757","APPL_5193","Kenmore",NA,"#60556","Unknown","Unknown","No","1","HP",NA,NA
+"SITE_1131","ROOM_40692","APPL_58940","InSinkErator",NA,"PRO 750-4","Unknown","#21081010725","No","0.75","HP",NA,NA
+"SITE_1132","ROOM_10935","APPL_55479","InSinkErator",NA,"BADGER 900 PLUS 1","Unknown","#18091456018","No","0.75","HP",NA,NA
+"SITE_1133","ROOM_37415","APPL_51786","InSinkErator",NA,"COMPACT-P","Unknown","#09111680358","No","0.75","HP",NA,NA
+"SITE_1137","ROOM_45963","APPL_44819","InSinkErator",NA,"BADGER 5-89A","Unknown","#20011376610","No","Unknown",NA,NA,NA
+"SITE_1138","ROOM_2630","APPL_61562","Other","Ace Hardware","2000-3","Unknown","#21101155697","No","0.5","HP",NA,NA
+"SITE_1140","ROOM_14086","APPL_91654","Waste King",NA,"GX50C","Unknown","1K8-74815-59","No","0.5","HP",NA,NA
+"SITE_1141","ROOM_9869","APPL_159377","General Electric",NA,"GFC110-23","Unknown","ZV117640B","No","0.5","HP",NA,NA
+"SITE_1143","ROOM_9444","APPL_151313","InSinkErator",NA,"SINKMASTER 750","Unknown","9C7-22723-9","No","0.5","HP",NA,NA
+"SITE_1149","ROOM_24600","APPL_172656","InSinkErator",NA,"BADGER1","Unknown","Unknown","No","0.43","HP",NA,NA
+"SITE_115","ROOM_42854","APPL_131296","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1150","ROOM_37168","APPL_169703","InSinkErator",NA,"BADGER 500-1","Unknown","#16051311335","No","0.5","HP",NA,NA
+"SITE_1152","ROOM_4728","APPL_150465","Kenmore",NA,"#175605811","Unknown","#12111005137","No","0.75","HP",NA,NA
+"SITE_1153","ROOM_29666","APPL_134941","InSinkErator",NA,"PRO333-11","Unknown","#04071740783","No","0.75","HP",NA,NA
+"SITE_1154","ROOM_6290","APPL_171226","InSinkErator",NA,"CONTRACTOR 333","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1156","ROOM_3620","APPL_140194","InSinkErator",NA,"#5-84A","Unknown","#16021140943","No","0.5","HP",NA,NA
+"SITE_1157","ROOM_4606","APPL_93742","InSinkErator",NA,"E101-2A","Unknown","#16061152720","No","0.3","HP",NA,NA
+"SITE_116","ROOM_22915","APPL_21528","InSinkErator",NA,"#5-84","Unknown","#15101164521","No","0.5","HP",NA,NA
+"SITE_1161","ROOM_45529","APPL_52200","Other","KitchenEater","KE1CORD","Unknown","1AB-33384-59","No","Unknown",NA,NA,NA
+"SITE_1161","ROOM_5931","APPL_153942","Other","KitchenEater","KE34CORD","Unknown","1M8-70705-59","No","Unknown",NA,NA,NA
+"SITE_1162","ROOM_20016","APPL_140446","Other","Evergrind","#E202","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1164","ROOM_44463","APPL_92240","InSinkErator",NA,"BADGER 5-84A","Unknown","#17021442821","No","0.5","HP",NA,NA
+"SITE_1165","ROOM_33939","APPL_5754","Unknown",NA,"WASTE KING LEGEND 1001","Unknown","1G4-07364-59","No","0.5","HP",NA,NA
+"SITE_1165","ROOM_2395","APPL_98955","Unknown",NA,"BONE CRUSHER MODEL 750","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1166","ROOM_2671","APPL_31063","InSinkErator",NA,"#5-84","Unknown","#10101645492","No","0.5","HP",NA,NA
+"SITE_117","ROOM_12775","APPL_130395","InSinkErator",NA,"BADGER 15 SS","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1170","ROOM_21654","APPL_61495","InSinkErator",NA,"CONTRACTOR 333-1","Unknown","#16081558031","No","0.75","HP",NA,NA
+"SITE_1171","ROOM_5309","APPL_137762","InSinkErator",NA,"BADGER 5-89A","Unknown","#21121254233","No","0.5","HP",NA,NA
+"SITE_1172","ROOM_19417","APPL_1148","InSinkErator",NA,"PRO 750-3A","Unknown","#21041240263","No","1","HP",NA,NA
+"SITE_1175","ROOM_44240","APPL_41300","InSinkErator",NA,"SELECT PLUS-1","Unknown","#15041263188","No","Unknown",NA,NA,NA
+"SITE_1176","ROOM_3399","APPL_161770","Kenmore",NA,"#17560572","Unknown","#09101013911","No","0.5","HP",NA,NA
+"SITE_118","ROOM_32254","APPL_49207","Unknown",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_1180","ROOM_5336","APPL_27096","InSinkErator",NA,"#1-83","Unknown","#08101828360","No","0.33","HP",NA,NA
+"SITE_1181","ROOM_36367","APPL_128883","InSinkErator",NA,"BADGER5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1182","ROOM_40322","APPL_90613","Sears",NA,"#175605621","Unknown","#03111055518","No","0.75","HP",NA,NA
+"SITE_1184","ROOM_38417","APPL_128834","InSinkErator",NA,"#5-81","Unknown","#08011617401","No","0.5","HP",NA,NA
+"SITE_119","ROOM_38458","APPL_114217","InSinkErator",NA,"WASTEKING SS2600","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1191","ROOM_11899","APPL_170200","Kenmore",NA,"Unknown","Unknown","Unknown","No","1","HP",NA,NA
+"SITE_1193","ROOM_43008","APPL_165704","Other","Emerson","E10P","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1194","ROOM_10641","APPL_159427","InSinkErator",NA,"BADGER 1","Unknown","Unknown","Unknown","0.33","HP",NA,NA
+"SITE_1195","ROOM_15809","APPL_99892","InSinkErator",NA,"#5-81","Unknown","#06021852044","No","0.5","HP",NA,NA
+"SITE_1196","ROOM_35759","APPL_139012","Other","Maintenance Warehouse","405750-4","Unknown","#14121626138","No","0.5","HP",NA,NA
+"SITE_1197","ROOM_17909","APPL_173467","InSinkErator",NA,"BADGER 7-1","Unknown","#06071506853","No","0.75","HP",NA,NA
+"SITE_1198","ROOM_18550","APPL_158529","Other","American Standard","ASD-125","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_12","ROOM_15520","APPL_122277","Other","Ace Hardware","#2000","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1200","ROOM_2957","APPL_101737","InSinkErator",NA,"#5-84","Unknown","#16101066598","No","0.5","HP",NA,NA
+"SITE_1202","ROOM_913","APPL_11023","InSinkErator",NA,"BADGER 500-1","Unknown","#15071287113","No","0.5","HP",NA,NA
+"SITE_1207","ROOM_43168","APPL_136902","Other","Evergrind","#E101","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1209","ROOM_23761","APPL_135135","Unknown",NA,"Unknown","Unknown","Unknown","Unknown","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_1210","ROOM_32999","APPL_88117","InSinkErator",NA,"PRO750-2","Unknown","#16033039009","No","0.75","HP",NA,NA
+"SITE_1212","ROOM_41745","APPL_5286","Waste King",NA,"Unknown","Unknown","Unknown","No","0.5","HP","NO NAMEPLATE",NA
+"SITE_1215","ROOM_8423","APPL_157360","InSinkErator",NA,"BADGER","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_1216","ROOM_27684","APPL_33868","InSinkErator",NA,"PRO 88OLT-5A","Unknown","#21071163132","No","0.875","HP",NA,NA
+"SITE_1219","ROOM_37065","APPL_153975","InSinkErator",NA,"#1-87","Unknown","#15021915537","No","0.33","HP",NA,NA
+"SITE_122","ROOM_26571","APPL_129791","InSinkErator",NA,"ESSENTIAL-1","Unknown","#15083056861","No","0.3","HP",NA,NA
+"SITE_1222","ROOM_33477","APPL_139340","InSinkErator",NA,"#5-81","Unknown","#08051659344","No","0.5","HP",NA,NA
+"SITE_1223","ROOM_4930","APPL_8038","InSinkErator",NA,"BADGER 900 PLUS","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1224","ROOM_14015","APPL_54901","InSinkErator",NA,"BADGER 15SS-1","Unknown","#12071639222","No","0.75","HP",NA,NA
+"SITE_1226","ROOM_17821","APPL_23805","Unknown",NA,"E202-2A","Unknown","#13072004807","No","0.5","HP",NA,NA
+"SITE_123","ROOM_22319","APPL_55199","Americana",NA,"ASD-1250","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_1231","ROOM_17264","APPL_32305","InSinkErator",NA,"BADGER900-2","Unknown","#21031506096","No","Unknown",NA,NA,NA
+"SITE_1232","ROOM_10156","APPL_54728","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1233","ROOM_24710","APPL_48971","Other","Anaheim Manufacturing","WASTE KING 2600","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_1234","ROOM_23198","APPL_26719","InSinkErator",NA,"#1-83","Unknown","#05011903210","No","0.33","HP",NA,NA
+"SITE_1237","ROOM_6505","APPL_89618","InSinkErator",NA,"#5-64","Unknown","#160412900722","No","0.5","HP",NA,NA
+"SITE_1238","ROOM_2179","APPL_15053","InSinkErator",NA,"SELECT-1","Unknown","#13021853346","No","0.625","HP",NA,NA
+"SITE_1239","ROOM_34291","APPL_138982","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1244","ROOM_30237","APPL_60044","Other","Sink Guard","#SE150","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1245","ROOM_21661","APPL_23481","InSinkErator",NA,"#5-38","Unknown","#52582176","No","0.5","HP",NA,NA
+"SITE_1246","ROOM_15727","APPL_71730","InSinkErator",NA,"BADGER 5-89-","Unknown","#21091042176","No","1","HP",NA,NA
+"SITE_1248","ROOM_19343","APPL_91276","Waste King",NA,"#2600","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_1250","ROOM_26952","APPL_59584","InSinkErator",NA,"#5-81","Unknown","#05061600161","No","0.5","HP",NA,NA
+"SITE_1252","ROOM_19836","APPL_80001","InSinkErator",NA,"#5-81A","Unknown","#06112008296","No","0.5","HP",NA,NA
+"SITE_1253","ROOM_10801","APPL_49200","Other","Evergrind","#E101","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1254","ROOM_27298","APPL_173018","Other","Evergrind","#E101","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1255","ROOM_9292","APPL_158731","InSinkErator",NA,"BADGER 100-1","Unknown","#14121561375","No","0.33","HP",NA,NA
+"SITE_1259","ROOM_28986","APPL_118070","InSinkErator",NA,"COMPACT P-1","Unknown","#14041802360","No","0.75","HP",NA,NA
+"SITE_1260","ROOM_45543","APPL_45580","InSinkErator",NA,"#1-87","Unknown","#16081270682","No","0.33","HP",NA,NA
+"SITE_1262","ROOM_4260","APPL_7040","InSinkErator",NA,"SELECT-1","Unknown","#13121718428","No","0.625","HP",NA,NA
+"SITE_1263","ROOM_43097","APPL_48097","InSinkErator",NA,"CONTRACTOR 333","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1265","ROOM_38040","APPL_92060","InSinkErator",NA,"FWD-HD-1","Unknown","#13101748278","No","0.33","HP",NA,NA
+"SITE_1270","ROOM_36378","APPL_121634","InSinkErator",NA,"PRO 750-3","Unknown","#20093030453","No","0.75","HP",NA,NA
+"SITE_1271","ROOM_8749","APPL_3832","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1272","ROOM_46741","APPL_133733","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1274","ROOM_10401","APPL_109928","Waste King",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"Unknown",NA
+"SITE_1278","ROOM_43993","APPL_59070","Other","Ace Hardware","#4000","Unknown","Unknown","No","0.625","HP",NA,NA
+"SITE_1279","ROOM_42447","APPL_76028","InSinkErator",NA,"#5-84A","Unknown","#12071864992","No","0.5","HP",NA,NA
+"SITE_1283","ROOM_23903","APPL_151892","InSinkErator",NA,"PRO EXCEL","Unknown","#07081576995","No","1","HP",NA,NA
+"SITE_1284","ROOM_26736","APPL_55455","Whirlpool",NA,"GC4000X0","Unknown","FNG3863884","No","0.5","HP",NA,NA
+"SITE_1285","ROOM_41201","APPL_81323","Waste King",NA,"#1001","Unknown","1D5-17280-59","No","0.5","HP",NA,NA
+"SITE_1287","ROOM_3213","APPL_40362","InSinkErator",NA,"BADGER 100","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1289","ROOM_42049","APPL_74788","KitchenAid",NA,"KCDC250X1","Unknown","FNJ0316595","No","0.625","HP",NA,NA
+"SITE_129","ROOM_29381","APPL_32672","KitchenAid",NA,"KCDB250G4","Unknown","FN71201992","No","1","HP",NA,NA
+"SITE_1290","ROOM_2888","APPL_158653","Other","Evergrind","E202-2A","Unknown","#19071104893","No","0.5","HP",NA,NA
+"SITE_1291","ROOM_37176","APPL_42517","InSinkErator",NA,"CONTRACTOR 333-1","Unknown","#15111303994","No","0.75","HP",NA,NA
+"SITE_1293","ROOM_22938","APPL_46280","InSinkErator",NA,"PROSS-4","Unknown","TA 66965730","No","0.75","HP",NA,NA
+"SITE_1295","ROOM_5691","APPL_67407","InSinkErator",NA,"ESSENTIAL-1","Unknown","#10081579110","No","0.75","HP",NA,NA
+"SITE_13","ROOM_2918","APPL_111270","InSinkErator",NA,"BADGER 500-1","Unknown","#16071425574","No","0.5","HP",NA,NA
+"SITE_1301","ROOM_19095","APPL_9664","Unknown",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_1302","ROOM_45872","APPL_28506","InSinkErator",NA,"PRO COMPACT","Unknown","#07011815437","No","0.75","HP",NA,NA
+"SITE_1304","ROOM_10996","APPL_1736","InSinkErator",NA,"SPACE SAVER-P-2","Unknown","#18063021410","No","0.625","HP",NA,NA
+"SITE_1304","ROOM_10996","APPL_76063","InSinkErator",NA,"PRESTIGE-1","Unknown","#19123070870","No","1","HP",NA,NA
+"SITE_1305","ROOM_13479","APPL_102953","Other","Emerson","E30-5","Unknown","NG54107572","No","0.5","HP",NA,NA
+"SITE_1305","ROOM_20978","APPL_41359","Waste King",NA,"SS2600","Unknown","OH4-13742-9","No","0.5","HP",NA,NA
+"SITE_1306","ROOM_16140","APPL_127735","Other","Ace Hardware","#1000","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1307","ROOM_26884","APPL_120316","InSinkErator",NA,"BADGER 900-1","Unknown","#16061241859","No","0.75","HP",NA,NA
+"SITE_131","ROOM_10109","APPL_87590","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_1313","ROOM_44544","APPL_145643","Waste King",NA,"GXP50C","Unknown","Unknown","No","0.6","HP",NA,NA
+"SITE_1315","ROOM_4724","APPL_114996","InSinkErator",NA,"333-76","Unknown","KG 44579750","No","0.5","HP",NA,NA
+"SITE_1317","ROOM_27342","APPL_57029","InSinkErator",NA,"BADGER 100-2","Unknown","#21111245829","No","0.5","HP",NA,NA
+"SITE_1318","ROOM_36381","APPL_61553","InSinkErator",NA,"333SS","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_132","ROOM_5441","APPL_162754","Whirlpool",NA,"Unknown","2011","Unknown","No","Unknown",NA,"Unknown",NA
+"SITE_1320","ROOM_15246","APPL_113573","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1321","ROOM_44782","APPL_57988","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1324","ROOM_20692","APPL_117558","InSinkErator",NA,"BADGER 500-1","Unknown","#15071357583","No","0.5","HP",NA,NA
+"SITE_1325","ROOM_18051","APPL_71298","InSinkErator",NA,"SPACE SAVER","Unknown","#07041535223","No","0.525","HP",NA,NA
+"SITE_1326","ROOM_24081","APPL_165926","Other","Joneca","258 WASTEMAID","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1327","ROOM_15417","APPL_173410","InSinkErator",NA,"PRO 880-1A","Unknown","#14041508163","No","0.875","HP",NA,NA
+"SITE_1328","ROOM_30158","APPL_155468","Kenmore",NA,"#60572","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_133","ROOM_4630","APPL_165277","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_1331","ROOM_36606","APPL_80511","InSinkErator",NA,"BADGER 100-1","Unknown","#15081419506","No","0.33","HP",NA,NA
+"SITE_1334","ROOM_11727","APPL_56120","InSinkErator",NA,"SPACE SAVER-P-1","Unknown","#14011673888","No","0.625","HP",NA,NA
+"SITE_1335","ROOM_14094","APPL_111834","InSinkErator",NA,"#1-87A","Unknown","#19101248957","No","1","HP",NA,NA
+"SITE_1336","ROOM_14063","APPL_118592","InSinkErator",NA,"#1-83","Unknown","#03122444822","No","0.33","HP",NA,NA
+"SITE_1337","ROOM_650","APPL_146316","InSinkErator",NA,"#5-87A","Unknown","#19091251137","No","0.5","HP",NA,NA
+"SITE_1338","ROOM_23515","APPL_61474","InSinkErator",NA,"EXCEL","Unknown","#07071548863","No","1","HP",NA,NA
+"SITE_1340","ROOM_9704","APPL_57155","InSinkErator",NA,"PRO 750-2A","Unknown","#19083067585","No","0.75","HP",NA,NA
+"SITE_1341","ROOM_17477","APPL_149327","InSinkErator",NA,"BADGER 9","Unknown","#09061737238","No","0.75","HP",NA,NA
+"SITE_1342","ROOM_18722","APPL_73956","Other","Sinkmaster","Unknown","Unknown","Unknown","No","0.75","HP","NO NAMEPLATE",NA
+"SITE_1344","ROOM_1917","APPL_6251","InSinkErator",NA,"PRO 750-3A","Unknown","#20103036119","No","0.75","HP",NA,NA
+"SITE_1345","ROOM_24661","APPL_167342","InSinkErator",NA,"BADGER 500-1","Unknown","#16081053969","No","0.5","HP",NA,NA
+"SITE_1347","ROOM_37544","APPL_107747","InSinkErator",NA,"#5-81","Unknown","#05091863553","No","0.5","HP",NA,NA
+"SITE_1348","ROOM_1930","APPL_38568","Unknown",NA,"MP50-1","Unknown","#05061622536","No","0.5","HP",NA,NA
+"SITE_1349","ROOM_20937","APPL_64518","InSinkErator",NA,"BADGER 900-1","Unknown","#13021826509","No","0.75","HP",NA,NA
+"SITE_135","ROOM_35153","APPL_2664","Other","Ace Hardware","4000-1","2009","Unknown","No","0.625","HP",NA,NA
+"SITE_1350","ROOM_17897","APPL_83586","Waste King",NA,"EX75C","Unknown","2B1-183259-59","No","0.75","HP",NA,NA
+"SITE_1351","ROOM_823","APPL_157071","Waste King",NA,"GXP50C","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1352","ROOM_1340","APPL_78776","Unknown",NA,"#5-84A","Unknown","#16031170376","No","0.5","HP",NA,NA
+"SITE_1353","ROOM_14850","APPL_51792","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1355","ROOM_10937","APPL_10100","InSinkErator",NA,"COMPACT-P-1","Unknown","#13081516992","No","0.75","HP",NA,NA
+"SITE_1358","ROOM_44616","APPL_38806","InSinkErator",NA,"BADGER 500-2","Unknown","#19081277623","No","1","HP",NA,NA
+"SITE_1359","ROOM_39933","APPL_165653","Waste King",NA,"Unknown","Unknown","Unknown","No","0.75","HP","NO NAMEPLATE",NA
+"SITE_136","ROOM_30330","APPL_22071","InSinkErator",NA,"333S-39","Unknown","RA592095","No","0.5","HP",NA,NA
+"SITE_1364","ROOM_39353","APPL_172896","Other","Ace Hardware","#1000","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1365","ROOM_30248","APPL_122954","InSinkErator",NA,"BADGER 900-1","Unknown","#18081017469","No","0.75","HP",NA,NA
+"SITE_1366","ROOM_25682","APPL_168993","Unknown",NA,"Unknown","Unknown","Unknown","No","0.75","HP","Unknown",NA
+"SITE_1367","ROOM_19457","APPL_156312","InSinkErator",NA,"COMPACT","Unknown","#07101518840","No","0.75","HP",NA,NA
+"SITE_1368","ROOM_35954","APPL_167044","InSinkErator",NA,"BADGER 5-89","Unknown","#21081532926","No","0.5","HP",NA,NA
+"SITE_137","ROOM_46106","APPL_15124","InSinkErator",NA,"SEPTIC ASSIST-2","Unknown","#10101513364","No","0.75","HP",NA,NA
+"SITE_1370","ROOM_23575","APPL_7301","InSinkErator",NA,"#5-81A","Unknown","#05011982008","No","0.5","HP",NA,NA
+"SITE_1373","ROOM_31982","APPL_81405","Other","Ace Hardware","ACE 2000-1","Unknown","#05081762053","No","0.5","HP",NA,NA
+"SITE_1374","ROOM_20488","APPL_161471","InSinkErator",NA,"SPACE SAVER-P-2","Unknown","#17033060929","No","0.625","HP",NA,NA
+"SITE_1376","ROOM_27739","APPL_110062","InSinkErator",NA,"BADGER 900-2","Unknown","#20101279844","No","0.75","HP",NA,NA
+"SITE_1378","ROOM_15714","APPL_75866","InSinkErator",NA,"Unknown","Unknown","Unknown","Unknown","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_138","ROOM_18001","APPL_54709","KitchenAid",NA,"KCDS100T1","2009","FNY2408911","No","1","HP",NA,NA
+"SITE_1381","ROOM_43980","APPL_48623","InSinkErator",NA,"BADGER 900-1","Unknown","#19081074644","No","0.75","HP",NA,NA
+"SITE_1383","ROOM_31843","APPL_43934","InSinkErator",NA,"BADGER 500-2","Unknown","#18051424714","No","0.5","HP",NA,NA
+"SITE_1387","ROOM_26224","APPL_68576","InSinkErator",NA,"#5-84A","Unknown","#16011192199","No","0.5","HP",NA,NA
+"SITE_1389","ROOM_20682","APPL_143940","InSinkErator",NA,"EVOLUTION SELECT-2","Unknown","#17083011545","No","0.625","HP",NA,NA
+"SITE_139","ROOM_27139","APPL_80565","InSinkErator",NA,"BADGER 5XP","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1393","ROOM_11953","APPL_1532","InSinkErator",NA,"SELECT-2","Unknown","#18083031988","No","0.63","HP",NA,NA
+"SITE_1395","ROOM_46009","APPL_86251","InSinkErator",NA,"PRO-333-1","Unknown","NL 55296098","No","0.5","HP",NA,NA
+"SITE_1396","ROOM_9455","APPL_75503","Other","Titan","T-1060","Unknown","Unknown","Unknown","Unknown",NA,NA,NA
+"SITE_1396","ROOM_13316","APPL_70240","Unknown",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_1399","ROOM_41665","APPL_35120","InSinkErator",NA,"BADGER 500-2","Unknown","#19041026669","No","0.5","HP",NA,NA
+"SITE_1403","ROOM_17987","APPL_130984","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1404","ROOM_38959","APPL_135646","InSinkErator",NA,"PRO ESSENTIAL","Unknown","#09081536912","No","0.75","HP",NA,NA
+"SITE_1409","ROOM_25030","APPL_48174","InSinkErator",NA,"BADGER 5-84","Unknown","#17091387465","No","0.5","HP",NA,NA
+"SITE_141","ROOM_33371","APPL_35438","Waste King",NA,"GXP33C","Unknown","Unknown","No","0.333","HP",NA,NA
+"SITE_1410","ROOM_44147","APPL_157134","InSinkErator",NA,"SPACE SAVER-P-2","Unknown","#16083111292","No","0.625","HP",NA,NA
+"SITE_1413","ROOM_22208","APPL_34328","Kenmore",NA,"17561090'","Unknown","#RE11867532","No","1","HP",NA,NA
+"SITE_1418","ROOM_6946","APPL_73737","InSinkErator",NA,"#5-87","Unknown","#18101124376","No","0.5","HP",NA,NA
+"SITE_142","ROOM_40972","APPL_160414","InSinkErator",NA,"BADGER 100-1","Unknown","#14041909520","Unknown","0.33","HP",NA,NA
+"SITE_1420","ROOM_366","APPL_32499","InSinkErator",NA,"PRO 880LT-5A","Unknown","#21071390457","Unknown","0.875","HP",NA,NA
+"SITE_1422","ROOM_18330","APPL_4617","InSinkErator",NA,"BADGER 500-1","Unknown","#17091272163","No","0.5","HP",NA,NA
+"SITE_1423","ROOM_6830","APPL_97339","InSinkErator",NA,"5 PLUS-7","Unknown","XK 83356653","No","0.625","HP",NA,NA
+"SITE_1427","ROOM_23451","APPL_13872","InSinkErator",NA,"PRO 750-2A","Unknown","#18063022633","No","0.75","HP",NA,NA
+"SITE_1429","ROOM_28374","APPL_45913","InSinkErator",NA,"#5-81","Unknown","#07101865772","No","0.5","HP",NA,NA
+"SITE_1432","ROOM_17754","APPL_94642","Waste King",NA,"LEGEND 111","Unknown","1F6-26957-59","No","Unknown",NA,NA,NA
+"SITE_1433","ROOM_8580","APPL_122913","InSinkErator",NA,"PRO COVER CONTROL","Unknown","#09101511372","No","0.75","HP",NA,NA
+"SITE_1437","ROOM_33149","APPL_29321","Other","Liberty Pump","#405","Unknown","Unknown","Unknown","0.5","HP",NA,NA
+"SITE_1437","ROOM_46012","APPL_2430","Whirlpool",NA,"#GC2000XE5","Unknown","FN43925307","No","0.5","HP",NA,NA
+"SITE_1439","ROOM_39789","APPL_35293","Unknown",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_144","ROOM_23757","APPL_82951","InSinkErator",NA,"#1-87A","Unknown","#11061786440","No","0.33","HP",NA,NA
+"SITE_1440","ROOM_3056","APPL_113599","Whirlpool",NA,"GC2000","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1440","ROOM_41402","APPL_111583","InSinkErator",NA,"SELECT PLUS 3","Unknown","#19103042755","No","0.75","HP",NA,NA
+"SITE_1441","ROOM_9374","APPL_105778","Whirlpool",NA,"#GC2000PE5","Unknown","FN13815069","No","0.5","HP",NA,NA
+"SITE_1443","ROOM_3786","APPL_100618","InSinkErator",NA,"777SS","Unknown","Unknown","No","1","HP",NA,NA
+"SITE_1444","ROOM_29146","APPL_93480","InSinkErator",NA,"SELECT PLUS-3","Unknown","#17113018484","Unknown","0.75","HP",NA,NA
+"SITE_1445","ROOM_27096","APPL_34451","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_1446","ROOM_40409","APPL_77495","InSinkErator",NA,"#5-38","Unknown","MD49891205","No","0.5","HP",NA,NA
+"SITE_1447","ROOM_7862","APPL_127124","InSinkErator",NA,"BADGER 15SS","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1449","ROOM_27761","APPL_161607","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1452","ROOM_22189","APPL_165906","InSinkErator",NA,"#444","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1454","ROOM_5293","APPL_60960","General Electric",NA,"GFC520V","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1457","ROOM_18774","APPL_142955","InSinkErator",NA,"BADGER 5 XP","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1458","ROOM_16969","APPL_78003","InSinkErator",NA,"#1-83","Unknown","#09091694134","No","0.33","HP",NA,NA
+"SITE_146","ROOM_41287","APPL_36245","InSinkErator",NA,"SELECT PLUS-3","Unknown","#171030719","No","0.75","HP",NA,NA
+"SITE_1461","ROOM_3800","APPL_170757","Waste King",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_1462","ROOM_2144","APPL_172645","InSinkErator",NA,"EVOLUTION PRO750","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1465","ROOM_34624","APPL_20879","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1467","ROOM_38863","APPL_33358","Maytag",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_1473","ROOM_6544","APPL_97912","InSinkErator",NA,"#1-87","Unknown","#16021226734","No","0.33","HP",NA,NA
+"SITE_1478","ROOM_7826","APPL_89897","InSinkErator",NA,"60S","Unknown","#05021596134","No","0.625","HP",NA,NA
+"SITE_1479","ROOM_18760","APPL_83994","InSinkErator",NA,"BADGER 1-90A","Unknown","#21121312404","No","0.5","HP",NA,NA
+"SITE_148","ROOM_10071","APPL_145837","InSinkErator",NA,"BADGER 900-1","Unknown","#14101528242","No","0.75","HP",NA,NA
+"SITE_1480","ROOM_22442","APPL_111376","Other","Master Plumber","MP35","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1486","ROOM_41937","APPL_102995","InSinkErator",NA,"SELECT-2","Unknown","#16103002268","No","0.625","HP",NA,NA
+"SITE_1487","ROOM_24380","APPL_95724","Waste King",NA,"Unknown","Unknown","Unknown","No","0.75","HP","NO NAMEPLATE",NA
+"SITE_1494","ROOM_28391","APPL_128087","Kenmore",NA,"Unknown","Unknown","Unknown","Unknown","0.75","HP","NO NAMEPLATE",NA
+"SITE_1496","ROOM_42740","APPL_59711","Waste King",NA,"EX75C","Unknown","2L0-072781-59","No","0.75","HP",NA,NA
+"SITE_1498","ROOM_18734","APPL_39839","InSinkErator",NA,"BADGER 1","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_15","ROOM_17080","APPL_98347","InSinkErator",NA,"#5-87","Unknown","#19011050174","No","0.5","HP",NA,NA
+"SITE_150","ROOM_45795","APPL_116730","InSinkErator",NA,"#5-81","Unknown","#08031763275","No","0.5","HP",NA,NA
+"SITE_1504","ROOM_44065","APPL_23620","InSinkErator",NA,"BADGER 5-89A","Unknown","#20121403606","No","0.5","HP",NA,NA
+"SITE_1505","ROOM_5337","APPL_141157","InSinkErator",NA,"#5-38","Unknown","KF44341579","No","0.5","HP",NA,NA
+"SITE_151","ROOM_28972","APPL_115422","InSinkErator",NA,"BADGER 1-87","Unknown","#13071898158","No","0.33","HP",NA,NA
+"SITE_1514","ROOM_26200","APPL_131593","InSinkErator",NA,"COMPACT-P-1","Unknown","#10041604055","No","0.75","HP",NA,NA
+"SITE_1516","ROOM_16148","APPL_53168","Unknown",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"Unknown",NA
+"SITE_152","ROOM_2842","APPL_120358","InSinkErator",NA,"ESSENTIAL-3A","Unknown","#18013062948","No","0.75","HP",NA,NA
+"SITE_1526","ROOM_45225","APPL_166682","InSinkErator",NA,"BADGER 500-1","Unknown","#16101394812","No","0.5","HP",NA,NA
+"SITE_1529","ROOM_3454","APPL_115197","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_153","ROOM_42521","APPL_145017","Waste King",NA,"UNIVERSAL XPRESS MOUNT","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1530","ROOM_15095","APPL_84441","InSinkErator",NA,"BADGER 15SS-1","Unknown","#19041218620","Unknown","0.75","HP",NA,NA
+"SITE_1531","ROOM_33965","APPL_157737","InSinkErator",NA,"BADGER 7","Unknown","#03101576378","No","0.75","HP",NA,NA
+"SITE_1532","ROOM_14624","APPL_101263","InSinkErator",NA,"EVOLUTION SEPTIC ASSIST","Unknown","Unknown","Unknown","Unknown",NA,NA,NA
+"SITE_1533","ROOM_5493","APPL_73921","InSinkErator",NA,"405750-6","Unknown","#21021298215","No","0.5","HP",NA,NA
+"SITE_1537","ROOM_15900","APPL_78864","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1538","ROOM_41573","APPL_142109","InSinkErator",NA,"BADGER 5SS","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1539","ROOM_39433","APPL_151743","Other","Evergrind","E202-3A","2019","#20021286699","No","0.5","HP",NA,NA
+"SITE_154","ROOM_15707","APPL_149602","Unknown",NA,"Unknown","Unknown","Unknown","Unknown","Unknown",NA,"Unknown",NA
+"SITE_1541","ROOM_19841","APPL_92808","Whirlpool",NA,"#GC1000XE4","Unknown","FN42405032","No","0.33","HP",NA,NA
+"SITE_1542","ROOM_37508","APPL_50573","Unknown",NA,"Unknown","Unknown","Unknown","Unknown","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_1547","ROOM_10941","APPL_166132","InSinkErator",NA,"#1-83","Unknown","#05091958248","No","0.33","HP",NA,NA
+"SITE_1548","ROOM_13335","APPL_99969","InSinkErator",NA,"SISST-2","Unknown","#17093079835","No","0.75","HP",NA,NA
+"SITE_1549","ROOM_19560","APPL_148583","InSinkErator",NA,"#5-81","Unknown","#05091956862","No","0.5","HP",NA,NA
+"SITE_155","ROOM_608","APPL_24130","InSinkErator",NA,"BADGER 100-1","Unknown","#16021468322","No","0.33","HP",NA,NA
+"SITE_1551","ROOM_4761","APPL_61454","InSinkErator",NA,"PR0333SS-1","Unknown","NL 55 1 99 8 42","No","0.75","HP",NA,NA
+"SITE_1553","ROOM_36822","APPL_150619","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_1555","ROOM_40837","APPL_150538","InSinkErator",NA,"PRO 750-2 A","Unknown","#18103056668","No","1","HP",NA,NA
+"SITE_1556","ROOM_3414","APPL_9541","InSinkErator",NA,"#5-84","Unknown","#15021776386","No","0.5","HP",NA,NA
+"SITE_1557","ROOM_36289","APPL_92512","Waste King",NA,"Unknown","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1560","ROOM_1407","APPL_133621","Unknown",NA,"PM3APC","Unknown","1K8-68445-59","No","0.75","HP",NA,NA
+"SITE_1563","ROOM_11646","APPL_157488","InSinkErator",NA,"BADGER 5XL-1","Unknown","#20071040901","No","0.5","HP",NA,NA
+"SITE_1565","ROOM_5562","APPL_156637","InSinkErator",NA,"ESTEEM","Unknown","#09111542608","No","1","HP",NA,NA
+"SITE_1567","ROOM_3794","APPL_154631","Other","Evergrind","E101-2","Unknown","#18081440140","No","0.33","HP",NA,NA
+"SITE_157","ROOM_19028","APPL_37986","Unknown",NA,"WASTE KING 111","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_1571","ROOM_40631","APPL_169351","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_1572","ROOM_17762","APPL_92521","InSinkErator",NA,"BADGER 500-3","Unknown","#20111417369","No","Unknown",NA,NA,NA
+"SITE_1574","ROOM_10961","APPL_48390","InSinkErator",NA,"BADGER 5-89","Unknown","#21061123057","No","0.5","HP",NA,NA
+"SITE_1575","ROOM_3006","APPL_53176","InSinkErator",NA,"#5-84","Unknown","#15121076979","No","0.5","HP",NA,NA
+"SITE_1579","ROOM_28137","APPL_26763","Unknown",NA,"TITAN T-1060","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_158","ROOM_18566","APPL_37844","Waste King",NA,"#8000","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_1581","ROOM_41495","APPL_28728","InSinkErator",NA,"EVOLUTION SUPREME","Unknown","Unknown","No","1","HP",NA,NA
+"SITE_1582","ROOM_11943","APPL_543","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1586","ROOM_7725","APPL_6359","Other","Ace Hardware","#2000","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1587","ROOM_9567","APPL_117","InSinkErator",NA,"#1-83","Unknown","#06071727962","No","0.33","HP",NA,NA
+"SITE_1588","ROOM_922","APPL_53374","InSinkErator",NA,"#1-79","Unknown","SK 65517417","No","0.33","HP",NA,NA
+"SITE_159","ROOM_41163","APPL_166901","InSinkErator",NA,"ESSENTIAL-1","Unknown","#13011509190","No","0.75","HP",NA,NA
+"SITE_1590","ROOM_35133","APPL_57807","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_1592","ROOM_21855","APPL_127781","InSinkErator",NA,"PREMIER-1","Unknown","#12021634906","No","0.75","HP",NA,NA
+"SITE_1594","ROOM_4566","APPL_85700","InSinkErator",NA,"PROSS","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1596","ROOM_15632","APPL_43195","Kenmore",NA,"#175601152","Unknown","1-309-100-8669","No","1","HP",NA,NA
+"SITE_1597","ROOM_42909","APPL_118824","InSinkErator",NA,"SPACE SAVER-P-2","Unknown","#18093032949","No","0.625","HP",NA,NA
+"SITE_1599","ROOM_23657","APPL_36629","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","NO NAMEPLATE",NA
+"SITE_160","ROOM_11925","APPL_101405","Unknown",NA,"WASTE KING 9980","Unknown","Unknown","No","1","HP",NA,NA
+"SITE_160","ROOM_11925","APPL_54858","KitchenAid",NA,"KADETTE 250","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1600","ROOM_18086","APPL_48084","InSinkErator",NA,"#1-87A","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1602","ROOM_13108","APPL_89811","InSinkErator",NA,"#5-84","Unknown","1-304-199-4056","No","0.5","HP",NA,NA
+"SITE_1604","ROOM_32633","APPL_169730","InSinkErator",NA,"BADGER 10S","Unknown","#09021526380","No","0.75","HP",NA,NA
+"SITE_1605","ROOM_16950","APPL_60185","Other","Sinkmaster","#750","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1607","ROOM_23661","APPL_98611","Waste King",NA,"Unknown","Unknown","Unknown","No","0.75","HP","NO NAMEPLATE",NA
+"SITE_1608","ROOM_29891","APPL_146278","InSinkErator",NA,"ESSENTIAL","Unknown","#08081543635","No","0.75","HP",NA,NA
+"SITE_1609","ROOM_17111","APPL_89642","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1611","ROOM_28725","APPL_50220","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1612","ROOM_29924","APPL_168723","InSinkErator",NA,"#5-75","Unknown","VG73020256","No","0.5","HP",NA,NA
+"SITE_1615","ROOM_521","APPL_108087","Other","Whirlaway","#191","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1617","ROOM_31496","APPL_32494","InSinkErator",NA,"BADGER 500-1","Unknown","#18021286571","No","0.5","HP",NA,NA
+"SITE_1617","ROOM_27227","APPL_139825","InSinkErator",NA,"PRO ESSENTIAL-2","Unknown","#13051931507","No","Unknown",NA,NA,NA
+"SITE_1618","ROOM_29254","APPL_170590","Unknown",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"Unknown",NA
+"SITE_1619","ROOM_12203","APPL_49007","InSinkErator",NA,"EVOLUTION PRO ESSENTIAL","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_162","ROOM_44706","APPL_165863","Other","Badger","Unknown","Unknown","Unknown","No","0.33","HP","NO NAMEPLATE",NA
+"SITE_1620","ROOM_42428","APPL_165439","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1620","ROOM_42428","APPL_101958","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1622","ROOM_40223","APPL_48952","InSinkErator",NA,"500-2","Unknown","#18091026055","No","0.5","HP",NA,NA
+"SITE_1624","ROOM_16367","APPL_132062","Other","Master Plumber","MP65","Unknown","Unknown","No","0.625","HP",NA,NA
+"SITE_1625","ROOM_33047","APPL_12354","InSinkErator",NA,"EVOLUTION PRO 750","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1627","ROOM_26048","APPL_10343","Kenmore",NA,"#17560113","Unknown","RD 11813948","No","0.5","HP",NA,NA
+"SITE_1628","ROOM_8658","APPL_161712","InSinkErator",NA,"BADGER500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1629","ROOM_16496","APPL_32732","InSinkErator",NA,"COMPACT-2","Unknown","#19063003385","No","0.75","HP",NA,NA
+"SITE_163","ROOM_18538","APPL_71903","InSinkErator",NA,"BADGER 500-1","Unknown","#16091023237","No","0.5","HP",NA,NA
+"SITE_1631","ROOM_10086","APPL_103244","InSinkErator",NA,"PRO VR CNTRL-2","Unknown","#12081846362","No","0.75","HP",NA,NA
+"SITE_1631","ROOM_10086","APPL_158492","InSinkErator",NA,"PRO CVR CNTRL-2","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1631","ROOM_17605","APPL_27180","KitchenAid",NA,"Unknown","Unknown","Unknown","No","0.5","HP","NO NAMEPLATE",NA
+"SITE_1632","ROOM_9162","APPL_12410","InSinkErator",NA,"BADGER5","Unknown","78984ISE","No","0.5","HP",NA,NA
+"SITE_1633","ROOM_29368","APPL_70676","InSinkErator",NA,"PRO 880LT-1","Unknown","#16013036256","No","Unknown",NA,NA,NA
+"SITE_1634","ROOM_40283","APPL_107633","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_1635","ROOM_11530","APPL_10309","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_164","ROOM_42776","APPL_89054","InSinkErator",NA,"BADGER 5XL-1","Unknown","#21121305558","No","1","HP",NA,NA
+"SITE_1640","ROOM_39871","APPL_174260","InSinkErator",NA,"#1-83","Unknown","#07071590530","No","0.33","HP",NA,NA
+"SITE_1643","ROOM_11169","APPL_115657","Whirlpool",NA,"GC1000","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1644","ROOM_26692","APPL_58389","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_1645","ROOM_20256","APPL_88165","InSinkErator",NA,"SPACE SAVER-P","Unknown","#09031587322","No","0.625","HP",NA,NA
+"SITE_1646","ROOM_22203","APPL_73773","InSinkErator",NA,"BADGER 5-89A","Unknown","#21081539230","No","1","HP",NA,NA
+"SITE_1647","ROOM_39274","APPL_108330","Waste King",NA,"Unknown","Unknown","Unknown","No","1","HP","NO NAMEPLATE",NA
+"SITE_165","ROOM_7696","APPL_96204","InSinkErator",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_166","ROOM_15343","APPL_138517","InSinkErator",NA,"SELECT PLUS-1","Unknown","#15093041357","No","0.75","HP",NA,NA
+"SITE_167","ROOM_46392","APPL_118580","Kenmore",NA,"#17560581","2005","#05121021206","No","0.75","HP",NA,NA
+"SITE_170","ROOM_46514","APPL_18355","InSinkErator",NA,"SPACESAVER P1","Unknown","#12041562015","No","0.625","HP",NA,NA
+"SITE_173","ROOM_10707","APPL_18059","InSinkErator",NA,"SPACE SAVER-P-1","Unknown","#15083041183","No","0.625","HP",NA,NA
+"SITE_1730","ROOM_44019","APPL_66542","InSinkErator",NA,"BADGER9","2019","Unknown","No","0.75","HP",NA,NA
+"SITE_1732","ROOM_18567","APPL_112326","InSinkErator",NA,"BADGER","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_1733","ROOM_17273","APPL_58837","InSinkErator",NA,"BAGER 5-84","Unknown","#15011837012","No","0.5","HP",NA,NA
+"SITE_1735","ROOM_36695","APPL_119629","Waste King",NA,"LEGEND","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_1739","ROOM_36066","APPL_79227","InSinkErator",NA,"BADGER 5XP","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1741","ROOM_31929","APPL_7970","InSinkErator",NA,"EVOLUTION PRO","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_1745","ROOM_21216","APPL_24648","Unknown",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_1746","ROOM_9166","APPL_31494","Unknown",NA,"WASTE KING 9920","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1747","ROOM_33170","APPL_107661","InSinkErator",NA,"#5-71","Unknown","#66462911","No","0.5","HP",NA,NA
+"SITE_1749","ROOM_5690","APPL_172562","InSinkErator",NA,"#777","Unknown","Unknown","No","1","HP",NA,NA
+"SITE_1750","ROOM_31417","APPL_156095","InSinkErator",NA,"BADGER","Unknown","Unknown","No","1","HP",NA,NA
+"SITE_1752","ROOM_36657","APPL_173755","InSinkErator",NA,"BADGER 100-1","Unknown","#18111298591","No","0.33","HP",NA,NA
+"SITE_1753","ROOM_33832","APPL_142328","InSinkErator",NA,"444-3","Unknown","WF 77060808","No","0.75","HP",NA,NA
+"SITE_1754","ROOM_27490","APPL_74326","General Electric",NA,"GREEN05P","Unknown","MR412159L","No","Unknown",NA,NA,NA
+"SITE_1757","ROOM_13173","APPL_161411","InSinkErator",NA,"#5-84","Unknown","#13061579599","No","0.5","HP",NA,NA
+"SITE_1759","ROOM_31544","APPL_121016","InSinkErator",NA,"Unknown","Unknown","Unknown","Unknown","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_1760","ROOM_42727","APPL_9486","InSinkErator",NA,"SPACE SAVER-P-1","Unknown","#13051600064","No","0.5","HP",NA,NA
+"SITE_1761","ROOM_41888","APPL_86706","InSinkErator",NA,"#1-87A","Unknown","#19031255821","No","0.5","HP",NA,NA
+"SITE_1762","ROOM_32409","APPL_40643","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1763","ROOM_15803","APPL_62472","InSinkErator",NA,"BADGER 100-1","Unknown","#17081380898","No","0.3","HP",NA,NA
+"SITE_1764","ROOM_34568","APPL_33150","Waste King",NA,"SS2600","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1768","ROOM_45980","APPL_27123","InSinkErator",NA,"BADGER 1555-1","Unknown","#16101290355","No","0.75","HP",NA,NA
+"SITE_1769","ROOM_12428","APPL_127128","Waste King",NA,"GXP33C","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1772","ROOM_46756","APPL_149919","Other","Legend - Lowes","Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_1773","ROOM_20348","APPL_34436","InSinkErator",NA,"BADGER","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_1776","ROOM_22432","APPL_160994","InSinkErator",NA,"SPACE SAVER","Unknown","#06111590450","No","0.625","HP",NA,NA
+"SITE_178","ROOM_13123","APPL_45686","InSinkErator",NA,"BADGER 1","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1781","ROOM_9599","APPL_109460","InSinkErator",NA,"ESSENTIAL","Unknown","#07041522072","No","Unknown",NA,NA,NA
+"SITE_1786","ROOM_13900","APPL_123592","Waste King",NA,"LEGEND 8000","2021","1F6-30914-59","No","Unknown",NA,NA,NA
+"SITE_1787","ROOM_30740","APPL_7406","InSinkErator",NA,"#1-83","Unknown","#06101718689","No","1","HP",NA,NA
+"SITE_179","ROOM_19354","APPL_50578","InSinkErator",NA,"PRO 750-3A","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1791","ROOM_16505","APPL_159365","InSinkErator",NA,"#17560572","Unknown","#09041015982","No","0.75","HP",NA,NA
+"SITE_1797","ROOM_46336","APPL_65486","InSinkErator",NA,"#5-84","Unknown","#14091981471","No","Unknown",NA,NA,NA
+"SITE_18","ROOM_23461","APPL_129055","InSinkErator",NA,"COMPACT-P-1","Unknown","#11031680815","No","0.75","HP",NA,NA
+"SITE_180","ROOM_26116","APPL_137759","InSinkErator",NA,"#5-81","2010","#10061703637","No","0.5","HP",NA,NA
+"SITE_1800","ROOM_29026","APPL_30796","Other","Ace Hardware","#1000","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1802","ROOM_3436","APPL_88962","InSinkErator",NA,"ESTEEM","Unknown","#10081732243","No","1","HP",NA,NA
+"SITE_1804","ROOM_41958","APPL_47386","InSinkErator",NA,"SELECT PLUS-3","Unknown","#17103079545","No","Unknown",NA,NA,NA
+"SITE_1814","ROOM_42648","APPL_3959","InSinkErator",NA,"SELECT-1","Unknown","#13041621756","No","0.625","HP",NA,NA
+"SITE_1815","ROOM_3476","APPL_104457","Unknown",NA,"ASD-225-SL","2021","Unknown","No","1.25","HP",NA,NA
+"SITE_1818","ROOM_43963","APPL_160650","Unknown",NA,"TITAN","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_182","ROOM_16332","APPL_25602","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.75","HP","NO NAMEPLATE",NA
+"SITE_1820","ROOM_37528","APPL_35745","Other","Sinkmaster","PM1PC","Unknown","9D8-31928-9","No","0.33","HP",NA,NA
+"SITE_1821","ROOM_12257","APPL_49045","Other","Whirlaway","#391","Unknown","9B1-02898-3","No","0.5","HP",NA,NA
+"SITE_1822","ROOM_29042","APPL_125990","InSinkErator",NA,"COMPACT-P-1","Unknown","#12031819033","No","0.75","HP",NA,NA
+"SITE_1823","ROOM_12053","APPL_128931","Waste King",NA,"ECO GREEN 1000","Unknown","0F9-18048-59","No","1","HP",NA,NA
+"SITE_1824","ROOM_27125","APPL_111234","Unknown",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_1825","ROOM_40182","APPL_47177","InSinkErator",NA,"5 PLUS-7","Unknown","#05091694297","No","0.5","HP",NA,NA
+"SITE_1826","ROOM_39","APPL_168447","InSinkErator",NA,"#5-84","Unknown","#17031375624","No","0.5","HP",NA,NA
+"SITE_1827","ROOM_29143","APPL_146240","InSinkErator",NA,"BADGER5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1829","ROOM_9034","APPL_115982","Other","Sinkmaster","#750","Unknown","9M3-34207-3","No","0.5","HP",NA,NA
+"SITE_183","ROOM_3676","APPL_61667","InSinkErator",NA,"BADGER 5","2016","Unknown","No","0.5","HP",NA,NA
+"SITE_1831","ROOM_12900","APPL_166384","InSinkErator",NA,"#1-83","Unknown","#05031735029","No","0.33","HP",NA,NA
+"SITE_1832","ROOM_23818","APPL_89287","InSinkErator",NA,"BADGER 5-89A","Unknown","#20031231978","No","1","HP",NA,NA
+"SITE_1833","ROOM_680","APPL_110141","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_1835","ROOM_24648","APPL_45190","Kenmore",NA,"Unknown","Unknown","Unknown","Unknown","1","HP","NO NAMEPLATE",NA
+"SITE_1838","ROOM_26291","APPL_40116","KitchenAid",NA,"KGIC300H1","Unknown","FN94401153","No","0.5","HP",NA,NA
+"SITE_1840","ROOM_2943","APPL_31999","InSinkErator",NA,"#5-81","Unknown","#04065036261","No","1","HP",NA,NA
+"SITE_1841","ROOM_34312","APPL_7706","InSinkErator",NA,"PREMIER","Unknown","#08021509472","No","0.75","HP",NA,NA
+"SITE_1842","ROOM_3736","APPL_168863","Waste King",NA,"LEGACY","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_1846","ROOM_19152","APPL_165893","InSinkErator",NA,"BADGER","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_1848","ROOM_42512","APPL_102772","InSinkErator",NA,"BADGER SXP-3","Unknown","#19011238019","No","1","HP",NA,NA
+"SITE_1849","ROOM_38446","APPL_167377","InSinkErator",NA,"SPACE SAVER-XP-1","Unknown","#17063088056","No","0.75","HP",NA,NA
+"SITE_1852","ROOM_23615","APPL_152187","InSinkErator",NA,"BADGER 500-1","Unknown","#14091869100","No","0.5","HP",NA,NA
+"SITE_186","ROOM_5541","APPL_30466","Waste King",NA,"LEGEND SERIES 8000","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1865","ROOM_30005","APPL_44005","Other","Evergrind","E101-1","Unknown","#08051783112","No","0.33","HP",NA,NA
+"SITE_1867","ROOM_2330","APPL_155265","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_1869","ROOM_33098","APPL_106297","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1873","ROOM_21567","APPL_23001","Other","American Standard","ADD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_1876","ROOM_12697","APPL_129206","InSinkErator",NA,"PRO750","Unknown","#21013027862","No","Unknown",NA,NA,NA
+"SITE_1877","ROOM_33285","APPL_17423","Americana",NA,"ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_1878","ROOM_18925","APPL_137099","InSinkErator",NA,"#1-87","Unknown","#17041055506","No","0.33","HP",NA,NA
+"SITE_188","ROOM_43469","APPL_12306","InSinkErator",NA,"SPACE SAVER-P","Unknown","#09121649502","No","0.625","HP",NA,NA
+"SITE_188","ROOM_42559","APPL_39566","Unknown",NA,"MP50-1","Unknown","#10051693456","No","0.5","HP",NA,NA
+"SITE_1885","ROOM_2057","APPL_135078","Whirlpool",NA,"#GC2000PE3","Unknown","FNW4316170","No","0.5","HP",NA,NA
+"SITE_1888","ROOM_13824","APPL_51447","Waste King",NA,"GXP50C","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1889","ROOM_46332","APPL_30149","InSinkErator",NA,"BADGER 15SS-1","Unknown","#14101910507","No","1","HP",NA,NA
+"SITE_189","ROOM_43630","APPL_88519","InSinkErator",NA,"BADGER 500-3","Unknown","#21091324709","No","1","HP",NA,NA
+"SITE_1891","ROOM_21421","APPL_2447","InSinkErator",NA,"PROSS-4","Unknown","#03111937489","No","0.75","HP",NA,NA
+"SITE_1891","ROOM_4239","APPL_126355","InSinkErator",NA,"555SS-1","Unknown","#WE76721709","No","0.75","HP",NA,NA
+"SITE_1892","ROOM_28961","APPL_153492","Other","Evergrind","E101-2A","Unknown","#18101294764","No","0.33","HP",NA,NA
+"SITE_1893","ROOM_27060","APPL_122800","InSinkErator",NA,"BADGER 5-84","Unknown","#11061824432","No","0.5","HP",NA,NA
+"SITE_1895","ROOM_43841","APPL_100032","InSinkErator",NA,"BADGER 5-81","Unknown","#10011903579","No","0.5","HP",NA,NA
+"SITE_1897","ROOM_22772","APPL_25313","InSinkErator",NA,"BADGER 500-1","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_1899","ROOM_2362","APPL_131496","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_190","ROOM_27074","APPL_68722","Unknown",NA,"FWD-2-5","Unknown","#18101522149","No","Unknown",NA,NA,NA
+"SITE_1902","ROOM_39043","APPL_25254","InSinkErator",NA,"COVER CONTROL","Unknown","#06111562982","No","0.75","HP",NA,NA
+"SITE_1904","ROOM_1976","APPL_107443","Other","Smart","Unknown","Unknown","Unknown","No","0.33","HP","Unknown",NA
+"SITE_1905","ROOM_7852","APPL_79798","General Electric",NA,"GFC290V02","Unknown","TR313963T","No","0.33","HP",NA,NA
+"SITE_1907","ROOM_2187","APPL_19752","InSinkErator",NA,"#1-87","Unknown","#13021803164","No","0.33","HP",NA,NA
+"SITE_1908","ROOM_11578","APPL_23758","InSinkErator",NA,"BADGER 600-1","Unknown","#17121423139","No","0.5","HP",NA,NA
+"SITE_1909","ROOM_59","APPL_64822","InSinkErator",NA,"#1-87","Unknown","#12051581550","No","0.33","HP",NA,NA
+"SITE_191","ROOM_31415","APPL_54648","Other","Costco","TITAN","2010","Unknown","No","0.75","HP",NA,NA
+"SITE_1910","ROOM_7195","APPL_114678","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1912","ROOM_35416","APPL_25695","Other","American Standard","ASD-125-SL","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_1915","ROOM_42837","APPL_115362","Other","Evergrind","#E202","Unknown","#20121175011","No","0.5","HP",NA,NA
+"SITE_192","ROOM_6886","APPL_9783","InSinkErator",NA,"TITAN","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_1924","ROOM_33728","APPL_171995","InSinkErator",NA,"BADGER 50","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1926","ROOM_27912","APPL_139477","Other","Evergrind","E202-2A","Unknown","#15101021505","No","0.5","HP",NA,NA
+"SITE_1928","ROOM_10515","APPL_63964","InSinkErator",NA,"BADGER 5-89A","Unknown","#20051028552","No","0.5","HP",NA,NA
+"SITE_1929","ROOM_34135","APPL_40132","InSinkErator",NA,"BADGER 500-3","Unknown","#20061044557","No","0.5","HP",NA,NA
+"SITE_193","ROOM_2067","APPL_64509","InSinkErator",NA,"EVOLUTION PRO COMPACT","Unknown","#12091556947","No","0.75","HP",NA,NA
+"SITE_1932","ROOM_17985","APPL_75684","InSinkErator",NA,"#5-84A","Unknown","#16101313108","No","0.5","HP",NA,NA
+"SITE_1933","ROOM_4","APPL_58508","InSinkErator",NA,"BADGER 15SS-3","Unknown","#22011248073","No","0.75","HP",NA,NA
+"SITE_1934","ROOM_36824","APPL_49601","Other","Evergrind","E202-3A","Unknown","#19071457400","No","0.5","HP",NA,NA
+"SITE_1935","ROOM_28220","APPL_135196","InSinkErator",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"Unknown",NA
+"SITE_1937","ROOM_7098","APPL_85239","InSinkErator",NA,"#175605540","2013","XF 14030388","No","0.75","HP",NA,NA
+"SITE_1938","ROOM_37665","APPL_133338","InSinkErator",NA,"#5-81","Unknown","#08031712922","No","0.5","HP",NA,NA
+"SITE_1942","ROOM_15480","APPL_63303","InSinkErator",NA,"BADGER 5-89A","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1944","ROOM_3473","APPL_122515","InSinkErator",NA,"444-5","Unknown","#05081810205","No","0.75","HP",NA,NA
+"SITE_1945","ROOM_15199","APPL_148706","InSinkErator",NA,"BADGER 1","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_1946","ROOM_16990","APPL_9242","InSinkErator",NA,"777SS-1","Unknown","#04023295015","No","1","HP",NA,NA
+"SITE_1948","ROOM_8520","APPL_15416","InSinkErator",NA,"BADGER 500 PLUS-2","Unknown","#18101230054","No","0.5","HP",NA,NA
+"SITE_1951","ROOM_4117","APPL_129267","Other","Evergrind","E202-2A","Unknown","#14041964543","No","0.5","HP",NA,NA
+"SITE_1953","ROOM_37810","APPL_112010","InSinkErator",NA,"BADGER 900-1","Unknown","#17061002601","No","0.75","HP",NA,NA
+"SITE_1954","ROOM_10593","APPL_52333","InSinkErator",NA,"CONTRACTOR 333-1","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_196","ROOM_34102","APPL_63916","Maytag",NA,"CHEF SERIES 1HP","Unknown","Unknown","No","1","HP",NA,NA
+"SITE_1968","ROOM_14524","APPL_48290","Unknown",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_197","ROOM_18636","APPL_84527","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1974","ROOM_13806","APPL_50423","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_1974","ROOM_13806","APPL_55173","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_198","ROOM_1908","APPL_93329","InSinkErator",NA,"BADGER","2011","Unknown","No","0.33","HP",NA,NA
+"SITE_1980","ROOM_24146","APPL_12725","Other","Evergrind","#E202","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_1985","ROOM_28507","APPL_172809","Other","Master Plumber","MP50-1","Unknown","XG 82259216","No","0.5","HP",NA,NA
+"SITE_1988","ROOM_24528","APPL_99117","InSinkErator",NA,"#5-75","Unknown","WL 78826247","No","0.5","HP",NA,NA
+"SITE_1991","ROOM_22906","APPL_35132","Kenmore",NA,"BADGER 5-89A","Unknown","#20021278842","No","0.5","HP",NA,NA
+"SITE_1996","ROOM_24549","APPL_63643","InSinkErator",NA,"BADGER 900-1","Unknown","#18021292248","Yes","0.75","HP",NA,NA
+"SITE_1997","ROOM_37675","APPL_32388","InSinkErator",NA,"SEPTIC ASSIST-1","Unknown","#08101573519","No","0.75","HP",NA,NA
+"SITE_1997","ROOM_37675","APPL_3510","InSinkErator",NA,"SPACE SAVER","Unknown","#09121648767","No","0.625","HP",NA,NA
+"SITE_2","ROOM_26228","APPL_84733","InSinkErator",NA,"#5-84A","Unknown","#14071895789","No","0.5","HP",NA,NA
+"SITE_200","ROOM_27856","APPL_38457","InSinkErator",NA,"SELECT PLUS-6","Unknown","#20013018146","No","0.75","HP",NA,NA
+"SITE_2007","ROOM_45075","APPL_144318","InSinkErator",NA,"#5-84A","Unknown","#14101622152","No","0.5","HP",NA,NA
+"SITE_2008","ROOM_28537","APPL_4486","InSinkErator",NA,"500-3","Unknown","#21011091743","No","1","HP",NA,NA
+"SITE_201","ROOM_10662","APPL_66059","Frigidaire",NA,"FDS-5","1994","#5635931","No","0.5","HP",NA,NA
+"SITE_2011","ROOM_44532","APPL_133896","InSinkErator",NA,"SPACE SAVER-XP-1","Unknown","1712300693Y","No","Unknown",NA,NA,NA
+"SITE_2013","ROOM_38138","APPL_137288","InSinkErator",NA,"EVOLUTION PRO EXCEL","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_2014","ROOM_11312","APPL_24220","InSinkErator",NA,"Unknown","Unknown","Unknown","Unknown","Unknown",NA,"Unknown",NA
+"SITE_2015","ROOM_16715","APPL_84827","InSinkErator",NA,"PRO77","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_2016","ROOM_37532","APPL_143934","InSinkErator",NA,"PRO SERIES 750","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_2017","ROOM_3775","APPL_48347","Waste King",NA,"#8000","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_202","ROOM_42729","APPL_51056","InSinkErator",NA,"F-87","Unknown","#18091390759","No","0.5","HP",NA,NA
+"SITE_2020","ROOM_31557","APPL_108136","InSinkErator",NA,"BADGER 9","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_2025","ROOM_45668","APPL_6643","InSinkErator",NA,"BADGER 5XL-1","Unknown","#21011327840","No","0.75","HP",NA,NA
+"SITE_2026","ROOM_39587","APPL_13442","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_2027","ROOM_12551","APPL_53772","Unknown",NA,"Unknown","Unknown","Unknown","Unknown","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_2029","ROOM_33911","APPL_103885","Waste King",NA,"1","Unknown","Unknown","No","1","HP",NA,NA
+"SITE_203","ROOM_5819","APPL_160973","Kenmore",NA,"#60514","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_2030","ROOM_35980","APPL_101701","InSinkErator",NA,"Unknown","Unknown","Unknown","No","1","HP","Unknown",NA
+"SITE_2031","ROOM_42248","APPL_83021","InSinkErator",NA,"B1-79","Unknown","RL 62277183","No","0.33","HP",NA,NA
+"SITE_2036","ROOM_22057","APPL_45080","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_2037","ROOM_9728","APPL_168225","General Electric",NA,"#1-87","Unknown","#18011202500","No","0.33","HP",NA,NA
+"SITE_2038","ROOM_44010","APPL_5428","InSinkErator",NA,"80S","Unknown","#05081601484","No","Unknown",NA,NA,NA
+"SITE_2041","ROOM_3622","APPL_160138","InSinkErator",NA,"5XP-3","Unknown","#15071307249","No","0.75","HP",NA,NA
+"SITE_2042","ROOM_33373","APPL_125522","InSinkErator",NA,"#1-87A","Unknown","#19011289569","No","0.5","HP",NA,NA
+"SITE_2043","ROOM_32078","APPL_171872","InSinkErator",NA,"#1-56","Unknown","#47211355","No","0.75","HP",NA,NA
+"SITE_2044","ROOM_10125","APPL_140000","InSinkErator",NA,"BADGER 5XL-1","Unknown","#21011257087","No","Unknown",NA,NA,NA
+"SITE_205","ROOM_42612","APPL_102284","InSinkErator",NA,"BADGER 1-90","Unknown","#21041205277","No","0.33","HP",NA,NA
+"SITE_206","ROOM_1352","APPL_76384","InSinkErator",NA,"BADGER 909-1","Unknown","#14111957651","No","0.75","HP",NA,NA
+"SITE_207","ROOM_41615","APPL_41048","Other","Whirlaway","Unknown","Unknown","Unknown","No","0.5","HP","NO NAMEPLATE",NA
+"SITE_208","ROOM_34178","APPL_39148","InSinkErator",NA,"#5-84","Unknown","#11071773760","No","0.5","HP",NA,NA
+"SITE_21","ROOM_28887","APPL_96274","InSinkErator",NA,"#5-84","Unknown","#14031926560","No","0.5","HP",NA,NA
+"SITE_210","ROOM_42507","APPL_66420","InSinkErator",NA,"PRO COMPACT","Unknown","#07081948196","No","0.75","HP",NA,NA
+"SITE_211","ROOM_36646","APPL_82828","KitchenAid",NA,"CUSTON 250","Unknown","Unknown","No","0.625","HP",NA,NA
+"SITE_215","ROOM_5983","APPL_151102","InSinkErator",NA,"#5-84","Unknown","#14111846020","No","0.5","HP",NA,NA
+"SITE_216","ROOM_16065","APPL_107915","InSinkErator",NA,"BADGER 9","Unknown","#09121737682","No","0.75","HP",NA,NA
+"SITE_217","ROOM_34959","APPL_49994","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_219","ROOM_35081","APPL_8435","InSinkErator",NA,"BADGER 15SS-1","Unknown","#18021159463","No","0.75","HP",NA,NA
+"SITE_220","ROOM_904","APPL_155727","InSinkErator",NA,"#5-75","Unknown","WF77098937","No","0.5","HP",NA,NA
+"SITE_221","ROOM_20603","APPL_173200","Other","Badger","100-1","Unknown","#15041404421","No","0.33","HP",NA,NA
+"SITE_222","ROOM_45192","APPL_131891","InSinkErator",NA,"PRO 880R","2013","#13081935364","No","0.875","HP",NA,NA
+"SITE_225","ROOM_13358","APPL_144738","Other","American Standard","Unknown","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_226","ROOM_17210","APPL_40631","InSinkErator",NA,"BADGER","2019","Unknown","No","0.33","HP",NA,NA
+"SITE_227","ROOM_33246","APPL_101496","InSinkErator",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"Unknown",NA
+"SITE_228","ROOM_31856","APPL_57762","Kenmore",NA,"#17560511","Unknown","MG1055625","No","0.75","HP",NA,NA
+"SITE_23","ROOM_2568","APPL_105085","InSinkErator",NA,"BADGER 500-1","Unknown","#16101038411","No","0.5","HP",NA,NA
+"SITE_230","ROOM_26392","APPL_83754","InSinkErator",NA,"#5-84","Unknown","#13091589479","No","0.5","HP",NA,NA
+"SITE_231","ROOM_16764","APPL_38312","InSinkErator",NA,"BADGER 500-2","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_232","ROOM_11235","APPL_34183","Unknown",NA,"Unknown","Unknown","Unknown","No","0.5","HP","NO NAMEPLATE",NA
+"SITE_233","ROOM_31174","APPL_62685","InSinkErator",NA,"555SS","Unknown","Unknown","Unknown","Unknown",NA,NA,NA
+"SITE_234","ROOM_44775","APPL_91987","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.333","HP",NA,NA
+"SITE_235","ROOM_14365","APPL_164149","InSinkErator",NA,"#1-878","Unknown","#18051084162","No","0.33","HP",NA,NA
+"SITE_236","ROOM_13365","APPL_101094","InSinkErator",NA,"EVOLUTION COMPACT","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_237","ROOM_18923","APPL_123440","InSinkErator",NA,"#333","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_238","ROOM_474","APPL_49057","InSinkErator",NA,"BADGER 900","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_24","ROOM_9298","APPL_20598","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_241","ROOM_1506","APPL_69346","KitchenAid",NA,"IMPERIAL","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_242","ROOM_18307","APPL_102182","InSinkErator",NA,"COMPACT-P","Unknown","#09011742010","No","0.75","HP",NA,NA
+"SITE_243","ROOM_42013","APPL_112559","InSinkErator",NA,"BADGER 5XP-6","Unknown","#21051117266","No","1","HP",NA,NA
+"SITE_244","ROOM_14058","APPL_7010","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_246","ROOM_20136","APPL_85122","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_247","ROOM_26201","APPL_170021","InSinkErator",NA,"PRO COMPACT","Unknown","#07101709826","No","Unknown",NA,NA,NA
+"SITE_248","ROOM_8463","APPL_90141","InSinkErator",NA,"ESTEEM-1","Unknown","#15043005908","No","1","HP",NA,NA
+"SITE_249","ROOM_3692","APPL_147553","InSinkErator",NA,"COMPACT","Unknown","#07012024431","No","0.75","HP",NA,NA
+"SITE_25","ROOM_7337","APPL_2069","InSinkErator",NA,"COMPACT","2008","#07081554385","No","0.75","HP",NA,NA
+"SITE_250","ROOM_25379","APPL_50019","InSinkErator",NA,"BADGER 100-1","2013","#13071599679","No","0.33","HP",NA,NA
+"SITE_251","ROOM_38348","APPL_2124","InSinkErator",NA,"BADGER15SS-3","Unknown","#22071054220","No","0.75","HP",NA,NA
+"SITE_252","ROOM_16092","APPL_50550","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.75","HP","Unknown",NA
+"SITE_253","ROOM_17518","APPL_13804","InSinkErator",NA,"#5-84A","2018","#17101132741","No","0.5","HP",NA,NA
+"SITE_255","ROOM_38001","APPL_42349","Waste King",NA,"GXP33C","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_256","ROOM_27733","APPL_93990","InSinkErator",NA,"PROS-4","Unknown","#03111938596","No","0.75","HP",NA,NA
+"SITE_260","ROOM_32427","APPL_158198","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_261","ROOM_7776","APPL_9608","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.33","HP","NO NAMEPLATE",NA
+"SITE_262","ROOM_45156","APPL_45033","InSinkErator",NA,"EVOLUTION PRO COMPACT","2010","#12071530709","No","0.75","HP",NA,NA
+"SITE_263","ROOM_26986","APPL_96790","InSinkErator",NA,"#5-81","2007","#07031788256","No","0.5","HP",NA,NA
+"SITE_264","ROOM_46793","APPL_103189","InSinkErator",NA,"BADGER 500-3A","Unknown","#22051330348","No","0.5","HP",NA,NA
+"SITE_267","ROOM_27194","APPL_131512","InSinkErator",NA,"#5-84","Unknown","#18031027582","No","0.5","HP",NA,NA
+"SITE_268","ROOM_39792","APPL_118947","InSinkErator",NA,"EVOLUTION SELECT","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_27","ROOM_16910","APPL_165129","InSinkErator",NA,"SELECT-2","Unknown","#17023071391","No","0.75","HP",NA,NA
+"SITE_270","ROOM_46599","APPL_933","InSinkErator",NA,"#5-87","2018","#18061283181","No","0.5","HP",NA,NA
+"SITE_272","ROOM_27815","APPL_134164","Waste King",NA,"LEGEND SERIES 9950","Unknown","Unknown","Unknown","Unknown",NA,NA,NA
+"SITE_273","ROOM_31064","APPL_154650","InSinkErator",NA,"#5-87A","1999","#19091083583","No","1","HP",NA,NA
+"SITE_276","ROOM_34606","APPL_95454","Unknown",NA,"T-1060","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_28","ROOM_33307","APPL_143159","InSinkErator",NA,"#1-81","Unknown","WK78489702","No","0.33","HP",NA,NA
+"SITE_281","ROOM_35824","APPL_129383","InSinkErator",NA,"#5-84A","Unknown","#12051732438","No","0.5","HP",NA,NA
+"SITE_282","ROOM_41715","APPL_127825","Kenmore",NA,"#17560572","Unknown","#08071018167","No","Unknown",NA,NA,NA
+"SITE_287","ROOM_20579","APPL_77121","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_288","ROOM_17324","APPL_147960","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_290","ROOM_36837","APPL_835","InSinkErator",NA,"#5-84","Unknown","#15101374696","No","0.5","HP",NA,NA
+"SITE_292","ROOM_27000","APPL_46739","InSinkErator",NA,"#1-87","Unknown","#14121990578","No","0.33","HP",NA,NA
+"SITE_294","ROOM_33176","APPL_109520","Other","Legend Series","WASTE KING 8000","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_295","ROOM_38724","APPL_28906","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_297","ROOM_27450","APPL_39622","InSinkErator",NA,"#444","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_299","ROOM_25811","APPL_43596","InSinkErator",NA,"#1-87A","Unknown","#19061444788","No","Unknown",NA,NA,NA
+"SITE_3","ROOM_42672","APPL_143970","InSinkErator",NA,"PRO ESSENTIAL","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_30","ROOM_20932","APPL_83772","InSinkErator",NA,"BADGER 10S-2","Unknown","#11091847531","No","0.75","HP",NA,NA
+"SITE_300","ROOM_5420","APPL_124830","InSinkErator",NA,"ESSENTIAL","Unknown","#08051801497","No","0.75","HP",NA,NA
+"SITE_301","ROOM_33670","APPL_99084","InSinkErator",NA,"SUPREME SS-2","Unknown","#18063082679","No","1","HP",NA,NA
+"SITE_302","ROOM_6698","APPL_110775","InSinkErator",NA,"BADGER 1","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_303","ROOM_26483","APPL_48066","Other","Ace Hardware","#47981","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_304","ROOM_36044","APPL_4688","Other","Titan","T-960","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_306","ROOM_32570","APPL_61275","InSinkErator",NA,"#5-84","Unknown","#11051595232","No","0.5","HP",NA,NA
+"SITE_308","ROOM_11911","APPL_99684","InSinkErator",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_311","ROOM_14321","APPL_5458","Waste King",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"Unknown",NA
+"SITE_312","ROOM_44500","APPL_64238","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_313","ROOM_31542","APPL_67621","InSinkErator",NA,"BADGER 500-2","Unknown","#19061426567","No","0.5","HP",NA,NA
+"SITE_314","ROOM_13500","APPL_79143","InSinkErator",NA,"#5-84","Unknown","#13071826276","No","0.5","HP",NA,NA
+"SITE_314","ROOM_13500","APPL_169830","InSinkErator",NA,"#5-84","Unknown","#13071826273","No","0.5","HP",NA,NA
+"SITE_316","ROOM_39089","APPL_31873","InSinkErator",NA,"#5-84","Unknown","#17031133222","No","0.5","HP",NA,NA
+"SITE_319","ROOM_14016","APPL_114235","InSinkErator",NA,"PRO ESSENTIAL","Unknown","#09091824703","No","0.75","HP",NA,NA
+"SITE_32","ROOM_10611","APPL_45106","Kenmore",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_320","ROOM_12468","APPL_67279","InSinkErator",NA,"#5-81","Unknown","#06011717202","No","0.5","HP",NA,NA
+"SITE_322","ROOM_19564","APPL_157261","Waste King",NA,"L-3200","Unknown","MEA-141-96-E","No","0.75","HP",NA,NA
+"SITE_324","ROOM_28769","APPL_59258","InSinkErator",NA,"BADGER 5-84","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_329","ROOM_1532","APPL_43003","InSinkErator",NA,"#1-79A","Unknown","SK 66120816","No","0.34","HP",NA,NA
+"SITE_33","ROOM_38660","APPL_759","Unknown",NA,"WASTE KING 8000","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_332","ROOM_44998","APPL_129928","InSinkErator",NA,"EVOLUTION PRO 750","Unknown","Unknown","Unknown","Unknown",NA,NA,NA
+"SITE_334","ROOM_43953","APPL_9917","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.75","HP","NO NAMEPLATE",NA
+"SITE_335","ROOM_32793","APPL_93818","InSinkErator",NA,"COMPACT-P","Unknown","#10011672656","No","0.75","HP",NA,NA
+"SITE_338","ROOM_36662","APPL_67199","InSinkErator",NA,"WASTE KING 111","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_339","ROOM_45487","APPL_166024","InSinkErator",NA,"#77","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_345","ROOM_13868","APPL_96033","InSinkErator",NA,"#5-84","Unknown","#16101237044","No","0.5","HP",NA,NA
+"SITE_346","ROOM_31317","APPL_18","InSinkErator",NA,"#5-81A","Unknown","#08121526816","No","0.5","HP",NA,NA
+"SITE_347","ROOM_25936","APPL_141687","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","NO NAMEPLATE",NA
+"SITE_349","ROOM_9980","APPL_58842","Other","Titan","D-75","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_353","ROOM_42197","APPL_50928","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_354","ROOM_16088","APPL_93950","InSinkErator",NA,"BADGER 1-90A","Unknown","#21031391981","No","Unknown",NA,NA,NA
+"SITE_355","ROOM_1422","APPL_143436","Other","American Standard","#ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_357","ROOM_19949","APPL_174847","Unknown",NA,"HUSH SS 500","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_358","ROOM_40450","APPL_49117","InSinkErator",NA,"BADGER 5-89A","Unknown","#19121241455","No","0.5","HP",NA,NA
+"SITE_359","ROOM_10129","APPL_165658","InSinkErator",NA,"BADGER 1","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_362","ROOM_22428","APPL_50702","InSinkErator",NA,"SPACE SAVER-XP-2","Unknown","#20113018496","No","0.75","HP",NA,NA
+"SITE_364","ROOM_42024","APPL_108538","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_365","ROOM_20425","APPL_6204","InSinkErator",NA,"COMPACT-P-1","Unknown","#16013094321","No","0.75","HP",NA,NA
+"SITE_366","ROOM_5910","APPL_133590","InSinkErator",NA,"#405700","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_367","ROOM_39988","APPL_35916","InSinkErator",NA,"#801","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_368","ROOM_8601","APPL_64633","InSinkErator",NA,"EVOLUTION PRO 750","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_369","ROOM_23062","APPL_136542","Other","Titan","T-1060","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_371","ROOM_33551","APPL_155951","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_372","ROOM_1433","APPL_94458","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_373","ROOM_1158","APPL_160984","InSinkErator",NA,"EVOLUTION ESSENTIAL","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_374","ROOM_25679","APPL_55120","Unknown",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"Unknown",NA
+"SITE_375","ROOM_23134","APPL_158886","InSinkErator",NA,"EVOLUTION SPACE SAVER XP","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_378","ROOM_23758","APPL_129579","Other","Sinkmaster","#801","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_379","ROOM_28608","APPL_114712","InSinkErator",NA,"BADGER 900-3","Unknown","#21111487035","No","0.75","HP",NA,NA
+"SITE_38","ROOM_12827","APPL_19239","InSinkErator",NA,"BADGER-5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_381","ROOM_29705","APPL_6490","InSinkErator",NA,"333/","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_382","ROOM_4110","APPL_6547","InSinkErator",NA,"Unknown","Unknown","Unknown","Unknown","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_383","ROOM_17911","APPL_101558","InSinkErator",NA,"SELECT-1","Unknown","#12071777299","No","Unknown",NA,NA,NA
+"SITE_384","ROOM_8897","APPL_58821","InSinkErator",NA,"BADGER 1","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_386","ROOM_24878","APPL_92195","InSinkErator",NA,"#1-87","Unknown","#17041227711","No","0.33","HP",NA,NA
+"SITE_387","ROOM_14189","APPL_74461","InSinkErator",NA,"PRO-750-2","Unknown","#18083039845","No","0.75","HP",NA,NA
+"SITE_39","ROOM_5660","APPL_137387","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_392","ROOM_38916","APPL_43737","KitchenAid",NA,"Unknown","Unknown","Unknown","No","0.75","HP","NO NAMEPLATE",NA
+"SITE_393","ROOM_11652","APPL_118923","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_394","ROOM_30180","APPL_66590","InSinkErator",NA,"BADGER 900","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_395","ROOM_6670","APPL_10363","InSinkErator",NA,"BADGER 1","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_397","ROOM_22403","APPL_157047","InSinkErator",NA,"#5-84A","Unknown","#16011336643","No","0.5","HP",NA,NA
+"SITE_399","ROOM_30401","APPL_143460","InSinkErator",NA,"BADGER 100","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_4","ROOM_41729","APPL_146236","Unknown",NA,"T-1060","Unknown","Unknown","No","1","HP",NA,NA
+"SITE_40","ROOM_29954","APPL_133396","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_400","ROOM_19645","APPL_53141","InSinkErator",NA,"#5-87A","Unknown","#19061012590","No","0.5","HP",NA,NA
+"SITE_401","ROOM_38346","APPL_136552","InSinkErator",NA,"PRO333SS-1","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_402","ROOM_37232","APPL_57606","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.75","HP","NO NAMEPLATE",NA
+"SITE_404","ROOM_8398","APPL_26114","InSinkErator",NA,"BADGER 5-89A","Unknown","#21011112603","No","0.5","HP",NA,NA
+"SITE_405","ROOM_38340","APPL_105502","InSinkErator",NA,"BADGER 900","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_407","ROOM_14165","APPL_32802","InSinkErator",NA,"BADGER 1XT-1","Unknown","#16051439122","No","0.33","HP",NA,NA
+"SITE_408","ROOM_4609","APPL_156090","InSinkErator",NA,"#5-81","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_41","ROOM_18411","APPL_126314","InSinkErator",NA,"ESSENTIAL","Unknown","#07071617690","No","0.75","HP",NA,NA
+"SITE_410","ROOM_23083","APPL_14933","InSinkErator",NA,"ESSENTIAL-5","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_411","ROOM_8233","APPL_62819","Waste King",NA,"Unknown","Unknown","Unknown","No","0.75","HP","NO NAMEPLATE",NA
+"SITE_412","ROOM_21989","APPL_134752","InSinkErator",NA,"444-3","Unknown","VH 73442201","No","0.75","HP",NA,NA
+"SITE_415","ROOM_12303","APPL_133198","InSinkErator",NA,"#5-84","2012","#12121904625","No","0.5","HP",NA,NA
+"SITE_416","ROOM_24678","APPL_156108","InSinkErator",NA,"BADGER 15SS-1","Unknown","#17121404870","No","Unknown",NA,NA,NA
+"SITE_417","ROOM_6992","APPL_127445","InSinkErator",NA,"BADGER I-90A","Unknown","2004138598-","No","0.33","HP",NA,NA
+"SITE_419","ROOM_25836","APPL_43476","Kenmore",NA,"#175605150","Unknown","LD9974526","No","0.75","HP",NA,NA
+"SITE_42","ROOM_20044","APPL_3356","InSinkErator",NA,"PRO SS","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_420","ROOM_15294","APPL_93448","Waste King",NA,"GX75C","2016","1G6-06636-59","Unknown","0.75","HP",NA,NA
+"SITE_421","ROOM_36554","APPL_145487","InSinkErator",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_423","ROOM_35926","APPL_109629","Waste King",NA,"GXP50C","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_426","ROOM_30655","APPL_145786","InSinkErator",NA,"BADGER 5XP-3","Unknown","#16011098520","No","0.75","HP",NA,NA
+"SITE_427","ROOM_133","APPL_152767","InSinkErator",NA,"#1-87","Unknown","#11121512050","No","0.333","kW",NA,NA
+"SITE_428","ROOM_20685","APPL_75522","InSinkErator",NA,"BADGER 500-1","Unknown","#14071678977","No","0.5","HP",NA,NA
+"SITE_429","ROOM_15812","APPL_121122","InSinkErator",NA,"77-72","Unknown","LB 46367894","No","0.75","HP",NA,NA
+"SITE_43","ROOM_12595","APPL_58702","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_430","ROOM_11309","APPL_113575","InSinkErator",NA,"BADGER 500-1","Unknown","#18031437389","No","0.5","HP",NA,NA
+"SITE_431","ROOM_36713","APPL_42735","Whirlpool",NA,"WHIRLAWAY 191","Unknown","Unknown","Unknown","0.33","HP",NA,NA
+"SITE_432","ROOM_14951","APPL_67615","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_433","ROOM_17657","APPL_81040","Maytag",NA,"DFC5500AAX-1","Unknown","10239948 CT","No","Unknown",NA,NA,NA
+"SITE_434","ROOM_17939","APPL_89771","InSinkErator",NA,"PRO ESSENTIAL","Unknown","#06071533019","No","0.75","HP",NA,NA
+"SITE_435","ROOM_45696","APPL_168315","InSinkErator",NA,"#5-81","Unknown","#06121890524","No","0.5","HP",NA,NA
+"SITE_436","ROOM_5222","APPL_129821","InSinkErator",NA,"BADGER 500-3A","Unknown","#20041237650","No","0.5","HP",NA,NA
+"SITE_437","ROOM_17761","APPL_69767","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.75","HP","Unknown",NA
+"SITE_439","ROOM_23742","APPL_58029","InSinkErator",NA,"BADGER 500-2","Unknown","#19031018717","No","0.5","HP",NA,NA
+"SITE_44","ROOM_32709","APPL_57700","InSinkErator",NA,"PRO77-7","Unknown","VH 73790262","No","1","HP",NA,NA
+"SITE_443","ROOM_37932","APPL_65231","InSinkErator",NA,"#5-84A","Unknown","#13121551376","No","0.5","HP",NA,NA
+"SITE_448","ROOM_43527","APPL_172564","Kenmore",NA,"Unknown","Unknown","Unknown","Unknown","0.5","HP","NO NAMEPLATE",NA
+"SITE_449","ROOM_34314","APPL_17110","KitchenAid",NA,"KCDI250X3","Unknown","FNS4513382","No","0.75","HP",NA,NA
+"SITE_45","ROOM_12630","APPL_32562","InSinkErator",NA,"BADGER 5","Unknown","Unknown","Unknown","0.5","HP",NA,NA
+"SITE_451","ROOM_40233","APPL_96553","Other","True Value","MP35","Unknown","WG 77620937","No","0.33","HP",NA,NA
+"SITE_452","ROOM_21763","APPL_129759","InSinkErator",NA,"#5-81","Unknown","#10081694900","No","0.5","HP",NA,NA
+"SITE_454","ROOM_20501","APPL_85416","Other","Joneca","T1060","2005","GN12-108282","No","Unknown",NA,NA,NA
+"SITE_455","ROOM_14340","APPL_147082","Waste King",NA,"EX50C","Unknown","2A0-16155-59","No","0.5","HP",NA,NA
+"SITE_456","ROOM_24174","APPL_117963","InSinkErator",NA,"SEPTIC ASSIST-2","Unknown","#17023035285","No","0.75","HP",NA,NA
+"SITE_457","ROOM_40547","APPL_117119","InSinkErator",NA,"#5-87","2018","#18071350318","No","0.5","HP",NA,NA
+"SITE_459","ROOM_13696","APPL_94119","Waste King",NA,"GXP50C","Unknown","2M0-029218-59","No","0.5","HP",NA,NA
+"SITE_46","ROOM_20793","APPL_5788","InSinkErator",NA,"BADGER5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_460","ROOM_17625","APPL_73178","InSinkErator",NA,"#5-75","Unknown","XD81103737","No","0.5","HP",NA,NA
+"SITE_461","ROOM_28457","APPL_83279","InSinkErator",NA,"BADGER 900-1","Unknown","#18051250620","No","0.76","HP",NA,NA
+"SITE_462","ROOM_5845","APPL_172944","InSinkErator",NA,"EVOLUTION EXCEL","Unknown","Unknown","No","1","HP",NA,NA
+"SITE_463","ROOM_23234","APPL_152047","InSinkErator",NA,"#5-81","Unknown","#06121890383","No","0.5","HP",NA,NA
+"SITE_465","ROOM_32389","APPL_160908","InSinkErator",NA,"TITAN D-75 DELUXE","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_466","ROOM_13601","APPL_97032","InSinkErator",NA,"BADGER 100","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_467","ROOM_1477","APPL_173450","InSinkErator",NA,"#1-83","Unknown","#07061815013","No","0.33","HP",NA,NA
+"SITE_469","ROOM_41769","APPL_46262","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.33","HP","OTHER","NO MODEL NUMBER ON NAMEPLATE"
+"SITE_472","ROOM_24507","APPL_164305","InSinkErator",NA,"SPACE SAVER-XP-2","Unknown","#21061085581","No","0.75","HP",NA,NA
+"SITE_474","ROOM_43291","APPL_62165","InSinkErator",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_475","ROOM_44113","APPL_155100","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_480","ROOM_11232","APPL_76548","InSinkErator",NA,"PRO 750-2","Unknown","#18053032986","No","0.75","HP",NA,NA
+"SITE_482","ROOM_33200","APPL_28185","InSinkErator",NA,"444-5","Unknown","#06041877793","No","0.75","HP",NA,NA
+"SITE_483","ROOM_8080","APPL_140544","InSinkErator",NA,"BADGER 5 PLUS","Unknown","Unknown","No","0.625","HP",NA,NA
+"SITE_487","ROOM_5365","APPL_12534","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_490","ROOM_23154","APPL_125826","InSinkErator",NA,"#5-81","2009","#09091685619","No","0.5","HP",NA,NA
+"SITE_491","ROOM_22884","APPL_128203","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_492","ROOM_29726","APPL_51130","Waste King",NA,"GXP33C","2017","1F6-08727-59","No","0.33","HP",NA,NA
+"SITE_493","ROOM_9098","APPL_132323","InSinkErator",NA,"#5-84","2016","#16091306905","No","0.5","HP",NA,NA
+"SITE_495","ROOM_15191","APPL_68378","InSinkErator",NA,"#5-71","Unknown","SK 65967937","No","0.5","HP",NA,NA
+"SITE_497","ROOM_16142","APPL_27949","InSinkErator",NA,"#5-84A","Unknown","#12121688879","No","0.5","HP",NA,NA
+"SITE_499","ROOM_7960","APPL_157934","Other","Sinkmaster","Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_5","ROOM_3732","APPL_86092","InSinkErator",NA,"COMPACT","Unknown","#08031523699","No","0.75","HP",NA,NA
+"SITE_500","ROOM_17092","APPL_151464","InSinkErator",NA,"PRO COMPACT-P","Unknown","#09021670045","No","0.75","HP",NA,NA
+"SITE_502","ROOM_3130","APPL_83306","InSinkErator",NA,"#1-87","2012","#11081622868","No","0.33","HP",NA,NA
+"SITE_503","ROOM_40831","APPL_52212","Waste King",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_504","ROOM_28700","APPL_160751","InSinkErator",NA,"#5-84","2009","#12091870347","No","0.5","HP",NA,NA
+"SITE_505","ROOM_765","APPL_128356","InSinkErator",NA,"#5-84A","2017","#17081462848","No","0.5","HP",NA,NA
+"SITE_509","ROOM_7335","APPL_68985","InSinkErator",NA,"PRO 1100XL-1","Unknown","#15053025298","No","1","HP",NA,NA
+"SITE_51","ROOM_18830","APPL_72269","Unknown",NA,"Unknown","Unknown","Unknown","No","0.5","HP","NO NAMEPLATE",NA
+"SITE_510","ROOM_3719","APPL_68806","InSinkErator",NA,"#5-84A","Unknown","#18011006740","No","0.5","HP",NA,NA
+"SITE_511","ROOM_35988","APPL_90423","Other","DuraPro","#142001","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_512","ROOM_4875","APPL_14213","Kenmore",NA,"#60505","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_515","ROOM_10170","APPL_99543","Other","Whirlaway","Unknown","1992","Unknown","Unknown","Unknown",NA,NA,NA
+"SITE_516","ROOM_1034","APPL_56711","InSinkErator",NA,"#5-87","Unknown","#19051212144","No","0.5","HP",NA,NA
+"SITE_517","ROOM_15149","APPL_112537","InSinkErator",NA,"#5-84A","Unknown","#14041535536","No","0.5","HP",NA,NA
+"SITE_518","ROOM_10298","APPL_146434","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_525","ROOM_26308","APPL_99491","InSinkErator",NA,"COMPACT-P-1","Unknown","#10121731615","No","Unknown",NA,NA,NA
+"SITE_527","ROOM_33475","APPL_171121","InSinkErator",NA,"PRO 880LT-1","Unknown","#17083039430","No","0.875","HP",NA,NA
+"SITE_53","ROOM_25223","APPL_105173","InSinkErator",NA,"Unknown","Unknown","Unknown","Unknown","0.3","HP","NO NAMEPLATE",NA
+"SITE_532","ROOM_39512","APPL_145242","InSinkErator",NA,"BADGER 900-1","2008","#12081700197","No","0.75","HP",NA,NA
+"SITE_533","ROOM_12922","APPL_5851","Unknown",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"Unknown",NA
+"SITE_534","ROOM_20963","APPL_57713","InSinkErator",NA,"#5-84A","Unknown","#18021358279","No","0.5","HP",NA,NA
+"SITE_536","ROOM_42619","APPL_159548","InSinkErator",NA,"BADGER 900","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_537","ROOM_30462","APPL_63609","Waste King",NA,"GXP50C","Unknown","Unknown","No","0.5","BHP",NA,NA
+"SITE_538","ROOM_1094","APPL_38655","InSinkErator",NA,"BADGER 500-3","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_540","ROOM_24605","APPL_119787","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_541","ROOM_22408","APPL_101625","InSinkErator",NA,"PRO EXCEL","Unknown","#06071769935","No","1","HP",NA,NA
+"SITE_543","ROOM_28327","APPL_32177","InSinkErator",NA,"BADGER900","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_547","ROOM_38555","APPL_76947","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_548","ROOM_45262","APPL_115367","InSinkErator",NA,"SPACE SAVER-P-1","Unknown","#13121517487","No","0.625","HP",NA,NA
+"SITE_55","ROOM_2585","APPL_36439","InSinkErator",NA,"100-1","2019","#19011227613","No","0.33","HP",NA,NA
+"SITE_55","ROOM_21430","APPL_36277","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_550","ROOM_36353","APPL_86949","InSinkErator",NA,"#1-87A","Unknown","#19051021004","No","0.33","HP",NA,NA
+"SITE_553","ROOM_7360","APPL_78177","InSinkErator",NA,"BADGER 500-1","Unknown","#18031212895","No","0.5","HP",NA,NA
+"SITE_555","ROOM_20892","APPL_48595","InSinkErator",NA,"PRO-ESSENTIAL 1","Unknown","#10051801978","No","0.76","HP",NA,NA
+"SITE_556","ROOM_15836","APPL_48524","InSinkErator",NA,"#5-84A","Unknown","#15101363266","No","0.5","HP",NA,NA
+"SITE_562","ROOM_44082","APPL_102445","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_563","ROOM_42376","APPL_71361","InSinkErator",NA,"BADGER 5-89A","Unknown","#21091444636","No","0.5","HP",NA,NA
+"SITE_566","ROOM_31786","APPL_125568","Maytag",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"Unknown",NA
+"SITE_568","ROOM_33991","APPL_116428","InSinkErator",NA,"BADGER 100-1","Unknown","#17101405257","No","0.33","HP",NA,NA
+"SITE_569","ROOM_25637","APPL_64173","InSinkErator",NA,"BADGER 500-1","Unknown","#12101932893","No","0.5","HP",NA,NA
+"SITE_57","ROOM_17421","APPL_103201","KitchenAid",NA,"KCDI250X3","2004","FNP5195102","No","0.75","kW",NA,NA
+"SITE_570","ROOM_26462","APPL_64376","Waste King",NA,"SS5000","Unknown","#871115069","No","0.75","HP",NA,NA
+"SITE_571","ROOM_23384","APPL_155903","InSinkErator",NA,"333-76","Unknown","LD 46660523","No","0.5","HP",NA,NA
+"SITE_572","ROOM_28895","APPL_134339","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_574","ROOM_16650","APPL_160585","InSinkErator",NA,"BADGER 900-1","Unknown","#18101049437","No","0.75","HP",NA,NA
+"SITE_575","ROOM_1171","APPL_83135","InSinkErator",NA,"COMPACT-P-1","Unknown","#12051843982","Unknown","0.75","HP",NA,NA
+"SITE_577","ROOM_40930","APPL_140744","InSinkErator",NA,"PRO ESSENTIAL","Unknown","#10021761913","No","0.75","HP",NA,NA
+"SITE_577","ROOM_40930","APPL_91232","InSinkErator",NA,"PRO ESSENTIAL","Unknown","#10021761911","No","0.75","HP",NA,NA
+"SITE_579","ROOM_44875","APPL_85135","InSinkErator",NA,"SPACE SAVER-P-1","Unknown","#15051423829","No","0.625","HP",NA,NA
+"SITE_580","ROOM_24949","APPL_36149","Waste King",NA,"#9980","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_581","ROOM_16931","APPL_13300","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_582","ROOM_44669","APPL_87030","InSinkErator",NA,"BADGER 900-1","Unknown","#15091480331","No","0.75","HP",NA,NA
+"SITE_583","ROOM_45383","APPL_199","General Electric",NA,"GFC520F","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_585","ROOM_36089","APPL_29875","InSinkErator",NA,"PRO COMBAT","Unknown","#06121809260","No","0.75","HP",NA,NA
+"SITE_585","ROOM_41046","APPL_23625","InSinkErator",NA,"Unknown","Unknown","Unknown","Unknown","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_586","ROOM_37757","APPL_91224","InSinkErator",NA,"EVOLOTION SELECT","2002","Unknown","No","Unknown",NA,NA,NA
+"SITE_586","ROOM_3525","APPL_88907","InSinkErator",NA,"333 33-31","1989","#41245798","No","0.5","HP",NA,NA
+"SITE_587","ROOM_25731","APPL_10033","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_59","ROOM_43544","APPL_13227","InSinkErator",NA,"EVOLUTION","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_590","ROOM_9867","APPL_163211","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_591","ROOM_15474","APPL_169127","Other","American Standard","Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_592","ROOM_11210","APPL_78941","Unknown",NA,"Unknown","Unknown","Unknown","No","0.75","HP","NO NAMEPLATE",NA
+"SITE_593","ROOM_1005","APPL_74403","InSinkErator",NA,"#1-87A","Unknown","#19091311115","No","0.5","HP",NA,NA
+"SITE_594","ROOM_43579","APPL_171038","InSinkErator",NA,"COMPACT","Unknown","#08061579942","No","0.75","HP",NA,NA
+"SITE_595","ROOM_34626","APPL_44994","InSinkErator",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"Unknown",NA
+"SITE_596","ROOM_39985","APPL_56926","InSinkErator",NA,"BADGER 5-89","Unknown","#20021044007","No","0.5","HP",NA,NA
+"SITE_597","ROOM_26975","APPL_111529","InSinkErator",NA,"BADGER 500-3","Unknown","#20101403129","No","Unknown",NA,NA,NA
+"SITE_599","ROOM_32181","APPL_60519","InSinkErator",NA,"SELECT-3","Unknown","#18103088472","No","0.625","HP",NA,NA
+"SITE_600","ROOM_20876","APPL_93286","InSinkErator",NA,"BADGER 500-3","Unknown","#21051399287","No","Unknown",NA,NA,NA
+"SITE_601","ROOM_33972","APPL_166231","InSinkErator",NA,"#5-84A","Unknown","#12021889680","No","0.5","HP",NA,NA
+"SITE_605","ROOM_33508","APPL_132650","Other","Whirlaway","191PC","2013","1A3-03933-59","No","Unknown",NA,NA,NA
+"SITE_607","ROOM_3584","APPL_155795","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_609","ROOM_22623","APPL_14187","InSinkErator",NA,"BADGER 5-89A","Unknown","#21061149158","No","Unknown",NA,NA,NA
+"SITE_611","ROOM_15008","APPL_157109","InSinkErator",NA,"#5-84","Unknown","#14071962025","No","0.5","HP",NA,NA
+"SITE_611","ROOM_15008","APPL_52593","InSinkErator",NA,"#5-84","Unknown","#14071962025","No","0.5","HP",NA,NA
+"SITE_614","ROOM_34632","APPL_143422","InSinkErator",NA,"#5-81","Unknown","#07081721547","No","0.5","HP",NA,NA
+"SITE_616","ROOM_46034","APPL_23788","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_618","ROOM_9371","APPL_19663","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_619","ROOM_38423","APPL_110813","InSinkErator",NA,"BADGER 5XP","2008","#07041562400","No","0.75","HP",NA,NA
+"SITE_62","ROOM_29772","APPL_173957","InSinkErator",NA,"#5-81","Unknown","#07071585000","No","0.5","HP",NA,NA
+"SITE_621","ROOM_15039","APPL_87328","InSinkErator",NA,"#5-87 A","2018","#18081395747","No","0.5","HP",NA,NA
+"SITE_625","ROOM_20010","APPL_74332","InSinkErator",NA,"BADGER 500-3","Unknown","#20121451583","No","Unknown",NA,NA,NA
+"SITE_626","ROOM_14609","APPL_81199","InSinkErator",NA,"BADGER 500-1","Unknown","#13091623349","No","0.5","HP",NA,NA
+"SITE_626","ROOM_44005","APPL_23020","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_627","ROOM_2277","APPL_112330","InSinkErator",NA,"#5-87A","Unknown","#19111135543","No","0.5","HP",NA,NA
+"SITE_629","ROOM_17902","APPL_162782","InSinkErator",NA,"#5-84A","Unknown","#16113104752","No","0.5","HP",NA,NA
+"SITE_63","ROOM_9141","APPL_116666","InSinkErator",NA,"555SS-1","Unknown","WK 78604145","No","0.75","HP",NA,NA
+"SITE_630","ROOM_31720","APPL_117827","InSinkErator",NA,"ASD1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_631","ROOM_4765","APPL_47946","Other","Evergrind","E-101","Unknown","#06031500426","No","0.33","HP",NA,NA
+"SITE_632","ROOM_44897","APPL_86770","InSinkErator",NA,"SELECT-2","Unknown","#16093089088","No","0.33","HP",NA,NA
+"SITE_633","ROOM_9099","APPL_72046","InSinkErator",NA,"BADGER 500-1","Unknown","#12121625776","No","0.5","HP",NA,NA
+"SITE_636","ROOM_2825","APPL_64755","Waste King",NA,"GXP33C","2020","Unknown","No","0.33","HP",NA,NA
+"SITE_637","ROOM_5405","APPL_106623","InSinkErator",NA,"EVOLUTION EXCEL","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_638","ROOM_4518","APPL_104782","Kenmore",NA,"ESSENTIAL-1","Unknown","#12041540697","No","0.75","HP",NA,NA
+"SITE_639","ROOM_5720","APPL_167449","InSinkErator",NA,"PRO 750-1","Unknown","#15021965133","No","0.75","HP",NA,NA
+"SITE_641","ROOM_13937","APPL_157894","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","NO NAMEPLATE",NA
+"SITE_642","ROOM_30071","APPL_117461","Kenmore",NA,"#175605530","Unknown","TL12951748","No","0.75","HP",NA,NA
+"SITE_643","ROOM_20880","APPL_26313","Waste King",NA,"LEGEND 8000","Unknown","1L6-29974-59","No","Unknown",NA,NA,NA
+"SITE_644","ROOM_45548","APPL_11226","InSinkErator",NA,"BADGER 500-1","Unknown","#15031645645","No","0.5","HP",NA,NA
+"SITE_645","ROOM_27354","APPL_69301","InSinkErator",NA,"SELECT-1","Unknown","#13011908531","No","0.625","HP",NA,NA
+"SITE_646","ROOM_41552","APPL_9363","Other","Whirlaway","#191","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_648","ROOM_16666","APPL_67626","InSinkErator",NA,"#5-84","Unknown","#18021425888","No","0.5","HP",NA,NA
+"SITE_649","ROOM_20324","APPL_159994","Other","Ace Hardware","#1000","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_65","ROOM_37265","APPL_44968","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_650","ROOM_36766","APPL_23868","InSinkErator",NA,"MP50-4","Unknown","#19061232387","No","0.5","HP",NA,NA
+"SITE_651","ROOM_1687","APPL_100013","InSinkErator",NA,"PRO ESSENTIAL","Unknown","#09041533321","No","0.75","HP",NA,NA
+"SITE_652","ROOM_33495","APPL_77343","InSinkErator",NA,"ESTEEM-1","Unknown","#11091589356","No","1","HP",NA,NA
+"SITE_653","ROOM_39815","APPL_48288","Other","Ace Hardware","MODEL 1000","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_656","ROOM_20511","APPL_9240","InSinkErator",NA,"PRO COMPACT","Unknown","#07091796308","Unknown","0.75","HP",NA,NA
+"SITE_657","ROOM_35169","APPL_72751","InSinkErator",NA,"#1-87","Unknown","#14061656880","No","0.33","HP",NA,NA
+"SITE_66","ROOM_21412","APPL_1337","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_661","ROOM_4137","APPL_25450","Unknown",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_662","ROOM_20138","APPL_40077","Unknown",NA,"T-1000","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_663","ROOM_22694","APPL_28173","InSinkErator",NA,"PRO77","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_665","ROOM_1720","APPL_102907","Kenmore",NA,"#6011","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_668","ROOM_10123","APPL_60665","InSinkErator",NA,"PRO COMPACT-P-2","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_669","ROOM_14986","APPL_109305","InSinkErator",NA,"PRO 750","Unknown","Unknown","Unknown","Unknown",NA,NA,NA
+"SITE_67","ROOM_27668","APPL_76205","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_671","ROOM_37649","APPL_70238","KitchenAid",NA,"Unknown","Unknown","Unknown","Unknown","0.75","HP","OTHER","NAMEPLATE HAS NO MODEL NUMBER"
+"SITE_673","ROOM_5941","APPL_89362","InSinkErator",NA,"Unknown","Unknown","Unknown","Unknown","Unknown",NA,"Unknown",NA
+"SITE_674","ROOM_17414","APPL_14416","InSinkErator",NA,"BADGER 5-89A","Unknown","#21121227716","No","0.5","HP",NA,NA
+"SITE_675","ROOM_16494","APPL_141727","InSinkErator",NA,"ESSENTIAL-1","Unknown","#13111522439","No","0.75","HP",NA,NA
+"SITE_676","ROOM_7901","APPL_5396","Waste King",NA,"Unknown","Unknown","Unknown","No","0.75","HP","NO NAMEPLATE",NA
+"SITE_677","ROOM_624","APPL_142735","InSinkErator",NA,"#5-87A","Unknown","#19011058071","No","0.5","HP",NA,NA
+"SITE_678","ROOM_19197","APPL_100708","Waste King",NA,"GXP50C","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_68","ROOM_42579","APPL_166579","InSinkErator",NA,"ESSENTIAL-3","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_68","ROOM_42579","APPL_170204","InSinkErator",NA,"BADGER 5-87","Unknown","#18071069927","No","0.5","HP",NA,NA
+"SITE_681","ROOM_8027","APPL_41919","InSinkErator",NA,"#1-87","2018","#18081304196","No","0.3","HP",NA,NA
+"SITE_682","ROOM_43656","APPL_2169","InSinkErator",NA,"PROCOMPACT P-2A","2012","#12121518117","No","0.75","HP",NA,NA
+"SITE_683","ROOM_22862","APPL_41647","Waste King",NA,"GXP50C","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_685","ROOM_29876","APPL_69288","Waste King",NA,"GXP33C","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_688","ROOM_25405","APPL_4122","InSinkErator",NA,"BADGER 5-89A","Unknown","#21101360401","No","0.5","HP",NA,NA
+"SITE_690","ROOM_41909","APPL_57229","InSinkErator",NA,"BADGER 15SS-2","Unknown","#20061051955","No","0.5","HP",NA,NA
+"SITE_691","ROOM_1317","APPL_63850","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_692","ROOM_11655","APPL_105128","Unknown",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_693","ROOM_28032","APPL_156439","InSinkErator",NA,"#5-84A","Unknown","#17041272893","No","0.5","HP",NA,NA
+"SITE_694","ROOM_6036","APPL_9028","InSinkErator",NA,"PRO333SS-1","Unknown","LL48338256","No","0.75","HP",NA,NA
+"SITE_695","ROOM_1004","APPL_1440","InSinkErator",NA,"BADGER 500-3","Unknown","#20081555917","No","0.5","HP",NA,NA
+"SITE_696","ROOM_25678","APPL_148339","InSinkErator",NA,"#5-81","Unknown","#06061916968","No","Unknown",NA,NA,NA
+"SITE_697","ROOM_6855","APPL_35972","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_698","ROOM_46307","APPL_12855","InSinkErator",NA,"#1-87A","Unknown","#18041394862","No","0.33","HP",NA,NA
+"SITE_7","ROOM_24547","APPL_91790","InSinkErator",NA,"BADGER5","2001","Unknown","No","0.5","HP",NA,NA
+"SITE_70","ROOM_35587","APPL_136256","InSinkErator",NA,"BADGER 10S","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_703","ROOM_36684","APPL_164425","Whirlpool",NA,"GC2000","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_705","ROOM_38746","APPL_165940","InSinkErator",NA,"SPACE SAVER-P-1","Unknown","#12101555565","No","0.625","HP",NA,NA
+"SITE_707","ROOM_29120","APPL_139999","InSinkErator",NA,"BADGER 500-2","Unknown","#18061071714","No","0.5","HP",NA,NA
+"SITE_708","ROOM_17672","APPL_142242","InSinkErator",NA,"PRO77","Unknown","Unknown","No","1","HP",NA,NA
+"SITE_71","ROOM_5416","APPL_133982","Other","Anaheim Manufacturing","WASTE KING","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_710","ROOM_36041","APPL_56778","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_712","ROOM_13972","APPL_97778","Other","Master Plumber","MP-2000","Unknown","SA 62950229","No","0.33","HP",NA,NA
+"SITE_714","ROOM_10895","APPL_167257","InSinkErator",NA,"#E101","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_716","ROOM_6185","APPL_106500","InSinkErator",NA,"BADGER 100-2","Unknown","#21011483236","No","0.33","HP",NA,NA
+"SITE_717","ROOM_39911","APPL_3536","Other","Conglom","CGWD93 (QKG02)","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_721","ROOM_23344","APPL_157243","InSinkErator",NA,"PRO COMPACT-P-2","Unknown","#10111557526","No","0.75","HP",NA,NA
+"SITE_723","ROOM_21014","APPL_17451","InSinkErator",NA,"#1-87","Unknown","#15071040761","No","0.33","HP",NA,NA
+"SITE_724","ROOM_34783","APPL_63534","InSinkErator",NA,"PRO 750-3A","Unknown","#21013041922","No","0.75","HP",NA,NA
+"SITE_73","ROOM_35504","APPL_43654","InSinkErator",NA,"BADGER5","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_730","ROOM_3015","APPL_135351","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_731","ROOM_2941","APPL_153171","InSinkErator",NA,"#6-71","Unknown","RL62452148","No","0.5","HP",NA,NA
+"SITE_732","ROOM_17302","APPL_91807","Other","Ace Hardware","#2000","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_734","ROOM_4056","APPL_93959","Waste King",NA,"GXP50C","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_736","ROOM_14004","APPL_82158","InSinkErator",NA,"ESSENTIAL-1","Unknown","#11031676952","No","0.75","HP",NA,NA
+"SITE_738","ROOM_23168","APPL_69857","InSinkErator",NA,"PROSS-4","Unknown","WE 76808142","No","0.75","HP",NA,NA
+"SITE_738","ROOM_23168","APPL_56268","InSinkErator",NA,"BADGER 900-2","Unknown","#19121063910","No","0.5","HP",NA,NA
+"SITE_739","ROOM_10757","APPL_104474","Other","Emerson","#E10","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_740","ROOM_34699","APPL_2240","InSinkErator",NA,"BADGER 100-1","Unknown","#16021501412","No","0.33","HP",NA,NA
+"SITE_742","ROOM_7258","APPL_62289","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_744","ROOM_8836","APPL_107314","InSinkErator",NA,"BADGER 100","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_746","ROOM_21762","APPL_44128","Other","Evergrind","E101-2A","Unknown","#19111315483","No","0.33","HP",NA,NA
+"SITE_750","ROOM_36327","APPL_154505","Other","Ace Hardware","#1000","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_751","ROOM_20344","APPL_90989","Unknown",NA,"ACE2000-2","Unknown","#17121163791","No","0.5","HP",NA,NA
+"SITE_752","ROOM_19299","APPL_85719","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_755","ROOM_38030","APPL_22592","InSinkErator",NA,"BADGER 100-1","Unknown","#14101790866","No","0.33","HP",NA,NA
+"SITE_757","ROOM_37909","APPL_42701","InSinkErator",NA,"BADGER500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_758","ROOM_31055","APPL_51087","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_759","ROOM_14627","APPL_54937","InSinkErator",NA,"BADGER-1","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_76","ROOM_45905","APPL_117605","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_760","ROOM_29771","APPL_60656","InSinkErator",NA,"Unknown","Unknown","Unknown","Unknown","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_761","ROOM_25878","APPL_97069","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_763","ROOM_20417","APPL_46432","InSinkErator",NA,"5 PLUS-7","Unknown","#04054419449","No","0.55","HP",NA,NA
+"SITE_766","ROOM_2203","APPL_147172","InSinkErator",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"Unknown",NA
+"SITE_767","ROOM_11126","APPL_45518","InSinkErator",NA,"BADGER 5XL-1","Unknown","#21021411217","No","1","HP",NA,NA
+"SITE_768","ROOM_41643","APPL_31404","InSinkErator",NA,"SPACE SAVER-P-2","Unknown","#16073023507","No","0.625","HP",NA,NA
+"SITE_769","ROOM_21963","APPL_110056","Other","Evergrind","E101-2","Unknown","#15041153009","No","0.33","HP",NA,NA
+"SITE_772","ROOM_17327","APPL_46014","Unknown",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_773","ROOM_682","APPL_172004","Other","Ace Hardware","#5000","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_775","ROOM_38772","APPL_109313","InSinkErator",NA,"#5-75","Unknown","XA 79690425","No","0.5","HP",NA,NA
+"SITE_776","ROOM_41349","APPL_106474","InSinkErator",NA,"E1012A","Unknown","#21034960","No","0.33","HP",NA,NA
+"SITE_778","ROOM_6","APPL_155742","Other","Mainline","GRINDSMART","Unknown","1K6-10737-59","No","0.5","HP",NA,NA
+"SITE_780","ROOM_9275","APPL_64936","InSinkErator",NA,"ACE 2000","Unknown","WE 76997501","No","0.5","HP",NA,NA
+"SITE_782","ROOM_36401","APPL_122310","Other","Evergrind","#E202","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_786","ROOM_30983","APPL_126381","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_787","ROOM_45893","APPL_142238","Whirlpool",NA,"#GC2000XE5","2014","FN23709780","No","0.5","HP",NA,NA
+"SITE_788","ROOM_21023","APPL_168284","Waste King",NA,"Unknown","Unknown","Unknown","No","0.5","HP","NO NAMEPLATE",NA
+"SITE_789","ROOM_17121","APPL_65679","InSinkErator",NA,"#5-81","Unknown","#04081613957","No","0.5","HP",NA,NA
+"SITE_790","ROOM_18034","APPL_152501","InSinkErator",NA,"SELECT-1","Unknown","#15073025354","No","0.625","HP",NA,NA
+"SITE_793","ROOM_565","APPL_90398","Unknown",NA,"Unknown","Unknown","Unknown","No","1.25","HP","Unknown",NA
+"SITE_796","ROOM_34694","APPL_45353","Waste King",NA,"#1001","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_799","ROOM_7421","APPL_48166","Unknown",NA,"#SE250","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_8","ROOM_46103","APPL_50690","InSinkErator",NA,"BADGER 900","2021","Unknown","No","0.75","HP",NA,NA
+"SITE_800","ROOM_15565","APPL_1692","InSinkErator",NA,"EVOLUTION COMPACT","Unknown","#06111901364","No","0.75","HP",NA,NA
+"SITE_802","ROOM_43684","APPL_113375","InSinkErator",NA,"BADGER 500-1","Unknown","#15061456169","No","0.5","HP",NA,NA
+"SITE_803","ROOM_6643","APPL_10833","Waste King",NA,"GXP50C","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_804","ROOM_4235","APPL_44220","InSinkErator",NA,"BADGER 5","2019","Unknown","No","0.5","HP",NA,NA
+"SITE_805","ROOM_16959","APPL_57834","InSinkErator",NA,"#5-84","Unknown","#16031311213","No","0.5","HP",NA,NA
+"SITE_806","ROOM_41925","APPL_52662","InSinkErator",NA,"SELECT PLUS-3","Unknown","#17093016018","No","0.75","HP",NA,NA
+"SITE_807","ROOM_26428","APPL_130786","Other","Evergrind","E303-2","Unknown","#16013089086","No","0.625","HP",NA,NA
+"SITE_809","ROOM_29959","APPL_24348","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_81","ROOM_23528","APPL_146887","InSinkErator",NA,"BADGER 5XL-1","Unknown","#20061453970","No","0.5","HP",NA,NA
+"SITE_810","ROOM_14717","APPL_24774","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_811","ROOM_37617","APPL_12669","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_813","ROOM_17772","APPL_54941","InSinkErator",NA,"PRO77-7","Unknown","#03112212914","No","1","HP",NA,NA
+"SITE_814","ROOM_40617","APPL_58016","InSinkErator",NA,"BADGER 5XP-6","Unknown","#21021253954","No","1","HP",NA,NA
+"SITE_815","ROOM_38065","APPL_41073","InSinkErator",NA,"E101-2","Unknown","#14041529735","No","0.33","HP",NA,NA
+"SITE_816","ROOM_5769","APPL_39718","InSinkErator",NA,"#5-81","Unknown","#06021899285","No","0.5","HP",NA,NA
+"SITE_817","ROOM_22266","APPL_79280","Waste King",NA,"Unknown","Unknown","Unknown","No","0.75","HP","Unknown",NA
+"SITE_819","ROOM_24352","APPL_109819","InSinkErator",NA,"COMPACT-P","Unknown","#09121568801","No","0.75","HP",NA,NA
+"SITE_82","ROOM_1632","APPL_6323","InSinkErator",NA,"5 PLUS-7","Unknown","#05091756014","No","0.625","HP",NA,NA
+"SITE_820","ROOM_24581","APPL_66566","Waste King",NA,"GXP33C","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_825","ROOM_25799","APPL_114840","Other","Ace Hardware","ACE 5000-1","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_827","ROOM_18497","APPL_137063","InSinkErator",NA,"#5-38","Unknown","MD 49879890","No","0.5","HP",NA,NA
+"SITE_832","ROOM_43672","APPL_66778","InSinkErator",NA,"333/SS-22","Unknown","CJ 26828548","No","0.5","HP",NA,NA
+"SITE_833","ROOM_12087","APPL_8181","InSinkErator",NA,"BADGER 5-89","Unknown","#20061377534","No","0.5","HP",NA,NA
+"SITE_834","ROOM_3045","APPL_121646","Other","American Standard","ASD-125-SL","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_839","ROOM_38246","APPL_143086","Waste King",NA,"EX75C","Unknown","2C1-01892259","No","1","HP",NA,NA
+"SITE_84","ROOM_43917","APPL_122758","InSinkErator",NA,"#5-84","Unknown","#17071088671","No","0.5","HP",NA,NA
+"SITE_844","ROOM_5355","APPL_146366","InSinkErator",NA,"BADGER 5XP-3","Unknown","#17031088247","No","0.75","HP",NA,NA
+"SITE_848","ROOM_31163","APPL_81024","Other","Sinkmaster","#750","Unknown","0H0-23050-9","No","0.5","HP",NA,NA
+"SITE_850","ROOM_23971","APPL_152694","InSinkErator",NA,"PRO77-7","Unknown","#05041518907","No","1","HP",NA,NA
+"SITE_851","ROOM_10656","APPL_152701","InSinkErator",NA,"BADGER 1-90","Unknown","#20101169005","No","Unknown",NA,NA,NA
+"SITE_852","ROOM_30742","APPL_69947","Waste King",NA,"GXP50C","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_858","ROOM_8646","APPL_113860","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_859","ROOM_161","APPL_45370","InSinkErator",NA,"PRO333-9","Unknown","VH 73308362","No","0.75","HP",NA,NA
+"SITE_86","ROOM_27919","APPL_49384","InSinkErator",NA,"BADGER 5-89","Unknown","#20111355165","No","Unknown",NA,NA,NA
+"SITE_861","ROOM_3872","APPL_165469","InSinkErator",NA,"SPACE SAVER-P","Unknown","#10031532186","No","0.625","HP",NA,NA
+"SITE_862","ROOM_40199","APPL_20218","Waste King",NA,"Unknown","Unknown","Unknown","No","0.5","HP","NO NAMEPLATE",NA
+"SITE_865","ROOM_10171","APPL_172671","InSinkErator",NA,"444-5","Unknown","#05071616927","No","Unknown",NA,NA,NA
+"SITE_866","ROOM_43780","APPL_20180","InSinkErator",NA,"CONTRACTOR 333-2","Unknown","#20081096302","No","0.75","HP",NA,NA
+"SITE_867","ROOM_8497","APPL_65900","Tappan",NA,"MONTGOMERY WARD","Unknown","M4 24971-1","No","0.75","kW",NA,NA
+"SITE_868","ROOM_30006","APPL_9210","InSinkErator",NA,"#5-81","Unknown","#06961902351","No","0.5","HP",NA,NA
+"SITE_869","ROOM_43269","APPL_19128","Other","Waste Maid","#1590","Unknown","S/NGD20-458888","No","0.5","HP",NA,NA
+"SITE_871","ROOM_38873","APPL_98585","InSinkErator",NA,"BADGER 5-89A","Unknown","#21101232886","No","Unknown",NA,NA,NA
+"SITE_872","ROOM_41124","APPL_52231","InSinkErator",NA,"#5-84","Unknown","#13061709135","No","0.5","HP",NA,NA
+"SITE_874","ROOM_11127","APPL_36329","Kenmore",NA,"#17560591","Unknown","#04081008428","No","1","HP",NA,NA
+"SITE_875","ROOM_44965","APPL_143194","InSinkErator",NA,"405750-4","2005","#17061144777","No","0.5","HP",NA,NA
+"SITE_877","ROOM_27617","APPL_171578","InSinkErator",NA,"BADGER 900-2","Unknown","#20071068411","No","0.75","HP",NA,NA
+"SITE_878","ROOM_39221","APPL_42102","Unknown",NA,"GXP33C","Unknown","1E8-33090-59","No","0.33","HP",NA,NA
+"SITE_88","ROOM_35809","APPL_144768","Unknown",NA,"GXP33C","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_880","ROOM_3527","APPL_14531","InSinkErator",NA,"EVOLUTION PRO COMPACT","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_881","ROOM_22202","APPL_87584","Other","Evergrind","#E101","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_882","ROOM_17823","APPL_147778","Waste King",NA,"Unknown","Unknown","Unknown","No","0.75","HP","NO NAMEPLATE",NA
+"SITE_883","ROOM_43806","APPL_44847","InSinkErator",NA,"COMPACT-P-1","Unknown","#12021593499","No","0.75","HP",NA,NA
+"SITE_886","ROOM_15188","APPL_75704","Other","American Standard","ASD1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_886","ROOM_12891","APPL_105861","Waste King",NA,"#9940","Unknown","1G8-59356-59","No","0.75","HP",NA,NA
+"SITE_887","ROOM_34666","APPL_11618","InSinkErator",NA,"EVER GRIND E202-2A","Unknown","#17071365107","No","0.5","HP",NA,NA
+"SITE_888","ROOM_39820","APPL_57808","InSinkErator",NA,"BADGER 900 PLUS-1","Unknown","#19051048561","No","1","HP",NA,NA
+"SITE_89","ROOM_15717","APPL_162460","InSinkErator",NA,"EVOLUTION","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_890","ROOM_6351","APPL_89294","InSinkErator",NA,"#5-84A","Unknown","#14101745210","No","Unknown",NA,NA,NA
+"SITE_891","ROOM_5563","APPL_84467","InSinkErator",NA,"ESTEEM","Unknown","#10051733946","No","1","HP",NA,NA
+"SITE_892","ROOM_34008","APPL_120218","InSinkErator",NA,"#5-84","Unknown","#14051502688","No","0.5","HP",NA,NA
+"SITE_896","ROOM_31053","APPL_77854","InSinkErator",NA,"SELECT-1","Unknown","#15073071992","No","0.625","HP",NA,NA
+"SITE_897","ROOM_14024","APPL_129735","InSinkErator",NA,"SELECT-3","Unknown","#18063025358","No","0.625","HP",NA,NA
+"SITE_899","ROOM_34427","APPL_21178","InSinkErator",NA,"EVOLUTION PRO COMPACT","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_90","ROOM_34697","APPL_8312","InSinkErator",NA,"Unknown","Unknown","Unknown","Unknown","0.33","HP","NO NAMEPLATE",NA
+"SITE_900","ROOM_394","APPL_168508","Jenn Air",NA,"GC460","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_902","ROOM_8655","APPL_43098","Other","Ace Hardware","#5000","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_903","ROOM_20898","APPL_33934","Unknown",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_904","ROOM_36019","APPL_121992","InSinkErator",NA,"444-1","Unknown","RG 61181187","No","Unknown",NA,NA,NA
+"SITE_905","ROOM_3378","APPL_44868","InSinkErator",NA,"PRO33-9","Unknown","WM79045954","No","0.75","HP",NA,NA
+"SITE_906","ROOM_10669","APPL_132149","InSinkErator",NA,"#5-84","Unknown","#13091606082","No","0.5","HP",NA,NA
+"SITE_908","ROOM_35115","APPL_136361","InSinkErator",NA,"BADGER 500-3","Unknown","#21021395264","No","0.5","HP",NA,NA
+"SITE_909","ROOM_11993","APPL_133706","Other","Evergrind","E101-2A","Unknown","#17091417222","No","0.33","HP",NA,NA
+"SITE_91","ROOM_8318","APPL_154433","InSinkErator",NA,"BADGER 5-84A","Unknown","#17041043982","No","0.5","HP",NA,NA
+"SITE_910","ROOM_42897","APPL_112869","Waste King",NA,"GXP50C","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_911","ROOM_42104","APPL_172041","InSinkErator",NA,"100SS","Unknown","0604171145/","No","0.75","HP",NA,NA
+"SITE_912","ROOM_39978","APPL_150492","Other","American Standard","ASD-1250","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_913","ROOM_23725","APPL_138792","InSinkErator",NA,"E101-2","Unknown","#15111113450","No","0.33","HP",NA,NA
+"SITE_915","ROOM_5677","APPL_108575","InSinkErator",NA,"BADGER 5-75","Unknown","XA 797214P9","No","0.5","HP",NA,NA
+"SITE_916","ROOM_9428","APPL_67478","Kenmore",NA,"#6040","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_917","ROOM_24593","APPL_21918","InSinkErator",NA,"MODEL 5-84A","Unknown","#15041144309","No","0.5","HP",NA,NA
+"SITE_92","ROOM_29068","APPL_121795","InSinkErator",NA,"PRO 750-1","Unknown","#15073052508","No","0.75","HP",NA,NA
+"SITE_920","ROOM_35992","APPL_112346","Other","American Standard","Unknown","Unknown","Unknown","No","Unknown",NA,"Unknown",NA
+"SITE_921","ROOM_12082","APPL_158360","InSinkErator",NA,"CONTRACTOR 333-1A","Unknown","#19073033701","No","1","HP",NA,NA
+"SITE_925","ROOM_26579","APPL_142168","InSinkErator",NA,"#1-81A","Unknown","WJ 78085034","No","0.33","HP",NA,NA
+"SITE_926","ROOM_41837","APPL_168205","KitchenAid",NA,"KCDB250G4","Unknown","FN30704545","No","0.5","HP",NA,NA
+"SITE_928","ROOM_19138","APPL_159331","InSinkErator",NA,"PRO COMPACT","Unknown","#07011720458","No","0.75","HP",NA,NA
+"SITE_93","ROOM_25112","APPL_23991","Unknown",NA,"ACE MOEDEL 4000","Unknown","WC76161420","No","0.7","HP",NA,NA
+"SITE_932","ROOM_41269","APPL_153470","Waste King",NA,"SS 7000","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_933","ROOM_8863","APPL_12983","InSinkErator",NA,"BADGER 100-2","Unknown","#20021282533","No","1","HP",NA,NA
+"SITE_934","ROOM_41470","APPL_33316","InSinkErator",NA,"WG1202KH1","Unknown","FN83903037","No","0.5","HP",NA,NA
+"SITE_935","ROOM_32196","APPL_162780","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_937","ROOM_16220","APPL_91403","InSinkErator",NA,"#E101","Unknown","Unknown","No","0.3","HP",NA,NA
+"SITE_938","ROOM_31625","APPL_105631","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_939","ROOM_17322","APPL_155076","InSinkErator",NA,"BADGER 5-89A","Unknown","#20071221932","No","0.5","HP",NA,NA
+"SITE_94","ROOM_42167","APPL_171618","Unknown",NA,"SINKMASTER 450","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_940","ROOM_37058","APPL_80935","InSinkErator",NA,"BADGER 5-89","Unknown","#20081171549","No","0.5","HP",NA,NA
+"SITE_941","ROOM_1038","APPL_35108","InSinkErator",NA,"PRO 880LT-1A","Unknown","#18123045120","No","0.875","HP",NA,NA
+"SITE_942","ROOM_21717","APPL_91573","InSinkErator",NA,"EVOLUTION PRO 750","Unknown","#14101616565","No","0.75","HP",NA,NA
+"SITE_946","ROOM_18203","APPL_103626","InSinkErator",NA,"BADGER 1XL-1","Unknown","#22021400609","No","0.33","HP",NA,NA
+"SITE_948","ROOM_27424","APPL_57314","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.75","HP","NO NAMEPLATE",NA
+"SITE_949","ROOM_4741","APPL_118067","InSinkErator",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"Unknown",NA
+"SITE_952","ROOM_36458","APPL_832","Kenmore",NA,"#17560400","Unknown","GM8692304","No","0.5","HP",NA,NA
+"SITE_953","ROOM_2905","APPL_63607","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_955","ROOM_27529","APPL_161462","InSinkErator",NA,"#1-87A","Unknown","#16081460312","No","0.33","HP",NA,NA
+"SITE_959","ROOM_14601","APPL_132859","InSinkErator",NA,"PRO ESSENTIAL-2","Unknown","#13041805921","No","0.75","HP",NA,NA
+"SITE_959","ROOM_14601","APPL_156777","InSinkErator",NA,"BADGER 500-1","2013","#15031842492","No","0.5","HP",NA,NA
+"SITE_96","ROOM_21108","APPL_66458","InSinkErator",NA,"EXCEL","Unknown","#08051528725","No","1","HP",NA,NA
+"SITE_960","ROOM_10430","APPL_3558","Other","Food Waste Disposer","FWD-HD-1","Unknown","#13101690820","No","0.33","HP",NA,NA
+"SITE_961","ROOM_39431","APPL_70156","Other","Evergrind","E101-2A","Unknown","#19071133502","No","0.33","HP",NA,NA
+"SITE_962","ROOM_21527","APPL_61886","InSinkErator",NA,"#900","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_963","ROOM_13914","APPL_138044","Unknown",NA,"MODEL 1000","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_964","ROOM_7922","APPL_157218","Whirlpool",NA,"#GC2000XE5","Unknown","FN62702802","No","0.5","HP",NA,NA
+"SITE_966","ROOM_41237","APPL_49256","InSinkErator",NA,"#5-84A","Unknown","#17101465150","No","0.5","HP",NA,NA
+"SITE_967","ROOM_39854","APPL_8754","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_969","ROOM_14431","APPL_34903","Whirlpool",NA,"#GC2000XE3","Unknown","FNY2412233","No","0.5","HP",NA,NA
+"SITE_970","ROOM_43011","APPL_73632","Other","Sinkmaster","BONE CRUSHER 450","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_971","ROOM_23601","APPL_57864","InSinkErator",NA,"BADGER 5-84","Unknown","#17101127227","No","0.5","HP",NA,NA
+"SITE_974","ROOM_46323","APPL_133943","InSinkErator",NA,"5 PLUS-3","Unknown","SL 66311989","No","0.625","HP",NA,NA
+"SITE_977","ROOM_23235","APPL_82775","Crosley",NA,"C-103","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_981","ROOM_38728","APPL_14186","Whirlpool",NA,"#GC1000PE4","Unknown","FN223522865","No","0.33","HP",NA,NA
+"SITE_982","ROOM_4915","APPL_69578","InSinkErator",NA,"BADGER 1-90A","Unknown","#21021029408","No","0.33","HP",NA,NA
+"SITE_984","ROOM_5602","APPL_157862","InSinkErator",NA,"#5-84A","Unknown","#16123048759","No","0.5","HP",NA,NA
+"SITE_985","ROOM_738","APPL_16763","InSinkErator",NA,"Unknown","Unknown","Unknown","Unknown","Unknown",NA,"Unknown",NA
+"SITE_987","ROOM_42148","APPL_129416","InSinkErator",NA,"3-SS","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_988","ROOM_25722","APPL_21734","InSinkErator",NA,"#5-38","Unknown","LH47656237","No","0.5","HP",NA,NA
+"SITE_99","ROOM_72","APPL_110944","InSinkErator",NA,"PREMIER","Unknown","#09091636605","No","Unknown",NA,NA,NA
+"SITE_991","ROOM_45459","APPL_117084","InSinkErator",NA,"BADGER 500-3","Unknown","#21071247864","No","1","HP",NA,NA
+"SITE_992","ROOM_20979","APPL_3151","Waste King",NA,"WHIRLAWAY PRO 584","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_996","ROOM_12558","APPL_51500","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_999","ROOM_33712","APPL_84417","Other","Titan","T-1060","Unknown","Unknown","No","1.25","HP",NA,NA
+"SITE_3048","ROOM_44629","APPL_73421","Waste King",NA,"GXP50C","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3050","ROOM_22092","APPL_38320","InSinkErator",NA,"BADGER-100","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3052","ROOM_30541","APPL_128536","InSinkErator",NA,"#584","Unknown","#12071933020","No","0.5","HP",NA,NA
+"SITE_3053","ROOM_5111","APPL_136807","General Electric",NA,"GFC525N","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3054","ROOM_42975","APPL_151002","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3055","ROOM_8331","APPL_171887","InSinkErator",NA,"BADGER 1","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3057","ROOM_21308","APPL_38758","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3059","ROOM_45545","APPL_44121","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_3060","ROOM_6852","APPL_166332","Other","Maintenance Warehouse","#405700","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3061","ROOM_45676","APPL_59958","General Electric",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"Unknown",NA
+"SITE_3062","ROOM_23440","APPL_27762","Other","Maintenance Warehouse","#405700","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3064","ROOM_6307","APPL_47837","Whirlpool",NA,"GC2000","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3065","ROOM_941","APPL_25406","Other","Maintenance Warehouse","#113743","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_3067","ROOM_18708","APPL_28215","InSinkErator",NA,"#1-87","Unknown","#10101707628","No","0.33","HP",NA,NA
+"SITE_3068","ROOM_43193","APPL_149797","Unknown",NA,"WASTE KING 2600","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_3069","ROOM_42356","APPL_22655","InSinkErator",NA,"BADGER 100","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3070","ROOM_34750","APPL_70743","Waste King",NA,"EX50C","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3071","ROOM_34845","APPL_173584","InSinkErator",NA,"BADGER 5-89A","Unknown","#22071093129","No","0.5","HP",NA,NA
+"SITE_3072","ROOM_34795","APPL_17626","Waste King",NA,"#191","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3073","ROOM_41403","APPL_109295","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3078","ROOM_8470","APPL_7460","InSinkErator",NA,"BADGER 1-90A","Unknown","#21111541356","No","0.33","HP",NA,NA
+"SITE_3082","ROOM_28856","APPL_138170","InSinkErator",NA,"#E101","Unknown","Unknown","Unknown","0.33","HP",NA,NA
+"SITE_3088","ROOM_36615","APPL_105072","Whirlpool",NA,"GC2000","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3093","ROOM_38651","APPL_43849","InSinkErator",NA,"#5-84A","Unknown","#15051182939","No","0.5","HP",NA,NA
+"SITE_3097","ROOM_38086","APPL_156424","InSinkErator",NA,"BADER5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3100","ROOM_16570","APPL_86457","General Electric",NA,"GFC325F","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3101","ROOM_23328","APPL_6315","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.3","HP","NAMEPLATE IS ILLEGIBLE",NA
+"SITE_3105","ROOM_31023","APPL_93223","Unknown",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_3110","ROOM_19707","APPL_151885","InSinkErator",NA,"BADGER 5XP-6A","Unknown","#20061356530","No","0.75","HP",NA,NA
+"SITE_3112","ROOM_10915","APPL_111426","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3113","ROOM_12071","APPL_151412","InSinkErator",NA,"405700-4","Unknown","#15031576330","No","0.3","HP",NA,NA
+"SITE_3114","ROOM_36291","APPL_110306","InSinkErator",NA,"BADGER 100-1","Unknown","#13072005780","No","0.3","HP",NA,NA
+"SITE_3115","ROOM_23616","APPL_4149","InSinkErator",NA,"#5-87A","Unknown","#18111187657","No","0.5","HP",NA,NA
+"SITE_3117","ROOM_6725","APPL_6117","InSinkErator",NA,"#405700","Unknown","#16121186969","No","0.33","HP",NA,NA
+"SITE_3119","ROOM_33977","APPL_96587","InSinkErator",NA,"BADGER 500-3","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3123","ROOM_4955","APPL_104367","InSinkErator",NA,"Unknown","Unknown","#18041256244","No","0.5","HP",NA,NA
+"SITE_3125","ROOM_42465","APPL_52623","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3126","ROOM_691","APPL_99961","InSinkErator",NA,"PRO 750-2A","Unknown","#18113011383","No","0.75","HP",NA,NA
+"SITE_3128","ROOM_41389","APPL_64117","Other","Maintenance Warehouse","113743-2A","Unknown","#19061336052","No","0.5","HP",NA,NA
+"SITE_3130","ROOM_4535","APPL_130141","InSinkErator",NA,"BADGER 500-SS","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3131","ROOM_24171","APPL_174816","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3132","ROOM_3564","APPL_144171","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3133","ROOM_26865","APPL_49879","InSinkErator",NA,"#5-84","Unknown","#11051575931","No","0.5","HP",NA,NA
+"SITE_3134","ROOM_22105","APPL_5365","InSinkErator",NA,"5EXL","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3136","ROOM_32818","APPL_92419","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3139","ROOM_10458","APPL_135046","InSinkErator",NA,"#5-84","Unknown","#18021164389","No","0.5","HP",NA,NA
+"SITE_3141","ROOM_22382","APPL_126194","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3147","ROOM_22430","APPL_41773","Waste King",NA,"GXP33C","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3148","ROOM_6923","APPL_15836","Whirlpool",NA,"#GC1000PE4","Unknown","FN81802295","No","0.33","HP",NA,NA
+"SITE_3151","ROOM_42431","APPL_98249","InSinkErator",NA,"#5-87","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3153","ROOM_19324","APPL_91279","InSinkErator",NA,"#5-87A","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3155","ROOM_16993","APPL_35658","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3158","ROOM_42481","APPL_11953","InSinkErator",NA,"EVOLUTION COMPACT","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_3159","ROOM_24093","APPL_136099","Whirlpool",NA,"#GC1000XE4","Unknown","FN42807299","Unknown","0.33","HP",NA,NA
+"SITE_3161","ROOM_22015","APPL_151164","InSinkErator",NA,"BADGER5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3167","ROOM_17511","APPL_30787","Other","Evergrind","#E404","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_3172","ROOM_16616","APPL_56242","Waste King",NA,"GXP33C","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3176","ROOM_7170","APPL_5724","General Electric",NA,"GFC325V","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3177","ROOM_38424","APPL_151171","Waste King",NA,"#3200","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3181","ROOM_40433","APPL_66367","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3183","ROOM_43286","APPL_112650","State Industries",NA,"Unknown","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3184","ROOM_26702","APPL_123366","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3187","ROOM_38992","APPL_30598","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3188","ROOM_9600","APPL_16401","InSinkErator",NA,"BADGER 1-90A","Unknown","#20111330694","No","0.33","HP",NA,NA
+"SITE_3189","ROOM_39295","APPL_65274","InSinkErator",NA,"143053-1","Unknown","#19061180445","Unknown","0.5","HP",NA,NA
+"SITE_3190","ROOM_44384","APPL_60814","InSinkErator",NA,"#5-84","Unknown","#15071017362","No","0.5","HP",NA,NA
+"SITE_3191","ROOM_19271","APPL_148225","Other","FRANKE","WD50R","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3192","ROOM_1588","APPL_119832","Unknown",NA,"Unknown","Unknown","Unknown","Unknown","Unknown",NA,"Unknown",NA
+"SITE_3195","ROOM_18118","APPL_102828","Other","Mountain","MT666-3CFWD3B","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_3197","ROOM_12718","APPL_144170","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_3199","ROOM_17726","APPL_124534","InSinkErator",NA,"#1-87A","Unknown","#19041319011","No","0.33","HP",NA,NA
+"SITE_3200","ROOM_25942","APPL_118738","InSinkErator",NA,"BADGER 1-90A","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3201","ROOM_16197","APPL_90811","InSinkErator",NA,"BADGER 1","Unknown","#16051368542","No","0.33","HP",NA,NA
+"SITE_3202","ROOM_3711","APPL_32609","General Electric",NA,"GFC325V","Unknown","Unknown","No","0.3","HP",NA,NA
+"SITE_3207","ROOM_36625","APPL_131488","Other","Perfect Grind","MT666-3CFWD3B","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_3208","ROOM_21867","APPL_16644","InSinkErator",NA,"#5-84A","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3209","ROOM_13789","APPL_81488","General Electric",NA,"GFC325V","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3212","ROOM_41568","APPL_38482","InSinkErator",NA,"BADGER 1-90","Unknown","#21081265674","No","0.5","HP",NA,NA
+"SITE_3213","ROOM_37807","APPL_69006","InSinkErator",NA,"BADGER","Unknown","#12074703936","No","0.5","HP",NA,NA
+"SITE_3216","ROOM_9667","APPL_50434","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3217","ROOM_36220","APPL_146522","InSinkErator",NA,"BADGER 5-84","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3219","ROOM_45442","APPL_64239","General Electric",NA,"GFC525V","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3225","ROOM_44330","APPL_135914","Waste King",NA,"WASTE KING 1001","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_3227","ROOM_26690","APPL_163119","Other","Maintenance Warehouse","405700-4","Unknown","#19091124617","No","0.33","HP",NA,NA
+"SITE_3228","ROOM_29677","APPL_103515","InSinkErator",NA,"BADGER 100-1","Unknown","#13041701857","No","0.33","HP",NA,NA
+"SITE_3229","ROOM_2518","APPL_8249","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3231","ROOM_38710","APPL_2118","InSinkErator",NA,"BADGER 100","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3235","ROOM_8569","APPL_42215","InSinkErator",NA,"BADGER 1","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3236","ROOM_26306","APPL_1219","Other","Maintenance Warehouse","#405750","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3237","ROOM_36847","APPL_73561","Other","Maintenance Warehouse","Unknown","Unknown","Unknown","No","0.33","HP","Unknown",NA
+"SITE_3242","ROOM_24679","APPL_164831","InSinkErator",NA,"#5-87A","Unknown","#18041325277","No","0.5","HP",NA,NA
+"SITE_3247","ROOM_34747","APPL_50613","InSinkErator",NA,"SELECT PLUS-1","Unknown","#14081830708","No","0.75","HP",NA,NA
+"SITE_3248","ROOM_26597","APPL_161117","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.75","HP","Unknown",NA
+"SITE_3254","ROOM_32443","APPL_63937","Other","Unknown","#1001","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3257","ROOM_12297","APPL_31562","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3258","ROOM_12594","APPL_93867","InSinkErator",NA,"BADGER 1","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3259","ROOM_11140","APPL_26694","General Electric",NA,"GFC525F","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3260","ROOM_44401","APPL_50140","Other","Titan","T-1060","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_3263","ROOM_14050","APPL_51827","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.3","HP",NA,NA
+"SITE_3264","ROOM_38919","APPL_104343","General Electric",NA,"GFC525V","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3269","ROOM_24868","APPL_126906","InSinkErator",NA,"#5-81","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3270","ROOM_26786","APPL_63890","Unknown",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"Unknown",NA
+"SITE_3271","ROOM_8839","APPL_125264","InSinkErator",NA,"BADGER 500-1","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3272","ROOM_4569","APPL_3240","InSinkErator",NA,"BADGER 500-3","Unknown","#21051399071","No","0.5","HP",NA,NA
+"SITE_3273","ROOM_6582","APPL_36003","InSinkErator",NA,"BADGER 500-1","Unknown","#17061195555","Unknown","0.5","HP",NA,NA
+"SITE_3274","ROOM_3752","APPL_135958","General Electric",NA,"GFC535F","Unknown","473C865P02","No","0.5","HP",NA,NA
+"SITE_3276","ROOM_22245","APPL_135837","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3277","ROOM_31063","APPL_93487","InSinkErator",NA,"#5-84","Unknown","1701146397J","No","0.5","HP",NA,NA
+"SITE_3280","ROOM_34367","APPL_23073","Other","Maintenance Warehouse","405700-4","Unknown","#14081960322","No","0.33","HP",NA,NA
+"SITE_3281","ROOM_9552","APPL_123719","Unknown",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"Unknown",NA
+"SITE_3282","ROOM_3763","APPL_44421","Whirlpool",NA,"GC2000","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3284","ROOM_24247","APPL_165714","InSinkErator",NA,"BADGER 1","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3285","ROOM_36014","APPL_56036","InSinkErator",NA,"BADGER 5-84","Unknown","#17081004776","No","0.5","HP",NA,NA
+"SITE_3286","ROOM_29181","APPL_43353","InSinkErator",NA,"PRO 77","Unknown","Unknown","No","1","HP",NA,NA
+"SITE_3287","ROOM_30982","APPL_66319","Unknown",NA,"#405750","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3289","ROOM_37269","APPL_44219","InSinkErator",NA,"BADGER100","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3290","ROOM_5010","APPL_133527","InSinkErator",NA,"PRO 77","Unknown","Unknown","No","1","HP",NA,NA
+"SITE_3292","ROOM_38591","APPL_35654","InSinkErator",NA,"#5-87A","Unknown","#19101516095","No","0.5","HP",NA,NA
+"SITE_3293","ROOM_44052","APPL_118183","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3299","ROOM_44681","APPL_89126","Other","Maintenance Warehouse","#4057004","Unknown","#15111198370","No","0.33","HP",NA,NA
+"SITE_3302","ROOM_16153","APPL_127881","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3305","ROOM_33695","APPL_49748","InSinkErator",NA,"#5-81A","Unknown","#08121526736","No","0.5","HP",NA,NA
+"SITE_3306","ROOM_30001","APPL_146339","Waste King",NA,"WASTE KING 1001","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_3307","ROOM_45393","APPL_126734","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3311","ROOM_6018","APPL_50811","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3312","ROOM_21495","APPL_116667","InSinkErator",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"Unknown",NA
+"SITE_3315","ROOM_44474","APPL_67637","Waste King",NA,"GXP50C","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3318","ROOM_20389","APPL_45360","Waste King",NA,"Unknown","Unknown","Unknown","No","0.33","HP","Unknown",NA
+"SITE_3319","ROOM_29839","APPL_38290","Other","Maintenance Warehouse","#405700","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3320","ROOM_46271","APPL_106278","Other","American Standard","CGWD93","Unknown","Unknown","No","Unknown",NA,NA,NA
+"SITE_3322","ROOM_33797","APPL_561","Other","Whirlaway","473C804P08","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3325","ROOM_34465","APPL_45322","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3327","ROOM_36767","APPL_8019","Other","Sinkmaster","#750","Unknown","9M6-05112-9","No","0.5","HP",NA,NA
+"SITE_3329","ROOM_14682","APPL_8169","InSinkErator",NA,"BADGER500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3330","ROOM_13645","APPL_170451","InSinkErator",NA,"#1-87A","Unknown","#18071299058","No","0.33","HP",NA,NA
+"SITE_3335","ROOM_29973","APPL_45765","Whirlpool",NA,"GC1000","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3338","ROOM_39611","APPL_117395","InSinkErator",NA,"405750-6","Unknown","#21021298195","No","0.5","HP",NA,NA
+"SITE_3341","ROOM_35894","APPL_151630","Other","Maintenance Warehouse","405700-3","Unknown","#08011828922","No","0.33","HP",NA,NA
+"SITE_3343","ROOM_15548","APPL_154236","InSinkErator",NA,"BADGER 5","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3344","ROOM_4520","APPL_132276","General Electric",NA,"GFC325V","Unknown","TZ403951C","No","0.33","HP",NA,NA
+"SITE_3347","ROOM_5125","APPL_38958","Kenmore",NA,"#175601351","Unknown","#08071024462","No","0.5","HP",NA,NA
+"SITE_3348","ROOM_36525","APPL_36133","InSinkErator",NA,"BADGER 1","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3352","ROOM_1350","APPL_138144","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_3353","ROOM_41199","APPL_124370","InSinkErator",NA,"#1-87","Unknown","#19031211207","No","1","HP",NA,NA
+"SITE_3358","ROOM_45652","APPL_90174","InSinkErator",NA,"#1-87A","Unknown","#18121298936","No","0.33","HP",NA,NA
+"SITE_3361","ROOM_39901","APPL_20878","InSinkErator",NA,"BADGER 1","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3362","ROOM_31358","APPL_8568","General Electric",NA,"GFC325V","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3363","ROOM_38802","APPL_67105","InSinkErator",NA,"#5-84","Unknown","#18021035860","No","0.5","HP",NA,NA
+"SITE_3364","ROOM_3224","APPL_47055","InSinkErator",NA,"BADGER","Unknown","Unknown","No","0.34","HP",NA,NA
+"SITE_3366","ROOM_30235","APPL_77405","InSinkErator",NA,"BADGER S-89A","Unknown","#22091291657","No","0.5","HP",NA,NA
+"SITE_3372","ROOM_30771","APPL_87764","InSinkErator",NA,"#1-87A","Unknown","#18011224331","No","0.33","HP",NA,NA
+"SITE_3376","ROOM_38205","APPL_107146","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_3381","ROOM_8043","APPL_70483","InSinkErator",NA,"#E101","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3384","ROOM_17796","APPL_103293","Unknown",NA,"Unknown","Unknown","Unknown","No","Unknown",NA,"NO NAMEPLATE",NA
+"SITE_3386","ROOM_7929","APPL_139712","InSinkErator",NA,"#5-84","Unknown","#14102007031","No","0.5","HP",NA,NA
+"SITE_3388","ROOM_38779","APPL_34780","InSinkErator",NA,"BADGER 500-3","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3389","ROOM_44774","APPL_87220","InSinkErator",NA,"BADGER 1-90","Unknown","#22011334678","No","0.33","HP",NA,NA
+"SITE_3391","ROOM_45117","APPL_156508","InSinkErator",NA,"405700-4","Unknown","#15121033559","No","0.33","HP",NA,NA
+"SITE_3398","ROOM_24274","APPL_149603","InSinkErator",NA,"BADGER 1","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3402","ROOM_36772","APPL_56953","InSinkErator",NA,"CONTRACTOR 333-1","Unknown","Unknown","No","0.75","HP",NA,NA
+"SITE_3403","ROOM_18184","APPL_157961","InSinkErator",NA,"#5-84","Unknown","#15111279441","No","0.5","HP",NA,NA
+"SITE_3405","ROOM_13343","APPL_57728","InSinkErator",NA,"BADGER 1","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3412","ROOM_39745","APPL_3994","InSinkErator",NA,"Unknown","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3414","ROOM_6340","APPL_123845","Unknown",NA,"Unknown","Unknown","Unknown","No","0.5","HP","Unknown",NA
+"SITE_3417","ROOM_46475","APPL_154215","Unknown",NA,"PF13CORD","Unknown","1D5-34847-69","No","0.5","HP",NA,NA
+"SITE_3418","ROOM_29878","APPL_49837","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3419","ROOM_35255","APPL_43231","InSinkErator",NA,"BADGER 500","Unknown","Unknown","No","0.5","HP",NA,NA
+"SITE_3420","ROOM_30889","APPL_85349","Other","Maintenance Warehouse","#113744","Unknown","Unknown","No","0.33","HP",NA,NA
+"SITE_3425","ROOM_35134","APPL_38197","InSinkErator",NA,"#5-87A","Unknown","Unknown","No","1","HP",NA,NA
+"SITE_3427","ROOM_5737","APPL_62853","Other","Premier","#143053","Unknown","Unknown","No","0.33","HP",NA,NA
