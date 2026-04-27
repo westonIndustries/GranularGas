@@ -1,0 +1,17 @@
+{
+  "scenario_name": "baseline",
+  "base_year": 2025,
+  "forecast_horizon": 10,
+  "housing_growth_rate": 0.01,
+  "electrification_rate": 0.02,
+  "efficiency_improvement": 0.01,
+  "weather_assumption": "normal",
+  "end_use_scope": [
+    "space_heating"
+  ],
+  "max_premises": 0,
+  "vectorized": true,
+  "total_rows": 11,
+  "years_simulated": 11,
+  "end_uses": 1
+}

@@ -379,3 +379,289 @@ def simulate_all_end_uses(
         return pd.DataFrame(columns=['blinded_id', 'end_use', 'annual_therms', 'efficiency', 'year'])
     
     return results_df
+
+
+def simulate_all_end_uses_vectorized(
+    premise_equipment: pd.DataFrame,
+    weather_data: pd.DataFrame,
+    water_temp_data: pd.DataFrame,
+    baseload_factors: Dict[str, float],
+    year: int = config.BASE_YEAR,
+    heating_factor: float = 1.0,
+    target_hot_water_temp: float = config.DEFAULT_HOT_WATER_TEMP,
+    gallons_per_day: float = config.DEFAULT_DAILY_HOT_WATER_GALLONS
+) -> pd.DataFrame:
+    """
+    Vectorized end-use simulation — same logic as simulate_all_end_uses but
+    uses pandas operations instead of row-by-row iteration. Orders of magnitude
+    faster for large datasets.
+    
+    Returns DataFrame with columns: blinded_id, end_use, annual_therms, efficiency, year
+    """
+    from src.weather import compute_hdd, assign_weather_station
+
+    df = premise_equipment.copy()
+
+    # Filter to rows with valid end_use
+    df = df[df['end_use'].notna() & (df['end_use'] != '')].copy()
+    if df.empty:
+        return pd.DataFrame(columns=['blinded_id', 'end_use', 'annual_therms', 'efficiency', 'year'])
+
+    # Ensure weather_station column exists
+    if 'weather_station' not in df.columns:
+        df['weather_station'] = df['district_code_IRP'].map(config.DISTRICT_WEATHER_MAP)
+
+    # --- Compute annual HDD per weather station ---
+    weather_data = weather_data.copy()
+    weather_data['date'] = pd.to_datetime(weather_data['date'], errors='coerce')
+    weather_data['_year'] = weather_data['date'].dt.year
+    
+    # Use target year's weather if available; otherwise fall back to most recent full year
+    year_weather = weather_data[weather_data['_year'] == year].copy()
+    if year_weather.empty or len(year_weather) < 100:
+        # Find the most recent year with substantial data (>300 days)
+        year_counts = weather_data.groupby('_year').size()
+        full_years = year_counts[year_counts > 300].index
+        if len(full_years) > 0:
+            fallback_year = int(full_years.max())
+            logger.info(f"No weather data for {year}; using {fallback_year} as proxy")
+            year_weather = weather_data[weather_data['_year'] == fallback_year].copy()
+        else:
+            logger.warning(f"No suitable weather data found for any year")
+    
+    year_weather['hdd'] = (65.0 - year_weather['daily_avg_temp']).clip(lower=0)
+    station_hdd = year_weather.groupby('site_id')['hdd'].sum()
+    logger.info(f"Annual HDD by station for {year}: {dict(list(station_hdd.items())[:3])}... ({len(station_hdd)} stations)")
+
+    # Map station HDD to each equipment row
+    df['annual_hdd'] = df['weather_station'].map(station_hdd).fillna(0)
+
+    # --- Compute water heating delta-T ---
+    water_temp_data = water_temp_data.copy()
+    water_temp_data['date'] = pd.to_datetime(water_temp_data['date'], errors='coerce')
+    year_water = water_temp_data[water_temp_data['date'].dt.year == year]
+    if not year_water.empty and 'cold_water_temp' in year_water.columns:
+        avg_cold = year_water['cold_water_temp'].mean()
+    else:
+        # Fall back to all years if target year not available
+        avg_cold = water_temp_data['cold_water_temp'].mean() if 'cold_water_temp' in water_temp_data.columns else config.DEFAULT_COLD_WATER_TEMP
+    delta_t = target_hot_water_temp - avg_cold
+    logger.info(f"Water heating delta_t for {year}: {delta_t:.1f}°F (cold={avg_cold:.1f}°F)")
+
+    # --- Ensure efficiency is valid ---
+    df['efficiency'] = pd.to_numeric(df['efficiency'], errors='coerce').fillna(0.7)
+    df.loc[df['efficiency'] <= 0, 'efficiency'] = 0.7
+
+    # --- Compute vintage and segment heating multipliers ---
+    vintage_mult = pd.Series(1.0, index=df.index, dtype='float64')
+    if 'setyear' in df.columns:
+        sy = pd.to_numeric(df['setyear'], errors='coerce')
+        for (yr_min, yr_max), mult in config.VINTAGE_HEATING_MULTIPLIER.items():
+            mask = (sy >= yr_min) & (sy <= yr_max)
+            vintage_mult[mask] = mult
+    
+    segment_mult = pd.Series(1.0, index=df.index, dtype='float64')
+    if 'segment' in df.columns:
+        for seg, mult in config.SEGMENT_HEATING_MULTIPLIER.items():
+            segment_mult[df['segment'] == seg] = mult
+    
+    combined_mult = vintage_mult * segment_mult
+
+    # --- Compute therms by end-use using a results series ---
+    therms = pd.Series(0.0, index=df.index, dtype='float64')
+
+    # Space heating: therms = (annual_hdd * heating_factor * vintage_mult * segment_mult) / efficiency
+    mask_sh = df['end_use'] == 'space_heating'
+    if mask_sh.any():
+        therms[mask_sh] = (
+            df.loc[mask_sh, 'annual_hdd'].astype(float) * heating_factor
+            * combined_mult[mask_sh].values
+            / df.loc[mask_sh, 'efficiency'].astype(float)
+        ).values
+
+    # Water heating: therms = (gallons/day * 8.34 * delta_t * 365) / (efficiency * 100000)
+    mask_wh = df['end_use'] == 'water_heating'
+    if mask_wh.any():
+        therms[mask_wh] = (
+            gallons_per_day * 8.34 * delta_t * 365.0
+            / (df.loc[mask_wh, 'efficiency'].astype(float) * 100000.0)
+        ).values
+
+    # Baseload end-uses: therms = annual_consumption / efficiency
+    for end_use, base_consumption in baseload_factors.items():
+        if end_use in ('space_heating', 'water_heating') or base_consumption == 0:
+            continue
+        mask = df['end_use'] == end_use
+        if mask.any():
+            therms[mask] = (base_consumption / df.loc[mask, 'efficiency'].astype(float)).values
+
+    # Ensure non-negative
+    therms = therms.clip(lower=0)
+    df['annual_therms'] = therms
+
+    # Build result
+    df['year'] = year
+    result = df[['blinded_id', 'end_use', 'annual_therms', 'efficiency', 'year']].copy()
+
+    logger.info(
+        f"Vectorized simulation for {year}: {len(result)} rows, "
+        f"total_therms={result['annual_therms'].sum():,.0f}, "
+        f"premises={result['blinded_id'].nunique()}"
+    )
+
+    return result
+
+
+def simulate_monthly_vectorized(
+    premise_equipment: pd.DataFrame,
+    weather_data: pd.DataFrame,
+    water_temp_data: pd.DataFrame,
+    baseload_factors: Dict[str, float],
+    year: int = config.BASE_YEAR,
+    heating_factor: float = 1.0,
+    target_hot_water_temp: float = config.DEFAULT_HOT_WATER_TEMP,
+    gallons_per_day: float = config.DEFAULT_DAILY_HOT_WATER_GALLONS
+) -> pd.DataFrame:
+    """
+    Monthly vectorized simulation — computes therms per premise per end-use per month.
+    Same logic as annual but sums HDD by month instead of by year.
+    
+    Returns DataFrame with columns: blinded_id, end_use, month, annual_therms, efficiency, year
+    """
+    from src.weather import compute_hdd
+
+    df = premise_equipment.copy()
+    df = df[df['end_use'].notna() & (df['end_use'] != '')].copy()
+    if df.empty:
+        return pd.DataFrame(columns=['blinded_id', 'end_use', 'month', 'annual_therms', 'efficiency', 'year'])
+
+    if 'weather_station' not in df.columns:
+        df['weather_station'] = df['district_code_IRP'].map(config.DISTRICT_WEATHER_MAP)
+
+    # --- Compute monthly HDD per weather station ---
+    wd = weather_data.copy()
+    wd['date'] = pd.to_datetime(wd['date'], errors='coerce')
+    wd['_year'] = wd['date'].dt.year
+    wd['_month'] = wd['date'].dt.month
+
+    year_weather = wd[wd['_year'] == year].copy()
+    months_covered = year_weather['_month'].nunique() if not year_weather.empty else 0
+    if year_weather.empty or months_covered < 12:
+        # Find the most recent year with all 12 months of data
+        months_per_year = wd.groupby('_year')['_month'].nunique()
+        full_years = months_per_year[months_per_year >= 12].index
+        if len(full_years) > 0:
+            fallback_year = int(full_years.max())
+            logger.info(f"Weather for {year} has only {months_covered} months; using {fallback_year} (12 months)")
+            year_weather = wd[wd['_year'] == fallback_year].copy()
+        else:
+            logger.warning(f"No year with 12 months of weather data found")
+
+    year_weather['hdd'] = (65.0 - year_weather['daily_avg_temp']).clip(lower=0)
+    # Monthly HDD: station × month
+    station_month_hdd = year_weather.groupby(['site_id', '_month'])['hdd'].sum().reset_index()
+    station_month_hdd.columns = ['site_id', 'month', 'monthly_hdd']
+
+    # --- Compute monthly water heating delta-T ---
+    wtd = water_temp_data.copy()
+    wtd['date'] = pd.to_datetime(wtd['date'], errors='coerce')
+    wtd['_year'] = wtd['date'].dt.year
+    wtd['_month'] = wtd['date'].dt.month
+    year_water = wtd[wtd['_year'] == year]
+    if year_water.empty:
+        year_water = wtd  # fall back to all years
+    monthly_cold = year_water.groupby('_month')['cold_water_temp'].mean() if 'cold_water_temp' in year_water.columns else pd.Series(dtype=float)
+
+    # --- Ensure efficiency is valid ---
+    df['efficiency'] = pd.to_numeric(df['efficiency'], errors='coerce').fillna(0.7)
+    df.loc[df['efficiency'] <= 0, 'efficiency'] = 0.7
+
+    # --- Monthly baseload load shapes ---
+    monthly_load_shapes = {
+        'cooking': {1: 0.085, 2: 0.078, 3: 0.082, 4: 0.080, 5: 0.082,
+                    6: 0.078, 7: 0.080, 8: 0.082, 9: 0.080, 10: 0.085,
+                    11: 0.090, 12: 0.098},
+        'clothes_drying': {1: 0.092, 2: 0.088, 3: 0.088, 4: 0.082, 5: 0.078,
+                           6: 0.072, 7: 0.070, 8: 0.072, 9: 0.078, 10: 0.082,
+                           11: 0.088, 12: 0.092},
+        'fireplace': {1: 0.200, 2: 0.180, 3: 0.120, 4: 0.040, 5: 0.010,
+                      6: 0.000, 7: 0.000, 8: 0.000, 9: 0.010, 10: 0.060,
+                      11: 0.150, 12: 0.230},
+        'other': {m: 1.0/12 for m in range(1, 13)},
+    }
+    days_in_month = {1: 31, 2: 28, 3: 31, 4: 30, 5: 31, 6: 30,
+                     7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31}
+
+    # --- Compute vintage and segment heating multipliers ---
+    vintage_mult = pd.Series(1.0, index=df.index, dtype='float64')
+    if 'setyear' in df.columns:
+        sy = pd.to_numeric(df['setyear'], errors='coerce')
+        for (yr_min, yr_max), mult in config.VINTAGE_HEATING_MULTIPLIER.items():
+            mask = (sy >= yr_min) & (sy <= yr_max)
+            vintage_mult[mask] = mult
+    
+    segment_mult = pd.Series(1.0, index=df.index, dtype='float64')
+    if 'segment' in df.columns:
+        for seg, mult in config.SEGMENT_HEATING_MULTIPLIER.items():
+            segment_mult[df['segment'] == seg] = mult
+    
+    combined_mult = vintage_mult * segment_mult
+
+    # --- Build monthly results ---
+    all_months = []
+
+    for month in range(1, 13):
+        month_df = df.copy()
+        month_df['month'] = month
+
+        # Space heating: therms = (monthly_hdd × heating_factor × multipliers) / efficiency
+        month_hdd = station_month_hdd[station_month_hdd['month'] == month].set_index('site_id')['monthly_hdd']
+        month_df['monthly_hdd'] = month_df['weather_station'].map(month_hdd).fillna(0)
+
+        therms = pd.Series(0.0, index=month_df.index, dtype='float64')
+
+        mask_sh = month_df['end_use'] == 'space_heating'
+        if mask_sh.any():
+            therms[mask_sh] = (
+                month_df.loc[mask_sh, 'monthly_hdd'].astype(float) * heating_factor
+                * combined_mult[mask_sh].values
+                / month_df.loc[mask_sh, 'efficiency'].astype(float)
+            ).values
+
+        # Water heating: therms = (gallons/day × 8.34 × delta_t × days) / (eff × 100000)
+        mask_wh = month_df['end_use'] == 'water_heating'
+        if mask_wh.any():
+            cold_temp = monthly_cold.get(month, config.DEFAULT_COLD_WATER_TEMP)
+            delta_t = target_hot_water_temp - cold_temp
+            days = days_in_month[month]
+            therms[mask_wh] = (
+                gallons_per_day * 8.34 * delta_t * days
+                / (month_df.loc[mask_wh, 'efficiency'].astype(float) * 100000.0)
+            ).values
+
+        # Baseload end-uses: therms = annual_consumption × monthly_shape / efficiency
+        for end_use, base_consumption in baseload_factors.items():
+            if end_use in ('space_heating', 'water_heating') or base_consumption == 0:
+                continue
+            mask = month_df['end_use'] == end_use
+            if mask.any():
+                shape = monthly_load_shapes.get(end_use, {}).get(month, 1.0/12)
+                therms[mask] = (
+                    base_consumption * shape / month_df.loc[mask, 'efficiency'].astype(float)
+                ).values
+
+        therms = therms.clip(lower=0)
+        month_df['annual_therms'] = therms  # column name kept for compatibility
+        month_df['year'] = year
+
+        all_months.append(month_df[['blinded_id', 'end_use', 'month', 'annual_therms', 'efficiency', 'year']])
+
+    result = pd.concat(all_months, ignore_index=True)
+
+    total = result['annual_therms'].sum()
+    logger.info(
+        f"Monthly simulation for {year}: {len(result)} rows (12 months), "
+        f"total_therms={total:,.0f}, premises={result['blinded_id'].nunique()}"
+    )
+
+    return result

@@ -11,7 +11,7 @@ The model will be a prototype framework suitable for long-term scenario analysis
 - **NW Natural**: Northwest Natural, a regulated natural gas utility serving approximately 2 million customers across Oregon and Southwest Washington
 - **IRP**: Integrated Resource Planning, NW Natural's long-term planning process for evaluating future demand, infrastructure needs, and compliance with regulatory requirements
 - **UPC**: Use Per Customer, the current top-down econometric approach for estimating aggregate residential demand
-- **End-use**: A specific energy-consuming application within a residential building (e.g., space heating, water heating, cooking, clothes drying, space cooling)
+- **End-use**: A specific energy-consuming application within a residential building (e.g., space heating, space cooling)
 - **Housing stock**: The total number and characteristics of residential units in a service territory
 - **Fuel switching**: The transition from one energy source to another (e.g., natural gas to electricity) in residential applications
 - **Equipment efficiency**: The energy conversion efficiency of residential appliances and equipment
@@ -26,10 +26,11 @@ The model will be a prototype framework suitable for long-term scenario analysis
 
 #### Acceptance Criteria
 
-1. THE Model SHALL explicitly define all residential end uses included in the simulation (e.g., space heating, water heating, cooking, clothes drying, space cooling, lighting, plug loads)
+1. THE Model SHALL simulate space heating as the sole end-use in the current scope (furnaces, boilers, heat pumps)
 2. THE Model SHALL exclude commercial and industrial end uses from the residential simulation
-3. WHERE customer segments are defined, THE Model SHALL specify the segmentation criteria (e.g., building type, climate zone, income level)
-4. WHILE simulating demand, THE Model SHALL maintain clear boundaries between end uses to prevent double-counting or omission
+3. THE Model SHALL exclude water heating, cooking, clothes drying, fireplaces/decorative, and other/miscellaneous end-uses from the current scope (planned for future work)
+4. WHERE customer segments are defined, THE Model SHALL specify the segmentation criteria (e.g., building type, climate zone, income level)
+5. WHILE simulating demand, THE Model SHALL maintain clear boundaries between end uses to prevent double-counting or omission
 
 ### Requirement 2: Housing Stock Representation
 
@@ -63,6 +64,7 @@ The model will be a prototype framework suitable for long-term scenario analysis
 2. THE Model SHALL calculate end-use energy consumption based on: equipment efficiency, usage patterns, and operating conditions
 3. WHILE simulating consumption, THE Model SHALL apply end-use specific load shapes that reflect typical usage patterns
 4. IF multiple fuel types are supported, THEN THE Model SHALL track consumption separately by fuel type
+5. NOTE: Water heating, cooking, clothes drying, fireplaces/decorative, and other/miscellaneous end-uses are excluded from the current scope and planned for future work
 
 ### Requirement 5: Demand Aggregation and Validation
 

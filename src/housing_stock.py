@@ -167,10 +167,15 @@ def build_baseline_stock(premise_equipment: pd.DataFrame, base_year: int) -> Hou
     if premise_equipment.empty:
         raise ValueError("premise_equipment DataFrame is empty")
     
-    required_cols = {'blinded_id', 'segment_code', 'district_code_IRP'}
+    required_cols = {'blinded_id', 'district_code_IRP'}
     missing_cols = required_cols - set(premise_equipment.columns)
     if missing_cols:
         raise ValueError(f"Missing required columns: {missing_cols}")
+    
+    # Support both 'segment_code' and 'segment' column names
+    segment_col = 'segment_code' if 'segment_code' in premise_equipment.columns else 'segment'
+    if segment_col not in premise_equipment.columns:
+        raise ValueError("Missing segment column (expected 'segment_code' or 'segment')")
     
     # Get unique premises (one row per blinded_id)
     premises = premise_equipment.drop_duplicates(subset=['blinded_id']).copy()
@@ -179,7 +184,7 @@ def build_baseline_stock(premise_equipment: pd.DataFrame, base_year: int) -> Hou
     total_units = len(premises)
     
     # Compute units by segment
-    units_by_segment = premises['segment_code'].value_counts().to_dict()
+    units_by_segment = premises[segment_col].value_counts().to_dict()
     
     # Compute units by district
     units_by_district = premises['district_code_IRP'].value_counts().to_dict()
@@ -214,28 +219,22 @@ def build_baseline_stock(premise_equipment: pd.DataFrame, base_year: int) -> Hou
 
 def project_stock(baseline: HousingStock, target_year: int, scenario: dict) -> HousingStock:
     """
-    Project housing stock to a future year using growth rates from scenario.
+    Project housing stock to a future year with demolition and segment shift.
     
-    Applies annual housing growth rate to project total units. New construction
-    additions are distributed proportionally across existing segments to maintain
-    the baseline segment distribution. Supports both forward and backward projections.
+    Applies:
+    1. Demolition: removes a fraction of existing stock (oldest homes first)
+    2. New construction: adds units at housing_growth_rate + replacement of demolished
+    3. Segment shift: new construction has a different SF/MF mix than existing stock
     
     Args:
         baseline: HousingStock object representing the baseline year
-        target_year: The year to project to (can be before or after baseline.year)
-        scenario: Dictionary with scenario parameters, must include:
-            - 'housing_growth_rate': float, annual growth rate (0.0-0.05 for forward, -0.05-0.0 for backward)
-            - 'base_year': int, the baseline year (for validation)
-    
-    Returns:
-        HousingStock object for the target year with projected total_units,
-        units_by_segment, and units_by_district
-    
-    Raises:
-        ValueError: If scenario is missing required keys or has invalid values
-        ValueError: If target_year == baseline.year
+        target_year: The year to project to
+        scenario: Dictionary with scenario parameters:
+            - 'housing_growth_rate': float, annual net growth rate
+            - 'base_year': int, the baseline year
+            - 'demolition_rate': float, annual demolition rate (default 0.002 = 0.2%)
+            - 'new_construction_mf_share': float, MF share of new construction (default 0.37)
     """
-    # Validate inputs
     if target_year == baseline.year:
         raise ValueError(f"target_year ({target_year}) must be != baseline.year ({baseline.year})")
     
@@ -244,63 +243,77 @@ def project_stock(baseline: HousingStock, target_year: int, scenario: dict) -> H
     if missing_keys:
         raise ValueError(f"scenario missing required keys: {missing_keys}")
     
-    growth_rate = scenario['housing_growth_rate']
-    if not (-0.05 <= growth_rate <= 0.05):
-        raise ValueError(f"housing_growth_rate must be in [-0.05, 0.05], got {growth_rate}")
+    from src import parameter_curves as pc
+    growth_rate = pc.resolve(scenario['housing_growth_rate'], target_year, 0.01)
+    demolition_rate = pc.resolve(scenario.get('demolition_rate', 0.002), target_year, 0.002)
+    new_mf_share = scenario.get('new_construction_mf_share', 0.37)
     
-    # Calculate number of years to project (can be negative for backward projection)
     years_to_project = target_year - baseline.year
     
-    # Project total units using compound growth formula: P(t) = P0 * (1 + r)^t
-    # This works for both forward (t > 0) and backward (t < 0) projections
+    # Use compound growth for total, then distribute segments
     projected_total_units = int(round(baseline.total_units * ((1 + growth_rate) ** years_to_project)))
     
-    # Calculate new units added (can be negative for backward projection)
+    # Account for demolition: net growth = gross growth - demolition
+    # But total is already net (growth_rate is net of demolition in traditional models)
+    # We model demolition explicitly: demolished units are replaced by new construction
+    demolished_total = int(round(baseline.total_units * demolition_rate * years_to_project))
+    
+    # Compute segment distribution with shift
+    projected_by_segment = baseline.units_by_segment.copy()
     new_units = projected_total_units - baseline.total_units
     
-    # Distribute new units proportionally across segments
-    projected_units_by_segment = baseline.units_by_segment.copy()
     if new_units != 0 and baseline.total_units > 0:
-        for segment, baseline_count in baseline.units_by_segment.items():
-            # Calculate proportion of baseline units in this segment
-            segment_proportion = baseline_count / baseline.total_units
-            # Allocate proportional share of new units to this segment
-            new_units_for_segment = int(round(new_units * segment_proportion))
-            projected_units_by_segment[segment] = baseline_count + new_units_for_segment
+        # Gross new = net new + demolished (demolished are replaced)
+        gross_new = abs(new_units) + demolished_total if new_units > 0 else 0
+        
+        # Remove demolished proportionally from existing segments
+        for seg in list(projected_by_segment.keys()):
+            seg_share = projected_by_segment[seg] / max(sum(projected_by_segment.values()), 1)
+            projected_by_segment[seg] -= int(round(demolished_total * seg_share))
+        
+        # Add new construction with MF shift
+        if gross_new > 0:
+            new_mf = int(round(gross_new * new_mf_share))
+            new_sf = gross_new - new_mf
+            
+            # Add MF
+            projected_by_segment['RESMF'] = projected_by_segment.get('RESMF', 0) + new_mf
+            
+            # Add SF distributed across SF-like segments
+            sf_segs = [s for s in projected_by_segment if s != 'RESMF']
+            sf_total = sum(projected_by_segment.get(s, 0) for s in sf_segs)
+            for seg in sf_segs:
+                if sf_total > 0:
+                    seg_share = projected_by_segment.get(seg, 0) / sf_total
+                    projected_by_segment[seg] = projected_by_segment.get(seg, 0) + int(round(new_sf * seg_share))
     
-    # Distribute new units proportionally across districts
-    projected_units_by_district = baseline.units_by_district.copy()
+    # Distribute district changes proportionally
+    projected_by_district = baseline.units_by_district.copy()
     if new_units != 0 and baseline.total_units > 0:
         for district, baseline_count in baseline.units_by_district.items():
-            # Calculate proportion of baseline units in this district
             district_proportion = baseline_count / baseline.total_units
-            # Allocate proportional share of new units to this district
-            new_units_for_district = int(round(new_units * district_proportion))
-            projected_units_by_district[district] = baseline_count + new_units_for_district
+            projected_by_district[district] = baseline_count + int(round(new_units * district_proportion))
     
     logger.info(
         f"Projected housing stock from year {baseline.year} to {target_year}: "
         f"baseline_units={baseline.total_units}, "
         f"projected_units={projected_total_units}, "
         f"new_units={new_units}, "
-        f"growth_rate={growth_rate:.4f}"
+        f"demolished={demolished_total}, "
+        f"growth_rate={growth_rate:.4f}, "
+        f"demolition_rate={demolition_rate:.4f}"
     )
     
-    # Compute housing age, vintage distribution, and replacement probability for projected year
-    # These are updated based on the projection year
     housing_age_by_district = _compute_housing_age_by_district(baseline.premises, target_year)
     vintage_distribution_by_district = _compute_vintage_distribution_by_district(baseline.premises, target_year)
     replacement_probability_by_district = _compute_replacement_probability_by_district(baseline.premises, target_year)
     
-    # Create new HousingStock object for projected year
-    # Note: premises DataFrame is not updated here; it remains the baseline premises
-    # In a full implementation, new construction premises would be synthesized
     return HousingStock(
         year=target_year,
-        premises=baseline.premises.copy(),  # Placeholder: same premises as baseline
+        premises=baseline.premises.copy(),
         total_units=projected_total_units,
-        units_by_segment=projected_units_by_segment,
-        units_by_district=projected_units_by_district,
+        units_by_segment=projected_by_segment,
+        units_by_district=projected_by_district,
         housing_age_by_district=housing_age_by_district,
         vintage_distribution_by_district=vintage_distribution_by_district,
         replacement_probability_by_district=replacement_probability_by_district

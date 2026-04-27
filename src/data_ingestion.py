@@ -47,8 +47,8 @@ def load_premise_data(path: str) -> pd.DataFrame:
     Load and filter premise data to active residential premises.
     
     Filters to:
-    - custtype='R' (residential)
-    - status_code='AC' (active)
+    - custtype='R' (residential) if column exists
+    - status_code='AC' (active) if column exists
     
     Args:
         path: Path to premise_data_blinded.csv
@@ -58,7 +58,7 @@ def load_premise_data(path: str) -> pd.DataFrame:
         
     Raises:
         FileNotFoundError: If file does not exist
-        ValueError: If required columns are missing
+        ValueError: If blinded_id column is missing
     """
     if not os.path.exists(path):
         raise FileNotFoundError(f"Premise data file not found: {path}")
@@ -67,20 +67,28 @@ def load_premise_data(path: str) -> pd.DataFrame:
         df = pd.read_csv(path)
         logger.info(f"Loaded {len(df)} total premise records from {path}")
         
-        # Validate required columns
-        required_cols = ['blinded_id', 'custtype', 'status_code']
-        missing_cols = [col for col in required_cols if col not in df.columns]
-        if missing_cols:
-            raise ValueError(f"Missing required columns: {missing_cols}")
+        # blinded_id is always required
+        if 'blinded_id' not in df.columns:
+            raise ValueError("Missing required column: blinded_id")
         
-        # Filter to residential active premises
-        df_filtered = df[(df['custtype'] == 'R') & (df['status_code'] == 'AC')].copy()
-        logger.info(f"Filtered to {len(df_filtered)} active residential premises")
+        # Filter to residential if custtype column exists
+        if 'custtype' in df.columns:
+            df = df[df['custtype'] == 'R'].copy()
+            logger.info(f"Filtered to {len(df)} residential premises (custtype='R')")
+        else:
+            logger.warning("custtype column not found — skipping residential filter")
         
-        if len(df_filtered) == 0:
-            logger.warning("No active residential premises found after filtering")
+        # Filter to active if status_code column exists
+        if 'status_code' in df.columns:
+            df = df[df['status_code'] == 'AC'].copy()
+            logger.info(f"Filtered to {len(df)} active premises (status_code='AC')")
+        else:
+            logger.warning("status_code column not found — skipping active filter")
         
-        return df_filtered
+        if len(df) == 0:
+            logger.warning("No premises found after filtering")
+        
+        return df
     except Exception as e:
         logger.error(f"Error loading premise data: {e}")
         raise
@@ -133,9 +141,18 @@ def load_segment_data(path: str) -> pd.DataFrame:
         df = pd.read_csv(path)
         logger.info(f"Loaded {len(df)} total segment records from {path}")
         
-        # Filter to residential segments
-        residential_segments = ['RESSF', 'RESMF', 'MOBILE']
+        # Filter to residential segments (including small MF and unassigned)
+        residential_segments = ['RESSF', 'RESMF', 'RSMFF', 'MOBILE', 'UNASS']
         df_filtered = df[df['segment'].isin(residential_segments)].copy()
+        
+        # Normalize segment names
+        df_filtered.loc[df_filtered['segment'] == 'RSMFF', 'segment'] = 'RESMF'
+        df_filtered.loc[df_filtered['segment'] == 'UNASS', 'segment'] = 'RESSF'
+        
+        # Flag new construction from mktseg column
+        if 'mktseg' in df_filtered.columns:
+            df_filtered['is_new_construction'] = df_filtered['mktseg'].isin(['RES-SFNC', 'RES-MFNC'])
+        
         logger.info(f"Filtered to {len(df_filtered)} residential customer records")
         
         return df_filtered
@@ -229,13 +246,16 @@ def load_water_temperature(path: str) -> pd.DataFrame:
         df = pd.read_csv(path)
         logger.info(f"Loaded {len(df)} water temperature records from {path}")
         
-        # Parse date columns
+        # Parse date columns — BullRun uses Stata format: 01jan2007
         date_cols = [col for col in df.columns if 'date' in col.lower()]
         for col in date_cols:
             try:
-                df[col] = pd.to_datetime(df[col])
-            except Exception as e:
-                logger.warning(f"Could not parse date column {col}: {e}")
+                df[col] = pd.to_datetime(df[col], format='%d%b%Y')
+            except Exception:
+                try:
+                    df[col] = pd.to_datetime(df[col], infer_datetime_format=True)
+                except Exception as e:
+                    logger.warning(f"Could not parse date column {col}: {e}")
         
         return df
     except Exception as e:

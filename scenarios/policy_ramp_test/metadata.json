@@ -1,0 +1,39 @@
+{
+  "scenario_name": "policy_ramp_test",
+  "base_year": 2025,
+  "forecast_horizon": 10,
+  "housing_growth_rate": {
+    "points": {
+      "2025": 0.012,
+      "2028": 0.015,
+      "2031": 0.01,
+      "2035": 0.005
+    }
+  },
+  "electrification_rate": {
+    "points": {
+      "2025": 0.02,
+      "2027": 0.02,
+      "2028": 0.04,
+      "2030": 0.08,
+      "2033": 0.06,
+      "2035": 0.04
+    }
+  },
+  "efficiency_improvement": {
+    "points": {
+      "2025": 0.01,
+      "2028": 0.015,
+      "2032": 0.02
+    }
+  },
+  "weather_assumption": "normal",
+  "end_use_scope": [
+    "space_heating"
+  ],
+  "max_premises": 0,
+  "vectorized": true,
+  "total_rows": 11,
+  "years_simulated": 11,
+  "end_uses": 1
+}

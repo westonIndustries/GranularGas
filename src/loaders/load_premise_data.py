@@ -11,11 +11,14 @@ def load_premise_data(path: str = None) -> pd.DataFrame:
         raise FileNotFoundError(f"Premise data file not found: {path}")
     df = pd.read_csv(path)
     logger.info(f"Loaded {len(df)} premise records from {path}")
-    for c in ['blinded_id', 'custtype', 'status_code']:
-        if c not in df.columns:
-            raise ValueError(f"Missing required column: {c}")
-    df = df[(df['custtype'] == 'R') & (df['status_code'] == 'AC')].copy()
-    logger.info(f"Filtered to {len(df)} active residential premises")
+    if 'blinded_id' not in df.columns:
+        raise ValueError("Missing required column: blinded_id")
+    if 'custtype' in df.columns:
+        df = df[df['custtype'] == 'R'].copy()
+        logger.info(f"Filtered to {len(df)} residential premises")
+    if 'status_code' in df.columns:
+        df = df[df['status_code'] == 'AC'].copy()
+        logger.info(f"Filtered to {len(df)} active premises")
     return df
 
 if __name__ == "__main__":

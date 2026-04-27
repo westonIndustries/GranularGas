@@ -1,0 +1,12 @@
+year,end_use,scenario_name,total_therms,use_per_customer,premise_count,data_type,irp_upc_therms
+2025,space_heating,policy_ramp_test,111325052.64287813,520.8798813563136,213725,calibrated,648.0
+2026,space_heating,policy_ramp_test,104690084.79050626,483.5502731625255,213725,projected,640.3
+2027,space_heating,policy_ramp_test,102859640.45261306,468.07359444377073,213725,projected,632.7
+2028,space_heating,policy_ramp_test,100446409.92402135,449.44878438225476,213725,projected,625.1
+2029,space_heating,policy_ramp_test,98904091.05340323,438.88322840243893,213725,projected,617.7
+2030,space_heating,policy_ramp_test,97573136.92427665,430.81120295768255,213725,projected,610.3
+2031,space_heating,policy_ramp_test,96417657.57780328,424.9851572368827,213725,projected,603.1
+2032,space_heating,policy_ramp_test,95433793.86205561,420.1096734608284,213725,projected,595.9
+2033,space_heating,policy_ramp_test,94210709.13788803,415.22636139930376,213725,projected,588.8
+2034,space_heating,policy_ramp_test,93406842.26134282,413.20953701512406,213725,projected,581.8
+2035,space_heating,policy_ramp_test,92727913.20464893,412.7569526814401,213725,projected,574.9

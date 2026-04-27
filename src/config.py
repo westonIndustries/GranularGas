@@ -20,34 +20,110 @@ import os
 # Maps equipment_type_code to end-use categories
 # Based on equipment_class and equipment_type_code from equipment_codes.csv
 END_USE_MAP = {
-    # Space Heating (HEAT class)
+    # Space Heating (HEAT class) — from equipment_codes.csv
     "HEAT": "space_heating",
     "FURN": "space_heating",
     "BOIL": "space_heating",
-    "HPMP": "space_heating",  # Heat pump
+    "HPMP": "space_heating",
+    "RFAU": "space_heating",      # Forced Air Furnace
+    "RFLR": "space_heating",      # Floor Furnace
+    "RCHT": "space_heating",      # Circulating Heater <20k BTU
+    "RCHTH": "space_heating",     # Circulating Heater >=20K BTU
+    "RWLF": "space_heating",      # Wall Furnace <20K BTU
+    "RWLFH": "space_heating",     # Wall Furnace >=20K BTU
+    "RHWH": "space_heating",      # Residential Heating (Hot Water)
+    "RBWA": "space_heating",      # Residential Water Boiler (heating)
+    "RVHT": "space_heating",      # Ventless Heating Appliance
+    "RCHP": "space_heating",      # Res Combined Heat & Power
+    "CONVB": "space_heating",     # Conversion Burner
+    "GELP": "space_heating",      # GELP (heating)
+    "C6FO": "space_heating",      # Commercial Forced Air Heating
+    "C6UN": "space_heating",      # Commercial Unit Heating
+    "C6RO": "space_heating",      # Commercial Roof Top Heating
+    "C6IN": "space_heating",      # Commercial Radiant Heating
+    "C6MA": "space_heating",      # Make Up Air
+    "C6BO": "space_heating",      # Boiler Heating (commercial)
+    "SPHT": "space_heating",      # Space Heater
+    "PTHTR": "space_heating",     # Patio Heater
     
     # Water Heating (WTR class)
     "WTR": "water_heating",
     "WTRH": "water_heating",
     "WTRB": "water_heating",
+    "RAWH": "water_heating",      # Residential Water Heating
+    "RWHI": "water_heating",      # Residential Tankless Water Heater
+    "RVWH": "water_heating",      # Ventless Water Heater
+    "CAWH": "water_heating",      # Commercial Water Heating
+    "C5WA": "water_heating",      # Commercial Water Heating
     
     # Cooking (RRGE/09CR codes)
-    "RRGE": "cooking",
-    "09CR": "cooking",
+    "RRGE": "cooking",            # Residential Range
+    "09CR": "cooking",            # Range
     "COOK": "cooking",
+    "C4RG": "cooking",            # Commercial Cooking Range
+    "C4OV": "cooking",            # Commercial Cooking Oven
+    "C4BR": "cooking",            # Commercial Cooking Broiler
+    "C4GR": "cooking",            # Commercial Cooking Griddle
+    "C4FR": "cooking",            # Commercial Cooking Fryer
+    "C4WO": "cooking",            # Commercial Cooking Woks
+    "C4MI": "cooking",            # Commercial Cooking Misc
+    "CCKG": "cooking",            # Commercial Cooking Gas
     
     # Clothes Drying (RDRY/C9DR codes)
-    "RDRY": "clothes_drying",
-    "C9DR": "clothes_drying",
+    "RDRY": "clothes_drying",     # Residential Dryer
+    "C9DR": "clothes_drying",     # Commercial Dryer
     "DRYR": "clothes_drying",
+    "P9DR": "clothes_drying",     # Process Dryers
     
     # Fireplaces/Decorative (FRPL class)
     "FRPL": "fireplace",
     "FIRE": "fireplace",
+    "RFPL": "fireplace",          # Fire Place <20K BTU
+    "RFPLH": "fireplace",         # Fire Place >=20K BTU
+    "RGLG": "fireplace",          # Gas Log
+    "RFPIT": "fireplace",         # Fire Pit
+    "CFPIT": "fireplace",         # Commercial Fire Pit
     
     # Other/Miscellaneous
     "OTHR": "other",
     "MISC": "other",
+    "RMISC": "other",             # Residential Misc
+    "RBBQ": "other",              # BBQ
+    "RGEN": "other",              # Residential Generator
+    "RLTR": "other",              # Residential Log Lighter
+    "POOL": "other",              # Pool Heater
+    "SPA": "other",               # Spa/Hot Tub
+    "HSLN": "other",              # Housepipe
+    "ACOND": "other",             # Air Conditioner
+    "MGLT": "other",              # Gas Light (Metered)
+    "NGLT": "other",              # Gas Light (Non-Metered)
+    "RGLT": "other",              # Gas Light
+    "NGV": "other",               # NGV Vehicle
+    "RWASH": "other",             # Residential Washing Machine
+    "RGBHP": "other",             # Gas Backup to Heat Pump
+    "CMSC": "other",              # Commercial Misc
+    "C8MI": "other",              # Commercial Equip Misc
+    "C8GE": "other",              # Standby Generator
+    "C8CO": "other",              # Coffee Bean Roaster
+    "8CBR": "other",              # Misc Coffee Bean Roaster
+    "C8BR": "other",              # Brew Tanks
+    "C8TO": "other",              # Torch
+    "C8PA": "other",              # Part Cleaners
+    "C6PI": "other",              # Oil Boil Pilot
+    "C6PA": "other",              # Paint Booths
+    "C9GE": "other",              # Engines-Generator
+    "P8KI": "other",              # Kilns
+    "P8OV": "other",              # Ovens (process)
+    "P8MI": "other",              # Process Misc
+    "P8BO": "other",              # Process Boiler
+    "RVFA": "other",              # Res Vehicle Fuel Appliance CNG
+    "CVFA": "other",              # Com Vehicle Fuel Appliance CNG
+    "IVFA": "other",              # Ind Vehicle Fuel Appliance CNG
+    "4OTO": "other",              # Other
+    "6FAF": "other",              # Other
+    "06DL": "other",              # Other
+    "02FG": "other",              # Other
+    "02FS": "other",              # Other
 }
 
 # ============================================================================
@@ -117,6 +193,7 @@ DISTRICT_WEATHER_MAP = {
     "BENT": "KPDX",     # Benton -> Portland (proxy)
     "CLAT": "KAST",     # Clatsop -> Astoria
     "COLU": "KAST",     # Columbia -> Astoria
+    "PORC": "KPDX",     # Portland Commercial -> Portland
     
     # Washington districts
     "CLAR": "KVUO",     # Clark -> Vancouver
@@ -207,6 +284,14 @@ IRP_CONTEXT = os.path.join(DATA_DIR, "Integrated Resource Plan (IRP),.txt")
 EQUIPMENT_LIFE_MATH = os.path.join(DATA_DIR, "equipment life math.txt")
 
 # ============================================================================
+# BUILDING ENVELOPE AND EQUIPMENT EFFICIENCY REFERENCE DATA
+# ============================================================================
+
+ENVELOPE_EFFICIENCY_INDEX = os.path.join(DATA_DIR, "building_envelope_efficiency_index.csv")
+SEGMENT_HEATING_MULTIPLIERS_CSV = os.path.join(DATA_DIR, "segment_heating_multipliers.csv")
+EQUIPMENT_AFUE_TRAJECTORY = os.path.join(DATA_DIR, "equipment_afue_trajectory.csv")
+
+# ============================================================================
 # GREEN BUILDING REGISTRY API
 # ============================================================================
 
@@ -217,9 +302,9 @@ GBR_API_KEY_ENV_VAR = "GBR_API_KEY"
 # RBSA METERING DATA (SUB-METERED END-USE)
 # ============================================================================
 
-RBSAM_Y1_DIR = os.path.join(DATA_DIR, "rbsam_y1")
-RBSAM_Y2_DIR = os.path.join(DATA_DIR, "rbsam_y2")
-RBSAM_DATA_DICT = os.path.join(DATA_DIR, "rbsa-metering-data-dictionary-2016-2017.xlsx")
+RBSAM_Y1_DIR = os.path.join(DATA_DIR, "Future Work", "rbsam_y1")
+RBSAM_Y2_DIR = os.path.join(DATA_DIR, "Future Work", "rbsam_y2")
+RBSAM_DATA_DICT = os.path.join(DATA_DIR, "Future Work", "rbsa-metering-data-dictionary-2016-2017.xlsx")
 
 # ============================================================================
 # 2017 RBSA-II DATASET (EARLIER VINTAGE FOR TEMPORAL COMPARISON)
@@ -283,7 +368,7 @@ ICAO_TO_GHCND = {
 # EIA RECS MICRODATA (RESIDENTIAL ENERGY CONSUMPTION SURVEY)
 # ============================================================================
 
-RECS_DIR = os.path.join(DATA_DIR, "Residential Energy Consumption Servey")
+RECS_DIR = os.path.join(DATA_DIR, "Residential Energy Consumption Survey")
 RECS_2020_CSV = os.path.join(RECS_DIR, "recs2020_public_v7.csv")
 RECS_2015_CSV = os.path.join(RECS_DIR, "recs2015_public_v4.csv")
 RECS_2009_CSV = os.path.join(RECS_DIR, "2009", "recs2009_public.csv")
@@ -303,6 +388,31 @@ DEFAULT_COLD_WATER_TEMP = 55.0  # Assumed incoming cold water temperature (Fahre
 DEFAULT_DAILY_HOT_WATER_GALLONS = 64.0  # Average daily hot water consumption per household (gallons)
 
 # ============================================================================
+# VINTAGE-BASED HEATING FACTOR MULTIPLIERS
+# ============================================================================
+
+# Older homes have worse insulation and leak more heat → higher heating factor
+# Newer homes are built to stricter energy codes → lower heating factor
+# Based on RBSA building shell data and nw_energy_proxies.csv envelope UA values
+# Multiplier is relative to the calibrated heating_factor (1.0 = average)
+VINTAGE_HEATING_MULTIPLIER = {
+    # (min_year, max_year): multiplier
+    (0, 1979): 1.35,       # Pre-1980: poor insulation, single-pane windows
+    (1980, 1999): 1.15,    # 1980-1999: first energy codes, better insulation
+    (2000, 2009): 1.00,    # 2000-2009: baseline (calibration era)
+    (2010, 2014): 0.85,    # 2010-2014: improved codes, better windows
+    (2015, 2099): 0.70,    # 2015+: current code, condensing furnaces, tight envelope
+}
+
+# Segment-based heating factor multipliers
+# Multi-family uses less heat per unit (shared walls, smaller units)
+SEGMENT_HEATING_MULTIPLIER = {
+    'RESSF': 1.05,          # Single-family: slightly above average (larger, more exposed)
+    'RESMF': 0.70,          # Multi-family: shared walls reduce heat loss ~30%
+    'Unclassified': 1.00,   # Unknown: use average
+}
+
+# ============================================================================
 # CURRENT RESIDENTIAL TARIFF RATES (REFERENCE)
 # ============================================================================
 
@@ -317,4 +427,4 @@ WA_CURRENT_RATE = 1.24164      # Washington Schedule 2 residential rate ($/therm
 
 LOG_LEVEL = "INFO"
 LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-OUTPUT_DIR = "outputs"
+OUTPUT_DIR = "output"

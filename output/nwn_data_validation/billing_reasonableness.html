@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>15.10 Billing Amount Reasonableness</title>
+<style>
+body { font-family: 'Segoe UI', sans-serif; margin: 20px; background: #f8f9fa; }
+h1 { font-size: 1.4em; color: #212529; }
+h2 { font-size: 1.15em; color: #343a40; margin-top: 24px; }
+h3 { font-size: 1.0em; color: #495057; }
+table { border-collapse: collapse; width: 100%; background: #fff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px; }
+th { background: #343a40; color: #fff; padding: 8px 10px; text-align: left; font-size: 0.85em; }
+td { padding: 6px 10px; border-bottom: 1px solid #e9ecef; font-size: 0.84em; }
+tr:hover { background: #f1f3f5; }
+.meta { color: #666; font-size: 0.9em; }
+.pass { color: #28a745; font-weight: bold; }
+.warn { color: #ffc107; font-weight: bold; }
+.fail { color: #dc3545; font-weight: bold; }
+img { max-width: 100%; margin: 10px 0; border: 1px solid #dee2e6; }
+.chart-container { margin: 16px 0; }
+</style></head><body>
+<h1>15.10 Billing Amount Reasonableness</h1>
+<p class="meta">Generated: 2026-04-21T00:45:36.547573</p>
+<div style="background:#e9ecef;padding:12px 16px;border-radius:6px;margin-bottom:20px;border-left:4px solid #4e79a7;"><p><strong>Purpose:</strong> Flag billing records with suspiciously low (< 1 therm) or high (> 500 therms) usage per billing period.</p><p><strong>Why it matters:</strong> Extreme billing values distort calibration. A record of 0.01 therms may be a meter read error or an estimated bill for a vacant unit. A record of 500+ therms in a single billing period (typically monthly) is implausible for a residential customer and may indicate a commercial account miscoded as residential, or a data entry error.</p><p><strong>How to read:</strong> The flagged percentage should be low (< 5%). The log-scale histogram shows the full distribution with threshold lines at 1 and 500 therms. The monthly time-series shows seasonal patterns (higher in winter, lower in summer) — anomalies indicate data issues. The box plot by rate schedule reveals whether certain schedules have unusual distributions.</p><p><strong>Recommended action:</strong> If > 5% of records are flagged, investigate the source. Low-therm records may be summer months with minimal gas use (legitimate) or estimated reads (filter out). High-therm records should be cross-checked against the premise's segment — a RESMF premise with 500 therms/month may be a master-metered building (legitimate but needs different treatment in simulation).</p></div><h2>Billing Reasonableness Summary</h2><table><thead><tr><th>metric</th><th>value</th></tr></thead><tbody><tr><td>Total billing records</td><td>48,675,554</td></tr><tr><td>Valid therm values</td><td>0</td></tr><tr><td>Flagged records (total)</td><td>0</td></tr><tr><td>% flagged</td><td>0.00%</td></tr><tr><td>Low (< 1 therm)</td><td>0</td></tr><tr><td>High (> 500 therms)</td><td>0</td></tr></tbody></table>
+</body></html>

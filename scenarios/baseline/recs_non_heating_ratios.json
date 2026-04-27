@@ -1,0 +1,9 @@
+[
+  {
+    "water_heating":0.7044,
+    "cooking":0.0549,
+    "clothes_drying":0.0336,
+    "fireplace":0.0854,
+    "other":0.1312
+  }
+]

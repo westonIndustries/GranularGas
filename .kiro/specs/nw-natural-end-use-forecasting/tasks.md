@@ -94,12 +94,12 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
       - _Requirements: 2.2, 7.2_
 
     - [x] 2.1.2 Billing and tariff data loaders (6 files in `src/loaders/`)
-      - `load_billing_data.py` â€” load billing_data_blinded.csv, parse utility_usage from dollar strings, parse GL_revenue_date to year/month
+      - `load_billing_data.py` â€” load billing_data_blinded.csv, parse utility_usage as therms (already in therms, not dollars), parse GL_revenue_date to year/month
       - `load_or_rates.py` â€” load or_rates_oct_2025.csv. OR Schedule 2 = $1.41220/therm
       - `load_wa_rates.py` â€” load wa_rates_nov_2025.csv. WA Schedule 2 = $1.24164/therm
       - `load_wacog_history.py` â€” load or_wacog_history.csv / wa_wacog_history.csv
       - `load_rate_case_history.py` â€” load or_rate_case_history.csv / wa_rate_case_history.csv
-      - `load_billing_to_therms.py` â€” build_historical_rate_table + convert_billing_to_therms
+      - `load_billing_to_therms.py` â€” utility_usage is already in therms; this loader validates and cleans therm values
       - _Requirements: 7.1, 7.3_
 
     - [x] 2.1.3 RBSA building stock data loaders (6 files in `src/loaders/`)
@@ -176,7 +176,7 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
       - Output: `output/data_quality/join_audit.html` and `.md`
 
     - [x] 2.3.3 Sample mismatches export
-      - Export CSV of rows that fail key validations: null end_use, zero/negative efficiency, missing weather_station, unparseable billing amounts, missing blinded_id joins
+      - Export CSV of rows that fail key validations: null end_use, zero/negative efficiency, missing weather_station, invalid billing therm values, missing blinded_id joins
       - Include the reason for each flagged row
       - Output: `output/data_quality/validation_failures.csv`
 
@@ -193,7 +193,7 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - [x] 2.3.6 Distribution plots for key fields
       - Histogram: equipment age distribution (from install year)
       - Histogram: efficiency values by end-use category
-      - Histogram: billing utility_usage amounts (log scale)
+      - Histogram: billing utility_usage therms (log scale)
       - Histogram: annual HDD by weather station
       - Bar chart: premises by district_code_IRP
       - Bar chart: equipment count by end_use category
@@ -447,15 +447,7 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
     - Map: weather stations on OpenStreetMap with HDD color coding
     - Output: `output/weather_analysis/property7_results.html` and `.md`
     - **Validates: Requirements 4.1, 4.2**
-
-  - [x] 6.3 Property test: water heating delta
-    - **Property 8: delta_t > 0 when cold water temp < target_temp**
-    - Line graph: daily delta-T by day of year (2008-2025 overlay)
-    - Seasonal pattern: monthly delta-T with min/max bands
-    - Scatter: water temp vs air temp (KPDX) with regression line
-    - Bar chart: estimated annual WH therms per customer by station
-    - Output: `output/water_heating/property8_results.html` and `.md`
-    - **Validates: Requirements 4.1, 4.2**
+    - NOTE: Water heating delta-T testing is excluded from current scope (planned for future work)
 
 - [x] 7. Checkpoint — Verify core model components
   - All outputs saved to `output/checkpoint_core/` as HTML + MD
@@ -499,9 +491,9 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
 
   - [x] 8.1 Create `src/simulation.py` — per-end-use functions
     - Implement `simulate_space_heating(equipment, annual_hdd, heating_factor)`
-    - Implement `simulate_water_heating(equipment, delta_t, gallons_per_day=64.0)`
-    - Implement `simulate_baseload(equipment, annual_consumption)`
     - _Requirements: 4.1, 4.2, 4.4_
+    - NOTE: Water heating, cooking, drying simulation functions are excluded from current scope (planned for future work)
+    - NOTE: Fireplace/decorative and other/miscellaneous end-uses are also excluded from current scope
 
   - [x] 8.2 Implement `simulate_all_end_uses` orchestrator
     - Dispatch to simulation function per premise based on end_use
@@ -512,12 +504,13 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
 
   - [x] 8.3 Property test: simulation non-negativity
     - **Property 9: All simulated annual_therms >= 0**
-    - Histogram: annual therms distribution by end-use
+    - Histogram: annual therms distribution by end-use (space heating only)
     - Box plot: annual therms by end-use (median, quartiles)
     - Stacked bar: average therms by end-use and vintage era
     - Map: average therms per customer by district (choropleth)
     - Output: `output/simulation/property9_results.html` and `.md`
     - **Validates: Requirements 4.2**
+    - NOTE: Water heating, cooking, drying, fireplace, and other end-uses are excluded from current scope
 
   - [x] 8.4 Property test: efficiency impact monotonicity
     - **Property 10: Higher efficiency → lower or equal therms**
@@ -557,10 +550,11 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
 
   - [x] 10.1 Simulation results summary
     - Run baseline simulation on actual data
-    - Report: total demand, UPC, demand by end-use and segment
-    - Stacked bar: end-use composition of total demand
+    - Report: total demand, UPC, demand by end-use (space heating only) and segment
+    - Stacked bar: end-use composition of total demand (space heating only)
     - Output: `output/checkpoint_simulation/simulation_summary.html` and `.md`
     - _Requirements: 5.1, 10.1_
+    - NOTE: Water heating, cooking, and drying are excluded from current scope
 
   - [x] 10.2 Model vs IRP comparison
     - Compare model UPC to IRP 10-year forecast
@@ -633,7 +627,7 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
 
   - [x] 13.1 Billing-based calibration
     - Load billing data and build historical rate table
-    - Convert billing dollars to therms
+    - Use billing therms directly (utility_usage is already in therms)
     - Compare simulated vs billing-derived therms per premise
     - Compute MAE, mean bias, R²
     - Flag premises with divergence > threshold
@@ -664,16 +658,125 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
   - [x] 14.2 Multi-scenario comparison
     - Run baseline + high electrification scenarios
     - Line graph: UPC trajectories (2025-2035)
-    - Stacked bar: end-use composition under each scenario
+    - Stacked bar: end-use composition under each scenario (space heating only)
     - Output: `output/checkpoint_final/scenario_comparison.html` and `.md`
     - _Requirements: 6.2, 9.4_
+    - NOTE: Water heating, cooking, and drying are excluded from current scope
 
   - [x] 14.3 Final validation dashboard
-    - Traffic-light summary of all property tests (pass/fail)
+    - Traffic-light summary of all property tests (pass/fail) 
     - Summary of all checkpoint results
     - List of known limitations and data gaps
     - Output: `output/checkpoint_final/final_dashboard.html` and `.md`
     - _Requirements: 10.1, 10.4_
+
+- [x] 15. NW Natural source data validation suite
+  - All outputs saved to `output/nwn_data_validation/` as HTML + MD + PNG charts
+  - _Requirements: 7.1, 7.4, 10.1, 10.2_
+
+  - [x] 15.1 Premise referential integrity
+    - For every `blinded_id` in equipment_data, verify it exists in premise_data
+    - For every `blinded_id` in segment_data, verify it exists in premise_data
+    - Report: total orphan equipment IDs, total orphan segment IDs, match rates
+    - Bar chart: orphan counts by source table (equipment vs segment vs billing)
+    - Time series: if segment `setyear` is available, plot orphan rate by year
+    - Output: `output/nwn_data_validation/referential_integrity.html` and `.md`
+
+  - [x] 15.2 Equipment code validity
+    - For every `equipment_type_code` in equipment_data, verify it exists in equipment_codes.csv
+    - Report: total valid codes, total unknown codes, list of unknown codes with row counts
+    - Bar chart: top 20 equipment codes by frequency, color-coded valid (green) vs unknown (red)
+    - Pie chart: % of equipment rows with valid vs unknown codes
+    - Output: `output/nwn_data_validation/equipment_code_validity.html` and `.md`
+
+  - [x] 15.3 Duplicate premise-equipment detection
+    - Check for exact duplicate rows in equipment_data (same blinded_id + equipment_type_code + QTY)
+    - Report: total duplicates, unique duplicated blinded_ids, duplication rate
+    - Bar chart: duplicate count by equipment_type_code (top 20)
+    - Histogram: number of duplicates per blinded_id (1x, 2x, 3x+)
+    - Export: `output/nwn_data_validation/duplicate_equipment.csv` with all duplicate rows
+    - Output: `output/nwn_data_validation/duplicate_detection.html` and `.md`
+
+  - [x] 15.4 Weather station coverage
+    - For every unique `district_code_IRP` in premise_data, verify it maps to a weather station via DISTRICT_WEATHER_MAP
+    - Report: total districts, mapped districts, unmapped districts with premise counts
+    - Bar chart: premise count by district, color-coded mapped (green) vs unmapped (red)
+    - Map (folium): district centroids on OpenStreetMap, color-coded by mapping status
+    - Output: `output/nwn_data_validation/weather_station_coverage.html` and `.md`
+
+  - [x] 15.5 Billing coverage analysis
+    - Count unique blinded_ids in billing_data vs active residential premises
+    - Report: total premises, premises with billing, coverage %, premises without billing
+    - Bar chart: billing coverage by district_code_IRP
+    - Time series: billing record count by year-month (from GL_revenue_date), showing data availability over time
+    - Histogram: number of billing records per premise (distribution of billing history depth)
+    - Output: `output/nwn_data_validation/billing_coverage.html` and `.md`
+
+  - [x] 15.6 Weather date continuity
+    - For each SiteId in DailyCalDay, check for missing dates in the time series
+    - Report: total expected days, total actual days, gap count, longest gap per station
+    - Heatmap: station × month showing data completeness (% of days present) across all years
+    - Time series: daily record count by date (should be 11 stations per day), highlight gaps
+    - Line chart: annual HDD by station over time (1985-2025) to spot anomalies
+    - Output: `output/nwn_data_validation/weather_continuity.html` and `.md`
+
+  - [x] 15.7 Segment consistency
+    - For every active residential premise, check it has exactly one segment record
+    - Report: premises with 0 segments, premises with 1 segment, premises with 2+ segments
+    - Bar chart: segment distribution (RESSF, RESMF, MOBILE, other) with counts
+    - Time series: segment set dates (`setyear`) distribution — histogram by year showing when segments were assigned
+    - Stacked area chart: cumulative segment assignments over time by segment type
+    - Output: `output/nwn_data_validation/segment_consistency.html` and `.md`
+
+  - [x] 15.8 Equipment quantity sanity
+    - Check `QTY_OF_EQUIPMENT_TYPE` values: should be positive integers, typically 1-3
+    - Report: min/max/mean/median QTY, count of QTY > 5 (suspicious), count of QTY <= 0 (invalid)
+    - Histogram: QTY distribution (1, 2, 3, 4, 5+)
+    - Bar chart: average QTY by equipment_type_code (top 20 codes)
+    - Export: `output/nwn_data_validation/suspicious_quantities.csv` for QTY > 5
+    - Output: `output/nwn_data_validation/equipment_quantity.html` and `.md`
+
+  - [x] 15.9 State-district cross-check
+    - Verify `service_state` is consistent with `district_code_IRP` (OR districts → OR, WA districts → WA)
+    - Report: total mismatches, list of mismatched district-state pairs with premise counts
+    - Bar chart: premise count by service_state × district_code_IRP (highlight mismatches in red)
+    - Map (folium): mismatched premises plotted on OpenStreetMap if coordinates available
+    - Output: `output/nwn_data_validation/state_district_crosscheck.html` and `.md`
+
+  - [x] 15.10 Billing amount reasonableness
+    - Parse `utility_usage` therm values from billing_data
+    - Flag records with therms < 1 (suspiciously low) or > 500 per billing period (suspiciously high)
+    - Report: total flagged records, % of total, breakdown by flag type (low vs high)
+    - Histogram: billing therms distribution (log scale) with threshold lines at 1 and 500 therms
+    - Time series: monthly average billing therms over time (2009-2025), with min/max bands
+    - Box plot: billing therms distribution by rate_schedule
+    - Output: `output/nwn_data_validation/billing_reasonableness.html` and `.md`
+
+  - [x] 15.11 Weather temperature bounds
+    - Check daily `TempHA` values are within reasonable PNW range (-10°F to 115°F)
+    - Report: total out-of-range records, min/max observed temps, stations with outliers
+    - Time series: daily temperature by station (overlay all stations), highlight out-of-range in red
+    - Heatmap: station × month showing average temperature (spot seasonal patterns and anomalies)
+    - Line chart: annual average temperature by station (1985-2025) to show climate trends
+    - Box plot: monthly temperature distribution across all stations (seasonal pattern)
+    - Output: `output/nwn_data_validation/temperature_bounds.html` and `.md`
+
+  - [x] 15.12 Temporal alignment audit
+    - Compare date ranges across all time-series datasets: weather, billing, water temp, snow
+    - Report: min/max dates per dataset, overlap period, gaps between datasets
+    - Gantt-style chart: horizontal bars showing date range of each dataset, with overlap highlighted
+    - Time series: record count per month across all datasets (stacked area), showing where data is available
+    - Table: dataset × year matrix showing record counts (heatmap style)
+    - Output: `output/nwn_data_validation/temporal_alignment.html` and `.md`
+
+  - [x] 15.13 Customer count over time by segment type
+    - Join billing data (GL_revenue_date) with segment data to count unique active customers per year by type (RESSF, RESMF, MOBILE)
+    - Report: yearly customer counts by segment, total customers, year-over-year growth rate
+    - Stacked area chart: customers over time by segment type
+    - Line chart: each segment as a separate line for comparison
+    - Bar + line combo chart: total customers with YoY growth rate overlay
+    - 100% stacked area chart: segment share evolution over time
+    - Output: `output/nwn_data_validation/customer_count_over_time.html` and `.md`
 
 ## Notes
 
@@ -683,3 +786,16 @@ Build a bottom-up residential end-use demand forecasting model in Python. The im
 - Each task references specific requirements for traceability
 - Checkpoints ensure incremental validation against actual data
 - All code uses Python with pandas, dataclasses, and standard library logging
+
+## Future Work
+
+- Water heating simulation (Bull Run water temperature driven)
+- Cooking end-use (baseload consumption)
+- Clothes drying end-use (baseload consumption)
+- Fireplaces/decorative gas use (baseload consumption)
+- Other/miscellaneous end-uses
+- Monthly temporal resolution — compute monthly HDD/delta-T from daily weather, apply monthly load shapes for baseload end-uses, enable monthly billing calibration (see `FUTURE_WORK.md`)
+- Daily temporal resolution — per-day simulation for peak-day analysis and load shape modeling, requires chunked processing for output volume (see `FUTURE_WORK.md`)
+- Enhanced scenario parameters — per-end-use electrification rates, heat pump COP/fractions/Gorge penalty, segment-specific heating factors, calibration targets (see `FUTURE_WORK.md`)
+- Multi-district scenario runs — run and compare demand across all IRP districts simultaneously, with district-level UPC comparison and geographic demand distribution charts
+- Replace synthetic housing stock helpers — `_compute_housing_age_by_district`, `_compute_vintage_distribution_by_district`, and `_compute_replacement_probability_by_district` in `src/housing_stock.py` currently return hardcoded values for districts D1-D10 that don't exist in the data. Replace with actual computations from `setyear` (housing vintage), Census B25034 (vintage distribution), and Weibull model (replacement probability)

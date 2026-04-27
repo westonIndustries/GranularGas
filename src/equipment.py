@@ -257,8 +257,28 @@ def build_equipment_inventory(premise_equipment: pd.DataFrame) -> pd.DataFrame:
             axis=1
         )
     
+    # Boost efficiency for new construction premises
+    # New construction (post-2015) gets code-minimum 92% AFUE for space heating
+    if 'is_new_construction' in df.columns:
+        nc_mask = df['is_new_construction'] == True
+        nc_sh_mask = nc_mask & (df['end_use'] == 'space_heating')
+        if nc_sh_mask.any():
+            old_avg = df.loc[nc_sh_mask, 'efficiency'].mean()
+            df.loc[nc_sh_mask, 'efficiency'] = df.loc[nc_sh_mask, 'efficiency'].clip(lower=0.92)
+            new_avg = df.loc[nc_sh_mask, 'efficiency'].mean()
+            logger.info(
+                f"New construction efficiency boost: {nc_sh_mask.sum():,} space heating units "
+                f"({old_avg:.2f} → {new_avg:.2f})"
+            )
+    
     # Derive install_year: use provided value or assume mid-useful-life
-    if 'install_year' not in df.columns or df['install_year'].isna().any():
+    # Support 'setyear' as an alias for 'install_year'
+    if 'install_year' not in df.columns and 'setyear' in df.columns:
+        df['install_year'] = pd.to_numeric(df['setyear'], errors='coerce')
+    if 'install_year' not in df.columns:
+        df['install_year'] = pd.NA
+    
+    if df['install_year'].isna().any():
         logger.warning(
             f"Missing install_year for {df['install_year'].isna().sum()} equipment units; "
             "assuming mid-useful-life installation"
@@ -276,7 +296,9 @@ def build_equipment_inventory(premise_equipment: pd.DataFrame) -> pd.DataFrame:
         df['useful_life'] = df['end_use'].map(config.USEFUL_LIFE).fillna(15)
     
     # Derive fuel_type: default to 'natural_gas' for gas equipment
-    if 'fuel_type' not in df.columns or df['fuel_type'].isna().any():
+    if 'fuel_type' not in df.columns:
+        df['fuel_type'] = 'natural_gas'
+    if df['fuel_type'].isna().any():
         logger.warning(
             f"Missing fuel_type for {df['fuel_type'].isna().sum()} equipment units; "
             "defaulting to 'natural_gas'"
@@ -396,7 +418,50 @@ def apply_replacements(
     # Count replacements before cleanup
     num_replaced = df['is_replaced'].sum()
     
-    # Apply replacements
+    # Get degradation/repair parameters from scenario config
+    annual_degradation = scenario_config.get('annual_degradation_rate', 0.005)
+    repair_recovery = scenario_config.get('repair_efficiency_recovery', 0.85)
+    
+    # New equipment efficiency: rises over time based on code minimums + market premium
+    # Historical AFUE trajectory (federal minimum + typical market premium):
+    #   Pre-1992: ~65-75%  |  1992: 78% min → ~80% market
+    #   2015: 80% min → ~88% market  |  2023: 81% min → ~92% market
+    #   2028+: 95% min (condensing required) → ~96% market
+    base_new_eff = scenario_config.get('new_equipment_efficiency', 0.92)
+    if year < 2028:
+        new_equip_eff = base_new_eff
+    elif year < 2032:
+        # 2028-2031: transition to 95% condensing mandate
+        new_equip_eff = max(base_new_eff, 0.95 + (year - 2028) * 0.003)
+    else:
+        # 2032+: market settles at ~96-97% with smart controls
+        new_equip_eff = max(base_new_eff, 0.96 + (year - 2032) * 0.001)
+    new_equip_eff = min(new_equip_eff, 0.98)  # physical limit for gas
+    
+    # --- Apply age-based efficiency degradation to ALL equipment ---
+    # Every unit loses efficiency each year due to wear
+    # degraded_eff = current_eff × (1 - annual_degradation)
+    if annual_degradation > 0:
+        df['efficiency'] = df['efficiency'] * (1 - annual_degradation)
+    
+    # --- Apply repairs to non-replaced old equipment ---
+    # Units past half their useful life that survived replacement get repaired
+    # Repair restores some efficiency but not to like-new
+    if 'useful_life' in df.columns:
+        repair_mask = (~df['is_replaced']) & (df['age'] > df['useful_life'] / 2)
+        num_repaired = repair_mask.sum()
+        if num_repaired > 0 and repair_recovery > 0:
+            # Repair recovers a fraction of the degradation loss
+            # repaired_eff = degraded_eff + (original_rated - degraded_eff) × recovery_fraction
+            # Simplified: bump efficiency by recovery × degradation amount
+            degradation_loss = df.loc[repair_mask, 'efficiency'] * annual_degradation
+            df.loc[repair_mask, 'efficiency'] = (
+                df.loc[repair_mask, 'efficiency'] + degradation_loss * repair_recovery
+            )
+    else:
+        num_repaired = 0
+    
+    # --- Apply replacements ---
     for idx in df[df['is_replaced']].index:
         end_use = df.loc[idx, 'end_use']
         
@@ -405,11 +470,9 @@ def apply_replacements(
         if np.random.uniform(0, 1) < electrification_rate:
             df.loc[idx, 'fuel_type'] = 'electric'
         
-        # Apply efficiency improvement
-        efficiency_improvement = scenario_config.get('efficiency_improvement', {}).get(end_use, 0.0)
-        new_efficiency = df.loc[idx, 'efficiency'] * (1 + efficiency_improvement)
-        # Cap efficiency at 1.0 (100%)
-        df.loc[idx, 'efficiency'] = min(new_efficiency, 1.0)
+        # Set to new equipment efficiency (code-minimum for current year)
+        # This is a step-change, not a percentage bump
+        df.loc[idx, 'efficiency'] = new_equip_eff
         
         # Update install_year to current year
         df.loc[idx, 'install_year'] = year
@@ -419,11 +482,15 @@ def apply_replacements(
         beta = df.loc[idx, 'beta']
         df.loc[idx, 'eta'] = median_to_eta(useful_life, beta)
     
+    # Cap efficiency at valid range
+    df['efficiency'] = df['efficiency'].clip(lower=0.05, upper=1.0)
+    
     # Clean up temporary columns
     df = df.drop(columns=['age', 'replacement_prob', 'random_draw', 'is_replaced'])
     
     logger.info(
-        f"Applied replacements for year {year}: {num_replaced} units replaced"
+        f"Applied replacements for year {year}: {num_replaced} replaced, "
+        f"{num_repaired} repaired, avg_eff={df['efficiency'].mean():.4f}"
     )
     
     return df

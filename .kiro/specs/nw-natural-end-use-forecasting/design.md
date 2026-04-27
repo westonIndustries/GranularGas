@@ -2,7 +2,7 @@
 
 ## Overview
 
-This design describes a bottom-up residential end-use demand forecasting model for NW Natural's Integrated Resource Planning (IRP) process. The model disaggregates residential natural gas demand by end use (space heating, water heating, cooking, clothes drying, fireplaces/decorative, and other), enabling scenario analysis for technology adoption, electrification, and efficiency improvements.
+This design describes a bottom-up residential end-use demand forecasting model for NW Natural's Integrated Resource Planning (IRP) process. The model disaggregates residential natural gas demand by end use (space heating), enabling scenario analysis for technology adoption, electrification, and efficiency improvements. Water heating, cooking, and clothes drying are excluded from the current scope and planned for future work.
 
 The system is a Python-based prototype built for academic capstone delivery. It ingests NW Natural's blinded premise, equipment, segment, and weather data, constructs a housing stock model with equipment inventories, simulates per-unit energy consumption driven by weather and equipment characteristics, and aggregates results to system-level demand projections. Scenarios are defined via configuration and run independently for comparison.
 
@@ -75,28 +75,11 @@ Data/
 
 ### Key Design Decisions
 
-1. **End-use categories derived from equipment_codes.csv**: The equipment_class and equipment_type_code fields map directly to end-use categories. The HEAT class covers space heating, WTR covers water heating, FRPL covers fireplaces, and OTHR is further subdivided by code (RRGE/09CR -> cooking, RDRY/C9DR -> drying, etc.).
+1. **End-use categories derived from equipment_codes.csv**: The current model focuses exclusively on space heating (furnaces, boilers, heat pumps). The equipment_class and equipment_type_code fields map to end-use categories, with the HEAT class covering space heating. Water heating (WTR), cooking (RRGE/09CR), drying (RDRY/C9DR), fireplaces (FRPL), and other/miscellaneous (OTHR) are excluded from the current scope and planned for future work.
 
 2. **Weather station assignment by district**: Premises are assigned to weather stations based on district_code_IRP. A static mapping table links each IRP district to its nearest weather station SiteId.
 
 3. **Heating Degree Day (HDD) driven space heating**: Space heating consumption is modeled as a function of HDD (base 65F) computed from daily temperature data, scaled by equipment efficiency and housing characteristics.
-
-4. **Bull Run water temperature for water heating**: Water heating demand uses the temperature differential between a target hot water temperature (typically 120F) and incoming cold water temperature (proxied by Bull Run water temperature data).
-
-5. **Baseload end uses as flat annual consumption**: Non-weather-sensitive end uses (cooking, drying, fireplaces, decorative) are modeled as constant annual consumption per equipment unit, adjusted by equipment efficiency.
-
-6. **Tariff-based billing-to-therms conversion**: Billing data contains dollar amounts, not therms. Historical tariff rates are reconstructed from six manually extracted CSV files: or_rate_case_history.csv, or_rates_oct_2025.csv, or_wacog_history.csv (Oregon), and wa_rate_case_history.csv, wa_rates_nov_2025.csv, wa_wacog_history.csv (Washington). The total rate per therm = base distribution charge + WACOG. Current residential rates: OR Schedule 2 = $1.41220/therm, WA Schedule 2 = $1.24164/therm. Historical rates are reconstructed by working backward from current rates using rate case granted percentages and WACOG history.
-
-7. **Scenario parameters as configuration dictionaries**: Each scenario is a Python dictionary specifying technology adoption rates, efficiency trajectories, and electrification targets, enabling independent runs with shared baseline logic.
-
-8. **RBSA 2022 as building characteristics proxy**: The 2022 Residential Building Stock Assessment (RBSA) dataset from NEEA provides Pacific Northwest-specific building characteristics missing from NW Natural's blinded data. Key RBSA tables used:
-   - SiteDetail.csv -- Conditioned area (sqft), home vintage, bedrooms, bathrooms, heating/cooling zones, building type, gas utility, NWN service flag, site case weights
-   - Mechanical_HeatingAndCooling.csv -- HVAC system types, fuel, AFUE/COP efficiency ratings, vintage, capacity (BTUh)
-   - Mechanical_WaterHeater.csv -- Water heater type (storage/tankless), fuel, efficiency (EF), capacity, vintage
-   - Appliance_Stove_Oven.csv -- Cooking equipment fuel type (gas/electric)
-   - Appliance_Laundry.csv -- Dryer fuel type (gas/electric), heat pump dryer flag
-   - Building_Shell_One_Line.csv -- Envelope U-values (ceiling, wall, floor, window), whole-house UA
-   RBSA sites are filtered to NWN_SF_StrataVar = 'NWN' or Gas_Utility = 'NW NATURAL GAS' to match NW Natural's service territory. Site case weights enable population-level estimates.
 
 9. **ASHRAE equipment service life and maintenance cost data**: Equipment useful life assumptions and maintenance costs are sourced from the ASHRAE public database, downloaded as state-specific XLS files:
    - OR-ASHRAE_Service_Life_Data.xls -- Median service life (years) by equipment type for Oregon
@@ -203,7 +186,7 @@ graph LR
 
 ### Pipeline Stages
 
-1. **Data Ingestion & Cleaning**: Individual loaders in `src/loaders/` each handle one data source — loading CSV/XLS files from `Data/` or calling APIs. Each loader is runnable standalone (`python -m src.loaders.<name>`) and saves diagnostic output to `output/loaders/`. The `data_ingestion.py` module re-exports all loaders and provides the `build_premise_equipment_table` join that combines premise/equipment/segment/codes into a unified DataFrame. Tariff loaders reconstruct historical $/therm rates; billing loader converts dollars to estimated therms.
+1. **Data Ingestion & Cleaning**: Individual loaders in `src/loaders/` each handle one data source — loading CSV/XLS files from `Data/` or calling APIs. Each loader is runnable standalone (`python -m src.loaders.<name>`) and saves diagnostic output to `output/loaders/`. The `data_ingestion.py` module re-exports all loaders and provides the `build_premise_equipment_table` join that combines premise/equipment/segment/codes into a unified DataFrame. Billing data contains utility_usage already in therms (not dollars). Tariff loaders are retained for rate analysis but not needed for therm conversion.
 
 2. **Housing Stock & Equipment Model**: Builds a representation of the residential housing stock with equipment inventories per premise. Applies scenario-driven equipment transitions (replacements via Weibull survival model, fuel switching) for projection years.
 
@@ -231,7 +214,7 @@ src/
 |   +-- load_wa_rates.py
 |   +-- load_wacog_history.py
 |   +-- load_rate_case_history.py
-|   +-- load_billing_to_therms.py    # build_historical_rate_table + convert_billing_to_therms
+|   +-- load_billing_to_therms.py    # utility_usage is already in therms; validates and cleans therm values
 |   +-- load_rbsa_site_detail.py
 |   +-- load_rbsa_hvac.py
 |   +-- load_rbsa_water_heater.py
@@ -463,7 +446,7 @@ def load_snow_data(path: str) -> pd.DataFrame:
     ...
 
 def load_billing_data(path: str) -> pd.DataFrame:
-    """Load billing data CSV. Parse utility_usage from dollar strings to float,
+    """Load billing data CSV. Parse utility_usage as therms (numeric),
     parse GL_revenue_date to year/month."""
     ...
 
@@ -488,7 +471,7 @@ def build_historical_rate_table(rate_cases, wacog, current_rates, state) -> pd.D
     ...
 
 def convert_billing_to_therms(billing, rate_table) -> pd.DataFrame:
-    """Compute estimated_therms = utility_usage / rate_per_therm."""
+    """utility_usage is already in therms; validate and clean values."""
     ...
 
 def load_rbsa_site_detail(path: str) -> pd.DataFrame:
