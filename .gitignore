@@ -1,4 +1,26 @@
-Data/
+Data/NWNatural Data/
+Data/2017-RBSA-II-Combined-Database/
+Data/2022 RBSA Datasets/
+Data/ashrae/
+Data/B25024-5y-county/
+Data/B25034-5y/
+Data/B25034-5y-county/
+Data/B25034_1y/
+Data/B25040-5y-county/
+Data/Future Work/
+Data/noaa_normals/
+Data/PSU projection data/
+Data/Residential Energy Consumption Survey/
+Data/Future Work/rbsam_y1/
+Data/Future Work/rbsam_y2/
+Data/PSU projection data/2023/
+Data/PSU projection data/2024/
+Data/PSU projection data/2025/
+Data/Residential Energy Consumption Survey/1993/
+Data/Residential Energy Consumption Survey/1997/
+Data/Residential Energy Consumption Survey/2001/
+Data/Residential Energy Consumption Survey/2005/
+Data/Residential Energy Consumption Survey/2009/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
