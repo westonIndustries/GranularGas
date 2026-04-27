@@ -28,74 +28,74 @@
   },
   {
     "year":2028,
-    "efficiency_multiplier":0.931001616,
+    "efficiency_multiplier":0.9280560874,
     "gas_fraction":0.971023,
     "hybrid_fraction":0.017386,
     "replacement_rate":0.093220339,
     "repair_rate":0.3305084746,
-    "avg_efficiency":0.8811359389
+    "avg_efficiency":0.8839325491
   },
   {
     "year":2029,
-    "efficiency_multiplier":0.9297396845,
+    "efficiency_multiplier":0.9244799732,
     "gas_fraction":0.967731,
     "hybrid_fraction":0.019361,
     "replacement_rate":0.0677966102,
     "repair_rate":0.2881355932,
-    "avg_efficiency":0.8823319008
+    "avg_efficiency":0.887351816
   },
   {
     "year":2030,
-    "efficiency_multiplier":0.9298411474,
+    "efficiency_multiplier":0.9230194912,
     "gas_fraction":0.965681,
     "hybrid_fraction":0.020591,
     "replacement_rate":0.0423728814,
     "repair_rate":0.2796610169,
-    "avg_efficiency":0.882235622
+    "avg_efficiency":0.8887558615
   },
   {
     "year":2031,
-    "efficiency_multiplier":0.9289481555,
+    "efficiency_multiplier":0.9208048909,
     "gas_fraction":0.964044,
     "hybrid_fraction":0.021573,
     "replacement_rate":0.0338983051,
     "repair_rate":0.2711864407,
-    "avg_efficiency":0.8830837095
+    "avg_efficiency":0.8908933816
   },
   {
     "year":2032,
-    "efficiency_multiplier":0.9303337714,
+    "efficiency_multiplier":0.9208048909,
     "gas_fraction":0.962819,
     "hybrid_fraction":0.022309,
     "replacement_rate":0.0254237288,
     "repair_rate":0.2457627119,
-    "avg_efficiency":0.8817684667
+    "avg_efficiency":0.8908933816
   },
   {
     "year":2033,
-    "efficiency_multiplier":0.9290674663,
+    "efficiency_multiplier":0.9178118039,
     "gas_fraction":0.960371,
     "hybrid_fraction":0.023777,
     "replacement_rate":0.0508474576,
     "repair_rate":0.2033898305,
-    "avg_efficiency":0.8829703038
+    "avg_efficiency":0.8937986846
   },
   {
     "year":2034,
-    "efficiency_multiplier":0.9317931931,
+    "efficiency_multiplier":0.9178118039,
     "gas_fraction":0.959557,
     "hybrid_fraction":0.024266,
     "replacement_rate":0.0169491525,
     "repair_rate":0.186440678,
-    "avg_efficiency":0.8803873962
+    "avg_efficiency":0.8937986846
   },
   {
     "year":2035,
-    "efficiency_multiplier":0.9346388884,
+    "efficiency_multiplier":0.9178118039,
     "gas_fraction":0.959151,
     "hybrid_fraction":0.02451,
     "replacement_rate":0.0084745763,
     "repair_rate":0.1779661017,
-    "avg_efficiency":0.8777068805
+    "avg_efficiency":0.8937986846
   }
 ]

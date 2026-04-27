@@ -68,48 +68,113 @@ def _mark_projection(ax, base_year=None):
                 ha='left', va='top')
 
 
+def _is_monthly_run(scenario_dir: Path) -> bool:
+    """Return True if this scenario was run with monthly temporal resolution."""
+    results_path = scenario_dir / 'results.csv'
+    if not results_path.exists():
+        return False
+    try:
+        header = pd.read_csv(results_path, nrows=0).columns.tolist()
+        return 'month' in header
+    except Exception:
+        return False
+
+
+def _load_results_annual(scenario_dir: Path) -> pd.DataFrame:
+    """Load results.csv and aggregate months → year if monthly resolution."""
+    path = scenario_dir / 'results.csv'
+    if not path.exists():
+        return pd.DataFrame()
+    df = pd.read_csv(path)
+    if 'month' in df.columns:
+        agg_cols = {'total_therms': 'sum', 'premise_count': 'first'}
+        for col in ('use_per_customer', 'irp_upc_therms', 'scenario_name', 'data_type'):
+            if col in df.columns:
+                agg_cols[col] = 'first'
+        df = df.groupby(['year', 'end_use']).agg(agg_cols).reset_index()
+        if 'premise_count' in df.columns:
+            df['use_per_customer'] = df['total_therms'] / df['premise_count'].clip(lower=1)
+    return df
+
+
 def chart_upc_trajectory(scenario_dir: Path):
     """1. Model UPC vs IRP UPC over time — shows both SH-only and estimated total."""
     irp_path = scenario_dir / 'irp_comparison.csv'
     est_path = scenario_dir / 'estimated_total_upc.csv'
+    monthly_path = scenario_dir / 'monthly_summary.csv'
     if not irp_path.exists():
         return
-    df = pd.read_csv(irp_path)
-    
-    # Load estimated total if available
+
+    is_monthly = _is_monthly_run(scenario_dir)
+
+    # IRP comparison is always annual (annual UPC)
+    irp = pd.read_csv(irp_path)
+    # Deduplicate to one row per year (irp_comparison has annual rows)
+    irp_annual = irp.drop_duplicates('year').sort_values('year')
+
     has_est = est_path.exists()
     if has_est:
-        est = pd.read_csv(est_path)
+        est = pd.read_csv(est_path).drop_duplicates('year').sort_values('year')
 
-    fig, ax = plt.subplots(figsize=(10, 5))
-    
-    # Space heating only
-    ax.plot(df['year'], df['model_upc'], marker='o', color=COLORS['model'],
-            linewidth=2, label='Model: Space Heating Only')
-    
-    # Estimated total (if available) — this is the fair comparison to IRP
-    if has_est and 'estimated_total_upc' in est.columns:
-        ax.plot(est['year'], est['estimated_total_upc'], marker='D', color='#59a14f',
-                linewidth=2, label='Model: Estimated Total (all end-uses)')
-    
-    # IRP forecast (all end-uses)
-    ax.plot(df['year'], df['irp_upc'], marker='s', color=COLORS['irp'],
-            linewidth=2, linestyle='--', label='NW Natural IRP (all end-uses)')
-    
-    # Shade gap between estimated total and IRP
-    if has_est and 'estimated_total_upc' in est.columns:
-        ax.fill_between(est['year'], est['estimated_total_upc'], df['irp_upc'],
-                         alpha=0.1, color=COLORS['irp'])
+    fig, ax = plt.subplots(figsize=(14 if is_monthly else 10, 5))
+
+    if is_monthly and monthly_path.exists():
+        # Monthly UPC on decimal-year axis (132 points)
+        mo = pd.read_csv(monthly_path).sort_values(['year', 'month'])
+        mo['decimal_year'] = mo['year'] + (mo['month'] - 1) / 12.0
+
+        ax.plot(mo['decimal_year'], mo['use_per_customer'],
+                color=COLORS['model'], linewidth=1.5, alpha=0.9,
+                label='Model UPC / Month (space heating)')
+        ax.fill_between(mo['decimal_year'], 0, mo['use_per_customer'],
+                        color=COLORS['model'], alpha=0.1)
+
+        # IRP annual reference line (step/flat between Jan ticks)
+        ax.step(irp_annual['year'], irp_annual['irp_upc'],
+                color=COLORS['irp'], linewidth=2, linestyle='--',
+                where='post', label='NW Natural IRP (annual, all end-uses)')
+
+        # Mark projection start
+        base_year = int(mo['year'].min())
+        ax.axvline(x=base_year + 1, color='#7f7f7f', linestyle=':', linewidth=1.5, alpha=0.6)
+        ax.text(base_year + 1.05, mo['use_per_customer'].max() * 0.97,
+                'Projected ->', fontsize=8, color='#7f7f7f', va='top')
+
+        years = sorted(mo['year'].unique())
+        ax.set_xticks([float(y) for y in years])
+        ax.set_xticklabels([str(int(y)) for y in years], fontsize=9)
+        ax.set_xlabel('Year (monthly resolution)')
+        ax.set_ylabel('Therms / Customer / Month')
+        ax.set_title('UPC Trajectory — Monthly Resolution vs IRP Annual Forecast')
     else:
-        ax.fill_between(df['year'], df['model_upc'], df['irp_upc'],
-                         alpha=0.1, color=COLORS['irp'])
-    
-    ax.set_title('Use Per Customer: Model vs NW Natural IRP Forecast')
-    ax.set_xlabel('Year')
-    ax.set_ylabel('Therms / Customer / Year')
+        # Annual: original behaviour
+        ax.plot(irp_annual['year'], irp_annual['model_upc'],
+                marker='o', color=COLORS['model'], linewidth=2,
+                label='Model: Space Heating Only')
+
+        if has_est and 'estimated_total_upc' in est.columns:
+            ax.plot(est['year'], est['estimated_total_upc'],
+                    marker='D', color='#59a14f', linewidth=2,
+                    label='Model: Estimated Total (all end-uses)')
+
+        ax.plot(irp_annual['year'], irp_annual['irp_upc'],
+                marker='s', color=COLORS['irp'], linewidth=2, linestyle='--',
+                label='NW Natural IRP (all end-uses)')
+
+        if has_est and 'estimated_total_upc' in est.columns:
+            ax.fill_between(est['year'], est['estimated_total_upc'],
+                            irp_annual['irp_upc'], alpha=0.1, color=COLORS['irp'])
+        else:
+            ax.fill_between(irp_annual['year'], irp_annual['model_upc'],
+                            irp_annual['irp_upc'], alpha=0.1, color=COLORS['irp'])
+
+        ax.set_xlim(irp_annual['year'].min(), irp_annual['year'].max())
+        ax.set_xlabel('Year')
+        ax.set_ylabel('Therms / Customer / Year')
+        ax.set_title('Use Per Customer: Model vs NW Natural IRP Forecast')
+
     ax.legend(fontsize=8)
     ax.grid(True, alpha=0.3)
-    ax.set_xlim(df['year'].min(), df['year'].max())
     ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f'{x:,.0f}'))
     _save(fig, scenario_dir / 'chart_upc_trajectory.png')
 
@@ -418,74 +483,139 @@ def chart_segment_demand(scenario_dir: Path):
     if not path.exists():
         return
     df = pd.read_csv(path)
-    pivot = df.pivot(index='year', columns='segment', values='total_therms').fillna(0)
 
-    # Order columns
-    preferred = ['RESSF', 'RESMF', 'MOBILE', 'Unclassified', 'Unknown']
-    cols = [c for c in preferred if c in pivot.columns]
-    cols += [c for c in pivot.columns if c not in cols]
-    pivot = pivot[cols]
+    is_monthly = 'month' in df.columns
 
-    fig, ax = plt.subplots(figsize=(10, 5))
-    bottom = np.zeros(len(pivot))
-    for seg in pivot.columns:
-        color = COLORS.get(seg, '#76b7b2')
-        ax.fill_between(pivot.index, bottom, bottom + pivot[seg].values,
-                         label=seg, color=color, alpha=0.7)
-        bottom += pivot[seg].values
+    if is_monthly:
+        # Decimal-year axis: 132 points
+        df = df.sort_values(['year', 'month']).copy()
+        df['decimal_year'] = df['year'] + (df['month'] - 1) / 12.0
+
+        preferred = ['RESSF', 'RESMF', 'MOBILE', 'Unclassified', 'Unknown']
+        segments = [s for s in preferred if s in df['segment'].unique()]
+        segments += [s for s in df['segment'].unique() if s not in segments]
+
+        fig, ax = plt.subplots(figsize=(14, 5))
+        bottom = np.zeros(len(df['decimal_year'].unique()))
+        x_vals = sorted(df['decimal_year'].unique())
+
+        for seg in segments:
+            color = COLORS.get(seg, '#76b7b2')
+            seg_data = df[df['segment'] == seg].set_index('decimal_year')['total_therms'].reindex(x_vals, fill_value=0)
+            ax.fill_between(x_vals, bottom, bottom + seg_data.values,
+                            label=seg, color=color, alpha=0.7)
+            bottom += seg_data.values
+
+        years = sorted(df['year'].unique())
+        ax.set_xticks([float(y) for y in years])
+        ax.set_xticklabels([str(int(y)) for y in years], fontsize=9)
+        ax.set_xlabel('Year (monthly resolution)')
+        base_year = int(df['year'].min())
+        ax.axvline(x=base_year + 1, color='#7f7f7f', linestyle=':', linewidth=1.5, alpha=0.6)
+    else:
+        pivot = df.pivot(index='year', columns='segment', values='total_therms').fillna(0)
+        preferred = ['RESSF', 'RESMF', 'MOBILE', 'Unclassified', 'Unknown']
+        cols = [c for c in preferred if c in pivot.columns]
+        cols += [c for c in pivot.columns if c not in cols]
+        pivot = pivot[cols]
+
+        fig, ax = plt.subplots(figsize=(10, 5))
+        bottom = np.zeros(len(pivot))
+        for seg in pivot.columns:
+            color = COLORS.get(seg, '#76b7b2')
+            ax.fill_between(pivot.index, bottom, bottom + pivot[seg].values,
+                            label=seg, color=color, alpha=0.7)
+            bottom += pivot[seg].values
+        ax.set_xlim(pivot.index.min(), pivot.index.max())
+        ax.set_xlabel('Year')
+
     ax.set_title('Total Demand by Segment Over Time')
-    ax.set_xlabel('Year')
     ax.set_ylabel('Total Therms')
     ax.legend()
     ax.grid(True, alpha=0.3)
-    ax.set_xlim(pivot.index.min(), pivot.index.max())
     ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f'{x:,.0f}'))
     _save(fig, scenario_dir / 'chart_segment_demand.png')
 
 
 def chart_total_demand(scenario_dir: Path):
-    """8. Total system demand over time with YoY change."""
-    path = scenario_dir / 'yearly_summary.csv'
-    if not path.exists():
-        return
-    df = pd.read_csv(path)
+    """8. Total system demand over time with MoM/YoY change."""
+    monthly_path = scenario_dir / 'monthly_summary.csv'
+    yearly_path = scenario_dir / 'yearly_summary.csv'
 
-    fig, ax1 = plt.subplots(figsize=(10, 5))
-    ax1.bar(df['year'], df['total_therms'], color=COLORS['model'], alpha=0.6,
-            edgecolor='white', label='Total Demand')
-    ax1.set_xlabel('Year')
+    is_monthly = monthly_path.exists() and _is_monthly_run(scenario_dir)
+
+    if is_monthly:
+        df = pd.read_csv(monthly_path)
+        df = df.sort_values(['year', 'month']).copy()
+        df['decimal_year'] = df['year'] + (df['month'] - 1) / 12.0
+        x = df['decimal_year'].values
+        y = df['total_therms'].values
+        pct_change = pd.Series(y).pct_change() * 100
+        x_label = 'Year (monthly resolution)'
+        change_label = 'Month-over-Month Change %'
+        title = 'Total System Demand — Monthly Resolution'
+        base_year = int(df['year'].min())
+    else:
+        if not yearly_path.exists():
+            return
+        df = pd.read_csv(yearly_path)
+        x = df['year'].values
+        y = df['total_therms'].values
+        pct_change = pd.Series(y).pct_change() * 100
+        # Mask first two points (no prior year + calibrated→projected transition)
+        pct_change.iloc[0] = np.nan
+        if len(pct_change) > 1:
+            pct_change.iloc[1] = np.nan
+        x_label = 'Year'
+        change_label = 'Year-over-Year Change %'
+        title = 'Total System Demand and Year-over-Year Change'
+        base_year = None
+
+    fig, ax1 = plt.subplots(figsize=(14 if is_monthly else 10, 5))
+
+    if is_monthly:
+        # Line + fill for monthly (too many points for bars)
+        ax1.plot(x, y, color=COLORS['model'], linewidth=1.5, alpha=0.9, label='Total Demand')
+        ax1.fill_between(x, 0, y, color=COLORS['model'], alpha=0.15)
+        # Mark projection start
+        ax1.axvline(x=base_year + 1, color='#7f7f7f', linestyle=':', linewidth=1.5, alpha=0.6)
+        ax1.text(base_year + 1.05, max(y) * 0.97, 'Projected →',
+                 fontsize=8, color='#7f7f7f', va='top')
+        # Year tick marks
+        years = sorted(df['year'].unique())
+        ax1.set_xticks([float(yr) for yr in years])
+        ax1.set_xticklabels([str(int(yr)) for yr in years], fontsize=9)
+    else:
+        ax1.bar(x, y, color=COLORS['model'], alpha=0.6, edgecolor='white', label='Total Demand')
+        # Annotate initial drop
+        if len(df) > 1:
+            initial_drop = (y[1] / y[0] - 1) * 100
+            ax1.annotate(f'{initial_drop:+.1f}%\n(initial\nadjustment)',
+                         xy=(x[1], y[1]),
+                         textcoords="offset points", xytext=(-40, -30),
+                         fontsize=8, color=COLORS['irp'], ha='center',
+                         arrowprops=dict(arrowstyle='->', color=COLORS['irp'], lw=0.8))
+
+    ax1.set_xlabel(x_label)
     ax1.set_ylabel('Total Therms', color=COLORS['model'])
     ax1.tick_params(axis='y', labelcolor=COLORS['model'])
-    ax1.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f'{x:,.0f}'))
+    ax1.yaxis.set_major_formatter(mticker.FuncFormatter(lambda v, _: f'{v:,.0f}'))
+    ax1.grid(True, alpha=0.3)
 
-    # YoY % change on secondary axis — skip first transition (calibrated→projected)
+    # Secondary axis: % change
     ax2 = ax1.twinx()
-    yoy = df['total_therms'].pct_change() * 100
-    # Mask the first YoY (NaN) and second (calibrated→projected transition)
-    yoy_clean = yoy.copy()
-    if len(yoy_clean) > 1:
-        yoy_clean.iloc[0] = np.nan  # no prior year
-        yoy_clean.iloc[1] = np.nan  # calibrated→projected transition (not meaningful)
-    ax2.plot(df['year'], yoy_clean, color=COLORS['irp'], marker='o', linewidth=1.5,
-             label='YoY Change % (projected)')
-    ax2.set_ylabel('Year-over-Year Change (%)', color=COLORS['irp'])
+    ax2.plot(x, pct_change.values, color=COLORS['irp'],
+             marker=None if is_monthly else 'o',
+             linewidth=1.0 if is_monthly else 1.5,
+             alpha=0.7, label=change_label)
+    ax2.set_ylabel(change_label, color=COLORS['irp'])
     ax2.tick_params(axis='y', labelcolor=COLORS['irp'])
     ax2.axhline(y=0, color=COLORS['irp'], linestyle='--', alpha=0.3)
-    
-    # Annotate the initial drop separately
-    if len(df) > 1:
-        initial_drop = (df.iloc[1]['total_therms'] / df.iloc[0]['total_therms'] - 1) * 100
-        ax1.annotate(f'{initial_drop:+.1f}%\n(initial\nadjustment)',
-                     xy=(df.iloc[1]['year'], df.iloc[1]['total_therms']),
-                     textcoords="offset points", xytext=(-40, -30),
-                     fontsize=8, color=COLORS['irp'], ha='center',
-                     arrowprops=dict(arrowstyle='->', color=COLORS['irp'], lw=0.8))
 
-    ax1.set_title('Total System Demand and Year-over-Year Change')
+    ax1.set_title(title)
     lines1, labels1 = ax1.get_legend_handles_labels()
     lines2, labels2 = ax2.get_legend_handles_labels()
     ax1.legend(lines1 + lines2, labels1 + labels2, loc='upper right', fontsize=8)
-    ax1.grid(True, alpha=0.3)
     _save(fig, scenario_dir / 'chart_total_demand.png')
 
 
@@ -775,72 +905,76 @@ def chart_three_way_comparison(scenario_dir: Path):
     """13. Three-way comparison: observed billing vs NW Natural IRP vs model estimate."""
     est_path = scenario_dir / 'estimated_total_upc.csv'
     obs_path = scenario_dir / 'observed_billing_upc.csv'
+    monthly_path = scenario_dir / 'monthly_summary.csv'
     if not est_path.exists():
         return
 
-    est = pd.read_csv(est_path)
+    est = pd.read_csv(est_path).drop_duplicates('year').sort_values('year')
+    is_monthly = _is_monthly_run(scenario_dir)
 
-    # Load observed billing if available
     has_observed = obs_path.exists()
-    if has_observed:
-        obs = pd.read_csv(obs_path)
-    else:
-        obs = pd.DataFrame()
+    obs = pd.read_csv(obs_path) if has_observed else pd.DataFrame()
 
-    # Load IRP historical benchmarks
     irp_hist_data = [
         (2005, 835), (2010, 812), (2015, 744), (2020, 688), (2022, 672), (2025, 648)
     ]
     irp_hist = pd.DataFrame(irp_hist_data, columns=['year', 'irp_upc'])
-
     has_irp = 'irp_upc' in est.columns and est['irp_upc'].notna().any()
 
-    fig, ax = plt.subplots(figsize=(14, 7))
+    fig, ax = plt.subplots(figsize=(16 if is_monthly else 14, 7))
 
-    # 1. Observed billing (historical actuals)
+    # 1. Observed billing (historical actuals — always annual)
     if has_observed and not obs.empty:
         ax.plot(obs['year'], obs['mean_upc'], marker='o', color='#4e79a7',
                 linewidth=2, markersize=5, label='Observed Billing (mean UPC)', zorder=3)
-        # Add median as lighter line
         ax.plot(obs['year'], obs['median_upc'], color='#4e79a7',
                 linewidth=1, linestyle=':', alpha=0.6, label='Observed Billing (median)')
 
-    # 2. NW Natural IRP — historical benchmarks + forward forecast
+    # 2. NW Natural IRP — historical benchmarks + forward forecast (always annual)
     ax.scatter(irp_hist['year'], irp_hist['irp_upc'], color=COLORS['irp'],
                s=80, zorder=4, marker='D', label='NW Natural IRP (historical benchmarks)')
     if has_irp:
-        ax.plot(est['year'], est['irp_upc'], color=COLORS['irp'],
-                linewidth=2.5, linestyle='--', marker='^', markersize=6,
+        ax.step(est['year'], est['irp_upc'], color=COLORS['irp'],
+                linewidth=2.5, linestyle='--', where='post',
                 label='NW Natural IRP (forecast)', zorder=3)
 
-    # 3. Model estimated total
-    ax.plot(est['year'], est['estimated_total_upc'], color='#59a14f',
-            linewidth=2.5, marker='s', markersize=6,
-            label='Model Estimated Total', zorder=3)
+    # 3. Model — monthly line or annual markers
+    if is_monthly and monthly_path.exists():
+        mo = pd.read_csv(monthly_path).sort_values(['year', 'month'])
+        mo['decimal_year'] = mo['year'] + (mo['month'] - 1) / 12.0
+        ax.plot(mo['decimal_year'], mo['use_per_customer'],
+                color='#59a14f', linewidth=1.5, alpha=0.9,
+                label='Model UPC / Month (space heating)', zorder=3)
+        ax.fill_between(mo['decimal_year'], 0, mo['use_per_customer'],
+                        color='#59a14f', alpha=0.08)
+        # Year tick marks
+        years = sorted(mo['year'].unique())
+        ax.set_xticks([float(y) for y in years])
+        ax.set_xticklabels([str(int(y)) for y in years], fontsize=9)
+        ax.set_ylabel('Therms / Customer (annual IRP) or / Month (model)')
+    else:
+        ax.plot(est['year'], est['estimated_total_upc'], color='#59a14f',
+                linewidth=2.5, marker='s', markersize=6,
+                label='Model Estimated Total', zorder=3)
+        if has_irp:
+            ax.fill_between(est['year'], est['estimated_total_upc'], est['irp_upc'],
+                            alpha=0.1, color='#e15759')
+        ax.set_ylabel('Therms / Customer / Year')
 
-    # Shade between model and IRP forecast
-    if has_irp:
-        ax.fill_between(est['year'], est['estimated_total_upc'], est['irp_upc'],
-                         alpha=0.1, color='#e15759')
-
-    ax.set_title('Three-Way UPC Comparison:\nObserved Billing vs NW Natural IRP vs Model Estimate', fontsize=13)
+    ax.set_title('Three-Way UPC Comparison:\nObserved Billing vs NW Natural IRP vs Model', fontsize=13)
     ax.set_xlabel('Year')
-    ax.set_ylabel('Therms / Customer / Year')
     ax.legend(fontsize=8, loc='upper right')
     ax.grid(True, alpha=0.3)
 
-    # Set x range to cover both historical and forecast
     x_min = 2009 if has_observed and not obs.empty else est['year'].min()
     x_max = est['year'].max()
     ax.set_xlim(x_min - 0.5, x_max + 0.5)
 
-    # Add vertical line at base year
-    base_year = est['year'].min()
+    base_year = int(est['year'].min())
     ax.axvline(x=base_year, color='gray', linestyle=':', alpha=0.5)
-    ax.text(base_year + 0.2, ax.get_ylim()[1] * 0.98, 'Forecast →',
-            fontsize=8, color='gray', va='top')
-    ax.text(base_year - 0.2, ax.get_ylim()[1] * 0.98, '← Historical',
-            fontsize=8, color='gray', va='top', ha='right')
+    ylim = ax.get_ylim()
+    ax.text(base_year + 0.2, ylim[1] * 0.98, 'Forecast ->', fontsize=8, color='gray', va='top')
+    ax.text(base_year - 0.2, ylim[1] * 0.98, '<- Historical', fontsize=8, color='gray', va='top', ha='right')
 
     ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f'{x:,.0f}'))
     _save(fig, scenario_dir / 'chart_three_way_comparison.png')
@@ -1110,42 +1244,66 @@ def chart_vintage_demand(scenario_dir: Path):
         'pre-1980': '#e15759', '1980-1999': '#f28e2b', '2000-2009': '#4e79a7',
         '2010-2014': '#76b7b2', '2015+': '#59a14f', 'Unknown': '#bab0ac',
     }
+    ordered = ['pre-1980', '1980-1999', '2000-2009', '2010-2014', '2015+', 'Unknown']
+    is_monthly = 'month' in df.columns
 
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 6))
 
-    # Left: stacked area of total therms by vintage era
-    pivot = df.pivot(index='year', columns='vintage_era', values='total_therms').fillna(0)
-    ordered = ['pre-1980', '1980-1999', '2000-2009', '2010-2014', '2015+', 'Unknown']
-    cols = [c for c in ordered if c in pivot.columns]
-    pivot = pivot[cols]
+    if is_monthly:
+        df = df.sort_values(['year', 'month']).copy()
+        df['decimal_year'] = df['year'] + (df['month'] - 1) / 12.0
+        x_vals = sorted(df['decimal_year'].unique())
+        eras = [e for e in ordered if e in df['vintage_era'].unique()]
 
-    bottom = np.zeros(len(pivot))
-    for era in cols:
-        color = era_colors.get(era, '#bab0ac')
-        ax1.fill_between(pivot.index, bottom, bottom + pivot[era].values,
-                         color=color, alpha=0.7, label=era)
-        bottom += pivot[era].values
+        bottom = np.zeros(len(x_vals))
+        for era in eras:
+            color = era_colors.get(era, '#bab0ac')
+            era_data = df[df['vintage_era'] == era].set_index('decimal_year')['total_therms'].reindex(x_vals, fill_value=0)
+            ax1.fill_between(x_vals, bottom, bottom + era_data.values, color=color, alpha=0.7, label=era)
+            bottom += era_data.values
+
+        for era in eras:
+            color = era_colors.get(era, '#bab0ac')
+            era_data = df[df['vintage_era'] == era].set_index('decimal_year')['avg_therms'].reindex(x_vals)
+            ax2.plot(x_vals, era_data.values, color=color, linewidth=1.5, label=era)
+
+        years = sorted(df['year'].unique())
+        base_year = int(df['year'].min())
+        for ax in (ax1, ax2):
+            ax.set_xticks([float(y) for y in years])
+            ax.set_xticklabels([str(int(y)) for y in years], fontsize=9)
+            ax.set_xlabel('Year (monthly resolution)')
+            ax.axvline(x=base_year + 1, color='#7f7f7f', linestyle=':', linewidth=1.5, alpha=0.6)
+    else:
+        pivot = df.pivot(index='year', columns='vintage_era', values='total_therms').fillna(0)
+        cols = [c for c in ordered if c in pivot.columns]
+        pivot = pivot[cols]
+        bottom = np.zeros(len(pivot))
+        for era in cols:
+            color = era_colors.get(era, '#bab0ac')
+            ax1.fill_between(pivot.index, bottom, bottom + pivot[era].values, color=color, alpha=0.7, label=era)
+            bottom += pivot[era].values
+        ax1.set_xlim(pivot.index.min(), pivot.index.max())
+        ax1.set_xlabel('Year')
+
+        pivot_avg = df.pivot(index='year', columns='vintage_era', values='avg_therms').fillna(0)
+        pivot_avg = pivot_avg[[c for c in ordered if c in pivot_avg.columns]]
+        for era in pivot_avg.columns:
+            color = era_colors.get(era, '#bab0ac')
+            ax2.plot(pivot_avg.index, pivot_avg[era], marker='o', markersize=3, color=color, linewidth=1.5, label=era)
+        ax2.set_xlim(pivot_avg.index.min(), pivot_avg.index.max())
+        ax2.set_xlabel('Year')
+
     ax1.set_title('Total Demand by Vintage Era')
-    ax1.set_xlabel('Year')
     ax1.set_ylabel('Total Therms')
     ax1.legend(fontsize=7)
     ax1.grid(True, alpha=0.3)
-    ax1.set_xlim(pivot.index.min(), pivot.index.max())
     ax1.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f'{x:,.0f}'))
 
-    # Right: average therms per premise by vintage era (lines)
-    pivot_avg = df.pivot(index='year', columns='vintage_era', values='avg_therms').fillna(0)
-    pivot_avg = pivot_avg[[c for c in ordered if c in pivot_avg.columns]]
-    for era in pivot_avg.columns:
-        color = era_colors.get(era, '#bab0ac')
-        ax2.plot(pivot_avg.index, pivot_avg[era], marker='o', markersize=3,
-                 color=color, linewidth=1.5, label=era)
     ax2.set_title('Avg Therms per Premise by Vintage')
-    ax2.set_xlabel('Year')
     ax2.set_ylabel('Therms / Premise')
     ax2.legend(fontsize=7)
     ax2.grid(True, alpha=0.3)
-    ax2.set_xlim(pivot_avg.index.min(), pivot_avg.index.max())
 
     fig.tight_layout()
     _save(fig, scenario_dir / 'chart_vintage_demand.png')
@@ -1502,6 +1660,165 @@ def chart_envelope_efficiency(scenario_dir: Path):
         logger.warning(f"chart_envelope_efficiency failed: {e}")
 
 
+
+
+def chart_monthly_upc_heatmap(scenario_dir: Path):
+    """Monthly UPC heatmap: rows=year, columns=month, color=therms/customer/month."""
+    path = scenario_dir / 'monthly_summary.csv'
+    if not path.exists():
+        return
+    df = pd.read_csv(path)
+    if 'month' not in df.columns or 'use_per_customer' not in df.columns:
+        return
+
+    month_names = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                   'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    years = sorted(df['year'].unique())
+
+    pivot = df.pivot_table(index='year', columns='month', values='use_per_customer', aggfunc='sum')
+    pivot = pivot.reindex(columns=range(1, 13))
+
+    fig, ax = plt.subplots(figsize=(13, max(4, len(years) * 0.6 + 1.5)))
+    im = ax.imshow(pivot.values, aspect='auto', cmap='YlOrRd', interpolation='nearest')
+
+    ax.set_xticks(range(12))
+    ax.set_xticklabels(month_names, fontsize=9)
+    ax.set_yticks(range(len(years)))
+    ax.set_yticklabels([str(int(y)) for y in years], fontsize=9)
+
+    vmax = float(np.nanmax(pivot.values))
+    for i in range(len(years)):
+        for j in range(12):
+            try:
+                val = float(pivot.iloc[i, j])
+            except Exception:
+                continue
+            if not pd.isna(val):
+                text_color = 'white' if val > vmax * 0.65 else 'black'
+                ax.text(j, i, f'{val:.0f}', ha='center', va='center',
+                        fontsize=7, color=text_color)
+
+    plt.colorbar(im, ax=ax, label='Therms / Customer / Month', shrink=0.8)
+    ax.set_title('Monthly UPC Heatmap (therms/customer/month)')
+    ax.set_xlabel('Month')
+    ax.set_ylabel('Year')
+    fig.tight_layout()
+    _save(fig, scenario_dir / 'chart_monthly_upc_heatmap.png')
+
+
+def chart_monthly_demand_profile(scenario_dir: Path):
+    """Continuous monthly time-series: 12 x N points on a decimal-year axis."""
+    path = scenario_dir / 'monthly_summary.csv'
+    if not path.exists():
+        return
+    df = pd.read_csv(path)
+    if 'month' not in df.columns:
+        return
+
+    # Decimal year: Jan 2025 = 2025.0, Feb = 2025.083, ..., Dec = 2025.917
+    df = df.sort_values(['year', 'month']).copy()
+    df['decimal_year'] = df['year'] + (df['month'] - 1) / 12.0
+
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(14, 10), sharex=True)
+
+    # Top: total therms per month (all N*12 points)
+    ax1.plot(df['decimal_year'], df['total_therms'],
+             color=COLORS['model'], linewidth=1.5, alpha=0.85)
+    ax1.fill_between(df['decimal_year'], 0, df['total_therms'],
+                     color=COLORS['model'], alpha=0.15)
+    ax1.set_ylabel('Total Therms / Month')
+    ax1.set_title('Monthly Total Demand — Full Forecast Horizon')
+    ax1.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f'{x:,.0f}'))
+    ax1.grid(True, alpha=0.3)
+
+    # Mark projection start
+    base_year = int(df['year'].min())
+    ax1.axvline(x=base_year + 1, color='#7f7f7f', linestyle=':', linewidth=1.5, alpha=0.6)
+    ylim1 = ax1.get_ylim()
+    ax1.text(base_year + 1.05, ylim1[1] * 0.95, 'Projected ->',
+             fontsize=8, color='#7f7f7f', va='top')
+
+    # Bottom: monthly UPC (therms/customer/month)
+    ax2.plot(df['decimal_year'], df['use_per_customer'],
+             color=COLORS['irp'], linewidth=1.5, alpha=0.85)
+    ax2.fill_between(df['decimal_year'], 0, df['use_per_customer'],
+                     color=COLORS['irp'], alpha=0.15)
+    ax2.set_ylabel('Therms / Customer / Month')
+    ax2.set_title('Monthly UPC — Full Forecast Horizon')
+    ax2.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f'{x:.1f}'))
+    ax2.grid(True, alpha=0.3)
+    ax2.axvline(x=base_year + 1, color='#7f7f7f', linestyle=':', linewidth=1.5, alpha=0.6)
+
+    # X-axis: year labels at Jan of each year
+    years = sorted(df['year'].unique())
+    ax2.set_xticks([float(y) for y in years])
+    ax2.set_xticklabels([str(int(y)) for y in years], fontsize=9)
+    ax2.set_xlabel('Year')
+
+    fig.tight_layout()
+    _save(fig, scenario_dir / 'chart_monthly_demand_profile.png')
+
+
+def chart_monthly_seasonal_overlay(scenario_dir: Path):
+    """Seasonal overlay: each year's 12-month profile on a single Jan-Dec axis."""
+    path = scenario_dir / 'monthly_summary.csv'
+    if not path.exists():
+        return
+    df = pd.read_csv(path)
+    if 'month' not in df.columns:
+        return
+
+    month_names = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                   'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    years = sorted(df['year'].unique())
+    cmap_vals = plt.cm.Blues(np.linspace(0.3, 0.95, len(years)))
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 6))
+
+    # Left: total therms by month, each year as a line
+    for i, yr in enumerate(years):
+        yr_data = df[df['year'] == yr].sort_values('month')
+        is_edge = yr in (years[0], years[-1])
+        lw = 2.5 if is_edge else 1.0
+        alpha = 1.0 if is_edge else 0.45
+        label = str(int(yr)) if is_edge else None
+        ax1.plot(yr_data['month'], yr_data['total_therms'],
+                 color=cmap_vals[i], linewidth=lw, alpha=alpha,
+                 marker='o', markersize=4 if is_edge else 2, label=label)
+
+    ax1.set_title('Monthly Total Demand by Year')
+    ax1.set_xlabel('Month')
+    ax1.set_ylabel('Total Therms')
+    ax1.set_xticks(range(1, 13))
+    ax1.set_xticklabels(month_names, fontsize=8)
+    ax1.legend(fontsize=9)
+    ax1.grid(True, alpha=0.3)
+    ax1.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f'{x:,.0f}'))
+
+    # Right: seasonal share (% of annual) for base vs final year
+    for yr, color, style, label in [
+        (years[0], COLORS['model'], '-', f'{int(years[0])} (base)'),
+        (years[-1], COLORS['irp'], '--', f'{int(years[-1])} (final)'),
+    ]:
+        yr_data = df[df['year'] == yr].sort_values('month')
+        annual_total = yr_data['total_therms'].sum()
+        if annual_total > 0:
+            pct = yr_data['total_therms'] / annual_total * 100
+            ax2.plot(yr_data['month'], pct.values, color=color, linewidth=2,
+                     linestyle=style, marker='o', markersize=5, label=label)
+
+    ax2.set_title('Seasonal Share of Annual Demand (%)')
+    ax2.set_xlabel('Month')
+    ax2.set_ylabel('Share of Annual Total (%)')
+    ax2.set_xticks(range(1, 13))
+    ax2.set_xticklabels(month_names, fontsize=8)
+    ax2.legend(fontsize=9)
+    ax2.grid(True, alpha=0.3)
+
+    fig.tight_layout()
+    _save(fig, scenario_dir / 'chart_monthly_seasonal_overlay.png')
+
+
 def generate_scenario_charts(scenario_dir: Path):
     """Generate all charts for a scenario folder."""
     scenario_dir = Path(scenario_dir)
@@ -1530,5 +1847,12 @@ def generate_scenario_charts(scenario_dir: Path):
     chart_recs_enduse_trend(scenario_dir)
     chart_housing_vintage_stock(scenario_dir)
     chart_envelope_efficiency(scenario_dir)
+
+    # Monthly-only charts (only when temporal_resolution == 'monthly')
+    if _is_monthly_run(scenario_dir):
+        logger.info("  Monthly resolution detected — generating monthly charts...")
+        chart_monthly_upc_heatmap(scenario_dir)
+        chart_monthly_demand_profile(scenario_dir)
+        chart_monthly_seasonal_overlay(scenario_dir)
 
     logger.info(f"Charts complete for {scenario_dir}")

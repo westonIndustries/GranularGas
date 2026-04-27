@@ -7,6 +7,7 @@
     "total_therms":22344432.0368871726,
     "use_per_customer":520.8798813563,
     "premise_count":213725,
+    "data_type":"calibrated",
     "irp_upc_therms":648.0
   },
   {
@@ -17,6 +18,7 @@
     "total_therms":16392259.572703708,
     "use_per_customer":520.8798813563,
     "premise_count":213725,
+    "data_type":"calibrated",
     "irp_upc_therms":648.0
   },
   {
@@ -27,6 +29,7 @@
     "total_therms":14019213.901039077,
     "use_per_customer":520.8798813563,
     "premise_count":213725,
+    "data_type":"calibrated",
     "irp_upc_therms":648.0
   },
   {
@@ -37,6 +40,7 @@
     "total_therms":9830170.6093055755,
     "use_per_customer":520.8798813563,
     "premise_count":213725,
+    "data_type":"calibrated",
     "irp_upc_therms":648.0
   },
   {
@@ -47,6 +51,7 @@
     "total_therms":6270274.4263615878,
     "use_per_customer":520.8798813563,
     "premise_count":213725,
+    "data_type":"calibrated",
     "irp_upc_therms":648.0
   },
   {
@@ -57,6 +62,7 @@
     "total_therms":1617641.3282567433,
     "use_per_customer":520.8798813563,
     "premise_count":213725,
+    "data_type":"calibrated",
     "irp_upc_therms":648.0
   },
   {
@@ -67,6 +73,7 @@
     "total_therms":4823.3807872698,
     "use_per_customer":520.8798813563,
     "premise_count":213725,
+    "data_type":"calibrated",
     "irp_upc_therms":648.0
   },
   {
@@ -77,6 +84,7 @@
     "total_therms":183891.3921565257,
     "use_per_customer":520.8798813563,
     "premise_count":213725,
+    "data_type":"calibrated",
     "irp_upc_therms":648.0
   },
   {
@@ -87,6 +95,7 @@
     "total_therms":1045467.7835787373,
     "use_per_customer":520.8798813563,
     "premise_count":213725,
+    "data_type":"calibrated",
     "irp_upc_therms":648.0
   },
   {
@@ -97,6 +106,7 @@
     "total_therms":7094469.6167475739,
     "use_per_customer":520.8798813563,
     "premise_count":213725,
+    "data_type":"calibrated",
     "irp_upc_therms":648.0
   },
   {
@@ -107,6 +117,7 @@
     "total_therms":14407599.1620935891,
     "use_per_customer":520.8798813563,
     "premise_count":213725,
+    "data_type":"calibrated",
     "irp_upc_therms":648.0
   },
   {
@@ -117,6 +128,7 @@
     "total_therms":18114809.4329605773,
     "use_per_customer":520.8798813563,
     "premise_count":213725,
+    "data_type":"calibrated",
     "irp_upc_therms":648.0
   },
   {
@@ -124,9 +136,10 @@
     "month":1,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":21215639.1791589186,
-    "use_per_customer":489.6700177746,
+    "total_therms":21037891.5999744236,
+    "use_per_customer":485.5938509507,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":640.3
   },
   {
@@ -134,9 +147,10 @@
     "month":2,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":15564157.7217750624,
-    "use_per_customer":489.6700177746,
+    "total_therms":15435425.6431469135,
+    "use_per_customer":485.5938509507,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":640.3
   },
   {
@@ -144,9 +158,10 @@
     "month":3,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":13310993.2357595414,
-    "use_per_customer":489.6700177746,
+    "total_therms":13198752.5450894088,
+    "use_per_customer":485.5938509507,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":640.3
   },
   {
@@ -154,9 +169,10 @@
     "month":4,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":9333571.4406305235,
-    "use_per_customer":489.6700177746,
+    "total_therms":9254489.3066872358,
+    "use_per_customer":485.5938509507,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":640.3
   },
   {
@@ -164,9 +180,10 @@
     "month":5,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":5953513.5896220952,
-    "use_per_customer":489.6700177746,
+    "total_therms":5904799.6658617025,
+    "use_per_customer":485.5938509507,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":640.3
   },
   {
@@ -174,9 +191,10 @@
     "month":6,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":1535921.552399928,
-    "use_per_customer":489.6700177746,
+    "total_therms":1523057.1654486703,
+    "use_per_customer":485.5938509507,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":640.3
   },
   {
@@ -184,9 +202,10 @@
     "month":7,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":4579.7139187728,
-    "use_per_customer":489.6700177746,
+    "total_therms":4542.0946136544,
+    "use_per_customer":485.5938509507,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":640.3
   },
   {
@@ -194,9 +213,10 @@
     "month":8,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":174601.5928131672,
-    "use_per_customer":489.6700177746,
+    "total_therms":173160.1553836085,
+    "use_per_customer":485.5938509507,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":640.3
   },
   {
@@ -204,9 +224,10 @@
     "month":9,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":992652.9899361653,
-    "use_per_customer":489.6700177746,
+    "total_therms":984092.4354508989,
+    "use_per_customer":485.5938509507,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":640.3
   },
   {
@@ -214,9 +235,10 @@
     "month":10,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":6736072.2039364297,
-    "use_per_customer":489.6700177746,
+    "total_therms":6680813.7282989398,
+    "use_per_customer":485.5938509507,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":640.3
   },
   {
@@ -224,9 +246,10 @@
     "month":11,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":13679758.1051208787,
-    "use_per_customer":489.6700177746,
+    "total_therms":13568085.3426922597,
+    "use_per_customer":485.5938509507,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":640.3
   },
   {
@@ -234,9 +257,10 @@
     "month":12,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":17199688.0517915189,
-    "use_per_customer":489.6700177746,
+    "total_therms":17056150.1712797582,
+    "use_per_customer":485.5938509507,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":640.3
   },
   {
@@ -244,9 +268,10 @@
     "month":1,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":20551498.7011696473,
-    "use_per_customer":469.6439799823,
+    "total_therms":20700189.3952108063,
+    "use_per_customer":473.0697074219,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":632.7
   },
   {
@@ -254,9 +279,10 @@
     "month":2,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":15076932.846693553,
-    "use_per_customer":469.6439799823,
+    "total_therms":15188332.6011803541,
+    "use_per_customer":473.0697074219,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":632.7
   },
   {
@@ -264,9 +290,10 @@
     "month":3,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":12894302.0705556404,
-    "use_per_customer":469.6439799823,
+    "total_therms":12988783.885668451,
+    "use_per_customer":473.0697074219,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":632.7
   },
   {
@@ -274,9 +301,10 @@
     "month":4,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":9041390.6326152403,
-    "use_per_customer":469.6439799823,
+    "total_therms":9107119.2653478328,
+    "use_per_customer":473.0697074219,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":632.7
   },
   {
@@ -284,9 +312,10 @@
     "month":5,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":5767143.0858754348,
-    "use_per_customer":469.6439799823,
+    "total_therms":5808664.7637103535,
+    "use_per_customer":473.0697074219,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":632.7
   },
   {
@@ -294,9 +323,10 @@
     "month":6,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":1487840.6218490838,
-    "use_per_customer":469.6439799823,
+    "total_therms":1498491.101974417,
+    "use_per_customer":473.0697074219,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":632.7
   },
   {
@@ -304,9 +334,10 @@
     "month":7,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":4436.3492355133,
-    "use_per_customer":469.6439799823,
+    "total_therms":4468.1856138662,
+    "use_per_customer":473.0697074219,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":632.7
   },
   {
@@ -314,9 +345,10 @@
     "month":8,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":169135.8142745438,
-    "use_per_customer":469.6439799823,
+    "total_therms":170355.5905526843,
+    "use_per_customer":473.0697074219,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":632.7
   },
   {
@@ -324,9 +356,10 @@
     "month":9,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":961578.6949009582,
-    "use_per_customer":469.6439799823,
+    "total_therms":968648.7290937415,
+    "use_per_customer":473.0697074219,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":632.7
   },
   {
@@ -334,9 +367,10 @@
     "month":10,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":6525204.2599865114,
-    "use_per_customer":469.6439799823,
+    "total_therms":6573259.508979084,
+    "use_per_customer":473.0697074219,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":632.7
   },
   {
@@ -344,9 +378,10 @@
     "month":11,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":13251523.0182592273,
-    "use_per_customer":469.6439799823,
+    "total_therms":13346993.4548323601,
+    "use_per_customer":473.0697074219,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":632.7
   },
   {
@@ -354,9 +389,10 @@
     "month":12,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":16661264.0643019266,
-    "use_per_customer":469.6439799823,
+    "total_therms":16783824.1996696629,
+    "use_per_customer":473.0697074219,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":632.7
   },
   {
@@ -364,9 +400,10 @@
     "month":1,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":20326488.9536134116,
-    "use_per_customer":459.9034532917,
+    "total_therms":20465505.787293423,
+    "use_per_customer":463.0667022032,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":625.1
   },
   {
@@ -374,9 +411,10 @@
     "month":2,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":14911861.8266630899,
-    "use_per_customer":459.9034532917,
+    "total_therms":15014193.7916232999,
+    "use_per_customer":463.0667022032,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":625.1
   },
   {
@@ -384,9 +422,10 @@
     "month":3,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":12753127.760302322,
-    "use_per_customer":459.9034532917,
+    "total_therms":12840269.0040955208,
+    "use_per_customer":463.0667022032,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":625.1
   },
   {
@@ -394,9 +433,10 @@
     "month":4,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":8942400.2352051344,
-    "use_per_customer":459.9034532917,
+    "total_therms":9004578.074219171,
+    "use_per_customer":463.0667022032,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":625.1
   },
   {
@@ -404,9 +444,10 @@
     "month":5,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":5704001.0528421132,
-    "use_per_customer":459.9034532917,
+    "total_therms":5743948.4492290048,
+    "use_per_customer":463.0667022032,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":625.1
   },
   {
@@ -414,9 +455,10 @@
     "month":6,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":1471550.8783323679,
-    "use_per_customer":459.9034532917,
+    "total_therms":1481630.9261521036,
+    "use_per_customer":463.0667022032,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":625.1
   },
   {
@@ -424,9 +466,10 @@
     "month":7,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":4387.7775067032,
-    "use_per_customer":459.9034532917,
+    "total_therms":4418.135620519,
+    "use_per_customer":463.0667022032,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":625.1
   },
   {
@@ -434,9 +477,10 @@
     "month":8,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":167284.0171172656,
-    "use_per_customer":459.9034532917,
+    "total_therms":168421.2809091437,
+    "use_per_customer":463.0667022032,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":625.1
   },
   {
@@ -444,9 +488,10 @@
     "month":9,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":951050.7727021356,
-    "use_per_customer":459.9034532917,
+    "total_therms":957570.6718614289,
+    "use_per_customer":463.0667022032,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":625.1
   },
   {
@@ -454,9 +499,10 @@
     "month":10,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":6453762.5328092687,
-    "use_per_customer":459.9034532917,
+    "total_therms":6497652.5547380857,
+    "use_per_customer":463.0667022032,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":625.1
   },
   {
@@ -464,9 +510,10 @@
     "month":11,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":13106437.6455362905,
-    "use_per_customer":459.9034532917,
+    "total_therms":13195425.385179067,
+    "use_per_customer":463.0667022032,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":625.1
   },
   {
@@ -474,9 +521,10 @@
     "month":12,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":16478846.8656543661,
-    "use_per_customer":459.9034532917,
+    "total_therms":16594136.8309219219,
+    "use_per_customer":463.0667022032,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":625.1
   },
   {
@@ -484,9 +532,10 @@
     "month":1,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":20244908.0027051792,
-    "use_per_customer":453.5224139458,
+    "total_therms":20256529.6077036224,
+    "use_per_customer":453.7911368883,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":617.7
   },
   {
@@ -494,9 +543,10 @@
     "month":2,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":14852012.6382268798,
-    "use_per_customer":453.5224139458,
+    "total_therms":14859626.5481579807,
+    "use_per_customer":453.7911368883,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":617.7
   },
   {
@@ -504,9 +554,10 @@
     "month":3,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":12701942.7134349607,
-    "use_per_customer":453.5224139458,
+    "total_therms":12712988.9867009968,
+    "use_per_customer":453.7911368883,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":617.7
   },
   {
@@ -514,9 +565,10 @@
     "month":4,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":8906509.653400531,
-    "use_per_customer":453.5224139458,
+    "total_therms":8911793.5249450859,
+    "use_per_customer":453.7911368883,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":617.7
   },
   {
@@ -524,9 +576,10 @@
     "month":5,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":5681107.8797548003,
-    "use_per_customer":453.5224139458,
+    "total_therms":5684668.5054999571,
+    "use_per_customer":453.7911368883,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":617.7
   },
   {
@@ -534,9 +587,10 @@
     "month":6,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":1465644.7663502069,
-    "use_per_customer":453.5224139458,
+    "total_therms":1466814.6921467269,
+    "use_per_customer":453.7911368883,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":617.7
   },
   {
@@ -544,9 +598,10 @@
     "month":7,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":4370.1670348609,
-    "use_per_customer":453.5224139458,
+    "total_therms":4372.2670200099,
+    "use_per_customer":453.7911368883,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":617.7
   },
   {
@@ -554,9 +609,10 @@
     "month":8,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":166612.6178795851,
-    "use_per_customer":453.5224139458,
+    "total_therms":166712.2366692991,
+    "use_per_customer":453.7911368883,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":617.7
   },
   {
@@ -564,9 +620,10 @@
     "month":9,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":947233.7029378437,
-    "use_per_customer":453.5224139458,
+    "total_therms":947876.5044257025,
+    "use_per_customer":453.7911368883,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":617.7
   },
   {
@@ -574,9 +631,10 @@
     "month":10,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":6427860.1703518843,
-    "use_per_customer":453.5224139458,
+    "total_therms":6430843.4253055193,
+    "use_per_customer":453.7911368883,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":617.7
   },
   {
@@ -584,9 +642,10 @@
     "month":11,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":13053834.5792328864,
-    "use_per_customer":453.5224139458,
+    "total_therms":13060684.5083855819,
+    "use_per_customer":453.7911368883,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":617.7
   },
   {
@@ -594,9 +653,10 @@
     "month":12,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":16412708.5374738742,
-    "use_per_customer":453.5224139458,
+    "total_therms":16421599.4104155079,
+    "use_per_customer":453.7911368883,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":617.7
   },
   {
@@ -604,9 +664,10 @@
     "month":1,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":20213469.3546619155,
-    "use_per_customer":448.3348436272,
+    "total_therms":20077994.0036524311,
+    "use_per_customer":445.2802860146,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":610.3
   },
   {
@@ -614,9 +675,10 @@
     "month":2,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":14828948.7054095548,
-    "use_per_customer":448.3348436272,
+    "total_therms":14726532.5180653557,
+    "use_per_customer":445.2802860146,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":610.3
   },
   {
@@ -624,9 +686,10 @@
     "month":3,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":12682217.6592939384,
-    "use_per_customer":448.3348436272,
+    "total_therms":12595522.4593635295,
+    "use_per_customer":445.2802860146,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":610.3
   },
   {
@@ -634,9 +697,10 @@
     "month":4,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":8892678.5892015826,
-    "use_per_customer":448.3348436272,
+    "total_therms":8831240.2994620595,
+    "use_per_customer":445.2802860146,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":610.3
   },
   {
@@ -644,9 +708,10 @@
     "month":5,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":5672285.5946101332,
-    "use_per_customer":448.3348436272,
+    "total_therms":5633743.4200006556,
+    "use_per_customer":445.2802860146,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":610.3
   },
   {
@@ -654,9 +719,10 @@
     "month":6,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":1463368.74267257,
-    "use_per_customer":448.3348436272,
+    "total_therms":1453197.1015707192,
+    "use_per_customer":445.2802860146,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":610.3
   },
   {
@@ -664,9 +730,10 @@
     "month":7,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":4363.3805311494,
-    "use_per_customer":448.3348436272,
+    "total_therms":4333.8850330489,
+    "use_per_customer":445.2802860146,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":610.3
   },
   {
@@ -674,9 +741,10 @@
     "month":8,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":166353.8824260882,
-    "use_per_customer":448.3348436272,
+    "total_therms":165226.1156803267,
+    "use_per_customer":445.2802860146,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":610.3
   },
   {
@@ -684,9 +752,10 @@
     "month":9,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":945762.7282612781,
-    "use_per_customer":448.3348436272,
+    "total_therms":939213.5804531274,
+    "use_per_customer":445.2802860146,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":610.3
   },
   {
@@ -694,9 +763,10 @@
     "month":10,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":6417878.2413878217,
-    "use_per_customer":448.3348436272,
+    "total_therms":6374269.6341399029,
+    "use_per_customer":445.2802860146,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":610.3
   },
   {
@@ -704,9 +774,10 @@
     "month":11,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":13033563.0664704368,
-    "use_per_customer":448.3348436272,
+    "total_therms":12945412.2465846315,
+    "use_per_customer":445.2802860146,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":610.3
   },
   {
@@ -714,9 +785,10 @@
     "month":12,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":16387220.9745233599,
-    "use_per_customer":448.3348436272,
+    "total_therms":16275289.5425847135,
+    "use_per_customer":445.2802860146,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":610.3
   },
   {
@@ -724,9 +796,10 @@
     "month":1,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":20167212.143325951,
-    "use_per_customer":442.8805849558,
+    "total_therms":19904123.2912317961,
+    "use_per_customer":437.0958915061,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":603.1
   },
   {
@@ -734,9 +807,10 @@
     "month":2,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":14795013.6197436154,
-    "use_per_customer":442.8805849558,
+    "total_therms":14602561.5457787029,
+    "use_per_customer":437.0958915061,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":603.1
   },
   {
@@ -744,9 +818,10 @@
     "month":3,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":12653195.2281525265,
-    "use_per_customer":442.8805849558,
+    "total_therms":12488142.1957076117,
+    "use_per_customer":437.0958915061,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":603.1
   },
   {
@@ -754,9 +829,10 @@
     "month":4,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":8872328.2720132768,
-    "use_per_customer":442.8805849558,
+    "total_therms":8756477.665598901,
+    "use_per_customer":437.0958915061,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":603.1
   },
   {
@@ -764,9 +840,10 @@
     "month":5,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":5659304.9375589322,
-    "use_per_customer":442.8805849558,
+    "total_therms":5585036.8256038604,
+    "use_per_customer":437.0958915061,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":603.1
   },
   {
@@ -774,9 +851,10 @@
     "month":6,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":1460019.9183809776,
-    "use_per_customer":442.8805849558,
+    "total_therms":1440819.9573098836,
+    "use_per_customer":437.0958915061,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":603.1
   },
   {
@@ -784,9 +862,10 @@
     "month":7,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":4353.3952182955,
-    "use_per_customer":442.8805849558,
+    "total_therms":4296.2355149379,
+    "use_per_customer":437.0958915061,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":603.1
   },
   {
@@ -794,9 +873,10 @@
     "month":8,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":165973.1923742755,
-    "use_per_customer":442.8805849558,
+    "total_therms":163814.7105746794,
+    "use_per_customer":437.0958915061,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":603.1
   },
   {
@@ -804,9 +884,10 @@
     "month":9,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":943598.4117044684,
-    "use_per_customer":442.8805849558,
+    "total_therms":931307.2084638445,
+    "use_per_customer":437.0958915061,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":603.1
   },
   {
@@ -814,9 +895,10 @@
     "month":10,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":6403191.3440061053,
-    "use_per_customer":442.8805849558,
+    "total_therms":6319080.9630542621,
+    "use_per_customer":437.0958915061,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":603.1
   },
   {
@@ -824,9 +906,10 @@
     "month":11,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":13003736.6041918416,
-    "use_per_customer":442.8805849558,
+    "total_therms":12833450.5314706601,
+    "use_per_customer":437.0958915061,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":603.1
   },
   {
@@ -834,9 +917,10 @@
     "month":12,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":16349719.8840115108,
-    "use_per_customer":442.8805849558,
+    "total_therms":16136145.063364977,
+    "use_per_customer":437.0958915061,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":603.1
   },
   {
@@ -844,9 +928,10 @@
     "month":1,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":20177183.3898575939,
-    "use_per_customer":438.7119165117,
+    "total_therms":19738285.1407845877,
+    "use_per_customer":429.1117176066,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":595.9
   },
   {
@@ -854,9 +939,10 @@
     "month":2,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":14802328.6976628155,
-    "use_per_customer":438.7119165117,
+    "total_therms":14479108.2922025248,
+    "use_per_customer":429.1117176066,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":595.9
   },
   {
@@ -864,9 +950,10 @@
     "month":3,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":12659451.3297959417,
-    "use_per_customer":438.7119165117,
+    "total_therms":12381387.8855381329,
+    "use_per_customer":429.1117176066,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":595.9
   },
   {
@@ -874,9 +961,10 @@
     "month":4,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":8876715.0048884582,
-    "use_per_customer":438.7119165117,
+    "total_therms":8682121.6256069541,
+    "use_per_customer":429.1117176066,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":595.9
   },
   {
@@ -884,9 +972,10 @@
     "month":5,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":5662103.0597946234,
-    "use_per_customer":438.7119165117,
+    "total_therms":5537870.958589823,
+    "use_per_customer":429.1117176066,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":595.9
   },
   {
@@ -894,9 +983,10 @@
     "month":6,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":1460741.7939899524,
-    "use_per_customer":438.7119165117,
+    "total_therms":1428607.1530206152,
+    "use_per_customer":429.1117176066,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":595.9
   },
   {
@@ -904,9 +994,10 @@
     "month":7,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":4355.5476614127,
-    "use_per_customer":438.7119165117,
+    "total_therms":4260.8432269878,
+    "use_per_customer":429.1117176066,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":595.9
   },
   {
@@ -914,9 +1005,10 @@
     "month":8,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":166055.2542679594,
-    "use_per_customer":438.7119165117,
+    "total_therms":162465.9076070742,
+    "use_per_customer":429.1117176066,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":595.9
   },
   {
@@ -924,9 +1016,10 @@
     "month":9,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":944064.9537492045,
-    "use_per_customer":438.7119165117,
+    "total_therms":923387.3281822171,
+    "use_per_customer":429.1117176066,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":595.9
   },
   {
@@ -934,9 +1027,10 @@
     "month":10,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":6406357.2649587197,
-    "use_per_customer":438.7119165117,
+    "total_therms":6265253.8199850572,
+    "use_per_customer":429.1117176066,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":595.9
   },
   {
@@ -944,9 +1038,10 @@
     "month":11,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":13010166.0235181935,
-    "use_per_customer":438.7119165117,
+    "total_therms":12725843.6283292379,
+    "use_per_customer":429.1117176066,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":595.9
   },
   {
@@ -954,9 +1049,10 @@
     "month":12,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":16357803.6531774309,
-    "use_per_customer":438.7119165117,
+    "total_therms":15998924.6127476301,
+    "use_per_customer":429.1117176066,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":595.9
   },
   {
@@ -964,9 +1060,10 @@
     "month":1,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":20109566.6289518327,
-    "use_per_customer":432.9115162889,
+    "total_therms":19556028.7103086188,
+    "use_per_customer":420.9945588658,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":588.8
   },
   {
@@ -974,9 +1071,10 @@
     "month":2,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":14752723.8791378718,
-    "use_per_customer":432.9115162889,
+    "total_therms":14347932.9338171892,
+    "use_per_customer":420.9945588658,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":588.8
   },
   {
@@ -984,9 +1082,10 @@
     "month":3,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":12617027.6139964778,
-    "use_per_customer":432.9115162889,
+    "total_therms":12271228.0276325531,
+    "use_per_customer":420.9945588658,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":588.8
   },
   {
@@ -994,9 +1093,10 @@
     "month":4,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":8846967.8045722917,
-    "use_per_customer":432.9115162889,
+    "total_therms":8602395.0717082061,
+    "use_per_customer":420.9945588658,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":588.8
   },
   {
@@ -1004,9 +1104,10 @@
     "month":5,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":5643128.5051493812,
-    "use_per_customer":432.9115162889,
+    "total_therms":5487264.2330013374,
+    "use_per_customer":420.9945588658,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":588.8
   },
   {
@@ -1014,9 +1115,10 @@
     "month":6,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":1455846.6296490801,
-    "use_per_customer":432.9115162889,
+    "total_therms":1415719.0886039773,
+    "use_per_customer":420.9945588658,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":588.8
   },
   {
@@ -1024,9 +1126,10 @@
     "month":7,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":4340.9515694238,
-    "use_per_customer":432.9115162889,
+    "total_therms":4221.7286289995,
+    "use_per_customer":420.9945588658,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":588.8
   },
   {
@@ -1034,9 +1137,10 @@
     "month":8,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":165498.7782619662,
-    "use_per_customer":432.9115162889,
+    "total_therms":160933.8821975451,
+    "use_per_customer":420.9945588658,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":588.8
   },
   {
@@ -1044,9 +1148,10 @@
     "month":9,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":940901.2508168488,
-    "use_per_customer":432.9115162889,
+    "total_therms":914949.7525158775,
+    "use_per_customer":420.9945588658,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":588.8
   },
   {
@@ -1054,9 +1159,10 @@
     "month":10,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":6384888.6030998323,
-    "use_per_customer":432.9115162889,
+    "total_therms":6208449.7279453799,
+    "use_per_customer":420.9945588658,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":588.8
   },
   {
@@ -1064,9 +1170,10 @@
     "month":11,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":12966567.0102982074,
-    "use_per_customer":432.9115162889,
+    "total_therms":12608880.7223205231,
+    "use_per_customer":420.9945588658,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":588.8
   },
   {
@@ -1074,9 +1181,10 @@
     "month":12,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":16302986.2053112276,
-    "use_per_customer":432.9115162889,
+    "total_therms":15854450.8578605559,
+    "use_per_customer":420.9945588658,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":588.8
   },
   {
@@ -1084,9 +1192,10 @@
     "month":1,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":20155180.3078271337,
-    "use_per_customer":429.5981210714,
+    "total_therms":19405447.1979033947,
+    "use_per_customer":413.6442876149,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":581.8
   },
   {
@@ -1094,9 +1203,10 @@
     "month":2,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":14786186.8583246134,
-    "use_per_customer":429.5981210714,
+    "total_therms":14236365.9255833868,
+    "use_per_customer":413.6442876149,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":581.8
   },
   {
@@ -1104,9 +1214,10 @@
     "month":3,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":12645646.2837353423,
-    "use_per_customer":429.5981210714,
+    "total_therms":12177588.4277968314,
+    "use_per_customer":413.6442876149,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":581.8
   },
   {
@@ -1114,9 +1225,10 @@
     "month":4,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":8867035.0072079226,
-    "use_per_customer":429.5981210714,
+    "total_therms":8538373.7693748698,
+    "use_per_customer":413.6442876149,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":581.8
   },
   {
@@ -1124,9 +1236,10 @@
     "month":5,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":5655928.5747001274,
-    "use_per_customer":429.5981210714,
+    "total_therms":5445968.318084551,
+    "use_per_customer":413.6442876149,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":581.8
   },
   {
@@ -1134,9 +1247,10 @@
     "month":6,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":1459148.8649424501,
-    "use_per_customer":429.5981210714,
+    "total_therms":1404787.7265504661,
+    "use_per_customer":413.6442876149,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":581.8
   },
   {
@@ -1144,9 +1258,10 @@
     "month":7,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":4350.7979661441,
-    "use_per_customer":429.5981210714,
+    "total_therms":4189.5940713787,
+    "use_per_customer":413.6442876149,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":581.8
   },
   {
@@ -1154,9 +1269,10 @@
     "month":8,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":165874.1721361945,
-    "use_per_customer":429.5981210714,
+    "total_therms":159716.7606002007,
+    "use_per_customer":413.6442876149,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":581.8
   },
   {
@@ -1164,9 +1280,10 @@
     "month":9,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":943035.4573017535,
-    "use_per_customer":429.5981210714,
+    "total_therms":908079.5189021003,
+    "use_per_customer":413.6442876149,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":581.8
   },
   {
@@ -1174,9 +1291,10 @@
     "month":10,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":6399371.1756868064,
-    "use_per_customer":429.5981210714,
+    "total_therms":6162261.5591409449,
+    "use_per_customer":413.6442876149,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":581.8
   },
   {
@@ -1184,9 +1302,10 @@
     "month":11,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":12995978.5254559387,
-    "use_per_customer":429.5981210714,
+    "total_therms":12512092.8829330038,
+    "use_per_customer":413.6442876149,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":581.8
   },
   {
@@ -1194,9 +1313,10 @@
     "month":12,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":16339965.5789197534,
-    "use_per_customer":429.5981210714,
+    "total_therms":15733653.2604677323,
+    "use_per_customer":413.6442876149,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":581.8
   },
   {
@@ -1204,9 +1324,10 @@
     "month":1,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":20210038.8008667976,
-    "use_per_customer":426.5032472145,
+    "total_therms":19266564.3198473901,
+    "use_per_customer":406.6351055864,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":574.9
   },
   {
@@ -1214,9 +1335,10 @@
     "month":2,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":14826431.9921543319,
-    "use_per_customer":426.5032472145,
+    "total_therms":14134024.7998753469,
+    "use_per_customer":406.6351055864,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":574.9
   },
   {
@@ -1224,9 +1346,10 @@
     "month":3,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":12680065.2811366692,
-    "use_per_customer":426.5032472145,
+    "total_therms":12088614.9597908743,
+    "use_per_customer":406.6351055864,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":574.9
   },
   {
@@ -1234,9 +1357,10 @@
     "month":4,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":8891169.3573251721,
-    "use_per_customer":426.5032472145,
+    "total_therms":8477592.6602518093,
+    "use_per_customer":406.6351055864,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":574.9
   },
   {
@@ -1244,9 +1368,10 @@
     "month":5,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":5671322.9156888584,
-    "use_per_customer":426.5032472145,
+    "total_therms":5407504.5295336293,
+    "use_per_customer":406.6351055864,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":574.9
   },
   {
@@ -1254,9 +1379,10 @@
     "month":6,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":1463120.3852478375,
-    "use_per_customer":426.5032472145,
+    "total_therms":1394891.9804795361,
+    "use_per_customer":406.6351055864,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":574.9
   },
   {
@@ -1264,9 +1390,10 @@
     "month":7,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":4362.6399946597,
-    "use_per_customer":426.5032472145,
+    "total_therms":4159.4904680918,
+    "use_per_customer":406.6351055864,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":574.9
   },
   {
@@ -1274,9 +1401,10 @@
     "month":8,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":166325.6494724732,
-    "use_per_customer":426.5032472145,
+    "total_therms":158581.4566762603,
+    "use_per_customer":406.6351055864,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":574.9
   },
   {
@@ -1284,9 +1412,10 @@
     "month":9,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":945602.216977451,
-    "use_per_customer":426.5032472145,
+    "total_therms":901572.7395398413,
+    "use_per_customer":406.6351055864,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":574.9
   },
   {
@@ -1294,9 +1423,10 @@
     "month":10,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":6416789.0232941192,
-    "use_per_customer":426.5032472145,
+    "total_therms":6118215.4636348868,
+    "use_per_customer":406.6351055864,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":574.9
   },
   {
@@ -1304,9 +1434,10 @@
     "month":11,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":13031351.059295563,
-    "use_per_customer":426.5032472145,
+    "total_therms":12424709.3371856175,
+    "use_per_customer":406.6351055864,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":574.9
   },
   {
@@ -1314,9 +1445,10 @@
     "month":12,
     "end_use":"space_heating",
     "scenario_name":"baseline_monthly",
-    "total_therms":16384439.7971747722,
-    "use_per_customer":426.5032472145,
+    "total_therms":15624017.165080443,
+    "use_per_customer":406.6351055864,
     "premise_count":213725,
+    "data_type":"projected",
     "irp_upc_therms":574.9
   }
 ]

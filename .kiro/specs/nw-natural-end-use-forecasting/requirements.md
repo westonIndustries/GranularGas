@@ -1,366 +1,339 @@
-# Requirements Document
+# Requirements Document: NW Natural End-Use Forecasting Model
 
 ## Introduction
 
-This document defines requirements for a bottom-up residential end-use demand forecasting model for Northwest Natural's Integrated Resource Planning (IRP) process. The model will complement existing top-down econometric models by disaggregating residential demand by end use, providing improved visibility into underlying demand drivers including end-use consumption patterns, equipment efficiency, technology adoption, and policy-driven electrification.
+This document defines requirements for a bottom-up residential end-use demand forecasting model for Northwest Natural's Integrated Resource Planning (IRP) process. The model complements existing top-down econometric models by disaggregating residential demand by end use, providing improved visibility into underlying demand drivers including end-use consumption patterns, equipment efficiency, technology adoption, and policy-driven electrification.
 
-The model will be a prototype framework suitable for long-term scenario analysis and planning insight under evolving technology, policy, and market conditions. It will focus exclusively on residential end-use modeling and will not be deployed for production-level forecasting or regulatory filings.
+The model is a Python-based prototype built for academic capstone delivery. It is not intended for production deployment or regulatory filings.
 
 ## Glossary
 
 - **NW Natural**: Northwest Natural, a regulated natural gas utility serving approximately 2 million customers across Oregon and Southwest Washington
-- **IRP**: Integrated Resource Planning, NW Natural's long-term planning process for evaluating future demand, infrastructure needs, and compliance with regulatory requirements
-- **UPC**: Use Per Customer, the current top-down econometric approach for estimating aggregate residential demand
-- **End-use**: A specific energy-consuming application within a residential building (e.g., space heating, space cooling)
-- **Housing stock**: The total number and characteristics of residential units in a service territory
-- **Fuel switching**: The transition from one energy source to another (e.g., natural gas to electricity) in residential applications
-- **Equipment efficiency**: The energy conversion efficiency of residential appliances and equipment
-- **Replacement cycle**: The typical lifespan and replacement timing of residential equipment
-- **Scenario analysis**: The evaluation of future demand under alternative assumptions about technology, policy, and market conditions
+- **IRP**: Integrated Resource Planning, NW Natural's long-term planning process
+- **UPC**: Use Per Customer, the aggregate therms-per-customer metric used in NW Natural's top-down forecast
+- **End-use**: A specific energy-consuming application (e.g., space heating, water heating, cooking)
+- **Housing stock**: The total number and characteristics of residential premises in the service territory
+- **Fuel switching**: Transition from natural gas to electricity (e.g., gas furnace to heat pump)
+- **Weibull survival model**: A probabilistic model for equipment replacement timing based on age and median service life
+- **Scenario**: A named set of parameter assumptions (growth rate, electrification rate, efficiency improvement) used to project future demand
+- **Premise-equipment table**: The unified working dataset joining premise, equipment, segment, and code data
 
-## Requirements
+---
 
-### Requirement 1: Model Scope and Boundary Definition
+## Implemented Requirements
 
-**User Story:** As a planning analyst, I want the model to clearly define its scope and boundaries, so that I understand what residential end uses are included and what assumptions govern the modeling approach.
+### Requirement 1: Model Scope and End-Use Mapping
+
+**User Story:** As a planning analyst, I want the model to clearly define which end uses are simulated and how equipment codes map to them, so that I understand what is included and what is excluded.
 
 #### Acceptance Criteria
 
-1. THE Model SHALL simulate space heating as the sole end-use in the current scope (furnaces, boilers, heat pumps)
-2. THE Model SHALL exclude commercial and industrial end uses from the residential simulation
-3. THE Model SHALL exclude water heating, cooking, clothes drying, fireplaces/decorative, and other/miscellaneous end-uses from the current scope (planned for future work)
-4. WHERE customer segments are defined, THE Model SHALL specify the segmentation criteria (e.g., building type, climate zone, income level)
-5. WHILE simulating demand, THE Model SHALL maintain clear boundaries between end uses to prevent double-counting or omission
+1. THE Model SHALL simulate space heating as the primary modeled end use (furnaces, boilers, heat pumps, wall furnaces, floor furnaces, boilers)
+2. THE Model SHALL define an `END_USE_MAP` in `src/config.py` mapping every `equipment_type_code` to one of: `space_heating`, `water_heating`, `cooking`, `clothes_drying`, `fireplace`, or `other`
+3. THE Model SHALL define `DEFAULT_EFFICIENCY` by end-use category as a fallback when equipment-specific efficiency is unavailable
+4. THE Model SHALL define `USEFUL_LIFE` (years) and `WEIBULL_BETA` (shape parameter) by end-use category for equipment replacement modeling
+5. THE Model SHALL filter premises to active residential customers only (`custtype='R'`, `status_code='AC'`)
+6. THE Model SHALL exclude commercial and industrial premises from all simulations
+
+---
 
 ### Requirement 2: Housing Stock Representation
 
-**User Story:** As a planning analyst, I want the model to represent the residential housing stock accurately, so that demand projections reflect realistic building characteristics and distribution.
+**User Story:** As a planning analyst, I want the model to represent the residential housing stock and project it forward, so that demand projections reflect realistic building counts and segment composition.
 
 #### Acceptance Criteria
 
-1. WHEN historical housing data is available, THE Model SHALL use it to calibrate the initial housing stock representation
-2. THE Model SHALL represent housing units by key attributes including: construction year, square footage, number of bedrooms, building type, and climate zone
-3. WHILE projecting into future years, THE Model SHALL simulate housing stock dynamics including new construction, demolition, and retrofit activity
-4. IF housing data is unavailable for a specific attribute, THEN THE Model SHALL document the data gap and apply reasonable assumptions with clear justification
+1. THE Model SHALL build a baseline housing stock from NW Natural's premise and segment data, keyed by `blinded_id`
+2. THE Model SHALL represent premises by: `segment` (RESSF, RESMF, MOBILE), `subseg`, `mktseg`, `set_year` (construction vintage), and `district_code_IRP`
+3. THE Model SHALL project total housing units forward using a configurable `housing_growth_rate` (scalar or year-indexed curve)
+4. THE Model SHALL apply vintage-based heating multipliers (`VINTAGE_HEATING_MULTIPLIER`) and segment-based multipliers (`SEGMENT_HEATING_MULTIPLIER`) to differentiate demand by building age and type
+5. THE Model SHALL use Census ACS B25024 historical data to project the SF/MF segment share shift over the forecast horizon
+6. THE Model SHALL export a `housing_stock.csv` per scenario showing total units and segment breakdown by year
 
-### Requirement 3: Equipment Inventory and Technology Adoption
+---
 
-**User Story:** As a planning analyst, I want the model to track equipment inventory and technology adoption over time, so that I can evaluate the impact of efficiency improvements and fuel switching.
+### Requirement 3: Equipment Inventory and Weibull Replacement Model
 
-#### Acceptance Criteriacbilling_data_blinded.csv
-
-1. WHEN equipment data is available, THE Model SHALL use it to establish baseline equipment inventories by end use
-2. THE Model SHALL track equipment characteristics including: type (e.g., furnace, boiler, heat pump), efficiency rating, fuel type, and installation year
-3. WHILE projecting into future years, THE Model SHALL simulate equipment replacement based on age, remaining useful life, and technology adoption rates
-4. WHERE technology adoption data is available, THE Model SHALL incorporate it to project future equipment transitions (e.g., gas furnace to heat pump)
-
-### Requirement 4: End-Use Energy Consumption Simulation
-
-**User Story:** As a planning analyst, I want the model to simulate energy consumption for each end use, so that I can understand how demand is distributed across applications.
+**User Story:** As a planning analyst, I want the model to track equipment inventories and simulate realistic replacement timing, so that efficiency improvements and fuel switching are modeled accurately.
 
 #### Acceptance Criteria
 
-1. WHEN weather data is available, THE Model SHALL use it to drive weather-sensitive end uses (e.g., space heating, space cooling)
-2. THE Model SHALL calculate end-use energy consumption based on: equipment efficiency, usage patterns, and operating conditions
-3. WHILE simulating consumption, THE Model SHALL apply end-use specific load shapes that reflect typical usage patterns
-4. IF multiple fuel types are supported, THEN THE Model SHALL track consumption separately by fuel type
-5. NOTE: Water heating, cooking, clothes drying, fireplaces/decorative, and other/miscellaneous end-uses are excluded from the current scope and planned for future work
+1. THE Model SHALL build an equipment inventory from NW Natural's equipment data, joined to premise and segment data
+2. THE Model SHALL track per-equipment attributes: `equipment_type_code`, `end_use`, `efficiency`, `install_year`, `useful_life`, `fuel_type`
+3. THE Model SHALL implement a Weibull survival function `S(t) = exp(-(t/eta)^beta)` for equipment replacement probability
+4. THE Model SHALL derive the Weibull scale parameter `eta` from ASHRAE median service life data (state-specific OR/WA), falling back to `USEFUL_LIFE` defaults
+5. THE Model SHALL apply probabilistic replacement (not deterministic age cutoff) — each year, equipment is replaced with probability `1 - S(t)/S(t-1)`
+6. THE Model SHALL apply scenario-driven electrification switching rates (gas → electric/heat pump) at replacement time
+7. THE Model SHALL apply scenario-driven efficiency improvements to newly installed equipment each year
 
-### Requirement 5: Demand Aggregation and Validation
+---
 
-**User Story:** As a planning analyst, I want the model to aggregate end-use demand to system-level totals, so that I can compare bottom-up projections to existing forecasts.
+### Requirement 4: Weather-Driven Space Heating Simulation
 
-#### Acceptance Criteria
-
-1. WHEN end-use demand is simulated, THE Model SHALL aggregate it to system-level totals by year and customer segment
-2. THE Model SHALL provide demand outputs in consistent units with existing forecasting tools (e.g., therms per year, peak demand in MW)
-3. WHERE historical aggregate demand data is available, THE Model SHALL enable comparison between bottom-up projections and historical trends
-4. WHILE aggregating demand, THE Model SHALL maintain traceability from end-use contributions to system totals
-
-### Requirement 6: Scenario Analysis Support
-
-**User Story:** As a planning analyst, I want the model to support multiple scenario definitions, so that I can evaluate demand under alternative assumptions about technology, policy, and market conditions.
+**User Story:** As a planning analyst, I want space heating demand to be driven by actual weather data, so that projections reflect realistic climate conditions.
 
 #### Acceptance Criteria
 
-1. WHEN a new scenario is defined, THE Model SHALL allow specification of key parameters including: technology adoption rates, efficiency improvement trajectories, and electrification targets
-2. THE Model SHALL run each scenario independently and store results separately for comparison
-3. WHILE running scenarios, THE Model SHALL maintain consistent baseline assumptions across all scenarios except those explicitly varied
-4. WHERE scenario parameters are interdependent, THEN THE Model SHALL validate parameter combinations for consistency
+1. THE Model SHALL compute Heating Degree Days (HDD, base 65°F) from NW Natural's daily CalDay weather data
+2. THE Model SHALL assign each premise to a weather station via `DISTRICT_WEATHER_MAP` in `src/config.py`, mapping `district_code_IRP` to ICAO station codes
+3. THE Model SHALL simulate annual space heating consumption as: `HDD × heating_factor × vintage_multiplier × segment_multiplier / efficiency`
+4. THE Model SHALL support three weather assumptions in scenario config: `"normal"` (use actual historical HDD), `"warm"` (below-normal HDD), `"cold"` (above-normal HDD)
+5. THE Model SHALL load NOAA 30-year Climate Normals (1991–2020) for all 11 NW Natural weather stations to support weather normalization
+6. THE Model SHALL compute a weather adjustment factor (`actual_HDD / normal_HDD`) for calibration and comparison
 
-### Requirement 7: Data Input and Calibration
+---
 
-**User Story:** As a planning analyst, I want the model to accept and process relevant data inputs, so that I can calibrate it to NW Natural's service territory.
+### Requirement 5: Demand Aggregation and IRP Comparison
 
-#### Acceptance Criteria
-
-1. WHEN billing data is available, THE Model SHALL use it to calibrate baseline consumption patterns
-2. WHEN weather data is available, THE Model SHALL use it to calibrate weather-sensitive end uses
-3. WHEN equipment inventory data is available, THE Model SHALL use it to establish baseline equipment characteristics
-4. IF data is incomplete or unavailable, THEN THE Model SHALL document data limitations and apply reasonable assumptions with clear justification
-5. EACH data loader SHALL be implemented as a standalone script in `src/loaders/` that can be run independently for debugging (`python -m src.loaders.<name>`)
-6. WHEN a loader runs standalone, IT SHALL print a summary to console and save diagnostic output (summary text + sample CSV) to `output/loaders/`
-7. THE `data_ingestion.py` module SHALL re-export all individual loaders for backward compatibility with downstream modules
-
-### Requirement 8: Transparency and Documentation
-
-**User Story:** As a planning analyst, I want the model to be transparent about its assumptions and methods, so that I can understand and validate its outputs.
+**User Story:** As a planning analyst, I want the model to aggregate demand to system-level totals and compare against NW Natural's IRP forecast, so that I can evaluate the bottom-up model's alignment with existing projections.
 
 #### Acceptance Criteria
 
-1. THE Model SHALL document all key assumptions including: housing stock dynamics, equipment replacement rates, technology adoption curves, and usage patterns
-2. WHEN model outputs are generated, THE Model SHALL provide metadata explaining the scenario, date, and key parameters used
-3. WHILE running simulations, THE Model SHALL log significant events including data gaps, assumption applications, and calibration adjustments
-4. IF model limitations affect results, THEN THE Model SHALL clearly identify and quantify those limitations
+1. THE Model SHALL aggregate simulated demand to system totals by: year, end-use, customer segment, and IRP district
+2. THE Model SHALL compute Use Per Customer (UPC) as `total_therms / premise_count` for each year
+3. THE Model SHALL load NW Natural's 10-Year Load Decay Forecast (2025–2035) and compare model UPC against it
+4. THE Model SHALL export an `irp_comparison.csv` per scenario with columns: `year`, `model_upc`, `irp_upc`, `diff_therms`, `diff_pct`
+5. THE Model SHALL export an `estimated_total_upc.csv` that adds RECS-derived non-heating end-use estimates to the space-heating-only model UPC
+6. THE Model SHALL export a `yearly_summary.csv` with total therms, UPC, and premise count by year
 
-### Requirement 9: Model Output Format and Accessibility
+---
 
-**User Story:** As a planning analyst, I want the model outputs to be accessible and interpretable, so that I can use them for scenario analysis and presentation.
+### Requirement 6: Scenario Configuration and Execution
 
-#### Acceptance Criteria
-
-1. WHEN model runs are completed, THE Model SHALL produce outputs in a structured format (e.g., CSV, JSON) suitable for further analysis
-2. THE Model SHALL provide outputs at multiple aggregation levels including: end use, customer segment, and system total
-3. WHILE generating outputs, THE Model SHALL include time series data for demand projections (e.g., annual totals, monthly profiles)
-4. WHERE comparative analysis is requested, THEN THE Model SHALL enable side-by-side comparison with existing aggregate forecasts
-
-### Requirement 10: Model Limitations and Validation
-
-**User Story:** As a planning analyst, I want the model to clearly communicate its limitations, so that I understand when and how to use its outputs appropriately.
+**User Story:** As a planning analyst, I want to define scenarios via JSON config files and run them from the command line, so that I can compare multiple demand futures without modifying code.
 
 #### Acceptance Criteria
 
-1. THE Model SHALL document its limitations including: data availability, spatial resolution, temporal resolution, and calibration scope
-2. WHEN validation data is available, THE Model SHALL compare outputs to observed data and quantify discrepancies
-3. WHILE running simulations, THE Model SHALL flag results that fall outside expected ranges or indicate potential issues
-4. IF model outputs are intended for illustrative purposes only, THEN THE Model SHALL clearly state that limitation
+1. THE Model SHALL accept scenario configuration as a JSON file with required fields: `name`, `base_year`, `forecast_horizon`
+2. THE Model SHALL support the following scenario parameters: `housing_growth_rate`, `electrification_rate`, `efficiency_improvement`, `weather_assumption`, `initial_gas_pct`, `use_recs_ratios`, `end_use_scope`, `max_premises`, `vectorized`
+3. EACH parameter SHALL support either a scalar value or a year-indexed curve dict (e.g., `{"2025": 0.01, "2030": 0.02}`) resolved by `src/parameter_curves.py`
+4. THE CLI SHALL accept one or more scenario JSON paths: `python -m src.main scenarios/baseline.json [scenarios/alt.json --compare]`
+5. THE CLI SHALL support flags: `--output-dir`, `--baseline-only`, `--compare`, `--verbose`
+6. EACH scenario SHALL write results to its own folder: `scenarios/{scenario_name}/` containing `results.csv`, `results.json`, `yearly_summary.csv`, `metadata.json`, `SUMMARY.md`, and optional supplemental CSVs
 
-### Requirement 11: Local Development and Testing Environment
+---
 
-**User Story:** As a developer, I want to be able to run and test the model on my laptop, so that I can develop and validate features locally before deployment.
+### Requirement 7: Data Loaders and Ingestion Pipeline
 
-#### Acceptance Criteria
-
-1. THE Model SHALL be installable on a standard laptop (Windows, macOS, Linux) with Python 3.9+ and 8GB+ RAM
-2. WHEN dependencies are installed, THE Model SHALL run a complete simulation in under 5 minutes on a laptop with 8GB RAM
-3. THE Model SHALL provide a local development server for testing the visualization interface without external dependencies
-4. WHILE running locally, THE Model SHALL support all core functionality including: data ingestion, simulation, aggregation, and visualization
-5. IF a developer runs the model locally, THEN THE Model SHALL produce identical results to the production deployment (deterministic output)
-6. THE Model SHALL include a quick-start guide for local setup and testing (README with step-by-step instructions)
-7. WHEN running locally, THE Model SHALL support hot-reload of code changes for rapid iteration during development
-
-### Requirement 12: Deployment Packaging and Distribution
-
-**User Story:** As a deployment engineer, I want the model to be packaged for easy deployment to production environments, so that it can be shared and run reliably across different systems.
+**User Story:** As a developer, I want each data source to have its own standalone loader, so that I can debug individual sources independently and the pipeline is easy to extend.
 
 #### Acceptance Criteria
 
-1. THE Model SHALL be packaged as a Docker container with all dependencies included
-2. WHEN the Docker image is built, IT SHALL be reproducible and deterministic (same image hash for same source code)
-3. THE Model SHALL include a docker-compose.yml file for easy multi-container deployment (model + visualization + optional database)
-4. WHILE running in Docker, THE Model SHALL support environment variable configuration for scenario parameters, data paths, and API settings
-5. THE Model SHALL provide a requirements.txt file for pip installation in non-containerized environments
-6. IF the model is deployed to a cloud platform, THEN IT SHALL support common deployment targets (AWS, Azure, GCP, Heroku)
-7. THE Model SHALL include deployment documentation covering: Docker setup, environment configuration, data mounting, and troubleshooting
-8. WHEN deploying to production, THE Model SHALL support health checks and monitoring endpoints for operational visibility
+1. EACH data source SHALL have a dedicated loader in `src/loaders/` (one file per source)
+2. EACH loader SHALL be runnable standalone: `python -m src.loaders.<name>` loads data, prints a summary, and saves diagnostics to `output/loaders/`
+3. THE `src/loaders/_helpers.py` module SHALL provide `save_diagnostics(df, name)` for consistent diagnostic output across all loaders
+4. THE `src/data_ingestion.py` module SHALL re-export all loaders and provide `build_premise_equipment_table(premises, equipment, segments, codes)` as the primary join function
+5. THE `build_premise_equipment_table` function SHALL derive: `end_use` (via `END_USE_MAP`), `efficiency` (via `DEFAULT_EFFICIENCY`), and `weather_station` (via `DISTRICT_WEATHER_MAP`)
+6. THE Model SHALL load the following NW Natural data: premise, equipment, equipment codes, segment, weather (CalDay), water temperature, billing, snow
+7. THE Model SHALL load the following external data: RBSA 2022, RBSA 2017, ASHRAE service life (OR/WA), ASHRAE maintenance cost (OR/WA), IRP load decay forecast, historical UPC, baseload factors, NW energy proxies, Census B25034/B25040/B25024 county files, PSU population forecasts, WA OFM housing estimates, NOAA climate normals, EIA RECS microdata (2005–2020), tariff/rate data (OR/WA)
 
-### Requirement 13: Visualization Interface Deployment
+---
 
-**User Story:** As a stakeholder, I want to access the visualization interface through a web browser, so that I can explore forecast results interactively.
+### Requirement 8: Data Validation and Quality Reporting
 
-#### Acceptance Criteria
-
-1. THE Visualization interface SHALL be accessible via a web browser (Chrome, Firefox, Safari, Edge)
-2. WHEN the model is deployed, THE Visualization SHALL be served via a REST API (Flask or FastAPI)
-3. THE Visualization interface SHALL load and render maps with 100+ geographic regions in under 3 seconds
-4. WHILE interacting with the visualization, THE Visualization SHALL respond to user actions (slider, dropdown, click) in under 500ms
-5. IF the visualization is deployed to a cloud platform, THEN IT SHALL support HTTPS/TLS encryption for secure data transmission
-6. THE Visualization SHALL work on desktop (1920x1080+) and tablet (iPad) screen sizes
-7. WHEN the visualization loads, IT SHALL display a default scenario (e.g., Business as Usual) without requiring user configuration
-
-### Requirement 14: Data Management and Persistence
-
-**User Story:** As an operator, I want the model to manage data efficiently, so that I can store and retrieve simulation results without manual file management.
+**User Story:** As a developer, I want automated data quality checks with HTML and Markdown reports, so that I can quickly identify data issues without manual inspection.
 
 #### Acceptance Criteria
 
-1. WHEN simulation results are generated, THE Model SHALL store them in a structured format (CSV, Parquet, or database)
-2. THE Model SHALL support both file-based storage (for local development) and database storage (for production)
-3. WHILE storing results, THE Model SHALL include metadata (scenario name, date, parameters, version) for traceability
-4. IF multiple scenarios are run, THEN THE Model SHALL organize results by scenario for easy comparison
-5. THE Model SHALL provide a data export function to download results in common formats (CSV, Excel, JSON)
-6. WHEN deploying to production, THE Model SHALL support persistent volumes for data storage across container restarts
+1. THE Model SHALL generate per-loader quality reports saved to `output/data_quality/` as both HTML and Markdown
+2. EACH quality report SHALL include: row count, column dtypes, null counts, unique value counts, min/max/mean for numerics, top-10 frequencies for categoricals
+3. THE Model SHALL generate a cross-loader join audit showing match rates between premise, equipment, segment, and billing tables
+4. THE Model SHALL generate a join integrity dashboard at `output/join_integrity/` with pass/fail indicators for: end-use mapping coverage, efficiency validity, and weather station assignment
+5. THE Model SHALL flag equipment codes not present in `END_USE_MAP` and report them as unmapped
+6. THE Model SHALL generate distribution plots (histograms, bar charts) for key fields: equipment age, efficiency by end-use, HDD by station, premises by district, segment distribution
 
-### Requirement 15: Performance and Scalability
+---
 
-**User Story:** As an operator, I want the model to perform efficiently, so that I can run multiple scenarios and serve many concurrent users.
+### Requirement 9: Census and RECS Integration
 
-#### Acceptance Criteria
-
-1. WHEN running a single scenario on a laptop, THE Model SHALL complete in under 5 minutes
-2. WHEN running on a server with 16GB RAM and 4 CPU cores, THE Model SHALL complete in under 2 minutes
-3. WHILE serving the visualization interface, THE Model SHALL support at least 10 concurrent users without degradation
-4. IF the visualization is accessed by many users, THEN THE Model SHALL cache results to reduce API response times
-5. THE Model SHALL support parallel execution of multiple scenarios (if hardware allows)
-6. WHEN deploying to production, THE Model SHALL be horizontally scalable (multiple instances behind a load balancer)
-
-### Requirement 16: Monitoring, Logging, and Debugging
-
-**User Story:** As an operator, I want visibility into model execution, so that I can troubleshoot issues and monitor performance.
+**User Story:** As a planning analyst, I want the model to incorporate Census housing data and EIA RECS benchmarks, so that the housing stock and end-use estimates are grounded in independent external sources.
 
 #### Acceptance Criteria
 
-1. WHEN the model runs, IT SHALL log all significant events (data loading, simulation progress, aggregation, output generation)
-2. THE Model SHALL provide structured logging (JSON format) for easy parsing and analysis
-3. WHILE running, THE Model SHALL track execution time for each major step (data ingestion, simulation, aggregation)
-4. IF an error occurs, THEN THE Model SHALL provide detailed error messages with context (line number, variable state, data sample)
-5. THE Model SHALL support debug mode for verbose logging during development
-6. WHEN deployed to production, THE Model SHALL integrate with standard monitoring tools (Prometheus, CloudWatch, etc.)
-7. THE Model SHALL provide a health check endpoint that returns model status and recent execution metrics
+1. THE Model SHALL load ACS 5-year B25034 (Year Structure Built) county-level data for all 16 NW Natural service territory counties (2009–2023)
+2. THE Model SHALL load ACS 5-year B25040 (House Heating Fuel) county-level data to track gas market share over time
+3. THE Model SHALL load ACS 5-year B25024 (Units in Structure) county-level data to validate SF/MF segment split
+4. THE Model SHALL enrich the premise-equipment table with Census-derived vintage distribution and segment shift rates
+5. THE Model SHALL load EIA RECS microdata (2005, 2009, 2015, 2020) and compute weighted-average end-use shares for Pacific division gas-heated homes
+6. THE Model SHALL use RECS-derived non-heating ratios to estimate total UPC (space heating + water heating + cooking + drying + fireplace) when `use_recs_ratios=true` in scenario config
+7. THE Model SHALL export Census and RECS summary CSVs alongside scenario results for reference
 
-### Requirement 17: Testing and Quality Assurance
+---
 
-**User Story:** As a developer, I want comprehensive tests to ensure model correctness, so that I can confidently deploy changes.
+### Requirement 10: Calibration Against IRP Load Decay Data
 
-#### Acceptance Criteria
-
-1. THE Model SHALL include unit tests for all core modules (data ingestion, simulation, aggregation, visualization)
-2. WHEN tests are run, THEY SHALL achieve at least 80% code coverage for critical paths
-3. THE Model SHALL include integration tests that verify end-to-end workflows (data → simulation → output)
-4. WHILE running tests, THE Model SHALL complete in under 2 minutes on a standard laptop
-5. IF a test fails, THEN THE Model SHALL provide clear error messages indicating the failure reason
-6. THE Model SHALL include property-based tests for correctness properties (e.g., conservation of demand, non-negativity)
-7. WHEN deploying to production, THE Model SHALL run all tests automatically (CI/CD pipeline)
-
-### Requirement 18: Documentation and User Guides
-
-**User Story:** As a user, I want clear documentation, so that I can understand how to use the model and interpret results.
+**User Story:** As a planning analyst, I want the model to be calibrated against NW Natural's historical UPC data, so that the baseline simulation is anchored to observed demand trends.
 
 #### Acceptance Criteria
 
-1. THE Model SHALL include a README with quick-start instructions for local setup and first run
-2. THE Model SHALL provide API documentation (OpenAPI/Swagger) for all REST endpoints
-3. WHILE using the visualization, THE Model SHALL include tooltips and help text explaining each feature
-4. THE Model SHALL include a user guide covering: scenario definition, result interpretation, and common use cases
-5. IF the model is deployed to production, THEN IT SHALL include operational documentation (deployment, configuration, troubleshooting)
-6. THE Model SHALL include example notebooks (Jupyter) demonstrating common analysis workflows
-7. WHEN model outputs are generated, THEY SHALL include a data dictionary explaining all columns and units
+1. THE Model SHALL load the three-era historical UPC framework: pre-2010 (~820 therms, 80% AFUE), 2011–2019 (~720 therms, 90%+ AFUE), 2020+ (~650 therms, heat pump hybrids)
+2. THE Model SHALL load year-by-year historical UPC back to 2005 from `prior load decay data reconstructed.txt`
+3. THE Model SHALL compare bottom-up UPC projections against the IRP 10-year load decay forecast (-1.19%/yr from 648 therm baseline)
+4. THE Model SHALL support a `calibration.py` module for adjusting the `heating_factor` to align base-year model UPC with observed UPC
+5. THE Model SHALL report calibration residuals (model UPC vs IRP UPC) in `irp_comparison.csv`
 
+---
 
+### Requirement 11: Static Visualization and Reporting
 
+**User Story:** As a planning analyst, I want the model to generate static charts and summary reports, so that I can review results without running additional analysis scripts.
 
-### Requirement 19: Interactive Visualization with Geographic Drill-Down
+#### Acceptance Criteria
+
+1. THE Model SHALL generate a `SUMMARY.md` per scenario with: configuration parameters, yearly demand table, end-use breakdown table, and output file list
+2. THE Model SHALL generate scenario comparison charts (line charts, stacked area charts) using Matplotlib saved as PNG files
+3. THE Model SHALL generate housing stock projection charts: total units over time, segment distribution, district distribution, growth rate analysis
+4. THE Model SHALL generate a service territory map (static PNG) showing NW Natural counties with weather station markers
+5. THE Model SHALL generate equipment age and efficiency distribution charts saved to `output/` subdirectories
+6. ALL chart generation SHALL use a non-interactive Matplotlib backend (`Agg`) suitable for headless/server execution
+
+---
+
+### Requirement 12: Property-Based Testing
+
+**User Story:** As a developer, I want property-based tests that verify mathematical correctness of the model, so that I can catch logic errors that unit tests might miss.
+
+#### Acceptance Criteria
+
+1. THE Model SHALL implement a Weibull survival monotonicity property: `S(t) <= S(t-1)` for all `t > 0`, and `S(0) = 1.0`
+2. THE Model SHALL implement a replacement probability bounds property: `replacement_probability` is always in `[0, 1]`
+3. THE Model SHALL implement a fuel switching conservation property: total equipment count before and after `apply_replacements` is equal
+4. THE Model SHALL implement a housing stock growth property: projected `total_units = baseline × (1 + growth_rate)^years` within rounding tolerance
+5. EACH property test SHALL save results to `output/` as both HTML and Markdown with pass/fail status, data summaries, and any generated plots
+6. THE Model SHALL implement scenario output non-negativity: all `total_therms` values are >= 0
+
+---
+
+### Requirement 13: Logging and Transparency
+
+**User Story:** As a developer, I want the model to log its execution clearly, so that I can trace what happened during a run and diagnose issues.
+
+#### Acceptance Criteria
+
+1. THE Model SHALL use Python's `logging` module with level `INFO` by default, configurable via `--verbose` flag for `DEBUG`
+2. THE Model SHALL log: data load counts, join results, simulation progress by year, and output file paths
+3. THE Model SHALL log warnings for: unmapped equipment codes, missing weather station assignments, data files not found, and premises with zero efficiency
+4. THE Model SHALL include scenario metadata in `metadata.json`: scenario name, base year, forecast horizon, all parameter values, total rows, years simulated, end-uses, and execution timestamp
+5. THE Model SHALL write a human-readable `SUMMARY.md` to each scenario output folder
+
+---
+
+## Future Work Requirements
+
+The following requirements describe capabilities that were designed and partially specified but not implemented in the current capstone prototype. They are documented here to guide future development.
+
+---
+
+### Future Requirement A: Interactive Web Visualization with Geographic Drill-Down
 
 **User Story:** As a stakeholder, I want to explore forecast results interactively on a map, so that I can understand demand patterns across different geographic and demographic segments.
 
 #### Acceptance Criteria
 
-1. WHEN the visualization interface loads, THE Map SHALL display the NW Natural service territory with county boundaries color-coded by demand intensity
-2. WHEN a user clicks on a county, THE Map SHALL zoom to that county and display district-level boundaries
-3. WHEN a user selects a view option, THE Map SHALL switch between: county, district, microclimate, microresidential, microadoption, and composite-cell views
-4. WHILE the user moves the year slider, THE Map colors SHALL update to reflect demand for that year
-5. WHEN a user selects a scenario, THE Map SHALL update to show results for that scenario
-6. IF a user hovers over a geographic area, THEN THE Visualization SHALL display a tooltip with key metrics (demand, UPC, electrification rate)
-7. WHEN a user clicks on an area, THE Visualization SHALL display a detail panel with time-series charts and end-use breakdown
-8. IF a user selects multiple areas, THEN THE Visualization SHALL display a comparison chart showing trends for all selected areas
+1. THE Visualization SHALL display the NW Natural service territory with county boundaries color-coded by demand intensity (therms/customer)
+2. WHEN a user clicks a county, THE Map SHALL zoom to district-level boundaries
+3. THE Visualization SHALL support toggling between: county, district, microclimate (weather station service area), and microresidential (segment × vintage cohort) views
+4. WHILE the user moves a year slider, THE Map colors SHALL update to reflect demand for that year
+5. WHEN a user hovers over an area, THE Visualization SHALL display a tooltip with: demand, UPC, customer count, and electrification rate
+6. THE Visualization SHALL support scenario comparison (dropdown to switch between scenarios)
+7. THE Visualization SHALL display end-use breakdown as a stacked bar chart for any selected area
 
-### Requirement 20: REST API for Scenario Management and Results
+---
+
+### Future Requirement B: REST API for Scenario Management
 
 **User Story:** As a developer, I want to programmatically create scenarios, submit runs, and retrieve results via REST API, so that I can integrate the model with other systems.
 
 #### Acceptance Criteria
 
-1. WHEN a POST request is sent to `/api/v1/scenarios`, THE API SHALL create a new scenario and return a scenario_id
-2. WHEN a GET request is sent to `/api/v1/scenarios`, THE API SHALL return a paginated list of all scenarios
-3. WHEN a POST request is sent to `/api/v1/scenarios/{scenario_id}/run`, THE API SHALL submit the scenario for execution and return a run_id
-4. WHILE a scenario is running, WHEN a GET request is sent to `/api/v1/runs/{run_id}`, THE API SHALL return the current execution status and progress
-5. WHEN a scenario completes, WHEN a GET request is sent to `/api/v1/runs/{run_id}/results`, THE API SHALL return aggregated results in JSON, CSV, or Parquet format
-6. WHEN a GET request is sent to `/api/v1/runs/{run_id}/results/geojson`, THE API SHALL return results as GeoJSON for map visualization
-7. IF a request contains invalid parameters, THEN THE API SHALL return a 400 Bad Request with detailed error message
-8. WHEN the API receives a request, IT SHALL validate the request and return appropriate HTTP status codes (200, 201, 400, 404, 500)
+1. THE API SHALL expose `POST /api/v1/scenarios` to create a new scenario and return a `scenario_id`
+2. THE API SHALL expose `GET /api/v1/scenarios` to list all scenarios with status
+3. THE API SHALL expose `POST /api/v1/scenarios/{scenario_id}/run` to submit a scenario for execution
+4. THE API SHALL expose `GET /api/v1/runs/{run_id}` to return execution status and progress
+5. THE API SHALL expose `GET /api/v1/runs/{run_id}/results` to return results in JSON, CSV, or Parquet
+6. THE API SHALL expose `GET /api/v1/runs/{run_id}/results/geojson` to return results as GeoJSON for map rendering
+7. THE API SHALL return standard HTTP status codes and structured error responses
 
-### Requirement 21: Multi-Level Geographic Analysis
+---
 
-**User Story:** As an analyst, I want to analyze demand at multiple geographic levels (county, district, microclimate, microresidential, microadoption, composite-cell), so that I can understand demand drivers at different scales.
+### Future Requirement C: Composite Microregion Cell Analysis
 
-#### Acceptance Criteria
-
-1. THE Model SHALL support aggregation at six geographic levels: county, district, microclimate, microresidential, microadoption, and composite-cell
-2. WHEN results are aggregated at any level, THE Model SHALL maintain conservation of demand (sum of sub-areas equals parent area)
-3. WHEN a user requests results at a specific level, THE API SHALL return data with appropriate geographic identifiers and metrics
-4. IF a user requests comparison across multiple areas, THEN THE API SHALL return time-series data for all selected areas in a format suitable for charting
-5. WHEN composite cells are generated, THEY SHALL combine all microregion dimensions into a single multi-dimensional analytical unit
-6. IF a user filters composite cells by attributes, THEN THE API SHALL return only cells matching the filter criteria
-
-### Requirement 22: Deployment and Containerization
-
-**User Story:** As an operator, I want to deploy the model to production using Docker, so that I can run it reliably across different environments.
+**User Story:** As an analyst, I want to analyze demand at a composite cell level combining microclimate, microresidential, and adoption cohort dimensions, so that I can identify high-opportunity areas for electrification programs.
 
 #### Acceptance Criteria
 
-1. THE Model SHALL be packaged as a Docker container with all dependencies included
-2. WHEN the Docker image is built, IT SHALL be reproducible and deterministic (same image hash for same source code)
-3. THE Model SHALL include a docker-compose.yml file for easy multi-container deployment
-4. WHILE running in Docker, THE Model SHALL support environment variable configuration for scenario parameters and API settings
-5. WHEN the container starts, IT SHALL perform health checks and report status via `/api/v1/health` endpoint
-6. IF the model is deployed to a cloud platform, THEN IT SHALL support common deployment targets (AWS, Azure, GCP, Heroku)
-7. THE Model SHALL include deployment documentation covering: Docker setup, environment configuration, data mounting, and troubleshooting
+1. THE Model SHALL define composite cells as the intersection of: microclimate (weather station service area) × microresidential (segment + subsegment + vintage cohort) × adoption cohort (Early Adopters / Growth / Mature / Saturation)
+2. THE Model SHALL compute a composite score (0–100) for each cell combining: demand intensity (40%), adoption rate (30%), efficiency gap (20%), climate severity (10%)
+3. THE Model SHALL compute an opportunity score (high demand + low adoption) and success score (high adoption + low demand) per cell
+4. THE Model SHALL export composite cell data as GeoJSON and CSV for visualization
+5. THE Visualization SHALL support filtering cells by microclimate, microresidential, adoption cohort, and demand intensity
 
-### Requirement 23: Local Development Environment
+---
 
-**User Story:** As a developer, I want to run and test the model on my laptop, so that I can develop and validate features locally.
+### Future Requirement D: Additional End-Use Simulation (Water Heating, Cooking, Drying, Fireplace)
 
-#### Acceptance Criteria
-
-1. THE Model SHALL be installable on a standard laptop (Windows, macOS, Linux) with Python 3.9+ and 8GB+ RAM
-2. WHEN dependencies are installed via `pip install -r requirements.txt`, THE Model SHALL be ready to run
-3. WHEN a developer runs a complete simulation locally, IT SHALL complete in under 5 minutes on a laptop with 8GB RAM
-4. THE Model SHALL provide a local development server for testing the visualization interface without external dependencies
-5. WHILE running locally, THE Model SHALL support all core functionality including: data ingestion, simulation, aggregation, and visualization
-6. IF a developer runs the model locally, THEN THE Model SHALL produce identical results to the production deployment (deterministic output)
-7. THE Model SHALL include a quick-start guide (README) with step-by-step instructions for local setup and testing
-
-### Requirement 24: Monitoring and Observability
-
-**User Story:** As an operator, I want visibility into model execution, so that I can troubleshoot issues and monitor performance.
+**User Story:** As a planning analyst, I want the model to simulate all major residential gas end uses, so that total demand projections are complete.
 
 #### Acceptance Criteria
 
-1. WHEN the model runs, IT SHALL log all significant events (data loading, simulation progress, aggregation, output generation)
-2. THE Model SHALL provide structured logging in JSON format for easy parsing and analysis
-3. WHILE running, THE Model SHALL track execution time for each major step (data ingestion, simulation, aggregation)
-4. IF an error occurs, THEN THE Model SHALL provide detailed error messages with context (line number, variable state, data sample)
-5. THE Model SHALL support debug mode for verbose logging during development
-6. WHEN deployed to production, THE Model SHALL integrate with standard monitoring tools (Prometheus, CloudWatch, etc.)
-7. THE Model SHALL provide a health check endpoint that returns model status and recent execution metrics
+1. THE Model SHALL simulate water heating consumption driven by Bull Run water temperature and daily hot water usage (64 gallons/day default)
+2. THE Model SHALL simulate cooking consumption using RECS-derived baseload factors (~30 therms/year)
+3. THE Model SHALL simulate clothes drying consumption using RECS-derived baseload factors (~20 therms/year)
+4. THE Model SHALL simulate fireplace consumption using RBSA-metered baseload factors (~55 therms/year)
+5. THE Model SHALL apply vintage-stratified water heater standby losses: pre-1990 (75 therms/yr), 1991–2003 (55), 2004–2014 (40), 2015+ (20)
+6. THE Model SHALL apply pilot light loads for pre-2015 equipment (46–82 therms/yr depending on equipment type)
 
-### Requirement 25: Testing and Quality Assurance
+---
 
-**User Story:** As a developer, I want comprehensive tests to ensure model correctness, so that I can confidently deploy changes.
+### Future Requirement E: Docker Containerization and Production Deployment
 
-#### Acceptance Criteria
-
-1. THE Model SHALL include unit tests for all core modules (data ingestion, simulation, aggregation, visualization, API)
-2. WHEN tests are run, THEY SHALL achieve at least 80% code coverage for critical paths
-3. THE Model SHALL include integration tests that verify end-to-end workflows (data → simulation → output)
-4. WHILE running tests, THE Model SHALL complete in under 2 minutes on a standard laptop
-5. IF a test fails, THEN THE Model SHALL provide clear error messages indicating the failure reason
-6. THE Model SHALL include property-based tests for correctness properties (e.g., conservation of demand, non-negativity)
-7. WHEN deploying to production, THE Model SHALL run all tests automatically (CI/CD pipeline)
-
-### Requirement 26: Documentation and User Guides
-
-**User Story:** As a user, I want clear documentation, so that I can understand how to use the model and interpret results.
+**User Story:** As an operator, I want the model packaged as a Docker container, so that it can be deployed reliably across different environments.
 
 #### Acceptance Criteria
 
-1. THE Model SHALL include a README with quick-start instructions for local setup and first run
-2. THE Model SHALL provide API documentation (OpenAPI/Swagger) for all REST endpoints
-3. WHILE using the visualization, THE Model SHALL include tooltips and help text explaining each feature
-4. THE Model SHALL include a user guide covering: scenario definition, result interpretation, and common use cases
-5. IF the model is deployed to production, THEN IT SHALL include operational documentation (deployment, configuration, troubleshooting)
-6. THE Model SHALL include example notebooks (Jupyter) demonstrating common analysis workflows
-7. WHEN model outputs are generated, THEY SHALL include a data dictionary explaining all columns and units
-8. THE Model SHALL include documentation explaining geographic levels and cells (REGIONS_AND_CELLS.md)
-9. THE Model SHALL include comprehensive API documentation (API_DOCUMENTATION.md) with endpoint reference and examples
+1. THE Model SHALL be packaged as a Docker container with all Python dependencies included
+2. THE Model SHALL include a `docker-compose.yml` for multi-container deployment (model + visualization server)
+3. THE Model SHALL support environment variable configuration for data paths, API keys, and scenario parameters
+4. THE Model SHALL expose a health check endpoint at `GET /api/v1/health`
+5. THE Model SHALL support deployment to common cloud platforms (AWS, Azure, GCP)
 
+---
+
+### Future Requirement F: RBSA Sub-Metered End-Use Data Integration
+
+**User Story:** As a modeler, I want to use RBSA sub-metered 15-minute interval data to validate load shape assumptions, so that the model's baseload factors are empirically grounded.
+
+#### Acceptance Criteria
+
+1. THE Model SHALL load RBSA Metering Year 1 (Sep 2012–Sep 2013) tab-delimited TXT files (~328 MB each) using chunked reading
+2. THE Model SHALL load RBSA Metering Year 2 (Apr 2013–Apr 2014) tab-delimited TXT files (~300 MB each)
+3. THE Model SHALL parse SAS datetime timestamps from the metering files
+4. THE Model SHALL compute diurnal and seasonal load shapes by end-use from the metered data
+5. THE Model SHALL compare electric end-use load shapes against gas equivalents to validate baseload factor assumptions
+
+---
+
+### Future Requirement G: Green Building Registry API Integration
+
+**User Story:** As a modeler, I want to supplement RBSA building data with Green Building Registry Home Energy Score data, so that building shell assumptions are more accurate for specific properties.
+
+#### Acceptance Criteria
+
+1. THE Model SHALL query the Green Building Registry API (`api.greenbuildingregistry.com`) by zip code for properties in NW Natural's service territory
+2. THE API key SHALL be read from the `GBR_API_KEY` environment variable (never committed to source)
+3. THE Model SHALL extract: Home Energy Score, estimated annual energy use, insulation levels, and window types per property
+4. THE Model SHALL use GBR data to refine building shell assumptions for premises with matching records
+
+---
+
+### Future Requirement H: CI/CD Pipeline and Automated Testing
+
+**User Story:** As a developer, I want automated tests to run on every code change, so that regressions are caught before they reach production.
+
+#### Acceptance Criteria
+
+1. THE Repository SHALL include a CI/CD pipeline (GitHub Actions or equivalent) that runs all tests on every pull request
+2. THE Pipeline SHALL enforce minimum 80% code coverage for critical modules
+3. THE Pipeline SHALL run property-based tests with at least 100 examples per property
+4. THE Pipeline SHALL build and validate the Docker image on every merge to main
+5. THE Pipeline SHALL fail and block merge if any test fails or coverage drops below threshold

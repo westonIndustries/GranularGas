@@ -822,8 +822,12 @@ def run_scenario(
             if seg_lookup is not None:
                 sim_with_seg = sim_results.copy()
                 sim_with_seg['segment'] = sim_with_seg['blinded_id'].map(seg_lookup).fillna('Unclassified')
-                seg_demand = sim_with_seg.groupby('segment')['annual_therms'].agg(['sum', 'count']).reset_index()
-                seg_demand.columns = ['segment', 'total_therms', 'equipment_count']
+                if is_monthly and 'month' in sim_with_seg.columns:
+                    seg_demand = sim_with_seg.groupby(['segment', 'month'])['annual_therms'].agg(['sum', 'count']).reset_index()
+                    seg_demand.columns = ['segment', 'month', 'total_therms', 'equipment_count']
+                else:
+                    seg_demand = sim_with_seg.groupby('segment')['annual_therms'].agg(['sum', 'count']).reset_index()
+                    seg_demand.columns = ['segment', 'total_therms', 'equipment_count']
                 seg_demand['year'] = year
                 yearly_segment_demand.append(seg_demand)
             
@@ -836,12 +840,17 @@ def run_scenario(
                 bins = [0, 1979, 1999, 2009, 2014, 2099]
                 labels = ['pre-1980', '1980-1999', '2000-2009', '2010-2014', '2015+']
                 sim_with_vy['vintage_era'] = pd.cut(sy, bins=bins, labels=labels).astype(str).replace('nan', 'Unknown')
-                vy_demand = sim_with_vy.groupby('vintage_era')['annual_therms'].agg(['sum', 'count', 'mean']).reset_index()
-                vy_demand.columns = ['vintage_era', 'total_therms', 'equipment_count', 'avg_therms']
+                if is_monthly and 'month' in sim_with_vy.columns:
+                    vy_demand = sim_with_vy.groupby(['vintage_era', 'month'])['annual_therms'].agg(['sum', 'count', 'mean']).reset_index()
+                    vy_demand.columns = ['vintage_era', 'month', 'total_therms', 'equipment_count', 'avg_therms']
+                else:
+                    vy_demand = sim_with_vy.groupby('vintage_era')['annual_therms'].agg(['sum', 'count', 'mean']).reset_index()
+                    vy_demand.columns = ['vintage_era', 'total_therms', 'equipment_count', 'avg_therms']
                 vy_demand['year'] = year
                 
                 # Adjust vintage counts for demolition and new construction
-                if year_offset > 0:
+                # Only applies to annual aggregation — monthly rows are already proportional
+                if year_offset > 0 and not (is_monthly and 'month' in vy_demand.columns):
                     demo_rate = config.demolition_rate
                     # Older homes demolished at higher rate
                     vintage_demo_rates = {

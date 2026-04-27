@@ -1,801 +1,425 @@
-﻿# Implementation Plan: NW Natural End-Use Forecasting Model
+﻿# Implementation Tasks: NW Natural End-Use Forecasting Model
 
 ## Overview
 
-Build a bottom-up residential end-use demand forecasting model in Python. The implementation follows the pipeline architecture: data ingestion â†’ housing stock model â†’ end-use simulation â†’ aggregation/output. Each task builds incrementally, wiring modules together as they are completed. All code lives under `src/` with CSV data read from `Data/`.
+This task list reflects the actual implementation of the bottom-up residential end-use demand forecasting model. All tasks correspond to implemented requirements and design components. Future work items (interactive visualization, REST API, Docker, additional end-uses) are tracked separately in the requirements and design documents.
+
+---
 
 ## Tasks
 
-**Task rules:**
-- Each sub-task has a maximum of 6 bullet items
-- Every property test must output results to the `output/` folder as both HTML and Markdown (.md)
-- Property test outputs include pass/fail status, data summaries, and any generated plots
-
-- [x] 1. Set up project structure and configuration module
+- [x] 1. Project Structure and Configuration
 
   - [x] 1.1 Create `src/` package structure
-    - Create `src/__init__.py`
-    - Create `src/loaders/__init__.py`
-    - Create `src/loaders/_helpers.py` with `save_diagnostics()` and `save_quality_report()` (HTML + MD)
-    - Create `src/validation/__init__.py`
-    - _Requirements: 7.5, 7.6_
-
-  - [x] 1.2 Define end-use and equipment mappings in `src/config.py`
-    - Define `END_USE_MAP` dictionary mapping equipment_type_code to end-use categories
-    - Define `DEFAULT_EFFICIENCY` dictionary by end-use category
-    - Define `USEFUL_LIFE` dictionary by end-use category
-    - Define `WEIBULL_BETA` dictionary with shape parameters by end-use category
-    - Define `DISTRICT_WEATHER_MAP` dictionary mapping district codes to weather station SiteIds
-    - _Requirements: 1.1, 1.4, 3.2_
-
-  - [x] 1.3 Define NW Natural proprietary file paths in `src/config.py`
-    - Define `NWN_DATA_DIR` pointing to `Data/NWNatural Data/`
-    - Define paths: `PREMISE_DATA`, `EQUIPMENT_DATA`, `EQUIPMENT_CODES`, `SEGMENT_DATA`
-    - Define paths: `BILLING_DATA`, `BILLING_DATA_SMALL`
-    - Define paths: `WEATHER_CALDAY`, `WEATHER_GASDAY`, `WATER_TEMP`, `PORTLAND_SNOW`
-    - _Requirements: 7.1, 7.2_
-
-  - [x] 1.4 Define tariff and rate file paths in `src/config.py`
-    - Define paths: `OR_RATES`, `OR_RATE_CASE_HISTORY`, `OR_WACOG_HISTORY`
-    - Define paths: `WA_RATES`, `WA_RATE_CASE_HISTORY`, `WA_WACOG_HISTORY`
-    - Define `OR_CURRENT_RATE` (1.41220) and `WA_CURRENT_RATE` (1.24164)
-    - _Requirements: 7.1, 7.3_
-
-  - [x] 1.5 Define external data source paths in `src/config.py`
-    - Define RBSA 2022 paths: `RBSA_2022_DIR`, `RBSA_2022_SITE_DETAIL`, `RBSA_2022_HVAC`, `RBSA_2022_WATER_HEATER`, `RBSA_2022_STOVE_OVEN`, `RBSA_2022_LAUNDRY`, `RBSA_2022_BUILDING_SHELL`
-    - Define ASHRAE paths: `ASHRAE_DIR`, `ASHRAE_OR_SERVICE_LIFE`, `ASHRAE_WA_SERVICE_LIFE`, `ASHRAE_OR_MAINTENANCE_COST`, `ASHRAE_WA_MAINTENANCE_COST`
-    - Define IRP/calibration paths: `IRP_LOAD_DECAY_FORECAST`, `LOAD_DECAY_DESCRIPTION`, `LOAD_DECAY_RECONSTRUCTED`, `LOAD_DECAY_SIMULATED`
-    - Define baseload/proxy paths: `BASELOAD_FACTORS_CSV`, `NW_ENERGY_PROXIES_CSV`, `IRP_CONTEXT`, `EQUIPMENT_LIFE_MATH`
-    - Define RBSA metering paths: `RBSAM_Y1_DIR`, `RBSAM_Y2_DIR`, `RBSAM_DATA_DICT`, `RBSA_2017_DIR`
-    - _Requirements: 3.1, 3.2, 8.3_
-
-  - [x] 1.6 Define API and Census constants in `src/config.py`
-    - Define `GBR_API_BASE_URL`, `GBR_API_KEY_ENV_VAR`
-    - Define Census constants: `CENSUS_API_BASE`, `CENSUS_ACS1_TEMPLATE`, `CENSUS_ACS5_TEMPLATE`, `CENSUS_B25034_GROUP`, `CENSUS_B25040_GROUP`, `CENSUS_B25024_GROUP`
-    - Define Census file paths: `NWN_SERVICE_TERRITORY_CSV`, `B25034_BACKUP_DIR`, `B25034_COUNTY_DIR`, `B25040_COUNTY_DIR`, `B25024_COUNTY_DIR`, `PSU_PROJECTION_DIR`
-    - Define WA OFM path: `OFM_HOUSING_XLSX`
-    - Define NOAA constants: `NOAA_NORMALS_DIR`, `NOAA_CDO_API_BASE`, `NOAA_CDO_TOKEN_ENV_VAR`, `ICAO_TO_GHCND`
-    - Define RECS constants: `RECS_DIR`, `RECS_2020_CSV`, `RECS_2015_CSV`, `RECS_2009_CSV`, `RECS_2005_CSV`, `RECS_PACIFIC_DIVISION`, `RECS_FUELHEAT_GAS`
-    - _Requirements: 2.4, 7.2, 7.4_
-
-  - [x] 1.7 Define simulation parameters in `src/config.py`
-    - Define `BASE_YEAR` (2025)
-    - Define `DEFAULT_BASE_TEMP` (65.0Â°F), `DEFAULT_HOT_WATER_TEMP` (120.0Â°F)
-    - Define `DEFAULT_COLD_WATER_TEMP` (55.0Â°F), `DEFAULT_DAILY_HOT_WATER_GALLONS` (64.0)
-    - Define `LOG_LEVEL`, `LOG_FORMAT`, `OUTPUT_DIR`
-    - _Requirements: 4.2_
-
-  - [x] 1.8 Write property test for config completeness with diagnostic output
-    - **Property 1: All equipment_type_codes in END_USE_MAP resolve to a valid end-use category string**
-    - Verify all END_USE_MAP values are non-empty strings
-    - Verify all DEFAULT_EFFICIENCY keys match END_USE_MAP values, and all values are in (0, 1]
-    - Verify all USEFUL_LIFE keys match END_USE_MAP values, and all values are positive integers
-    - Verify all DISTRICT_WEATHER_MAP values are valid ICAO station codes present in ICAO_TO_GHCND
-    - Verify all file path constants reference files that exist on disk (report missing as warnings)
-    - Output: `output/config_validation/config_completeness.html` and `.md` with pass/fail per check
-    - **Validates: Requirements 1.1, 1.4**
-
-- [x] 2. Implement data ingestion module
-  - [x] 2.1 Create `src/loaders/` package with individual data loaders (one file per data source)
-    - Each loader is a standalone script: `python -m src.loaders.<name>` loads data, prints summary, saves diagnostics to `output/loaders/`
-    - Shared helper `_helpers.py` provides `save_diagnostics(df, name)` for consistent output
-    - `data_ingestion.py` re-exports all loaders for backward compatibility
-    - Log warnings for missing or malformed rows
-    - _Requirements: 2.2, 2.4, 3.1, 3.2, 7.1, 7.2, 7.3, 7.4, 8.3_
-
-    - [x] 2.1.1 Core NW Natural data loaders (7 files in `src/loaders/`)
-      - `load_premise_data.py` â€” load and filter to active residential premises (custtype='R', status_code='AC')
-      - `load_equipment_data.py` â€” load equipment inventory CSV
-      - `load_segment_data.py` â€” load and filter segment data to residential customers
-      - `load_equipment_codes.py` â€” load equipment code lookup table
-      - `load_weather_data.py` â€” load daily weather CSV (CalDay or GasDay), parse dates
-      - `load_water_temperature.py` â€” load Bull Run water temperature CSV, parse dates
-      - `load_snow_data.py` â€” load Portland daily snow data (1985-2025)
-      - _Requirements: 2.2, 7.2_
-
-    - [x] 2.1.2 Billing and tariff data loaders (6 files in `src/loaders/`)
-      - `load_billing_data.py` â€” load billing_data_blinded.csv, parse utility_usage as therms (already in therms, not dollars), parse GL_revenue_date to year/month
-      - `load_or_rates.py` â€” load or_rates_oct_2025.csv. OR Schedule 2 = $1.41220/therm
-      - `load_wa_rates.py` â€” load wa_rates_nov_2025.csv. WA Schedule 2 = $1.24164/therm
-      - `load_wacog_history.py` â€” load or_wacog_history.csv / wa_wacog_history.csv
-      - `load_rate_case_history.py` â€” load or_rate_case_history.csv / wa_rate_case_history.csv
-      - `load_billing_to_therms.py` â€” utility_usage is already in therms; this loader validates and cleans therm values
-      - _Requirements: 7.1, 7.3_
-
-    - [x] 2.1.3 RBSA building stock data loaders (6 files in `src/loaders/`)
-      - `load_rbsa_site_detail.py` â€” load 2022 RBSA SiteDetail.csv, filter to NWN service territory
-      - `load_rbsa_hvac.py` â€” load Mechanical_HeatingAndCooling.csv
-      - `load_rbsa_water_heater.py` â€” load Mechanical_WaterHeater.csv
-      - `load_rbsa_distributions.py` â€” build_rbsa_distributions from site_detail + hvac + water_heater
-      - `load_rbsam_metering.py` â€” load RBSA sub-metered end-use data (~300MB TXT files), chunked reading
-      - `load_rbsa_2017.py` â€” load 2017 RBSA-II SiteDetail.csv for temporal comparison
-      - _Requirements: 3.1, 3.2, 7.4_
-
-    - [x] 2.1.4 ASHRAE equipment life and maintenance data loaders (3 files in `src/loaders/`)
-      - `load_ashrae_service_life.py` â€” load ASHRAE service life XLS for OR and WA
-      - `load_ashrae_maintenance_cost.py` â€” load ASHRAE maintenance cost XLS for OR and WA
-      - `load_useful_life_table.py` â€” build state-specific useful life lookup from ASHRAE data
-      - _Requirements: 3.2_
-
-    - [x] 2.1.5 IRP load decay and calibration data loaders (5 files in `src/loaders/`)
-      - `load_load_decay_forecast.py` â€” load NW Natural 2025 IRP 10-Year Load Decay Forecast
-      - `load_historical_upc.py` â€” load prior load decay data (reconstructed + simulated txt files)
-      - `load_baseload_factors.py` â€” load Baseload Consumption Factors.csv + calculate_site_baseload
-      - `load_nw_energy_proxies.py` â€” load nw_energy_proxies.csv (envelope UA, Weibull params, baseload)
-      - _Requirements: 8.3_
-
-    - [x] 2.1.6 Green Building Registry API integration (1 file in `src/loaders/`)
-      - `load_gbr_properties.py` â€” fetch_gbr_properties + build_gbr_building_profiles. Requires GBR_API_KEY env var
-      - _Requirements: 3.1_
-
-    - [x] 2.1.7 Census ACS housing data loaders (5 files in `src/loaders/`)
-      - `load_service_territory_fips.py` â€” load NW Natural Service Territory Census data.csv (16 counties)
-      - `load_census_b25034.py` â€” fetch Census ACS B25034 via API + build_vintage_distribution
-      - `load_b25034_county.py` â€” load offline B25034 county CSVs from Data/B25034-5y-county/
-      - `load_b25040_county.py` â€” load B25040 (House Heating Fuel) county CSVs
-      - `load_b25024_county.py` â€” load B25024 (Units in Structure) county CSVs
-      - _Requirements: 2.4, 7.4_
-
-    - [x] 2.1.8 Population and housing growth forecast loaders (2 files in `src/loaders/`)
-      - `load_psu_forecasts.py` â€” load PSU Population Research Center county forecasts (3 CSV format variants)
-      - `load_ofm_housing.py` â€” load WA OFM postcensal housing estimates from xlsx
-      - _Requirements: 2.4_
-
-    - [x] 2.1.9 NOAA climate normals and weather adjustment (1 file in `src/loaders/`)
-      - `load_noaa_normals.py` â€” load daily + monthly normals, compute_weather_adjustment. Replace -7777 with NaN
-      - _Requirements: 7.2_
-
-    - [x] 2.1.10 EIA RECS microdata loaders and benchmarks (1 file in `src/loaders/`)
-      - `load_recs_microdata.py` â€” load RECS CSV + build_recs_enduse_benchmarks. Handle column name differences across survey years
-      - _Requirements: 8.3_
-
-  - [x] 2.2 Implement `build_premise_equipment_table` join function
-    - Join premise, equipment, segment, and equipment_codes DataFrames on `blinded_id` and `equipment_type_code`
-    - Derive `end_use` column using `END_USE_MAP` from config
-    - Derive `efficiency` column using `DEFAULT_EFFICIENCY` where not available
-    - Derive `weather_station` column using `DISTRICT_WEATHER_MAP`
-    - Document assumptions for missing data as log warnings
-    - _Requirements: 1.4, 2.1, 3.1, 7.4, 8.1_
-
-  - [x] 2.3 Write data ingestion validation suite with diagnostic outputs
-    - All outputs saved to `output/data_quality/` as both HTML and Markdown (.md)
-    - **Property 2: Filtering preserves only active residential premises â€” output contains only custtype='R' and status_code='AC'**
-    - **Validates: Requirements 1.2, 7.1, 7.4**
-
-    - [x] 2.3.1 Per-loader data quality reports
-      - For each loader, generate an HTML + MD report with: row count, column dtypes, null counts per column, unique value counts, min/max/mean for numerics, top-10 value frequencies for categoricals
-      - Include filter pass rates (e.g. "72% of premises are active residential", "85% of equipment codes map to END_USE_MAP")
-      - Flag columns with >10% nulls as warnings, >50% as errors
-      - Output: `output/data_quality/{loader_name}_quality_report.html` and `.md`
-
-    - [x] 2.3.2 Cross-loader join audit
-      - Count blinded_ids in premises vs equipment vs segment vs billing â€” how many match, how many orphans in each direction
-      - Count equipment_type_codes that map to END_USE_MAP vs unmapped codes (list the unmapped ones)
-      - Count district_code_IRP values that map to DISTRICT_WEATHER_MAP vs unmapped
-      - Produce a join summary table: source, total_ids, matched_ids, orphan_ids, match_rate
-      - Output: `output/data_quality/join_audit.html` and `.md`
-
-    - [x] 2.3.3 Sample mismatches export
-      - Export CSV of rows that fail key validations: null end_use, zero/negative efficiency, missing weather_station, invalid billing therm values, missing blinded_id joins
-      - Include the reason for each flagged row
-      - Output: `output/data_quality/validation_failures.csv`
-
-    - [x] 2.3.4 Column coverage matrix
-      - For each NW Natural file (premise, equipment, segment, codes, billing, weather), list expected columns vs actual columns present
-      - Flag missing expected columns, unexpected extra columns
-      - Output: `output/data_quality/column_coverage.html` and `.md`
-
-    - [x] 2.3.5 Data freshness and date range check
-      - For each time-series file (weather, billing, WACOG, rate cases, water temp, snow), report min/max dates and total record count
-      - Flag files that don't extend to 2025 as potentially stale
-      - Output: `output/data_quality/date_ranges.html` and `.md`
-
-    - [x] 2.3.6 Distribution plots for key fields
-      - Histogram: equipment age distribution (from install year)
-      - Histogram: efficiency values by end-use category
-      - Histogram: billing utility_usage therms (log scale)
-      - Histogram: annual HDD by weather station
-      - Bar chart: premises by district_code_IRP
-      - Bar chart: equipment count by end_use category
-      - Bar chart: segment distribution (RESSF vs RESMF vs MOBILE)
-      - Pie chart: fuel type mix from RBSA HVAC data
-      - All saved as PNG + embedded in HTML/MD summary
-      - Output: `output/data_quality/distributions/` (PNGs) + `output/data_quality/distribution_summary.html` and `.md`
-
-  - [x] 2.4 Write join integrity validation suite with diagnostic outputs
-    - All outputs saved to `output/join_integrity/` as both HTML and Markdown (.md)
-    - **Property 3: Every row in premise_equipment_table has a non-null end_use category and a valid efficiency > 0**
-    - **Validates: Requirements 1.4, 3.1**
-
-- [x] 3. Checkpoint — Verify data ingestion
-  - Ensure all tests pass, ask the user if questions arise.
-  - Verify that `build_premise_equipment_table` produces a valid DataFrame from the actual CSV files in `Data/`.
-  - Verify each module file:
-    - **`src/config.py`**: All configuration constants defined (END_USE_MAP, DEFAULT_EFFICIENCY, USEFUL_LIFE, DISTRICT_WEATHER_MAP, file paths, API constants). Run property test 1 to validate END_USE_MAP completeness.
-    - **`src/data_ingestion.py`**: All CSV loading functions implemented and tested. Verify functions handle missing files gracefully and log warnings. Run property test 2 to validate filtering preserves only active residential premises. Run property test 3 to validate join integrity (non-null end_use, valid efficiency > 0).
-    - **`tests/test_config.py`**: Property test 1 passes — all equipment_type_codes in END_USE_MAP resolve to valid end-use categories.
-    - **`tests/test_data_ingestion.py`**: Property test 2 passes — filtering produces only custtype='R' and status_code='AC'. Property test 3 passes — every row has non-null end_use and efficiency > 0.
-    - **`tests/test_premise_equipment_join.py`**: Verify `build_premise_equipment_table` produces valid DataFrame with expected columns (blinded_id, equipment_type_code, end_use, efficiency, weather_station, fuel_type, etc.). Spot-check a few rows to confirm data integrity.
-    - **Data validation**: Verify that actual CSV files in `Data/NWNatural Data/` load without errors. Check for any data gaps or anomalies logged during ingestion. Confirm weather station assignments are correct for all districts. Confirm efficiency values are within expected ranges (0 < efficiency <= 1.0 for most equipment, or > 1.0 for heat pumps).
-    - **Integration check**: Run a quick end-to-end test loading all data files and building the premise-equipment table. Verify output row count matches expected number of active residential premises × equipment units per premise.
-    - [x] 2.4.1 Joined table quality report
-      - Build `premise_equipment_table` from all four source tables
-      - Generate HTML + MD report with: total row count, unique premises, unique equipment codes, column dtypes, null counts, value distributions for derived columns (end_use, efficiency, weather_station)
-      - Report join expansion factor (rows in joined table / unique premises)
-      - Output: `output/join_integrity/joined_table_quality_report.html` and `.md`
-
-    - [x] 2.4.2 End-use mapping completeness audit
-      - For every unique equipment_type_code in the joined table, show: code, mapped end_use (or UNMAPPED), row count, % of total
-      - Summarize: total mapped vs unmapped codes, total mapped vs unmapped rows
-      - List all unmapped codes with their equipment_class and description from equipment_codes
-      - Output: `output/join_integrity/enduse_mapping_audit.html` and `.md` + `enduse_mapping_detail.csv`
-
-    - [x] 2.4.3 Efficiency validation report
-      - For each end_use category, show: count, min/max/mean/median efficiency, % using default vs data-supplied efficiency
-      - Flag rows with efficiency <= 0 or > 1.0 (out of valid range)
-      - Flag rows where efficiency was filled from DEFAULT_EFFICIENCY (show how many per end_use)
-      - Histogram: efficiency distribution by end_use category (PNG)
-      - Output: `output/join_integrity/efficiency_validation.html` and `.md` + PNGs
-
-    - [x] 2.4.4 Weather station assignment audit
-      - For each district_code_IRP, show: district, assigned weather_station, premise count, % of total
-      - Flag districts with no weather station mapping
-      - Map visualization: premises by weather station (bar chart)
-      - Output: `output/join_integrity/weather_station_audit.html` and `.md`
-
-    - [x] 2.4.5 Join integrity summary dashboard
-      - Single-page HTML + MD combining all 2.4 checks into a pass/fail dashboard
-      - Property 3 check: % of rows with non-null end_use AND efficiency > 0 (target: 100%)
-      - Traffic light indicators: green (>95%), yellow (80-95%), red (<80%) for each check
-      - Links to detailed reports from 2.4.1-2.4.4
-      - Output: `output/join_integrity/join_integrity_dashboard.html` and `.md`
-
-  - [ ] 2.3.7 Create segment/subsegment/market relationship visualization on OpenStreetMap
-    - **Purpose**: Visualize how segment (RESSF, RESMF, MOBILE), subsegment (if available), and market (geographic/district) relate to each other
-  - [x] 2.3.7 Create segment/subsegment/market relationship visualization on OpenStreetMap with equipment profiles
-    - **Purpose**: Visualize how segment (RESSF, RESMF, MOBILE), subsegment (if available), and market (geographic/district) relate to each other, including detailed equipment profiles, appliance inventories, and age distributions
-    - Implement `visualize_segment_market_hierarchy()` in `src/visualization.py`
-    - Implement `generate_segment_profiles()` to compute detailed equipment and age statistics per segment/subsegment/market combination
-    - Generate hierarchical relationship diagram:
-      - Treemap: Segment → Subsegment → Market (color-coded by segment type)
-      - Sunburst chart: Same hierarchy with interactive drill-down
-      - Sankey diagram: Flow from segment → subsegment → market showing premise counts
-    - Generate detailed segment/subsegment/market profiles:
-      - For each segment (RESSF, RESMF, MOBILE):
-        * Average premise age (construction year)
-        * Average equipment age by end-use (space heating, water heating, cooking, drying, fireplace)
-        * Equipment type distribution (top 5 equipment types by count)
-        * Fuel type mix (% gas vs electric)
-        * Average efficiency by end-use
-        * Dominant building characteristics (vintage era, size proxy)
-      - For each subsegment (if available):
-        * Same metrics as segment level
-        * Comparison to parent segment
-      - For each market/district:
-        * Same metrics as segment level
-        * Geographic variation analysis
-    - Generate appliance inventory tables:
-      - Table 1: Equipment count by segment × end-use (rows=segments, columns=end-uses, values=count)
-      - Table 2: Equipment count by subsegment × end-use (if subsegments available)
-      - Table 3: Equipment count by market/district × end-use
-      - Table 4: Top 10 equipment types by count (with segment/subsegment/market breakdown)
-      - Table 5: Equipment age distribution by segment (histogram data: age bins vs count)
-    - Generate OpenStreetMap visualization:
-      - Base map: NW Natural service territory with county boundaries
-      - Hexbin aggregation: Premises grouped into hexagonal cells (7.5 km cell size)
-      - Color-coding: Each hexbin colored by dominant segment type (RESSF=blue, RESMF=red, MOBILE=green)
-      - Opacity: Intensity based on premise density within hexbin
-      - Popup: Hexbin shows:
-        * Segment breakdown (count and % for each type)
-        * Subsegment distribution (if available)
-        * Market/district info
-        * Average equipment age by end-use
-        * Top 3 equipment types in hexbin
-        * Average efficiency by end-use
-      - Layer control: Toggle between segment view, subsegment view, market/district view, equipment age view, efficiency view
-      - Marker overlay: District centroids with segment composition pie charts and equipment age indicators
-    - Generate comparison charts:
-      - Stacked bar: Segment distribution by market/district
-      - Stacked bar: Subsegment distribution by segment
-      - Heatmap: Segment × Market cross-tabulation (rows=segments, columns=markets, values=premise count)
-      - Box plot: Equipment age distribution by segment (showing median, quartiles, outliers)
-      - Box plot: Equipment age distribution by end-use (showing variation across segments)
-      - Violin plot: Equipment efficiency distribution by segment and end-use
-      - Scatter plot: Average equipment age vs average efficiency by segment/subsegment/market
-    - Export unaggregated premise-level data:
-      - CSV file: `segment_market_unaggregated_data.csv` with all premises and their segment, subsegment, market, equipment age, efficiency, end-use, appliance inventory, and geographic coordinates
-      - Parquet file: `segment_market_unaggregated_data.parquet` for efficient storage and querying
-      - Columns: blinded_id, segment, subsegment, market, district_code_IRP, latitude, longitude, premise_age, avg_equipment_age, avg_efficiency, dominant_end_use, top_3_equipment_types, premise_count_in_segment_market_combo, equipment_type_code, equipment_count_by_enduse_json
-      - Sorted by: segment, subsegment, market, blinded_id
-      - Enables: Custom analysis, filtering, and drill-down by users
-    - Generate segment/subsegment/market profile report (HTML + Markdown):
-      - Executive summary: Key statistics for each segment/subsegment/market
-      - Detailed profiles: For each combination, show:
-        * Premise count and % of total
-        * Average premise age (construction year)
-        * Equipment inventory by end-use (count and %)
-        * Top 5 equipment types with counts
-        * Average equipment age by end-use (with min/max range)
-        * Average efficiency by end-use
-        * Fuel type mix (% gas vs electric)
-        * Dominant building characteristics
-        * Comparison to system average
-      - Comparative analysis: Side-by-side comparison of segments, subsegments, markets
-      - Visualizations embedded: All charts and maps embedded in HTML report
-    - All visualizations, data exports, and reports saved to `output/segment_market_analysis/` directory
-    - Test verifies: map renders without errors, hexbins contain expected data, popups display correctly, layer controls work, unaggregated data files exist and contain all premises, profile statistics are accurate, all equipment types are represented
-    - _Requirements: 2.1, 2.2, 5.4, 13.1_tion pipeline
-  - All outputs saved to `output/checkpoint_ingestion/` as HTML + MD
-
-  - [x] 3.1 Pipeline readiness dashboard
-    - Check which of the 53 data sources loaded successfully vs missing/errored
-    - Compute overall readiness score (% of sources available)
-    - Traffic-light status per data source group (NW Natural, tariff, RBSA, Census, etc.)
-    - List blocking issues (sources required for simulation that are missing)
-    - Output: `output/checkpoint_ingestion/pipeline_readiness.html` and `.md`
-    - _Requirements: 7.4, 8.1_
-
-  - [x] 3.2 Data volume summary report
-    - For each loaded table: row count, column count, memory usage
-    - Expected vs actual row counts where known (e.g. ~500K premises, ~1M equipment)
-    - Flag tables with zero rows or unexpectedly low counts
-    - Output: `output/checkpoint_ingestion/data_volumes.html` and `.md`
-    - _Requirements: 7.1, 10.1_
-
-  - [x] 3.3 Premise-equipment table profile
-    - Run `build_premise_equipment_table` on actual data
-    - Report: total rows, unique premises, join expansion factor, end_use coverage %, efficiency coverage %
-    - Top-10 equipment types by count, top-10 districts by premise count
-    - Output: `output/checkpoint_ingestion/pet_profile.html` and `.md`
-    - _Requirements: 1.4, 2.1, 3.1_
-
-  - [x] 3.4 Service territory geographic coverage map
-    - Map of NW Natural service territory counties color-coded by premise count
-    - Weather station markers with district assignments
-    - Table: county, state, premise count, % of total, assigned weather station
-    - Output: `output/checkpoint_ingestion/service_territory_map.html` and `.md` (map as PNG)
-    - _Requirements: 2.2, 4.1_
-
-  - [x] 3.5 Equipment and vintage distribution charts
-    - Bar chart: equipment count by end-use category (space_heating, water_heating, cooking, drying, fireplace, other)
-    - Histogram: premise vintage (construction year) distribution by decade
-    - Stacked bar: equipment fuel type by end-use (gas vs electric)
-    - Treemap or sunburst: equipment types nested by end-use category
-    - Output: `output/checkpoint_ingestion/equipment_vintage_charts.html` and `.md` (PNGs embedded)
-    - _Requirements: 1.4, 3.1_
-
-  - [x] 3.6 Cross-validation against external benchmarks
-    - Compare model premise counts by county vs Census B25034 housing unit counts (bar chart, side-by-side)
-    - Compare model gas heating share by county vs Census B25040 utility gas share (scatter plot)
-    - Compare model end-use consumption split vs RECS 2020 Pacific division benchmarks (stacked bar)
-    - Report discrepancies > 10% as warnings
-    - Output: `output/checkpoint_ingestion/cross_validation.html` and `.md` (PNGs embedded)
-    - _Requirements: 5.3, 10.2, 10.3_
-
-- [x] 4. Implement housing stock module
-
-  - [x] 4.1 Create `src/housing_stock.py` â€” HousingStock dataclass
-    - Define `HousingStock` dataclass: year, premises DataFrame, total_units, units_by_segment, units_by_district
-    - Implement `build_baseline_stock(premise_equipment, base_year)`
-    - Compute `total_units`, `units_by_segment`, `units_by_district` from unique blinded_ids
-    - _Requirements: 2.1, 2.2, 5.4_
-
-  - [x] 4.2 Implement `project_stock` for future year projection
-    - Apply housing growth rate from scenario config to project total units
-    - Simulate new construction additions proportional to existing segment distribution
-    - _Requirements: 2.3, 6.1_
-
-  - [x] 4.3 Property test: housing stock projection
-    - **Property 4: Projected total_units = baseline Ã— (1 + growth_rate)^(years), within rounding tolerance**
-    - Line graph: baseline vs projected total units over time
-    - Bar chart: segment distribution comparison (baseline vs projected)
-    - Bar chart: district distribution comparison (baseline vs projected)
-    - Output: `output/housing_stock_projections/property4_results.html` and `.md` (PNGs embedded)
-    - **Validates: Requirements 2.3, 6.3**
-
-
-- [x] 5. Implement equipment module
-
-  - [x] 5.1 Create `src/equipment.py` — EquipmentProfile and Weibull functions
-    - Define `EquipmentProfile` dataclass: equipment_type_code, end_use, efficiency, install_year, useful_life, fuel_type
-    - Implement `weibull_survival(t, eta, beta)` — S(t) = exp(-(t/eta)^beta)
-    - Implement `median_to_eta(median_life, beta)`
-    - Implement `replacement_probability(age, eta, beta)`
-    - Implement `build_equipment_inventory(premise_equipment)`
-    - _Requirements: 3.1, 3.2_
-
-  - [x] 5.2 Implement `apply_replacements` for equipment transitions
-    - Compute replacement probability using Weibull survival model
-    - Use probabilistic replacement (not deterministic age cutoff)
-    - Replace units based on scenario adoption rates
-    - Apply electrification switching rates (gas → electric/heat pump)
-    - Apply efficiency improvements from scenario config
-    - _Requirements: 3.3, 3.4, 6.1_
-
-  - [x] 5.3 Property test: Weibull survival monotonicity
-    - **Property 5: S(t) <= S(t-1) for all t > 0, and S(0) = 1.0**
-    - **Property 5b: replacement_probability is always in [0, 1]**
-    - Line graph: Weibull survival curves by end-use category
-    - Line graph: replacement probability by equipment age per end-use
-    - Scatter: equipment age distribution with replacement probability overlay
-    - Output: `output/equipment_replacement/property5_results.html` and `.md`
-    - **Validates: Requirements 3.3**
-
-  - [x] 5.4 Property test: fuel switching conservation
-    - **Property 6: Total equipment count before and after apply_replacements is equal**
-    - Pie chart: fuel type split before vs after replacements
-    - Bar chart: fuel switching volume by end-use category
-    - Stacked bar: equipment count by end-use before vs after
-    - Output: `output/fuel_switching/property6_results.html` and `.md`
-    - **Validates: Requirements 3.3, 3.4**
-
-- [x] 6. Implement weather processing module
-
-  - [x] 6.1 Create `src/weather.py` — HDD/CDD and station mapping
-    - Implement `compute_hdd(daily_temps, base_temp=65.0)`
-    - Implement `compute_cdd(daily_temps, base_temp=65.0)`
-    - Implement `compute_annual_hdd(weather_df, site_id, year)`
-    - Implement `compute_water_heating_delta(water_temp_df, target_temp=120.0, year=None)`
-    - Implement `assign_weather_station(district_code)`
-    - _Requirements: 4.1, 7.2_
-
-  - [x] 6.2 Property test: HDD computation
-    - **Property 7: HDD >= 0, exactly one of HDD/CDD is positive (or both zero at base temp)**
-    - Line graph: daily HDD and CDD by day of year for KPDX
-    - Heatmap: monthly average HDD by station
-    - Box plot: annual HDD distribution across all 11 stations
-    - Map: weather stations on OpenStreetMap with HDD color coding
-    - Output: `output/weather_analysis/property7_results.html` and `.md`
-    - **Validates: Requirements 4.1, 4.2**
-    - NOTE: Water heating delta-T testing is excluded from current scope (planned for future work)
-
-- [x] 7. Checkpoint — Verify core model components
-  - All outputs saved to `output/checkpoint_core/` as HTML + MD
-
-  - [x] 7.1 Housing stock verification report
-    - Run `build_baseline_stock` on actual data
-    - Report total units, segment split, district split
-    - Compare premise counts vs Census B25034 county totals
-    - Bar chart: premises by segment
-    - Output: `output/checkpoint_core/housing_verification.html` and `.md`
-    - _Requirements: 2.1, 2.2_
-
-  - [x] 7.2 Equipment module verification report
-    - Run `build_equipment_inventory` on actual data
-    - Report equipment counts by end-use, Weibull params per end-use
-    - Histogram: equipment age distribution
-    - Output: `output/checkpoint_core/equipment_verification.html` and `.md`
-    - _Requirements: 3.1, 3.2_
-
-  - [x] 7.3 Weather module verification report
-    - Compute annual HDD for all 11 stations for 2024
-    - Compare to NOAA normals, report weather adjustment factors
-    - Heatmap: monthly HDD by station
-    - Output: `output/checkpoint_core/weather_verification.html` and `.md`
-    - _Requirements: 4.1, 7.2_
-
-  - [x] 7.4 Zone geographic verification map
-    - Load all zone GeoJSON files from `public/zones/`
-    - Generate interactive OpenStreetMap visualization using folium
-    - Draw zone boundaries as colored polygons on map
-    - Add zone labels and metadata popups
-    - Color-code zones by region (NW, SW, Central, NE, Eastern)
-    - Include legend showing all 10 zones
-    - Add premise density heatmap overlay (if data available)
-    - Export as HTML: `output/checkpoint_core/zone_verification_map.html`
-    - Verify all zones cover service territory with no gaps
-    - Output: `output/checkpoint_core/zone_verification_map.html` and `.md`
-    - _Requirements: 2.2, 4.1, 13.1_
-
-- [x] 8. Implement end-use energy simulation module
-
-  - [x] 8.1 Create `src/simulation.py` — per-end-use functions
-    - Implement `simulate_space_heating(equipment, annual_hdd, heating_factor)`
-    - _Requirements: 4.1, 4.2, 4.4_
-    - NOTE: Water heating, cooking, drying simulation functions are excluded from current scope (planned for future work)
-    - NOTE: Fireplace/decorative and other/miscellaneous end-uses are also excluded from current scope
-
-  - [x] 8.2 Implement `simulate_all_end_uses` orchestrator
-    - Dispatch to simulation function per premise based on end_use
-    - Collect weather data (HDD, delta-T) per premise's weather station
-    - Return DataFrame: blinded_id, end_use, annual_therms, efficiency, year
-    - Maintain separation between end uses (no double-counting)
-    - _Requirements: 1.4, 4.2, 4.3, 5.4_
-
-  - [x] 8.3 Property test: simulation non-negativity
-    - **Property 9: All simulated annual_therms >= 0**
-    - Histogram: annual therms distribution by end-use (space heating only)
-    - Box plot: annual therms by end-use (median, quartiles)
-    - Stacked bar: average therms by end-use and vintage era
-    - Map: average therms per customer by district (choropleth)
-    - Output: `output/simulation/property9_results.html` and `.md`
-    - **Validates: Requirements 4.2**
-    - NOTE: Water heating, cooking, drying, fireplace, and other end-uses are excluded from current scope
-
-  - [x] 8.4 Property test: efficiency impact monotonicity
-    - **Property 10: Higher efficiency → lower or equal therms**
-    - Line graph: therms vs efficiency by end-use
-    - Bar chart: efficiency improvement potential by end-use
-    - Scatter: equipment age vs efficiency rating
-    - Output: `output/simulation/property10_results.html` and `.md`
-    - **Validates: Requirements 4.2, 3.2**
-
-- [x] 9. Implement aggregation and output module
-
-  - [x] 9.1 Create `src/aggregation.py` — rollup functions
-    - Implement `aggregate_by_end_use(simulation_results)`
-    - Implement `aggregate_by_segment(simulation_results, segments)`
-    - Implement `aggregate_by_district(simulation_results, premises)`
-    - Implement `compute_use_per_customer(total_demand, customer_count)`
-    - Implement `compare_to_irp_forecast(model_upc, irp_forecast)`
-    - Implement `export_results(results, output_path, format='csv')`
-    - _Requirements: 5.1, 5.2, 5.3, 5.4, 9.1_
-
-  - [x] 9.2 Property test: aggregation conservation
-    - **Property 11: Sum across end uses = total demand (no therms lost/created)**
-    - Bar chart: total demand by aggregation level — all should match
-    - Waterfall: end-use contributions summing to total
-    - Output: `output/aggregation/property11_results.html` and `.md`
-    - **Validates: Requirements 5.1, 5.4**
-
-  - [x] 9.3 Property test: use-per-customer
-    - **Property 12: UPC = total / count for count > 0, handles count == 0**
-    - Line graph: model UPC vs IRP forecast UPC (2025-2035)
-    - Bar chart: UPC by vintage era vs anchors (820/720/650)
-    - Output: `output/aggregation/property12_results.html` and `.md`
-    - **Validates: Requirements 5.2**
-
-- [x] 10. Checkpoint — Verify simulation and aggregation
-  - All outputs saved to `output/checkpoint_simulation/` as HTML + MD
-
-  - [x] 10.1 Simulation results summary
-    - Run baseline simulation on actual data
-    - Report: total demand, UPC, demand by end-use (space heating only) and segment
-    - Stacked bar: end-use composition of total demand (space heating only)
-    - Output: `output/checkpoint_simulation/simulation_summary.html` and `.md`
-    - _Requirements: 5.1, 10.1_
-    - NOTE: Water heating, cooking, and drying are excluded from current scope
-
-  - [x] 10.2 Model vs IRP comparison
-    - Compare model UPC to IRP 10-year forecast
-    - Line graph: model UPC vs IRP UPC (2025-2035)
-    - Report: year-by-year difference and % deviation
-    - Output: `output/checkpoint_simulation/irp_comparison.html` and `.md`
-    - _Requirements: 10.2, 10.3_
-
-  - [x] 10.3 Billing calibration check
-    - Compare simulated vs billing-derived therms per premise
-    - Scatter: simulated vs billed therms (with 1:1 line)
-    - Report: MAE, mean bias, R²
-    - Output: `output/checkpoint_simulation/billing_calibration.html` and `.md`
-    - _Requirements: 7.1, 10.2_
-
-- [x] 11. Implement scenario management module
-
-  - [x] 11.1 Create `src/scenarios.py` — ScenarioConfig and validation
-    - Define `ScenarioConfig` dataclass: name, base_year, forecast_horizon, housing_growth_rate, electrification_rate, efficiency_improvement, weather_assumption
-    - Implement `validate_scenario(config)`
-    - _Requirements: 6.1, 6.4, 8.1_
-
-  - [x] 11.2 Implement `run_scenario` pipeline orchestrator
-    - Load base data, build baseline housing stock
-    - For each year: project stock, apply replacements, simulate, aggregate
-    - Store per-year results with scenario_name label
-    - Log significant events
-    - _Requirements: 6.2, 6.3, 8.2_
+    - Create `src/__init__.py`, `src/loaders/__init__.py`, `src/validation/__init__.py`
+    - Create `src/loaders/_helpers.py` with `save_diagnostics(df, name)` writing HTML + MD to `output/loaders/`
+    - _Requirements: 7, 13_
+
+  - [x] 1.2 Define end-use mappings in `src/config.py`
+    - Define `END_USE_MAP` mapping all equipment_type_codes to end-use categories
+    - Define `DEFAULT_EFFICIENCY`, `USEFUL_LIFE`, `WEIBULL_BETA` by end-use category
+    - Define `DISTRICT_WEATHER_MAP` mapping district_code_IRP to ICAO weather station codes
+    - Define `VINTAGE_HEATING_MULTIPLIER` and `SEGMENT_HEATING_MULTIPLIER`
+    - _Requirements: 1, 4_
+
+  - [x] 1.3 Define all file paths and constants in `src/config.py`
+    - NW Natural data paths: `PREMISE_DATA`, `EQUIPMENT_DATA`, `EQUIPMENT_CODES`, `SEGMENT_DATA`, `WEATHER_CALDAY`, `WATER_TEMP`, `BILLING_DATA`, `PORTLAND_SNOW`
+    - Tariff paths: `OR_RATES`, `WA_RATES`, `OR_WACOG_HISTORY`, `WA_WACOG_HISTORY`, `OR_RATE_CASE_HISTORY`, `WA_RATE_CASE_HISTORY`
+    - External data paths: RBSA 2022, RBSA 2017, ASHRAE, IRP load decay, baseload factors, NW energy proxies, Census, PSU, OFM, NOAA, RECS
+    - Simulation constants: `BASE_YEAR`, `DEFAULT_BASE_TEMP`, `DEFAULT_HOT_WATER_TEMP`, `OUTPUT_DIR`
+    - _Requirements: 7_
+
+---
+
+- [x] 2. Data Loaders — NW Natural Core Data
+
+  - [x] 2.1 Implement NW Natural premise and equipment loaders
+    - `load_premise_data.py` — filter to active residential (`custtype='R'`, `status_code='AC'`)
+    - `load_equipment_data.py` — load equipment inventory CSV
+    - `load_segment_data.py` — load and filter segment data to residential customers
+    - `load_equipment_codes.py` — load equipment code lookup table
+    - _Requirements: 1, 7_
+
+  - [x] 2.2 Implement weather and environmental data loaders
+    - `load_weather_data.py` — load daily CalDay weather CSV, parse dates, normalize column names
+    - `load_water_temperature.py` — load Bull Run water temperature CSV
+    - `load_snow_data.py` — load Portland daily snow data (1985–2025)
+    - _Requirements: 4, 7_
+
+  - [x] 2.3 Implement billing and tariff data loaders
+    - `load_billing_data.py` — load billing CSV, parse `utility_usage` as therms
+    - `load_billing_to_therms.py` — validate and clean therm values
+    - `load_or_rates.py`, `load_wa_rates.py` — current rate schedules
+    - `load_wacog_history.py`, `load_rate_case_history.py` — historical rate data
+    - _Requirements: 7_
+
+---
+
+- [x] 3. Data Loaders — External Reference Data
+
+  - [x] 3.1 Implement RBSA building stock loaders
+    - `load_rbsa_site_detail.py` — 2022 RBSA SiteDetail.csv
+    - `load_rbsa_hvac.py` — Mechanical_HeatingAndCooling.csv
+    - `load_rbsa_water_heater.py` — Mechanical_WaterHeater.csv
+    - `load_rbsa_distributions.py` — `build_rbsa_distributions()` from site_detail + hvac + water_heater
+    - `load_rbsa_2017.py` — 2017 RBSA-II SiteDetail.csv for temporal comparison
+    - `load_rbsam_metering.py` — stub loader for future RBSA sub-metered data
+    - _Requirements: 7_
+
+  - [x] 3.2 Implement ASHRAE equipment life loaders
+    - `load_ashrae_service_life.py` — load OR and WA service life XLS files
+    - `load_ashrae_maintenance_cost.py` — load OR and WA maintenance cost XLS files
+    - `load_useful_life_table.py` — `build_useful_life_table()` returning state-specific useful life lookup
+    - _Requirements: 3, 7_
+
+  - [x] 3.3 Implement IRP calibration data loaders
+    - `load_load_decay_forecast.py` — NW Natural 2025 IRP 10-Year Load Decay Forecast
+    - `load_historical_upc.py` — historical UPC from reconstructed and simulated txt files
+    - `load_baseload_factors.py` — Baseload Consumption Factors.csv + `calculate_site_baseload()`
+    - `load_nw_energy_proxies.py` — nw_energy_proxies.csv (envelope UA, Weibull params, baseload)
+    - _Requirements: 10_
+
+  - [x] 3.4 Implement Census ACS data loaders
+    - `load_service_territory_fips.py` — NW Natural Service Territory Census data.csv (16 counties)
+    - `load_census_b25034.py` — Census API fetch + `build_vintage_distribution()`
+    - `load_b25034_county.py` — offline B25034 county CSVs (2009–2023)
+    - `load_b25040_county.py` — B25040 House Heating Fuel county CSVs
+    - `load_b25024_county.py` — B25024 Units in Structure county CSVs
+    - _Requirements: 9_
+
+  - [x] 3.5 Implement population and housing growth loaders
+    - `load_psu_forecasts.py` — PSU Population Research Center county forecasts (3 CSV format variants)
+    - `load_ofm_housing.py` — WA OFM postcensal housing estimates from xlsx
+    - _Requirements: 2, 9_
+
+  - [x] 3.6 Implement NOAA and RECS loaders
+    - `load_noaa_normals.py` — daily + monthly normals, `compute_weather_adjustment()`, replace -7777 with NaN
+    - `load_recs_microdata.py` — RECS CSV loader + `build_recs_enduse_benchmarks()` for 2005/2009/2015/2020
+    - `load_gbr_properties.py` — GBR API stub (requires `GBR_API_KEY` env var)
+    - _Requirements: 4, 9_
+
+---
+
+- [x] 4. Data Ingestion and Join
+
+  - [x] 4.1 Implement `build_premise_equipment_table` in `src/data_ingestion.py`
+    - Join premise, equipment, segment, and equipment_codes on `blinded_id` and `equipment_type_code`
+    - Derive `end_use` via `END_USE_MAP`, `efficiency` via `DEFAULT_EFFICIENCY`, `weather_station` via `DISTRICT_WEATHER_MAP`
+    - Log warnings for unmapped equipment codes, missing weather station assignments, zero efficiency
+    - _Requirements: 1, 7_
+
+  - [x] 4.2 Re-export all loaders from `src/data_ingestion.py`
+    - All individual loaders importable from `data_ingestion` for backward compatibility
+    - _Requirements: 7_
+
+---
+
+- [x] 5. Data Validation and Quality Reporting
+
+  - [x] 5.1 Implement per-loader data quality reports
+    - For each loader: row count, column dtypes, null counts, unique values, min/max/mean, top-10 frequencies
+    - Flag columns with >10% nulls as warnings, >50% as errors
+    - Output: `output/data_quality/{loader_name}_quality_report.html` and `.md`
+    - _Requirements: 8_
+
+  - [x] 5.2 Implement cross-loader join audit
+    - Count blinded_ids in premises vs equipment vs segment vs billing — match rates and orphan counts
+    - Count equipment_type_codes mapped vs unmapped in END_USE_MAP
+    - Count district_code_IRP values mapped vs unmapped in DISTRICT_WEATHER_MAP
+    - Output: `output/data_quality/join_audit.html` and `.md`
+    - _Requirements: 8_
+
+  - [x] 5.3 Implement join integrity dashboard
+    - Build premise_equipment_table and validate: end_use coverage, efficiency > 0, weather_station assigned
+    - Traffic-light indicators: green (>95%), yellow (80–95%), red (<80%)
+    - Output: `output/join_integrity/join_integrity_dashboard.html` and `.md`
+    - _Requirements: 8_
+
+  - [x] 5.4 Implement distribution plots for key fields
+    - Histograms: equipment age, efficiency by end-use, billing therms (log scale), annual HDD by station
+    - Bar charts: premises by district, equipment count by end-use, segment distribution
+    - Output: `output/data_quality/distributions/` (PNGs) + `output/data_quality/distribution_summary.html`
+    - _Requirements: 8_
+
+  - [x] 5.5 Implement validation modules in `src/validation/`
+    - `data_quality.py` — data quality checks and reporting
+    - `join_integrity.py` — join integrity validation
+    - `range_checking.py` — value range validation
+    - `billing_calibration.py` — billing data calibration checks
+    - `nwn_data_validation.py` — NW Natural data-specific validation
+    - `validation_report.py` — consolidated validation report generation
+    - `final_dashboard.py` — final validation dashboard
+    - `metadata_and_limitations.py` — model metadata and limitations documentation
+    - _Requirements: 8, 13_
+
+---
+
+- [x] 6. Housing Stock Module
+
+  - [x] 6.1 Implement `HousingStock` dataclass in `src/housing_stock.py`
+    - Fields: `year`, `premises` DataFrame, `total_units`, `units_by_segment`, `units_by_district`
+    - `build_baseline_stock(premise_equipment, base_year)` — construct from premise-equipment data
+    - _Requirements: 2_
+
+  - [x] 6.2 Implement `project_stock` for future year projection
+    - Apply `housing_growth_rate` from scenario config (scalar or curve via `parameter_curves.py`)
+    - Simulate new construction proportional to existing segment distribution
+    - _Requirements: 2_
+
+  - [x] 6.3 Implement Census-driven SF/MF segment shift projection
+    - `census_integration.py`: `load_b25024_segment_trend()`, `compute_segment_shift_rates()`, `project_segment_shares()`
+    - Apply historical B25024 SF→MF shift rates to project segment composition over forecast horizon
+    - _Requirements: 2, 9_
+
+  - [x] 6.4 Property test: housing stock growth
+    - **Property: projected `total_units = baseline × (1 + growth_rate)^years` within rounding tolerance**
+    - Output: `output/housing_stock_projections/property_growth_results.html` and `.md`
+    - _Requirements: 2, 12_
+
+---
+
+- [x] 7. Equipment Module
+
+  - [x] 7.1 Implement `EquipmentProfile` dataclass and Weibull functions in `src/equipment.py`
+    - `EquipmentProfile`: `equipment_type_code`, `end_use`, `efficiency`, `install_year`, `useful_life`, `fuel_type`
+    - `weibull_survival(t, eta, beta)` — S(t) = exp(-(t/eta)^beta)
+    - `median_to_eta(median_life, beta)` — convert ASHRAE median life to Weibull scale parameter
+    - `replacement_probability(age, eta, beta)` — conditional failure probability at age t
+    - _Requirements: 3_
+
+  - [x] 7.2 Implement `build_equipment_inventory`
+    - Build inventory with derived attributes from premise-equipment table
+    - Use ASHRAE service life data (state-specific OR/WA) when available, fall back to `USEFUL_LIFE` defaults
+    - _Requirements: 3_
+
+  - [x] 7.3 Implement `apply_replacements` for equipment transitions
+    - Probabilistic replacement using Weibull survival model each year
+    - Apply scenario electrification switching rates (gas → electric/heat pump) at replacement time
+    - Apply scenario efficiency improvements to newly installed equipment
+    - _Requirements: 3_
+
+  - [x] 7.4 Property test: Weibull survival monotonicity
+    - **Property: S(t) <= S(t-1) for all t > 0, and S(0) = 1.0**
+    - **Property: replacement_probability is always in [0, 1]**
+    - Output: `output/equipment_replacement/property_weibull_results.html` and `.md`
+    - _Requirements: 3, 12_
+
+  - [x] 7.5 Property test: fuel switching conservation
+    - **Property: total equipment count before and after `apply_replacements` is equal**
+    - Output: `output/equipment_replacement/property_fuel_switching_results.html` and `.md`
+    - _Requirements: 3, 12_
+
+---
+
+- [x] 8. Weather Module
+
+  - [x] 8.1 Implement HDD calculation in `src/weather.py`
+    - `compute_hdd(daily_temps, base_temp=65.0)` — HDD from daily average temperatures
+    - `compute_cdd(daily_temps, base_temp=65.0)` — CDD from daily average temperatures
+    - `compute_annual_hdd(weather_df, site_id, year)` — total annual HDD for a station and year
+    - _Requirements: 4_
+
+  - [x] 8.2 Implement weather station assignment and normalization
+    - `assign_weather_station(district_code)` — map district to ICAO station via `DISTRICT_WEATHER_MAP`
+    - `compute_water_heating_delta(water_temp_df, target_temp=120.0)` — temperature differential for water heating
+    - Load NOAA 30-year Climate Normals and compute weather adjustment factor (`actual_HDD / normal_HDD`)
+    - _Requirements: 4_
+
+  - [x] 8.3 Property test: weather normalization
+    - **Property: weather adjustment factor > 0 for all stations with valid normal HDD**
+    - **Property: HDD is non-negative for all days**
+    - Output: `output/weather_validation/property_weather_results.html` and `.md`
+    - _Requirements: 4, 12_
+
+---
+
+- [x] 9. Simulation Module
+
+  - [x] 9.1 Implement space heating simulation in `src/simulation.py`
+    - `simulate_space_heating(equipment, annual_hdd, heating_factor)` — annual therms per premise
+    - Apply `VINTAGE_HEATING_MULTIPLIER` and `SEGMENT_HEATING_MULTIPLIER` from config
+    - Formula: `HDD × heating_factor × vintage_multiplier × segment_multiplier / efficiency`
+    - _Requirements: 4_
+
+  - [x] 9.2 Implement full end-use simulation runner
+    - `simulate_all_end_uses(premise_equipment, weather_data, water_temp_data, year, scenario)` — run all end-uses for all premises in a year
+    - Support `end_use_scope` parameter to limit simulation to specific end-uses
+    - Support `max_premises` parameter for development/testing with a subset
+    - Support `vectorized` parameter for vectorized vs row-by-row execution
+    - _Requirements: 4, 6_
+
+  - [x] 9.3 Implement checkpoint simulation in `src/checkpoint_simulation.py`
+    - Save intermediate simulation results to disk at configurable checkpoints
+    - Resume from checkpoint if simulation is interrupted
+    - _Requirements: 4_
+
+  - [x] 9.4 Property test: simulation non-negativity
+    - **Property: all `total_therms` values in simulation output are >= 0**
+    - **Property: UPC is non-negative for all years**
+    - Output: `output/simulation_validation/property_nonneg_results.html` and `.md`
+    - _Requirements: 4, 12_
+
+---
+
+- [x] 10. Aggregation Module
+
+  - [x] 10.1 Implement demand aggregation in `src/aggregation.py`
+    - `aggregate_by_end_use(simulation_results)` — total therms by end-use and year
+    - `aggregate_by_segment(simulation_results, segments)` — total therms by segment and year
+    - `aggregate_by_district(simulation_results, premises)` — total therms by district and year
+    - `compute_use_per_customer(total_demand, customer_count)` — UPC calculation
+    - _Requirements: 5_
+
+  - [x] 10.2 Implement IRP comparison
+    - `compare_to_irp_forecast(model_upc, irp_forecast)` — compare model UPC vs IRP load decay forecast
+    - Return DataFrame with: `year`, `model_upc`, `irp_upc`, `diff_therms`, `diff_pct`
+    - _Requirements: 5, 10_
+
+  - [x] 10.3 Implement result export
+    - `export_results(results, output_path, format='csv')` — export to CSV or JSON
+    - _Requirements: 5_
+
+---
+
+- [x] 11. Scenario Module
+
+  - [x] 11.1 Implement `ScenarioConfig` dataclass in `src/scenarios.py`
+    - Fields: `name`, `base_year`, `forecast_horizon`, `housing_growth_rate`, `electrification_rate`, `efficiency_improvement`, `weather_assumption`, `initial_gas_pct`, `use_recs_ratios`, `end_use_scope`, `max_premises`, `vectorized`
+    - `from_dict(data)` classmethod for loading from JSON
+    - _Requirements: 6_
+
+  - [x] 11.2 Implement `validate_scenario` and `run_scenario`
+    - `validate_scenario(config)` — validate parameter ranges and combinations, return list of errors
+    - `run_scenario(config, base_data)` — orchestrate full pipeline for one scenario, return (results_df, metadata)
+    - _Requirements: 6_
 
   - [x] 11.3 Implement `compare_scenarios`
-    - Merge results from multiple runs into comparison DataFrame
-    - Columns: year, end_use, scenario_name, total_therms, use_per_customer
-    - _Requirements: 6.2, 9.4_
+    - `compare_scenarios(results)` — side-by-side comparison of multiple scenario results
+    - _Requirements: 6_
 
-  - [x] 11.4 Property test: scenario determinism
-    - **Property 13: Same config twice → identical results**
-    - Table: side-by-side comparison of two runs
-    - Report: max absolute difference (should be 0)
-    - Output: `output/scenarios/property13_results.html` and `.md`
-    - **Validates: Requirements 6.2, 6.3**
+  - [x] 11.4 Implement `src/parameter_curves.py`
+    - `resolve(param, year, default)` — resolve scalar or year-indexed curve to a value for a given year
+    - Support linear interpolation between defined years
+    - _Requirements: 6_
 
-  - [x] 11.5 Property test: scenario validation
-    - **Property 14: validate_scenario warns for rates outside [0,1] and horizon <= 0**
-    - Table: test cases with expected vs actual results
-    - Output: `output/scenarios/property14_results.html` and `.md`
-    - **Validates: Requirements 6.4**
+  - [x] 11.5 Property test: scenario output consistency
+    - **Property: all `total_therms` values are >= 0 across all scenarios**
+    - **Property: UPC decreases monotonically under electrification scenarios (given constant housing stock)**
+    - Output: `output/scenario_validation/property_scenario_results.html` and `.md`
+    - _Requirements: 6, 12_
 
-- [x] 12. Implement CLI entry point
+---
 
-  - [x] 12.1 Create `src/main.py` as CLI entry point
-    - Parse args: scenario config path, output dir, --baseline-only, --compare
-    - Wire pipeline: config → ingest → stock → simulate → aggregate → export
-    - Print summary statistics to stdout
-    - _Requirements: 8.2, 9.1, 9.2_
+- [x] 12. Census and RECS Integration
 
-  - [x] 12.2 Create default scenario configs
-    - Create `scenarios/baseline.json` with reference case parameters
-    - Create `scenarios/high_electrification.json` for demonstration
-    - Document parameters with inline comments
-    - _Requirements: 6.1, 8.1_
+  - [x] 12.1 Implement `src/census_integration.py`
+    - `load_census_distributions()` — load B25034, B25040, B25024 county data into a dict
+    - `enrich_premise_equipment(premise_equipment, census)` — add Census-derived vintage and segment attributes
+    - `export_census_summary(census, output_dir)` — write Census summary CSVs to scenario output folder
+    - `load_b25024_segment_trend()` — load B25024 time series for SF/MF shift analysis
+    - `compute_segment_shift_rates(b25024_trend)` — compute annual SF→MF shift rates from Census data
+    - `project_segment_shares(base_sf_pct, base_mf_pct, shift_rates, horizon)` — project segment shares forward
+    - _Requirements: 9_
 
-  - [x] 12.3 Property test: full pipeline integration
-    - **Test: load → stock → simulate → aggregate → export produces valid CSV**
-    - Verify output has expected columns and non-empty rows
-    - Report: row count, column list, sample values
-    - Output: `output/integration/pipeline_test.html` and `.md`
-    - **Validates: Requirements 5.1, 9.1, 10.2**
+  - [x] 12.2 Implement `src/recs_integration.py`
+    - `load_recs_enduse_trend()` — load RECS microdata for 2005, 2009, 2015, 2020 and compute end-use shares
+    - `compute_non_heating_ratios(recs_trend)` — compute non-heating end-use ratios relative to space heating
+    - `export_recs_summary(recs_trend, output_dir)` — write RECS summary CSV to scenario output folder
+    - _Requirements: 9_
 
-- [x] 13. Implement validation and limitation reporting
+---
 
-  - [x] 13.1 Billing-based calibration
-    - Load billing data and build historical rate table
-    - Use billing therms directly (utility_usage is already in therms)
-    - Compare simulated vs billing-derived therms per premise
-    - Compute MAE, mean bias, R²
-    - Flag premises with divergence > threshold
-    - _Requirements: 7.1, 10.2, 10.3_
+- [x] 13. Calibration Module
 
-  - [x] 13.2 Range-checking and IRP comparison
-    - Flag results outside expected ranges
-    - Compare model UPC vs IRP 10-year forecast
-    - Compare vintage-cohort UPC vs era anchors (820/720/650)
-    - Log and report discrepancies
-    - _Requirements: 10.1, 10.2, 10.3, 10.4_
+  - [x] 13.1 Implement `src/calibration.py`
+    - Load three-era historical UPC framework (pre-2010, 2011–2019, 2020+) from IRP data files
+    - `calibrate_heating_factor(model_upc, target_upc)` — adjust heating_factor to align model UPC with observed UPC
+    - Report calibration residuals (model UPC vs IRP UPC) for each year
+    - _Requirements: 10_
 
-  - [x] 13.3 Documentation and limitation metadata
-    - Include metadata with each export: scenario name, run date, parameters
-    - Document data gaps encountered during ingestion
-    - State outputs are for illustrative/academic purposes
-    - _Requirements: 8.1, 8.2, 8.4, 10.4_
+  - [x] 13.2 Implement envelope efficiency module
+    - `src/envelope_efficiency.py` — `project_envelope_trend()` for building envelope efficiency over time
+    - Use RBSA building shell data and nw_energy_proxies.csv envelope UA values by vintage era
+    - _Requirements: 2, 10_
 
-- [x] 14. Final checkpoint — Full integration verification
-  - All outputs saved to `output/checkpoint_final/` as HTML + MD
+---
 
-  - [x] 14.1 End-to-end run on actual data
-    - Run baseline scenario on full NW Natural dataset
-    - Report: total demand, UPC, demand by end-use/segment/district
-    - Output: `output/checkpoint_final/baseline_results.html` and `.md`
-    - _Requirements: 10.1, 10.2_
+- [x] 14. CLI Entry Point
 
-  - [x] 14.2 Multi-scenario comparison
-    - Run baseline + high electrification scenarios
-    - Line graph: UPC trajectories (2025-2035)
-    - Stacked bar: end-use composition under each scenario (space heating only)
-    - Output: `output/checkpoint_final/scenario_comparison.html` and `.md`
-    - _Requirements: 6.2, 9.4_
-    - NOTE: Water heating, cooking, and drying are excluded from current scope
+  - [x] 14.1 Implement `src/main.py` CLI
+    - `argparse` setup with positional `scenario_configs` and flags: `--output-dir`, `--baseline-only`, `--compare`, `--verbose`
+    - `load_scenario_config(path)` — load and validate JSON scenario config
+    - `load_pipeline_data()` — load all data sources, build premise-equipment table, enrich with Census and RECS
+    - `run_single_scenario(config, ...)` — run one scenario and return (results_df, metadata)
+    - `print_summary_statistics(results_df, metadata)` — print formatted summary to stdout
+    - _Requirements: 6, 13_
 
-  - [x] 14.3 Final validation dashboard
-    - Traffic-light summary of all property tests (pass/fail) 
-    - Summary of all checkpoint results
-    - List of known limitations and data gaps
-    - Output: `output/checkpoint_final/final_dashboard.html` and `.md`
-    - _Requirements: 10.1, 10.4_
+  - [x] 14.2 Implement scenario output export in `main.py`
+    - Write all output files to `scenarios/{scenario_name}/`: results.csv, results.json, yearly_summary.csv, metadata.json, SUMMARY.md
+    - Write supplemental CSVs: equipment_stats, premise_distribution, segment_demand, sample_rates, vintage_demand, estimated_total_upc, hdd_info, hdd_history, irp_comparison, housing_stock
+    - Write Census and RECS summary CSVs
+    - _Requirements: 5, 6_
 
-- [x] 15. NW Natural source data validation suite
-  - All outputs saved to `output/nwn_data_validation/` as HTML + MD + PNG charts
-  - _Requirements: 7.1, 7.4, 10.1, 10.2_
+  - [x] 14.3 Implement `_write_summary_report` in `main.py`
+    - Write `SUMMARY.md` with: configuration parameters, yearly demand table (with IRP comparison if available), end-use breakdown table, output file list
+    - _Requirements: 11, 13_
 
-  - [x] 15.1 Premise referential integrity
-    - For every `blinded_id` in equipment_data, verify it exists in premise_data
-    - For every `blinded_id` in segment_data, verify it exists in premise_data
-    - Report: total orphan equipment IDs, total orphan segment IDs, match rates
-    - Bar chart: orphan counts by source table (equipment vs segment vs billing)
-    - Time series: if segment `setyear` is available, plot orphan rate by year
-    - Output: `output/nwn_data_validation/referential_integrity.html` and `.md`
+---
 
-  - [x] 15.2 Equipment code validity
-    - For every `equipment_type_code` in equipment_data, verify it exists in equipment_codes.csv
-    - Report: total valid codes, total unknown codes, list of unknown codes with row counts
-    - Bar chart: top 20 equipment codes by frequency, color-coded valid (green) vs unknown (red)
-    - Pie chart: % of equipment rows with valid vs unknown codes
-    - Output: `output/nwn_data_validation/equipment_code_validity.html` and `.md`
+- [x] 15. Static Visualization and Charts
 
-  - [x] 15.3 Duplicate premise-equipment detection
-    - Check for exact duplicate rows in equipment_data (same blinded_id + equipment_type_code + QTY)
-    - Report: total duplicates, unique duplicated blinded_ids, duplication rate
-    - Bar chart: duplicate count by equipment_type_code (top 20)
-    - Histogram: number of duplicates per blinded_id (1x, 2x, 3x+)
-    - Export: `output/nwn_data_validation/duplicate_equipment.csv` with all duplicate rows
-    - Output: `output/nwn_data_validation/duplicate_detection.html` and `.md`
+  - [x] 15.1 Implement housing stock visualization in `src/visualization.py`
+    - `plot_housing_stock_comparison(baseline_year, baseline_total, projected_data, output_path)` — line chart
+    - `plot_segment_distribution_comparison(...)` — grouped bar chart by segment over time
+    - `plot_district_distribution_comparison(...)` — grouped bar chart by district over time
+    - `plot_growth_rate_analysis(...)` — projected vs expected growth rate chart
+    - `plot_service_territory_map(...)` — static choropleth map of NW Natural counties with weather station markers
+    - `plot_projection_summary(...)` — generate all charts and save to output directory
+    - Use `matplotlib.use('Agg')` for headless execution
+    - _Requirements: 11_
 
-  - [x] 15.4 Weather station coverage
-    - For every unique `district_code_IRP` in premise_data, verify it maps to a weather station via DISTRICT_WEATHER_MAP
-    - Report: total districts, mapped districts, unmapped districts with premise counts
-    - Bar chart: premise count by district, color-coded mapped (green) vs unmapped (red)
-    - Map (folium): district centroids on OpenStreetMap, color-coded by mapping status
-    - Output: `output/nwn_data_validation/weather_station_coverage.html` and `.md`
+  - [x] 15.2 Implement scenario comparison charts in `src/scenario_charts.py`
+    - `generate_scenario_charts(scenario_results, output_dir)` — line charts comparing UPC across scenarios
+    - Stacked area charts showing end-use composition over time
+    - Bar charts comparing scenario outcomes at target years
+    - _Requirements: 11_
 
-  - [x] 15.5 Billing coverage analysis
-    - Count unique blinded_ids in billing_data vs active residential premises
-    - Report: total premises, premises with billing, coverage %, premises without billing
-    - Bar chart: billing coverage by district_code_IRP
-    - Time series: billing record count by year-month (from GL_revenue_date), showing data availability over time
-    - Histogram: number of billing records per premise (distribution of billing history depth)
-    - Output: `output/nwn_data_validation/billing_coverage.html` and `.md`
+  - [x] 15.3 Implement housing stock visualizations in `src/housing_stock_visualizations.py`
+    - Charts for housing stock composition, vintage distribution, segment trends
+    - _Requirements: 11_
 
-  - [x] 15.6 Weather date continuity
-    - For each SiteId in DailyCalDay, check for missing dates in the time series
-    - Report: total expected days, total actual days, gap count, longest gap per station
-    - Heatmap: station × month showing data completeness (% of days present) across all years
-    - Time series: daily record count by date (should be 11 stations per day), highlight gaps
-    - Line chart: annual HDD by station over time (1985-2025) to spot anomalies
-    - Output: `output/nwn_data_validation/weather_continuity.html` and `.md`
+  - [x] 15.4 Implement zone visualization in `src/zone_visualization.py`
+    - Geographic zone charts for district-level analysis
+    - _Requirements: 11_
 
-  - [x] 15.7 Segment consistency
-    - For every active residential premise, check it has exactly one segment record
-    - Report: premises with 0 segments, premises with 1 segment, premises with 2+ segments
-    - Bar chart: segment distribution (RESSF, RESMF, MOBILE, other) with counts
-    - Time series: segment set dates (`setyear`) distribution — histogram by year showing when segments were assigned
-    - Stacked area chart: cumulative segment assignments over time by segment type
-    - Output: `output/nwn_data_validation/segment_consistency.html` and `.md`
+---
 
-  - [x] 15.8 Equipment quantity sanity
-    - Check `QTY_OF_EQUIPMENT_TYPE` values: should be positive integers, typically 1-3
-    - Report: min/max/mean/median QTY, count of QTY > 5 (suspicious), count of QTY <= 0 (invalid)
-    - Histogram: QTY distribution (1, 2, 3, 4, 5+)
-    - Bar chart: average QTY by equipment_type_code (top 20 codes)
-    - Export: `output/nwn_data_validation/suspicious_quantities.csv` for QTY > 5
-    - Output: `output/nwn_data_validation/equipment_quantity.html` and `.md`
+- [x] 16. Property-Based Testing Suite
 
-  - [x] 15.9 State-district cross-check
-    - Verify `service_state` is consistent with `district_code_IRP` (OR districts → OR, WA districts → WA)
-    - Report: total mismatches, list of mismatched district-state pairs with premise counts
-    - Bar chart: premise count by service_state × district_code_IRP (highlight mismatches in red)
-    - Map (folium): mismatched premises plotted on OpenStreetMap if coordinates available
-    - Output: `output/nwn_data_validation/state_district_crosscheck.html` and `.md`
+  - [x] 16.1 Implement equipment property tests in `src/equipment_property_test.py`
+    - Weibull survival monotonicity: S(t) <= S(t-1) for all t > 0
+    - Replacement probability bounds: always in [0, 1]
+    - Output: `output/equipment_replacement/` HTML and MD reports
+    - _Requirements: 12_
 
-  - [x] 15.10 Billing amount reasonableness
-    - Parse `utility_usage` therm values from billing_data
-    - Flag records with therms < 1 (suspiciously low) or > 500 per billing period (suspiciously high)
-    - Report: total flagged records, % of total, breakdown by flag type (low vs high)
-    - Histogram: billing therms distribution (log scale) with threshold lines at 1 and 500 therms
-    - Time series: monthly average billing therms over time (2009-2025), with min/max bands
-    - Box plot: billing therms distribution by rate_schedule
-    - Output: `output/nwn_data_validation/billing_reasonableness.html` and `.md`
+  - [x] 16.2 Implement fuel switching property tests in `src/fuel_switching_property_test.py`
+    - Conservation: total equipment count before and after `apply_replacements` is equal
+    - Output: `output/fuel_switching/` HTML and MD reports
+    - _Requirements: 12_
 
-  - [x] 15.11 Weather temperature bounds
-    - Check daily `TempHA` values are within reasonable PNW range (-10°F to 115°F)
-    - Report: total out-of-range records, min/max observed temps, stations with outliers
-    - Time series: daily temperature by station (overlay all stations), highlight out-of-range in red
-    - Heatmap: station × month showing average temperature (spot seasonal patterns and anomalies)
-    - Line chart: annual average temperature by station (1985-2025) to show climate trends
-    - Box plot: monthly temperature distribution across all stations (seasonal pattern)
-    - Output: `output/nwn_data_validation/temperature_bounds.html` and `.md`
+  - [x] 16.3 Implement scenario property tests in `src/scenario_property_tests.py`
+    - Non-negativity: all `total_therms` >= 0
+    - Housing stock growth: projected units = baseline × (1 + rate)^years within rounding tolerance
+    - Output: `output/scenario_validation/` HTML and MD reports
+    - _Requirements: 12_
 
-  - [x] 15.12 Temporal alignment audit
-    - Compare date ranges across all time-series datasets: weather, billing, water temp, snow
-    - Report: min/max dates per dataset, overlap period, gaps between datasets
-    - Gantt-style chart: horizontal bars showing date range of each dataset, with overlap highlighted
-    - Time series: record count per month across all datasets (stacked area), showing where data is available
-    - Table: dataset × year matrix showing record counts (heatmap style)
-    - Output: `output/nwn_data_validation/temporal_alignment.html` and `.md`
+  - [x] 16.4 Implement weather property report in `src/weather_property_report.py`
+    - HDD non-negativity: HDD >= 0 for all days
+    - Weather adjustment factor > 0 for all stations with valid normal HDD
+    - Output: `output/weather_validation/` HTML and MD reports
+    - _Requirements: 12_
 
-  - [x] 15.13 Customer count over time by segment type
-    - Join billing data (GL_revenue_date) with segment data to count unique active customers per year by type (RESSF, RESMF, MOBILE)
-    - Report: yearly customer counts by segment, total customers, year-over-year growth rate
-    - Stacked area chart: customers over time by segment type
-    - Line chart: each segment as a separate line for comparison
-    - Bar + line combo chart: total customers with YoY growth rate overlay
-    - 100% stacked area chart: segment share evolution over time
-    - Output: `output/nwn_data_validation/customer_count_over_time.html` and `.md`
-
-## Notes
-
-- Tasks marked with `*` are optional and can be skipped for faster MVP delivery
-- Each sub-task has a maximum of 6 bullet items
-- Every property test outputs results to `output/` as both HTML and Markdown (.md)
-- Each task references specific requirements for traceability
-- Checkpoints ensure incremental validation against actual data
-- All code uses Python with pandas, dataclasses, and standard library logging
-
-## Future Work
-
-- Water heating simulation (Bull Run water temperature driven)
-- Cooking end-use (baseload consumption)
-- Clothes drying end-use (baseload consumption)
-- Fireplaces/decorative gas use (baseload consumption)
-- Other/miscellaneous end-uses
-- Monthly temporal resolution — compute monthly HDD/delta-T from daily weather, apply monthly load shapes for baseload end-uses, enable monthly billing calibration (see `FUTURE_WORK.md`)
-- Daily temporal resolution — per-day simulation for peak-day analysis and load shape modeling, requires chunked processing for output volume (see `FUTURE_WORK.md`)
-- Enhanced scenario parameters — per-end-use electrification rates, heat pump COP/fractions/Gorge penalty, segment-specific heating factors, calibration targets (see `FUTURE_WORK.md`)
-- Multi-district scenario runs — run and compare demand across all IRP districts simultaneously, with district-level UPC comparison and geographic demand distribution charts
-- Replace synthetic housing stock helpers — `_compute_housing_age_by_district`, `_compute_vintage_distribution_by_district`, and `_compute_replacement_probability_by_district` in `src/housing_stock.py` currently return hardcoded values for districts D1-D10 that don't exist in the data. Replace with actual computations from `setyear` (housing vintage), Census B25034 (vintage distribution), and Weibull model (replacement probability)
+  - [x] 16.5 Implement water heating property report in `src/water_heating_property_report.py`
+    - Water temperature delta > 0 for all valid records
+    - Output: `output/water_heating_validation/` HTML and MD reports
+    - _Requirements: 12_

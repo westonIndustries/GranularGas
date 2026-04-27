@@ -8,6 +8,7 @@
     "electrification_pct":0.0,
     "hybrid_pct":0.0,
     "avg_efficiency":0.8203,
+    "new_equip_efficiency":0.92,
     "units_replaced":65135,
     "units_repaired":2292,
     "units_malfunctioning":6743,
@@ -18,7 +19,8 @@
     "gas_fraction_of_nwn":100.0,
     "hybrid_fraction_of_nwn":0.0,
     "territory_gas_pct":38.7,
-    "territory_elec_pct":61.3
+    "territory_elec_pct":61.3,
+    "data_type":"calibrated"
   },
   {
     "year":2026,
@@ -29,6 +31,7 @@
     "electrification_pct":0.58,
     "hybrid_pct":0.86,
     "avg_efficiency":0.8542,
+    "new_equip_efficiency":0.92,
     "units_replaced":68474,
     "units_repaired":2199,
     "units_malfunctioning":7066,
@@ -39,7 +42,8 @@
     "gas_fraction_of_nwn":98.56,
     "hybrid_fraction_of_nwn":0.86,
     "territory_gas_pct":38.14,
-    "territory_elec_pct":61.86
+    "territory_elec_pct":61.86,
+    "data_type":"projected"
   },
   {
     "year":2027,
@@ -50,6 +54,7 @@
     "electrification_pct":0.98,
     "hybrid_pct":1.47,
     "avg_efficiency":0.8747,
+    "new_equip_efficiency":0.92,
     "units_replaced":71882,
     "units_repaired":2136,
     "units_malfunctioning":7399,
@@ -60,7 +65,8 @@
     "gas_fraction_of_nwn":97.56,
     "hybrid_fraction_of_nwn":1.47,
     "territory_gas_pct":37.75,
-    "territory_elec_pct":62.25
+    "territory_elec_pct":62.25,
+    "data_type":"projected"
   },
   {
     "year":2028,
@@ -70,7 +76,8 @@
     "electric_units":2946,
     "electrification_pct":1.16,
     "hybrid_pct":1.74,
-    "avg_efficiency":0.8811,
+    "avg_efficiency":0.8839,
+    "new_equip_efficiency":0.92,
     "units_replaced":75349,
     "units_repaired":2114,
     "units_malfunctioning":7742,
@@ -81,7 +88,8 @@
     "gas_fraction_of_nwn":97.1,
     "hybrid_fraction_of_nwn":1.74,
     "territory_gas_pct":37.58,
-    "territory_elec_pct":62.42
+    "territory_elec_pct":62.42,
+    "data_type":"projected"
   },
   {
     "year":2029,
@@ -91,7 +99,8 @@
     "electric_units":3313,
     "electrification_pct":1.29,
     "hybrid_pct":1.94,
-    "avg_efficiency":0.8823,
+    "avg_efficiency":0.8874,
+    "new_equip_efficiency":0.92,
     "units_replaced":78796,
     "units_repaired":2209,
     "units_malfunctioning":8096,
@@ -102,7 +111,8 @@
     "gas_fraction_of_nwn":96.77,
     "hybrid_fraction_of_nwn":1.94,
     "territory_gas_pct":37.45,
-    "territory_elec_pct":62.55
+    "territory_elec_pct":62.55,
+    "data_type":"projected"
   },
   {
     "year":2030,
@@ -112,7 +122,8 @@
     "electric_units":3559,
     "electrification_pct":1.37,
     "hybrid_pct":2.06,
-    "avg_efficiency":0.8822,
+    "avg_efficiency":0.8888,
+    "new_equip_efficiency":0.92,
     "units_replaced":82332,
     "units_repaired":2315,
     "units_malfunctioning":8458,
@@ -123,7 +134,8 @@
     "gas_fraction_of_nwn":96.57,
     "hybrid_fraction_of_nwn":2.06,
     "territory_gas_pct":37.37,
-    "territory_elec_pct":62.63
+    "territory_elec_pct":62.63,
+    "data_type":"projected"
   },
   {
     "year":2031,
@@ -133,7 +145,8 @@
     "electric_units":3766,
     "electrification_pct":1.44,
     "hybrid_pct":2.16,
-    "avg_efficiency":0.8831,
+    "avg_efficiency":0.8909,
+    "new_equip_efficiency":0.92,
     "units_replaced":85960,
     "units_repaired":2424,
     "units_malfunctioning":8831,
@@ -144,7 +157,8 @@
     "gas_fraction_of_nwn":96.4,
     "hybrid_fraction_of_nwn":2.16,
     "territory_gas_pct":37.31,
-    "territory_elec_pct":62.69
+    "territory_elec_pct":62.69,
+    "data_type":"projected"
   },
   {
     "year":2032,
@@ -154,7 +168,8 @@
     "electric_units":3933,
     "electrification_pct":1.49,
     "hybrid_pct":2.23,
-    "avg_efficiency":0.8818,
+    "avg_efficiency":0.8909,
+    "new_equip_efficiency":0.92,
     "units_replaced":90605,
     "units_repaired":1613,
     "units_malfunctioning":9213,
@@ -165,7 +180,8 @@
     "gas_fraction_of_nwn":96.28,
     "hybrid_fraction_of_nwn":2.23,
     "territory_gas_pct":37.26,
-    "territory_elec_pct":62.74
+    "territory_elec_pct":62.74,
+    "data_type":"projected"
   },
   {
     "year":2033,
@@ -175,7 +191,8 @@
     "electric_units":4234,
     "electrification_pct":1.59,
     "hybrid_pct":2.38,
-    "avg_efficiency":0.883,
+    "avg_efficiency":0.8938,
+    "new_equip_efficiency":0.92,
     "units_replaced":94635,
     "units_repaired":1510,
     "units_malfunctioning":9604,
@@ -186,7 +203,8 @@
     "gas_fraction_of_nwn":96.04,
     "hybrid_fraction_of_nwn":2.38,
     "territory_gas_pct":37.17,
-    "territory_elec_pct":62.83
+    "territory_elec_pct":62.83,
+    "data_type":"projected"
   },
   {
     "year":2034,
@@ -196,7 +214,8 @@
     "electric_units":4364,
     "electrification_pct":1.62,
     "hybrid_pct":2.43,
-    "avg_efficiency":0.8804,
+    "avg_efficiency":0.8938,
+    "new_equip_efficiency":0.92,
     "units_replaced":98752,
     "units_repaired":1413,
     "units_malfunctioning":10005,
@@ -207,7 +226,8 @@
     "gas_fraction_of_nwn":95.96,
     "hybrid_fraction_of_nwn":2.43,
     "territory_gas_pct":37.13,
-    "territory_elec_pct":62.87
+    "territory_elec_pct":62.87,
+    "data_type":"projected"
   },
   {
     "year":2035,
@@ -217,7 +237,8 @@
     "electric_units":4452,
     "electrification_pct":1.63,
     "hybrid_pct":2.45,
-    "avg_efficiency":0.8777,
+    "avg_efficiency":0.8938,
+    "new_equip_efficiency":0.92,
     "units_replaced":102946,
     "units_repaired":1331,
     "units_malfunctioning":10415,
@@ -228,6 +249,7 @@
     "gas_fraction_of_nwn":95.92,
     "hybrid_fraction_of_nwn":2.45,
     "territory_gas_pct":37.12,
-    "territory_elec_pct":62.88
+    "territory_elec_pct":62.88,
+    "data_type":"projected"
   }
 ]

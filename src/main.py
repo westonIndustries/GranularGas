@@ -267,12 +267,13 @@ def print_summary_statistics(results_df: pd.DataFrame, metadata: Dict[str, Any])
     print(f"  Years Simulated: {metadata['years_simulated']}")
     print(f"  End-Uses: {metadata['end_uses']}")
     
-    # Aggregate by year
-    agg_cols = {'total_therms': 'sum', 'use_per_customer': 'first', 'premise_count': 'first'}
+    # Aggregate by year (sum months if monthly resolution)
+    agg_cols = {'total_therms': 'sum', 'premise_count': 'first'}
     if 'irp_upc_therms' in results_df.columns:
         agg_cols['irp_upc_therms'] = 'first'
     by_year = results_df.groupby('year').agg(agg_cols).reset_index()
-    
+    by_year['use_per_customer'] = by_year['total_therms'] / by_year['premise_count'].clip(lower=1)
+
     has_irp = 'irp_upc_therms' in by_year.columns and by_year['irp_upc_therms'].notna().any()
     
     print(f"\nDemand by Year:")
@@ -313,18 +314,20 @@ def _write_summary_report(scenario_dir: Path, results_df: pd.DataFrame, metadata
     ts = datetime.now().isoformat()
     name = metadata['scenario_name']
     has_irp = 'irp_upc_therms' in by_year.columns and by_year['irp_upc_therms'].notna().any()
+    is_monthly = 'month' in results_df.columns
 
     def _fmt_md(v):
         if isinstance(v, (int, float)):
             return f"{v:.2%}"
         return "curve (see JSON)"
-    
+
     lines = [
         f"# Scenario Results: {name}",
         f"Generated: {ts}", "",
         "## Configuration",
         f"- Base Year: {metadata['base_year']}",
         f"- Forecast Horizon: {metadata['forecast_horizon']} years",
+        f"- Temporal Resolution: {'Monthly' if is_monthly else 'Annual'}",
         f"- Housing Growth Rate: {_fmt_md(metadata['housing_growth_rate'])}",
         f"- Electrification Rate: {_fmt_md(metadata['electrification_rate'])}",
         f"- Efficiency Improvement: {_fmt_md(metadata['efficiency_improvement'])}",
@@ -351,6 +354,36 @@ def _write_summary_report(scenario_dir: Path, results_df: pd.DataFrame, metadata
         for _, row in by_year.iterrows():
             lines.append(f"| {int(row['year'])} | {row['total_therms']:,.0f} | {row['use_per_customer']:.1f} | {int(row['premise_count']):,} |")
 
+    # Monthly breakdown table — all years, all months
+    if is_monthly:
+        month_names = {1:'Jan',2:'Feb',3:'Mar',4:'Apr',5:'May',6:'Jun',
+                       7:'Jul',8:'Aug',9:'Sep',10:'Oct',11:'Nov',12:'Dec'}
+        # Read from monthly_summary.csv if it exists (already written to disk)
+        monthly_path = scenario_dir / 'monthly_summary.csv'
+        if monthly_path.exists():
+            import csv as _csv
+            with open(monthly_path, newline='', encoding='utf-8') as f:
+                monthly_rows = list(_csv.DictReader(f))
+        else:
+            # Build from results_df directly
+            monthly_agg = results_df.groupby(['year', 'month']).agg(
+                total_therms=('total_therms', 'sum'),
+                premise_count=('premise_count', 'first')
+            ).reset_index()
+            monthly_agg['use_per_customer'] = monthly_agg['total_therms'] / monthly_agg['premise_count'].clip(lower=1)
+            monthly_rows = monthly_agg.to_dict('records')
+
+        lines += ["", "## Monthly Demand Summary (All Years)", ""]
+        lines.append("| Year | Month | Total Therms | UPC (therms/customer) |")
+        lines.append("|------|-------|-------------|----------------------|")
+        for row in monthly_rows:
+            yr = int(float(row['year']))
+            mo = int(float(row['month']))
+            therms = float(row['total_therms'])
+            upc = float(row['use_per_customer'])
+            mo_name = month_names.get(mo, str(mo))
+            lines.append(f"| {yr} | {mo_name} | {therms:,.0f} | {upc:.1f} |")
+
     by_enduse = results_df.groupby('end_use')['total_therms'].sum().sort_values(ascending=False)
     total = by_enduse.sum()
     lines += ["", "## End-Use Breakdown (All Years)", ""]
@@ -360,14 +393,20 @@ def _write_summary_report(scenario_dir: Path, results_df: pd.DataFrame, metadata
         share = therms / total * 100 if total > 0 else 0
         lines.append(f"| {eu} | {therms:,.0f} | {share:.1f}% |")
 
-    lines += ["", "## Output Files", "",
-        "- `results.csv` — Full results (year x end-use)",
+    output_files = [
+        "- `results.csv` — Full results (year x end-use)" + (" x month" if is_monthly else ""),
         "- `results.json` — Same data in JSON format",
         "- `yearly_summary.csv` — Year-by-year aggregated summary",
+    ]
+    if is_monthly:
+        output_files.append("- `monthly_summary.csv` — Month-by-month aggregated summary")
+        output_files.append("- `monthly_summary.json` — Same data in JSON format")
+    output_files += [
         "- `metadata.json` — Scenario configuration and run metadata",
         f"- `{name}.json` — Input configuration (copy)",
         "- `SUMMARY.md` — This file",
     ]
+    lines += ["", "## Output Files", ""] + output_files
 
     with open(scenario_dir / 'SUMMARY.md', 'w', encoding='utf-8') as f:
         f.write("\n".join(lines))
@@ -479,13 +518,31 @@ Examples:
             # 3. Results as JSON
             export_results(results_df, str(scenario_dir / 'results.json'), format='json')
             
-            # 4. Year-by-year summary CSV
-            agg_cols = {'total_therms': 'sum', 'use_per_customer': 'first', 'premise_count': 'first'}
+            # 4. Year-by-year summary CSV (always annual, regardless of temporal_resolution)
+            is_monthly_run = config.temporal_resolution == 'monthly' and 'month' in results_df.columns
+            agg_cols = {'total_therms': 'sum', 'premise_count': 'first'}
             if 'irp_upc_therms' in results_df.columns:
                 agg_cols['irp_upc_therms'] = 'first'
+            # Aggregate months → year before computing yearly summary
             by_year = results_df.groupby('year').agg(agg_cols).reset_index()
+            by_year['use_per_customer'] = by_year['total_therms'] / by_year['premise_count'].clip(lower=1)
             by_year['scenario_name'] = config.name
             export_results(by_year, str(scenario_dir / 'yearly_summary.csv'), format='csv')
+
+            # 4b. Monthly summary CSV (only when temporal_resolution == 'monthly')
+            if is_monthly_run:
+                month_agg_cols = {'total_therms': 'sum', 'premise_count': 'first'}
+                if 'irp_upc_therms' in results_df.columns:
+                    month_agg_cols['irp_upc_therms'] = 'first'
+                by_month = results_df.groupby(['year', 'month']).agg(month_agg_cols).reset_index()
+                by_month['use_per_customer'] = by_month['total_therms'] / by_month['premise_count'].clip(lower=1)
+                by_month['scenario_name'] = config.name
+                month_names = {1:'Jan',2:'Feb',3:'Mar',4:'Apr',5:'May',6:'Jun',
+                               7:'Jul',8:'Aug',9:'Sep',10:'Oct',11:'Nov',12:'Dec'}
+                by_month['month_name'] = by_month['month'].map(month_names)
+                export_results(by_month, str(scenario_dir / 'monthly_summary.csv'), format='csv')
+                export_results(by_month, str(scenario_dir / 'monthly_summary.json'), format='json')
+                logger.info(f"Wrote monthly_summary.csv: {len(by_month)} rows")
             
             # 5. Metadata JSON (strip internal DataFrames)
             import json as json_mod
@@ -542,7 +599,11 @@ Examples:
             
             # 10. IRP comparison (model vs NW Natural forecast)
             if 'irp_upc_therms' in results_df.columns and results_df['irp_upc_therms'].notna().any():
-                irp_compare = by_year[['year', 'use_per_customer', 'irp_upc_therms', 'total_therms', 'premise_count']].copy()
+                # Always annual — sum months first if monthly resolution
+                irp_agg_cols = {'total_therms': 'sum', 'premise_count': 'first', 'irp_upc_therms': 'first'}
+                irp_by_year = results_df.groupby('year').agg(irp_agg_cols).reset_index()
+                irp_by_year['use_per_customer'] = irp_by_year['total_therms'] / irp_by_year['premise_count'].clip(lower=1)
+                irp_compare = irp_by_year[['year', 'use_per_customer', 'irp_upc_therms', 'total_therms', 'premise_count']].copy()
                 irp_compare.columns = ['year', 'model_upc', 'irp_upc', 'total_therms', 'premise_count']
                 irp_compare['model_upc_label'] = 'space_heating_only'
                 # Add estimated total UPC if available
